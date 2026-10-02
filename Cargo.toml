@@ -1,0 +1,19 @@
+[package]
+name = "quicksearch"
+version = "0.1.0"
+edition = "2021"
+description = "Fast terminal lookups for code and everything else"
+publish = false
+
+[[bin]]
+name = "quicksearch"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+flate2 = "1"
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ureq = { version = "2.12", features = ["json"] }
+urlencoding = "2"
