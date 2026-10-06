@@ -1,0 +1,87 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    name: ${{ matrix.target }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-22.04
+            target: x86_64-unknown-linux-gnu
+          - os: ubuntu-22.04-arm
+            target: aarch64-unknown-linux-gnu
+          - os: macos-latest
+            target: aarch64-apple-darwin
+          - os: macos-latest
+            target: x86_64-apple-darwin
+          - os: windows-latest
+            target: x86_64-pc-windows-msvc
+          - os: windows-11-arm
+            target: aarch64-pc-windows-msvc
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+      - name: Build
+        run: cargo build --release --target ${{ matrix.target }}
+      - name: Package
+        shell: bash
+        run: |
+          set -euo pipefail
+          target="${{ matrix.target }}"
+          ext="tar.gz"
+          bin="qs"
+          src="target/${target}/release/quicksearch"
+          if [[ "$target" == *windows* ]]; then
+            ext="zip"
+            bin="qs.exe"
+            src="${src}.exe"
+          fi
+          mkdir -p stage dist
+          cp "$src" "stage/${bin}"
+          chmod +x "stage/${bin}" || true
+          tar -a -cf "dist/qs-${target}.${ext}" -C stage "$bin"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qs-${{ matrix.target }}
+          path: dist/*
+          if-no-files-found: error
+
+  release:
+    name: Publish
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: qs-*
+          path: artifacts
+          merge-multiple: true
+      - name: Checksums
+        run: |
+          set -euo pipefail
+          cd artifacts
+          sha256sum qs-* > SHA256SUMS
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/*
+          body: |
+            Prebuilt `qs` binaries. Unpack an archive and put `qs` or `qs.exe` on your PATH.
+
+            - Linux x86_64 and aarch64, built on Ubuntu 22.04. These need glibc and OpenSSL.
+            - macOS x86_64 and Apple Silicon
+            - Windows x86_64 and ARM
