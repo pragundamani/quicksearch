@@ -4,6 +4,8 @@ Fast lookups from the terminal. The default is a web search. A leading word pick
 
 The binary is `quicksearch`. The command name is `qs`.
 
+qs is free software under the GNU General Public License, version 3 or any later version. See `LICENSE`.
+
 ![qs](docs/qs.gif)
 
 ## Install
