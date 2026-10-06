@@ -384,7 +384,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "quicksearch"
+name = "quicksearch-cli"
 version = "0.1.0"
 dependencies = [
  "clap",

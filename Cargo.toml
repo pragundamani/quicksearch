@@ -1,9 +1,12 @@
 [package]
-name = "quicksearch"
+name = "quicksearch-cli"
 version = "0.1.0"
 edition = "2021"
 description = "Fast terminal lookups for code and everything else"
-publish = false
+repository = "https://github.com/pragundamani/quicksearch"
+homepage = "https://github.com/pragundamani/quicksearch"
+readme = "README.md"
+exclude = ["docs/", "quicksearch.bash"]
 
 [[bin]]
 name = "quicksearch"
