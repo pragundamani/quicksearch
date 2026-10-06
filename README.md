@@ -24,6 +24,8 @@ powershell -File install.ps1
 
 ## Screenshots
 
+![qs](docs/qs.gif)
+
 `qs cpp semaphore`
 
 ![qs cpp semaphore](docs/qs-semaphore.png)
