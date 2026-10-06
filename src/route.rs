@@ -93,6 +93,8 @@ pub struct Routed {
     pub list_topics: bool,
     /// `qs history` lists recent searches.
     pub list_history: bool,
+    /// `qs qs` prints the sources table.
+    pub list_sources: bool,
     /// Exact manual page, such as `dnf-install`.
     pub manual: Option<String>,
     /// Package manager for `qs dnf rust`.
@@ -128,6 +130,12 @@ pub fn route(flag: Option<Provider>, query: &str) -> Result<Routed, String> {
 
     if let Some(provider) = flag {
         return Ok(routed(provider, query.to_string()));
+    }
+
+    if query.eq_ignore_ascii_case("qs") {
+        let mut routed = routed(Provider::Web, String::new());
+        routed.list_sources = true;
+        return Ok(routed);
     }
 
     let (name, inner) = split_first(query);
@@ -195,6 +203,7 @@ fn routed(provider: Provider, query: String) -> Routed {
         list_langs: false,
         list_topics: false,
         list_history: false,
+        list_sources: false,
         manual: None,
         package_tool: None,
         bang: None,
@@ -314,6 +323,16 @@ mod tests {
         let bare = routed(None, "lang");
         assert!(bare.list_langs);
         assert!(bare.query.is_empty());
+    }
+
+    #[test]
+    fn qs_lists_the_sources_table() {
+        let got = routed(None, "qs");
+        assert!(got.list_sources);
+        assert!(got.query.is_empty());
+        let search = routed(Some(Provider::Web), "qs");
+        assert!(!search.list_sources);
+        assert_eq!(search.query, "qs");
     }
 
     #[test]

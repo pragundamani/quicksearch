@@ -4,6 +4,24 @@ Fast lookups from the terminal. The default is a web search. A leading word pick
 
 The binary is `quicksearch`. The command name is `qs`.
 
+## Screenshots
+
+`qs cpp semaphore`
+
+![qs cpp semaphore](docs/qs-semaphore.png)
+
+`qs -n 1 py json.dumps`
+
+![qs py json.dumps](docs/qs-python.png)
+
+`qs -n 1 std::fs::read`
+
+![qs std::fs::read](docs/qs-rust.png)
+
+`qs qs`
+
+![qs qs](docs/qs-sources.png)
+
 ## Build
 
 ```sh
@@ -62,9 +80,46 @@ qs history
 | `cve`, `nvd` | NVD advisories |
 | `stock`, `item` | a product name or barcode |
 
+## Languages
+
+A leading word searches that language. `qs lang py` fuzzy-finds a shorthand.
+
+| Leading word | Docs |
+|---|---|
+| `c` | C |
+| `cpp`, `c++` | C++ |
+| `py`, `python` | Python |
+| `hs`, `haskell` | Haskell, via Hoogle |
+| `ocaml`, `ml` | OCaml |
+| `go` | Go |
+| `java` | Java |
+| `ruby`, `rb` | Ruby |
+| `js`, `javascript` | JavaScript |
+| `ts`, `typescript` | TypeScript |
+| `php` | PHP |
+| `zig` | Zig |
+| `kt`, `kotlin` | Kotlin |
+| `lua` | Lua |
+| `ex`, `elixir` | Elixir |
+| `perl` | Perl |
+| `scala` | Scala |
+| `clj`, `clojure` | Clojure |
+| `erl`, `erlang` | Erlang |
+| `jl`, `julia` | Julia |
+| `nim` | Nim |
+| `bash`, `sh` | Bash |
+| `zsh` | Zsh |
+| `css` | CSS |
+| `html` | HTML |
+| `node` | Node.js |
+| `dart` | Dart |
+| `r` | R |
+
+`rust`, `std`, and `rs` stay on the Rust standard library, in the sources table above.
+
 `!wiki` and the other known bangs use those sources. Any other bang follows DuckDuckGo, for example `qs !aur paru`.
 
-`qs lang py` fuzzy-finds language shorthands. `qs topic net` fuzzy-finds broader concepts such as linux, networking, security, cloud, mail, and editors. Then search with the shorthand: `qs linux iptables`, `qs sec ssh`, `qs db jsonb`.
+`qs topic net` fuzzy-finds broader concepts such as linux, networking, security, cloud, mail, and editors. Then search with the shorthand: `qs linux iptables`, `qs sec ssh`, `qs db jsonb`.
 
 A command name opens its manual. A subcommand opens that page. A package name shows package info.
 

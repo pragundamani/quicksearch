@@ -171,9 +171,14 @@ fn ranked_docset_hits(
             "{}  ·  {}",
             docset.name, entry.kind
         ));
-        if snippet_first && index == 0 {
-            if let Some(snippet) = page_snippet(client, docset, &entry.path) {
-                hit = hit.snippet(snippet);
+        if snippet_first && index < 2 {
+            if let Some(notes) = page_notes(client, docset, &entry.path) {
+                if let Some(snippet) = notes.snippet {
+                    hit = hit.snippet(snippet);
+                }
+                if let Some(usage) = notes.usage {
+                    hit = hit.meta_line(usage);
+                }
             }
         }
         hits.push((*rank, hit));
@@ -386,16 +391,24 @@ pub(crate) fn cache_dir() -> PathBuf {
     base.join("quicksearch")
 }
 
-fn page_snippet(client: &Client, docset: &Docset, path: &str) -> Option<String> {
+struct PageNotes {
+    snippet: Option<String>,
+    usage: Option<String>,
+}
+
+fn page_notes(client: &Client, docset: &Docset, path: &str) -> Option<PageNotes> {
     let file = path.split('#').next().unwrap_or(path);
     let url = format!("https://documents.devdocs.io/{}/{file}.html", docset.slug);
     let html = client.get_text(&url, APP_UA, &[]).ok()?;
-    let snippet = first_paragraph(&html)?;
-    let snippet = truncate(&snippet, 320);
-    if snippet.is_empty() {
+    let snippet = explain_sentence(&html)
+        .or_else(|| first_paragraph(&html))
+        .map(|text| truncate(&text, 320))
+        .filter(|text| !text.is_empty());
+    let usage = usage_block(&html);
+    if snippet.is_none() && usage.is_none() {
         None
     } else {
-        Some(snippet)
+        Some(PageNotes { snippet, usage })
     }
 }
 
@@ -409,6 +422,76 @@ fn first_paragraph(html: &str) -> Option<String> {
         }
         Some(text)
     })
+}
+
+fn explain_sentence(html: &str) -> Option<String> {
+    let text = collapse_ws(&break_tags(html));
+    let marker = text.find(" is a ")?;
+    let begin = text[..marker]
+        .rfind(['.', ')', ':', ';'])
+        .map(|index| index + 1)
+        .unwrap_or(0);
+    let end = text[marker..].find('.')? + marker + 1;
+    let mut sentence = text[begin..end].trim().to_string();
+    if let Some((lead, rest)) = sentence.split_once(") ") {
+        if lead.chars().all(|ch| ch.is_ascii_digit() || ch == '(') {
+            sentence = rest.to_string();
+        }
+    }
+    if sentence.chars().count() < 40 {
+        None
+    } else {
+        Some(sentence)
+    }
+}
+
+fn usage_block(html: &str) -> Option<String> {
+    let pres = pre_blocks(html);
+    if let Some(example) = pres.iter().find(|pre| pre.contains("#include")) {
+        return Some(example.clone());
+    }
+    pres.into_iter()
+        .filter(|pre| {
+            let text = pre.trim_start();
+            text.contains("class ") || text.contains("namespace ") || text.starts_with("template")
+        })
+        .max_by_key(|pre| pre.len())
+}
+
+fn pre_blocks(html: &str) -> Vec<String> {
+    static PRE: LazyLock<Regex> =
+        LazyLock::new(|| Regex::new(r"(?is)<pre\b[^>]*>(.*?)</pre>").unwrap());
+    PRE.captures_iter(html)
+        .map(|caps| pre_text(&caps[1]))
+        .filter(|text| text.lines().filter(|line| !line.trim().is_empty()).count() >= 2)
+        .collect()
+}
+
+fn pre_text(inner: &str) -> String {
+    static BR: LazyLock<Regex> =
+        LazyLock::new(|| Regex::new(r"(?is)<br\s*/?>").unwrap());
+    static TAG: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"(?is)<[^>]+>").unwrap());
+    let with_breaks = BR.replace_all(inner, "\n");
+    let plain = html_unescape(&TAG.replace_all(&with_breaks, ""));
+    let lines: Vec<&str> = plain.lines().collect();
+    let Some(start) = lines.iter().position(|line| !line.trim().is_empty()) else {
+        return String::new();
+    };
+    let end = lines
+        .iter()
+        .rposition(|line| !line.trim().is_empty())
+        .unwrap_or(start);
+    lines[start..=end].join("\n")
+}
+
+fn break_tags(html: &str) -> String {
+    static TAG: LazyLock<Regex> = LazyLock::new(|| {
+        Regex::new(
+            r"(?is)</?(?:p|pre|code|div|span|a|h[1-6]|br|hr|table|tr|td|th|ul|ol|li|em|strong|b|i|tt|dl|dt|dd|section|script|style|sup|sub|blockquote|html|body|head|meta|link|img)\b[^>]*>",
+        )
+        .unwrap()
+    });
+    TAG.replace_all(&html_unescape(html), "\n").into_owned()
 }
 
 fn looks_like_code(text: &str) -> bool {
@@ -433,8 +516,15 @@ pub fn score(query: &str, name: &str) -> Option<i32> {
     let query_tokens: Vec<&str> = query.split_whitespace().collect();
     let name_tokens: Vec<&str> = name.split_whitespace().collect();
     let last = query_tokens.last().copied().unwrap_or("");
+    let suffix_type = last.len() > 4
+        && name_tokens.len() <= 2
+        && name_tokens
+            .last()
+            .is_some_and(|token| *token != last && token.ends_with(last));
     let mut score = if name_tokens.iter().any(|token| *token == last) {
         500
+    } else if suffix_type {
+        800
     } else if last.len() > 2 && name_tokens.iter().any(|token| token.contains(last)) {
         120
     } else {
@@ -801,6 +891,55 @@ mod tests {
         let labels = score("List.map", "val map [Module ListLabels]").unwrap();
         assert!(list_map > concat);
         assert!(list_map > labels);
+        let counting = score("semaphore", "std::counting_semaphore").unwrap();
+        let header = score("semaphore", "semaphore").unwrap();
+        assert!(header > counting);
+        assert!(counting >= 500);
+        assert!(score("semaphore", "std::counting_semaphore::acquire").unwrap_or(0) < 500);
+    }
+
+    #[test]
+    fn usage_block_keeps_the_example_and_drops_program_output() {
+        let html = r#"<p>This header is part of the thread support library.</p>
+            <pre>namespace std {
+  class counting_semaphore {
+  public:
+    void acquire();
+  };
+}</pre>
+            <pre data-language="c">#include &lt;semaphore&gt;
+std::binary_semaphore
+    smphSignalMainToThread{0};
+
+void ThreadProc()
+{
+    smph.release();
+    smph.acquire();
+}
+</pre>
+            <pre>[main] Got the signal
+[thread] Send the signal</pre>
+            <p>Licensed under the CC license</p>"#;
+        let usage = usage_block(html).unwrap();
+        assert!(usage.starts_with("#include <semaphore>"));
+        assert!(usage.contains("    smphSignalMainToThread{0};"));
+        assert!(usage.contains("    smph.release();"));
+        assert!(!usage.contains("[main]"));
+        assert!(!usage.contains("Licensed"));
+        let synopsis = usage_block(
+            "<pre>namespace std {\n  class counting_semaphore {\n  public:\n    void acquire();\n  };\n}</pre>",
+        )
+        .unwrap();
+        assert!(synopsis.contains("  class counting_semaphore {"));
+        assert!(synopsis.contains("    void acquire();"));
+        let sentence = explain_sentence(
+            "<p>(since C++20) 1) A counting_semaphore is a lightweight synchronization primitive that can control access to a shared resource. 2) Other text.</p>",
+        )
+        .unwrap();
+        assert_eq!(
+            sentence,
+            "A counting_semaphore is a lightweight synchronization primitive that can control access to a shared resource."
+        );
     }
 
     #[test]

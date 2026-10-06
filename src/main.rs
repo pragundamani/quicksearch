@@ -13,34 +13,12 @@ use clap::Parser;
 use crate::render::View;
 use crate::route::{route, Provider};
 
-const AFTER_HELP: &str = "\
-Sources
-  web            DuckDuckGo results and instant answers (the default)
-  cheat, cht     cheat.sh sheets
-  crate          crates.io
-  docs           docs.rs, with std/core/alloc sent to the official Rust docs
-  rust, std, rs  Rust standard library
-  so, stack      Stack Overflow
-  gh, github     GitHub repositories
-  mdn            MDN Web Docs
-  wiki           Wikipedia
-  man            local manual pages
-  arch           Arch Wiki
-  gentoo         Gentoo Wiki
-  fedora         Fedora Wiki
-  debian         Debian Wiki
-  ubuntu         Ubuntu Wiki
-  rfc            RFC text, or a title search
-  npm            the npm registry
-  pypi, pip      PyPI
-  gem            RubyGems
-  hex            Hex
-  go-mod         Go module search
-  maven          Maven Central
-  nuget          NuGet
-  cve, nvd       NVD advisories
-  stock, item    a product name or barcode
-
+macro_rules! help_text {
+    ($sources:literal) => {
+        const SOURCES: &str = $sources;
+        const AFTER_HELP: &str = concat!(
+            $sources,
+            "
 A leading word selects the source. `!bang` does the same thing, and an unknown
 bang follows DuckDuckGo. A path like std::fs::read picks rust or docs on its own.
 `qs lang <pattern>` fuzzy-finds language shorthands.
@@ -67,7 +45,71 @@ Examples
   qs history
 
 With no query, qs opens $VISUAL or $EDITOR. Options go before the query.
-";
+"
+        );
+    };
+}
+
+help_text!(
+    "\
+Sources
+  web              DuckDuckGo results and instant answers (the default)
+  cheat, cht       cheat.sh sheets
+  crate            crates.io
+  docs             docs.rs, with std/core/alloc sent to the official Rust docs
+  rust, std, rs    Rust standard library
+  so, stack        Stack Overflow
+  gh, github       GitHub repositories
+  mdn              MDN Web Docs
+  wiki             Wikipedia
+  man              local manual pages
+  arch             Arch Wiki
+  gentoo           Gentoo Wiki
+  fedora           Fedora Wiki
+  debian           Debian Wiki
+  ubuntu           Ubuntu Wiki
+  rfc              RFC text, or a title search
+  npm              the npm registry
+  pypi, pip        PyPI
+  gem              RubyGems
+  hex              Hex
+  go-mod           Go module search
+  maven            Maven Central
+  nuget            NuGet
+  cve, nvd         NVD advisories
+  stock, item      a product name or barcode
+
+Languages
+  c                C
+  cpp, c++         C++
+  py, python       Python
+  hs, haskell      Haskell, via Hoogle
+  ocaml, ml        OCaml
+  go               Go
+  java             Java
+  ruby, rb         Ruby
+  js, javascript   JavaScript
+  ts, typescript   TypeScript
+  php              PHP
+  zig              Zig
+  kt, kotlin       Kotlin
+  lua              Lua
+  ex, elixir       Elixir
+  perl             Perl
+  scala            Scala
+  clj, clojure     Clojure
+  erl, erlang      Erlang
+  jl, julia        Julia
+  nim              Nim
+  bash, sh         Bash
+  zsh              Zsh
+  css              CSS
+  html             HTML
+  node             Node.js
+  dart             Dart
+  r                R
+"
+);
 
 #[derive(Parser)]
 #[command(
@@ -129,6 +171,10 @@ fn run() -> Result<(), String> {
         query = compose_query(&query)?;
     }
     let mut routed = route(cli.provider, &query)?;
+    if routed.list_sources {
+        render::print_sources(SOURCES, color_enabled(cli.no_color));
+        return Ok(());
+    }
     if routed.list_history && !routed.query.trim().is_empty() {
         query = providers::history::rerun_query(&routed.query)
             .ok_or_else(|| "that history entry does not exist".to_string())?;
