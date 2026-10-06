@@ -29,10 +29,16 @@ cargo build --release --target-dir target
 ./target/release/quicksearch price of gold in inr
 ```
 
-Put it on your `PATH` as `qs`:
+Install the `qs` command:
 
 ```sh
-install -m 755 target/release/quicksearch ~/.local/bin/qs
+./install.sh
+```
+
+On Windows:
+
+```powershell
+powershell -File install.ps1
 ```
 
 With no query, `qs` opens `$VISUAL` or `$EDITOR`. Options go before the query.
@@ -131,7 +137,7 @@ qs flatpak install
 qs podman build
 ```
 
-`dnf`, `rpm`, `apt`, `pacman`, `brew`, `flatpak`, and `zypper` can show package info. `cargo`, `podman`, and `snap` open manuals.
+`dnf`, `rpm`, `apt`, `pacman`, `brew`, `flatpak`, `zypper`, and `winget` can show package info. `cargo`, `podman`, and `snap` open manuals.
 
 An 8, 12, 13, or 14 digit barcode is a product lookup. `qs 1912` stays a web search.
 
@@ -141,7 +147,7 @@ An 8, 12, 13, or 14 digit barcode is a product lookup. `qs 1912` stays a web sea
 qs -n 10 QUERY       # 1 to 20 results, default 5
 qs --open QUERY      # open the first hit
 qs --open 2 QUERY    # open hit 2
-qs --copy QUERY      # copy the first URL (wl-copy, then xclip)
+qs --copy QUERY      # copy the first URL
 qs --json QUERY
 qs --no-color QUERY  # or set NO_COLOR
 qs history           # recent searches
@@ -150,10 +156,10 @@ qs history 3         # run a saved search again
 
 ## Your own source
 
-`~/.config/quicksearch/sources`, one source per line. `#` starts a comment. `{query}` is the encoded rest of the command. Built-in words win over a custom line.
+Custom sources live in `~/.config/quicksearch/sources` on Linux, `~/Library/Application Support/quicksearch/sources` on macOS, and `%APPDATA%\quicksearch\sources` on Windows. One source per line. `#` starts a comment. `{query}` is the encoded rest of the command. Built-in words win over a custom line.
 
 ```
 aur https://aur.archlinux.org/packages?K={query}
 ```
 
-Doc indexes and product lookups are cached under `~/.cache/quicksearch`.
+Doc indexes and product lookups are cached under `~/.cache/quicksearch` on Linux, `~/Library/Caches/quicksearch` on macOS, and `%LOCALAPPDATA%\quicksearch` on Windows. `$XDG_CACHE_HOME` and `$XDG_CONFIG_HOME` still win when they are set.

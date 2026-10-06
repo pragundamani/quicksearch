@@ -384,11 +384,65 @@ fn read_fresh(path: &std::path::Path) -> Option<String> {
 }
 
 pub(crate) fn cache_dir() -> PathBuf {
-    let base = std::env::var_os("XDG_CACHE_HOME")
+    let xdg = std::env::var_os("XDG_CACHE_HOME");
+    let local = std::env::var_os("LOCALAPPDATA");
+    let home = home_dir();
+    platform_dir(
+        std::env::consts::OS,
+        xdg.as_deref(),
+        local.as_deref(),
+        home.as_deref(),
+        "Caches",
+        ".cache",
+    )
+}
+
+pub(crate) fn config_dir() -> PathBuf {
+    let xdg = std::env::var_os("XDG_CONFIG_HOME");
+    let appdata = std::env::var_os("APPDATA");
+    let home = home_dir();
+    platform_dir(
+        std::env::consts::OS,
+        xdg.as_deref(),
+        appdata.as_deref(),
+        home.as_deref(),
+        "Application Support",
+        ".config",
+    )
+}
+
+fn home_dir() -> Option<PathBuf> {
+    std::env::var_os("HOME")
+        .or_else(|| std::env::var_os("USERPROFILE"))
         .map(PathBuf::from)
-        .or_else(|| std::env::var_os("HOME").map(|home| PathBuf::from(home).join(".cache")))
-        .unwrap_or_else(std::env::temp_dir);
-    base.join("quicksearch")
+}
+
+fn platform_dir(
+    os: &str,
+    override_dir: Option<&std::ffi::OsStr>,
+    windows_dir: Option<&std::ffi::OsStr>,
+    home: Option<&std::path::Path>,
+    macos_folder: &str,
+    unix_folder: &str,
+) -> PathBuf {
+    if let Some(dir) = override_dir {
+        return PathBuf::from(dir).join("quicksearch");
+    }
+    if os == "windows" {
+        if let Some(dir) = windows_dir {
+            return PathBuf::from(dir).join("quicksearch");
+        }
+    }
+    if let Some(home) = home {
+        if os == "macos" {
+            return home
+                .join("Library")
+                .join(macos_folder)
+                .join("quicksearch");
+        }
+        return home.join(unix_folder).join("quicksearch");
+    }
+    std::env::temp_dir().join("quicksearch")
 }
 
 struct PageNotes {
@@ -844,7 +898,7 @@ fn is_command_word(word: &str) -> bool {
         "archwiki", "rfc", "rfcs", "npm", "pypi", "pip", "gentoo", "debian", "fedora", "ubuntu",
         "gem", "rubygems", "hex", "go-mod", "pkggo", "maven", "nuget", "cve", "nvd", "item",
         "stock", "sku", "upc", "barcode", "dnf", "apt", "apt-get", "pacman", "brew", "cargo",
-        "rpm", "flatpak", "zypper", "snap", "podman",
+        "rpm", "flatpak", "zypper", "snap", "podman", "winget",
     ];
     WORDS.contains(&word)
 }
@@ -940,6 +994,53 @@ void ThreadProc()
             sentence,
             "A counting_semaphore is a lightweight synchronization primitive that can control access to a shared resource."
         );
+    }
+
+    #[test]
+    fn platform_dirs_follow_the_host() {
+        let home = PathBuf::from("/home/para");
+        let cache = platform_dir(
+            "linux",
+            None,
+            None,
+            Some(&home),
+            "Caches",
+            ".cache",
+        );
+        assert_eq!(cache, PathBuf::from("/home/para/.cache/quicksearch"));
+        let mac = platform_dir(
+            "macos",
+            None,
+            None,
+            Some(&home),
+            "Caches",
+            ".cache",
+        );
+        assert_eq!(
+            mac,
+            PathBuf::from("/home/para/Library/Caches/quicksearch")
+        );
+        let windows = platform_dir(
+            "windows",
+            None,
+            Some(std::ffi::OsStr::new(r"C:\Users\para\AppData\Local")),
+            Some(&home),
+            "Caches",
+            ".cache",
+        );
+        assert_eq!(
+            windows,
+            PathBuf::from(r"C:\Users\para\AppData\Local").join("quicksearch")
+        );
+        let forced = platform_dir(
+            "linux",
+            Some(std::ffi::OsStr::new("/xdg")),
+            None,
+            Some(&home),
+            "Caches",
+            ".cache",
+        );
+        assert_eq!(forced, PathBuf::from("/xdg/quicksearch"));
     }
 
     #[test]

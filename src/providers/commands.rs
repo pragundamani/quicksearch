@@ -7,7 +7,7 @@ use crate::providers::man::open_page;
 
 const TOOLS: &[&str] = &[
     "apt-get", "dnf", "apt", "pacman", "brew", "cargo", "rpm", "flatpak", "zypper", "snap",
-    "podman",
+    "podman", "winget",
 ];
 
 const SUBCOMMANDS: &[&str] = &[
@@ -85,6 +85,10 @@ pub fn package(tool: &str, name: &str) -> Result<Outcome, String> {
         "apt" | "apt-get" => command_text("apt", &["show", name])?,
         "pacman" => command_text("pacman", &["-Si", name])?,
         "brew" => command_text("brew", &["info", name])?,
+        "winget" => command_text(
+            "winget",
+            &["show", name, "--disable-interactivity", "--accept-source-agreements"],
+        )?,
         "flatpak" => flatpak_info(name)?,
         "zypper" => command_text("zypper", &["info", name])?,
         "cargo" | "snap" | "podman" => {
@@ -188,6 +192,7 @@ fn published_manual(page: &str) -> Option<String> {
             "https://doc.rust-lang.org/cargo/commands/cargo-{sub}.html"
         )),
         "brew" => Some("https://docs.brew.sh/Manpage".into()),
+        "winget" => Some("https://learn.microsoft.com/windows/package-manager/winget/".into()),
         "apt" | "apt-get" => Some("https://manpages.debian.org/unstable/apt/apt.8.en.html".into()),
         "pacman" => Some("https://man.archlinux.org/man/pacman.8".into()),
         _ => None,
@@ -227,21 +232,39 @@ fn package_cache_path(tool: &str, name: &str) -> std::path::PathBuf {
     cache_dir().join("packages").join(safe)
 }
 
-fn cache_stamp() -> u64 {
+fn dnf_cache_mtime() -> Option<u64> {
     std::fs::metadata("/var/cache/libdnf5")
         .and_then(|meta| meta.modified())
         .ok()
         .and_then(|time| time.duration_since(UNIX_EPOCH).ok())
         .map(|duration| duration.as_secs())
-        .unwrap_or(0)
+}
+
+fn cache_stamp() -> u64 {
+    dnf_cache_mtime().unwrap_or_else(|| {
+        std::time::SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .map(|duration| duration.as_secs())
+            .unwrap_or(0)
+    })
 }
 
 fn read_package_cache(tool: &str, name: &str) -> Option<Outcome> {
     let text = std::fs::read_to_string(package_cache_path(tool, name)).ok()?;
     let (stamp, body) = text.split_once('\n')?;
     let saved: u64 = stamp.strip_prefix("stamp ")?.parse().ok()?;
-    if saved != cache_stamp() {
-        return None;
+    if let Some(mtime) = dnf_cache_mtime() {
+        if saved != mtime {
+            return None;
+        }
+    } else {
+        let now = std::time::SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .map(|duration| duration.as_secs())
+            .unwrap_or(0);
+        if now.saturating_sub(saved) > 24 * 60 * 60 {
+            return None;
+        }
     }
     let body = body.trim();
     if body.is_empty() {

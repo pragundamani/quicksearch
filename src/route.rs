@@ -362,6 +362,9 @@ mod tests {
         assert_eq!(cargo.manual.as_deref(), Some("cargo-build"));
         let brew = routed(None, "brew install");
         assert_eq!(brew.manual.as_deref(), Some("brew-install"));
+        let winget = routed(None, "winget rust");
+        assert_eq!(winget.package_tool.as_deref(), Some("winget"));
+        assert_eq!(winget.query, "rust");
     }
 
     #[test]

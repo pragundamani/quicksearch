@@ -24,13 +24,7 @@ pub fn lookup(word: &str, query: &str) -> Option<String> {
 }
 
 pub fn sources_path() -> PathBuf {
-    let base = std::env::var_os("XDG_CONFIG_HOME")
-        .map(PathBuf::from)
-        .or_else(|| {
-            std::env::var_os("HOME").map(|home| PathBuf::from(home).join(".config"))
-        })
-        .unwrap_or_else(std::env::temp_dir);
-    base.join("quicksearch").join("sources")
+    crate::providers::langs::config_dir().join("sources")
 }
 
 #[cfg(test)]

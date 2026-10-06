@@ -23,7 +23,7 @@ A leading word selects the source. `!bang` does the same thing, and an unknown
 bang follows DuckDuckGo. A path like std::fs::read picks rust or docs on its own.
 `qs lang <pattern>` fuzzy-finds language shorthands.
 `qs topic <pattern>` fuzzy-finds concepts such as linux, networking, and security.
-`qs dnf`, `qs cargo build`, and `qs brew install` open that command's manual.
+`qs dnf`, `qs cargo build`, `qs brew install`, and `qs winget` open that command's manual.
 `qs dnf rust` shows package info and does not install anything.
 `web` forces a normal web search. Add your own leading word in
 ~/.config/quicksearch/sources as `word https://example.test/?q={query}`.
@@ -273,13 +273,16 @@ fn nth_url(outcome: &crate::model::Outcome, index: usize) -> Result<String, Stri
 }
 
 fn copy_url(url: &str) -> Result<(), String> {
-    let attempts = [
-        ("wl-copy", vec![]),
-        ("xclip", vec!["-selection", "clipboard"]),
-    ];
-    for (bin, args) in attempts {
+    let attempts: &[(&str, &[&str])] = if cfg!(target_os = "windows") {
+        &[("clip", &[])]
+    } else if cfg!(target_os = "macos") {
+        &[("pbcopy", &[])]
+    } else {
+        &[("wl-copy", &[]), ("xclip", &["-selection", "clipboard"])]
+    };
+    for &(bin, args) in attempts {
         let mut child = match Command::new(bin)
-            .args(&args)
+            .args(args)
             .stdin(Stdio::piped())
             .stdout(Stdio::null())
             .stderr(Stdio::null())
@@ -296,7 +299,9 @@ fn copy_url(url: &str) -> Result<(), String> {
             return Ok(());
         }
     }
-    Err(format!("{url}\nno clipboard tool (wl-copy or xclip)"))
+    Err(format!(
+        "{url}\nno clipboard tool (wl-copy, xclip, pbcopy, or clip)"
+    ))
 }
 
 fn color_enabled(no_color: bool) -> bool {
@@ -307,9 +312,15 @@ fn color_enabled(no_color: bool) -> bool {
 }
 
 fn compose_query(seed: &str) -> Result<String, String> {
-    let editor = std::env::var("VISUAL")
-        .or_else(|_| std::env::var("EDITOR"))
-        .unwrap_or_else(|_| "vi".into());
+    let editor = std::env::var("VISUAL").or_else(|_| std::env::var("EDITOR")).unwrap_or_else(
+        |_| {
+            if cfg!(target_os = "windows") {
+                "notepad".into()
+            } else {
+                "vi".into()
+            }
+        },
+    );
     let mut path = std::env::temp_dir();
     let nanos = std::time::SystemTime::now()
         .duration_since(std::time::UNIX_EPOCH)
@@ -353,17 +364,29 @@ fn open_url(url: &str) -> Result<(), String> {
             Err(format!("man exited with {status}"))
         }
     } else {
-        let status = Command::new("xdg-open")
-            .arg(url)
+        let name = if cfg!(target_os = "macos") {
+            "open"
+        } else if cfg!(target_os = "windows") {
+            "cmd"
+        } else {
+            "xdg-open"
+        };
+        let mut command = Command::new(name);
+        if cfg!(target_os = "windows") {
+            command.args(["/C", "start", "", url]);
+        } else {
+            command.arg(url);
+        }
+        let status = command
             .stdin(Stdio::null())
             .stdout(Stdio::null())
             .stderr(Stdio::null())
             .status()
-            .map_err(|err| format!("xdg-open: {err}"))?;
+            .map_err(|err| format!("{name}: {err}"))?;
         if status.success() {
             Ok(())
         } else {
-            Err(format!("xdg-open exited with {status}"))
+            Err(format!("{name} exited with {status}"))
         }
     }
 }
