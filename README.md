@@ -2,13 +2,27 @@
 
 Fast lookups from the terminal. The default is a web search. A leading word picks a manual, a doc set, a package registry, or a wiki.
 
-The binary is `quicksearch`. The command name is `qs`.
+The command is `qs`.
 
 qs is free software under the GNU General Public License, version 3 or any later version. See `LICENSE`.
 
 ![qs](docs/qs.gif)
 
 ## Install
+
+### Cargo
+
+```sh
+cargo install quicksearch-cli
+```
+
+### Homebrew
+
+```sh
+brew tap pragundamani/qs
+brew trust pragundamani/qs
+brew install qs
+```
 
 Download a binary, or build it yourself.
 
@@ -110,7 +124,7 @@ Or build without installing:
 
 ```sh
 cargo build --release --target-dir target
-./target/release/quicksearch price of gold in inr
+./target/release/qs price of gold in inr
 ```
 
 With no query, `qs` opens `$VISUAL` or `$EDITOR`. Options go before the query.

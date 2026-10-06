@@ -45,7 +45,7 @@ jobs:
           target="${{ matrix.target }}"
           ext="tar.gz"
           bin="qs"
-          src="target/${target}/release/quicksearch"
+          src="target/${target}/release/qs"
           if [[ "$target" == *windows* ]]; then
             ext="zip"
             bin="qs.exe"

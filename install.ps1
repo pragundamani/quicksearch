@@ -61,4 +61,4 @@ if ($Release) {
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 Write-Host "qs: compiling..."
 cargo build --release --manifest-path (Join-Path $root "Cargo.toml") --target-dir (Join-Path $root "target")
-Install-QsBinary (Join-Path $root "target\release\quicksearch.exe")
+Install-QsBinary (Join-Path $root "target\release\qs.exe")

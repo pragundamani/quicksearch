@@ -82,4 +82,4 @@ fi
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "qs: compiling..."
 cargo build --release --manifest-path "$root/Cargo.toml" --target-dir "$root/target"
-install_unix_bin "$root/target/release/quicksearch"
+install_unix_bin "$root/target/release/qs"

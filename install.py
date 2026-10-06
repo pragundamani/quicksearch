@@ -55,7 +55,7 @@ def main() -> int:
             ],
             check=True,
         )
-        name = "quicksearch.exe" if sys.platform == "win32" else "quicksearch"
+        name = "qs.exe" if sys.platform == "win32" else "qs"
         binary = root / "target" / "release" / name
     if sys.platform == "win32":
         return install_windows(binary)
