@@ -4,7 +4,63 @@ Fast lookups from the terminal. The default is a web search. A leading word pick
 
 The binary is `quicksearch`. The command name is `qs`.
 
+![qs](docs/qs.gif)
+
 ## Install
+
+Download a binary, or build it yourself.
+
+### Download
+
+Unpack the archive and put `qs` or `qs.exe` on your PATH. Linux builds need glibc and OpenSSL. Other files are on the [latest release](https://github.com/pragundamani/quicksearch/releases/latest).
+
+Linux x86_64:
+
+```sh
+curl -LO https://github.com/pragundamani/quicksearch/releases/latest/download/qs-x86_64-unknown-linux-gnu.tar.gz
+tar -xzf qs-x86_64-unknown-linux-gnu.tar.gz
+install -m 755 qs "$HOME/.local/bin/qs"
+```
+
+Linux ARM:
+
+```sh
+curl -LO https://github.com/pragundamani/quicksearch/releases/latest/download/qs-aarch64-unknown-linux-gnu.tar.gz
+tar -xzf qs-aarch64-unknown-linux-gnu.tar.gz
+install -m 755 qs "$HOME/.local/bin/qs"
+```
+
+macOS Apple Silicon:
+
+```sh
+curl -LO https://github.com/pragundamani/quicksearch/releases/latest/download/qs-aarch64-apple-darwin.tar.gz
+tar -xzf qs-aarch64-apple-darwin.tar.gz
+install -m 755 qs "$HOME/.local/bin/qs"
+```
+
+macOS Intel:
+
+```sh
+curl -LO https://github.com/pragundamani/quicksearch/releases/latest/download/qs-x86_64-apple-darwin.tar.gz
+tar -xzf qs-x86_64-apple-darwin.tar.gz
+install -m 755 qs "$HOME/.local/bin/qs"
+```
+
+Windows x86_64:
+
+```powershell
+curl.exe -LO https://github.com/pragundamani/quicksearch/releases/latest/download/qs-x86_64-pc-windows-msvc.zip
+tar -xf qs-x86_64-pc-windows-msvc.zip
+```
+
+Windows ARM:
+
+```powershell
+curl.exe -LO https://github.com/pragundamani/quicksearch/releases/latest/download/qs-aarch64-pc-windows-msvc.zip
+tar -xf qs-aarch64-pc-windows-msvc.zip
+```
+
+### Build it yourself
 
 Linux and macOS:
 
@@ -22,9 +78,7 @@ cd quicksearch
 powershell -File install.ps1
 ```
 
-![qs](docs/qs.gif)
-
-## Build
+Or build without installing:
 
 ```sh
 cargo build --release --target-dir target
