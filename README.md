@@ -22,25 +22,7 @@ cd quicksearch
 powershell -File install.ps1
 ```
 
-## Screenshots
-
 ![qs](docs/qs.gif)
-
-`qs cpp semaphore`
-
-![qs cpp semaphore](docs/qs-semaphore.png)
-
-`qs -n 1 py json.dumps`
-
-![qs py json.dumps](docs/qs-python.png)
-
-`qs -n 1 std::fs::read`
-
-![qs std::fs::read](docs/qs-rust.png)
-
-`qs qs`
-
-![qs qs](docs/qs-sources.png)
 
 ## Build
 
@@ -148,6 +130,24 @@ qs podman build
 `dnf`, `rpm`, `apt`, `pacman`, `brew`, `flatpak`, `zypper`, and `winget` can show package info. `cargo`, `podman`, and `snap` open manuals.
 
 An 8, 12, 13, or 14 digit barcode is a product lookup. `qs 1912` stays a web search.
+
+## Screenshots
+
+`qs cpp semaphore`
+
+![qs cpp semaphore](docs/qs-semaphore.png)
+
+`qs -n 1 py json.dumps`
+
+![qs py json.dumps](docs/qs-python.png)
+
+`qs -n 1 std::fs::read`
+
+![qs std::fs::read](docs/qs-rust.png)
+
+`qs qs`
+
+![qs qs](docs/qs-sources.png)
 
 ## Options
 
