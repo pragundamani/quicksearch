@@ -12,7 +12,25 @@ Download a binary, or build it yourself.
 
 ### Download
 
-Unpack the archive and put `qs` or `qs.exe` on your PATH. Linux builds need glibc and OpenSSL. Other files are on the [latest release](https://github.com/pragundamani/quicksearch/releases/latest).
+The installers fetch the latest release binary for this machine. Linux builds need glibc and OpenSSL.
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/pragundamani/quicksearch/main/install.sh | bash -s -- --release
+```
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/pragundamani/quicksearch/main/install.py | python3 - --release
+```
+
+```powershell
+$script = Join-Path $env:TEMP "qs-install.ps1"
+Invoke-WebRequest https://raw.githubusercontent.com/pragundamani/quicksearch/main/install.ps1 -OutFile $script
+powershell -File $script -Release
+```
+
+From a clone: `./install.sh --release`, `python3 install.py --release`, or `powershell -File install.ps1 -Release`.
+
+Other archives are on the [latest release](https://github.com/pragundamani/quicksearch/releases/latest).
 
 Linux x86_64:
 
