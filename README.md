@@ -4,6 +4,24 @@ Fast lookups from the terminal. The default is a web search. A leading word pick
 
 The binary is `quicksearch`. The command name is `qs`.
 
+## Install
+
+Linux and macOS:
+
+```sh
+git clone https://github.com/pragundamani/quicksearch.git
+cd quicksearch
+./install.sh
+```
+
+Windows:
+
+```powershell
+git clone https://github.com/pragundamani/quicksearch.git
+cd quicksearch
+powershell -File install.ps1
+```
+
 ## Screenshots
 
 `qs cpp semaphore`
@@ -27,18 +45,6 @@ The binary is `quicksearch`. The command name is `qs`.
 ```sh
 cargo build --release --target-dir target
 ./target/release/quicksearch price of gold in inr
-```
-
-Install the `qs` command:
-
-```sh
-./install.sh
-```
-
-On Windows:
-
-```powershell
-powershell -File install.ps1
 ```
 
 With no query, `qs` opens `$VISUAL` or `$EDITOR`. Options go before the query.
