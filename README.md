@@ -78,6 +78,14 @@ cd quicksearch
 powershell -File install.ps1
 ```
 
+Or use Python on any of them:
+
+```sh
+git clone https://github.com/pragundamani/quicksearch.git
+cd quicksearch
+python3 install.py
+```
+
 Or build without installing:
 
 ```sh
