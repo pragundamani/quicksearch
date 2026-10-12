@@ -29,8 +29,10 @@ jobs:
             target: x86_64-apple-darwin
           - os: windows-latest
             target: x86_64-pc-windows-msvc
+            python-architecture: x64
           - os: windows-11-arm
             target: aarch64-pc-windows-msvc
+            python-architecture: arm64
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
@@ -38,23 +40,32 @@ jobs:
           targets: ${{ matrix.target }}
       - name: Build
         run: cargo build --release --target ${{ matrix.target }}
+      - name: Set up Python for Windows packaging
+        if: runner.os == 'Windows'
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12.8"
+          architecture: ${{ matrix.python-architecture }}
       - name: Package
         shell: bash
         run: |
           set -euo pipefail
           target="${{ matrix.target }}"
-          ext="tar.gz"
-          bin="qs"
           src="target/${target}/release/qs"
           if [[ "$target" == *windows* ]]; then
-            ext="zip"
-            bin="qs.exe"
-            src="${src}.exe"
+            python scripts/package_release.py \
+              --source "${src}.exe" \
+              --output "dist/qs-${target}.zip"
+          else
+            archive="dist/qs-${target}.tar.gz"
+            mkdir -p stage dist
+            cp "$src" stage/qs
+            chmod 0755 stage/qs
+            tar -czf "$archive" -C stage qs
+            gzip -t "$archive"
+            [[ "$(tar -tzf "$archive")" == "qs" ]]
+            tar -xOzf "$archive" qs | cmp - "$src"
           fi
-          mkdir -p stage dist
-          cp "$src" "stage/${bin}"
-          chmod +x "stage/${bin}" || true
-          tar -a -cf "dist/qs-${target}.${ext}" -C stage "$bin"
       - uses: actions/upload-artifact@v4
         with:
           name: qs-${{ matrix.target }}
@@ -82,6 +93,6 @@ jobs:
           body: |
             Prebuilt `qs` binaries. Unpack an archive and put `qs` or `qs.exe` on your PATH.
 
-            - Linux x86_64 and aarch64, built on Ubuntu 22.04. These need glibc and OpenSSL.
+            - Linux x86_64 and aarch64, built on Ubuntu 22.04. These target GNU/glibc.
             - macOS x86_64 and Apple Silicon
             - Windows x86_64 and ARM
