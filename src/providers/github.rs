@@ -27,13 +27,43 @@ pub fn search(client: &Client, query: &str, limit: usize) -> Result<Outcome, Str
     );
     let response: GhResponse =
         client.get_json(&url, APP_UA, &[("Accept", "application/vnd.github+json")])?;
+    let mut items = response.items;
+    let looks_like_org = query.contains('-')
+        && query
+            .chars()
+            .all(|ch| ch.is_ascii_alphanumeric() || ch == '-');
+    if looks_like_org
+        && !items.iter().any(|repo| {
+            repo.full_name
+                .split_once('/')
+                .is_some_and(|(owner, _)| owner.eq_ignore_ascii_case(query))
+        })
+    {
+        let org_url = format!(
+            "https://api.github.com/search/repositories?sort=stars&per_page={limit}&q={}",
+            encode_query(&format!("org:{query}"))
+        );
+        if let Ok(org_response) = client.get_json::<GhResponse>(
+            &org_url,
+            APP_UA,
+            &[("Accept", "application/vnd.github+json")],
+        ) {
+            for repo in org_response.items.into_iter().rev() {
+                if !items
+                    .iter()
+                    .any(|existing| existing.full_name == repo.full_name)
+                {
+                    items.insert(0, repo);
+                }
+            }
+        }
+    }
     let mut outcome = Outcome::new("github", query);
     outcome.source_url = Some(format!(
         "https://github.com/search?type=repositories&q={}",
         encode_query(query)
     ));
-    outcome.hits = response
-        .items
+    outcome.hits = items
         .into_iter()
         .take(limit)
         .map(|repo| {

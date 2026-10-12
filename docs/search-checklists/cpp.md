@@ -1,0 +1,104 @@
+# C++ quicksearch checklist
+
+100 representative search-quality checks for C++ documentation, APIs, language concepts, and common tasks.
+
+- [ ] `qs cpp vector` — Expected: `std::vector`. Test: Direct lookup of a core sequence container.
+- [ ] `qs cpp unordered maps` — Expected: `std::unordered_map`. Test: Plural and spaced-name normalization.
+- [ ] `qs cpp std::array` — Expected: `std::array`. Test: Fully qualified fixed-size container identifier.
+- [ ] `qs cpp forward lists` — Expected: `std::forward_list`. Test: Plural phrase to snake_case type.
+- [ ] `qs cpp priority_queue` — Expected: `std::priority_queue`. Test: Exact snake_case container adaptor.
+- [ ] `qs cpp multisets` — Expected: `std::multiset`. Test: Plural morphology for an associative container.
+- [ ] `qs cpp map::try_emplace` — Expected: `std::map::try_emplace`. Test: Partially qualified member lookup.
+- [ ] `qs cpp vector capacity` — Expected: `std::vector::capacity` and capacity management. Test: Type-and-member concept phrase.
+- [ ] `qs cpp span` — Expected: `std::span`. Test: Common non-owning view type.
+- [ ] `qs cpp mdspan` — Expected: `std::mdspan`. Test: Modern multidimensional view type.
+- [ ] `qs cpp tuples` — Expected: `std::tuple`. Test: Simple plural-to-singular vocabulary type.
+- [ ] `qs cpp std::variant` — Expected: `std::variant`. Test: Exact qualified sum-type identifier.
+- [ ] `qs cpp optional value` — Expected: `std::optional`. Test: Natural phrase for a vocabulary type.
+- [ ] `qs cpp any_cast` — Expected: `std::any_cast`. Test: Exact snake_case cast API.
+- [ ] `qs cpp bitsets` — Expected: `std::bitset`. Test: Plural normalization for a fixed-size bit container.
+- [ ] `qs cpp sort` — Expected: `std::sort`. Test: Baseline lookup for a major algorithm.
+- [ ] `qs cpp stable_sort` — Expected: `std::stable_sort`. Test: Exact algorithm identifier with underscore.
+- [ ] `qs cpp lower_bound` — Expected: `std::lower_bound`. Test: Common binary-search algorithm identifier.
+- [ ] `qs cpp ranges::filter_view` — Expected: `std::ranges::filter_view`. Test: Namespace-qualified ranges view lookup.
+- [ ] `qs cpp std::ranges::sort` — Expected: `std::ranges::sort`. Test: Fully qualified C++20 algorithm lookup.
+- [ ] `qs cpp transform_reduce` — Expected: `std::transform_reduce`. Test: Compound parallel numeric algorithm name.
+- [ ] `qs cpp partition point` — Expected: `std::partition_point`. Test: Spaced words to snake_case algorithm.
+- [ ] `qs cpp nth_element` — Expected: `std::nth_element`. Test: Exact selection-algorithm identifier.
+- [ ] `qs cpp heap algorithms` — Expected: Heap operations such as `std::make_heap`. Test: Algorithm-family concept rather than one symbol.
+- [ ] `qs cpp set intersection` — Expected: `std::set_intersection`. Test: Natural spaced form of an algorithm.
+- [ ] `qs cpp accumulate` — Expected: `std::accumulate`. Test: Core numeric algorithm lookup.
+- [ ] `qs cpp remove_if` — Expected: `std::remove_if`. Test: Exact predicate-based algorithm identifier.
+- [ ] `qs cpp binary search` — Expected: `std::binary_search`. Test: Natural spaced query for an underscored API.
+- [ ] `qs cpp shuffle range` — Expected: `std::shuffle`. Test: Task-like phrase with a direct algorithm match.
+- [ ] `qs cpp unique_ptr` — Expected: `std::unique_ptr`. Test: Core smart-pointer snake_case type.
+- [ ] `qs cpp make shared` — Expected: `std::make_shared`. Test: Spaced phrase to factory function.
+- [ ] `qs cpp weak pointers` — Expected: `std::weak_ptr`. Test: Plural natural wording for a smart pointer.
+- [ ] `qs cpp std::move` — Expected: `std::move`. Test: Exact qualified utility lookup.
+- [ ] `qs cpp perfect forwarding` — Expected: Forwarding references and `std::forward`. Test: Language idiom linked to its main API.
+- [ ] `qs cpp allocator_traits` — Expected: `std::allocator_traits`. Test: Exact allocator customization type.
+- [ ] `qs cpp polymorphic memory resource` — Expected: `std::pmr::memory_resource`. Test: Natural wording for a namespaced allocation API.
+- [ ] `qs cpp reference_wrapper` — Expected: `std::reference_wrapper`. Test: Exact wrapper-type identifier.
+- [ ] `qs cpp type traits` — Expected: The `<type_traits>` library. Test: Plural library-category search.
+- [ ] `qs cpp std::function` — Expected: `std::function`. Test: Fully qualified callable wrapper.
+- [ ] `qs cpp string views` — Expected: `std::string_view`. Test: Plural morphology and alias recognition.
+- [ ] `qs cpp from_chars` — Expected: `std::from_chars`. Test: Exact low-level conversion API.
+- [ ] `qs cpp format string` — Expected: `std::format` and format strings. Test: Natural phrase for formatting facilities.
+- [ ] `qs cpp regex_match` — Expected: `std::regex_match`. Test: Exact regular-expression function.
+- [ ] `qs cpp getline` — Expected: `std::getline`. Test: Common input helper with overloads.
+- [ ] `qs cpp stringstreams` — Expected: `std::basic_stringstream` / `std::stringstream`. Test: Plural alias-to-primary-type lookup.
+- [ ] `qs cpp filesystem path` — Expected: `std::filesystem::path`. Test: Natural words for a nested-namespace type.
+- [ ] `qs cpp recursive_directory_iterator` — Expected: `std::filesystem::recursive_directory_iterator`. Test: Long exact filesystem identifier.
+- [ ] `qs cpp ifstream` — Expected: `std::basic_ifstream` / `std::ifstream`. Test: Common stream alias lookup.
+- [ ] `qs cpp write binary file` — Expected: Binary output with `std::ofstream`. Test: Intent-based multiword I/O task.
+- [ ] `qs cpp std::print` — Expected: `std::print`. Test: Exact qualified C++23 output API.
+- [ ] `qs cpp source_location` — Expected: `std::source_location`. Test: Modern diagnostic utility identifier.
+- [ ] `qs cpp stacktrace` — Expected: `std::stacktrace`. Test: Modern diagnostics type lookup.
+- [ ] `qs cpp error codes` — Expected: `std::error_code`. Test: Plural phrase for system error handling.
+- [ ] `qs cpp exception hierarchy` — Expected: Standard exception classes rooted at `std::exception`. Test: Concept-family search for exception types.
+- [ ] `qs cpp RAII` — Expected: Resource Acquisition Is Initialization. Test: Acronym handling for a foundational idiom.
+- [ ] `qs cpp move semantics` — Expected: Rvalue references, move construction, and move assignment. Test: Broad language-concept discovery.
+- [ ] `qs cpp copy elision` — Expected: Copy elision and return value optimization. Test: Two-word object-lifetime concept.
+- [ ] `qs cpp rule of five` — Expected: Rule of five special member functions. Test: Idiomatic natural-language query.
+- [ ] `qs cpp structured bindings` — Expected: Structured binding declaration. Test: Plural modern-language feature.
+- [ ] `qs cpp lambda captures` — Expected: Lambda capture syntax and semantics. Test: Multiword function-object concept.
+- [ ] `qs cpp generic lambdas` — Expected: Generic lambda expressions. Test: Plural morphology for a language feature.
+- [ ] `qs cpp template specializations` — Expected: Explicit and partial template specialization. Test: Plural concept-page matching.
+- [ ] `qs cpp concepts requires clause` — Expected: Constraints, concepts, and requires clauses. Test: Multi-keyword modern template query.
+- [ ] `qs cpp fold expressions` — Expected: Fold expressions. Test: Plural syntax-feature lookup.
+- [ ] `qs cpp constexpr functions` — Expected: `constexpr` functions. Test: Keyword plus plural entity search.
+- [ ] `qs cpp consteval` — Expected: Immediate functions and the `consteval` specifier. Test: Direct keyword lookup.
+- [ ] `qs cpp decltype(auto)` — Expected: `decltype(auto)` placeholder type. Test: Punctuation-sensitive language syntax.
+- [ ] `qs cpp type deduction` — Expected: `auto` and template argument deduction. Test: Broad concept with multiple related rules.
+- [ ] `qs cpp range based for` — Expected: Range-based `for` statement. Test: Natural words without punctuation or hyphens.
+- [ ] `qs cpp coroutines` — Expected: C++ coroutines. Test: Plural language-feature lookup.
+- [ ] `qs cpp modules` — Expected: C++ modules and import declarations. Test: Common plural feature term.
+- [ ] `qs cpp three way comparison` — Expected: The spaceship operator and `std::strong_ordering`. Test: Natural phrase for C++20 comparison support.
+- [ ] `qs cpp threads` — Expected: `std::thread`. Test: Plural-to-singular concurrency type.
+- [ ] `qs cpp jthread stop token` — Expected: `std::jthread` and `std::stop_token`. Test: Multiword cooperative-cancellation query.
+- [ ] `qs cpp mutexes` — Expected: `std::mutex`. Test: Irregular plural normalization.
+- [ ] `qs cpp condition variables` — Expected: `std::condition_variable`. Test: Plural phrase to snake_case synchronization type.
+- [ ] `qs cpp atomic compare exchange` — Expected: `std::atomic::compare_exchange_weak/strong`. Test: Natural operation name for atomic member APIs.
+- [ ] `qs cpp memory ordering` — Expected: `std::memory_order`. Test: Concurrency concept and enum family.
+- [ ] `qs cpp futures` — Expected: `std::future`. Test: Plural asynchronous-result type.
+- [ ] `qs cpp async launch policies` — Expected: `std::async` and `std::launch`. Test: Multiword query spanning function and policy enum.
+- [ ] `qs cpp counting_semaphore` — Expected: `std::counting_semaphore`. Test: Exact C++20 synchronization identifier.
+- [ ] `qs cpp latches` — Expected: `std::latch`. Test: Plural normalization for a C++20 primitive.
+- [ ] `qs cpp barriers` — Expected: `std::barrier`. Test: Plural normalization for phased synchronization.
+- [ ] `qs cpp duration_cast` — Expected: `std::chrono::duration_cast`. Test: Namespace inference for a conversion API.
+- [ ] `qs cpp steady clock` — Expected: `std::chrono::steady_clock`. Test: Spaced phrase to nested snake_case type.
+- [ ] `qs cpp calendar dates` — Expected: `std::chrono` calendar types such as `year_month_day`. Test: Natural plural query for calendar support.
+- [ ] `qs cpp time zones` — Expected: `std::chrono::time_zone` and `zoned_time`. Test: Natural phrase for chrono time-zone APIs.
+- [ ] `qs cpp complex numbers` — Expected: `std::complex`. Test: Plural mathematical concept to template type.
+- [ ] `qs cpp gcd lcm` — Expected: `std::gcd` and `std::lcm`. Test: Two related numeric APIs in one terse query.
+- [ ] `qs cpp random number engine` — Expected: C++ random number engines such as `std::mt19937`. Test: Concept search over a family of generators.
+- [ ] `qs cpp uniform_int_distribution` — Expected: `std::uniform_int_distribution`. Test: Exact long random-library identifier.
+- [ ] `qs cpp remove elements from vector` — Expected: `std::erase_if` and the erase-remove idiom. Test: Common container-mutation task.
+- [ ] `qs cpp erase map key` — Expected: `std::map::erase` / `std::unordered_map::erase`. Test: Natural associative-container task.
+- [ ] `qs cpp read whole file` — Expected: File input with `std::ifstream` and iterators or buffers. Test: Intent search beyond a single named API.
+- [ ] `qs cpp split string delimiter` — Expected: String splitting with `std::views::split`. Test: Common text-processing task in natural words.
+- [ ] `qs cpp convert string to integer` — Expected: `std::stoi` or `std::from_chars`. Test: Task query that should rank conversion APIs.
+- [ ] `qs cpp sort custom objects` — Expected: `std::sort` with a comparator. Test: Algorithm customization task.
+- [ ] `qs cpp find duplicate values` — Expected: Duplicate detection with sorting, sets, or adjacent search. Test: General algorithmic intent query.
+- [ ] `qs cpp measure elapsed time` — Expected: `std::chrono::steady_clock` and durations. Test: Practical timing task stated naturally.
+- [ ] `qs cpp visit variant` — Expected: `std::visit`. Test: Verb-object query for variant dispatch.

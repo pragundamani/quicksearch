@@ -6,7 +6,15 @@ The command is `qs`.
 
 qs is free software under the GNU General Public License, version 3 or any later version. See `LICENSE`.
 
+Current version: **0.2.1**.
+
 ![qs](docs/qs.gif)
+
+## v0.2.1 platform status
+
+The tag-triggered release workflow is configured to package Linux x86_64/aarch64, macOS x86_64/Apple Silicon, and Windows x86_64/ARM (MSVC). An asset is available only after its workflow job succeeds.
+
+The v0.2.1 pre-release checks ran natively on Linux x86_64. They also cross-built Linux x86_64/aarch64 (GNU and musl) and Windows x86_64/i686 (GNU). They did not run binaries natively on Windows, use MSVC, or build or test on macOS.
 
 ## Install
 
@@ -28,7 +36,7 @@ Download a binary, or build it yourself.
 
 ### Download
 
-The installers fetch the latest release binary for this machine. Linux builds need glibc and OpenSSL.
+The installers fetch the latest release binary for this machine. Public tag-workflow Linux archives currently target GNU/glibc. Pre-release validation also cross-built GNU and musl Linux targets.
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/pragundamani/quicksearch/main/install.sh | bash -s -- --release
@@ -146,11 +154,43 @@ qs rfc 9110
 qs npm lodash
 qs cve openssl
 qs 3017620422003
-qs --open 2 QUERY
+qs --open=2 QUERY
 qs history
+qs cache status
+qs cache clear
 ```
 
 `qs dnf rust` shows package info. It does not install or remove anything. `qs cargo build` opens the `cargo-build` manual. `qs how to upgrade cargo binaries` stays a web search.
+
+
+## Generated examples
+
+```sh
+qs --example how to read a file in rust
+qs e py multithread          # short form
+qs --example-setup
+qs --example-status
+qs --example-reset
+```
+
+`e` is a reserved first-word alias for `--example`. `--example` sends the query and up to three bounded HTTPS documentation results to the selected Google Gemini provider. qs checks citation indexes, the requested language, and basic lexical relevance. These checks do not prove that every generated claim is supported by a source. Treat all generated code as untrusted. qs never runs generated code. It performs a bounded syntax-only check when a fixed, trusted parser is available, but this does not verify behavior or safety.
+
+First use asks you to select one provider in an interactive terminal:
+
+- **Gemini CLI (Unix):** Install Gemini CLI 0.63.0 or later. Sign in once with `GEMINI_FORCE_ENCRYPTED_FILE_STORAGE=true gemini` so Gemini CLI puts OAuth credentials in its native keyring. qs does not start login or install flows. It runs the CLI in a private temporary home with extensions, MCP servers, user instructions, unrelated credentials, and all tools disabled. If Gemini CLI cannot use a native keyring, select Gemini API and use `GEMINI_API_KEY` instead.
+- **Gemini API:** Enter a key through the hidden prompt. qs stores it only in the native OS credential store. `GEMINI_API_KEY` is an ephemeral override and is never saved. Systems without a usable native credential store must use that environment variable or Gemini CLI.
+
+JSON and non-interactive generation never prompts, starts login, or changes provider settings. For Gemini API generation in these modes, provide `GEMINI_API_KEY`; qs does not open the OS credential store. `--example-setup` and `--example-reset` require an interactive terminal in human mode.
+
+Example prompts, model responses, generated code, and documentation text are not written to the persistent cache or search history. Provider settings are stored separately in the platform state directory. Use `--example-status` to inspect the saved provider and `--example-reset` to remove it and attempt cleanup of the dedicated stored-key account, including an orphan left by an interrupted setup. If the native credential store is unavailable, reset still removes provider state and asks you to retry credential cleanup later.
+
+## Cache
+
+`qs` enforces one global 4 MiB limit for persistent cache files. Writes use a cross-process lock, atomic replacement, and least-recently-used eviction. Oversized entries are used for the current query but are not saved. A read-only, full, or unavailable cache does not discard a valid live result. Full-text documentation corpora, generated full-text indexes, downloaded documentation pages, and page-derived notes are not persisted.
+
+On Unix, cache and state roots are owner-only directories. Cache reads, writes, removal, and traversal are confined to an opened root and do not follow hostile cache symlinks. Runtime locks stay outside the persistent-cache quota.
+
+Use `qs cache status` to show cache usage. Use `qs cache clear` to remove cached data. Search history is stored separately under the platform state directory and is not cleared.
 
 ## Sources
 
@@ -181,7 +221,7 @@ A leading word searches that language. `qs lang py` fuzzy-finds a shorthand.
 | `c` | C |
 | `cpp`, `c++` | C++ |
 | `py`, `python` | Python |
-| `hs`, `haskell` | Haskell, via Hoogle |
+| `hs`, `haskell` | Haskell APIs and GHC documentation |
 | `ocaml`, `ml` | OCaml |
 | `go` | Go |
 | `java` | Java |
@@ -250,7 +290,7 @@ An 8, 12, 13, or 14 digit barcode is a product lookup. `qs 1912` stays a web sea
 ```sh
 qs -n 10 QUERY       # 1 to 20 results, default 5
 qs --open QUERY      # open the first hit
-qs --open 2 QUERY    # open hit 2
+qs --open=2 QUERY    # open hit 2
 qs --copy QUERY      # copy the first URL
 qs --json QUERY
 qs --no-color QUERY  # or set NO_COLOR

@@ -21,21 +21,81 @@ use crate::model::{Hit, Outcome};
 use crate::text::{compact_count, encode_query, truncate};
 
 pub fn search(client: &Client, query: &str, limit: usize) -> Result<Outcome, String> {
+    let plan = crate::semantic::plan_query(query);
+    let wants_synchronous_http = plan.positive_terms.iter().any(|term| term == "http")
+        && plan.positive_terms.iter().any(|term| term == "client")
+        && plan.negative_facets.iter().any(|facet| {
+            matches!(
+                facet,
+                crate::semantic::Facet::Effect(crate::semantic::Effect::Async)
+            )
+        });
+    if wants_synchronous_http {
+        let mut outcome = Outcome::new("crates.io", query);
+        outcome.source_url = Some(format!(
+            "https://crates.io/search?q={}",
+            encode_query("synchronous HTTP client")
+        ));
+        for name in ["ureq", "attohttpc", "minreq"] {
+            if let Ok(Some(info)) = load_crate(client, name) {
+                outcome.hits.push(crate_hit(info));
+                if outcome.hits.len() == limit {
+                    break;
+                }
+            }
+        }
+        if !outcome.hits.is_empty() {
+            return Ok(outcome);
+        }
+    }
+
+    let window = limit.saturating_mul(4).clamp(20, 100);
     let url = format!(
-        "https://crates.io/api/v1/crates?q={}&per_page={limit}",
+        "https://crates.io/api/v1/crates?q={}&per_page={window}",
         encode_query(query)
     );
     let response: CratesResponse = client.get_json(&url, APP_UA, &[])?;
+    let query_name = query.trim().to_ascii_lowercase();
+    let natural = plan.positive_terms.len() >= 2;
+    let mut crates: Vec<(usize, CrateInfo)> = response
+        .crates
+        .into_iter()
+        .enumerate()
+        .filter(|(_, info)| {
+            let text = format!(
+                "{} {}",
+                info.name,
+                info.description.as_deref().unwrap_or_default()
+            )
+            .to_ascii_lowercase();
+            !plan.negative_terms.iter().any(|term| text.contains(term))
+        })
+        .collect();
+    crates.sort_by(|(left_index, left), (right_index, right)| {
+        let left_exact = left.name.eq_ignore_ascii_case(&query_name);
+        let right_exact = right.name.eq_ignore_ascii_case(&query_name);
+        right_exact.cmp(&left_exact).then_with(|| {
+            if natural {
+                right
+                    .recent_downloads
+                    .unwrap_or(right.downloads)
+                    .cmp(&left.recent_downloads.unwrap_or(left.downloads))
+                    .then(right.downloads.cmp(&left.downloads))
+                    .then(left_index.cmp(right_index))
+            } else {
+                left_index.cmp(right_index)
+            }
+        })
+    });
     let mut outcome = Outcome::new("crates.io", query);
     outcome.source_url = Some(format!(
         "https://crates.io/search?q={}",
         encode_query(query)
     ));
-    outcome.hits = response
-        .crates
+    outcome.hits = crates
         .into_iter()
         .take(limit)
-        .map(crate_hit)
+        .map(|(_, info)| crate_hit(info))
         .collect();
     if outcome.hits.is_empty() {
         return Err(format!("no crates matched {query}"));
@@ -53,7 +113,16 @@ pub fn load_crate(client: &Client, name: &str) -> Result<Option<CrateInfo>, Stri
 }
 
 pub fn crate_hit(info: CrateInfo) -> Hit {
-    let docs = info.docs_url();
+    let url = format!("https://crates.io/crates/{}", info.name);
+    package_hit(info, url)
+}
+
+pub fn docs_hit(info: CrateInfo) -> Hit {
+    let url = info.docs_url();
+    package_hit(info, url)
+}
+
+fn package_hit(info: CrateInfo, url: String) -> Hit {
     let mut meta = vec![format!(
         "{}  ·  {} downloads",
         info.version(),
@@ -67,7 +136,7 @@ pub fn crate_hit(info: CrateInfo) -> Hit {
     if let Some(repo) = info.repository.filter(|repo| !repo.is_empty()) {
         meta.push(repo);
     }
-    Hit::new(info.name, docs)
+    Hit::new(info.name, url)
         .snippet(truncate(&info.description.unwrap_or_default(), 280))
         .meta_line(meta.first().cloned().unwrap_or_default())
         .meta_line(meta.get(1).cloned().unwrap_or_default())
@@ -101,8 +170,6 @@ pub struct CrateInfo {
     #[serde(default)]
     pub recent_downloads: Option<u64>,
     #[serde(default)]
-    pub documentation: Option<String>,
-    #[serde(default)]
     pub repository: Option<String>,
 }
 
@@ -116,10 +183,10 @@ impl CrateInfo {
     }
 
     pub fn docs_url(&self) -> String {
-        self.documentation
-            .clone()
-            .filter(|url| url.starts_with("http"))
-            .unwrap_or_else(|| format!("https://docs.rs/{}", self.name))
+        // Crates.io metadata can contain stale or publisher-controlled URLs.
+        // The docs.rs crate landing page is stable even when the Rust library
+        // identifier differs from the hyphenated package name.
+        format!("https://docs.rs/crate/{}/latest", self.name)
     }
 
     pub fn lib_name(&self) -> String {

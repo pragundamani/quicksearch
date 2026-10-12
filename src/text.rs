@@ -33,6 +33,15 @@ pub fn truncate(text: &str, max_chars: usize) -> String {
     out
 }
 
+/// Returns at most `max_bytes` from the start of `text` without splitting a UTF-8 character.
+pub fn byte_prefix(text: &str, max_bytes: usize) -> &str {
+    let mut end = max_bytes.min(text.len());
+    while !text.is_char_boundary(end) {
+        end -= 1;
+    }
+    &text[..end]
+}
+
 pub fn strip_tags(text: &str) -> String {
     let mut out = String::with_capacity(text.len());
     let mut in_tag = false;
@@ -142,9 +151,116 @@ pub fn encode_query(query: &str) -> String {
     urlencoding::encode(query).into_owned()
 }
 
+fn unsafe_url_text(text: &str) -> bool {
+    text.chars().any(|ch| {
+        ch.is_control()
+            || matches!(
+                ch,
+                '\u{061c}'
+                    | '\u{200e}'
+                    | '\u{200f}'
+                    | '\u{202a}'..='\u{202e}'
+                    | '\u{2066}'..='\u{2069}'
+            )
+    })
+}
+
+fn unsafe_after_percent_decoding(raw: &str) -> bool {
+    let mut current = raw.to_string();
+    for _ in 0..64 {
+        if unsafe_url_text(&current) {
+            return true;
+        }
+        let Ok(decoded) = urlencoding::decode(&current) else {
+            return true;
+        };
+        if decoded == current {
+            return false;
+        }
+        current = decoded.into_owned();
+    }
+    // Excessive encoding depth is not useful for a lookup URL and can hide a
+    // dangerous character beyond a validator's decoding budget.
+    true
+}
+
+pub fn normalize_http_url(raw: &str) -> Option<String> {
+    if raw.len() > 8 * 1024 || unsafe_after_percent_decoding(raw) {
+        return None;
+    }
+    let rest = raw
+        .strip_prefix("https://")
+        .or_else(|| raw.strip_prefix("http://"))?;
+    if rest.is_empty() || rest.starts_with('/') {
+        return None;
+    }
+    let parsed = url::Url::parse(raw).ok()?;
+    if !matches!(parsed.scheme(), "http" | "https") || parsed.host_str()?.is_empty() {
+        return None;
+    }
+    Some(parsed.into())
+}
+
+pub fn sanitize_terminal_line(text: &str) -> String {
+    let normalized: String = text
+        .chars()
+        .map(|ch| {
+            if ch.is_control()
+                || matches!(
+                    ch,
+                    '\u{061c}'
+                        | '\u{200e}'
+                        | '\u{200f}'
+                        | '\u{202a}'..='\u{202e}'
+                        | '\u{2066}'..='\u{2069}'
+                )
+            {
+                ' '
+            } else {
+                ch
+            }
+        })
+        .collect();
+    normalized.split_whitespace().collect::<Vec<_>>().join(" ")
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn validates_absolute_http_urls_without_spoofing_controls() {
+        assert_eq!(
+            normalize_http_url("https://example.test/path").as_deref(),
+            Some("https://example.test/path")
+        );
+        assert!(normalize_http_url("http:///test").is_none());
+        assert!(normalize_http_url("https://example.test/\u{202e}test").is_none());
+        assert!(normalize_http_url("https://example.test/%E2%80%AEtest").is_none());
+        assert!(normalize_http_url("https://example.test/%25E2%2580%25AEtest").is_none());
+        assert!(normalize_http_url("https://example.test/%00").is_none());
+        assert!(normalize_http_url("https://example.test/%0D%0Aheader").is_none());
+        assert!(normalize_http_url("https://example.test/%250A").is_none());
+        assert!(normalize_http_url("javascript:alert(1)").is_none());
+        assert!(normalize_http_url("https://example.test/a%20b/%E2%9C%93").is_some());
+    }
+
+    #[test]
+    fn terminal_line_removes_controls_and_bidi_overrides() {
+        assert_eq!(
+            sanitize_terminal_line("Dev\x1b]8;;evil\x07Docs\u{202e}spoof\nnext"),
+            "Dev ]8;;evil Docs spoof next"
+        );
+    }
+
+    #[test]
+    fn byte_prefix_stops_at_unicode_boundaries() {
+        assert_eq!(byte_prefix("ab“cd", 4), "ab");
+        assert_eq!(byte_prefix("ab“cd", 5), "ab“");
+        assert_eq!(byte_prefix("café ☕", 5), "café");
+        assert_eq!(byte_prefix("🙂ok", 4), "🙂");
+        assert_eq!(byte_prefix("🙂ok", usize::MAX), "🙂ok");
+    }
 
     #[test]
     fn unescapes_common_entities() {

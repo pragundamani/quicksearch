@@ -1,0 +1,104 @@
+# Rust quicksearch evaluation checklist
+
+100 balanced checks for Rust language concepts, standard-library APIs, common tasks, identifier forms, and natural search phrases.
+
+- [ ] `qs rust ownership` — Expected: Ownership, moves, and scope. Test: Direct lookup of the central language concept.
+- [ ] `qs rust borrow checker` — Expected: Borrowing rules and the borrow checker. Test: Natural two-word terminology search.
+- [ ] `qs rust lifetimes` — Expected: Lifetime annotations and lifetime elision. Test: Plural concept normalization.
+- [ ] `qs rust mutable references` — Expected: Mutable borrows written as `&mut T`. Test: Multiword type-system concept retrieval.
+- [ ] `qs rust move closures` — Expected: `move` closures and captured values. Test: Modifier-plus-concept phrase matching.
+- [ ] `qs rust pattern matching` — Expected: Patterns and `match` expressions. Test: Common natural-language concept search.
+- [ ] `qs rust struct destructuring` — Expected: Destructuring patterns for structs. Test: Qualified pattern concept retrieval.
+- [ ] `qs rust if let` — Expected: `if let` conditional pattern matching. Test: Exact spaced syntax phrase.
+- [ ] `qs rust let else` — Expected: `let...else` refutable pattern binding. Test: Punctuation-free lookup of modern syntax.
+- [ ] `qs rust while let` — Expected: `while let` conditional loops. Test: Exact multiword control-flow syntax.
+- [ ] `qs rust traits` — Expected: Trait definitions and implementations. Test: Plural-to-canonical language topic matching.
+- [ ] `qs rust dyn Trait` — Expected: Trait objects written as `dyn Trait`. Test: Mixed-case exact syntax lookup.
+- [ ] `qs rust associated types` — Expected: Trait associated types. Test: Plural multiword concept retrieval.
+- [ ] `qs rust generic functions` — Expected: Generic type parameters on functions. Test: Natural phrase for a core abstraction.
+- [ ] `qs rust where clauses` — Expected: `where` clauses for generic bounds. Test: Plural syntax terminology normalization.
+- [ ] `qs rust const generics` — Expected: Const generic parameters. Test: Modern two-word language feature search.
+- [ ] `qs rust modules` — Expected: The module system and `mod` items. Test: Plural language concept lookup.
+- [ ] `qs rust pub(crate)` — Expected: Crate-scoped visibility with `pub(crate)`. Test: Exact punctuation-heavy syntax search.
+- [ ] `qs rust use declarations` — Expected: `use` declarations and imported names. Test: Formal plural terminology lookup.
+- [ ] `qs rust external crates` — Expected: External crates and the extern prelude. Test: Multiword package-organization concept.
+- [ ] `qs rust attributes` — Expected: Outer and inner attributes. Test: Broad plural syntax concept.
+- [ ] `qs rust derive macros` — Expected: The `derive` attribute and derivable traits. Test: Common plural macro phrase.
+- [ ] `qs rust macro_rules!` — Expected: Declarative macros defined with `macro_rules!`. Test: Exact identifier with punctuation.
+- [ ] `qs rust procedural macros` — Expected: Function-like, derive, and attribute procedural macros. Test: Plural multiword metaprogramming topic.
+- [ ] `qs rust async fn` — Expected: Asynchronous functions and returned futures. Test: Exact abbreviated syntax phrase.
+- [ ] `qs rust .await` — Expected: The postfix `.await` expression. Test: Leading-punctuation keyword lookup.
+- [ ] `qs rust std::pin::Pin` — Expected: `std::pin::Pin` and pinning guarantees. Test: Fully qualified CamelCase API lookup.
+- [ ] `qs rust Send and Sync` — Expected: The `Send` and `Sync` marker traits. Test: Two related case-sensitive identifiers.
+- [ ] `qs rust unsafe Rust` — Expected: Unsafe operations and unsafe blocks. Test: Case variation in a language topic.
+- [ ] `qs rust raw pointers` — Expected: Raw pointer types `*const T` and `*mut T`. Test: Plural low-level concept retrieval.
+- [ ] `qs rust foreign function interface` — Expected: FFI with `extern` blocks and ABI strings. Test: Expanded natural-language acronym search.
+- [ ] `qs rust recoverable errors` — Expected: Recoverable error handling with `Result`. Test: Task-oriented conceptual lookup.
+- [ ] `qs rust question mark operator` — Expected: The `?` error-propagation operator. Test: Natural name for punctuation syntax.
+- [ ] `qs rust std::panic::set_hook` — Expected: `std::panic::set_hook`. Test: Fully qualified snake_case function lookup.
+- [ ] `qs rust Result<T, E>` — Expected: The `Result<T, E>` enum. Test: Exact generic type syntax search.
+- [ ] `qs rust Option::and_then` — Expected: `Option::and_then` combinator. Test: Type-qualified method identifier.
+- [ ] `qs rust Vec::push` — Expected: `Vec::push`. Test: Exact collection method lookup.
+- [ ] `qs rust VecDeque` — Expected: `std::collections::VecDeque`. Test: Unqualified CamelCase collection lookup.
+- [ ] `qs rust HashMap::entry` — Expected: `HashMap::entry` and the entry API. Test: Qualified map method retrieval.
+- [ ] `qs rust BTreeMap` — Expected: `std::collections::BTreeMap`. Test: Exact ordered-map type name.
+- [ ] `qs rust hash sets` — Expected: `std::collections::HashSet`. Test: Natural plural-to-type matching.
+- [ ] `qs rust binary heaps` — Expected: `std::collections::BinaryHeap`. Test: Spaced plural-to-CamelCase matching.
+- [ ] `qs rust String::from_utf8` — Expected: `String::from_utf8` and `FromUtf8Error`. Test: Qualified underscore method lookup.
+- [ ] `qs rust str::split_whitespace` — Expected: `str::split_whitespace`. Test: Primitive-type qualified snake_case method.
+- [ ] `qs rust format!` — Expected: The `format!` macro. Test: Exact macro name with exclamation mark.
+- [ ] `qs rust print a line` — Expected: The `println!` macro. Test: Natural task phrase mapped to a macro.
+- [ ] `qs rust Iterator::map` — Expected: `Iterator::map`. Test: Exact trait-method identifier.
+- [ ] `qs rust collect iterator into vector` — Expected: `Iterator::collect` with `Vec` type inference. Test: Natural multiword conversion task.
+- [ ] `qs rust fold values` — Expected: `Iterator::fold`. Test: Verb phrase mapped to an iterator combinator.
+- [ ] `qs rust IntoIterator` — Expected: The `IntoIterator` trait and `into_iter`. Test: Exact CamelCase trait retrieval.
+- [ ] `qs rust ExactSizeIterator` — Expected: The `ExactSizeIterator` trait. Test: Long exact CamelCase identifier.
+- [ ] `qs rust From and Into` — Expected: The `From` and `Into` conversion traits. Test: Related exact trait-name query.
+- [ ] `qs rust TryFrom` — Expected: The `TryFrom` fallible conversion trait. Test: Unqualified CamelCase API search.
+- [ ] `qs rust AsRef<Path>` — Expected: `AsRef<Path>` bounds and borrowed conversions. Test: Generic bound with angle brackets.
+- [ ] `qs rust Cow<'a, str>` — Expected: `std::borrow::Cow` clone-on-write type. Test: Lifetime-bearing generic type syntax.
+- [ ] `qs rust Box<T>` — Expected: `std::boxed::Box<T>`. Test: Generic smart-pointer type lookup.
+- [ ] `qs rust reference counted pointer` — Expected: `std::rc::Rc`. Test: Descriptive phrase mapped to an abbreviated type.
+- [ ] `qs rust atomic reference counting` — Expected: `std::sync::Arc`. Test: Natural concept mapped to a concurrency type.
+- [ ] `qs rust RefCell::borrow_mut` — Expected: `RefCell::borrow_mut` and runtime borrow checking. Test: Qualified interior-mutability method.
+- [ ] `qs rust mutexes` — Expected: `std::sync::Mutex`. Test: Plural-to-singular synchronization type.
+- [ ] `qs rust RwLock` — Expected: `std::sync::RwLock`. Test: Exact mixed-case synchronization identifier.
+- [ ] `qs rust OnceLock::get_or_init` — Expected: `OnceLock::get_or_init`. Test: Qualified lazy-initialization method.
+- [ ] `qs rust spawn a thread` — Expected: `std::thread::spawn`. Test: Natural action phrase mapped to a function.
+- [ ] `qs rust mpsc channels` — Expected: `std::sync::mpsc` channels. Test: Acronym-plus-plural module concept.
+- [ ] `qs rust AtomicUsize ordering` — Expected: `AtomicUsize` operations and `Ordering`. Test: Type-plus-parameter concurrency search.
+- [ ] `qs rust read file to string` — Expected: `std::fs::read_to_string`. Test: Natural task mapped to snake_case API.
+- [ ] `qs rust write bytes to a file` — Expected: `std::fs::write`. Test: Multiword I/O task retrieval.
+- [ ] `qs rust canonicalize a path` — Expected: `std::fs::canonicalize`. Test: Verb phrase mapped to filesystem API.
+- [ ] `qs rust create directories recursively` — Expected: `std::fs::create_dir_all`. Test: Plural morphological task-to-API matching.
+- [ ] `qs rust run command and capture output` — Expected: `std::process::Command::output`. Test: Long natural task mapped to a method.
+- [ ] `qs rust environment variables` — Expected: `std::env::var` and `vars`. Test: Plural task concept mapped to environment APIs.
+- [ ] `qs rust command line arguments` — Expected: `std::env::args` and `args_os`. Test: Natural CLI task phrase.
+- [ ] `qs rust TcpListener::bind` — Expected: `std::net::TcpListener::bind`. Test: Type-qualified networking method.
+- [ ] `qs rust parse socket address` — Expected: `std::net::SocketAddr` and `FromStr`. Test: Natural networking conversion task.
+- [ ] `qs rust Duration::from_secs` — Expected: `std::time::Duration::from_secs`. Test: Qualified constructor-style method.
+- [ ] `qs rust measure elapsed time` — Expected: `std::time::Instant::elapsed`. Test: Natural timing task mapped to API.
+- [ ] `qs rust unix timestamp` — Expected: `SystemTime` relative to `UNIX_EPOCH`. Test: Common term mapped to time primitives.
+- [ ] `qs rust sort vectors` — Expected: Slice sorting methods such as `sort` and `sort_by`. Test: Plural collection task and method family.
+- [ ] `qs rust binary_search` — Expected: Slice method `binary_search`. Test: Bare snake_case method-name lookup.
+- [ ] `qs rust parse integer` — Expected: `str::parse` with integer types and `ParseIntError`. Test: Natural conversion task retrieval.
+- [ ] `qs rust f64::total_cmp` — Expected: `f64::total_cmp`. Test: Primitive-qualified floating-point method.
+- [ ] `qs rust inclusive ranges` — Expected: `RangeInclusive` and `..=` syntax. Test: Plural concept mapped to type and operator.
+- [ ] `qs rust chunks_exact_mut` — Expected: Slice method `chunks_exact_mut`. Test: Long bare snake_case identifier.
+- [ ] `qs rust fixed size arrays` — Expected: Array types `[T; N]` and array operations. Test: Natural spaced type description.
+- [ ] `qs rust tuple structs` — Expected: Tuple struct declarations and construction. Test: Two-word data-type concept.
+- [ ] `qs rust named field structs` — Expected: Structs with named fields. Test: Natural contrastive data-model phrase.
+- [ ] `qs rust enums with data` — Expected: Enum variants containing fields. Test: Task-oriented algebraic-data-type query.
+- [ ] `qs rust impl blocks` — Expected: Inherent implementations using `impl`. Test: Plural language-structure phrase.
+- [ ] `qs rust Drop::drop` — Expected: The `Drop` trait and `drop` method. Test: Exact trait-method path.
+- [ ] `qs rust Default::default` — Expected: The `Default` trait and `default` method. Test: Qualified constructor convention.
+- [ ] `qs rust Clone vs Copy` — Expected: Semantics of the `Clone` and `Copy` traits. Test: Comparison-style trait query.
+- [ ] `qs rust derive PartialEq and Ord` — Expected: Derived equality and ordering traits. Test: Natural derive task with exact trait names.
+- [ ] `qs rust unit tests` — Expected: `#[test]` functions and the test harness. Test: Common plural testing concept.
+- [ ] `qs rust documentation tests` — Expected: Rustdoc code examples run as doctests. Test: Expanded phrase for doctest discovery.
+- [ ] `qs rust Cargo features` — Expected: Cargo feature flags and optional dependencies. Test: Tooling concept with case variation.
+- [ ] `qs rust cfg target_os` — Expected: Conditional compilation with `#[cfg(target_os = ...)]`. Test: Attribute keyword and snake_case key.
+- [ ] `qs rust no_std` — Expected: The `#![no_std]` attribute and `core`. Test: Underscore feature term mapped to attribute.
+- [ ] `qs rust intra-doc links` — Expected: Rustdoc intra-doc link syntax. Test: Hyphenated documentation concept.
+- [ ] `qs rust Rust 2024 edition` — Expected: The Rust 2024 Edition Guide and migration changes. Test: Versioned natural-language query.
+- [ ] `qs rust raw identifiers` — Expected: Raw identifiers such as `r#type`. Test: Plural naming concept mapped to unusual syntax.

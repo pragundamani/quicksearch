@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "packagePath": "github.com/acme/errgroup",
+      "modulePath": "github.com/acme/errgroup",
+      "version": "v1.3.0",
+      "synopsis": "Another errgroup package."
+    },
+    {
+      "packagePath": "golang.org/x/sync/errgroup",
+      "modulePath": "golang.org/x/sync",
+      "version": "v0.12.0",
+      "synopsis": "Package errgroup provides synchronization and error propagation."
+    },
+    {
+      "packagePath": "example.com/unrelated",
+      "modulePath": "example.com/unrelated",
+      "version": "v2.0.0",
+      "synopsis": "Not a close match."
+    },
+    {
+      "packagePath": "errgroup",
+      "modulePath": "errgroup",
+      "version": "v1.0.0",
+      "synopsis": "An exact package-path match."
+    }
+  ],
+  "total": 4,
+  "nextPageToken": "page-two"
+}

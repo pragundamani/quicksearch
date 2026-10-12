@@ -1,0 +1,104 @@
+# Python quicksearch checklist
+
+100 representative searches for Python language and standard-library documentation. Each check names the expected primary result and the search behavior it exercises.
+
+- [ ] `qs python dictionaries` — Expected: Mapping Types — `dict`. Test: Maps a plural term to its canonical built-in type.
+- [ ] `qs python list comprehensions` — Expected: List displays and list comprehensions. Test: Finds a common multiword syntax concept.
+- [ ] `qs python generator expressions` — Expected: Generator expressions. Test: Distinguishes lazy expressions from list comprehensions.
+- [ ] `qs python decorators` — Expected: Function and class decorators. Test: Maps plural morphology to decorator syntax.
+- [ ] `qs python context managers` — Expected: Context manager types and the `with` statement. Test: Finds a protocol from a plural concept query.
+- [ ] `qs python async iterators` — Expected: Asynchronous iterator protocol. Test: Matches an abbreviated multiword language concept.
+- [ ] `qs python structural pattern matching` — Expected: `match` statements and patterns. Test: Finds modern syntax from its descriptive name.
+- [ ] `qs python positional only parameters` — Expected: Positional-only parameters using `/`. Test: Finds parameter syntax from natural wording.
+- [ ] `qs python keyword only arguments` — Expected: Keyword-only parameters using `*`. Test: Separates a related parameter-passing concept.
+- [ ] `qs python exception chaining` — Expected: Exception context and `raise ... from`. Test: Retrieves exception semantics rather than one class.
+- [ ] `qs python assignment expressions` — Expected: Assignment expressions using `:=`. Test: Maps the concept name to operator documentation.
+- [ ] `qs python function type annotations` — Expected: Function annotations and `typing`. Test: Searches across language and library documentation.
+- [ ] `qs python generic type aliases` — Expected: Generic aliases and type aliases. Test: Tests plural type-system terminology.
+- [ ] `qs python dataclasses` — Expected: The `dataclasses` module. Test: Maps a plural package concept to its module docs.
+- [ ] `qs python frozen dataclass` — Expected: `@dataclass(frozen=True)`. Test: Finds a specific decorator option from plain language.
+- [ ] `qs python enumerations` — Expected: The `enum` module and `Enum`. Test: Tests morphological matching for a singular API.
+- [ ] `qs python abstract base classes` — Expected: The `abc` module and `ABC`. Test: Finds a standard object-model concept by expanded name.
+- [ ] `qs python method resolution order` — Expected: Class MRO and `type.mro()`. Test: Retrieves inheritance behavior from a multiword term.
+- [ ] `qs python descriptor protocol` — Expected: Descriptors and `__get__` / `__set__`. Test: Finds a data-model protocol.
+- [ ] `qs python iterator protocol` — Expected: Iterator types, `__iter__`, and `__next__`. Test: Tests protocol-level concept retrieval.
+- [ ] `qs python enumerate` — Expected: Built-in `enumerate()`. Test: Performs an exact lookup of a core built-in.
+- [ ] `qs python zip` — Expected: Built-in `zip()`. Test: Tests a short identifier with many ordinary meanings.
+- [ ] `qs python isinstance` — Expected: Built-in `isinstance()`. Test: Finds an exact built-in predicate.
+- [ ] `qs python super` — Expected: Built-in `super()`. Test: Tests a short keyword-like built-in name.
+- [ ] `qs python convert string to integer` — Expected: Built-in `int()`. Test: Maps a common task to the correct constructor.
+- [ ] `qs python memoryview` — Expected: Built-in `memoryview` type. Test: Finds a less lexical but practical built-in type.
+- [ ] `qs python breakpoint` — Expected: Built-in `breakpoint()`. Test: Tests direct search for the debugging entry point.
+- [ ] `qs python str.removeprefix` — Expected: `str.removeprefix()`. Test: Tests a qualified dotted method identifier.
+- [ ] `qs python str.splitlines` — Expected: `str.splitlines()`. Test: Finds a string method without confusing `split()`.
+- [ ] `qs python bytes.fromhex` — Expected: `bytes.fromhex()`. Test: Tests a qualified alternate constructor.
+- [ ] `qs python sort list by key` — Expected: `list.sort(key=...)` and the Sorting HOW TO. Test: Maps natural task wording to sort-key documentation.
+- [ ] `qs python dict.setdefault` — Expected: `dict.setdefault()`. Test: Tests exact qualified mapping-method lookup.
+- [ ] `qs python merge dictionaries` — Expected: Dictionary union operators `|` and `|=`. Test: Maps a common task to current language syntax.
+- [ ] `qs python set symmetric_difference` — Expected: `set.symmetric_difference()`. Test: Tests a mixed natural and snake_case query.
+- [ ] `qs python frozenset` — Expected: Built-in `frozenset` type. Test: Finds the immutable-set API from one identifier.
+- [ ] `qs python format specification mini language` — Expected: Format specification mini-language. Test: Retrieves a deep section by its formal title.
+- [ ] `qs python f string debugging` — Expected: Self-documenting f-string expressions using `=`. Test: Maps informal wording to f-string syntax.
+- [ ] `qs python FileNotFoundError` — Expected: Built-in `FileNotFoundError` exception. Test: Tests exact CamelCase exception retrieval.
+- [ ] `qs python ExceptionGroup` — Expected: Built-in `ExceptionGroup`. Test: Finds a modern CamelCase exception container.
+- [ ] `qs python property setter` — Expected: `property` and its `setter()` decorator. Test: Maps a two-word query to descriptor APIs.
+- [ ] `qs python pathlib.Path.read_text` — Expected: `Path.read_text()`. Test: Tests a fully qualified dotted API.
+- [ ] `qs python pathlib.Path.glob` — Expected: `Path.glob()`. Test: Separates another method on the same qualified class.
+- [ ] `qs python expand home directory` — Expected: `os.path.expanduser()`. Test: Maps a filesystem task to a qualified function.
+- [ ] `qs python environment variables` — Expected: `os.environ`. Test: Finds a mapping API from a plural natural term.
+- [ ] `qs python sys.argv` — Expected: `sys.argv`. Test: Tests an exact module-qualified data attribute.
+- [ ] `qs python sys.path` — Expected: `sys.path`. Test: Distinguishes a nearby qualified attribute from `argv`.
+- [ ] `qs python argparse subcommands` — Expected: `argparse` subparsers via `add_subparsers()`. Test: Finds a feature nested in a large module.
+- [ ] `qs python json.dumps` — Expected: `json.dumps()`. Test: Tests exact serialization-function lookup.
+- [ ] `qs python json custom encoder` — Expected: `json.JSONEncoder` and `default()`. Test: Maps a task phrase to an extension API.
+- [ ] `qs python csv.DictReader` — Expected: `csv.DictReader`. Test: Tests a module-qualified CamelCase class.
+- [ ] `qs python configparser` — Expected: The `configparser` module. Test: Finds configuration-file support by module name.
+- [ ] `qs python tomllib.load` — Expected: `tomllib.load()`. Test: Tests a newer qualified standard-library API.
+- [ ] `qs python pickle security` — Expected: `pickle` security warning. Test: Checks that safety guidance ranks above usage details.
+- [ ] `qs python sqlite3 row factory` — Expected: `Connection.row_factory` and `sqlite3.Row`. Test: Maps spaced terminology to related database APIs.
+- [ ] `qs python regular expression named groups` — Expected: `re` named groups using `(?P<name>...)`. Test: Finds specialized syntax from a natural query.
+- [ ] `qs python re.escape` — Expected: `re.escape()`. Test: Tests exact module-qualified regex API lookup.
+- [ ] `qs python parse ISO date time` — Expected: `datetime.fromisoformat()`. Test: Maps a common parsing task to its constructor.
+- [ ] `qs python timezone aware datetime` — Expected: Aware `datetime` objects and `tzinfo`. Test: Retrieves a nuanced concept from natural wording.
+- [ ] `qs python zoneinfo.ZoneInfo` — Expected: `zoneinfo.ZoneInfo`. Test: Tests a qualified CamelCase time-zone class.
+- [ ] `qs python time.monotonic` — Expected: `time.monotonic()`. Test: Finds the correct clock for elapsed-time measurement.
+- [ ] `qs python collections.defaultdict` — Expected: `collections.defaultdict`. Test: Tests a qualified container type.
+- [ ] `qs python collections.Counter.most_common` — Expected: `Counter.most_common()`. Test: Tests a deeply qualified method query.
+- [ ] `qs python collections.ChainMap` — Expected: `collections.ChainMap`. Test: Finds a CamelCase collections abstraction.
+- [ ] `qs python heapq.nlargest` — Expected: `heapq.nlargest()`. Test: Tests qualified top-N selection API lookup.
+- [ ] `qs python bisect.insort` — Expected: `bisect.insort()`. Test: Finds sorted insertion rather than binary search.
+- [ ] `qs python itertools.zip_longest` — Expected: `itertools.zip_longest()`. Test: Tests a qualified snake_case identifier.
+- [ ] `qs python itertools.groupby` — Expected: `itertools.groupby()`. Test: Finds grouping semantics in the iterator toolkit.
+- [ ] `qs python functools.lru_cache` — Expected: `functools.lru_cache()`. Test: Tests a common qualified decorator with an acronym.
+- [ ] `qs python functools.partial` — Expected: `functools.partial()`. Test: Retrieves the callable argument-binding API.
+- [ ] `qs python operator.itemgetter` — Expected: `operator.itemgetter()`. Test: Finds a helper often used as a sort key.
+- [ ] `qs python math.isclose` — Expected: `math.isclose()`. Test: Tests qualified floating-point comparison lookup.
+- [ ] `qs python calculate median` — Expected: `statistics.median()`. Test: Maps a simple analysis task to the statistics module.
+- [ ] `qs python random choices weights` — Expected: `random.choices(..., weights=...)`. Test: Finds weighted sampling from multiword intent.
+- [ ] `qs python secrets.token_urlsafe` — Expected: `secrets.token_urlsafe()`. Test: Tests a qualified snake_case security API.
+- [ ] `qs python hashlib.sha256` — Expected: `hashlib.sha256()`. Test: Finds a named hash constructor exactly.
+- [ ] `qs python uuid.uuid4` — Expected: `uuid.uuid4()`. Test: Tests a compact module-qualified versioned API.
+- [ ] `qs python base64 urlsafe encoding` — Expected: `base64.urlsafe_b64encode()`. Test: Maps descriptive wording to a snake_case function.
+- [ ] `qs python build URL query string` — Expected: `urllib.parse.urlencode()`. Test: Maps a web task to a nested module API.
+- [ ] `qs python logging.basicConfig` — Expected: `logging.basicConfig()`. Test: Tests a qualified mixed-case function name.
+- [ ] `qs python create temporary directory` — Expected: `tempfile.TemporaryDirectory`. Test: Maps natural task wording to a context manager.
+- [ ] `qs python copy directory tree` — Expected: `shutil.copytree()`. Test: Finds the recursive copy API from task wording.
+- [ ] `qs python deep copy object` — Expected: `copy.deepcopy()`. Test: Maps an object-copying task to the recursive copy API.
+- [ ] `qs python walk directory recursively` — Expected: `os.walk()`. Test: Maps filesystem intent to an iteration API.
+- [ ] `qs python run command capture output` — Expected: `subprocess.run(..., capture_output=True)`. Test: Finds a common process task and option.
+- [ ] `qs python concurrent.futures.ThreadPoolExecutor` — Expected: `ThreadPoolExecutor`. Test: Tests a long qualified CamelCase class name.
+- [ ] `qs python multiprocessing Queue` — Expected: `multiprocessing.Queue`. Test: Tests spaced class lookup within a process module.
+- [ ] `qs python threading Lock` — Expected: `threading.Lock`. Test: Finds synchronization docs from mixed identifier wording.
+- [ ] `qs python run async tasks concurrently` — Expected: `asyncio.gather()`. Test: Maps asynchronous intent to the coordination API.
+- [ ] `qs python asyncio timeout` — Expected: `asyncio.timeout()`. Test: Finds a modern async context manager from spaced input.
+- [ ] `qs python queue.PriorityQueue` — Expected: `queue.PriorityQueue`. Test: Tests a qualified CamelCase queue class.
+- [ ] `qs python socket.create_connection` — Expected: `socket.create_connection()`. Test: Retrieves a high-level qualified networking helper.
+- [ ] `qs python unittest.mock.patch` — Expected: `unittest.mock.patch()`. Test: Tests a deeply qualified testing decorator/context manager.
+- [ ] `qs python doctest` — Expected: The `doctest` module. Test: Finds executable documentation support by module name.
+- [ ] `qs python warnings filterwarnings` — Expected: `warnings.filterwarnings()`. Test: Tests spaced lookup for a warning-filter API.
+- [ ] `qs python importlib.resources.files` — Expected: `importlib.resources.files()`. Test: Tests a deep qualified resource API.
+- [ ] `qs python inspect.signature` — Expected: `inspect.signature()`. Test: Finds runtime callable-signature introspection.
+- [ ] `qs python trace memory allocations` — Expected: The `tracemalloc` module. Test: Maps a diagnostic task to its module.
+- [ ] `qs python typing.Protocol` — Expected: `typing.Protocol`. Test: Tests a qualified structural-typing class.
+- [ ] `qs python typing.TypedDict` — Expected: `typing.TypedDict`. Test: Distinguishes a related CamelCase typing construct.
+- [ ] `qs python typing.Literal` — Expected: `typing.Literal`. Test: Finds a third distinct qualified typing form.

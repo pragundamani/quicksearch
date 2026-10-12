@@ -18,7 +18,7 @@ use clap::ValueEnum;
 
 use crate::providers::commands::{self, CommandRoute};
 use crate::providers::stock;
-use crate::providers::{concepts, sources};
+use crate::providers::{concepts, registries, sources};
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, ValueEnum)]
 pub enum Provider {
@@ -128,6 +128,10 @@ pub fn route(flag: Option<Provider>, query: &str) -> Result<Routed, String> {
         return Err("empty query".into());
     }
 
+    if let Some(provider) = flag {
+        return Ok(routed(provider, query.to_string()));
+    }
+
     if let Some(rest) = query.strip_prefix('!') {
         let (name, inner) = split_first(rest);
         if inner.is_empty() {
@@ -142,10 +146,6 @@ pub fn route(flag: Option<Provider>, query: &str) -> Result<Routed, String> {
         let mut routed = routed(Provider::Web, inner.to_string());
         routed.bang = Some(name.to_string());
         return Ok(routed);
-    }
-
-    if let Some(provider) = flag {
-        return Ok(routed(provider, query.to_string()));
     }
 
     if query.eq_ignore_ascii_case("qs") {
@@ -183,6 +183,11 @@ pub fn route(flag: Option<Provider>, query: &str) -> Result<Routed, String> {
                 routed.query = query.to_string();
             }
             CommandRoute::Package { tool, name } => {
+                if tool == "cargo" {
+                    routed.provider = Provider::Crate;
+                    routed.query = name;
+                    return Ok(routed);
+                }
                 routed.package_tool = Some(tool);
                 routed.query = name;
             }
@@ -202,6 +207,14 @@ pub fn route(flag: Option<Provider>, query: &str) -> Result<Routed, String> {
         }
     }
 
+    if registries::maven_coordinates(query).is_some() {
+        return Ok(routed(Provider::Maven, query.to_string()));
+    }
+    if is_cpp_standard_path(query) {
+        let mut inferred = routed(Provider::Web, format!("cpp {query}"));
+        inferred.allow_docset = true;
+        return Ok(inferred);
+    }
     if let Some(provider) = infer_code_path(query) {
         return Ok(routed(provider, query.to_string()));
     }
@@ -245,14 +258,142 @@ fn is_history_command(name: &str) -> bool {
     matches!(name.to_ascii_lowercase().as_str(), "history" | "hist")
 }
 
+fn code_token(query: &str) -> &str {
+    query
+        .split_whitespace()
+        .next()
+        .unwrap_or("")
+        .trim_matches(|ch| matches!(ch, '`' | '(' | ')' | '[' | ']' | ',' | ';'))
+}
+
+fn path_root(path: &str) -> &str {
+    path.split("::")
+        .next()
+        .unwrap_or("")
+        .split('<')
+        .next()
+        .unwrap_or("")
+}
+
+fn is_cpp_standard_path(query: &str) -> bool {
+    let first = code_token(query);
+    if first.ends_with('!') {
+        return false;
+    }
+    let Some(rest) = first.strip_prefix("std::") else {
+        return false;
+    };
+    let root = path_root(rest);
+    let second = rest
+        .split_once("::")
+        .map(|(_, tail)| path_root(tail))
+        .unwrap_or("");
+    let dual_cpp_type = matches!(root, "array" | "future" | "hash" | "string");
+    if dual_cpp_type
+        && (second.is_empty()
+            || (second.chars().next().is_some_and(char::is_lowercase)
+                && !matches!(
+                    second,
+                    "from_fn" | "from_mut" | "from_ref" | "repeat" | "try_from_fn"
+                )))
+    {
+        return true;
+    }
+    !matches!(
+        root,
+        "alloc"
+            | "any"
+            | "arch"
+            | "array"
+            | "ascii"
+            | "backtrace"
+            | "borrow"
+            | "boxed"
+            | "cell"
+            | "char"
+            | "clone"
+            | "cmp"
+            | "collections"
+            | "convert"
+            | "default"
+            | "env"
+            | "error"
+            | "ffi"
+            | "fmt"
+            | "fs"
+            | "future"
+            | "hash"
+            | "hint"
+            | "io"
+            | "iter"
+            | "marker"
+            | "mem"
+            | "net"
+            | "num"
+            | "ops"
+            | "option"
+            | "os"
+            | "panic"
+            | "path"
+            | "pin"
+            | "prelude"
+            | "primitive"
+            | "process"
+            | "ptr"
+            | "rc"
+            | "result"
+            | "slice"
+            | "str"
+            | "string"
+            | "sync"
+            | "task"
+            | "thread"
+            | "time"
+            | "vec"
+    )
+}
+
+fn is_rust_standard_type_path(first: &str) -> bool {
+    let root = path_root(first);
+    matches!(
+        root,
+        "Vec"
+            | "String"
+            | "Option"
+            | "Result"
+            | "Path"
+            | "PathBuf"
+            | "OsStr"
+            | "OsString"
+            | "CString"
+            | "CStr"
+            | "Arc"
+            | "Rc"
+            | "Box"
+            | "HashMap"
+            | "BTreeMap"
+            | "HashSet"
+            | "BTreeSet"
+            | "Mutex"
+            | "RwLock"
+            | "Cell"
+            | "RefCell"
+            | "Duration"
+            | "Instant"
+            | "SocketAddr"
+            | "IpAddr"
+    )
+}
+
 fn infer_code_path(query: &str) -> Option<Provider> {
-    let first = query.split_whitespace().next().unwrap_or("");
+    let first = code_token(query);
     if !first.contains("::") {
         return None;
     }
     match first.split("::").next().unwrap_or("") {
         "std" | "core" | "alloc" | "proc_macro" | "test" => Some(Provider::Rust),
         "" => None,
+        _ if is_rust_standard_type_path(first) => Some(Provider::Rust),
         _ => Some(Provider::Docs),
     }
 }
@@ -284,10 +425,10 @@ mod tests {
     }
 
     #[test]
-    fn bangs_override_and_unknown_bangs_redirect() {
+    fn explicit_provider_overrides_bangs_and_unknown_bangs_redirect() {
         let got = routed(Some(Provider::Web), "!so lifetimes");
-        assert_eq!(got.provider, Provider::So);
-        assert_eq!(got.query, "lifetimes");
+        assert_eq!(got.provider, Provider::Web);
+        assert_eq!(got.query, "!so lifetimes");
         assert!(got.bang.is_none());
         let wiki = routed(None, "!wiki vim");
         assert_eq!(wiki.provider, Provider::Wiki);
@@ -309,7 +450,28 @@ mod tests {
     #[test]
     fn rust_paths_pick_docs_without_a_prefix() {
         assert_eq!(routed(None, "std::fs::read").provider, Provider::Rust);
+        assert_eq!(routed(None, "std::array::from_fn").provider, Provider::Rust);
+        assert_eq!(routed(None, "std::println!").provider, Provider::Rust);
+        assert_eq!(routed(None, "Vec<T>::push").provider, Provider::Rust);
+        assert_eq!(
+            routed(None, "Option<Result<T,E>>::transpose").provider,
+            Provider::Rust
+        );
+        assert_eq!(routed(None, "std::array").provider, Provider::Web);
+        assert_eq!(routed(None, "std::string::find").provider, Provider::Web);
+        for symbol in ["std::map", "std::sort", "std::make_unique"] {
+            let cpp = routed(None, symbol);
+            assert_eq!(cpp.provider, Provider::Web, "{symbol}");
+            assert_eq!(cpp.query, format!("cpp {symbol}"));
+            assert!(cpp.allow_docset);
+        }
+        assert_eq!(routed(None, "PathBuf::try_exists").provider, Provider::Rust);
+        let cpp = routed(None, "std::filesystem::path");
+        assert_eq!(cpp.provider, Provider::Web);
+        assert!(cpp.allow_docset);
+        assert_eq!(cpp.query, "cpp std::filesystem::path");
         assert_eq!(routed(None, "serde::Deserialize").provider, Provider::Docs);
+        assert_eq!(routed(None, "junit:junit").provider, Provider::Maven);
         let prose = routed(None, "how to read a file in rust");
         assert_eq!(prose.provider, Provider::Web);
         assert!(prose.allow_docset);
@@ -368,6 +530,9 @@ mod tests {
         assert_eq!(page.manual.as_deref(), Some("dnf"));
         let install = routed(None, "dnf install");
         assert_eq!(install.manual.as_deref(), Some("dnf-install"));
+        let cargo_package = routed(None, "cargo serde");
+        assert_eq!(cargo_package.provider, Provider::Crate);
+        assert_eq!(cargo_package.query, "serde");
         let package = routed(None, "dnf rust");
         assert_eq!(package.package_tool.as_deref(), Some("dnf"));
         assert_eq!(package.query, "rust");
@@ -395,6 +560,9 @@ mod tests {
         assert_eq!(routed(None, "go-mod chi").provider, Provider::GoMod);
         assert_eq!(routed(None, "cve openssl").provider, Provider::Cve);
         assert_eq!(routed(None, "man grep").provider, Provider::Man);
+        let sectioned = routed(None, "man 3 getaddrinfo");
+        assert_eq!(sectioned.provider, Provider::Man);
+        assert_eq!(sectioned.query, "3 getaddrinfo");
         assert_eq!(routed(None, "linux iptables").provider, Provider::Web);
         assert!(routed(None, "linux iptables").allow_docset);
     }

@@ -18,9 +18,31 @@ use serde::Deserialize;
 
 use crate::http::{Client, APP_UA};
 use crate::model::{Hit, Outcome};
+use crate::providers::fallback;
 use crate::text::{collapse_ws, encode_query, html_unescape, strip_tags, truncate};
 
 pub fn search(client: &Client, query: &str, limit: usize) -> Result<Outcome, String> {
+    match search_live(client, query, limit) {
+        Ok(outcome) => Ok(outcome),
+        Err(reason) => Ok(search_fallback(query, &reason)),
+    }
+}
+
+fn search_fallback(query: &str, reason: &str) -> Outcome {
+    let url = format!(
+        "https://en.wikipedia.org/w/index.php?search={}",
+        encode_query(query)
+    );
+    fallback::search(
+        "wikipedia",
+        query,
+        format!("Search Wikipedia for {query}"),
+        url,
+        reason,
+    )
+}
+
+fn search_live(client: &Client, query: &str, limit: usize) -> Result<Outcome, String> {
     let url = format!(
         "https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srlimit={limit}&srsearch={}",
         encode_query(query)
@@ -93,4 +115,16 @@ struct Summary {
     title: String,
     #[serde(default)]
     extract: String,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn failed_lookup_has_a_wikipedia_search() {
+        let got = search_fallback("Ada & Charles", "HTTP 503");
+        assert!(got.hits[0].url.ends_with("search=Ada%20%26%20Charles"));
+        assert!(got.has_content());
+    }
 }

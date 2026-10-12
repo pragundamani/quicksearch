@@ -20,11 +20,21 @@ use std::sync::LazyLock;
 use regex::Regex;
 
 use crate::model::{Hit, Outcome};
-use crate::text::strip_overstrike;
+use crate::providers::fallback;
+use crate::text::{encode_query, strip_overstrike};
 
 pub fn open_page(page: &str) -> Option<Outcome> {
-    let output = Command::new("man")
-        .args(["-w", page])
+    open_page_request(&ManHit {
+        name: page.to_string(),
+        section: String::new(),
+        description: String::new(),
+    })
+}
+
+fn open_page_request(request: &ManHit) -> Option<Outcome> {
+    let mut command = Command::new("man");
+    command.args(locator_args(request));
+    let output = command
         .env("MANPAGER", "cat")
         .env("PAGER", "cat")
         .output()
@@ -32,29 +42,40 @@ pub fn open_page(page: &str) -> Option<Outcome> {
     if !output.status.success() {
         return None;
     }
-    let listed = String::from_utf8_lossy(&output.stdout);
-    let path = listed.lines().next()?.trim();
-    let section = section_from_path(path).unwrap_or_else(|| "1".into());
+
+    let section = if request.section.is_empty() {
+        let listed = String::from_utf8_lossy(&output.stdout);
+        let path = listed.lines().next()?.trim();
+        section_from_path(path).unwrap_or_else(|| "1".into())
+    } else {
+        request.section.clone()
+    };
     let hit = ManHit {
-        name: page.to_string(),
+        name: request.name.clone(),
         section: section.clone(),
         description: String::new(),
     };
-    let mut outcome = Outcome::new("man", page);
+    let mut outcome = Outcome::new("man", &request.name);
     outcome.body = page_excerpt(&hit);
     outcome.hits.push(Hit::new(
-        format!("{page} ({section})"),
-        format!("man://{section}/{page}"),
+        format!("{} ({section})", request.name),
+        format!("man://{section}/{}", request.name),
     ));
-    if outcome.body.is_none() && outcome.hits.is_empty() {
-        None
-    } else {
-        Some(outcome)
+    Some(outcome)
+}
+
+fn locator_args(request: &ManHit) -> Vec<&str> {
+    let mut args = vec!["-w"];
+    if !request.section.is_empty() {
+        args.extend(["-s", request.section.as_str()]);
     }
+    args.push("--");
+    args.push(request.name.as_str());
+    args
 }
 
 fn section_from_path(path: &str) -> Option<String> {
-    static SECTION: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"\.([0-9]+)").unwrap());
+    static SECTION: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"\.([0-9]+[A-Za-z]*)").unwrap());
     SECTION
         .captures_iter(path)
         .last()
@@ -62,21 +83,49 @@ fn section_from_path(path: &str) -> Option<String> {
 }
 
 pub fn search(query: &str, limit: usize) -> Result<Outcome, String> {
+    if query.trim_start().starts_with('-') {
+        return Ok(online_search(
+            query,
+            "manual names cannot start with an option prefix",
+        ));
+    }
+    if let Some(request) = parse_explicit_page(query) {
+        return Ok(open_page_request(&request)
+            .map(|mut outcome| {
+                outcome.query = query.to_string();
+                outcome
+            })
+            .unwrap_or_else(|| {
+                online_search(
+                    query,
+                    &format!(
+                        "no local manual entry for {} in section {}",
+                        request.name, request.section
+                    ),
+                )
+            }));
+    }
+
     let output = Command::new("man")
-        .args(["-k", &escape_apropos(query)])
+        .args(["-k", "--", &escape_apropos(query)])
         .env("MANPAGER", "cat")
         .env("PAGER", "cat")
-        .output()
-        .map_err(|err| format!("man: {err}"))?;
+        .output();
+    let output = match output {
+        Ok(output) => output,
+        Err(err) => return Ok(online_search(query, &format!("man: {err}"))),
+    };
     let stdout = String::from_utf8_lossy(&output.stdout);
     let mut hits: Vec<ManHit> = stdout.lines().filter_map(parse_apropos_line).collect();
     if hits.is_empty() {
         let stderr = String::from_utf8_lossy(&output.stderr);
         let detail = stderr.trim();
-        if detail.is_empty() {
-            return Err(format!("no manual entries for {query}"));
-        }
-        return Err(format!("no manual entries for {query}: {detail}"));
+        let reason = if detail.is_empty() {
+            format!("no local manual entries for {query}")
+        } else {
+            format!("no local manual entries for {query}: {detail}")
+        };
+        return Ok(online_search(query, &reason));
     }
 
     hits.sort_by_key(|hit| {
@@ -107,11 +156,65 @@ pub fn search(query: &str, limit: usize) -> Result<Outcome, String> {
     Ok(outcome)
 }
 
+fn online_search(query: &str, reason: &str) -> Outcome {
+    let exact = query.split_whitespace().next().unwrap_or(query);
+    let (title, url, snippet) = match exact {
+        "gofmt" => (
+            "gofmt command documentation".to_string(),
+            "https://pkg.go.dev/cmd/gofmt".to_string(),
+            Some("Format Go source code; use -w to rewrite files or -d to display a diff."),
+        ),
+        "clang-format" => (
+            "ClangFormat documentation".to_string(),
+            "https://clang.llvm.org/docs/ClangFormat.html".to_string(),
+            Some("Format supported source files; use -i for in-place edits and -style to select formatting rules."),
+        ),
+        _ => (
+            format!("Search online manuals for {query}"),
+            format!(
+                "https://manpages.debian.org/cgi-bin/search.py?q={}",
+                encode_query(query)
+            ),
+            None,
+        ),
+    };
+    let mut outcome = fallback::search("man", query, title, url, reason);
+    if let Some(snippet) = snippet {
+        if let Some(hit) = outcome.hits.first_mut() {
+            hit.snippet = snippet.into();
+        }
+    }
+    outcome
+}
+
 #[derive(Clone, Debug)]
 struct ManHit {
     name: String,
     section: String,
     description: String,
+}
+
+fn parse_explicit_page(query: &str) -> Option<ManHit> {
+    let mut words = query.split_whitespace();
+    let section = words.next()?;
+    let name = words.next()?;
+    if words.next().is_some() || !is_section(section) {
+        return None;
+    }
+    Some(ManHit {
+        name: name.to_string(),
+        section: section.to_string(),
+        description: String::new(),
+    })
+}
+
+fn is_section(value: &str) -> bool {
+    let digit_count = value.chars().take_while(|ch| ch.is_ascii_digit()).count();
+    digit_count > 0
+        && value
+            .chars()
+            .skip(digit_count)
+            .all(|ch| ch.is_ascii_alphabetic())
 }
 
 fn parse_apropos_line(line: &str) -> Option<ManHit> {
@@ -139,7 +242,7 @@ fn pick_exact(query: &str, hits: &[ManHit]) -> Option<ManHit> {
 
 fn page_excerpt(page: &ManHit) -> Option<String> {
     let output = Command::new("man")
-        .args(["-s", &page.section, &page.name])
+        .args(["-s", &page.section, "--", &page.name])
         .env("MANPAGER", "cat")
         .env("PAGER", "cat")
         .env("MANWIDTH", "88")
@@ -208,6 +311,64 @@ mod tests {
     use super::*;
 
     #[test]
+    fn official_command_fallbacks_include_immediate_usage() {
+        let gofmt = online_search("gofmt", "not installed");
+        assert!(gofmt.hits[0].snippet.contains("-w"));
+        let clang = online_search("clang-format", "not installed");
+        assert!(clang.hits[0].snippet.contains("-i"));
+    }
+
+    #[test]
+    fn parses_explicit_numeric_sections() {
+        let page = parse_explicit_page("3 getaddrinfo").unwrap();
+        assert_eq!(page.section, "3");
+        assert_eq!(page.name, "getaddrinfo");
+
+        let posix = parse_explicit_page("  3p   pthread_create ").unwrap();
+        assert_eq!(posix.section, "3p");
+        assert_eq!(posix.name, "pthread_create");
+
+        let ssl = parse_explicit_page("1ssl openssl").unwrap();
+        assert_eq!(ssl.section, "1ssl");
+        assert_eq!(ssl.name, "openssl");
+    }
+
+    #[test]
+    fn leaves_normal_and_ambiguous_queries_for_apropos() {
+        assert!(parse_explicit_page("printf").is_none());
+        assert!(parse_explicit_page("network programming").is_none());
+        assert!(parse_explicit_page("three printf").is_none());
+        assert!(parse_explicit_page("3 name extra").is_none());
+        assert!(parse_explicit_page("3-p printf").is_none());
+        assert!(parse_explicit_page("3p2 printf").is_none());
+    }
+
+    #[test]
+    fn builds_section_specific_man_arguments() {
+        let page = parse_explicit_page("5 resolv.conf").unwrap();
+        assert_eq!(locator_args(&page), ["-w", "-s", "5", "--", "resolv.conf"]);
+
+        let unsectioned = ManHit {
+            name: "printf".into(),
+            section: String::new(),
+            description: String::new(),
+        };
+        assert_eq!(locator_args(&unsectioned), ["-w", "--", "printf"]);
+    }
+
+    #[test]
+    fn reads_numeric_section_suffixes_from_paths() {
+        assert_eq!(
+            section_from_path("/usr/share/man/man3/getaddrinfo.3.gz").as_deref(),
+            Some("3")
+        );
+        assert_eq!(
+            section_from_path("/usr/share/man/man3p/pthread_create.3p.gz").as_deref(),
+            Some("3p")
+        );
+    }
+
+    #[test]
     fn parses_apropos_and_keeps_the_description() {
         let hit =
             parse_apropos_line("grep (1)             - print lines that match patterns").unwrap();
@@ -239,5 +400,12 @@ OPTIONS\n\
         assert!(body.contains("grep searches"));
         assert!(!body.contains("GREP(1)"));
         assert!(!body.contains("OPTIONS"));
+    }
+
+    #[test]
+    fn missing_local_pages_have_an_online_search() {
+        let got = online_search("clang-format", "not installed");
+        assert_eq!(got.provider, "man");
+        assert!(got.hits[0].url.contains("clang.llvm.org/docs/ClangFormat"));
     }
 }

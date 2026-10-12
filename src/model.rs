@@ -51,6 +51,8 @@ impl Hit {
 #[derive(Debug, serde::Serialize)]
 pub struct Outcome {
     pub provider: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub source_provider: Option<String>,
     pub query: String,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub source_url: Option<String>,
@@ -69,6 +71,7 @@ impl Outcome {
     pub fn new(provider: &str, query: &str) -> Self {
         Self {
             provider: provider.to_string(),
+            source_provider: None,
             query: query.to_string(),
             source_url: None,
             summary_title: None,

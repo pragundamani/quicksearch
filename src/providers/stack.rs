@@ -21,10 +21,15 @@ use crate::model::{Hit, Outcome};
 use crate::text::{encode_query, html_unescape};
 
 pub fn search(client: &Client, query: &str, limit: usize) -> Result<Outcome, String> {
-    let url = format!(
+    let (terms, tag) = tagged_query(query);
+    let mut url = format!(
         "https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=relevance&site=stackoverflow&pagesize={limit}&q={}",
-        encode_query(query)
+        encode_query(terms)
     );
+    if let Some(tag) = tag {
+        url.push_str("&tagged=");
+        url.push_str(&encode_query(tag));
+    }
     let response: SoResponse = client.get_json_gzip(
         &url,
         APP_UA,
@@ -71,6 +76,24 @@ pub fn search(client: &Client, query: &str, limit: usize) -> Result<Outcome, Str
     Ok(outcome)
 }
 
+fn tagged_query(query: &str) -> (&str, Option<&str>) {
+    let Some((first, rest)) = query.trim().split_once(char::is_whitespace) else {
+        return (query, None);
+    };
+    let tag = match first.to_ascii_lowercase().as_str() {
+        "c" | "c++" | "c#" | "clojure" | "dart" | "elixir" | "erlang" | "go" | "haskell"
+        | "java" | "javascript" | "julia" | "kotlin" | "lua" | "perl" | "php" | "python" | "r"
+        | "ruby" | "rust" | "scala" | "swift" | "typescript" => first,
+        _ => return (query, None),
+    };
+    let rest = rest.trim();
+    if rest.is_empty() {
+        (query, None)
+    } else {
+        (rest, Some(tag))
+    }
+}
+
 #[derive(Debug, Deserialize)]
 struct SoResponse {
     #[serde(default)]
@@ -93,4 +116,19 @@ struct SoItem {
     accepted_answer_id: Option<u64>,
     #[serde(default)]
     tags: Vec<String>,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn leading_language_becomes_a_stack_overflow_tag() {
+        assert_eq!(
+            tagged_query("haskell quantified constraints"),
+            ("quantified constraints", Some("haskell"))
+        );
+        assert_eq!(tagged_query("git rerere"), ("git rerere", None));
+        assert_eq!(tagged_query("haskell"), ("haskell", None));
+    }
 }

@@ -1,0 +1,1402 @@
+[
+  {
+    "language": "python",
+    "query": "qs python pair adjacent iterator items",
+    "expected": "itertools.pairwise()",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go find mime type from a filename extension",
+    "expected": "mime.TypeByExtension",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust keep only successful iterator values",
+    "expected": "Iterator::map_while or filter_map",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp exchange a value and return the old one",
+    "expected": "std::exchange",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c duplicate part of a string into bounded buffer",
+    "expected": "strncpy",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell apply function to first tuple component",
+    "expected": "Data.Bifunctor.first",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python find common path prefix by components",
+    "expected": "os.path.commonpath()",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go notify one waiting goroutine",
+    "expected": "sync.Cond.Signal",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust turn option into result with lazy error",
+    "expected": "Option::ok_or_else",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp test whether range begins with another range",
+    "expected": "std::ranges::starts_with",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c report current stream file position",
+    "expected": "ftell",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell attach an index to every traversable value",
+    "expected": "Data.Traversable.mapAccumL",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python execute cleanup when interpreter exits",
+    "expected": "atexit.register()",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go read exactly n bytes or fail",
+    "expected": "io.ReadFull",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust replace matching slice prefix",
+    "expected": "slice::strip_prefix",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp invoke callable only when invocable",
+    "expected": "std::is_invocable and std::invoke",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c clear error and eof indicators on stream",
+    "expected": "clearerr",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell combine maps and resolve duplicate keys",
+    "expected": "Data.Map.unionWith",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python wait for whichever future finishes first",
+    "expected": "concurrent.futures.wait(FIRST_COMPLETED)",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go write quoted go string literal",
+    "expected": "strconv.Quote",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust split slice once on a predicate",
+    "expected": "slice::split_once",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp convert enum to underlying integer type",
+    "expected": "std::to_underlying",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c push one character back onto input stream",
+    "expected": "ungetc",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell run action only when condition is true",
+    "expected": "Control.Monad.when",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python iterate over calendar month rows",
+    "expected": "calendar.Calendar.monthdayscalendar()",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go return a reader limited to n bytes",
+    "expected": "io.LimitReader",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust get two mutable slice elements safely",
+    "expected": "slice::get_many_mut",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp count consecutive equal groups in a range",
+    "expected": "std::ranges::chunk_by_view",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c transform string for locale collation",
+    "expected": "strxfrm",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell unfold a container from a seed",
+    "expected": "Data.List.unfoldr",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python preserve function metadata in decorator",
+    "expected": "functools.wraps()",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go mirror bytes read from a reader into a writer",
+    "expected": "io.TeeReader",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust create an iterator that yields once",
+    "expected": "std::iter::once",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp construct object in optional storage in place",
+    "expected": "std::optional::emplace",
+    "class": "paraphrase",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c locate last character not first character",
+    "expected": "strrchr, not strchr",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell sequence effects and discard results not collect them",
+    "expected": "mapM_, not mapM",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "python",
+    "query": "qs python shell style splitting not regular expression splitting",
+    "expected": "shlex.split(), not re.split()",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "go",
+    "query": "qs go compare strings case insensitively not byte equality",
+    "expected": "strings.EqualFold, not bytes.Equal",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust remove suffix not prefix from string slice",
+    "expected": "str::strip_suffix, not strip_prefix",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp copy backward not ordinary copy",
+    "expected": "std::copy_backward, not std::copy",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "c",
+    "query": "qs c write one character not a formatted string",
+    "expected": "fputc, not fprintf",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell left fold with monadic effects not pure fold",
+    "expected": "Control.Monad.foldM, not foldl",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "python",
+    "query": "qs python decimal arithmetic not binary float",
+    "expected": "decimal.Decimal, not float",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "go",
+    "query": "qs go split after separator not before it",
+    "expected": "strings.SplitAfter, not strings.Split",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust weak reference not owning rc clone",
+    "expected": "std::rc::Weak, not Rc",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp shared lock not exclusive mutex lock",
+    "expected": "std::shared_lock, not std::unique_lock",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "c",
+    "query": "qs c rename a file not remove it",
+    "expected": "rename, not remove",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell catch only io errors not every exception",
+    "expected": "System.IO.Error.catchIOError, not Control.Exception.catch",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "python",
+    "query": "qs python compare sequences in constant time not normal equality",
+    "expected": "hmac.compare_digest(), not ==",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "go",
+    "query": "qs go lexical path cleanup not filesystem symlink resolution",
+    "expected": "filepath.Clean, not EvalSymlinks",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust checked addition not wrapping addition",
+    "expected": "checked_add, not wrapping_add",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp midpoint without overflow not simple average",
+    "expected": "std::midpoint, not (a+b)/2",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "c",
+    "query": "qs c find first matching span not substring",
+    "expected": "strpbrk, not strstr",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell strict bytestring not lazy bytestring",
+    "expected": "Data.ByteString, not Data.ByteString.Lazy",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "python",
+    "query": "qs python cryptographic random integer not random.randrange",
+    "expected": "secrets.randbelow(), not random.randrange()",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "go",
+    "query": "qs go escape html text not url query data",
+    "expected": "html.EscapeString, not url.QueryEscape",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust saturating multiplication not checked multiplication",
+    "expected": "saturating_mul, not checked_mul",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp terminate handler not unexpected exception handler",
+    "expected": "std::set_terminate, not exception matching",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "c",
+    "query": "qs c convert wide string to multibyte not reverse direction",
+    "expected": "wcsrtombs, not mbsrtowcs",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell deep evaluation not weak head normal form",
+    "expected": "Control.DeepSeq.force, not seq",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "python",
+    "query": "qs python open compressed gzip file not zip archive",
+    "expected": "gzip.open(), not zipfile.ZipFile",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "go",
+    "query": "qs go stable slice sort not unstable sort",
+    "expected": "sort.SliceStable, not sort.Slice",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust abort process not unwind panic",
+    "expected": "std::process::abort, not panic!",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp inclusive scan not exclusive scan",
+    "expected": "std::inclusive_scan, not std::exclusive_scan",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "c",
+    "query": "qs c read one wide character not one byte character",
+    "expected": "fgetwc, not fgetc",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell text builder not string concatenation",
+    "expected": "Data.Text.Lazy.Builder, not (++)",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "python",
+    "query": "qs python parse email address not url address",
+    "expected": "email.utils.parseaddr(), not urllib.parse",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "go",
+    "query": "qs go cryptographic subtle constant time compare not bytes compare",
+    "expected": "subtle.ConstantTimeCompare, not bytes.Equal",
+    "class": "negative-contrast",
+    "label": "negative"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust docs please exact api lookup today std::mem::take examples stable",
+    "expected": "std::mem::take",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp modern standard library reference quick answer std::ranges::iota_view usage",
+    "expected": "std::ranges::iota_view",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c standard library portable example urgently get environment variable getenv",
+    "expected": "getenv",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell hoogle package docs simple example now Data.Set.fromList",
+    "expected": "Data.Set.fromList",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python official docs latest version quick example contextlib.ExitStack",
+    "expected": "contextlib.ExitStack",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go package documentation current release example net.IP.IsPrivate",
+    "expected": "net.IP.IsPrivate",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust beginner tutorial standard docs show me slice rotate_left method now",
+    "expected": "slice::rotate_left",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp reference safe portable c++23 example std::byteswap integer please",
+    "expected": "std::byteswap",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c reference manual safe code sample portable convert time difftime seconds",
+    "expected": "difftime",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell latest base library documentation beginner example Data.Char.generalCategory",
+    "expected": "Data.Char.generalCategory",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python docs tutorial best practice code sample pathlib.PurePath.match",
+    "expected": "PurePath.match()",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go official reference beginner quick code example cmp.Or zero values",
+    "expected": "cmp.Or",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust standard library fast safe idiomatic example Vec::spare_capacity_mut docs",
+    "expected": "Vec::spare_capacity_mut",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp standard official documentation tutorial std::ranges::fold_left sample code",
+    "expected": "std::ranges::fold_left",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c language library specification easy tutorial sample code div integer quotient remainder",
+    "expected": "div",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell package docs latest tutorial quick answer Data.Sequence.adjust examples",
+    "expected": "Data.Sequence.adjust",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python standard library official guide simple example graphlib.TopologicalSorter",
+    "expected": "graphlib.TopologicalSorter",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go current stable standard package docs quick example math.Nextafter",
+    "expected": "math.Nextafter",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust official stable docs easy example std::path::Path::ancestors iterator",
+    "expected": "Path::ancestors",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp latest standard reference concise example std::launder object pointer",
+    "expected": "std::launder",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c standard portable reference example localeconv monetary formatting fields",
+    "expected": "localeconv",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell current base hoogle quick tutorial Control.Arrow.loop examples",
+    "expected": "Control.Arrow.loop",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python official stdlib current docs tiny example weakref.finalize object cleanup",
+    "expected": "weakref.finalize",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go standard package reference practical sample testing.F.Cleanup fuzz docs",
+    "expected": "testing.F.Cleanup",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust docs quick beginner correct idiomatic std::array::from_fn example",
+    "expected": "std::array::from_fn",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp portable modern reference sample std::ranges::borrowed_range concept details",
+    "expected": "std::ranges::borrowed_range",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c official standard library guide sample code nearbyint rounding mode",
+    "expected": "nearbyint",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell hoogle official base docs concise example Data.Ord.clamp",
+    "expected": "Data.Ord.clamp",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python latest official manual quick practical example socket.socketpair",
+    "expected": "socket.socketpair()",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go docs current version best practice example log.Logger.Writer method",
+    "expected": "log.Logger.Writer",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust safe fast standard library tutorial std::ffi::OsStr::as_encoded_bytes",
+    "expected": "OsStr::as_encoded_bytes",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp official c++ reference beginner sample std::unreachable_sentinel_t iterator",
+    "expected": "std::unreachable_sentinel_t",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c reference standard code example quick answer feclearexcept floating environment",
+    "expected": "feclearexcept",
+    "class": "surplus-token-adversarial",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.IntMap.lookupGE",
+    "expected": "Data.IntMap.lookupGE",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python mmap.mmap.madvise",
+    "expected": "mmap.mmap.madvise()",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go net/netip.ParsePrefix",
+    "expected": "net/netip.ParsePrefix",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::sync::LazyLock::force_mut",
+    "expected": "LazyLock::force_mut",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::ranges::cartesian_product_view",
+    "expected": "std::ranges::cartesian_product_view",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c fgetpos",
+    "expected": "fgetpos",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Array.accumArray",
+    "expected": "Data.Array.accumArray",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python os.posix_spawnp",
+    "expected": "os.posix_spawnp()",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go slices.Chunk",
+    "expected": "slices.Chunk",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::io::BorrowedBuf",
+    "expected": "std::io::BorrowedBuf",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::flat_map",
+    "expected": "std::flat_map",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c wcscoll",
+    "expected": "wcscoll",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Graph.stronglyConnCompR",
+    "expected": "Data.Graph.stronglyConnCompR",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python ssl.SSLContext.num_tickets",
+    "expected": "SSLContext.num_tickets",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go reflect.TypeFor",
+    "expected": "reflect.TypeFor",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::task::Waker::data",
+    "expected": "Waker::data",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::ranges::fold_left_with_iter",
+    "expected": "std::ranges::fold_left_with_iter",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c quick_exit",
+    "expected": "quick_exit",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Text.ParserCombinators.ReadP.gather",
+    "expected": "ReadP.gather",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python tarfile.data_filter",
+    "expected": "tarfile.data_filter",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go archive/zip.Writer.Copy",
+    "expected": "archive/zip.Writer.Copy",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::thread::scope",
+    "expected": "std::thread::scope",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::expected::transform_error",
+    "expected": "std::expected::transform_error",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c thrd_sleep",
+    "expected": "thrd_sleep",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Typeable.eqT",
+    "expected": "Data.Typeable.eqT",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python sqlite3.Connection.blobopen",
+    "expected": "Connection.blobopen()",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go crypto/ecdh.X25519",
+    "expected": "crypto/ecdh.X25519",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::net::Ipv6Addr::to_ipv4_mapped",
+    "expected": "Ipv6Addr::to_ipv4_mapped",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::generator",
+    "expected": "std::generator",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs c ckd_add",
+    "expected": "ckd_add",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Foldable.foldMap1",
+    "expected": "Data.Foldable.foldMap1",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs python asyncio.Barrier",
+    "expected": "asyncio.Barrier",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go math/big.Float.Scan",
+    "expected": "math/big.Float.Scan",
+    "class": "unseen-api",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs pypi msgspec",
+    "expected": "PyPI package page for msgspec",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs go-mod golang.org/x/sync",
+    "expected": "Go package registry result for golang.org/x/sync",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs crate camino",
+    "expected": "crates.io page for camino",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs man cmake",
+    "expected": "Local cmake manual page",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs man 3 getaddrinfo",
+    "expected": "Section 3 getaddrinfo manual page",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs web Hackage attoparsec",
+    "expected": "DuckDuckGo results for Hackage attoparsec",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs pypi platformdirs",
+    "expected": "PyPI package page for platformdirs",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs gh charmbracelet/lipgloss",
+    "expected": "GitHub repository charmbracelet/lipgloss",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs docs smallvec",
+    "expected": "docs.rs documentation for smallvec",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs so c++ object slicing",
+    "expected": "Stack Overflow search for C++ object slicing",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs cheat awk field separator",
+    "expected": "cheat.sh result for awk field separator",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs gh haskell-unordered-containers",
+    "expected": "GitHub repositories for haskell-unordered-containers",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs mdn python webassembly api",
+    "expected": "MDN search for python webassembly api",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs web go vulnerability database",
+    "expected": "DuckDuckGo results for Go vulnerability database",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs docs core::cell::OnceCell",
+    "expected": "Official Rust core docs for core::cell::OnceCell",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs wiki C++ name mangling",
+    "expected": "Wikipedia result for C++ name mangling",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs rfc 8949",
+    "expected": "RFC 8949",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell System.Mem.performGC",
+    "expected": "Hoogle results for System.Mem.performGC",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs gh python-trio/trio",
+    "expected": "GitHub repository python-trio/trio",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs man gofmt",
+    "expected": "Local gofmt manual page",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs crate zerocopy",
+    "expected": "crates.io page for zerocopy",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs web cppreference execution control library",
+    "expected": "DuckDuckGo results for cppreference execution control library",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs so c strict aliasing effective type",
+    "expected": "Stack Overflow search for C strict aliasing effective type",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs web haskell backpack signatures",
+    "expected": "DuckDuckGo results for Haskell Backpack signatures",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs pip orjson",
+    "expected": "PyPI package page for orjson",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs gh golang/tools",
+    "expected": "GitHub repository golang/tools",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs std std::hint::black_box",
+    "expected": "Official Rust standard-library page for std::hint::black_box",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "cpp",
+    "query": "qs man clang-format",
+    "expected": "Local clang-format manual page",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "c",
+    "query": "qs wiki C standard library",
+    "expected": "Wikipedia result for C standard library",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "haskell",
+    "query": "qs so haskell quantified constraints",
+    "expected": "Stack Overflow search for Haskell quantified constraints",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "python",
+    "query": "qs web python free threading status",
+    "expected": "DuckDuckGo results for Python free threading status",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "go",
+    "query": "qs rfc QUIC transport",
+    "expected": "RFC title search for QUIC transport",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "rust",
+    "query": "qs docs alloc::alloc::Layout",
+    "expected": "Official Rust alloc docs for alloc::alloc::Layout",
+    "class": "source-routing",
+    "label": "positive"
+  },
+  {
+    "language": "none",
+    "query": "qs 9780143127741",
+    "expected": "Product lookup for barcode 9780143127741",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs 1912",
+    "expected": "DuckDuckGo web search for 1912",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs item 012345678905",
+    "expected": "Product lookup for barcode 012345678905",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs stock ASML",
+    "expected": "Stock lookup for ASML",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs cve CVE-2024-3094",
+    "expected": "NVD advisory for CVE-2024-3094",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs nvd libwebp heap overflow",
+    "expected": "NVD advisory search for libwebp heap overflow",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs npm fast-glob",
+    "expected": "npm registry page for fast-glob",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs gem faraday",
+    "expected": "RubyGems page for faraday",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs hex bandit",
+    "expected": "Hex package page for bandit",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs maven org.flywaydb flyway-core",
+    "expected": "Maven registry result for org.flywaydb:flyway-core",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs nuget Polly",
+    "expected": "NuGet page for Polly",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs wiki Ada Lovelace",
+    "expected": "Wikipedia page for Ada Lovelace",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs mdn AbortSignal.any",
+    "expected": "MDN page for AbortSignal.any",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs so git rerere",
+    "expected": "Stack Overflow search for git rerere",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs gh sharkdp/bat",
+    "expected": "GitHub repository sharkdp/bat",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs debian unattended upgrades",
+    "expected": "Debian Wiki result for unattended upgrades",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs ubuntu netplan policy routing",
+    "expected": "Ubuntu Wiki result for netplan policy routing",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs fedora toolbox",
+    "expected": "Fedora Wiki result for toolbox",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs gentoo eselect repository",
+    "expected": "Gentoo Wiki result for eselect repository",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs arch mkinitcpio unified kernel image",
+    "expected": "ArchWiki result for unified kernel image",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs man 5 resolv.conf",
+    "expected": "Local resolv.conf manual section 5",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs cargo metadata",
+    "expected": "cargo-metadata manual page",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs podman kube play",
+    "expected": "podman-kube-play manual page",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs dnf ripgrep",
+    "expected": "DNF package information for ripgrep",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs apt policy",
+    "expected": "apt-policy manual page",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs brew leaves",
+    "expected": "brew-leaves manual page",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs flatpak remotes",
+    "expected": "flatpak-remotes manual page",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs snap connections",
+    "expected": "snap-connections manual page",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs web rust crate serde",
+    "expected": "DuckDuckGo results for rust crate serde",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs !aur paru-bin",
+    "expected": "DuckDuckGo bang result for !aur paru-bin",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs cheat tar extract strip components",
+    "expected": "cheat.sh result for tar extraction",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs rfc structured field values HTTP",
+    "expected": "RFC title search for Structured Field Values for HTTP",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  },
+  {
+    "language": "none",
+    "query": "qs price of palladium per ounce",
+    "expected": "DuckDuckGo web search for palladium price",
+    "class": "non-language-routing-control",
+    "label": "negative"
+  }
+]

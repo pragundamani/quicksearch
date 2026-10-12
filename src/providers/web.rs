@@ -15,22 +15,69 @@
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 use std::sync::LazyLock;
+use std::time::Duration;
 
 use regex::Regex;
 use serde::Deserialize;
 
 use crate::http::{Client, APP_UA, BROWSER_UA};
 use crate::model::{Hit, Outcome};
-use crate::text::{collapse_ws, encode_query, html_unescape, strip_tags, truncate};
+use crate::text::{byte_prefix, collapse_ws, encode_query, html_unescape, strip_tags, truncate};
 
-pub fn search(client: &Client, query: &str, limit: usize) -> Result<Outcome, String> {
+const WEB_SEARCH_TIMEOUT: Duration = Duration::from_secs(5);
+
+fn web_search_agent() -> ureq::Agent {
+    ureq::AgentBuilder::new()
+        // `timeout_connect` otherwise defaults to 30 seconds and takes
+        // precedence over the overall timeout.
+        .timeout_connect(WEB_SEARCH_TIMEOUT)
+        .timeout(WEB_SEARCH_TIMEOUT)
+        .build()
+}
+
+/// Run a user-selected web search. If DuckDuckGo cannot provide results that
+/// the terminal can render, return a link that opens the same search instead.
+///
+/// Internal callers use [`search`] directly so they can still detect a failed
+/// web lookup and keep a local fallback.
+pub fn search_explicit(_client: &Client, query: &str, limit: usize) -> Result<Outcome, String> {
+    let agent = web_search_agent();
+    Ok(explicit_outcome(
+        search_with_agent(&agent, query, limit),
+        query,
+    ))
+}
+
+fn explicit_outcome(result: Result<Outcome, String>, query: &str) -> Outcome {
+    result.unwrap_or_else(|reason| browser_search_outcome(query, &reason))
+}
+
+fn browser_search_outcome(query: &str, reason: &str) -> Outcome {
+    let url = format!("https://duckduckgo.com/?q={}", encode_query(query));
+    let mut outcome = Outcome::new("web", query);
+    outcome.source_url = Some(url.clone());
+    outcome.summary_title = Some("Browser search fallback".into());
+    outcome.summary = Some(format!("Live web lookup was unavailable: {reason}"));
+    outcome.hits.push(
+        Hit::new(format!("Search DuckDuckGo for {query}"), url)
+            .snippet("Open this search in your browser."),
+    );
+    outcome
+}
+
+pub fn search(_client: &Client, query: &str, limit: usize) -> Result<Outcome, String> {
+    let agent = web_search_agent();
+    search_with_agent(&agent, query, limit)
+}
+
+fn search_with_agent(agent: &ureq::Agent, query: &str, limit: usize) -> Result<Outcome, String> {
     let encoded = encode_query(query);
     let lite_url = format!("https://lite.duckduckgo.com/lite/?q={encoded}");
     let instant_url =
         format!("https://api.duckduckgo.com/?q={encoded}&format=json&no_html=1&skip_disambig=1");
 
-    let instant_agent = client.agent.clone();
-    let lite_agent = client.agent.clone();
+    let instant_agent = agent.clone();
+    let lite_agent = agent.clone();
     let lite_fetch_url = lite_url.clone();
     let (lite, instant) = std::thread::scope(|scope| {
         let instant_handle = scope.spawn(move || fetch_instant(&instant_agent, &instant_url));
@@ -168,7 +215,7 @@ pub fn parse_lite_html(html: &str, limit: usize) -> Vec<Hit> {
             continue;
         }
         let end = caps.get(0).map(|m| m.end()).unwrap_or(0);
-        let window = &html[end..html.len().min(end + 1500)];
+        let window = byte_prefix(&html[end..], 1500);
         let snippet = SNIPPET_RE
             .captures(window)
             .and_then(|cap| cap.get(1))
@@ -204,6 +251,51 @@ pub fn unwrap_ddg_url(raw: &str) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn web_search_timeout_is_short_and_bounded() {
+        assert_eq!(WEB_SEARCH_TIMEOUT, Duration::from_secs(5));
+        assert!(WEB_SEARCH_TIMEOUT < Duration::from_secs(15));
+    }
+
+    #[test]
+    fn explicit_search_error_becomes_a_clickable_browser_search() {
+        let outcome = explicit_outcome(Err("upstream failed".to_string()), "rust & cargo");
+
+        assert_eq!(outcome.provider, "web");
+        assert_eq!(outcome.query, "rust & cargo");
+        assert_eq!(outcome.hits.len(), 1);
+        assert_eq!(outcome.hits[0].title, "Search DuckDuckGo for rust & cargo");
+        assert_eq!(
+            outcome.hits[0].url,
+            "https://duckduckgo.com/?q=rust%20%26%20cargo"
+        );
+        assert_eq!(
+            outcome.source_url.as_deref(),
+            Some(outcome.hits[0].url.as_str())
+        );
+    }
+
+    #[test]
+    fn explicit_search_preserves_successful_web_results() {
+        let mut success = Outcome::new("web", "query");
+        success.hits.push(Hit::new("Result", "https://example.com"));
+
+        let outcome = explicit_outcome(Ok(success), "query");
+
+        assert_eq!(outcome.hits.len(), 1);
+        assert_eq!(outcome.hits[0].title, "Result");
+        assert_eq!(outcome.hits[0].url, "https://example.com");
+    }
+
+    #[test]
+    fn result_window_does_not_split_curly_quote() {
+        let link = r#"<a href="https://example.com" class="result-link">Unicode</a>"#;
+        let html = format!("{link}{}“tail", "x".repeat(1_499));
+        let hits = parse_lite_html(&html, 1);
+        assert_eq!(hits.len(), 1);
+        assert_eq!(hits[0].title, "Unicode");
+    }
 
     #[test]
     fn parses_lite_results_and_unwraps_redirects() {

@@ -43,9 +43,10 @@ impl View {
     }
 
     fn link(&self, url: &str) -> String {
-        let label = self.paint(url, BLUE_UNDER);
-        if self.links {
-            format!("\x1b]8;;{url}\x1b\\{label}\x1b]8;;\x1b\\")
+        let safe = sanitize_terminal_text(url);
+        let label = self.paint(&safe, BLUE_UNDER);
+        if self.links && safe_hyperlink_url(&safe) {
+            format!("\x1b]8;;{safe}\x1b\\{label}\x1b]8;;\x1b\\")
         } else {
             label
         }
@@ -56,7 +57,7 @@ pub fn print_outcome(outcome: &Outcome, view: &View) {
     let terms = query_terms(&outcome.query);
     println!(
         "{}  {}",
-        view.paint(&outcome.provider, BOLD_CYAN),
+        view.paint(&sanitize_terminal_text(&outcome.provider), BOLD_CYAN),
         highlight(view, &outcome.query, &terms)
     );
     if let Some(url) = &outcome.source_url {
@@ -65,18 +66,14 @@ pub fn print_outcome(outcome: &Outcome, view: &View) {
 
     if let Some(body) = &outcome.body {
         println!();
-        let text = if view.color {
-            body.clone()
-        } else {
-            crate::text::strip_ansi(body)
-        };
+        let text = sanitize_terminal_body(&crate::text::strip_ansi(body));
         println!("{text}");
     }
 
     if let Some(summary) = outcome.summary.as_ref().filter(|s| !s.trim().is_empty()) {
         println!();
         if let Some(title) = &outcome.summary_title {
-            println!("{}", view.paint(title, BOLD));
+            println!("{}", view.paint(&sanitize_terminal_text(title), BOLD));
         }
         println!("{}", highlight(view, summary, &terms));
         if let Some(url) = &outcome.summary_url {
@@ -100,12 +97,9 @@ pub fn print_outcome(outcome: &Outcome, view: &View) {
                 println!("   {}", highlight(view, &hit.snippet, &terms));
             }
             for line in &hit.meta {
-                let code = is_source_code(line);
-                let shown = if code {
-                    tighten_indent(line)
-                } else {
-                    line.clone()
-                };
+                let line = sanitize_terminal_body(line);
+                let code = is_source_code(&line);
+                let shown = if code { tighten_indent(&line) } else { line };
                 if view.color && code {
                     let highlighted = highlight_code(&shown, &bat_language(&outcome.provider));
                     for code_line in highlighted.lines() {
@@ -142,10 +136,7 @@ pub fn print_sources(text: &str, color: bool) {
         }
         if let Some((name, description)) = split_source_row(line) {
             let pad = line.len() - line.trim_start().len();
-            let gap = line.len()
-                - pad
-                - name.len()
-                - description.len();
+            let gap = line.len() - pad - name.len() - description.len();
             println!(
                 "{:pad$}{}{:gap$}{}",
                 "",
@@ -289,9 +280,45 @@ fn highlight_code(code: &str, language: &str) -> String {
     }
 }
 
+fn is_terminal_spoofing_control(ch: char) -> bool {
+    matches!(
+        ch,
+        '\u{061c}'
+            | '\u{200e}'
+            | '\u{200f}'
+            | '\u{202a}'..='\u{202e}'
+            | '\u{2066}'..='\u{2069}'
+    )
+}
+
+fn sanitize_terminal_text(text: &str) -> String {
+    text.chars()
+        .filter(|ch| !ch.is_control() && *ch != '\u{7f}' && !is_terminal_spoofing_control(*ch))
+        .collect()
+}
+
+fn sanitize_terminal_body(text: &str) -> String {
+    text.chars()
+        .filter(|ch| {
+            matches!(ch, '\n' | '\t')
+                || (!ch.is_control() && *ch != '\u{7f}' && !is_terminal_spoofing_control(*ch))
+        })
+        .collect()
+}
+
+fn safe_hyperlink_url(url: &str) -> bool {
+    if url.starts_with("man://") {
+        return !url
+            .chars()
+            .any(|ch| ch.is_control() || is_terminal_spoofing_control(ch));
+    }
+    crate::text::normalize_http_url(url).is_some()
+}
+
 fn highlight(view: &View, text: &str, terms: &[String]) -> String {
+    let text = sanitize_terminal_text(text);
     if !view.color || text.is_empty() || terms.is_empty() {
-        return text.to_string();
+        return text;
     }
     let chars: Vec<char> = text.chars().collect();
     let folded: Vec<char> = chars
@@ -351,6 +378,26 @@ mod tests {
     use super::*;
 
     #[test]
+    fn strips_terminal_controls_from_remote_text_and_links() {
+        assert_eq!(
+            sanitize_terminal_text("safe\x1b]8;;evil\x07text"),
+            "safe]8;;eviltext"
+        );
+        assert!(!safe_hyperlink_url("https://example.test/\nattack"));
+        assert!(!safe_hyperlink_url("javascript:alert(1)"));
+        assert_eq!(sanitize_terminal_text("safe\u{202e}spoof"), "safespoof");
+        assert!(!safe_hyperlink_url("https://example.test/\u{2066}spoof"));
+
+        let view = View {
+            color: false,
+            links: true,
+        };
+        let rendered = view.link("https://example.test/\x1b]8;;evil\x07");
+        assert!(!rendered.contains("\x1b]8;;evil"));
+        assert!(!rendered.contains('\x07'));
+    }
+
+    #[test]
     fn highlights_whole_terms_only() {
         let view = View {
             color: true,
@@ -381,7 +428,8 @@ mod tests {
         assert!(tightened.contains("\n  smph.acquire();"));
         assert!(tightened.contains("\n    nested();"));
         assert!(!tightened.contains("        nested"));
-        let synopsis = "namespace std {\n  class counting_semaphore {\n    void acquire();\n  };\n}\n";
+        let synopsis =
+            "namespace std {\n  class counting_semaphore {\n    void acquire();\n  };\n}\n";
         assert_eq!(tighten_indent(synopsis), synopsis);
     }
 }

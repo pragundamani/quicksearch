@@ -1,0 +1,104 @@
+# Go quicksearch checklist
+
+100 representative checks for Go language concepts, standard-library APIs, identifiers, morphology, and natural task queries.
+
+- [ ] `qs go arrays` — Expected: Array types. Test: Plural concept-to-language-feature matching.
+- [ ] `qs go slices` — Expected: Slice types and operations. Test: Plural concept-to-canonical docs matching.
+- [ ] `qs go append` — Expected: Built-in `append`. Test: Direct lookup of a core built-in.
+- [ ] `qs go copy builtin` — Expected: Built-in `copy`. Test: Disambiguation of a common word with a qualifier.
+- [ ] `qs go maps` — Expected: Map types. Test: Plural morphology for a core data type.
+- [ ] `qs go delete map key` — Expected: Built-in `delete`. Test: Natural task-to-built-in matching.
+- [ ] `qs go clear map` — Expected: Built-in `clear`. Test: Natural map-reset task lookup.
+- [ ] `qs go range loops` — Expected: `range` clause in `for` statements. Test: Plural natural phrase for iteration syntax.
+- [ ] `qs go variadic functions` — Expected: Variadic parameters. Test: Multiword language-concept retrieval.
+- [ ] `qs go multiple return values` — Expected: Function declarations and multiple results. Test: Natural wording for Go function semantics.
+- [ ] `qs go defer statement` — Expected: `defer` statements. Test: Keyword plus concept-name matching.
+- [ ] `qs go panic and recover` — Expected: Built-ins `panic` and `recover`. Test: Paired runtime-control concepts.
+- [ ] `qs go goroutines` — Expected: Goroutines and `go` statements. Test: Go-specific plural normalization.
+- [ ] `qs go buffered channels` — Expected: Channel capacity and `make(chan T, n)`. Test: Multiword concurrency concept.
+- [ ] `qs go select statement` — Expected: `select` statements. Test: Direct concurrency-syntax lookup.
+- [ ] `qs go close channel` — Expected: Built-in `close` and channel semantics. Test: Task phrasing for channel lifecycle docs.
+- [ ] `qs go interfaces` — Expected: Interface types. Test: Plural lookup of a central type-system concept.
+- [ ] `qs go interface embedding` — Expected: Embedded interfaces and type sets. Test: Related-keyword concept discovery.
+- [ ] `qs go type assertions` — Expected: Type assertion expressions. Test: Plural syntax-concept matching.
+- [ ] `qs go type switches` — Expected: Type switch statements. Test: Morphological matching for control flow.
+- [ ] `qs go struct tags` — Expected: Struct field tags. Test: Common plural reflection/encoding concept.
+- [ ] `qs go embedded fields` — Expected: Embedded struct fields. Test: Natural terminology for promotion and embedding.
+- [ ] `qs go methods pointer receivers` — Expected: Method declarations with pointer receivers. Test: Loose multiword query for receiver semantics.
+- [ ] `qs go iota constants` — Expected: Predeclared identifier `iota`. Test: Identifier plus plural contextual term.
+- [ ] `qs go type parameters` — Expected: Generic type parameters. Test: Modern language feature in plural form.
+- [ ] `qs go generic constraints` — Expected: Constraint interfaces and type sets. Test: Natural phrase for generics documentation.
+- [ ] `qs go comparable` — Expected: Predeclared constraint `comparable`. Test: Exact lookup of a contextual built-in identifier.
+- [ ] `qs go new` — Expected: Built-in `new`. Test: Short exact built-in query.
+- [ ] `qs go make` — Expected: Built-in `make`. Test: Core allocation built-in retrieval.
+- [ ] `qs go nil` — Expected: Predeclared identifier `nil`. Test: Exact lookup of a fundamental value.
+- [ ] `qs go fmt.Sprintf` — Expected: `fmt.Sprintf`. Test: Package-qualified CamelCase function.
+- [ ] `qs go fmt.Errorf` — Expected: `fmt.Errorf` and `%w` wrapping. Test: Qualified API with linked error behavior.
+- [ ] `qs go fmt.Fscan` — Expected: `fmt.Fscan`. Test: Qualified formatted-input API lookup.
+- [ ] `qs go strings.Builder` — Expected: `strings.Builder`. Test: Package-qualified exported type.
+- [ ] `qs go strings.Fields` — Expected: `strings.Fields`. Test: Exact CamelCase text-splitting API.
+- [ ] `qs go strings.ReplaceAll` — Expected: `strings.ReplaceAll`. Test: Compound CamelCase method retrieval.
+- [ ] `qs go bytes.Buffer` — Expected: `bytes.Buffer`. Test: Qualified type with common-name disambiguation.
+- [ ] `qs go bytes.Equal` — Expected: `bytes.Equal`. Test: Exact byte-slice comparison API.
+- [ ] `qs go strconv.Atoi` — Expected: `strconv.Atoi`. Test: Common conversion API with acronym casing.
+- [ ] `qs go strconv.FormatInt` — Expected: `strconv.FormatInt`. Test: Qualified numeric formatting function.
+- [ ] `qs go regexp.Compile` — Expected: `regexp.Compile`. Test: Exact regular-expression constructor.
+- [ ] `qs go regexp named groups` — Expected: Named capture groups in `regexp`. Test: Natural phrase for specialized pattern syntax.
+- [ ] `qs go unicode.IsLetter` — Expected: `unicode.IsLetter`. Test: Qualified Unicode classification API.
+- [ ] `qs go sort.Slice` — Expected: `sort.Slice`. Test: Qualified generic-slice sorting API.
+- [ ] `qs go sort.Search` — Expected: `sort.Search`. Test: Exact binary-search primitive.
+- [ ] `qs go slices.Sort` — Expected: `slices.Sort`. Test: Modern generic package API lookup.
+- [ ] `qs go slices.Contains` — Expected: `slices.Contains`. Test: Qualified membership helper retrieval.
+- [ ] `qs go maps.Clone` — Expected: `maps.Clone`. Test: Qualified generic map-copy API.
+- [ ] `qs go maps.Equal` — Expected: `maps.Equal`. Test: Qualified generic map comparison API.
+- [ ] `qs go container/heap` — Expected: Package `container/heap`. Test: Slash-qualified standard-library package.
+- [ ] `qs go container/list.New` — Expected: `container/list.New`. Test: Path-qualified constructor lookup.
+- [ ] `qs go io.Copy` — Expected: `io.Copy`. Test: Core streaming-copy API.
+- [ ] `qs go io.ReadAll` — Expected: `io.ReadAll`. Test: Qualified full-stream read helper.
+- [ ] `qs go io.Reader` — Expected: `io.Reader` interface. Test: Exact foundational interface lookup.
+- [ ] `qs go bufio.Scanner` — Expected: `bufio.Scanner`. Test: Qualified buffered tokenization type.
+- [ ] `qs go bufio.NewWriter` — Expected: `bufio.NewWriter`. Test: Qualified buffered-output constructor.
+- [ ] `qs go os.ReadFile` — Expected: `os.ReadFile`. Test: Exact whole-file read function.
+- [ ] `qs go os.WriteFile` — Expected: `os.WriteFile`. Test: Exact whole-file write function.
+- [ ] `qs go os.OpenFile flags` — Expected: `os.OpenFile` and open flags. Test: API plus usage-context query.
+- [ ] `qs go filepath.WalkDir` — Expected: `path/filepath.WalkDir`. Test: Package shorthand to canonical subpackage API.
+- [ ] `qs go filepath.Join` — Expected: `path/filepath.Join`. Test: Common path-building function lookup.
+- [ ] `qs go file permissions` — Expected: `fs.FileMode` and permission bits. Test: Natural plural task query across packages.
+- [ ] `qs go temporary directory` — Expected: `os.MkdirTemp`. Test: Intent-based lookup without the symbol name.
+- [ ] `qs go embed files` — Expected: Package `embed` and `//go:embed`. Test: Natural task phrase for compiler directive docs.
+- [ ] `qs go time.Parse layout` — Expected: `time.Parse` and reference-time layouts. Test: API plus Go-specific usage concept.
+- [ ] `qs go time.NewTicker` — Expected: `time.NewTicker`. Test: Qualified timer constructor.
+- [ ] `qs go time.AfterFunc` — Expected: `time.AfterFunc`. Test: Exact delayed-callback API.
+- [ ] `qs go context cancellation` — Expected: `context.WithCancel` and `CancelFunc`. Test: Conceptual lifecycle query.
+- [ ] `qs go context.WithTimeout` — Expected: `context.WithTimeout`. Test: Qualified deadline constructor.
+- [ ] `qs go errors.Is` — Expected: `errors.Is`. Test: Exact wrapped-error comparison API.
+- [ ] `qs go errors.As` — Expected: `errors.As`. Test: Exact wrapped-error type extraction API.
+- [ ] `qs go errors.Join` — Expected: `errors.Join`. Test: Modern multi-error composition API.
+- [ ] `qs go sync.WaitGroup` — Expected: `sync.WaitGroup`. Test: Package-qualified CamelCase synchronization type.
+- [ ] `qs go mutexes` — Expected: `sync.Mutex`. Test: Irregular plural-to-singular API matching.
+- [ ] `qs go sync.Once` — Expected: `sync.Once`. Test: Exact one-time initialization primitive.
+- [ ] `qs go atomic counter` — Expected: Package `sync/atomic` counter operations. Test: Natural task query for lock-free APIs.
+- [ ] `qs go worker pool` — Expected: Goroutine/channel worker-pool pattern. Test: Common concurrency task without one exact symbol.
+- [ ] `qs go race detector` — Expected: Go data race detector. Test: Tooling concept retrieval from natural words.
+- [ ] `qs go net.DialTimeout` — Expected: `net.DialTimeout`. Test: Qualified network connection API.
+- [ ] `qs go url.Parse` — Expected: `net/url.Parse`. Test: Short package alias to canonical API.
+- [ ] `qs go http client timeout` — Expected: `net/http.Client.Timeout`. Test: Natural configuration task lookup.
+- [ ] `qs go http.NewRequestWithContext` — Expected: `net/http.NewRequestWithContext`. Test: Long qualified CamelCase constructor.
+- [ ] `qs go http.HandleFunc` — Expected: `net/http.HandleFunc`. Test: Common server handler registration API.
+- [ ] `qs go http middleware` — Expected: `net/http.Handler` middleware pattern. Test: Framework-style concept from natural wording.
+- [ ] `qs go httptest.NewServer` — Expected: `net/http/httptest.NewServer`. Test: Qualified test-server constructor.
+- [ ] `qs go json_marshal` — Expected: `encoding/json.Marshal`. Test: snake_case normalization to a Go API.
+- [ ] `qs go encoding/json.Unmarshal` — Expected: `encoding/json.Unmarshal`. Test: Slash-qualified package and exact symbol casing.
+- [ ] `qs go omit empty json field` — Expected: JSON struct tag option `omitempty`. Test: Natural serialization task-to-tag matching.
+- [ ] `qs go xml decoder` — Expected: `encoding/xml.Decoder`. Test: Natural package/type phrase retrieval.
+- [ ] `qs go base64.StdEncoding` — Expected: `encoding/base64.StdEncoding`. Test: Qualified exported variable lookup.
+- [ ] `qs go hex.DecodeString` — Expected: `encoding/hex.DecodeString`. Test: Package shorthand and CamelCase function.
+- [ ] `qs go sha256.Sum256` — Expected: `crypto/sha256.Sum256`. Test: Qualified cryptographic hash helper.
+- [ ] `qs go crypto/rand.Read` — Expected: `crypto/rand.Read`. Test: Slash-qualified secure-random API.
+- [ ] `qs go sql.DB.QueryContext` — Expected: `database/sql.DB.QueryContext`. Test: Method-qualified database API.
+- [ ] `qs go flag.String` — Expected: `flag.String`. Test: Exact command-line flag definition helper.
+- [ ] `qs go log/slog.Logger` — Expected: `log/slog.Logger`. Test: Slash-qualified structured-logging type.
+- [ ] `qs go testing.T.Run` — Expected: `testing.T.Run`. Test: Type-qualified subtest method.
+- [ ] `qs go table driven tests` — Expected: Table-driven testing pattern. Test: Common multiword Go testing idiom.
+- [ ] `qs go benchmark functions` — Expected: `testing.B` benchmark functions. Test: Plural natural query for performance tests.
+- [ ] `qs go runtime.GOMAXPROCS` — Expected: `runtime.GOMAXPROCS`. Test: Qualified all-caps identifier retrieval.

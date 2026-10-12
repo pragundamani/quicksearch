@@ -1,0 +1,221 @@
+# Held-out quicksearch regression checklist
+
+200 held-out queries for routing and retrieval regression tests. This set is separate from the six 100-query language checklists. Each item states the expected primary target and the behavior under test.
+
+## Paraphrases
+
+- [ ] `qs python pair adjacent iterator items` — Expected: itertools.pairwise(). Test: Natural paraphrase for adjacent-pair iteration.
+- [ ] `qs go find mime type from a filename extension` — Expected: mime.TypeByExtension. Test: Natural paraphrase for extension-based media-type lookup.
+- [ ] `qs rust keep only successful iterator values` — Expected: Iterator::map_while or filter_map. Test: Natural paraphrase for selective iterator output.
+- [ ] `qs cpp exchange a value and return the old one` — Expected: std::exchange. Test: Natural paraphrase for replace-and-return.
+- [ ] `qs c duplicate part of a string into bounded buffer` — Expected: strncpy. Test: Natural paraphrase for bounded string copying.
+- [ ] `qs haskell apply function to first tuple component` — Expected: Data.Bifunctor.first. Test: Natural paraphrase for one-sided tuple mapping.
+- [ ] `qs python find common path prefix by components` — Expected: os.path.commonpath(). Test: Task paraphrase for component-aware path comparison.
+- [ ] `qs go notify one waiting goroutine` — Expected: sync.Cond.Signal. Test: Task paraphrase for one-waiter notification.
+- [ ] `qs rust turn option into result with lazy error` — Expected: Option::ok_or_else. Test: Task paraphrase for lazy optional-value conversion.
+- [ ] `qs cpp test whether range begins with another range` — Expected: std::ranges::starts_with. Test: Task paraphrase for a C++23 range predicate.
+- [ ] `qs c report current stream file position` — Expected: ftell. Test: Task paraphrase for stream-offset lookup.
+- [ ] `qs haskell attach an index to every traversable value` — Expected: Data.Traversable.mapAccumL. Test: Intent paraphrase for stateful traversal.
+- [ ] `qs python execute cleanup when interpreter exits` — Expected: atexit.register(). Test: Task paraphrase for shutdown callbacks.
+- [ ] `qs go read exactly n bytes or fail` — Expected: io.ReadFull. Test: Task paraphrase for an exact-length read.
+- [ ] `qs rust replace matching slice prefix` — Expected: slice::strip_prefix. Test: Task paraphrase for prefix removal without allocation.
+- [ ] `qs cpp invoke callable only when invocable` — Expected: std::is_invocable and std::invoke. Test: Concept paraphrase for callable introspection.
+- [ ] `qs c clear error and eof indicators on stream` — Expected: clearerr. Test: Task paraphrase for resetting stream status.
+- [ ] `qs haskell combine maps and resolve duplicate keys` — Expected: Data.Map.unionWith. Test: Task paraphrase for keyed merge resolution.
+- [ ] `qs python wait for whichever future finishes first` — Expected: concurrent.futures.wait(FIRST_COMPLETED). Test: Task paraphrase for first-completion coordination.
+- [ ] `qs go write quoted go string literal` — Expected: strconv.Quote. Test: Task paraphrase for Go-syntax string quoting.
+- [ ] `qs rust split slice once on a predicate` — Expected: slice::split_once. Test: Task paraphrase for single predicate split.
+- [ ] `qs cpp convert enum to underlying integer type` — Expected: std::to_underlying. Test: Task paraphrase for enum representation conversion.
+- [ ] `qs c push one character back onto input stream` — Expected: ungetc. Test: Task paraphrase for stream pushback.
+- [ ] `qs haskell run action only when condition is true` — Expected: Control.Monad.when. Test: Task paraphrase for conditional monadic execution.
+- [ ] `qs python iterate over calendar month rows` — Expected: calendar.Calendar.monthdayscalendar(). Test: Natural paraphrase for month-grid generation.
+- [ ] `qs go return a reader limited to n bytes` — Expected: io.LimitReader. Test: Natural paraphrase for bounded stream exposure.
+- [ ] `qs rust get two mutable slice elements safely` — Expected: slice::get_many_mut. Test: Natural paraphrase for disjoint mutable access.
+- [ ] `qs cpp count consecutive equal groups in a range` — Expected: std::ranges::chunk_by_view. Test: Natural paraphrase for adjacent grouping.
+- [ ] `qs c transform string for locale collation` — Expected: strxfrm. Test: Intent paraphrase for locale-aware collation keys.
+- [ ] `qs haskell unfold a container from a seed` — Expected: Data.List.unfoldr. Test: Natural paraphrase for seed-driven list generation.
+- [ ] `qs python preserve function metadata in decorator` — Expected: functools.wraps(). Test: Task paraphrase for decorator metadata copying.
+- [ ] `qs go mirror bytes read from a reader into a writer` — Expected: io.TeeReader. Test: Task paraphrase for mirroring reads.
+- [ ] `qs rust create an iterator that yields once` — Expected: std::iter::once. Test: Task paraphrase for a singleton iterator.
+- [ ] `qs cpp construct object in optional storage in place` — Expected: std::optional::emplace. Test: Task paraphrase for in-place optional construction.
+
+## Negative contrasts
+
+- [ ] `qs c locate last character not first character` — Expected: strrchr, not strchr. Test: Contrast direction must select the reverse character search.
+- [ ] `qs haskell sequence effects and discard results not collect them` — Expected: mapM_, not mapM. Test: Contrast must rank the result-discarding traversal.
+- [ ] `qs python shell style splitting not regular expression splitting` — Expected: shlex.split(), not re.split(). Test: Contrast must route to shell lexical parsing.
+- [ ] `qs go compare strings case insensitively not byte equality` — Expected: strings.EqualFold, not bytes.Equal. Test: Contrast must prefer Unicode case folding.
+- [ ] `qs rust remove suffix not prefix from string slice` — Expected: str::strip_suffix, not strip_prefix. Test: Contrast must preserve suffix direction.
+- [ ] `qs cpp copy backward not ordinary copy` — Expected: std::copy_backward, not std::copy. Test: Contrast must select overlap-oriented reverse copying.
+- [ ] `qs c write one character not a formatted string` — Expected: fputc, not fprintf. Test: Contrast must select character stream output.
+- [ ] `qs haskell left fold with monadic effects not pure fold` — Expected: Control.Monad.foldM, not foldl. Test: Contrast must preserve the effectful fold.
+- [ ] `qs python decimal arithmetic not binary float` — Expected: decimal.Decimal, not float. Test: Contrast must prefer decimal-number documentation.
+- [ ] `qs go split after separator not before it` — Expected: strings.SplitAfter, not strings.Split. Test: Contrast must retain separators in pieces.
+- [ ] `qs rust weak reference not owning rc clone` — Expected: std::rc::Weak, not Rc. Test: Contrast must rank the non-owning reference type.
+- [ ] `qs cpp shared lock not exclusive mutex lock` — Expected: std::shared_lock, not std::unique_lock. Test: Contrast must select reader-side locking.
+- [ ] `qs c rename a file not remove it` — Expected: rename, not remove. Test: Contrast must select the filesystem rename API.
+- [ ] `qs haskell catch only io errors not every exception` — Expected: System.IO.Error.catchIOError, not Control.Exception.catch. Test: Contrast must prefer the narrow I/O handler.
+- [ ] `qs python compare sequences in constant time not normal equality` — Expected: hmac.compare_digest(), not ==. Test: Contrast must select timing-attack-resistant comparison.
+- [ ] `qs go lexical path cleanup not filesystem symlink resolution` — Expected: filepath.Clean, not EvalSymlinks. Test: Contrast must keep lexical and filesystem operations separate.
+- [ ] `qs rust checked addition not wrapping addition` — Expected: checked_add, not wrapping_add. Test: Contrast must rank overflow-reporting arithmetic.
+- [ ] `qs cpp midpoint without overflow not simple average` — Expected: std::midpoint, not (a+b)/2. Test: Contrast must select the overflow-safe numeric helper.
+- [ ] `qs c find first matching span not substring` — Expected: strpbrk, not strstr. Test: Contrast must distinguish a character set from a substring.
+- [ ] `qs haskell strict bytestring not lazy bytestring` — Expected: Data.ByteString, not Data.ByteString.Lazy. Test: Contrast must select strict byte storage.
+- [ ] `qs python cryptographic random integer not random.randrange` — Expected: secrets.randbelow(), not random.randrange(). Test: Contrast must select the security-oriented generator.
+- [ ] `qs go escape html text not url query data` — Expected: html.EscapeString, not url.QueryEscape. Test: Contrast must distinguish output contexts.
+- [ ] `qs rust saturating multiplication not checked multiplication` — Expected: saturating_mul, not checked_mul. Test: Contrast must select clamping overflow behavior.
+- [ ] `qs cpp terminate handler not unexpected exception handler` — Expected: std::set_terminate, not exception matching. Test: Contrast must target abnormal-termination configuration.
+- [ ] `qs c convert wide string to multibyte not reverse direction` — Expected: wcsrtombs, not mbsrtowcs. Test: Contrast must preserve conversion direction.
+- [ ] `qs haskell deep evaluation not weak head normal form` — Expected: Control.DeepSeq.force, not seq. Test: Contrast must select normal-form evaluation.
+- [ ] `qs python open compressed gzip file not zip archive` — Expected: gzip.open(), not zipfile.ZipFile. Test: Contrast must distinguish compression container formats.
+- [ ] `qs go stable slice sort not unstable sort` — Expected: sort.SliceStable, not sort.Slice. Test: Contrast must retain equal-element order.
+- [ ] `qs rust abort process not unwind panic` — Expected: std::process::abort, not panic!. Test: Contrast must select immediate process termination.
+- [ ] `qs cpp inclusive scan not exclusive scan` — Expected: std::inclusive_scan, not std::exclusive_scan. Test: Contrast must preserve whether the current element participates.
+- [ ] `qs c read one wide character not one byte character` — Expected: fgetwc, not fgetc. Test: Contrast must choose wide-character stream input.
+- [ ] `qs haskell text builder not string concatenation` — Expected: Data.Text.Lazy.Builder, not (++). Test: Contrast must rank efficient text construction.
+- [ ] `qs python parse email address not url address` — Expected: email.utils.parseaddr(), not urllib.parse. Test: Contrast must choose mailbox syntax.
+- [ ] `qs go cryptographic subtle constant time compare not bytes compare` — Expected: subtle.ConstantTimeCompare, not bytes.Equal. Test: Contrast must select timing-safe byte comparison.
+
+## Surplus-token adversarial queries
+
+- [ ] `qs rust docs please exact api lookup today std::mem::take examples stable` — Expected: std::mem::take. Test: Surplus words must not hide the qualified API.
+- [ ] `qs cpp modern standard library reference quick answer std::ranges::iota_view usage` — Expected: std::ranges::iota_view. Test: Surplus reference words must not dilute the symbol.
+- [ ] `qs c standard library portable example urgently get environment variable getenv` — Expected: getenv. Test: Surplus task words must preserve the API intent.
+- [ ] `qs haskell hoogle package docs simple example now Data.Set.fromList` — Expected: Data.Set.fromList. Test: Surplus navigation words must not outrank the symbol.
+- [ ] `qs python official docs latest version quick example contextlib.ExitStack` — Expected: contextlib.ExitStack. Test: Surplus version words must preserve exact lookup.
+- [ ] `qs go package documentation current release example net.IP.IsPrivate` — Expected: net.IP.IsPrivate. Test: Surplus metadata words must preserve the method.
+- [ ] `qs rust beginner tutorial standard docs show me slice rotate_left method now` — Expected: slice::rotate_left. Test: Surplus audience words must not shift the target.
+- [ ] `qs cpp reference safe portable c++23 example std::byteswap integer please` — Expected: std::byteswap. Test: Surplus standards words must retain exact API ranking.
+- [ ] `qs c reference manual safe code sample portable convert time difftime seconds` — Expected: difftime. Test: Surplus safety words must retain time-difference intent.
+- [ ] `qs haskell latest base library documentation beginner example Data.Char.generalCategory` — Expected: Data.Char.generalCategory. Test: Surplus package words must preserve exact function lookup.
+- [ ] `qs python docs tutorial best practice code sample pathlib.PurePath.match` — Expected: PurePath.match(). Test: Surplus advice words must not obscure the qualified method.
+- [ ] `qs go official reference beginner quick code example cmp.Or zero values` — Expected: cmp.Or. Test: Surplus qualifiers must retain the modern package API.
+- [ ] `qs rust standard library fast safe idiomatic example Vec::spare_capacity_mut docs` — Expected: Vec::spare_capacity_mut. Test: Surplus adjectives must not hide the exact method.
+- [ ] `qs cpp standard official documentation tutorial std::ranges::fold_left sample code` — Expected: std::ranges::fold_left. Test: Surplus documentation terms must preserve the algorithm.
+- [ ] `qs c language library specification easy tutorial sample code div integer quotient remainder` — Expected: div. Test: Surplus teaching words must preserve the result-struct API.
+- [ ] `qs haskell package docs latest tutorial quick answer Data.Sequence.adjust examples` — Expected: Data.Sequence.adjust. Test: Surplus navigation words must retain the qualified function.
+- [ ] `qs python standard library official guide simple example graphlib.TopologicalSorter` — Expected: graphlib.TopologicalSorter. Test: Surplus source words must preserve the class lookup.
+- [ ] `qs go current stable standard package docs quick example math.Nextafter` — Expected: math.Nextafter. Test: Surplus release words must not displace the function.
+- [ ] `qs rust official stable docs easy example std::path::Path::ancestors iterator` — Expected: Path::ancestors. Test: Surplus qualifiers must preserve the path iterator.
+- [ ] `qs cpp latest standard reference concise example std::launder object pointer` — Expected: std::launder. Test: Surplus context must retain the low-level utility.
+- [ ] `qs c standard portable reference example localeconv monetary formatting fields` — Expected: localeconv. Test: Surplus modifiers must preserve locale structure lookup.
+- [ ] `qs haskell current base hoogle quick tutorial Control.Arrow.loop examples` — Expected: Control.Arrow.loop. Test: Surplus ecosystem words must preserve exact routing.
+- [ ] `qs python official stdlib current docs tiny example weakref.finalize object cleanup` — Expected: weakref.finalize. Test: Surplus words must retain finalizer lookup.
+- [ ] `qs go standard package reference practical sample testing.F.Cleanup fuzz docs` — Expected: testing.F.Cleanup. Test: Surplus testing terms must preserve the method.
+- [ ] `qs rust docs quick beginner correct idiomatic std::array::from_fn example` — Expected: std::array::from_fn. Test: Surplus quality words must preserve the constructor.
+- [ ] `qs cpp portable modern reference sample std::ranges::borrowed_range concept details` — Expected: std::ranges::borrowed_range. Test: Surplus standards words must preserve the concept.
+- [ ] `qs c official standard library guide sample code nearbyint rounding mode` — Expected: nearbyint. Test: Surplus guide words must preserve rounding API lookup.
+- [ ] `qs haskell hoogle official base docs concise example Data.Ord.clamp` — Expected: Data.Ord.clamp. Test: Surplus source terms must preserve the qualified API.
+- [ ] `qs python latest official manual quick practical example socket.socketpair` — Expected: socket.socketpair(). Test: Surplus manual words must preserve the networking API.
+- [ ] `qs go docs current version best practice example log.Logger.Writer method` — Expected: log.Logger.Writer. Test: Surplus advice words must retain the exact method.
+- [ ] `qs rust safe fast standard library tutorial std::ffi::OsStr::as_encoded_bytes` — Expected: OsStr::as_encoded_bytes. Test: Surplus adjectives must not hide the method.
+- [ ] `qs cpp official c++ reference beginner sample std::unreachable_sentinel_t iterator` — Expected: std::unreachable_sentinel_t. Test: Surplus learning terms must retain the type.
+- [ ] `qs c reference standard code example quick answer feclearexcept floating environment` — Expected: feclearexcept. Test: Surplus answer terms must preserve the floating-point API.
+
+## Unseen APIs
+
+- [ ] `qs haskell Data.IntMap.lookupGE` — Expected: Data.IntMap.lookupGE. Test: Held-out direct lookup of an unseen ordered-key API.
+- [ ] `qs python mmap.mmap.madvise` — Expected: mmap.mmap.madvise(). Test: Held-out direct lookup of an unseen memory-map method.
+- [ ] `qs go net/netip.ParsePrefix` — Expected: net/netip.ParsePrefix. Test: Held-out direct lookup of an unseen network-prefix API.
+- [ ] `qs rust std::sync::LazyLock::force_mut` — Expected: LazyLock::force_mut. Test: Held-out direct lookup of an unseen lazy-cell method.
+- [ ] `qs cpp std::ranges::cartesian_product_view` — Expected: std::ranges::cartesian_product_view. Test: Held-out direct lookup of an unseen ranges type.
+- [ ] `qs c fgetpos` — Expected: fgetpos. Test: Held-out direct lookup of an unseen stream-position API.
+- [ ] `qs haskell Data.Array.accumArray` — Expected: Data.Array.accumArray. Test: Held-out direct lookup of an unseen array constructor.
+- [ ] `qs python os.posix_spawnp` — Expected: os.posix_spawnp(). Test: Held-out direct lookup of an unseen process API.
+- [ ] `qs go slices.Chunk` — Expected: slices.Chunk. Test: Held-out direct lookup of an unseen iterator helper.
+- [ ] `qs rust std::io::BorrowedBuf` — Expected: std::io::BorrowedBuf. Test: Held-out direct lookup of an unseen buffered-I/O type.
+- [ ] `qs cpp std::flat_map` — Expected: std::flat_map. Test: Held-out direct lookup of an unseen C++23 container.
+- [ ] `qs c wcscoll` — Expected: wcscoll. Test: Held-out direct lookup of an unseen locale-aware wide-string API.
+- [ ] `qs haskell Data.Graph.stronglyConnCompR` — Expected: Data.Graph.stronglyConnCompR. Test: Held-out direct lookup of an unseen graph API.
+- [ ] `qs python ssl.SSLContext.num_tickets` — Expected: SSLContext.num_tickets. Test: Held-out direct lookup of an unseen TLS property.
+- [ ] `qs go reflect.TypeFor` — Expected: reflect.TypeFor. Test: Held-out direct lookup of an unseen reflection API.
+- [ ] `qs rust std::task::Waker::data` — Expected: Waker::data. Test: Held-out direct lookup of an unseen task API.
+- [ ] `qs cpp std::ranges::fold_left_with_iter` — Expected: std::ranges::fold_left_with_iter. Test: Held-out direct lookup of an unseen fold result API.
+- [ ] `qs c quick_exit` — Expected: quick_exit. Test: Held-out direct lookup of an unseen termination API.
+- [ ] `qs haskell Text.ParserCombinators.ReadP.gather` — Expected: ReadP.gather. Test: Held-out direct lookup of an unseen parser API.
+- [ ] `qs python tarfile.data_filter` — Expected: tarfile.data_filter. Test: Held-out direct lookup of an unseen archive-safety filter.
+- [ ] `qs go archive/zip.Writer.Copy` — Expected: archive/zip.Writer.Copy. Test: Held-out direct lookup of an unseen archive method.
+- [ ] `qs rust std::thread::scope` — Expected: std::thread::scope. Test: Held-out direct lookup of an unseen scoped-thread API.
+- [ ] `qs cpp std::expected::transform_error` — Expected: std::expected::transform_error. Test: Held-out direct lookup of an unseen error transformation.
+- [ ] `qs c thrd_sleep` — Expected: thrd_sleep. Test: Held-out direct lookup of an unseen thread timing API.
+- [ ] `qs haskell Data.Typeable.eqT` — Expected: Data.Typeable.eqT. Test: Held-out direct lookup of an unseen type-equality API.
+- [ ] `qs python sqlite3.Connection.blobopen` — Expected: Connection.blobopen(). Test: Held-out direct lookup of an unseen database blob API.
+- [ ] `qs go crypto/ecdh.X25519` — Expected: crypto/ecdh.X25519. Test: Held-out direct lookup of an unseen cryptography API.
+- [ ] `qs rust std::net::Ipv6Addr::to_ipv4_mapped` — Expected: Ipv6Addr::to_ipv4_mapped. Test: Held-out direct lookup of an unseen address conversion.
+- [ ] `qs cpp std::generator` — Expected: std::generator. Test: Held-out direct lookup of an unseen coroutine generator.
+- [ ] `qs c ckd_add` — Expected: ckd_add. Test: Held-out direct lookup of an unseen C23 checked-arithmetic macro.
+- [ ] `qs haskell Data.Foldable.foldMap1` — Expected: Data.Foldable.foldMap1. Test: Held-out direct lookup of an unseen nonempty fold API.
+- [ ] `qs python asyncio.Barrier` — Expected: asyncio.Barrier. Test: Held-out direct lookup of an unseen async synchronization type.
+- [ ] `qs go math/big.Float.Scan` — Expected: math/big.Float.Scan. Test: Held-out direct lookup of an unseen arbitrary-precision method.
+
+## Source-routing cases
+
+- [ ] `qs pypi msgspec` — Expected: PyPI package page for msgspec. Test: Explicit registry prefix must route to PyPI.
+- [ ] `qs go-mod golang.org/x/sync` — Expected: Go package registry result for golang.org/x/sync. Test: Explicit module prefix must route to the Go package registry.
+- [ ] `qs crate camino` — Expected: crates.io page for camino. Test: Explicit crate prefix must route to crates.io.
+- [ ] `qs man cmake` — Expected: Local cmake manual page. Test: Manual prefix must override language-like technical terms.
+- [ ] `qs man 3 getaddrinfo` — Expected: Section 3 getaddrinfo manual page. Test: Manual source and section must remain intact.
+- [ ] `qs web Hackage attoparsec` — Expected: DuckDuckGo results for Hackage attoparsec. Test: web must force general search rather than Hoogle.
+- [ ] `qs pypi platformdirs` — Expected: PyPI package page for platformdirs. Test: Registry routing for a Python package.
+- [ ] `qs gh charmbracelet/lipgloss` — Expected: GitHub repository charmbracelet/lipgloss. Test: GitHub prefix must route to repository search.
+- [ ] `qs docs smallvec` — Expected: docs.rs documentation for smallvec. Test: docs prefix must route to docs.rs.
+- [ ] `qs so c++ object slicing` — Expected: Stack Overflow search for C++ object slicing. Test: Stack Overflow prefix must override C++ docs routing.
+- [ ] `qs cheat awk field separator` — Expected: cheat.sh result for awk field separator. Test: Cheat source prefix must route to cheat.sh.
+- [ ] `qs gh haskell-unordered-containers` — Expected: GitHub repositories for haskell-unordered-containers. Test: GitHub prefix must override Haskell Hoogle.
+- [ ] `qs mdn python webassembly api` — Expected: MDN search for python webassembly api. Test: MDN prefix must win despite a language token.
+- [ ] `qs web go vulnerability database` — Expected: DuckDuckGo results for Go vulnerability database. Test: web must suppress Go documentation routing.
+- [ ] `qs docs core::cell::OnceCell` — Expected: Official Rust core docs for core::cell::OnceCell. Test: docs must special-case core to official Rust docs.
+- [ ] `qs wiki C++ name mangling` — Expected: Wikipedia result for C++ name mangling. Test: Wiki prefix must override language routing.
+- [ ] `qs rfc 8949` — Expected: RFC 8949. Test: Numeric RFC lookup must select the RFC source.
+- [ ] `qs haskell System.Mem.performGC` — Expected: Hoogle results for System.Mem.performGC. Test: Haskell prefix must route to Hoogle.
+- [ ] `qs gh python-trio/trio` — Expected: GitHub repository python-trio/trio. Test: GitHub route must preserve an owner/repository path.
+- [ ] `qs man gofmt` — Expected: Local gofmt manual page. Test: Manual prefix must override Go language routing.
+- [ ] `qs crate zerocopy` — Expected: crates.io page for zerocopy. Test: Crate source must not fall through to Rust std docs.
+- [ ] `qs web cppreference execution control library` — Expected: DuckDuckGo results for cppreference execution control library. Test: Forced web route must bypass C++ doc search.
+- [ ] `qs so c strict aliasing effective type` — Expected: Stack Overflow search for C strict aliasing effective type. Test: Stack Overflow source must override C documentation.
+- [ ] `qs web haskell backpack signatures` — Expected: DuckDuckGo results for Haskell Backpack signatures. Test: Forced web route must bypass Hoogle.
+- [ ] `qs pip orjson` — Expected: PyPI package page for orjson. Test: pip alias must route to the Python registry.
+- [ ] `qs gh golang/tools` — Expected: GitHub repository golang/tools. Test: GitHub route must preserve a language-like owner name.
+- [ ] `qs std std::hint::black_box` — Expected: Official Rust standard-library page for std::hint::black_box. Test: std prefix must route to official Rust docs.
+- [ ] `qs man clang-format` — Expected: Local clang-format manual page. Test: Manual route must handle a C++ tool name.
+- [ ] `qs wiki C standard library` — Expected: Wikipedia result for C standard library. Test: Wiki route must override the C language token.
+- [ ] `qs so haskell quantified constraints` — Expected: Stack Overflow search for Haskell quantified constraints. Test: Stack Overflow prefix must override Hoogle.
+- [ ] `qs web python free threading status` — Expected: DuckDuckGo results for Python free threading status. Test: web must route a Python topic to general search.
+- [ ] `qs rfc QUIC transport` — Expected: RFC title search for QUIC transport. Test: RFC prefix must route a title phrase to RFC search.
+- [ ] `qs docs alloc::alloc::Layout` — Expected: Official Rust alloc docs for alloc::alloc::Layout. Test: docs must special-case alloc to official Rust docs.
+
+## Non-language routing controls
+
+- [ ] `qs 9780143127741` — Expected: Product lookup for barcode 9780143127741. Test: A 13-digit barcode must use product lookup, not language search.
+- [ ] `qs 1912` — Expected: DuckDuckGo web search for 1912. Test: A four-digit number must stay a web search.
+- [ ] `qs item 012345678905` — Expected: Product lookup for barcode 012345678905. Test: Explicit item source must route to product lookup.
+- [ ] `qs stock ASML` — Expected: Stock lookup for ASML. Test: Stock prefix must route to market data.
+- [ ] `qs cve CVE-2024-3094` — Expected: NVD advisory for CVE-2024-3094. Test: CVE prefix must route to vulnerability data.
+- [ ] `qs nvd libwebp heap overflow` — Expected: NVD advisory search for libwebp heap overflow. Test: NVD alias must route descriptive text to advisories.
+- [ ] `qs npm fast-glob` — Expected: npm registry page for fast-glob. Test: npm prefix must route to the JavaScript registry.
+- [ ] `qs gem faraday` — Expected: RubyGems page for faraday. Test: gem prefix must route to RubyGems.
+- [ ] `qs hex bandit` — Expected: Hex package page for bandit. Test: hex prefix must route to the Hex registry.
+- [ ] `qs maven org.flywaydb flyway-core` — Expected: Maven registry result for org.flywaydb:flyway-core. Test: maven prefix must route coordinates to Maven.
+- [ ] `qs nuget Polly` — Expected: NuGet page for Polly. Test: nuget prefix must route to NuGet.
+- [ ] `qs wiki Ada Lovelace` — Expected: Wikipedia page for Ada Lovelace. Test: wiki prefix must route to Wikipedia.
+- [ ] `qs mdn AbortSignal.any` — Expected: MDN page for AbortSignal.any. Test: mdn prefix must route to MDN.
+- [ ] `qs so git rerere` — Expected: Stack Overflow search for git rerere. Test: so prefix must route to Stack Overflow.
+- [ ] `qs gh sharkdp/bat` — Expected: GitHub repository sharkdp/bat. Test: gh prefix must route to GitHub repositories.
+- [ ] `qs debian unattended upgrades` — Expected: Debian Wiki result for unattended upgrades. Test: Distribution prefix must route to the Debian wiki.
+- [ ] `qs ubuntu netplan policy routing` — Expected: Ubuntu Wiki result for netplan policy routing. Test: Distribution prefix must route to the Ubuntu wiki.
+- [ ] `qs fedora toolbox` — Expected: Fedora Wiki result for toolbox. Test: Distribution prefix must route to the Fedora wiki.
+- [ ] `qs gentoo eselect repository` — Expected: Gentoo Wiki result for eselect repository. Test: Distribution prefix must route to the Gentoo wiki.
+- [ ] `qs arch mkinitcpio unified kernel image` — Expected: ArchWiki result for unified kernel image. Test: Distribution prefix must route to ArchWiki.
+- [ ] `qs man 5 resolv.conf` — Expected: Local resolv.conf manual section 5. Test: man plus a section must route to local manuals.
+- [ ] `qs cargo metadata` — Expected: cargo-metadata manual page. Test: A known command plus subcommand must route to its manual.
+- [ ] `qs podman kube play` — Expected: podman-kube-play manual page. Test: A command and nested words must route to the matching manual.
+- [ ] `qs dnf ripgrep` — Expected: DNF package information for ripgrep. Test: Package-manager route must show package information.
+- [ ] `qs apt policy` — Expected: apt-policy manual page. Test: A package-manager subcommand must route to its manual.
+- [ ] `qs brew leaves` — Expected: brew-leaves manual page. Test: A package-manager subcommand must route to its manual.
+- [ ] `qs flatpak remotes` — Expected: flatpak-remotes manual page. Test: A Flatpak subcommand must route to its manual.
+- [ ] `qs snap connections` — Expected: snap-connections manual page. Test: A snap subcommand must route to its manual.
+- [ ] `qs web rust crate serde` — Expected: DuckDuckGo results for rust crate serde. Test: web must prevent a later language or registry token from routing.
+- [ ] `qs !aur paru-bin` — Expected: DuckDuckGo bang result for !aur paru-bin. Test: An unknown built-in bang must pass through to DuckDuckGo.
+- [ ] `qs cheat tar extract strip components` — Expected: cheat.sh result for tar extraction. Test: cheat prefix must route to cheat.sh.
+- [ ] `qs rfc structured field values HTTP` — Expected: RFC title search for Structured Field Values for HTTP. Test: Text after rfc must use RFC title search.
+- [ ] `qs price of palladium per ounce` — Expected: DuckDuckGo web search for palladium price. Test: An unprefixed ordinary query must use default web search.

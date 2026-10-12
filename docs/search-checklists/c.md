@@ -1,0 +1,104 @@
+# C quicksearch checklist
+
+100 representative search-quality checks for C language and standard-library documentation.
+
+- [ ] `qs c arrays` — Expected: array types, declaration, and subscripting. Test: Checks plural-to-core-concept matching.
+- [ ] `qs c pointers` — Expected: pointer types and indirection. Test: Checks plural morphology for a foundational concept.
+- [ ] `qs c pointer arithmetic` — Expected: pointer arithmetic operators. Test: Checks a common two-word language concept.
+- [ ] `qs c structures` — Expected: `struct` types. Test: Checks plural-to-keyword normalization.
+- [ ] `qs c unions` — Expected: `union` types. Test: Checks plural morphology for an aggregate type.
+- [ ] `qs c enumerations` — Expected: `enum` types and enumerators. Test: Checks the full plural term rather than the keyword.
+- [ ] `qs c bit fields` — Expected: structure bit-fields. Test: Checks a spaced morphological variant.
+- [ ] `qs c function pointers` — Expected: pointer-to-function declarations and calls. Test: Checks a difficult multiword declarator concept.
+- [ ] `qs c variadic functions` — Expected: variadic functions and `<stdarg.h>`. Test: Checks a multiword function-category query.
+- [ ] `qs c storage duration` — Expected: automatic, static, thread, and allocated storage duration. Test: Checks precise object-lifetime terminology.
+- [ ] `qs c language linkage` — Expected: internal, external, and no linkage. Test: Checks a conceptual phrase rather than an API.
+- [ ] `qs c type qualifiers` — Expected: `const`, `restrict`, `volatile`, and `_Atomic` qualifiers. Test: Checks a plural category query.
+- [ ] `qs c restrict` — Expected: the `restrict` type qualifier. Test: Checks an exact C-specific keyword.
+- [ ] `qs c integer promotions` — Expected: integer promotion rules. Test: Checks plural standards terminology.
+- [ ] `qs c usual arithmetic conversions` — Expected: usual arithmetic conversions. Test: Checks a long canonical concept name.
+- [ ] `qs c operator precedence` — Expected: C operator precedence and associativity. Test: Checks a common reference-table lookup.
+- [ ] `qs c compound literals` — Expected: compound literal expressions. Test: Checks plural morphology for a C feature.
+- [ ] `qs c designated initializers` — Expected: designated initialization of arrays and structures. Test: Checks a plural multiword feature.
+- [ ] `qs c generic selection` — Expected: `_Generic` generic selection. Test: Checks natural terminology for symbolic syntax.
+- [ ] `qs c static assertions` — Expected: `static_assert` / `_Static_assert`. Test: Checks plural words against keyword spellings.
+- [ ] `qs c flexible array member` — Expected: flexible array members. Test: Checks singular multiword feature matching.
+- [ ] `qs c variable length arrays` — Expected: variable-length array types. Test: Checks a common expanded phrase and plural.
+- [ ] `qs c alignment` — Expected: object alignment, `alignof`, and `alignas`. Test: Checks a broad language concept.
+- [ ] `qs c object lifetime` — Expected: C object lifetime rules. Test: Checks semantic terminology distinct from storage duration.
+- [ ] `qs c undefined behavior` — Expected: undefined behavior in the C abstract machine. Test: Checks a high-value conceptual query.
+- [ ] `qs c sequence points` — Expected: sequencing and sequence points. Test: Checks older plural terminology against current docs.
+- [ ] `qs c command line arguments` — Expected: `main` parameters `argc` and `argv`. Test: Checks a common natural-language task concept.
+- [ ] `qs c preprocessing directives` — Expected: C preprocessor directives. Test: Checks plural category matching.
+- [ ] `qs c conditional compilation` — Expected: `#if`, `#ifdef`, and related directives. Test: Checks a common build-time task phrase.
+- [ ] `qs c include guards` — Expected: header include-guard pattern. Test: Checks a conventional task not represented by one API.
+- [ ] `qs c variadic macros` — Expected: variadic macro definitions and `__VA_ARGS__`. Test: Checks preprocessor feature retrieval.
+- [ ] `qs c escape sequences` — Expected: character and string escape sequences. Test: Checks plural lexical terminology.
+- [ ] `qs c string literals` — Expected: string literal syntax and types. Test: Checks a common plural language construct.
+- [ ] `qs c implicit conversions` — Expected: implicit conversion rules. Test: Checks plural semantic terminology.
+- [ ] `qs c compound assignment operators` — Expected: compound assignment expressions. Test: Checks a long operator-category phrase.
+- [ ] `qs c printf` — Expected: `printf` formatted standard output. Test: Checks direct retrieval of a central I/O function.
+- [ ] `qs c snprintf` — Expected: `snprintf` bounded formatted string output. Test: Checks an exact safety-oriented API identifier.
+- [ ] `qs c scanf` — Expected: `scanf` formatted standard input. Test: Checks direct retrieval among formatted I/O functions.
+- [ ] `qs c fopen` — Expected: `fopen` file-stream opening. Test: Checks a core file I/O identifier.
+- [ ] `qs c fclose` — Expected: `fclose` file-stream closing. Test: Checks exact retrieval of a stream lifecycle API.
+- [ ] `qs c fgets` — Expected: `fgets` line or bounded string input. Test: Checks an exact API often used for safe input.
+- [ ] `qs c fread` — Expected: `fread` binary stream input. Test: Checks distinction from formatted and line input.
+- [ ] `qs c fwrite` — Expected: `fwrite` binary stream output. Test: Checks the matching output API without natural phrasing.
+- [ ] `qs c fseek` — Expected: `fseek` stream positioning. Test: Checks a common random-access file API.
+- [ ] `qs c perror` — Expected: `perror` error-message output. Test: Checks a short exact identifier with error semantics.
+- [ ] `qs c malloc` — Expected: `malloc` dynamic allocation. Test: Checks a foundational allocation API.
+- [ ] `qs c calloc` — Expected: `calloc` zero-initialized allocation. Test: Checks distinction among allocation functions.
+- [ ] `qs c realloc` — Expected: `realloc` resizing allocated storage. Test: Checks exact retrieval of a subtle memory API.
+- [ ] `qs c free` — Expected: `free` deallocation. Test: Checks a common word used as an exact API name.
+- [ ] `qs c memcpy` — Expected: `memcpy` non-overlapping byte copy. Test: Checks a snake-like compact memory identifier.
+- [ ] `qs c memmove` — Expected: `memmove` overlap-safe byte copy. Test: Checks distinction from `memcpy`.
+- [ ] `qs c memset` — Expected: `memset` byte filling. Test: Checks exact memory-operation retrieval.
+- [ ] `qs c memcmp` — Expected: `memcmp` byte-sequence comparison. Test: Checks an exact memory comparison API.
+- [ ] `qs c strlen` — Expected: `strlen` string length. Test: Checks a central compact string API.
+- [ ] `qs c strcmp` — Expected: `strcmp` lexicographic string comparison. Test: Checks exact retrieval among string functions.
+- [ ] `qs c strchr` — Expected: `strchr` character search in a string. Test: Checks a terse identifier for a common task.
+- [ ] `qs c strstr` — Expected: `strstr` substring search. Test: Checks exact retrieval despite repetitive spelling.
+- [ ] `qs c strtok` — Expected: `strtok` string tokenization. Test: Checks a stateful string API lookup.
+- [ ] `qs c qsort` — Expected: `qsort` generic array sorting. Test: Checks an algorithm API that uses a callback.
+- [ ] `qs c bsearch` — Expected: `bsearch` generic binary search. Test: Checks an algorithm identifier and comparator usage.
+- [ ] `qs c strtol` — Expected: `strtol` checked string-to-integer conversion. Test: Checks a preferred parsing API.
+- [ ] `qs c strtod` — Expected: `strtod` string-to-floating conversion. Test: Checks a related but distinct numeric parser.
+- [ ] `qs c assert` — Expected: `assert` diagnostic macro. Test: Checks a macro whose name resembles a keyword.
+- [ ] `qs c setjmp` — Expected: `setjmp` nonlocal jump setup. Test: Checks an unusual control-flow API.
+- [ ] `qs c signal` — Expected: `signal` signal-handler installation. Test: Checks a common word mapped to a library function.
+- [ ] `qs c strftime` — Expected: `strftime` formatted calendar time. Test: Checks a compact API with formatting semantics.
+- [ ] `qs c timespec_get` — Expected: `timespec_get` wall-clock time acquisition. Test: Checks a standard snake_case identifier.
+- [ ] `qs c rand` — Expected: `rand` pseudo-random number generation. Test: Checks a common exact API name.
+- [ ] `qs c sqrt` — Expected: `sqrt` square-root function. Test: Checks a canonical mathematical API.
+- [ ] `qs c isnan` — Expected: `isnan` floating-point classification macro. Test: Checks exact lookup of a type-generic math macro.
+- [ ] `qs c isalpha` — Expected: `isalpha` character classification. Test: Checks a common `<ctype.h>` function.
+- [ ] `qs c toupper` — Expected: `toupper` character case conversion. Test: Checks a direct character-transformation API.
+- [ ] `qs c setlocale` — Expected: `setlocale` locale configuration. Test: Checks an exact internationalization API.
+- [ ] `qs c mbrtowc` — Expected: `mbrtowc` multibyte-to-wide conversion. Test: Checks a dense identifier from wide-character support.
+- [ ] `qs c thrd_create` — Expected: `thrd_create` C thread creation. Test: Checks a snake_case concurrency API.
+- [ ] `qs c mtx_lock` — Expected: `mtx_lock` mutex locking. Test: Checks another short snake_case threads API.
+- [ ] `qs c cnd_wait` — Expected: `cnd_wait` condition-variable waiting. Test: Checks abbreviation-heavy concurrency naming.
+- [ ] `qs c call_once` — Expected: `call_once` one-time initialization. Test: Checks a multiword snake_case API.
+- [ ] `qs c atomic_fetch_add` — Expected: `atomic_fetch_add` atomic read-modify-write. Test: Checks a long snake_case atomic API.
+- [ ] `qs c atomic_compare_exchange_strong` — Expected: strong atomic compare-and-exchange. Test: Checks a very long exact identifier.
+- [ ] `qs c memory_order_acquire` — Expected: acquire atomic memory ordering. Test: Checks a symbolic snake_case enum constant.
+- [ ] `qs c size_t` — Expected: `size_t` unsigned size type. Test: Checks a ubiquitous typedef with an underscore.
+- [ ] `qs c ptrdiff_t` — Expected: `ptrdiff_t` pointer-difference type. Test: Checks another standard underscore typedef.
+- [ ] `qs c va_list` — Expected: `va_list` variadic-argument state type. Test: Checks a standard typedef tied to variadic calls.
+- [ ] `qs c struct tm` — Expected: calendar components type `struct tm`. Test: Checks a tagged identifier containing whitespace.
+- [ ] `qs c FILE` — Expected: `FILE` stream object type. Test: Checks an uppercase standard typedef.
+- [ ] `qs c NULL` — Expected: null pointer macro `NULL`. Test: Checks an uppercase macro with broad usage.
+- [ ] `qs c errno` — Expected: `errno` error indicator and error macros. Test: Checks a global-style macro identifier.
+- [ ] `qs c stdatomic.h` — Expected: the `<stdatomic.h>` atomic operations header. Test: Checks a dotted header-name query.
+- [ ] `qs c complex numbers` — Expected: C complex arithmetic and `<complex.h>`. Test: Checks plural natural terminology for a library facility.
+- [ ] `qs c read a file line by line` — Expected: line input with `fgets` and stream iteration. Test: Checks intent-based file-reading search.
+- [ ] `qs c copy overlapping memory` — Expected: overlap-safe copying with `memmove`. Test: Checks natural task mapping to the correct memory API.
+- [ ] `qs c allocate zero initialized array` — Expected: zeroed allocation with `calloc`. Test: Checks task language against a non-obvious function name.
+- [ ] `qs c parse integer from string` — Expected: numeric parsing with `strtol`. Test: Checks natural task mapping to a robust parser.
+- [ ] `qs c sort array with comparator` — Expected: generic sorting with `qsort`. Test: Checks algorithm intent plus callback terminology.
+- [ ] `qs c get current calendar time` — Expected: `time` and calendar-time conversion. Test: Checks a multi-API task phrase.
+- [ ] `qs c format date and time` — Expected: time formatting with `strftime`. Test: Checks natural wording against a compact API name.
+- [ ] `qs c remove a file` — Expected: `remove` file deletion. Test: Checks verb phrase mapping to a common-word API.
+- [ ] `qs c create a temporary file` — Expected: temporary file creation with `tmpfile`. Test: Checks intent-based lookup for a file API.
+- [ ] `qs c handle end of file` — Expected: EOF indication, `feof`, and stream read results. Test: Checks a common task involving a macro and function.

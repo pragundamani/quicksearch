@@ -1,0 +1,104 @@
+# Haskell quicksearch checklist
+
+100 representative search-quality checks for Haskell language concepts, standard APIs, common packages, identifiers, and natural task queries.
+
+- [ ] `qs haskell lists` — Expected: List type, syntax, and `Data.List`. Test: Plural core collection concept.
+- [ ] `qs haskell tuples` — Expected: Tuple types and tuple syntax. Test: Plural built-in product type.
+- [ ] `qs haskell pattern matching` — Expected: Pattern matching in equations and `case`. Test: Common multiword language concept.
+- [ ] `qs haskell guards` — Expected: Guard syntax. Test: Plural syntax-term normalization.
+- [ ] `qs haskell list comprehensions` — Expected: List-comprehension syntax. Test: Plural multiword syntax query.
+- [ ] `qs haskell type classes` — Expected: `class` and `instance` declarations. Test: Plural core type-system concept.
+- [ ] `qs haskell algebraic data types` — Expected: `data` declarations and sum/product types. Test: Natural multiword concept query.
+- [ ] `qs haskell newtypes` — Expected: `newtype` declarations. Test: Plural-to-keyword stemming.
+- [ ] `qs haskell record syntax` — Expected: Record declarations, construction, and updates. Test: Multiword syntax concept.
+- [ ] `qs haskell deriving` — Expected: Derived instances and deriving strategies. Test: Direct language-keyword lookup.
+- [ ] `qs haskell modules` — Expected: Module declarations and exports. Test: Plural language-structure query.
+- [ ] `qs haskell qualified imports` — Expected: Qualified module imports. Test: Two-word import concept.
+- [ ] `qs haskell infix operators` — Expected: Infix functions and fixity declarations. Test: Operator terminology in plural.
+- [ ] `qs haskell strict evaluation` — Expected: Strictness, `seq`, and bang patterns. Test: Evaluation-strategy phrase.
+- [ ] `qs haskell thunks` — Expected: Lazy evaluation and deferred computations. Test: Runtime term for non-strict evaluation.
+- [ ] `qs haskell tail recursion` — Expected: Tail-recursive function design. Test: Natural implementation concept.
+- [ ] `qs haskell currying` — Expected: Curried functions. Test: Functional-programming terminology.
+- [ ] `qs haskell partial application` — Expected: Partial function application. Test: Multiword function concept.
+- [ ] `qs haskell higher order functions` — Expected: Functions that accept or return functions. Test: Natural conceptual phrase.
+- [ ] `qs haskell function composition` — Expected: The `(.)` operator. Test: Concept-to-symbol discovery.
+- [ ] `qs haskell map` — Expected: `Prelude.map`. Test: Exact central Prelude API.
+- [ ] `qs haskell filter` — Expected: `Prelude.filter`. Test: Exact list-selection API.
+- [ ] `qs haskell zipWith` — Expected: `Prelude.zipWith`. Test: Exact camelCase identifier.
+- [ ] `qs haskell concat map` — Expected: `Data.List.concatMap`. Test: Spaced phrase to camelCase API.
+- [ ] `qs haskell reverse` — Expected: `Prelude.reverse`. Test: Simple common list task.
+- [ ] `qs haskell take while` — Expected: `Prelude.takeWhile`. Test: Natural words to camelCase API.
+- [ ] `qs haskell dropWhile` — Expected: `Prelude.dropWhile`. Test: Exact camelCase list API.
+- [ ] `qs haskell split list at index` — Expected: `Prelude.splitAt`. Test: Intent-based list operation.
+- [ ] `qs haskell partition list` — Expected: `Data.List.partition`. Test: Natural task to library API.
+- [ ] `qs haskell element membership` — Expected: `elem` and `notElem`. Test: Concept-to-operator-style API.
+- [ ] `qs haskell association list lookup` — Expected: `Prelude.lookup`. Test: Disambiguates a common API name.
+- [ ] `qs haskell maximum by` — Expected: `Data.List.maximumBy`. Test: Comparator task to camelCase API.
+- [ ] `qs haskell sort on field` — Expected: `Data.List.sortOn`. Test: Frequent projection-based sorting task.
+- [ ] `qs haskell group adjacent values` — Expected: `Data.List.group` / `groupBy`. Test: Behavioral list-grouping query.
+- [ ] `qs haskell remove duplicates` — Expected: `Data.List.nub`. Test: Common task with non-obvious name.
+- [ ] `qs haskell foldr` — Expected: `Prelude.foldr`. Test: Exact foundational fold API.
+- [ ] `qs haskell "foldl'"` — Expected: `Data.List.foldl'`. Test: Prime punctuation and strict fold lookup.
+- [ ] `qs haskell running totals` — Expected: `Prelude.scanl`. Test: Intent query for prefix folds.
+- [ ] `qs haskell infinite iteration` — Expected: `Prelude.iterate`. Test: Lazy-list generation concept.
+- [ ] `qs haskell repeat value n times` — Expected: `Prelude.replicate`. Test: Natural task with numeric wording.
+- [ ] `qs haskell Maybe` — Expected: `Maybe`. Test: Exact capitalized optional-value type.
+- [ ] `qs haskell default maybe value` — Expected: `Data.Maybe.fromMaybe`. Test: Intent-based optional fallback.
+- [ ] `qs haskell map_maybe` — Expected: `Data.Maybe.mapMaybe`. Test: snake_case to camelCase normalization.
+- [ ] `qs haskell discard Nothing values` — Expected: `Data.Maybe.catMaybes`. Test: Natural filtering task.
+- [ ] `qs haskell Either` — Expected: `Either`. Test: Exact capitalized error-or-value type.
+- [ ] `qs haskell separate lefts and rights` — Expected: `Data.Either.partitionEithers`. Test: Natural sum-type partition task.
+- [ ] `qs haskell parse string safely` — Expected: `Text.Read.readMaybe`. Test: Intent-based safe parsing lookup.
+- [ ] `qs haskell convert value to string` — Expected: `Show` and `show`. Test: Task wording to class method.
+- [ ] `qs haskell ordering comparison` — Expected: `Ord` and `compare`. Test: Concept query spanning class and method.
+- [ ] `qs haskell enumerate range` — Expected: `Enum` and range syntax. Test: Natural query for enumeration.
+- [ ] `qs haskell Functor` — Expected: `Functor` and `fmap`. Test: Exact abstraction name.
+- [ ] `qs haskell applicatives` — Expected: `Applicative`, `pure`, and `<*>`. Test: Plural abstraction normalization.
+- [ ] `qs haskell monadic bind` — Expected: `Monad` and `(>>=)`. Test: Concept phrase to type-class method.
+- [ ] `qs haskell Alternative` — Expected: `Control.Applicative.Alternative`. Test: Exact standard abstraction lookup.
+- [ ] `qs haskell foldables` — Expected: `Data.Foldable.Foldable`. Test: Plural class-name normalization.
+- [ ] `qs haskell traverse` — Expected: `Data.Traversable.traverse`. Test: Exact method and owning abstraction.
+- [ ] `qs haskell Semigroup` — Expected: `Semigroup` and `(<>)`. Test: Type class plus key operator.
+- [ ] `qs haskell monoids` — Expected: `Monoid`, `mempty`, and `mappend`. Test: Plural algebraic abstraction.
+- [ ] `qs haskell bimap` — Expected: `Data.Bifunctor.bimap`. Test: Exact less-ambiguous two-sided map API.
+- [ ] `qs haskell monad transformers` — Expected: Transformer types and `lift`. Test: Plural multiword ecosystem concept.
+- [ ] `qs haskell Data.Map.Strict.lookup` — Expected: `Data.Map.Strict.lookup`. Test: Fully qualified hierarchical identifier.
+- [ ] `qs haskell insert map key` — Expected: `Data.Map.insert`. Test: Natural map-update task.
+- [ ] `qs haskell integer keyed maps` — Expected: `Data.IntMap`. Test: Descriptive phrase to specialized container.
+- [ ] `qs haskell set intersection` — Expected: `Data.Set.intersection`. Test: Collection task to qualified API.
+- [ ] `qs haskell hash maps` — Expected: `Data.HashMap` from `unordered-containers`. Test: Spaced plural package concept.
+- [ ] `qs haskell sequences` — Expected: `Data.Sequence.Seq`. Test: Plural name to persistent sequence type.
+- [ ] `qs haskell vectors` — Expected: `Data.Vector.Vector`. Test: Plural package data-type lookup.
+- [ ] `qs haskell byte strings` — Expected: `Data.ByteString.ByteString`. Test: Spacing and plural normalization.
+- [ ] `qs haskell Text` — Expected: `Data.Text.Text`. Test: Exact capitalized Unicode text type.
+- [ ] `qs haskell split_on` — Expected: `Data.Text.splitOn`. Test: snake_case task to camelCase text API.
+- [ ] `qs haskell replace substring` — Expected: `Data.Text.replace`. Test: Frequent natural text-edit task.
+- [ ] `qs haskell encode utf8` — Expected: `Data.Text.Encoding.encodeUtf8`. Test: Encoding task with common acronym.
+- [ ] `qs haskell handle invalid Unicode` — Expected: `Data.Text.Encoding.decodeUtf8With` and `lenientDecode`. Test: Recovery intent for malformed UTF-8 input.
+- [ ] `qs haskell parse JSON` — Expected: `Data.Aeson.eitherDecode` / `FromJSON`. Test: Common serialization task by format.
+- [ ] `qs haskell generic programming` — Expected: `GHC.Generics.Generic`. Test: Concept phrase to compiler-supported API.
+- [ ] `qs haskell lens view set` — Expected: `Control.Lens.view`, `set`, and lens basics. Test: Common external abstraction via operations.
+- [ ] `qs haskell putStrLn` — Expected: `Prelude.putStrLn`. Test: Exact camelCase console-output API.
+- [ ] `qs haskell readFile` — Expected: `Prelude.readFile`. Test: Exact camelCase file-input API.
+- [ ] `qs haskell write text file` — Expected: `writeFile`. Test: Natural file-output task.
+- [ ] `qs haskell safe file handle` — Expected: `System.IO.withFile`. Test: Resource-safe intent query.
+- [ ] `qs haskell command line arguments` — Expected: `System.Environment.getArgs`. Test: Common multiword process-input task.
+- [ ] `qs haskell environment variables` — Expected: `System.Environment.lookupEnv` / `getEnv`. Test: Plural OS configuration concept.
+- [ ] `qs haskell list directory` — Expected: `System.Directory.listDirectory`. Test: Natural filesystem task.
+- [ ] `qs haskell check file exists` — Expected: `System.Directory.doesFileExist`. Test: Boolean filesystem intent query.
+- [ ] `qs haskell file extension` — Expected: `System.FilePath.takeExtension` / `replaceExtension`. Test: Path-manipulation concept.
+- [ ] `qs haskell temporary files` — Expected: `System.IO.Temp`. Test: Plural resource-management task.
+- [ ] `qs haskell exceptions` — Expected: `Control.Exception`. Test: Plural concept to main exception module.
+- [ ] `qs haskell bracket resource cleanup` — Expected: `Control.Exception.bracket`. Test: Lifecycle intent plus exact combinator.
+- [ ] `qs haskell async concurrency` — Expected: `Control.Concurrent.Async`. Test: Concept query for structured concurrency API.
+- [ ] `qs haskell forkIO` — Expected: `Control.Concurrent.forkIO`. Test: Exact camelCase lightweight-thread API.
+- [ ] `qs haskell MVar` — Expected: `Control.Concurrent.MVar.MVar`. Test: Exact synchronized variable type.
+- [ ] `qs haskell software transactional memory` — Expected: `Control.Concurrent.STM`. Test: Expanded phrase to abbreviated module.
+- [ ] `qs haskell operation timeout` — Expected: `System.Timeout.timeout`. Test: Natural concurrency control task.
+- [ ] `qs haskell run external process` — Expected: `System.Process` / `readProcess`. Test: Common system-integration task.
+- [ ] `qs haskell random numbers` — Expected: `System.Random` and `randomRIO`. Test: Plural task to standard package API.
+- [ ] `qs haskell HTTP client request` — Expected: `Network.HTTP.Client`. Test: Multiword network task and acronym.
+- [ ] `qs haskell QuickCheck properties` — Expected: `Test.QuickCheck` and `property`. Test: Tool name plus testing concept.
+- [ ] `qs haskell Hspec` — Expected: `Test.Hspec`. Test: Exact common test-framework name.
+- [ ] `qs haskell GHCi commands` — Expected: GHCi interactive commands. Test: Tool acronym plus plural documentation topic.
+- [ ] `qs haskell language extensions` — Expected: GHC language extensions and `LANGUAGE` pragmas. Test: Plural compiler-feature concept.

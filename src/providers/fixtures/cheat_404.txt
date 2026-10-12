@@ -1,0 +1,14 @@
+/*
+ * 404 NOT FOUND
+ *
+ * Unknown cheat sheet. Please try to reformulate your query.
+ * Query format:
+ */
+
+ /LANG/QUESTION
+
+/* Examples: */
+
+ /python/read+json
+ /golang/run+external+program
+ /js/regex+search

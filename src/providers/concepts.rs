@@ -126,7 +126,9 @@ const CONCEPTS: &[Concept] = &[
         man: true,
     },
     Concept {
-        words: &["editors", "editor", "vim", "nvim", "neovim", "emacs", "helix"],
+        words: &[
+            "editors", "editor", "vim", "nvim", "neovim", "emacs", "helix",
+        ],
         label: "Editors",
         blurb: "vim, neovim, emacs, helix, buffers, and registers",
         docsets: &["elisp"],
@@ -264,7 +266,7 @@ pub fn search(
             .collect::<Vec<_>>()
     });
     ranked.extend(found);
-    ranked.sort_by(|left, right| right.0.cmp(&left.0));
+    ranked.sort_by_key(|left| std::cmp::Reverse(left.0));
     let mut seen = std::collections::HashSet::new();
     ranked.retain(|(_, hit)| seen.insert(hit.url.clone()));
     ranked.truncate(limit);

@@ -58,15 +58,13 @@ pub fn search(client: &Client, query: &str, limit: usize) -> Result<Outcome, Str
             .get("descriptions")
             .and_then(Value::as_array)
             .and_then(|items| {
-                items.iter().find(|item| {
-                    item.get("lang").and_then(Value::as_str) == Some("en")
-                })
+                items
+                    .iter()
+                    .find(|item| item.get("lang").and_then(Value::as_str) == Some("en"))
             })
             .and_then(|item| item.get("value").and_then(Value::as_str))
             .unwrap_or("");
-        let severity = cve
-            .get("metrics")
-            .and_then(severity_of);
+        let severity = cve.get("metrics").and_then(severity_of);
         let page = format!("https://nvd.nist.gov/vuln/detail/{id}");
         let mut hit = Hit::new(id, page).snippet(truncate(&collapse_ws(description), 320));
         if let Some(severity) = severity {

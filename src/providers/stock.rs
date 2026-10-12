@@ -14,10 +14,14 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
+use std::time::Duration;
+
+use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
 use crate::http::{Client, APP_UA};
 use crate::model::{Hit, Outcome};
+use crate::providers::fallback;
 use crate::providers::langs::cache_dir;
 use crate::text::{collapse_ws, encode_query, truncate};
 
@@ -36,18 +40,25 @@ pub fn search(client: &Client, query: &str, limit: usize) -> Result<Outcome, Str
 }
 
 fn barcode(client: &Client, code: &str) -> Result<Outcome, String> {
-    let path = cache_dir().join("stock").join(code);
-    if let Some(text) = read_cached(&path) {
-        if let Some(outcome) = outcome_from_cached(code, &text) {
-            return Ok(outcome);
-        }
+    let path = cache_dir().join("stock").join(format!("{code}.json"));
+    let cached = crate::cache::get_or_fetch(
+        &path,
+        Duration::from_secs(14 * 24 * 60 * 60),
+        Duration::from_secs(30 * 24 * 60 * 60),
+        1,
+        code,
+        || {
+            open_food_facts_code(client, code)
+                .or_else(|| upcitemdb(client, code))
+                .ok_or_else(|| {
+                    format!("product services returned no usable live result for barcode {code}")
+                })
+        },
+    );
+    match cached {
+        Ok(cached) => Ok(cached.value.into_outcome(code)),
+        Err(error) => Ok(barcode_fallback(code, &error.to_string())),
     }
-    let product = open_food_facts_code(client, code).or_else(|| upcitemdb(client, code));
-    let Some(product) = product else {
-        return Err(format!("no product for barcode {code}"));
-    };
-    write_cached(&path, &product.cache_line());
-    Ok(product.into_outcome(code))
 }
 
 fn by_name(client: &Client, query: &str, limit: usize) -> Result<Outcome, String> {
@@ -55,7 +66,14 @@ fn by_name(client: &Client, query: &str, limit: usize) -> Result<Outcome, String
         "https://world.openfoodfacts.org/cgi/search.pl?search_simple=1&action=process&json=1&page_size={limit}&search_terms={}",
         encode_query(query)
     );
-    let response: Value = client.get_json(&url, APP_UA, &[])?;
+    let response: Value = match client.get_json(&url, APP_UA, &[]) {
+        Ok(response) => response,
+        Err(reason) => {
+            let mut outcome = name_fallback(query, &reason);
+            append_market_candidate(&mut outcome, query, limit);
+            return Ok(outcome);
+        }
+    };
     let products = response
         .get("products")
         .and_then(Value::as_array)
@@ -87,9 +105,50 @@ fn by_name(client: &Client, query: &str, limit: usize) -> Result<Outcome, String
         outcome.hits.push(Hit::new(name, url).snippet(detail));
     }
     if outcome.hits.is_empty() {
-        return Err(format!("no products matched {query}"));
+        outcome = name_fallback(query, &format!("no products matched {query}"));
     }
+    append_market_candidate(&mut outcome, query, limit);
     Ok(outcome)
+}
+
+fn append_market_candidate(outcome: &mut Outcome, query: &str, limit: usize) {
+    let symbol = query.trim();
+    let possible_ticker =
+        (1..=5).contains(&symbol.len()) && symbol.chars().all(|ch| ch.is_ascii_uppercase());
+    if possible_ticker && outcome.hits.len() < limit {
+        outcome.hits.push(
+            Hit::new(
+                format!("Possible {symbol} market quote"),
+                format!("https://finance.yahoo.com/quote/{symbol}"),
+            )
+            .snippet("The uppercase product query can also be a market ticker."),
+        );
+    }
+}
+
+fn name_fallback(query: &str, reason: &str) -> Outcome {
+    let url = format!(
+        "https://world.openfoodfacts.org/cgi/search.pl?search_terms={}",
+        encode_query(query)
+    );
+    fallback::search(
+        "stock",
+        query,
+        format!("Search products for {query}"),
+        url,
+        reason,
+    )
+}
+
+fn barcode_fallback(code: &str, reason: &str) -> Outcome {
+    let url = format!("https://world.openfoodfacts.org/product/{code}");
+    fallback::search(
+        "stock",
+        code,
+        format!("Look up barcode {code}"),
+        url,
+        reason,
+    )
 }
 
 fn open_food_facts_code(client: &Client, code: &str) -> Option<Product> {
@@ -142,6 +201,7 @@ fn upcitemdb(client: &Client, code: &str) -> Option<Product> {
     })
 }
 
+#[derive(Clone, Debug, Deserialize, Serialize)]
 struct Product {
     name: String,
     brand: String,
@@ -151,17 +211,6 @@ struct Product {
 }
 
 impl Product {
-    fn cache_line(&self) -> String {
-        [
-            self.name.as_str(),
-            self.brand.as_str(),
-            self.quantity.as_str(),
-            self.price.as_str(),
-            self.url.as_str(),
-        ]
-        .join("\t")
-    }
-
     fn into_outcome(self, code: &str) -> Outcome {
         let mut outcome = Outcome::new("stock", code);
         outcome.source_url = Some(self.url.clone());
@@ -177,22 +226,6 @@ impl Product {
     }
 }
 
-fn outcome_from_cached(code: &str, text: &str) -> Option<Outcome> {
-    let mut parts = text.split('\t');
-    let name = parts.next()?.trim().to_string();
-    if name.is_empty() {
-        return None;
-    }
-    let product = Product {
-        name,
-        brand: parts.next().unwrap_or("").to_string(),
-        quantity: parts.next().unwrap_or("").to_string(),
-        price: parts.next().unwrap_or("").to_string(),
-        url: parts.next().unwrap_or("").to_string(),
-    };
-    Some(product.into_outcome(code))
-}
-
 fn text_field(value: &Value, key: &str) -> String {
     truncate(
         &collapse_ws(value.get(key).and_then(Value::as_str).unwrap_or("")),
@@ -200,17 +233,37 @@ fn text_field(value: &Value, key: &str) -> String {
     )
 }
 
-fn read_cached(path: &std::path::Path) -> Option<String> {
-    let modified = std::fs::metadata(path).ok()?.modified().ok()?;
-    if modified.elapsed().ok()? > std::time::Duration::from_secs(14 * 24 * 60 * 60) {
-        return None;
-    }
-    std::fs::read_to_string(path).ok()
-}
+#[cfg(test)]
+mod tests {
+    use super::*;
 
-fn write_cached(path: &std::path::Path, text: &str) {
-    if let Some(parent) = path.parent() {
-        let _ = std::fs::create_dir_all(parent);
+    #[test]
+    fn name_fallback_is_clickable_and_encoded() {
+        let got = name_fallback("tea & biscuits", "HTTP 503");
+        assert!(got.hits[0]
+            .url
+            .ends_with("search_terms=tea%20%26%20biscuits"));
+        assert!(got.has_content());
     }
-    let _ = std::fs::write(path, text);
+
+    #[test]
+    fn barcode_fallback_uses_known_product_page() {
+        let got = barcode_fallback("012345678905", "upstreams unavailable");
+        assert_eq!(
+            got.hits[0].url,
+            "https://world.openfoodfacts.org/product/012345678905"
+        );
+    }
+
+    #[test]
+    fn uppercase_ambiguous_names_keep_products_first_and_offer_a_quote() {
+        let mut outcome = name_fallback("MILK", "offline");
+        append_market_candidate(&mut outcome, "MILK", 5);
+        assert!(outcome.hits[0].title.contains("products"));
+        assert_eq!(outcome.hits[1].url, "https://finance.yahoo.com/quote/MILK");
+
+        let mut ordinary = name_fallback("milk", "offline");
+        append_market_candidate(&mut ordinary, "milk", 5);
+        assert_eq!(ordinary.hits.len(), 1);
+    }
 }
