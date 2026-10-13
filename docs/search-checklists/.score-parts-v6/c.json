@@ -1,0 +1,1248 @@
+[
+  {
+    "query": "qs c arrays",
+    "expected": "array types, declaration, and subscripting",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "Array initialization",
+      "Array declaration",
+      "Null-terminated wide strings",
+      "Null-terminated byte strings",
+      "Standard library header <wchar.h> (C95)"
+    ],
+    "error": null,
+    "note": "Array initialization is first and Array declaration is second. The results cover the type and declarations, but subscripting is not explicit in the shown output."
+  },
+  {
+    "query": "qs c pointers",
+    "expected": "pointer types and indirection",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Pointer declaration",
+      "Member access operators",
+      "Array declaration",
+      "Undefined behavior",
+      "Implicit conversions"
+    ],
+    "error": null,
+    "note": "The first hit, Pointer declaration, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c pointer arithmetic",
+    "expected": "pointer arithmetic operators",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Arithmetic operators",
+      "Implicit conversions",
+      "Complex number arithmetic",
+      "Arithmetic types",
+      "Undefined behavior"
+    ],
+    "error": null,
+    "note": "The first hit, Arithmetic operators, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c structures",
+    "expected": "`struct` types",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "Enumerations",
+      "Objects and alignment",
+      "String literals",
+      "Struct declaration",
+      "Type"
+    ],
+    "error": null,
+    "note": "The exact Struct declaration page appears only at rank 4, after three weak or off-target hits."
+  },
+  {
+    "query": "qs c unions",
+    "expected": "`union` types",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "union"
+    ],
+    "error": null,
+    "note": "The first hit, union, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c enumerations",
+    "expected": "`enum` types and enumerators",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Enumerations"
+    ],
+    "error": null,
+    "note": "The first hit, Enumerations, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c bit fields",
+    "expected": "structure bit-fields",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Bit-fields"
+    ],
+    "error": null,
+    "note": "The first hit, Bit-fields, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c function pointers",
+    "expected": "pointer-to-function declarations and calls",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Pointer declaration",
+      "Implicit conversions",
+      "Functions",
+      "Other operators",
+      "Array declaration"
+    ],
+    "error": null,
+    "note": "The first hit, Pointer declaration, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c variadic functions",
+    "expected": "variadic functions and `<stdarg.h>`",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Variadic functions"
+    ],
+    "error": null,
+    "note": "The first hit, Variadic functions, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c storage duration",
+    "expected": "automatic, static, thread, and allocated storage duration",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "Static storage duration",
+      "Thread storage duration"
+    ],
+    "error": null,
+    "note": "The first two hits cover static and thread storage duration, but automatic and allocated duration are absent."
+  },
+  {
+    "query": "qs c language linkage",
+    "expected": "internal, external, and no linkage",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Storage-class specifiers",
+      "C language",
+      "C keywords: fortran",
+      "Basic concepts",
+      "External and tentative definitions"
+    ],
+    "error": null,
+    "note": "The first hit, Storage-class specifiers, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c type qualifiers",
+    "expected": "`const`, `restrict`, `volatile`, and `_Atomic` qualifiers",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "const type qualifier",
+      "restrict type qualifier",
+      "volatile type qualifier"
+    ],
+    "error": null,
+    "note": "The top three hits cover const, restrict, and volatile. _Atomic is not present in the shown results."
+  },
+  {
+    "query": "qs c restrict",
+    "expected": "the `restrict` type qualifier",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "restrict",
+      "restrict type qualifier"
+    ],
+    "error": null,
+    "note": "The first hit, restrict, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c integer promotions",
+    "expected": "integer promotion rules",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Implicit conversions",
+      "Arithmetic operators",
+      "Integer constant",
+      "Numeric limits",
+      "va_arg"
+    ],
+    "error": null,
+    "note": "The first hit, Implicit conversions, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c usual arithmetic conversions",
+    "expected": "usual arithmetic conversions",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Implicit conversions",
+      "Arithmetic operators",
+      "cos",
+      "Comparison operators",
+      "Assignment operators"
+    ],
+    "error": null,
+    "note": "The first hit, Implicit conversions, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c operator precedence",
+    "expected": "C operator precedence and associativity",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "C Operator Precedence"
+    ],
+    "error": null,
+    "note": "The first hit, C Operator Precedence, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c compound literals",
+    "expected": "compound literal expressions",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Compound literals"
+    ],
+    "error": null,
+    "note": "The first hit, Compound literals, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c designated initializers",
+    "expected": "designated initialization of arrays and structures",
+    "score": 2,
+    "provider": "C",
+    "top_titles": [
+      "Constant expressions",
+      "Explanation",
+      "atomic_is_lock_free",
+      "Compiler support for C99",
+      "C99"
+    ],
+    "error": null,
+    "note": "No direct designated-initializer result appears. The rank-2 struct-initialization snippet mentions a designated initializer, but does not cover array designation."
+  },
+  {
+    "query": "qs c generic selection",
+    "expected": "`_Generic` generic selection",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Generic selection"
+    ],
+    "error": null,
+    "note": "The first hit, Generic selection, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c static assertions",
+    "expected": "`static_assert` / `_Static_assert`",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Static assertion",
+      "Static assertion"
+    ],
+    "error": null,
+    "note": "The first hit, Static assertion, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c flexible array member",
+    "expected": "flexible array members",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "Array declaration",
+      "Syntax",
+      "FILE",
+      "Compiler support for C99",
+      "C99"
+    ],
+    "error": null,
+    "note": "The top Array declaration and Struct syntax pages may contain the topic, but the shown titles and snippets do not identify flexible array members directly."
+  },
+  {
+    "query": "qs c variable length arrays",
+    "expected": "variable-length array types",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Array declaration",
+      "C99",
+      "c16rtomb",
+      "c32rtomb",
+      "Compiler support for C99"
+    ],
+    "error": null,
+    "note": "The first hit, Array declaration, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c alignment",
+    "expected": "object alignment, `alignof`, and `alignas`",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "Objects and alignment",
+      "memalignment",
+      "memalignment"
+    ],
+    "error": null,
+    "note": "Objects and alignment is relevant at rank 1, but its snippet is generic and the output does not directly explain alignof or alignas."
+  },
+  {
+    "query": "qs c object lifetime",
+    "expected": "C object lifetime rules",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Lifetime",
+      "Objects and alignment",
+      "Compound literals (since C99)",
+      "Value categories",
+      "Array declaration"
+    ],
+    "error": null,
+    "note": "The first hit, Lifetime, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c undefined behavior",
+    "expected": "undefined behavior in the C abstract machine",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Undefined behavior"
+    ],
+    "error": null,
+    "note": "The first hit, Undefined behavior, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c sequence points",
+    "expected": "sequencing and sequence points",
+    "score": 0,
+    "provider": "C",
+    "top_titles": [
+      "memory_order",
+      "Lifetime",
+      "Escape sequences",
+      "atof",
+      "wcstof, wcstod, wcstold"
+    ],
+    "error": null,
+    "note": "No result discusses sequence points or expression sequencing. The top memory_order release-sequence hit is a different concept."
+  },
+  {
+    "query": "qs c command line arguments",
+    "expected": "`main` parameters `argc` and `argv`",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "argc"
+    ],
+    "error": null,
+    "note": "The result links to the correct main-function page and is titled argc, but the snippet is only a generic 'Authoritative documentation' placeholder and does not show argv."
+  },
+  {
+    "query": "qs c preprocessing directives",
+    "expected": "C preprocessor directives",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Preprocessor",
+      "Conditional inclusion",
+      "div",
+      "Replacing text macros",
+      "Diagnostic directives"
+    ],
+    "error": null,
+    "note": "The first hit, Preprocessor, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c conditional compilation",
+    "expected": "`#if`, `#ifdef`, and related directives",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Conditional inclusion",
+      "Other operators",
+      "Analyzability",
+      "Preprocessor",
+      "Diagnostic directives"
+    ],
+    "error": null,
+    "note": "The first hit, Conditional inclusion, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c include guards",
+    "expected": "header include-guard pattern",
+    "score": 2,
+    "provider": "C",
+    "top_titles": [
+      "Implementation defined behavior control",
+      "Source file inclusion",
+      "strtok, strtok_s",
+      "Memory model",
+      "INFINITY"
+    ],
+    "error": null,
+    "note": "The first hit is #pragma once, an alternative rather than the requested include-guard pattern. The include page at rank 2 also does not show a guard pattern."
+  },
+  {
+    "query": "qs c variadic macros",
+    "expected": "variadic macro definitions and `__VA_ARGS__`",
+    "score": 0,
+    "provider": "C",
+    "top_titles": [
+      "Variadic functions",
+      "Standard library header <stdarg.h>",
+      "Variadic arguments",
+      "C99",
+      "va_list"
+    ],
+    "error": null,
+    "note": "The results are about variadic functions and stdarg argument macros. None shows variadic preprocessor macros or __VA_ARGS__."
+  },
+  {
+    "query": "qs c escape sequences",
+    "expected": "character and string escape sequences",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Escape sequences"
+    ],
+    "error": null,
+    "note": "The first hit, Escape sequences, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c string literals",
+    "expected": "string literal syntax and types",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "String literals"
+    ],
+    "error": null,
+    "note": "The first hit, String literals, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c implicit conversions",
+    "expected": "implicit conversion rules",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Implicit conversions"
+    ],
+    "error": null,
+    "note": "The first hit, Implicit conversions, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c compound assignment operators",
+    "expected": "compound assignment expressions",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Assignment operators",
+      "C Operator Precedence",
+      "Punctuation",
+      "Value categories",
+      "Expressions"
+    ],
+    "error": null,
+    "note": "The first hit, Assignment operators, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c printf",
+    "expected": "`printf` formatted standard output",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "printf",
+      "vprintf",
+      "wprintf",
+      "vwprintf"
+    ],
+    "error": null,
+    "note": "The first hit, printf, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c snprintf",
+    "expected": "`snprintf` bounded formatted string output",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "snprintf",
+      "sinf",
+      "vsnprintf"
+    ],
+    "error": null,
+    "note": "The first hit, snprintf, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c scanf",
+    "expected": "`scanf` formatted standard input",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "scanf",
+      "vscanf",
+      "wscanf",
+      "vwscanf"
+    ],
+    "error": null,
+    "note": "The first hit, scanf, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c fopen",
+    "expected": "`fopen` file-stream opening",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fopen"
+    ],
+    "error": null,
+    "note": "The first hit, fopen, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c fclose",
+    "expected": "`fclose` file-stream closing",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fclose"
+    ],
+    "error": null,
+    "note": "The first hit, fclose, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c fgets",
+    "expected": "`fgets` line or bounded string input",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fgets"
+    ],
+    "error": null,
+    "note": "The first hit, fgets, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c fread",
+    "expected": "`fread` binary stream input",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fread"
+    ],
+    "error": null,
+    "note": "The first hit, fread, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c fwrite",
+    "expected": "`fwrite` binary stream output",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fwrite"
+    ],
+    "error": null,
+    "note": "The first hit, fwrite, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c fseek",
+    "expected": "`fseek` stream positioning",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fseek"
+    ],
+    "error": null,
+    "note": "The first hit, fseek, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c perror",
+    "expected": "`perror` error-message output",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "perror"
+    ],
+    "error": null,
+    "note": "The first hit, perror, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c malloc",
+    "expected": "`malloc` dynamic allocation",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "malloc"
+    ],
+    "error": null,
+    "note": "The first hit, malloc, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c calloc",
+    "expected": "`calloc` zero-initialized allocation",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "calloc"
+    ],
+    "error": null,
+    "note": "The first hit, calloc, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c realloc",
+    "expected": "`realloc` resizing allocated storage",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "realloc"
+    ],
+    "error": null,
+    "note": "The first hit, realloc, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c free",
+    "expected": "`free` deallocation",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "free",
+      "ATOMIC_*_LOCK_FREE",
+      "atomic_is_lock_free",
+      "free_sized",
+      "free_aligned_sized"
+    ],
+    "error": null,
+    "note": "The first hit, free, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c memcpy",
+    "expected": "`memcpy` non-overlapping byte copy",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "memcpy",
+      "wmemcpy"
+    ],
+    "error": null,
+    "note": "The first hit, memcpy, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c memmove",
+    "expected": "`memmove` overlap-safe byte copy",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "memmove",
+      "wmemmove"
+    ],
+    "error": null,
+    "note": "The first hit, memmove, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c memset",
+    "expected": "`memset` byte filling",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "memset",
+      "wmemset"
+    ],
+    "error": null,
+    "note": "The first hit, memset, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c memcmp",
+    "expected": "`memcmp` byte-sequence comparison",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "memcmp",
+      "wmemcmp"
+    ],
+    "error": null,
+    "note": "The first hit, memcmp, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c strlen",
+    "expected": "`strlen` string length",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strlen"
+    ],
+    "error": null,
+    "note": "The first hit, strlen, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c strcmp",
+    "expected": "`strcmp` lexicographic string comparison",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strcmp"
+    ],
+    "error": null,
+    "note": "The first hit, strcmp, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c strchr",
+    "expected": "`strchr` character search in a string",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strchr"
+    ],
+    "error": null,
+    "note": "The first hit, strchr, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c strstr",
+    "expected": "`strstr` substring search",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strstr"
+    ],
+    "error": null,
+    "note": "The first hit, strstr, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c strtok",
+    "expected": "`strtok` string tokenization",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strtok"
+    ],
+    "error": null,
+    "note": "The first hit, strtok, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c qsort",
+    "expected": "`qsort` generic array sorting",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "qsort"
+    ],
+    "error": null,
+    "note": "The first hit, qsort, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c bsearch",
+    "expected": "`bsearch` generic binary search",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "bsearch"
+    ],
+    "error": null,
+    "note": "The first hit, bsearch, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c strtol",
+    "expected": "`strtol` checked string-to-integer conversion",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strtol"
+    ],
+    "error": null,
+    "note": "The first hit, strtol, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c strtod",
+    "expected": "`strtod` string-to-floating conversion",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strtod"
+    ],
+    "error": null,
+    "note": "The first hit, strtod, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c assert",
+    "expected": "`assert` diagnostic macro",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "assert",
+      "static_assert",
+      "static_assert",
+      "_Static_assert"
+    ],
+    "error": null,
+    "note": "The first hit, assert, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c setjmp",
+    "expected": "`setjmp` nonlocal jump setup",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "setjmp"
+    ],
+    "error": null,
+    "note": "The first hit, setjmp, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c signal",
+    "expected": "`signal` signal-handler installation",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "signal",
+      "cnd_signal",
+      "sinl",
+      "atomic_signal_fence"
+    ],
+    "error": null,
+    "note": "The first hit, signal, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c strftime",
+    "expected": "`strftime` formatted calendar time",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strftime"
+    ],
+    "error": null,
+    "note": "The first hit, strftime, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c timespec_get",
+    "expected": "`timespec_get` wall-clock time acquisition",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "timespec_get"
+    ],
+    "error": null,
+    "note": "The first hit, timespec_get, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c rand",
+    "expected": "`rand` pseudo-random number generation",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "rand",
+      "RAND_MAX",
+      "srand"
+    ],
+    "error": null,
+    "note": "The first hit, rand, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c sqrt",
+    "expected": "`sqrt` square-root function",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "sqrt",
+      "csqrt"
+    ],
+    "error": null,
+    "note": "The first hit, sqrt, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c isnan",
+    "expected": "`isnan` floating-point classification macro",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "isnan"
+    ],
+    "error": null,
+    "note": "The first hit, isnan, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c isalpha",
+    "expected": "`isalpha` character classification",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "isalpha"
+    ],
+    "error": null,
+    "note": "The first hit, isalpha, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c toupper",
+    "expected": "`toupper` character case conversion",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "toupper"
+    ],
+    "error": null,
+    "note": "The first hit, toupper, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c setlocale",
+    "expected": "`setlocale` locale configuration",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "setlocale"
+    ],
+    "error": null,
+    "note": "The first hit, setlocale, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c mbrtowc",
+    "expected": "`mbrtowc` multibyte-to-wide conversion",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "mbrtowc"
+    ],
+    "error": null,
+    "note": "The first hit, mbrtowc, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c thrd_create",
+    "expected": "`thrd_create` C thread creation",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "thrd_create"
+    ],
+    "error": null,
+    "note": "The first hit, thrd_create, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c mtx_lock",
+    "expected": "`mtx_lock` mutex locking",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "mtx_lock"
+    ],
+    "error": null,
+    "note": "The first hit, mtx_lock, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c cnd_wait",
+    "expected": "`cnd_wait` condition-variable waiting",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "cnd_wait"
+    ],
+    "error": null,
+    "note": "The first hit, cnd_wait, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c call_once",
+    "expected": "`call_once` one-time initialization",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "call_once"
+    ],
+    "error": null,
+    "note": "The first hit, call_once, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c atomic_fetch_add",
+    "expected": "`atomic_fetch_add` atomic read-modify-write",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "atomic_fetch_add"
+    ],
+    "error": null,
+    "note": "The first hit, atomic_fetch_add, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c atomic_compare_exchange_strong",
+    "expected": "strong atomic compare-and-exchange",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "atomic_compare_exchange_strong"
+    ],
+    "error": null,
+    "note": "The first hit, atomic_compare_exchange_strong, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c memory_order_acquire",
+    "expected": "acquire atomic memory ordering",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "memory_order",
+      "atomic_thread_fence",
+      "atomic_load, atomic_load_explicit",
+      "Standard library header <stdatomic.h> (C11)",
+      "Memory model"
+    ],
+    "error": null,
+    "note": "The first hit, memory_order, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c size_t",
+    "expected": "`size_t` unsigned size type",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "size_t"
+    ],
+    "error": null,
+    "note": "The first hit, size_t, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c ptrdiff_t",
+    "expected": "`ptrdiff_t` pointer-difference type",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "ptrdiff_t"
+    ],
+    "error": null,
+    "note": "The first hit, ptrdiff_t, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c va_list",
+    "expected": "`va_list` variadic-argument state type",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "va_list"
+    ],
+    "error": null,
+    "note": "The first hit, va_list, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c struct tm",
+    "expected": "calendar components type `struct tm`",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "tm",
+      "Struct and union initialization",
+      "Standard library header <time.h>",
+      "timegm",
+      "gmtime, gmtime_r, gmtime_s"
+    ],
+    "error": null,
+    "note": "The first hit, tm, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c FILE",
+    "expected": "`FILE` stream object type",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "FILE",
+      "EXIT_FAILURE",
+      "File scope",
+      "tmpfile",
+      "File input/output"
+    ],
+    "error": null,
+    "note": "The first hit, FILE, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c NULL",
+    "expected": "null pointer macro `NULL`",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "NULL"
+    ],
+    "error": null,
+    "note": "The first hit, NULL, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c errno",
+    "expected": "`errno` error indicator and error macros",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "errno",
+      "MATH_ERRNO"
+    ],
+    "error": null,
+    "note": "The first hit, errno, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c stdatomic.h",
+    "expected": "the `<stdatomic.h>` atomic operations header",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Standard library header <stdatomic.h>"
+    ],
+    "error": null,
+    "note": "The first hit, Standard library header <stdatomic.h>, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c complex numbers",
+    "expected": "C complex arithmetic and `<complex.h>`",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Complex number arithmetic"
+    ],
+    "error": null,
+    "note": "The first hit, Complex number arithmetic, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c read a file line by line",
+    "expected": "line input with `fgets` and stream iteration",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "fread",
+      "fread",
+      "fgets"
+    ],
+    "error": null,
+    "note": "fread incorrectly occupies the first two ranks. fgets appears at rank 3, but the snippet only describes its return value and gives no line-iteration guidance."
+  },
+  {
+    "query": "qs c copy overlapping memory",
+    "expected": "overlap-safe copying with `memmove`",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "memcpy, memcpy_s",
+      "memmove, memmove_s",
+      "va_copy",
+      "Analyzability",
+      "memory_order"
+    ],
+    "error": null,
+    "note": "memmove is the correct overlap-safe API at rank 2 with useful context, but memcpy is ranked first and can be unsafe for overlap."
+  },
+  {
+    "query": "qs c allocate zero initialized array",
+    "expected": "zeroed allocation with `calloc`",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "calloc",
+      "Array declaration",
+      "FP_ZERO",
+      "Array initialization",
+      "Initialization"
+    ],
+    "error": null,
+    "note": "The first hit, calloc, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c parse integer from string",
+    "expected": "numeric parsing with `strtol`",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strtol",
+      "strtol",
+      "strtoul"
+    ],
+    "error": null,
+    "note": "The first hit, strtol, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c sort array with comparator",
+    "expected": "generic sorting with `qsort`",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "bsearch, bsearch_s",
+      "Algorithms",
+      "short",
+      "qsort, qsort_s",
+      "Array initialization"
+    ],
+    "error": null,
+    "note": "qsort itself is only rank 4. The rank-2 Algorithms overview mentions qsort, while rank 1 incorrectly favors bsearch."
+  },
+  {
+    "query": "qs c get current calendar time",
+    "expected": "`time` and calendar-time conversion",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "timespec_get",
+      "Standard library header <time.h>",
+      "gets",
+      "Date and time utilities",
+      "time"
+    ],
+    "error": null,
+    "note": "timespec_get is first, while the time.h overview at rank 2 usefully identifies time as current calendar time. Conversion guidance is not directly shown."
+  },
+  {
+    "query": "qs c format date and time",
+    "expected": "time formatting with `strftime`",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "Date and time utilities"
+    ],
+    "error": null,
+    "note": "The Date and time utilities overview is relevant, but its shown snippet does not name or explain strftime."
+  },
+  {
+    "query": "qs c remove a file",
+    "expected": "`remove` file deletion",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "remove",
+      "remove"
+    ],
+    "error": null,
+    "note": "The first hit, remove, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c create a temporary file",
+    "expected": "temporary file creation with `tmpfile`",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "tmpfile, tmpfile_s",
+      "tmpnam, tmpnam_s",
+      "tmpfile",
+      "FILE",
+      "fopen, fopen_s"
+    ],
+    "error": null,
+    "note": "The first hit, tmpfile, tmpfile_s, directly matches the expected topic and its snippet provides immediately useful documentation."
+  },
+  {
+    "query": "qs c handle end of file",
+    "expected": "EOF indication, `feof`, and stream read results",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "fopen, fopen_s",
+      "feof",
+      "fclose",
+      "fgetc, getc",
+      "FILE"
+    ],
+    "error": null,
+    "note": "feof is correctly rank 2, but fopen is ranked first. The snippets do not clearly explain that stream read results must be checked before feof."
+  }
+]

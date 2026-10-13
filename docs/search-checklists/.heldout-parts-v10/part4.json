@@ -1,0 +1,1969 @@
+{
+  "binary": "/tmp/qs-gate/release/qs",
+  "sha256": "a048a86983a8877eea4240c5a24e4e9119e901ceaeff44bc8d13e15911f8cabd",
+  "manifest": "/home/paragon/settings-configs/scripts/quicksearch/docs/search-checklists/heldout_manifest.json",
+  "indexes": [
+    150,
+    199
+  ],
+  "json_mode": true,
+  "timeout_seconds": 30,
+  "rubric": {
+    "5": "expected first/immediately useful",
+    "4": "expected top 3/useful",
+    "3": "relevant but weak",
+    "2": "partial",
+    "1": "misleading",
+    "0": "error or no relevant result"
+  },
+  "summary": {
+    "count": 50,
+    "total_score": 185,
+    "maximum_score": 250,
+    "average_score": 3.7,
+    "score_at_least_3": 38,
+    "score_at_least_4": 35,
+    "errors": 7,
+    "timeouts": 6,
+    "distribution": {
+      "0": 7,
+      "1": 1,
+      "2": 4,
+      "3": 3,
+      "4": 8,
+      "5": 27
+    }
+  },
+  "results": [
+    {
+      "index": 150,
+      "language": "c",
+      "query": "qs rfc 8949",
+      "expected": "RFC 8949",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rfc",
+        "8949"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.2,
+      "provider": "rfc",
+      "source_url": "https://www.rfc-editor.org/rfc/rfc8949",
+      "hits": [
+        {
+          "title": "Concise Binary Object Representation (CBOR)",
+          "url": "https://www.rfc-editor.org/rfc/rfc8949",
+          "meta": [
+            "RFC 8949"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "RFC 8949 is the first result, with the exact RFC Editor page and a useful summary."
+    },
+    {
+      "index": 151,
+      "language": "haskell",
+      "query": "qs haskell System.Mem.performGC",
+      "expected": "Hoogle results for System.Mem.performGC",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "System.Mem.performGC"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.196,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "performGC :: IO ()",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/System-Mem.html#v:performGC",
+          "snippet": "Triggers an immediate major garbage collection.",
+          "meta": [
+            "base  ·  System.Mem"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result is the exact performGC API and its Hackage documentation; it is immediately useful despite not being branded as Hoogle."
+    },
+    {
+      "index": 152,
+      "language": "python",
+      "query": "qs gh python-trio/trio",
+      "expected": "GitHub repository python-trio/trio",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "gh",
+        "python-trio/trio"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.402,
+      "provider": "github",
+      "source_url": "https://github.com/search?type=repositories&q=python-trio%2Ftrio",
+      "hits": [
+        {
+          "title": "python-trio/trio",
+          "url": "https://github.com/python-trio/trio",
+          "snippet": "Trio – a friendly Python library for async concurrency and I/O",
+          "meta": [
+            "7.3k stars  ·  Python"
+          ]
+        },
+        {
+          "title": "python-trio/trustme",
+          "url": "https://github.com/python-trio/trustme",
+          "snippet": "#1 quality TLS certs while you wait, for the discerning tester",
+          "meta": [
+            "608 stars  ·  Python"
+          ]
+        },
+        {
+          "title": "florimondmanca/aiometer",
+          "url": "https://github.com/florimondmanca/aiometer",
+          "snippet": "A Python concurrency scheduling library, compatible with asyncio and trio.",
+          "meta": [
+            "440 stars  ·  Python"
+          ]
+        },
+        {
+          "title": "python-trio/purerpc",
+          "url": "https://github.com/python-trio/purerpc",
+          "snippet": "Native, async Python gRPC client and server implementation supporting asyncio, uvloop, and trio",
+          "meta": [
+            "228 stars  ·  Python"
+          ]
+        },
+        {
+          "title": "libfuse/pyfuse3",
+          "url": "https://github.com/libfuse/pyfuse3",
+          "snippet": "Python 3 bindings for libfuse 3 with asynchronous API (Trio compatible)",
+          "meta": [
+            "210 stars  ·  HTML"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The requested python-trio/trio repository is the first result."
+    },
+    {
+      "index": 153,
+      "language": "go",
+      "query": "qs man gofmt",
+      "expected": "Local gofmt manual page",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "man",
+        "gofmt"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.4,
+      "provider": "man",
+      "source_url": "https://pkg.go.dev/cmd/gofmt",
+      "hits": [
+        {
+          "title": "gofmt command documentation",
+          "url": "https://pkg.go.dev/cmd/gofmt"
+        }
+      ],
+      "score": 4,
+      "assessment": "The local manual was unavailable, but the first fallback is the official gofmt command documentation and remains useful."
+    },
+    {
+      "index": 154,
+      "language": "rust",
+      "query": "qs crate zerocopy",
+      "expected": "crates.io page for zerocopy",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "crate",
+        "zerocopy"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.397,
+      "provider": "crates.io",
+      "source_url": "https://crates.io/search?q=zerocopy",
+      "hits": [
+        {
+          "title": "zerocopy",
+          "url": "https://docs.rs/zerocopy",
+          "snippet": "Zerocopy makes zero-cost memory manipulation effortless. We write \"unsafe\" so you don't have to.",
+          "meta": [
+            "0.8.62  ·  993M downloads  ·  273M recent",
+            "https://github.com/google/zerocopy"
+          ]
+        },
+        {
+          "title": "musli-zerocopy",
+          "url": "https://docs.rs/musli",
+          "snippet": "Refreshingly simple zero copy primitives by Müsli.",
+          "meta": [
+            "0.1.2  ·  6.2M downloads  ·  3.2k recent",
+            "https://github.com/udoprog/musli"
+          ]
+        },
+        {
+          "title": "ix-schema-zerocopy",
+          "url": "https://docs.rs/ix-schema-zerocopy",
+          "snippet": "Zerocopy driver for ix-schema: manifest-validated, zero-cost byte views over Ix types.",
+          "meta": [
+            "0.2.1  ·  57 downloads  ·  13 recent",
+            "https://github.com/MerlijnW70/ix-schema"
+          ]
+        },
+        {
+          "title": "derive_aliases",
+          "url": "https://docs.rs/derive_aliases",
+          "snippet": "`#[derive]` aliases for reducing code boilerplate",
+          "meta": [
+            "0.4.7  ·  9.2k downloads  ·  1.4k recent",
+            "https://github.com/nik-rev/derive-aliases"
+          ]
+        },
+        {
+          "title": "derive_aliases_proc_macro",
+          "url": "https://docs.rs/derive_aliases_proc_macro",
+          "snippet": "Implementation detail of `derive_aliases` crate",
+          "meta": [
+            "0.4.7  ·  6.9k downloads  ·  1.4k recent",
+            "https://github.com/nik-rev/derive-aliases"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The requested zerocopy crate is first and links to its immediately useful docs.rs page, although the expected page was crates.io."
+    },
+    {
+      "index": 155,
+      "language": "cpp",
+      "query": "qs web cppreference execution control library",
+      "expected": "DuckDuckGo results for cppreference execution control library",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "web",
+        "cppreference",
+        "execution",
+        "control",
+        "library"
+      ],
+      "exit_code": 124,
+      "timed_out": true,
+      "elapsed_seconds": 30.015,
+      "provider": null,
+      "source_url": null,
+      "hits": [],
+      "score": 0,
+      "assessment": "The command timed out after 30 seconds and returned no JSON or relevant result."
+    },
+    {
+      "index": 156,
+      "language": "c",
+      "query": "qs so c strict aliasing effective type",
+      "expected": "Stack Overflow search for C strict aliasing effective type",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "so",
+        "c",
+        "strict",
+        "aliasing",
+        "effective",
+        "type"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 30.01,
+      "provider": "stackoverflow",
+      "source_url": "https://stackoverflow.com/search?q=c%20strict%20aliasing%20effective%20type",
+      "hits": [
+        {
+          "title": "Does C strict aliasing make untyped static memory pools impossible?",
+          "url": "https://stackoverflow.com/questions/68484935/does-c-strict-aliasing-make-untyped-static-memory-pools-impossible",
+          "meta": [
+            "score 23  ·  5 answers  ·  accepted answer  ·  c, memory-management, language-lawyer, standards, strict-aliasing"
+          ]
+        },
+        {
+          "title": "Strict aliasing of first struct member through opaque pointer in C",
+          "url": "https://stackoverflow.com/questions/78565074/strict-aliasing-of-first-struct-member-through-opaque-pointer-in-c",
+          "meta": [
+            "score 2  ·  2 answers  ·  accepted answer  ·  c, language-lawyer, undefined-behavior, strict-aliasing"
+          ]
+        },
+        {
+          "title": "What is the effective type of an object written by memset?",
+          "url": "https://stackoverflow.com/questions/30970251/what-is-the-effective-type-of-an-object-written-by-memset",
+          "meta": [
+            "score 24  ·  1 answers  ·  answered  ·  c, language-lawyer, strict-aliasing"
+          ]
+        },
+        {
+          "title": "Is strict aliasing one-way?",
+          "url": "https://stackoverflow.com/questions/72382032/is-strict-aliasing-one-way",
+          "meta": [
+            "score 4  ·  3 answers  ·  answered  ·  c, x86, language-lawyer, strict-aliasing"
+          ]
+        },
+        {
+          "title": "Strict aliasing and memory locations",
+          "url": "https://stackoverflow.com/questions/23582544/strict-aliasing-and-memory-locations",
+          "meta": [
+            "score 16  ·  4 answers  ·  accepted answer  ·  c, memory, standards, strict-aliasing"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The Stack Overflow route returns several directly relevant strict-aliasing and effective-type questions; the first result is useful."
+    },
+    {
+      "index": 157,
+      "language": "haskell",
+      "query": "qs web haskell backpack signatures",
+      "expected": "DuckDuckGo results for Haskell Backpack signatures",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "web",
+        "haskell",
+        "backpack",
+        "signatures"
+      ],
+      "exit_code": 124,
+      "timed_out": true,
+      "elapsed_seconds": 30.02,
+      "provider": null,
+      "source_url": null,
+      "hits": [],
+      "score": 0,
+      "assessment": "The command timed out after 30 seconds and returned no JSON or relevant result."
+    },
+    {
+      "index": 158,
+      "language": "python",
+      "query": "qs pip orjson",
+      "expected": "PyPI package page for orjson",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "pip",
+        "orjson"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 30.008,
+      "provider": "pypi",
+      "source_url": "https://pypi.org/search/?q=orjson",
+      "hits": [
+        {
+          "title": "Search PyPI for orjson",
+          "url": "https://pypi.org/search/?q=orjson",
+          "snippet": "Open this search in a browser; qs does not automate robots-disallowed PyPI search or project endpoints."
+        }
+      ],
+      "score": 4,
+      "assessment": "The only hit is the exact PyPI search for orjson rather than the package page; it is useful but requires one more selection."
+    },
+    {
+      "index": 159,
+      "language": "go",
+      "query": "qs gh golang/tools",
+      "expected": "GitHub repository golang/tools",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "gh",
+        "golang/tools"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 30.005,
+      "provider": "github",
+      "source_url": "https://github.com/search?type=repositories&q=golang%2Ftools",
+      "hits": [
+        {
+          "title": "golang/tools",
+          "url": "https://github.com/golang/tools",
+          "snippet": "[mirror] Go Tools",
+          "meta": [
+            "8k stars  ·  Go"
+          ]
+        },
+        {
+          "title": "fortio/fortio",
+          "url": "https://github.com/fortio/fortio",
+          "snippet": "Fortio load testing library, command line tool, advanced echo server and web UI in go (golang). Allows to specify a set query-per-second load and record latency histograms and other useful stats.",
+          "meta": [
+            "3.7k stars  ·  Go"
+          ]
+        },
+        {
+          "title": "cirosantilli/china-dictatorship",
+          "url": "https://github.com/cirosantilli/china-dictatorship",
+          "snippet": "反中共政治宣传库。Anti Chinese government propaganda. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议。卐习万岁卐。冠状病毒审查郝海东新疆改造中心六四事件法轮功 996.ICU709大抓捕巴拿马文件邓家贵低端人口西藏骚乱。Friends who live in China and have real name on account, please don't star this repo, or else the police might pay you a visit. …",
+          "meta": [
+            "3.3k stars  ·  HTML"
+          ]
+        },
+        {
+          "title": "qax-os/goreporter",
+          "url": "https://github.com/qax-os/goreporter",
+          "snippet": "A Golang tool that does static analysis, unit testing, code review and generate code quality report.",
+          "meta": [
+            "3.1k stars  ·  Go"
+          ]
+        },
+        {
+          "title": "dreddsa5dies/goHackTools",
+          "url": "https://github.com/dreddsa5dies/goHackTools",
+          "snippet": "Hacker tools on Go (Golang)",
+          "meta": [
+            "2.2k stars  ·  Go"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The requested golang/tools repository is the first result."
+    },
+    {
+      "index": 160,
+      "language": "rust",
+      "query": "qs std std::hint::black_box",
+      "expected": "Official Rust standard-library page for std::hint::black_box",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "std",
+        "std::hint::black_box"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.162,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20hint%20black_box",
+      "hits": [
+        {
+          "title": "black_box in std::hint - Rust",
+          "url": "https://doc.rust-lang.org/std/hint/fn.black_box.html",
+          "snippet": "An identity function that hints to the compiler to be maximally pessimistic about what `black_box` could do."
+        },
+        {
+          "title": "Search Rust standard library for std::hint::black_box",
+          "url": "https://doc.rust-lang.org/std/?search=std%20hint%20black_box",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact official std::hint::black_box page is the first result."
+    },
+    {
+      "index": 161,
+      "language": "cpp",
+      "query": "qs man clang-format",
+      "expected": "Local clang-format manual page",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "man",
+        "clang-format"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.158,
+      "provider": "man",
+      "source_url": "https://clang.llvm.org/docs/ClangFormat.html",
+      "hits": [
+        {
+          "title": "ClangFormat documentation",
+          "url": "https://clang.llvm.org/docs/ClangFormat.html"
+        }
+      ],
+      "score": 4,
+      "assessment": "The local manual was unavailable, but the official ClangFormat documentation is first and useful."
+    },
+    {
+      "index": 162,
+      "language": "c",
+      "query": "qs wiki C standard library",
+      "expected": "Wikipedia result for C standard library",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "wiki",
+        "C",
+        "standard",
+        "library"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.599,
+      "provider": "wikipedia",
+      "source_url": "https://en.wikipedia.org/w/index.php?search=C%20standard%20library",
+      "hits": [
+        {
+          "title": "C standard library",
+          "url": "https://en.wikipedia.org/wiki/C_standard_library",
+          "snippet": "The C standard library, sometimes referred to as libc, is the standard library for the C programming language specified in the ISO C standard. Starting"
+        },
+        {
+          "title": "C++ Standard Library",
+          "url": "https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library",
+          "snippet": "C++ programming language, the C++ Standard Library is a collection of classes and functions, which are written in the core language and part of the C++"
+        },
+        {
+          "title": "Standard library",
+          "url": "https://en.wikipedia.org/wiki/Standard_library",
+          "snippet": "languages, the standard library often has its own namespace. For example, C++, D, and Rust use std::* as the standard library namespace. C# uses System"
+        },
+        {
+          "title": "Standard Template Library",
+          "url": "https://en.wikipedia.org/wiki/Standard_Template_Library",
+          "snippet": "The Standard Template Library (STL) was a software library originally designed by Alexander Stepanov for the C++ programming language that influenced many"
+        },
+        {
+          "title": "Boost (C++ libraries)",
+          "url": "https://en.wikipedia.org/wiki/Boost_%28C%2B%2B_libraries%29",
+          "snippet": "with the C++ Standard Library to supplement its features. Many of Boost's founders are on the C++ standards committee, and several Boost libraries have been"
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact Wikipedia article is the first result."
+    },
+    {
+      "index": 163,
+      "language": "haskell",
+      "query": "qs so haskell quantified constraints",
+      "expected": "Stack Overflow search for Haskell quantified constraints",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "so",
+        "haskell",
+        "quantified",
+        "constraints"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.596,
+      "provider": "stackoverflow",
+      "source_url": "https://stackoverflow.com/search?q=haskell%20quantified%20constraints",
+      "hits": [
+        {
+          "title": "Bifunctors in Haskell vs in category theory",
+          "url": "https://stackoverflow.com/questions/77395743/bifunctors-in-haskell-vs-in-category-theory",
+          "meta": [
+            "score 4  ·  2 answers  ·  accepted answer  ·  haskell, category-theory, bifunctor"
+          ]
+        },
+        {
+          "title": "Type variable introduction for existential types",
+          "url": "https://stackoverflow.com/questions/66801731/type-variable-introduction-for-existential-types",
+          "meta": [
+            "score 2  ·  1 answers  ·  accepted answer  ·  haskell, existential-type, quantifiers, rank-n-types"
+          ]
+        },
+        {
+          "title": "Deriving `Eq` for a data type based on a type family in Haskell",
+          "url": "https://stackoverflow.com/questions/77233833/deriving-eq-for-a-data-type-based-on-a-type-family-in-haskell",
+          "meta": [
+            "score 2  ·  1 answers  ·  accepted answer  ·  haskell, types, type-families, deriving"
+          ]
+        },
+        {
+          "title": "Free monad and type constraints",
+          "url": "https://stackoverflow.com/questions/34253216/free-monad-and-type-constraints",
+          "meta": [
+            "score 2  ·  1 answers  ·  accepted answer  ·  haskell, polymorphism, constraints, typeclass"
+          ]
+        },
+        {
+          "title": "Existential types in Haskell and generics in other languages",
+          "url": "https://stackoverflow.com/questions/66254777/existential-types-in-haskell-and-generics-in-other-languages",
+          "meta": [
+            "score 6  ·  3 answers  ·  accepted answer  ·  haskell, existential-type"
+          ]
+        }
+      ],
+      "score": 3,
+      "assessment": "The Stack Overflow route works, but the returned questions are only weakly related to quantified constraints."
+    },
+    {
+      "index": 164,
+      "language": "python",
+      "query": "qs web python free threading status",
+      "expected": "DuckDuckGo results for Python free threading status",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "web",
+        "python",
+        "free",
+        "threading",
+        "status"
+      ],
+      "exit_code": 124,
+      "timed_out": true,
+      "elapsed_seconds": 30.016,
+      "provider": null,
+      "source_url": null,
+      "hits": [],
+      "score": 0,
+      "assessment": "The command timed out after 30 seconds and returned no JSON or relevant result."
+    },
+    {
+      "index": 165,
+      "language": "go",
+      "query": "qs rfc QUIC transport",
+      "expected": "RFC title search for QUIC transport",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rfc",
+        "QUIC",
+        "transport"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 30.01,
+      "provider": "rfc",
+      "source_url": "https://datatracker.ietf.org/doc/search/?name=QUIC%20transport",
+      "hits": [
+        {
+          "title": "Applicability of the QUIC Transport Protocol",
+          "url": "https://www.rfc-editor.org/rfc/rfc9308",
+          "meta": [
+            "RFC 9308"
+          ]
+        },
+        {
+          "title": "HTTP/2 Semantics Using The QUIC Transport Protocol",
+          "url": "https://datatracker.ietf.org/doc/draft-shade-quic-http2-mapping",
+          "meta": [
+            "draft-shade-quic-http2-mapping"
+          ]
+        },
+        {
+          "title": "Applicability and Management of the QUIC Transport Protocol",
+          "url": "https://datatracker.ietf.org/doc/draft-kuehlewind-quic-appman",
+          "meta": [
+            "draft-kuehlewind-quic-appman"
+          ]
+        },
+        {
+          "title": "Applicability of the QUIC Transport Protocol",
+          "url": "https://datatracker.ietf.org/doc/draft-kuehlewind-quic-applicability",
+          "meta": [
+            "draft-kuehlewind-quic-applicability"
+          ]
+        },
+        {
+          "title": "Manageability of the QUIC Transport Protocol",
+          "url": "https://datatracker.ietf.org/doc/draft-kuehlewind-quic-manageability",
+          "meta": [
+            "draft-kuehlewind-quic-manageability"
+          ]
+        }
+      ],
+      "score": 3,
+      "assessment": "The RFC search returns QUIC transport documents, but it omits the core QUIC Transport RFC 9000 and starts with an applicability RFC."
+    },
+    {
+      "index": 166,
+      "language": "rust",
+      "query": "qs docs alloc::alloc::Layout",
+      "expected": "Official Rust alloc docs for alloc::alloc::Layout",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "docs",
+        "alloc::alloc::Layout"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 30.007,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=alloc%20alloc%20Layout",
+      "hits": [
+        {
+          "title": "Layout in alloc::alloc - Rust",
+          "url": "https://doc.rust-lang.org/alloc/alloc/struct.Layout.html",
+          "snippet": "Layout of a block of memory."
+        },
+        {
+          "title": "Search Rust standard library for alloc::alloc::Layout",
+          "url": "https://doc.rust-lang.org/std/?search=alloc%20alloc%20Layout",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact official alloc::alloc::Layout page is the first result."
+    },
+    {
+      "index": 167,
+      "language": "none",
+      "query": "qs 9780143127741",
+      "expected": "Product lookup for barcode 9780143127741",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "9780143127741"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 30.005,
+      "provider": "stock",
+      "source_url": "https://www.upcitemdb.com/upc/9780143127741",
+      "hits": [
+        {
+          "title": "The Body Keeps the Score - by Bessel Van Der Kolk (Paperback)",
+          "url": "https://www.upcitemdb.com/upc/9780143127741",
+          "snippet": "CAD"
+        }
+      ],
+      "score": 5,
+      "assessment": "The barcode resolves directly to a product page and named product."
+    },
+    {
+      "index": 168,
+      "language": "none",
+      "query": "qs 1912",
+      "expected": "DuckDuckGo web search for 1912",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "1912"
+      ],
+      "exit_code": 124,
+      "timed_out": true,
+      "elapsed_seconds": 30.025,
+      "provider": "web",
+      "source_url": "https://duckduckgo.com/?q=1912",
+      "hits": [
+        {
+          "title": "Search DuckDuckGo for 1912",
+          "url": "https://duckduckgo.com/?q=1912",
+          "snippet": "Open this search in your browser."
+        }
+      ],
+      "score": 0,
+      "assessment": "The command exceeded the 30-second timeout. It emitted only a generic DuckDuckGo fallback before termination, so the run is an error."
+    },
+    {
+      "index": 169,
+      "language": "none",
+      "query": "qs item 012345678905",
+      "expected": "Product lookup for barcode 012345678905",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "item",
+        "012345678905"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 30.009,
+      "provider": "stock",
+      "source_url": "https://world.openfoodfacts.org/product/012345678905",
+      "hits": [
+        {
+          "title": "Sphère plaisir",
+          "url": "https://world.openfoodfacts.org/product/012345678905",
+          "snippet": "Alteña's Nopales, Laugar · 1"
+        }
+      ],
+      "score": 5,
+      "assessment": "The barcode resolves directly to a product page and named product."
+    },
+    {
+      "index": 170,
+      "language": "none",
+      "query": "qs stock ASML",
+      "expected": "Stock lookup for ASML",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "stock",
+        "ASML"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.557,
+      "provider": "stock",
+      "source_url": "https://world.openfoodfacts.org/cgi/search.pl?search_terms=ASML",
+      "hits": [
+        {
+          "title": "Search products for ASML",
+          "url": "https://world.openfoodfacts.org/cgi/search.pl?search_terms=ASML"
+        }
+      ],
+      "score": 1,
+      "assessment": "The stock query is misrouted to an Open Food Facts product search for ASML, with no financial result."
+    },
+    {
+      "index": 171,
+      "language": "none",
+      "query": "qs cve CVE-2024-3094",
+      "expected": "NVD advisory for CVE-2024-3094",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cve",
+        "CVE-2024-3094"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.554,
+      "provider": "nvd",
+      "source_url": "https://nvd.nist.gov/vuln/search/results?query=CVE-2024-3094",
+      "hits": [
+        {
+          "title": "CVE-2024-3094",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-3094",
+          "snippet": "Malicious code was discovered in the upstream tarballs of xz, starting with version 5.6.0. Through a series of complex obfuscations, the liblzma build process extracts a prebuilt object file from a disguised test file existing in the source code, which is then used to modify specific functions in the liblzma code. Thi…",
+          "meta": [
+            "CRITICAL 10"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact NVD advisory is the first result."
+    },
+    {
+      "index": 172,
+      "language": "none",
+      "query": "qs nvd libwebp heap overflow",
+      "expected": "NVD advisory search for libwebp heap overflow",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "nvd",
+        "libwebp",
+        "heap",
+        "overflow"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.551,
+      "provider": "nvd",
+      "source_url": "https://nvd.nist.gov/vuln/search/results?query=libwebp%20heap%20overflow",
+      "hits": [
+        {
+          "title": "CVE-2018-25009",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25009",
+          "snippet": "A heap-based buffer overflow was found in libwebp in versions before 1.0.1 in GetLE16().",
+          "meta": [
+            "CRITICAL 9.1"
+          ]
+        },
+        {
+          "title": "CVE-2018-25010",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25010",
+          "snippet": "A heap-based buffer overflow was found in libwebp in versions before 1.0.1 in ApplyFilter().",
+          "meta": [
+            "CRITICAL 9.1"
+          ]
+        },
+        {
+          "title": "CVE-2018-25011",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25011",
+          "snippet": "A heap-based buffer overflow was found in libwebp in versions before 1.0.1 in PutLE16().",
+          "meta": [
+            "CRITICAL 9.8"
+          ]
+        },
+        {
+          "title": "CVE-2018-25012",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25012",
+          "snippet": "A heap-based buffer overflow was found in libwebp in versions before 1.0.1 in GetLE24().",
+          "meta": [
+            "CRITICAL 9.1"
+          ]
+        },
+        {
+          "title": "CVE-2018-25013",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25013",
+          "snippet": "A heap-based buffer overflow was found in libwebp in versions before 1.0.1 in ShiftBytes().",
+          "meta": [
+            "CRITICAL 9.1"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The NVD search returns directly relevant libwebp heap-overflow advisories, led by a specific critical CVE."
+    },
+    {
+      "index": 173,
+      "language": "none",
+      "query": "qs npm fast-glob",
+      "expected": "npm registry page for fast-glob",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "npm",
+        "fast-glob"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.548,
+      "provider": "npm",
+      "source_url": "https://www.npmjs.com/search?q=fast-glob",
+      "hits": [
+        {
+          "title": "fast-glob",
+          "url": "https://www.npmjs.com/package/fast-glob",
+          "snippet": "It's a very fast and efficient glob library for Node.js",
+          "meta": [
+            "3.3.3"
+          ]
+        },
+        {
+          "title": "tinyglobby",
+          "url": "https://www.npmjs.com/package/tinyglobby",
+          "snippet": "A fast and minimal alternative to globby and fast-glob",
+          "meta": [
+            "0.2.17"
+          ]
+        },
+        {
+          "title": "@bluelovers/fast-glob",
+          "url": "https://www.npmjs.com/package/@bluelovers/fast-glob",
+          "snippet": "old typescript api for fast-glob",
+          "meta": [
+            "3.0.4"
+          ]
+        },
+        {
+          "title": "fdir",
+          "url": "https://www.npmjs.com/package/fdir",
+          "snippet": "The fastest directory crawler & globbing alternative to glob, fast-glob, & tiny-glob. Crawls 1m files in < 1s",
+          "meta": [
+            "6.5.0"
+          ]
+        },
+        {
+          "title": "@neodx/glob",
+          "url": "https://www.npmjs.com/package/@neodx/glob",
+          "snippet": "Fast glob matching and path walking helpers",
+          "meta": [
+            "1.1.1"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact npm package is the first result."
+    },
+    {
+      "index": 174,
+      "language": "none",
+      "query": "qs gem faraday",
+      "expected": "RubyGems page for faraday",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "gem",
+        "faraday"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.545,
+      "provider": "rubygems",
+      "source_url": "https://rubygems.org/search?query=faraday",
+      "hits": [
+        {
+          "title": "faraday",
+          "url": "https://rubygems.org/gems/faraday",
+          "snippet": "HTTP/REST API client library.",
+          "meta": [
+            "2.14.4"
+          ]
+        },
+        {
+          "title": "faraday_middleware",
+          "url": "https://rubygems.org/gems/faraday_middleware",
+          "snippet": "Various middleware for Faraday",
+          "meta": [
+            "1.2.1"
+          ]
+        },
+        {
+          "title": "faraday-retry",
+          "url": "https://rubygems.org/gems/faraday-retry",
+          "snippet": "Catches exceptions and retries each request a limited number of times.",
+          "meta": [
+            "2.4.0"
+          ]
+        },
+        {
+          "title": "faraday-multipart",
+          "url": "https://rubygems.org/gems/faraday-multipart",
+          "snippet": "Perform multipart-post requests using Faraday.",
+          "meta": [
+            "1.2.0"
+          ]
+        },
+        {
+          "title": "faraday-excon",
+          "url": "https://rubygems.org/gems/faraday-excon",
+          "snippet": "Faraday adapter for Excon",
+          "meta": [
+            "2.4.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact RubyGems package is the first result."
+    },
+    {
+      "index": 175,
+      "language": "none",
+      "query": "qs hex bandit",
+      "expected": "Hex package page for bandit",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "hex",
+        "bandit"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.661,
+      "provider": "hex",
+      "source_url": "https://hex.pm/packages?search=bandit",
+      "hits": [
+        {
+          "title": "bandit",
+          "url": "https://hex.pm/packages/bandit",
+          "snippet": "A pure-Elixir HTTP server built for Plug & WebSock apps"
+        },
+        {
+          "title": "opentelemetry_bandit",
+          "url": "https://hex.pm/packages/opentelemetry_bandit",
+          "snippet": "Telemetry handler that creates Opentelemetry spans from Bandit events."
+        },
+        {
+          "title": "lasso",
+          "url": "https://hex.pm/packages/lasso",
+          "snippet": "Simulate remote HTTP services with local Bandit servers."
+        },
+        {
+          "title": "francis",
+          "url": "https://hex.pm/packages/francis",
+          "snippet": "Boilerplate killer using Plug with Bandit to quickly build endpoints, websocket and SSE listeners"
+        },
+        {
+          "title": "vancouver",
+          "url": "https://hex.pm/packages/vancouver",
+          "snippet": "Quickly add Model Context Protocol (MCP) functionality to your Phoenix/Bandit server."
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact Hex package is the first result."
+    },
+    {
+      "index": 176,
+      "language": "none",
+      "query": "qs maven org.flywaydb flyway-core",
+      "expected": "Maven registry result for org.flywaydb:flyway-core",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "maven",
+        "org.flywaydb",
+        "flyway-core"
+      ],
+      "exit_code": 1,
+      "timed_out": false,
+      "elapsed_seconds": 15.325,
+      "provider": null,
+      "source_url": null,
+      "hits": [],
+      "score": 0,
+      "assessment": "The Maven lookup failed with a network read timeout and returned non-JSON error output."
+    },
+    {
+      "index": 177,
+      "language": "none",
+      "query": "qs nuget Polly",
+      "expected": "NuGet page for Polly",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "nuget",
+        "Polly"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 15.323,
+      "provider": "nuget",
+      "source_url": "https://www.nuget.org/packages?q=Polly",
+      "hits": [
+        {
+          "title": "Polly",
+          "url": "https://github.com/App-vNext/Polly",
+          "snippet": "Polly is a .NET resilience and transient-fault-handling library that allows developers to express resilience and transient fault handling policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.",
+          "meta": [
+            "8.8.0"
+          ]
+        },
+        {
+          "title": "Polly.Core",
+          "url": "https://github.com/App-vNext/Polly",
+          "snippet": "Polly.Core is a .NET resilience and transient-fault-handling library that allows developers to express resilience strategies such as Retry, Circuit Breaker, Hedging, Timeout, Chaos and Fallback in a fluent and thread-safe manner.",
+          "meta": [
+            "8.8.0"
+          ]
+        },
+        {
+          "title": "AWSSDK.Polly",
+          "url": "https://github.com/aws/aws-sdk-net/",
+          "snippet": "Amazon Polly is a service that turns text into lifelike speech, making it easy to develop applications that use high-quality speech to increase engagement and accessibility.",
+          "meta": [
+            "4.0.100.17"
+          ]
+        },
+        {
+          "title": "Polly.Extensions.Http",
+          "url": "https://github.com/App-vNext/Polly.Extensions.Http",
+          "snippet": "Polly.Extensions.Http is an extensions package containing opinionated convenience methods for configuring Polly policies to handle transient faults typical of calls through HttpClient.",
+          "meta": [
+            "3.0.0"
+          ]
+        },
+        {
+          "title": "Microsoft.Extensions.Http.Polly",
+          "url": "https://asp.net/",
+          "snippet": "The HttpClient factory is a pattern for configuring and retrieving named HttpClients in a composable way. This package integrates IHttpClientFactory with the Polly library, to add transient-fault-handling and resiliency through fluent policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback. This package was built from the source code at https://github.com/dotnet/dotnet/tree/95017c711e6afc1085133d440e42b4bd78155701",
+          "meta": [
+            "10.0.12"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "Polly is the first NuGet search result with useful package details, but its URL points to GitHub rather than the NuGet package page."
+    },
+    {
+      "index": 178,
+      "language": "none",
+      "query": "qs wiki Ada Lovelace",
+      "expected": "Wikipedia page for Ada Lovelace",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "wiki",
+        "Ada",
+        "Lovelace"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 15.32,
+      "provider": "wikipedia",
+      "source_url": "https://en.wikipedia.org/w/index.php?search=Ada%20Lovelace",
+      "hits": [
+        {
+          "title": "Ada Lovelace",
+          "url": "https://en.wikipedia.org/wiki/Ada_Lovelace",
+          "snippet": "Augusta Ada King, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852), also known as Ada Lovelace, was an English mathematician and"
+        },
+        {
+          "title": "Ada Lovelace (microarchitecture)",
+          "url": "https://en.wikipedia.org/wiki/Ada_Lovelace_%28microarchitecture%29",
+          "snippet": "Ada Lovelace, also referred to simply as Lovelace, is a graphics processing unit (GPU) microarchitecture developed by Nvidia as the successor to the Ampere"
+        },
+        {
+          "title": "Ada Lovelace Day",
+          "url": "https://en.wikipedia.org/wiki/Ada_Lovelace_Day",
+          "snippet": "Ada Lovelace Day is an annual event held on the second Tuesday of October to celebrate and raise awareness of the contributions of women to STEM fields"
+        },
+        {
+          "title": "Ada Lovelace Award",
+          "url": "https://en.wikipedia.org/wiki/Ada_Lovelace_Award",
+          "snippet": "The Ada Lovelace Award is given in honor of the English mathematician and computer programmer, Ada Lovelace, by the Association for Women in Computing"
+        },
+        {
+          "title": "Portrait of Ada Lovelace",
+          "url": "https://en.wikipedia.org/wiki/Portrait_of_Ada_Lovelace",
+          "snippet": "of Ada Lovelace is an oil on canvas portrait painting by the British artist Margaret Sarah Carpenter, from 1836. It depicts the mathematician Ada Lovelace"
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact Wikipedia article is the first result."
+    },
+    {
+      "index": 179,
+      "language": "none",
+      "query": "qs mdn AbortSignal.any",
+      "expected": "MDN page for AbortSignal.any",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "mdn",
+        "AbortSignal.any"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 15.317,
+      "provider": "mdn",
+      "source_url": "https://developer.mozilla.org/en-US/search?q=AbortSignal.any",
+      "hits": [
+        {
+          "title": "AbortSignal: any() static method",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/any_static",
+          "snippet": "The AbortSignal.any() static method takes an iterable of abort signals and returns an AbortSignal. The returned abort signal is aborted when any of the input iterable abort signals are aborted. The abort reason will be set to the reason of the first signal that is aborted. If any of the given abort signals are already…"
+        },
+        {
+          "title": "AbortSignal",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal",
+          "snippet": "The AbortSignal interface represents a signal object that allows you to communicate with an asynchronous operation (such as a fetch request) and abort it if required via an AbortController object."
+        },
+        {
+          "title": "AbortSignal: abort event",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort_event",
+          "snippet": "The abort event of the AbortSignal is fired when the associated request is aborted, i.e., using AbortController.abort()."
+        },
+        {
+          "title": "AbortSignal: abort() static method",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort_static",
+          "snippet": "The AbortSignal.abort() static method returns an AbortSignal that is already set as aborted (and which does not trigger an abort event)."
+        },
+        {
+          "title": "TaskSignal: any() static method",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/TaskSignal/any_static",
+          "snippet": "The TaskSignal.any() static method takes an iterable of AbortSignal objects and returns a TaskSignal. The returned task signal is aborted when any of the abort signals is aborted."
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact MDN AbortSignal.any() page is the first result."
+    },
+    {
+      "index": 180,
+      "language": "none",
+      "query": "qs so git rerere",
+      "expected": "Stack Overflow search for git rerere",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "so",
+        "git",
+        "rerere"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.327,
+      "provider": "stackoverflow",
+      "source_url": "https://stackoverflow.com/search?q=git%20rerere",
+      "hits": [
+        {
+          "title": "Are there any downsides to enabling git rerere?",
+          "url": "https://stackoverflow.com/questions/5519244/are-there-any-downsides-to-enabling-git-rerere",
+          "meta": [
+            "score 151  ·  5 answers  ·  accepted answer  ·  git, merge, git-rerere"
+          ]
+        },
+        {
+          "title": "What is git-rerere and how does it work?",
+          "url": "https://stackoverflow.com/questions/49500943/what-is-git-rerere-and-how-does-it-work",
+          "meta": [
+            "score 80  ·  2 answers  ·  answered  ·  git, version-control, continuous-integration, git-rerere"
+          ]
+        },
+        {
+          "title": "Have git rerere automatically mark files as resolved?",
+          "url": "https://stackoverflow.com/questions/3283670/have-git-rerere-automatically-mark-files-as-resolved",
+          "meta": [
+            "score 20  ·  1 answers  ·  accepted answer  ·  git, merge, conflict, git-rerere"
+          ]
+        },
+        {
+          "title": "Git rerere and resolution covering non-conflicting files",
+          "url": "https://stackoverflow.com/questions/43280083/git-rerere-and-resolution-covering-non-conflicting-files",
+          "meta": [
+            "score 3  ·  1 answers  ·  accepted answer  ·  git, git-rerere"
+          ]
+        },
+        {
+          "title": "Can git rerere be applied retroactively?",
+          "url": "https://stackoverflow.com/questions/59167367/can-git-rerere-be-applied-retroactively",
+          "meta": [
+            "score 4  ·  0 answers  ·  unanswered  ·  git"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The Stack Overflow results begin with directly useful git rerere questions."
+    },
+    {
+      "index": 181,
+      "language": "none",
+      "query": "qs gh sharkdp/bat",
+      "expected": "GitHub repository sharkdp/bat",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "gh",
+        "sharkdp/bat"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.458,
+      "provider": "github",
+      "source_url": "https://github.com/search?type=repositories&q=sharkdp%2Fbat",
+      "hits": [
+        {
+          "title": "sharkdp/bat",
+          "url": "https://github.com/sharkdp/bat",
+          "snippet": "A cat(1) clone with wings.",
+          "meta": [
+            "60.8k stars  ·  Rust"
+          ]
+        },
+        {
+          "title": "victor-gp/cmd-help-sublime-syntax",
+          "url": "https://github.com/victor-gp/cmd-help-sublime-syntax",
+          "snippet": "Sublime Syntax definition for sharkdp/bat to colorize command --help messages.",
+          "meta": [
+            "26 stars  ·  YAML"
+          ]
+        },
+        {
+          "title": "ttys3/syntect-assets",
+          "url": "https://github.com/ttys3/syntect-assets",
+          "snippet": "syntect syntax and theme assets from [bat](https://github.com/sharkdp/bat)",
+          "meta": [
+            "4 stars  ·  Rust"
+          ]
+        },
+        {
+          "title": "badloop/bat-rose-pine",
+          "url": "https://github.com/badloop/bat-rose-pine",
+          "snippet": "Something beautiful for sharkdp/bat",
+          "meta": [
+            "1 stars  ·  unknown"
+          ]
+        },
+        {
+          "title": "teleivo/bat-dogrun",
+          "url": "https://github.com/teleivo/bat-dogrun",
+          "snippet": "dogrun theme for https://github.com/sharkdp/bat",
+          "meta": [
+            "1 stars  ·  unknown"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The requested sharkdp/bat repository is the first result."
+    },
+    {
+      "index": 182,
+      "language": "none",
+      "query": "qs debian unattended upgrades",
+      "expected": "Debian Wiki result for unattended upgrades",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "debian",
+        "unattended",
+        "upgrades"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.671,
+      "provider": "Debian Wiki",
+      "source_url": "https://wiki.debian.org/?action=fullsearch&context=180&value=unattended%20upgrades",
+      "hits": [
+        {
+          "title": "unattended upgrades",
+          "url": "https://wiki.debian.org/?action=fullsearch&context=180&value=unattended%20upgrades"
+        }
+      ],
+      "score": 4,
+      "assessment": "The Debian Wiki search is correctly scoped and useful, but it returns only the search page rather than a specific article."
+    },
+    {
+      "index": 183,
+      "language": "none",
+      "query": "qs ubuntu netplan policy routing",
+      "expected": "Ubuntu Wiki result for netplan policy routing",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "ubuntu",
+        "netplan",
+        "policy",
+        "routing"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.066,
+      "provider": "Ubuntu Wiki",
+      "source_url": "https://duckduckgo.com/?q=site%3Awiki.ubuntu.com%20netplan%20policy%20routing",
+      "hits": [
+        {
+          "title": "Search Ubuntu Wiki for netplan policy routing",
+          "url": "https://duckduckgo.com/?q=site%3Awiki.ubuntu.com%20netplan%20policy%20routing"
+        }
+      ],
+      "score": 2,
+      "assessment": "The Ubuntu Wiki lookup falls back to a site-scoped DuckDuckGo search after an HTTP 404 and provides no specific result."
+    },
+    {
+      "index": 184,
+      "language": "none",
+      "query": "qs fedora toolbox",
+      "expected": "Fedora Wiki result for toolbox",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "fedora",
+        "toolbox"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.063,
+      "provider": "Fedora Wiki",
+      "source_url": "https://fedoraproject.org/wiki/Special:Search?search=toolbox",
+      "hits": [
+        {
+          "title": "Architectures/RISC-V/Toolbox",
+          "url": "https://fedoraproject.org/wiki/Architectures/RISC-V/Toolbox",
+          "snippet": "= Fedora RISC-V Toolbox Guide = This page documents how to download, verify, load, and use Fedora RISC-V Toolbox OCI images."
+        }
+      ],
+      "score": 3,
+      "assessment": "The only result is a Fedora RISC-V Toolbox guide, which is relevant but too narrow for the general Fedora Toolbox query."
+    },
+    {
+      "index": 185,
+      "language": "none",
+      "query": "qs gentoo eselect repository",
+      "expected": "Gentoo Wiki result for eselect repository",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "gentoo",
+        "eselect",
+        "repository"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.06,
+      "provider": "Gentoo Wiki",
+      "source_url": "https://wiki.gentoo.org/index.php?search=eselect%20repository",
+      "hits": [
+        {
+          "title": "Eselect/Repository",
+          "url": "https://wiki.gentoo.org/wiki/Eselect/Repository",
+          "snippet": "|{{InfoBox github|mgorny/eselect-repository|header=true}} |{{InfoBox package|app-eselect/eselect-repository}}"
+        },
+        {
+          "title": "Eselect/Repository/ta",
+          "url": "https://wiki.gentoo.org/wiki/Eselect/Repository/ta",
+          "snippet": "|{{InfoBox github|mgorny/eselect-repository|header=true}} |{{InfoBox package|app-eselect/eselect-repository}}"
+        },
+        {
+          "title": "Eselect/Repository/hu",
+          "url": "https://wiki.gentoo.org/wiki/Eselect/Repository/hu",
+          "snippet": "|{{InfoBox github|mgorny/eselect-repository|header=true}} |{{InfoBox package|app-eselect/eselect-repository}}"
+        },
+        {
+          "title": "Eselect/Repository/en",
+          "url": "https://wiki.gentoo.org/wiki/Eselect/Repository/en",
+          "snippet": "|{{InfoBox github|mgorny/eselect-repository|header=true}} |{{InfoBox package|app-eselect/eselect-repository}}"
+        },
+        {
+          "title": "Eselect/Repository/ja",
+          "url": "https://wiki.gentoo.org/wiki/Eselect/Repository/ja",
+          "snippet": "|{{InfoBox github|mgorny/eselect-repository|header=true}} |{{InfoBox package|app-eselect/eselect-repository}}"
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact Gentoo Eselect/Repository page is the first result."
+    },
+    {
+      "index": 186,
+      "language": "none",
+      "query": "qs arch mkinitcpio unified kernel image",
+      "expected": "ArchWiki result for unified kernel image",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "arch",
+        "mkinitcpio",
+        "unified",
+        "kernel",
+        "image"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.058,
+      "provider": "Arch Wiki",
+      "source_url": "https://wiki.archlinux.org/index.php?search=mkinitcpio%20unified%20kernel%20image",
+      "hits": [
+        {
+          "title": "Search Arch Wiki for mkinitcpio unified kernel image",
+          "url": "https://wiki.archlinux.org/index.php?search=mkinitcpio%20unified%20kernel%20image"
+        }
+      ],
+      "score": 2,
+      "assessment": "The ArchWiki lookup returns only a search link and reports that no matching page was found."
+    },
+    {
+      "index": 187,
+      "language": "none",
+      "query": "qs man 5 resolv.conf",
+      "expected": "Local resolv.conf manual section 5",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "man",
+        "5",
+        "resolv.conf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.054,
+      "provider": "man",
+      "source_url": null,
+      "hits": [
+        {
+          "title": "resolv.conf (5)",
+          "url": "man://5/resolv.conf"
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact local resolv.conf(5) manual entry is the first result."
+    },
+    {
+      "index": 188,
+      "language": "none",
+      "query": "qs cargo metadata",
+      "expected": "cargo-metadata manual page",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cargo",
+        "metadata"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.052,
+      "provider": "man",
+      "source_url": null,
+      "hits": [
+        {
+          "title": "cargo-metadata (1)",
+          "url": "man://1/cargo-metadata"
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact local cargo-metadata(1) manual entry is the first result."
+    },
+    {
+      "index": 189,
+      "language": "none",
+      "query": "qs podman kube play",
+      "expected": "podman-kube-play manual page",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "podman",
+        "kube",
+        "play"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.049,
+      "provider": "man",
+      "source_url": null,
+      "hits": [
+        {
+          "title": "podman-kube-play (1)",
+          "url": "man://1/podman-kube-play"
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact local podman-kube-play(1) manual entry is the first result."
+    },
+    {
+      "index": 190,
+      "language": "none",
+      "query": "qs dnf ripgrep",
+      "expected": "DNF package information for ripgrep",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "dnf",
+        "ripgrep"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.038,
+      "provider": "dnf",
+      "source_url": null,
+      "hits": [],
+      "score": 5,
+      "assessment": "The command returns complete local DNF package information for ripgrep."
+    },
+    {
+      "index": 191,
+      "language": "none",
+      "query": "qs apt policy",
+      "expected": "apt-policy manual page",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "apt",
+        "policy"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.044,
+      "provider": "man",
+      "source_url": null,
+      "hits": [
+        {
+          "title": "apt-policy",
+          "url": "https://manpages.debian.org/unstable/apt/apt.8.en.html"
+        }
+      ],
+      "score": 2,
+      "assessment": "The requested local manual is absent, and the fallback incorrectly links the general apt(8) page rather than a policy-specific manual."
+    },
+    {
+      "index": 192,
+      "language": "none",
+      "query": "qs brew leaves",
+      "expected": "brew-leaves manual page",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "brew",
+        "leaves"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.044,
+      "provider": "man",
+      "source_url": null,
+      "hits": [
+        {
+          "title": "brew-leaves",
+          "url": "https://docs.brew.sh/Manpage"
+        }
+      ],
+      "score": 4,
+      "assessment": "The local manual is absent, but the Homebrew manual is a useful fallback for the leaves command."
+    },
+    {
+      "index": 193,
+      "language": "none",
+      "query": "qs flatpak remotes",
+      "expected": "flatpak-remotes manual page",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "flatpak",
+        "remotes"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.071,
+      "provider": "man",
+      "source_url": null,
+      "hits": [
+        {
+          "title": "flatpak-remotes (1)",
+          "url": "man://1/flatpak-remotes"
+        }
+      ],
+      "score": 5,
+      "assessment": "The exact local flatpak-remotes(1) manual entry is the first result."
+    },
+    {
+      "index": 194,
+      "language": "none",
+      "query": "qs snap connections",
+      "expected": "snap-connections manual page",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "snap",
+        "connections"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.068,
+      "provider": "man",
+      "source_url": null,
+      "hits": [
+        {
+          "title": "snap-connections",
+          "url": "https://snapcraft.io/docs/command-reference"
+        }
+      ],
+      "score": 4,
+      "assessment": "The local manual is absent, but the Snap command reference is a useful fallback for connections."
+    },
+    {
+      "index": 195,
+      "language": "none",
+      "query": "qs web rust crate serde",
+      "expected": "DuckDuckGo results for rust crate serde",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "web",
+        "rust",
+        "crate",
+        "serde"
+      ],
+      "exit_code": 124,
+      "timed_out": true,
+      "elapsed_seconds": 30.015,
+      "provider": null,
+      "source_url": null,
+      "hits": [],
+      "score": 0,
+      "assessment": "The command timed out after 30 seconds and returned no JSON or relevant result."
+    },
+    {
+      "index": 196,
+      "language": "none",
+      "query": "qs !aur paru-bin",
+      "expected": "DuckDuckGo bang result for !aur paru-bin",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "!aur",
+        "paru-bin"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 30.009,
+      "provider": "aur",
+      "source_url": "https://aur.archlinux.org/packages?O=0&K=paru-bin",
+      "hits": [
+        {
+          "title": "Search AUR packages for paru-bin",
+          "url": "https://aur.archlinux.org/packages?O=0&K=paru-bin"
+        }
+      ],
+      "score": 4,
+      "assessment": "The AUR search for paru-bin is directly useful, although it is not the expected DuckDuckGo bang result or a direct package page."
+    },
+    {
+      "index": 197,
+      "language": "none",
+      "query": "qs cheat tar extract strip components",
+      "expected": "cheat.sh result for tar extraction",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cheat",
+        "tar",
+        "extract",
+        "strip",
+        "components"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 30.005,
+      "provider": "cheat.sh",
+      "source_url": "https://cheat.sh/~tar+extract+strip+components",
+      "hits": [
+        {
+          "title": "Search cheat.sh for tar extract strip components",
+          "url": "https://cheat.sh/~tar+extract+strip+components",
+          "snippet": "The exact topic was unavailable."
+        }
+      ],
+      "score": 2,
+      "assessment": "No exact cheat sheet is returned; the only hit is a related cheat.sh search link, so the result is partial."
+    },
+    {
+      "index": 198,
+      "language": "none",
+      "query": "qs rfc structured field values HTTP",
+      "expected": "RFC title search for Structured Field Values for HTTP",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rfc",
+        "structured",
+        "field",
+        "values",
+        "HTTP"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 30.002,
+      "provider": "rfc",
+      "source_url": "https://datatracker.ietf.org/doc/search/?name=structured%20field%20values%20HTTP",
+      "hits": [
+        {
+          "title": "Structured Field Values for HTTP",
+          "url": "https://www.rfc-editor.org/rfc/rfc9651",
+          "meta": [
+            "RFC 9651"
+          ]
+        },
+        {
+          "title": "Structured Field Values for HTTP",
+          "url": "https://www.rfc-editor.org/rfc/rfc8941",
+          "meta": [
+            "RFC 8941"
+          ]
+        },
+        {
+          "title": "Structured Field Values for HTTP",
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-httpbis-sfbis",
+          "meta": [
+            "draft-ietf-httpbis-sfbis"
+          ]
+        },
+        {
+          "title": "Structured Field Values for HTTP",
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-httpbis-header-structure",
+          "meta": [
+            "draft-ietf-httpbis-header-structure"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The current Structured Field Values for HTTP RFC is the first result, followed by the earlier RFC."
+    },
+    {
+      "index": 199,
+      "language": "none",
+      "query": "qs price of palladium per ounce",
+      "expected": "DuckDuckGo web search for palladium price",
+      "class": "non-language-routing-control",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "price",
+        "of",
+        "palladium",
+        "per",
+        "ounce"
+      ],
+      "exit_code": 124,
+      "timed_out": true,
+      "elapsed_seconds": 30.014,
+      "provider": null,
+      "source_url": null,
+      "hits": [],
+      "score": 0,
+      "assessment": "The command timed out after 30 seconds and returned no JSON or relevant result."
+    }
+  ]
+}

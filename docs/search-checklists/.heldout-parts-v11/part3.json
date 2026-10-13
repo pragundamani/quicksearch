@@ -1,0 +1,2051 @@
+{
+  "binary": "/tmp/qs-gate/release/qs",
+  "sha256": "8f05a6dcd581ef25fe5d2904b169cb3794a94056b19d687cf4646a6372cc096d",
+  "manifest": "/home/paragon/settings-configs/scripts/quicksearch/docs/search-checklists/heldout_manifest.json",
+  "indexes": [
+    100,
+    149
+  ],
+  "json_mode": true,
+  "timeout_seconds": 20,
+  "rubric": {
+    "5": "canonical/immediately useful first",
+    "4": "expected target top 3/useful",
+    "3": "relevant but weak",
+    "2": "partial",
+    "1": "misleading",
+    "0": "error or no relevant result"
+  },
+  "summary": {
+    "count": 50,
+    "total_score": 236,
+    "maximum_score": 250,
+    "average_score": 4.72,
+    "score_at_least_3": 50,
+    "score_at_least_4": 45,
+    "errors": 0,
+    "timeouts": 0,
+    "distribution": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 5,
+      "4": 4,
+      "5": 41
+    }
+  },
+  "results": [
+    {
+      "index": 100,
+      "language": "c",
+      "query": "qs c reference standard code example quick answer feclearexcept floating environment",
+      "expected": "feclearexcept",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "reference",
+        "standard",
+        "code",
+        "example",
+        "quick",
+        "answer",
+        "feclearexcept",
+        "floating",
+        "environment"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.020578,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "feclearexcept",
+          "url": "https://devdocs.io/c/numeric/fenv/feclearexcept",
+          "snippet": "0 if all indicated exceptions were successfully cleared or if excepts is zero. Returns a non-zero value on error.",
+          "meta": [
+            "C  ·  Numerics",
+            "#include <fenv.h>\n#include <stdio.h>\n#include <math.h>\n#include <float.h>\n\n/*\n * A possible implementation of hypot which makes use of many advanced\n * floating-point features.\n */\ndouble hypot_demo(double a, double b) {\n  const int range_problem = FE_OVERFLOW | FE_UNDERFLOW;\n  feclearexcept(range_problem);\n  // try a fast algorithm\n  double result = sqrt(a * a + b * b);\n  if (!fetestexcept(range_problem))  // no overflow or underflow\n    return result;                   // return the fast result\n  // do a more complicated calculation to avoid overflow or underflow\n  int a_exponent,b_exponent;\n  frexp(a, &a_exponent);\n  frexp(b, &b_exponent);\n\n  if (a_exponent - b_exponent > DBL_MAX_EXP)\n    return fabs(a) + fabs(b);        // we can ignore the smaller value\n  // scale so that fabs(a) is near 1\n  double a_scaled = scalbn(a, -a_exponent);\n  double b_scaled = scalbn(b, -a_exponent);\n  // overflow and underflow is now impossible \n  result = sqrt(a_scaled * a_scaled + b_scaled * b_scaled);\n  // undo scaling\n  return scalbn(result, a_exponent);\n}\n\nint main(void)\n{\n  // Normal case takes the fast route\n  printf(\"hypot(%f, %f) = %f\\n\", 3.0, 4.0, hypot_demo(3.0, 4.0));\n  // Extreme case takes the slow but more accurate route\n  printf(\"hypot(%e, %e) = %e\\n\", DBL_MAX / 2.0, \n                                DBL_MAX / 2.0, \n                                hypot_demo(DBL_MAX / 2.0, DBL_MAX / 2.0));\n\n  return 0;\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`feclearexcept`). It is immediately useful."
+    },
+    {
+      "index": 101,
+      "language": "haskell",
+      "query": "qs haskell Data.IntMap.lookupGE",
+      "expected": "Data.IntMap.lookupGE",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "Data.IntMap.lookupGE"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.083588,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "lookupGE :: Key -> IntMap a -> Maybe (Key, a)",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-IntMap.html#v:lookupGE",
+          "snippet": "<math>. Find smallest key greater or equal to the given one and return the corresponding (key, value) pair. lookupGE 3 (fromList [(3,'a'), (5,'b')]) == Just (3, 'a') lookupGE 4 (fromList [(3,'a'), (5,'b')]) == Just (5, 'b') lookupGE 6 (fromList [(3,'a'), (5,'b')]) == Nothing",
+          "meta": [
+            "containers  ·  Data.IntMap"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`lookupGE :: Key -> IntMap a -> Maybe (Key, a)`). It is immediately useful."
+    },
+    {
+      "index": 102,
+      "language": "python",
+      "query": "qs python mmap.mmap.madvise",
+      "expected": "mmap.mmap.madvise()",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "mmap.mmap.madvise"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.149771,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "mmap.mmap.madvise()",
+          "url": "https://devdocs.io/python~3.15/library/mmap#mmap.mmap.madvise",
+          "snippet": "Send advice option to the kernel about the memory region beginning at start and extending length bytes. option must be one of the MADV_* constants available on the system. If start and length are omitted, the entire mapping is spanned. On some systems (including Linux), start must be a multiple of the PAGESIZE.",
+          "meta": [
+            "Python  ·  Networking & Interprocess Communication"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`mmap.mmap.madvise()`). It is immediately useful."
+    },
+    {
+      "index": 103,
+      "language": "go",
+      "query": "qs go net/netip.ParsePrefix",
+      "expected": "net/netip.ParsePrefix",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "net/netip.ParsePrefix"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.005773,
+      "provider": "pkg.go.dev",
+      "source_url": "https://pkg.go.dev/net/netip#ParsePrefix",
+      "hits": [
+        {
+          "title": "net/netip.ParsePrefix",
+          "url": "https://pkg.go.dev/net/netip#ParsePrefix",
+          "snippet": "Official Go package API documentation."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`net/netip.ParsePrefix`). It is immediately useful."
+    },
+    {
+      "index": 104,
+      "language": "rust",
+      "query": "qs rust std::sync::LazyLock::force_mut",
+      "expected": "LazyLock::force_mut",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "std::sync::LazyLock::force_mut"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.427788,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20sync%20LazyLock%20force_mut",
+      "hits": [
+        {
+          "title": "LazyLock::force_mut",
+          "url": "https://doc.rust-lang.org/std/sync/struct.LazyLock.html#method.force_mut",
+          "snippet": "A value which is initialized on the first access."
+        },
+        {
+          "title": "Search Rust standard library for std::sync::LazyLock::force_mut",
+          "url": "https://doc.rust-lang.org/std/?search=std%20sync%20LazyLock%20force_mut",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`LazyLock::force_mut`). It is immediately useful."
+    },
+    {
+      "index": 105,
+      "language": "cpp",
+      "query": "qs cpp std::ranges::cartesian_product_view",
+      "expected": "std::ranges::cartesian_product_view",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "std::ranges::cartesian_product_view"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.119108,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::ranges::cartesian_product_view",
+          "url": "https://devdocs.io/cpp/ranges/cartesian_product_view",
+          "snippet": "The name views::cartesian_product denotes a customization point object, which is a const function object of a literal semiregular class type. See CustomizationPointObject for details.",
+          "meta": [
+            "C++  ·  Ranges",
+            "#include <array>\n#include <iostream>\n#include <list>\n#include <ranges>\n#include <string>\n#include <vector>\n\nvoid print(std::tuple<char const&, int const&, std::string const&> t, int pos)\n{\n    const auto& [a, b, c] = t;\n    std::cout << '(' << a << ' ' << b << ' ' << c << ')' << (pos % 4 ? \" \" : \"\\n\");\n}\n\nint main()\n{\n    const auto x = std::array{'A', 'B'};\n    const auto y = std::vector{1, 2, 3};\n    const auto z = std::list<std::string>{\"α\", \"β\", \"γ\", \"δ\"};\n\n    for (int i{1}; auto const& tuple : std::views::cartesian_product(x, y, z))\n        print(tuple, i++);\n}"
+          ]
+        },
+        {
+          "title": "std::ranges::cartesian_product_view::end",
+          "url": "https://devdocs.io/cpp/ranges/cartesian_product_view/end",
+          "snippet": "Let bases_ be the underlying tuple of views.",
+          "meta": [
+            "C++  ·  Ranges",
+            "#include <array>\n#include <format>\n#include <iostream>\n#include <ranges>\n#include <string_view>\n#include <tuple>\nusing namespace std::literals;\n\nint main()\n{\n    constexpr auto a = std::array{ \"bool\"sv, \"goto\"sv, \"extern\"sv, \"long\"sv }; /*\n                                       ^         ^           ^         ^        */\n    constexpr auto v = std::ranges::cartesian_product_view(a[0], a[1], a[2], a[3]);\n\n    constexpr std::tuple<char const&,\n                         char const&,\n                         char const&,\n                         char const&> last{*(v.end() - 1)};\n\n    std::cout << std::format(\"{}{}{}{}{}\",\n                             std::get<0>(last),\n                             std::get<1>(last),\n                             std::get<2>(last),\n                             std::get<3>(last), '\\n');\n}"
+          ]
+        },
+        {
+          "title": "std::ranges::cartesian_product_view::size",
+          "url": "https://devdocs.io/cpp/ranges/cartesian_product_view/size",
+          "meta": [
+            "C++  ·  Ranges"
+          ]
+        },
+        {
+          "title": "std::ranges::cartesian_product_view<First",
+          "url": "https://devdocs.io/cpp/ranges/cartesian_product_view/iterator/helpers",
+          "meta": [
+            "C++  ·  Ranges"
+          ]
+        },
+        {
+          "title": "std::ranges::cartesian_product_view::begin",
+          "url": "https://devdocs.io/cpp/ranges/cartesian_product_view/begin",
+          "meta": [
+            "C++  ·  Ranges"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`std::ranges::cartesian_product_view`). It is immediately useful."
+    },
+    {
+      "index": 106,
+      "language": "c",
+      "query": "qs c fgetpos",
+      "expected": "fgetpos",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "fgetpos"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.008707,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "fgetpos",
+          "url": "https://devdocs.io/c/io/fgetpos",
+          "snippet": "0 upon success, nonzero value otherwise.",
+          "meta": [
+            "C  ·  File input/output",
+            "#include <assert.h>\n#include <stdio.h>\n#include <stdlib.h>\n\nint main(void)\n{\n    // prepare a file holding 4 values of type double\n    enum {SIZE = 4};\n    FILE* fp = fopen(\"test.bin\", \"wb\");\n    assert(fp);\n    int rc = fwrite((double[SIZE]){1.1, 2.2, 3.3, 4.4}, sizeof(double), SIZE, fp);\n    assert(rc == SIZE);\n    fclose(fp);\n\n    // demo using fsetpos to return to the beginning of a file\n    fp = fopen(\"test.bin\", \"rb\");\n    fpos_t pos;\n    fgetpos(fp, &pos);               // store start of file in pos\n    double d;\n    rc = fread(&d, sizeof d, 1, fp); // read the first double\n    assert(rc == 1);\n    printf(\"First value in the file: %.1f\\n\", d);\n    fsetpos(fp,&pos);                // move file position back to the start of the file\n    rc = fread(&d, sizeof d, 1, fp); // read the first double again\n    assert(rc == 1);\n    printf(\"First value in the file again: %.1f\\n\", d);\n    fclose(fp);\n\n    // demo error handling\n    rc = fsetpos(stdin, &pos);\n    if (rc)\n        perror(\"could not fsetpos stdin\");\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`fgetpos`). It is immediately useful."
+    },
+    {
+      "index": 107,
+      "language": "haskell",
+      "query": "qs haskell Data.Array.accumArray",
+      "expected": "Data.Array.accumArray",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "Data.Array.accumArray"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.05952,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "accumArray :: Ix i => (e -> a -> e) -> e -> (i, i) -> [(i, a)] -> Array i e",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Array.html#v:accumArray",
+          "snippet": "The accumArray function deals with repeated indices in the association list using an accumulating function which combines the values of associations with the same index. For example, given a list of values of some index type, hist produces a histogram of the number of occurrences of each index within a specified range…",
+          "meta": [
+            "base  ·  Data.Array"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`accumArray :: Ix i => (e -> a -> e) -> e -> (i, i) -> [(i, a)] -> Array i e`). It is immediately useful."
+    },
+    {
+      "index": 108,
+      "language": "python",
+      "query": "qs python os.posix_spawnp",
+      "expected": "os.posix_spawnp()",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "os.posix_spawnp"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.136512,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "os.posix_spawnp()",
+          "url": "https://devdocs.io/python~3.15/library/os#os.posix_spawnp",
+          "snippet": "Wraps the posix_spawnp() C library API for use from Python.",
+          "meta": [
+            "Python  ·  Operating System"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`os.posix_spawnp()`). It is immediately useful."
+    },
+    {
+      "index": 109,
+      "language": "go",
+      "query": "qs go slices.Chunk",
+      "expected": "slices.Chunk",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "slices.Chunk"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.004436,
+      "provider": "pkg.go.dev",
+      "source_url": "https://pkg.go.dev/slices#Chunk",
+      "hits": [
+        {
+          "title": "slices.Chunk",
+          "url": "https://pkg.go.dev/slices#Chunk",
+          "snippet": "Official Go package API documentation."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`slices.Chunk`). It is immediately useful."
+    },
+    {
+      "index": 110,
+      "language": "rust",
+      "query": "qs rust std::io::BorrowedBuf",
+      "expected": "std::io::BorrowedBuf",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "std::io::BorrowedBuf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.12603,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20io%20BorrowedBuf",
+      "hits": [
+        {
+          "title": "BorrowedBuf in std::io - Rust",
+          "url": "https://doc.rust-lang.org/std/io/struct.BorrowedBuf.html",
+          "snippet": "A borrowed buffer of initially uninitialized elements, which is incrementally filled."
+        },
+        {
+          "title": "Search Rust standard library for std::io::BorrowedBuf",
+          "url": "https://doc.rust-lang.org/std/?search=std%20io%20BorrowedBuf",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`BorrowedBuf in std::io - Rust`). It is immediately useful."
+    },
+    {
+      "index": 111,
+      "language": "cpp",
+      "query": "qs cpp std::flat_map",
+      "expected": "std::flat_map",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "std::flat_map"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.065573,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::flat_map",
+          "url": "https://devdocs.io/cpp/container/flat_map",
+          "snippet": "template< class Key, class T, class Compare = std::less<Key>, class KeyContainer = std::vector<Key>, class MappedContainer = std::vector<T> > class flat_map; (since C++23) The flat map is a container adaptor that gives the functionality of an associative container that contains key-value pairs with unique keys. Keys a…",
+          "meta": [
+            "C++  ·  Containers",
+            "template<\n    class Key,\n    class T,\n    class Compare = std::less<Key>,\n    class KeyContainer = std::vector<Key>,\n    class MappedContainer = std::vector<T>\n> class flat_map;"
+          ]
+        },
+        {
+          "title": "std::flat_map::at",
+          "url": "https://devdocs.io/cpp/container/flat_map/at",
+          "snippet": "A reference to the mapped value of the requested element.",
+          "meta": [
+            "C++  ·  Containers",
+            "#include <cassert>\n#include <iostream>\n#include <flat_map>\n\nstruct LightKey { int o; };\nstruct HeavyKey { int o[1000]; };\n\n// The container must use std::less<> (or other transparent Comparator) to\n// access overloads (3,4). This includes standard overloads, such as\n// comparison between std::string and std::string_view.\nbool operator<(const HeavyKey& x, const LightKey& y) { return x.o[0] < y.o; }\nbool operator<(const LightKey& x, const HeavyKey& y) { return x.o < y.o[0]; }\nbool operator<(const HeavyKey& x, const HeavyKey& y) { return x.o[0] < y.o[0]; }\n\nint main()\n{\n    std::flat_map<int, char> map{{1, 'a'}, {2, 'b'}};\n    assert(map.at(1) == 'a');\n    assert(map.at(2) == 'b');\n    try\n    {\n        map.at(13);\n    }\n    catch(const std::out_of_range& ex)\n    {\n        std::cout << \"1) out_of_range::what(): \" << ex.what() << '\\n';\n    }\n\n#ifdef __cpp_lib_associative_heterogeneous_insertion\n    // Transparent comparison demo.\n    std::flat_map<HeavyKey, char, std::less<>> map2{{{1}, 'a'}, {{2}, 'b'}};\n    assert(map2.at(LightKey{1}) == 'a');\n    assert(map2.at(LightKey{2}) == 'b');\n    try\n    {\n        map2.at(LightKey{13});\n    }\n    catch(const std::out_of_range& ex)\n    {\n        std::cout << \"2) out_of_range::what(): \" << ex.what() << '\\n';\n    }\n#endif\n}"
+          ]
+        },
+        {
+          "title": "std::flat_map::end",
+          "url": "https://devdocs.io/cpp/container/flat_map/end",
+          "meta": [
+            "C++  ·  Containers"
+          ]
+        },
+        {
+          "title": "std::flat_map::find",
+          "url": "https://devdocs.io/cpp/container/flat_map/find",
+          "meta": [
+            "C++  ·  Containers"
+          ]
+        },
+        {
+          "title": "std::flat_map::keys",
+          "url": "https://devdocs.io/cpp/container/flat_map/keys",
+          "meta": [
+            "C++  ·  Containers"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`std::flat_map`). It is immediately useful."
+    },
+    {
+      "index": 112,
+      "language": "c",
+      "query": "qs c wcscoll",
+      "expected": "wcscoll",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "wcscoll"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.008394,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "wcscoll",
+          "url": "https://devdocs.io/c/string/wide/wcscoll",
+          "snippet": "Negative value if lhs is less than (precedes) rhs.",
+          "meta": [
+            "C  ·  Strings",
+            "#include <stdio.h>\n#include <wchar.h>\n#include <locale.h>\n\nvoid try_compare(const wchar_t* p1, const wchar_t* p2)\n{\n    if(wcscoll(p1, p2) < 0)\n        printf(\"%ls before %ls\\n\", p1, p2);\n    else\n        printf(\"%ls before %ls\\n\", p2, p1);\n}\n\nint main(void)\n{\n    setlocale(LC_ALL, \"en_US.utf8\");\n    printf(\"In the American locale: \");\n    try_compare(L\"hrnec\", L\"chrt\");\n\n    setlocale(LC_COLLATE, \"cs_CZ.utf8\");\n    printf(\"In the Czech locale: \");\n    try_compare(L\"hrnec\", L\"chrt\");\n\n    setlocale(LC_COLLATE, \"en_US.utf8\");\n    printf(\"In the American locale: \");\n    try_compare(L\"år\", L\"ängel\");\n\n    setlocale(LC_COLLATE, \"sv_SE.utf8\");\n    printf(\"In the Swedish locale: \");\n    try_compare(L\"år\", L\"ängel\");\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`wcscoll`). It is immediately useful."
+    },
+    {
+      "index": 113,
+      "language": "haskell",
+      "query": "qs haskell Data.Graph.stronglyConnCompR",
+      "expected": "Data.Graph.stronglyConnCompR",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "Data.Graph.stronglyConnCompR"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.057783,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "stronglyConnCompR :: Ord key => [(node, key, [key])] -> [SCC (node, key, [key])]",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Graph.html#v:stronglyConnCompR",
+          "snippet": "<math>. The strongly connected components of a directed graph, reverse topologically sorted. The function is the same as stronglyConnComp, except that all the information about each node retained. This interface is used when you expect to apply SCC to (some of) the result of SCC, so you don't want to lose the dependen…",
+          "meta": [
+            "containers  ·  Data.Graph"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`stronglyConnCompR :: Ord key => [(node, key, [key])] -> [SCC (node, key, [key])]`). It is immediately useful."
+    },
+    {
+      "index": 114,
+      "language": "python",
+      "query": "qs python ssl.SSLContext.num_tickets",
+      "expected": "SSLContext.num_tickets",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "ssl.SSLContext.num_tickets"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.234137,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "ssl.SSLContext.num_tickets",
+          "url": "https://devdocs.io/python~3.15/library/ssl#ssl.SSLContext.num_tickets",
+          "snippet": "Control the number of TLS 1.3 session tickets of a PROTOCOL_TLS_SERVER context. The setting has no impact on TLS 1.0 to 1.2 connections.",
+          "meta": [
+            "Python  ·  Networking & Interprocess Communication"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`ssl.SSLContext.num_tickets`). It is immediately useful."
+    },
+    {
+      "index": 115,
+      "language": "go",
+      "query": "qs go reflect.TypeFor",
+      "expected": "reflect.TypeFor",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "reflect.TypeFor"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.003685,
+      "provider": "pkg.go.dev",
+      "source_url": "https://pkg.go.dev/reflect#TypeFor",
+      "hits": [
+        {
+          "title": "reflect.TypeFor",
+          "url": "https://pkg.go.dev/reflect#TypeFor",
+          "snippet": "Official Go package API documentation."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`reflect.TypeFor`). It is immediately useful."
+    },
+    {
+      "index": 116,
+      "language": "rust",
+      "query": "qs rust std::task::Waker::data",
+      "expected": "Waker::data",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "std::task::Waker::data"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.360615,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20task%20Waker%20data",
+      "hits": [
+        {
+          "title": "Waker::data",
+          "url": "https://doc.rust-lang.org/std/task/struct.Waker.html#method.data",
+          "snippet": "A `Waker` is a handle for waking up a task by notifying its executor that it is ready to be run."
+        },
+        {
+          "title": "Search Rust standard library for std::task::Waker::data",
+          "url": "https://doc.rust-lang.org/std/?search=std%20task%20Waker%20data",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`Waker::data`). It is immediately useful."
+    },
+    {
+      "index": 117,
+      "language": "cpp",
+      "query": "qs cpp std::ranges::fold_left_with_iter",
+      "expected": "std::ranges::fold_left_with_iter",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "std::ranges::fold_left_with_iter"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.12135,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::ranges::fold_left_with_iter",
+          "url": "https://devdocs.io/cpp/algorithm/ranges/fold_left_with_iter",
+          "snippet": "Left-folds the elements of the source range, that is, returns the result of evaluation of the chain expression:f(f(f(f(init, x1), x2), ...), xn), where x1, x2, ..., xn are elements of the source range. Also returns the past-the-end iterator of the source range.",
+          "meta": [
+            "C++  ·  Algorithm",
+            "#include <algorithm>\n#include <cassert>\n#include <complex>\n#include <functional>\n#include <ranges>\n#include <utility>\n#include <vector>\n\nint main()\n{\n    namespace ranges = std::ranges;\n\n    std::vector v{1, 2, 3, 4, 5, 6, 7, 8};\n    \n    auto sum = ranges::fold_left_with_iter(v.begin(), v.end(), 6, std::plus<int>());\n    assert(sum.value == 42);\n    assert(sum.in == v.end());\n    \n    auto mul = ranges::fold_left_with_iter(v, 0X69, std::multiplies<int>());\n    assert(mul.value == 4233600);\n    assert(mul.in == v.end());\n    \n    // Get the product of the std::pair::second of all pairs in the vector:\n    std::vector<std::pair<char, float>> data {{'A', 2.f}, {'B', 3.f}, {'C', 3.5f}};\n    auto sec = ranges::fold_left_with_iter\n    (\n        data | ranges::views::values, 2.0f, std::multiplies<>()\n    );\n    assert(sec.value == 42);\n    \n    // Use a program defined function object (lambda-expression):\n    auto lambda = [](int x, int y){ return x + 0B110 + y; };\n    auto val = ranges::fold_left_with_iter(v, -42, lambda);\n    assert(val.value == 42);\n    assert(val.in == v.end());\n\n    using CD = std::complex<double>;\n    std::vector<CD> nums{{1, 1}, {2, 0}, {3, 0}};\n    #ifdef __cpp_lib_algorithm_default_value_type\n        auto res = ranges::fold_left_with_iter(nums, {7, 0}, std::multiplies{});\n    #else\n        auto res = ranges::fold_left_with_iter(nums, CD{7, 0}, std::multiplies{});\n    #endif\n    assert((res.value == CD{42, 42}));\n}"
+          ]
+        },
+        {
+          "title": "std::ranges::fold_left_first_with_iter",
+          "url": "https://devdocs.io/cpp/algorithm/ranges/fold_left_first_with_iter",
+          "snippet": "Left-folds the elements of the source range, that is, returns the result of evaluation of the chain expression:f(f(f(f(x1, x2), x3), ...), xn), where x1, x2, ..., xn are elements of the source range. Also returns the past-the-end iterator of the source range.",
+          "meta": [
+            "C++  ·  Algorithm",
+            "#include <algorithm>\n#include <cassert>\n#include <functional>\n#include <iostream>\n#include <ranges>\n#include <utility>\n#include <vector>\n\nint main()\n{\n    std::vector v{1, 2, 3, 4, 5, 6, 7, 8};\n    \n    auto sum = std::ranges::fold_left_first_with_iter\n    (\n        v.begin(), v.end(), std::plus<int>()\n    );\n    std::cout << \"sum: \" << sum.value.value() << '\\n';\n    assert(sum.in == v.end());\n    \n    auto mul = std::ranges::fold_left_first_with_iter(v, std::multiplies<int>());\n    std::cout << \"mul: \" << mul.value.value() << '\\n';\n    assert(mul.in == v.end());\n    \n    // get the product of the std::pair::second of all pairs in the vector:\n    std::vector<std::pair<char, float>> data {{'A', 2.f}, {'B', 3.f}, {'C', 7.f}};\n    auto sec = std::ranges::fold_left_first_with_iter\n    (\n        data | std::ranges::views::values, std::multiplies<>()\n    );\n    std::cout << \"sec: \" << sec.value.value() << '\\n';\n    \n    // use a program defined function object (lambda-expression):\n    auto lambda = [](int x, int y) { return x + y + 2; };\n    auto val = std::ranges::fold_left_first_with_iter(v, lambda);\n    std::cout << \"val: \" << val.value.value() << '\\n';\n    assert(val.in == v.end());\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`std::ranges::fold_left_with_iter`). It is immediately useful."
+    },
+    {
+      "index": 118,
+      "language": "c",
+      "query": "qs c quick_exit",
+      "expected": "quick_exit",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "quick_exit"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.008349,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "quick_exit",
+          "url": "https://devdocs.io/c/program/quick_exit",
+          "snippet": "Functions passed to at_quick_exit are called in reverse order of their registration. After calling the registered functions, calls _Exit(exit_code).",
+          "meta": [
+            "C  ·  Program support",
+            "#include <stdlib.h>\n#include <stdio.h>\n \nvoid f1(void)\n{\n    puts(\"pushed first\");\n    fflush(stdout);\n}\n \nvoid f2(void)\n{\n    puts(\"pushed second\");\n}\n\nvoid f3(void)\n{\n    puts(\"won't be called\");\n}\n \nint main(void)\n{\n    at_quick_exit(f1);\n    at_quick_exit(f2);\n    atexit(f3);\n    quick_exit(0);\n}"
+          ]
+        },
+        {
+          "title": "at_quick_exit",
+          "url": "https://devdocs.io/c/program/at_quick_exit",
+          "snippet": "Calling the function from several threads does not induce a data race. The implementation is guaranteed to support the registration of at least 32 functions. The exact limit is implementation-defined.",
+          "meta": [
+            "C  ·  Program support",
+            "#include <stdlib.h>\n#include <stdio.h>\n \nvoid f1(void)\n{\n    puts(\"pushed first\");\n    fflush(stdout);\n}\n \nvoid f2(void)\n{\n    puts(\"pushed second\");\n}\n \nint main(void)\n{\n    at_quick_exit(f1);\n    at_quick_exit(f2);\n    quick_exit(0);\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`quick_exit`). It is immediately useful."
+    },
+    {
+      "index": 119,
+      "language": "haskell",
+      "query": "qs haskell Text.ParserCombinators.ReadP.gather",
+      "expected": "ReadP.gather",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "Text.ParserCombinators.ReadP.gather"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.056884,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "gather :: ReadP a -> ReadP (String, a)",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Text-ParserCombinators-ReadP.html#v:gather",
+          "snippet": "Transforms a parser into one that does the same, but in addition returns the exact characters read. IMPORTANT NOTE: gather gives a runtime error if its first argument is built using any occurrences of readS_to_P.",
+          "meta": [
+            "base  ·  Text.ParserCombinators.ReadP"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`gather :: ReadP a -> ReadP (String, a)`). It is immediately useful."
+    },
+    {
+      "index": 120,
+      "language": "python",
+      "query": "qs python tarfile.data_filter",
+      "expected": "tarfile.data_filter",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "tarfile.data_filter"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.138679,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "tarfile.data_filter()",
+          "url": "https://devdocs.io/python~3.15/library/tarfile#tarfile.data_filter",
+          "snippet": "Implements the 'data' filter. In addition to what tar_filter does:",
+          "meta": [
+            "Python  ·  Data Compression"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`tarfile.data_filter()`). It is immediately useful."
+    },
+    {
+      "index": 121,
+      "language": "go",
+      "query": "qs go archive/zip.Writer.Copy",
+      "expected": "archive/zip.Writer.Copy",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "archive/zip.Writer.Copy"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.260805,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "func (*Writer) SetOffset 1.5",
+          "url": "https://devdocs.io/go/archive/zip/index",
+          "snippet": "func (*Writer) SetOffset 1.5 — func (w *Writer) SetOffset(n int64) SetOffset sets the offset of the beginning of the zip data within the underlying writer. It should be used when the zip data is appended to an existing file, such as a binary executable. It must be called before any data is written. &copy; Google, Inc.Licensed under the Creative Commons Attr…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func (*Writer) WriteHeader",
+          "url": "https://devdocs.io/go/archive/tar/index",
+          "snippet": "func (*Writer) WriteHeader — func (tw *Writer) WriteHeader(hdr *Header) error WriteHeader writes hdr and prepares to accept the file's contents. The Header.Size determines how many bytes can be written for the next file. If the current file is not fully written, then this returns an error. This implicitly flushes any padding necessary before writing the hea…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "zip.Writer.Copy()",
+          "url": "https://devdocs.io/go/archive/zip/index#Writer.Copy",
+          "snippet": "func (w *Writer) Copy(f *File) error Copy copies the file f (obtained from a Reader) into w. It copies the raw form directly bypassing decompression, compression, and validation.",
+          "meta": [
+            "Go  ·  archive"
+          ]
+        },
+        {
+          "title": "type ValueKind 1.16",
+          "url": "https://devdocs.io/go/runtime/metrics/index",
+          "snippet": "type ValueKind 1.16 — ValueKind is a tag for a metric Value which indicates its type. type ValueKind int const ( // KindBad indicates that the Value has no type and should not be used. KindBad ValueKind = iota // KindUint64 indicates that the type of the Value is a uint64. KindUint64 // KindFloat64 indicates that the type of the Value is a float64. KindFloa…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "Constants",
+          "url": "https://devdocs.io/go/hash/crc32/index",
+          "snippet": "Constants — Predefined polynomials. const ( // IEEE is by far and away the most common CRC-32 polynomial. // Used by ethernet (IEEE 802.3), v.42, fddi, gzip, zip, png, ... IEEE = 0xedb88320 // Castagnoli's polynomial, used in iSCSI. // Has better error detection characteristics than IEEE. // https://dx.doi.org/10.1109/26.231911 Castagnoli = 0x82f63b78 // Ko…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 4,
+      "assessment": "The exact `zip.Writer.Copy()` result is third. The first two results are other writer APIs."
+    },
+    {
+      "index": 122,
+      "language": "rust",
+      "query": "qs rust std::thread::scope",
+      "expected": "std::thread::scope",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "std::thread::scope"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.162809,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20thread%20scope",
+      "hits": [
+        {
+          "title": "scope in std::thread - Rust",
+          "url": "https://doc.rust-lang.org/std/thread/fn.scope.html",
+          "snippet": "Creates a scope for spawning scoped threads."
+        },
+        {
+          "title": "Search Rust standard library for std::thread::scope",
+          "url": "https://doc.rust-lang.org/std/?search=std%20thread%20scope",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`scope in std::thread - Rust`). It is immediately useful."
+    },
+    {
+      "index": 123,
+      "language": "cpp",
+      "query": "qs cpp std::expected::transform_error",
+      "expected": "std::expected::transform_error",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "std::expected::transform_error"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.103523,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::expected::transform_error",
+          "url": "https://devdocs.io/cpp/utility/expected/transform_error",
+          "snippet": "template< class F > constexpr auto transform_error( F&& f ) &; (1) (since C++23) template< class F > constexpr auto transform_error( F&& f ) const&; (2) (since C++23) template< class F > constexpr auto transform_error( F&& f ) &&; (3) (since C++23) template< class F > constexpr auto transform_error( F&& f ) const&&; (…",
+          "meta": [
+            "C++  ·  Utilities",
+            "template< class F >\nconstexpr auto transform_error( F&& f ) &;"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`std::expected::transform_error`). It is immediately useful."
+    },
+    {
+      "index": 124,
+      "language": "c",
+      "query": "qs c thrd_sleep",
+      "expected": "thrd_sleep",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "thrd_sleep"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.009494,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "thrd_sleep",
+          "url": "https://devdocs.io/c/thread/thrd_sleep",
+          "snippet": "The sleep may resume earlier if a signal that is not ignored is received. In such case, if remaining is not NULL, the remaining time duration is stored into the object pointed to by remaining.",
+          "meta": [
+            "C  ·  Concurrency support",
+            "#include <threads.h>\n#include <time.h>\n#include <stdio.h>\n\nint main(void)\n{\n    printf(\"Time: %s\", ctime(&(time_t){time(NULL)}));\n    thrd_sleep(&(struct timespec){.tv_sec=1}, NULL); // sleep 1 sec\n    printf(\"Time: %s\", ctime(&(time_t){time(NULL)}));\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`thrd_sleep`). It is immediately useful."
+    },
+    {
+      "index": 125,
+      "language": "haskell",
+      "query": "qs haskell Data.Typeable.eqT",
+      "expected": "Data.Typeable.eqT",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "Data.Typeable.eqT"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.054029,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "eqT :: forall {k} (a :: k) (b :: k). (Typeable a, Typeable b) => Maybe (a :~: b)",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Typeable.html#v:eqT",
+          "snippet": "Extract a witness of equality of two types",
+          "meta": [
+            "base  ·  Data.Typeable"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`eqT :: forall {k} (a :: k) (b :: k). (Typeable a, Typeable b) => Maybe (a :~: b)`). It is immediately useful."
+    },
+    {
+      "index": 126,
+      "language": "python",
+      "query": "qs python sqlite3.Connection.blobopen",
+      "expected": "Connection.blobopen()",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "sqlite3.Connection.blobopen"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.13737,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "sqlite3.Connection.blobopen()",
+          "url": "https://devdocs.io/python~3.15/library/sqlite3#sqlite3.Connection.blobopen",
+          "meta": [
+            "Python  ·  Data Persistence"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`sqlite3.Connection.blobopen()`). It is immediately useful."
+    },
+    {
+      "index": 127,
+      "language": "go",
+      "query": "qs go crypto/ecdh.X25519",
+      "expected": "crypto/ecdh.X25519",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "crypto/ecdh.X25519"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.003317,
+      "provider": "pkg.go.dev",
+      "source_url": "https://pkg.go.dev/crypto/ecdh#X25519",
+      "hits": [
+        {
+          "title": "crypto/ecdh.X25519",
+          "url": "https://pkg.go.dev/crypto/ecdh#X25519",
+          "snippet": "Official Go package API documentation."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`crypto/ecdh.X25519`). It is immediately useful."
+    },
+    {
+      "index": 128,
+      "language": "rust",
+      "query": "qs rust std::net::Ipv6Addr::to_ipv4_mapped",
+      "expected": "Ipv6Addr::to_ipv4_mapped",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "std::net::Ipv6Addr::to_ipv4_mapped"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.381437,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20net%20Ipv6Addr%20to_ipv4_mapped",
+      "hits": [
+        {
+          "title": "Ipv6Addr::to_ipv4_mapped",
+          "url": "https://doc.rust-lang.org/std/net/struct.Ipv6Addr.html#method.to_ipv4_mapped",
+          "snippet": "An IPv6 address."
+        },
+        {
+          "title": "Search Rust standard library for std::net::Ipv6Addr::to_ipv4_mapped",
+          "url": "https://doc.rust-lang.org/std/?search=std%20net%20Ipv6Addr%20to_ipv4_mapped",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`Ipv6Addr::to_ipv4_mapped`). It is immediately useful."
+    },
+    {
+      "index": 129,
+      "language": "cpp",
+      "query": "qs cpp std::generator",
+      "expected": "std::generator",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "std::generator"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.046811,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::generator",
+          "url": "https://devdocs.io/cpp/coroutine/generator",
+          "snippet": "template< class Ref, class V = void, class Allocator = void > class generator : public ranges::view_interface<generator<Ref, V, Allocator>> (1) (since C++23) namespace pmr { template< class Ref, class V = void > using generator = std::generator<Ref, V, std::pmr::polymorphic_allocator<>>; } (2) (since C++23) 1) The cla…",
+          "meta": [
+            "C++  ·  Utilities",
+            "#include <generator>\n#include <iostream>\n\ntemplate<typename T>\nstruct Tree\n{\n    T value;\n    Tree *left{}, *right{};\n\n    std::generator<const T&> traverse_inorder() const\n    {\n        if (left)\n            co_yield std::ranges::elements_of(left->traverse_inorder());\n\n        co_yield value;\n\n        if (right)\n            co_yield std::ranges::elements_of(right->traverse_inorder());\n    }\n};\n\nint main()\n{\n    Tree<char> tree[]\n    {\n                                    {'D', tree + 1, tree + 2},\n        //                            │\n        //            ┌───────────────┴────────────────┐\n        //            │                                │\n                    {'B', tree + 3, tree + 4},       {'F', tree + 5, tree + 6},\n        //            │                                │\n        //  ┌─────────┴─────────────┐      ┌───────────┴─────────────┐\n        //  │                       │      │                         │\n          {'A'},                  {'C'}, {'E'},                    {'G'}\n    };\n\n    for (char x : tree->traverse_inorder())\n        std::cout << x << ' ';\n    std::cout << '\\n';\n}"
+          ]
+        },
+        {
+          "title": "std::generator::end",
+          "url": "https://devdocs.io/cpp/coroutine/generator/end",
+          "snippet": "std::default_sentinel_t end() const noexcept; (since C++23) Equivalent to return std::default_sentinel.",
+          "meta": [
+            "C++  ·  Utilities"
+          ]
+        },
+        {
+          "title": "std::generator::begin",
+          "url": "https://devdocs.io/cpp/coroutine/generator/begin",
+          "meta": [
+            "C++  ·  Utilities"
+          ]
+        },
+        {
+          "title": "std::generator::iterator",
+          "url": "https://devdocs.io/cpp/coroutine/generator/iterator",
+          "meta": [
+            "C++  ·  Utilities"
+          ]
+        },
+        {
+          "title": "std::generator::generator",
+          "url": "https://devdocs.io/cpp/coroutine/generator/generator",
+          "meta": [
+            "C++  ·  Utilities"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`std::generator`). It is immediately useful."
+    },
+    {
+      "index": 130,
+      "language": "c",
+      "query": "qs c ckd_add",
+      "expected": "ckd_add",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "ckd_add"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.007264,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "ckd_add",
+          "url": "https://devdocs.io/c/numeric/ckd_add",
+          "snippet": "false if the value assigned to *result correctly represents the mathematical result of the addition, true otherwise.",
+          "meta": [
+            "C  ·  Numerics",
+            "#include <limits.h>\n#include <stdckdint.h>\n#include <stdint.h>\n#include <stdio.h>\n\nconst char* text(bool overflow) { return overflow ? \"Overflow\" : \"OK\"; }\n\nint main()\n{\n    uint8_t x;\n    uint16_t y;\n    uint16_t result_uint16;\n    uint32_t result_uint32;\n    bool overflow;\n\n    x = 14;\n    y = 28;\n    overflow = ckd_add(&result_uint16, x, y);\n    printf(\"%u + %u => %u (%s)\\n\", x, y, result_uint16, text(overflow));\n\n    x = 14;\n    y = UINT16_MAX;\n    overflow = ckd_add(&result_uint16, x, y);\n    printf(\"%u + %u => %u (%s)\\n\", x, y, result_uint16, text(overflow));\n\n    x = 14;\n    y = UINT16_MAX;\n    overflow = ckd_add(&result_uint32, x, y);\n    printf(\"%u + %u => %u (%s)\\n\", x, y, result_uint32, text(overflow));\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`ckd_add`). It is immediately useful."
+    },
+    {
+      "index": 131,
+      "language": "haskell",
+      "query": "qs haskell Data.Foldable.foldMap1",
+      "expected": "Data.Foldable.foldMap1",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "Data.Foldable.foldMap1"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.056951,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "foldMap1 :: (Foldable1 t, Semigroup m) => (a -> m) -> t a -> m",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Foldable.html#v:foldMap1",
+          "snippet": "Map each element of the structure to a semigroup, and combine the results with (<>). This fold is right-associative and lazy in the accumulator. For strict left-associative folds consider foldMap1' instead. >>> foldMap1 (:[]) (1 :| [2, 3, 4]) [1,2,3,4]",
+          "meta": [
+            "base  ·  Data.Foldable"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`foldMap1 :: (Foldable1 t, Semigroup m) => (a -> m) -> t a -> m`). It is immediately useful."
+    },
+    {
+      "index": 132,
+      "language": "python",
+      "query": "qs python asyncio.Barrier",
+      "expected": "asyncio.Barrier",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "asyncio.Barrier"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.104384,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "asyncio.Barrier",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier",
+          "snippet": "A barrier is a simple synchronization primitive that allows to block until parties number of tasks are waiting on it. Tasks can wait on the wait() method and would be blocked until the specified number of tasks end up waiting on wait(). At that point all of the waiting tasks would unblock simultaneously.",
+          "meta": [
+            "Python  ·  Asynchronous I/O",
+            "async def example_barrier():\n   # barrier with 3 parties\n   b = asyncio.Barrier(3)\n\n   # create 2 new waiting tasks\n   asyncio.create_task(b.wait())\n   asyncio.create_task(b.wait())\n\n   await asyncio.sleep(0)\n   print(b)\n\n   # The third .wait() call passes the barrier\n   await b.wait()\n   print(b)\n   print(\"barrier passed\")\n\n   await asyncio.sleep(0)\n   print(b)\n\nasyncio.run(example_barrier())"
+          ]
+        },
+        {
+          "title": "asyncio.Barrier.broken",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.broken",
+          "snippet": "A boolean that is True if the barrier is in the broken state.",
+          "meta": [
+            "Python  ·  Asynchronous I/O"
+          ]
+        },
+        {
+          "title": "asyncio.Barrier.wait()",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.wait",
+          "meta": [
+            "Python  ·  Asynchronous I/O"
+          ]
+        },
+        {
+          "title": "asyncio.Barrier.abort()",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.abort",
+          "meta": [
+            "Python  ·  Asynchronous I/O"
+          ]
+        },
+        {
+          "title": "asyncio.Barrier.parties",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.parties",
+          "meta": [
+            "Python  ·  Asynchronous I/O"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`asyncio.Barrier`). It is immediately useful."
+    },
+    {
+      "index": 133,
+      "language": "go",
+      "query": "qs go math/big.Float.Scan",
+      "expected": "math/big.Float.Scan",
+      "class": "unseen-api",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "math/big.Float.Scan"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.176276,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "func (*Float) Scan 1.8",
+          "url": "https://devdocs.io/go/math/big/index",
+          "snippet": "func (*Float) Scan 1.8 — func (z *Float) Scan(s fmt.ScanState, ch rune) error Scan is a support routine for fmt.Scanner; it sets z to the value of the scanned number. It accepts formats whose verbs are supported by fmt.Scan for floating point values, which are: 'b' (binary), 'e', 'E', 'f', 'F', 'g' and 'G'. Scan doesn't handle ±Inf.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func Scan",
+          "url": "https://devdocs.io/go/fmt/index",
+          "snippet": "func Scan — func Scan(a ...any) (n int, err error) Scan scans text read from standard input, storing successive space-separated values into successive arguments. Newlines count as space. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "big.Float.Scan()",
+          "url": "https://devdocs.io/go/math/big/index#Float.Scan",
+          "snippet": "func (z *Float) Scan(s fmt.ScanState, ch rune) error Scan is a support routine for fmt.Scanner; it sets z to the value of the scanned number. It accepts formats whose verbs are supported by fmt.Scan for floating point values, which are: 'b' (binary), 'e', 'E', 'f', 'F', 'g' and 'G'. Scan doesn't handle ±Inf.",
+          "meta": [
+            "Go  ·  math/big",
+            "// The Scan function is rarely used directly;\n// the fmt package recognizes it as an implementation of fmt.Scanner.\nf := new(big.Float)\n_, err := fmt.Sscan(\"1.19282e99\", f)\nif err != nil {\n    log.Println(\"error scanning value:\", err)\n} else {\n    fmt.Println(f)\n}"
+          ]
+        },
+        {
+          "title": "func ToFloat 1.6",
+          "url": "https://devdocs.io/go/go/constant/index",
+          "snippet": "func ToFloat 1.6 — func ToFloat(x Value) Value ToFloat converts x to a Float value if x is representable as a Float. Otherwise it returns an Unknown.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "A note about floats",
+          "url": "https://devdocs.io/go/runtime/metrics/index",
+          "snippet": "A note about floats — This package supports metrics whose values have a floating-point representation. In order to improve ease-of-use, this package promises to never produce the following classes of floating-point values: NaN, infinity.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The exact `(*Float).Scan` API is first with its signature and documentation; a direct anchored hit also appears third."
+    },
+    {
+      "index": 134,
+      "language": "python",
+      "query": "qs pypi msgspec",
+      "expected": "PyPI package page for msgspec",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "pypi",
+        "msgspec"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.003629,
+      "provider": "pypi",
+      "source_url": "https://pypi.org/search/?q=msgspec",
+      "hits": [
+        {
+          "title": "Search PyPI for msgspec",
+          "url": "https://pypi.org/search/?q=msgspec",
+          "snippet": "Open this search in a browser; qs does not automate robots-disallowed PyPI search or project endpoints."
+        }
+      ],
+      "stderr": null,
+      "score": 3,
+      "assessment": "The result is a relevant PyPI search fallback, but it does not provide the expected `msgspec` package page or package details."
+    },
+    {
+      "index": 135,
+      "language": "go",
+      "query": "qs go-mod golang.org/x/sync",
+      "expected": "Go package registry result for golang.org/x/sync",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go-mod",
+        "golang.org/x/sync"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.005243,
+      "provider": "go modules",
+      "source_url": "https://pkg.go.dev/search?q=golang.org%2Fx%2Fsync",
+      "hits": [
+        {
+          "title": "golang.org/x/sync/errgroup",
+          "url": "https://pkg.go.dev/golang.org/x/sync/errgroup",
+          "snippet": "Package errgroup provides synchronization, error propagation, and Context cancellation for groups of goroutines working on subtasks of a common task.",
+          "meta": [
+            "v0.24.0  ·  module golang.org/x/sync"
+          ]
+        },
+        {
+          "title": "golang.org/x/sync/singleflight",
+          "url": "https://pkg.go.dev/golang.org/x/sync/singleflight",
+          "snippet": "Package singleflight provides a duplicate function call suppression mechanism.",
+          "meta": [
+            "v0.24.0  ·  module golang.org/x/sync"
+          ]
+        },
+        {
+          "title": "golang.org/x/sync/semaphore",
+          "url": "https://pkg.go.dev/golang.org/x/sync/semaphore",
+          "snippet": "Package semaphore provides a weighted semaphore implementation.",
+          "meta": [
+            "v0.24.0  ·  module golang.org/x/sync"
+          ]
+        },
+        {
+          "title": "golang.org/x/sync/syncmap",
+          "url": "https://pkg.go.dev/golang.org/x/sync/syncmap",
+          "snippet": "Package syncmap provides a concurrent map implementation.",
+          "meta": [
+            "v0.24.0  ·  module golang.org/x/sync"
+          ]
+        },
+        {
+          "title": "github.com/bir3/gocompiler/src/xvendor/golang.org/x/sync/semaphore",
+          "url": "https://pkg.go.dev/github.com/bir3/gocompiler/src/xvendor/golang.org/x/sync/semaphore",
+          "snippet": "Package semaphore provides a weighted semaphore implementation.",
+          "meta": [
+            "v0.9.2202  ·  module github.com/bir3/gocompiler"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 4,
+      "assessment": "The query routes to pkg.go.dev and returns useful `golang.org/x/sync` subpackages, but not the module root."
+    },
+    {
+      "index": 136,
+      "language": "rust",
+      "query": "qs crate camino",
+      "expected": "crates.io page for camino",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "crate",
+        "camino"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.221276,
+      "provider": "crates.io",
+      "source_url": "https://crates.io/search?q=camino",
+      "hits": [
+        {
+          "title": "camino",
+          "url": "https://docs.rs/camino",
+          "snippet": "UTF-8 paths",
+          "meta": [
+            "1.2.6  ·  286M downloads  ·  71.7M recent",
+            "https://github.com/camino-rs/camino"
+          ]
+        },
+        {
+          "title": "camino-tempfile-ext",
+          "url": "https://docs.rs/camino-tempfile-ext",
+          "snippet": "Quality-of-life extensions for camino-tempfile",
+          "meta": [
+            "0.3.3  ·  219k downloads  ·  52.5k recent",
+            "https://github.com/camino-rs/camino-tempfile"
+          ]
+        },
+        {
+          "title": "caminos",
+          "url": "https://docs.rs/caminos",
+          "snippet": "A modular interconnection network simulator.",
+          "meta": [
+            "0.6.3  ·  22.8k downloads  ·  74 recent"
+          ]
+        },
+        {
+          "title": "camino-tempfile",
+          "url": "https://docs.rs/camino-tempfile",
+          "snippet": "A library for managing temporary files and directories, with UTF-8 paths.",
+          "meta": [
+            "1.4.1  ·  9.9M downloads  ·  2.4M recent",
+            "https://github.com/camino-rs/camino-tempfile"
+          ]
+        },
+        {
+          "title": "camino-anchored",
+          "url": "https://docs.rs/camino-anchored",
+          "snippet": "UTF-8 paths with explicit resolution and base-relative display",
+          "meta": [
+            "0.1.1  ·  225k downloads  ·  225k recent",
+            "https://github.com/camino-rs/camino-anchored"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 4,
+      "assessment": "The `camino` crate is first and useful, but its URL is docs.rs rather than the expected crates.io package page."
+    },
+    {
+      "index": 137,
+      "language": "cpp",
+      "query": "qs man cmake",
+      "expected": "Local cmake manual page",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "man",
+        "cmake"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.180266,
+      "provider": "man",
+      "source_url": null,
+      "body": "NAME\n       cmake - CMake Command-Line Reference\n\nSYNOPSIS\n          Generate a Project Buildsystem\n           cmake [<options>] -B <path-to-build> [-S <path-to-source>]\n           cmake [<options>] <path-to-source | path-to-existing-build>\n\n          Build a Project\n           cmake --build <dir> [<options>] [-- <build-tool-options>]\n\n          Install a Project\n           cmake --install <dir> [<options>]\n\n          Open a Project\n           cmake --open <dir>\n\n          Run a Script\n           cmake [-D <var>=<value>]... -P <cmake-script-file>\n\n          Run a Command-Line Tool\n           cmake -E <command> [<options>]\n\n          Run the Find-Package Tool\n           cmake --find-package [<options>]\n\n          Run a Workflow Preset\n           cmake --workflow <options>\n\n          View Help\n           cmake --help[-<topic>]\n\nDESCRIPTION\n       The  cmake  executable  is  the  command-line  interface  of  the cross-platform\n       buildsystem generator CMake.  The above Synopsis lists various actions the  tool\n       can perform as described in sections below.\n\n       To build a software project with CMake, Generate a Project Buildsystem.  Option‐\n       ally use cmake to Build a Project, Install a Project or just run the correspond‐\n       ing build tool (e.g. make) directly.  cmake can also be used to View Help.\n\n       The  other  actions  are meant for use by software developers writing scripts in\n       the CMake language <#manual:cmake-language(7)> to support their builds.\n\n       For graphical user interfaces that may be used in place of cmake, see ccmake  <#\n       manual:ccmake(1)> and cmake-gui <#manual:cmake-gui(1)>.  For command-line inter‐\n       faces   to   the   CMake   testing   and  packaging  facilities,  see  ctest  <#\n       manual:ctest(1)> and cpack <#manual:cpack(1)>.",
+      "hits": [
+        {
+          "title": "cmake (1)",
+          "url": "man://1/cmake",
+          "snippet": "CMake Command-Line Reference"
+        },
+        {
+          "title": "ccmake (1)",
+          "url": "man://1/ccmake",
+          "snippet": "CMake Curses Dialog Command-Line Reference"
+        },
+        {
+          "title": "cmake-buildsystem (7)",
+          "url": "man://7/cmake-buildsystem",
+          "snippet": "CMake Buildsystem Reference"
+        },
+        {
+          "title": "cmake-commands (7)",
+          "url": "man://7/cmake-commands",
+          "snippet": "CMake Language Command Reference"
+        },
+        {
+          "title": "cmake-compile-features (7)",
+          "url": "man://7/cmake-compile-features",
+          "snippet": "CMake Compile Features Reference"
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`cmake (1)`). It is immediately useful."
+    },
+    {
+      "index": 138,
+      "language": "c",
+      "query": "qs man 3 getaddrinfo",
+      "expected": "Section 3 getaddrinfo manual page",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "man",
+        "3",
+        "getaddrinfo"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.094186,
+      "provider": "man",
+      "source_url": null,
+      "body": "NAME\n       getaddrinfo,  freeaddrinfo,  gai_strerror - network address and service transla‐\n       tion\n\nLIBRARY\n       Standard C library (libc, -lc)\n\nSYNOPSIS\n       #include <sys/types.h>\n       #include <sys/socket.h>\n       #include <netdb.h>\n\n       int getaddrinfo(const char *restrict node,\n                       const char *restrict service,\n                       const struct addrinfo *restrict hints,\n                       struct addrinfo **restrict res);\n\n       void freeaddrinfo(struct addrinfo *res);\n\n       const char *gai_strerror(int errcode);\n\n   Feature Test Macro Requirements for glibc (see feature_test_macros(7)):\n\n       getaddrinfo(), freeaddrinfo(), gai_strerror():\n           Since glibc 2.22:\n               _POSIX_C_SOURCE >= 200112L\n           glibc 2.21 and earlier:\n               _POSIX_C_SOURCE\n\nDESCRIPTION\n       Given node and service, which identify an Internet host and  a  service,  getad‐\n       drinfo()  returns one or more addrinfo structures, each of which contains an In‐\n       ternet address that can be specified in a call to bind(2)  or  connect(2).   The\n       getaddrinfo()  function  combines  the  functionality provided by the gethostby‐\n       name(3) and getservbyname(3) functions into a single interface, but  unlike  the\n       latter  functions,  getaddrinfo()  is reentrant and allows programs to eliminate\n       IPv4-versus-IPv6 dependencies.\n\n       The addrinfo structure used by getaddrinfo() contains the following fields:\n\n           struct addrinfo {\n               int              ai_flags;\n               int              ai_family;\n               int              ai_socktype;\n               int              ai_protocol;\n               socklen_t        ai_addrlen;\n               struct sockaddr *ai_addr;\n               char            *ai_canonname;",
+      "hits": [
+        {
+          "title": "getaddrinfo (3)",
+          "url": "man://3/getaddrinfo"
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`getaddrinfo (3)`). It is immediately useful."
+    },
+    {
+      "index": 139,
+      "language": "haskell",
+      "query": "qs web Hackage attoparsec",
+      "expected": "DuckDuckGo results for Hackage attoparsec",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "web",
+        "Hackage",
+        "attoparsec"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 5.005674,
+      "provider": "web",
+      "source_url": "https://duckduckgo.com/?q=Hackage%20attoparsec",
+      "hits": [
+        {
+          "title": "Search DuckDuckGo for Hackage attoparsec",
+          "url": "https://duckduckgo.com/?q=Hackage%20attoparsec",
+          "snippet": "Open this search in your browser."
+        }
+      ],
+      "stderr": null,
+      "score": 3,
+      "assessment": "The web provider returns a relevant DuckDuckGo search link, but no fetched results or direct target."
+    },
+    {
+      "index": 140,
+      "language": "python",
+      "query": "qs pypi platformdirs",
+      "expected": "PyPI package page for platformdirs",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "pypi",
+        "platformdirs"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.003706,
+      "provider": "pypi",
+      "source_url": "https://pypi.org/search/?q=platformdirs",
+      "hits": [
+        {
+          "title": "Search PyPI for platformdirs",
+          "url": "https://pypi.org/search/?q=platformdirs",
+          "snippet": "Open this search in a browser; qs does not automate robots-disallowed PyPI search or project endpoints."
+        }
+      ],
+      "stderr": null,
+      "score": 3,
+      "assessment": "The result is a relevant PyPI search fallback, but it does not provide the expected `platformdirs` package page or package details."
+    },
+    {
+      "index": 141,
+      "language": "go",
+      "query": "qs gh charmbracelet/lipgloss",
+      "expected": "GitHub repository charmbracelet/lipgloss",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "gh",
+        "charmbracelet/lipgloss"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.314311,
+      "provider": "github",
+      "source_url": "https://github.com/search?type=repositories&q=charmbracelet%2Flipgloss",
+      "hits": [
+        {
+          "title": "charmbracelet/lipgloss",
+          "url": "https://github.com/charmbracelet/lipgloss",
+          "snippet": "Style definitions for nice terminal layouts 👄",
+          "meta": [
+            "11.9k stars  ·  Go"
+          ]
+        },
+        {
+          "title": "76creates/stickers",
+          "url": "https://github.com/76creates/stickers",
+          "snippet": "Building blocks for charmbracelet/lipgloss 👾",
+          "meta": [
+            "402 stars  ·  Go"
+          ]
+        },
+        {
+          "title": "whit3rabbit/lipgloss-rs",
+          "url": "https://github.com/whit3rabbit/lipgloss-rs",
+          "snippet": "A rust port of https://github.com/charmbracelet/lipgloss",
+          "meta": [
+            "27 stars  ·  Rust"
+          ]
+        },
+        {
+          "title": "oakoliver/lipgloss",
+          "url": "https://github.com/oakoliver/lipgloss",
+          "snippet": "CSS-like terminal styling for JavaScript. Zero dependencies. TypeScript port of charmbracelet/lipgloss.",
+          "meta": [
+            "2 stars  ·  TypeScript"
+          ]
+        },
+        {
+          "title": "junhinhow/charm-themes",
+          "url": "https://github.com/junhinhow/charm-themes",
+          "snippet": "Unified theming system for charmbracelet libraries (lipgloss, glamour, bubbles)",
+          "meta": [
+            "1 stars  ·  Go"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`charmbracelet/lipgloss`). It is immediately useful."
+    },
+    {
+      "index": 142,
+      "language": "rust",
+      "query": "qs docs smallvec",
+      "expected": "docs.rs documentation for smallvec",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "docs",
+        "smallvec"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.134043,
+      "provider": "docs",
+      "source_url": "https://docs.rs/smallvec/latest/smallvec",
+      "hits": [
+        {
+          "title": "smallvec",
+          "url": "https://docs.rs/smallvec/",
+          "snippet": "'Small vector' optimization: store up to a small number of items on the stack",
+          "meta": [
+            "1.16.3  ·  1.3B downloads  ·  315M recent",
+            "https://github.com/servo/rust-smallvec"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`smallvec`). It is immediately useful."
+    },
+    {
+      "index": 143,
+      "language": "cpp",
+      "query": "qs so c++ object slicing",
+      "expected": "Stack Overflow search for C++ object slicing",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "so",
+        "c++",
+        "object",
+        "slicing"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.262978,
+      "provider": "stackoverflow",
+      "source_url": "https://stackoverflow.com/search?q=c%2B%2B%20object%20slicing",
+      "hits": [
+        {
+          "title": "What is object slicing?",
+          "url": "https://stackoverflow.com/questions/274626/what-is-object-slicing",
+          "meta": [
+            "score 934  ·  17 answers  ·  answered  ·  c++, inheritance, c++-faq, object-slicing"
+          ]
+        },
+        {
+          "title": "Object Slicing in c++",
+          "url": "https://stackoverflow.com/questions/4780067/object-slicing-in-c",
+          "meta": [
+            "score 0  ·  2 answers  ·  accepted answer  ·  c++, inheritance, object-slicing"
+          ]
+        },
+        {
+          "title": "how object slicing happens in c++?",
+          "url": "https://stackoverflow.com/questions/14013909/how-object-slicing-happens-in-c",
+          "meta": [
+            "score 1  ·  1 answers  ·  accepted answer  ·  c++, inheritance"
+          ]
+        },
+        {
+          "title": "Object slicing while casting in C++",
+          "url": "https://stackoverflow.com/questions/43568410/object-slicing-while-casting-in-c",
+          "meta": [
+            "score 1  ·  1 answers  ·  accepted answer  ·  c++, inheritance, casting"
+          ]
+        },
+        {
+          "title": "C++: object slicing and exceptions",
+          "url": "https://stackoverflow.com/questions/50410497/c-object-slicing-and-exceptions",
+          "meta": [
+            "score 3  ·  2 answers  ·  answered  ·  c++, exception, object-slicing, rethrow"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`What is object slicing?`). It is immediately useful."
+    },
+    {
+      "index": 144,
+      "language": "c",
+      "query": "qs cheat awk field separator",
+      "expected": "cheat.sh result for awk field separator",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cheat",
+        "awk",
+        "field",
+        "separator"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 2.284101,
+      "provider": "cheat.sh",
+      "source_url": "https://cheat.sh/awk?T",
+      "body": "#[cheat.sheets:awk]\n# awk\n# Pattern scanning and processing language\n\n# Sum integers from a file or STDIN, one integer per line.\nprintf '1\\n2\\n3\\n' | awk '{sum += $1} END {print sum}'\n\n# Using specific character as separator to sum integers from a file or STDIN.\nprintf '1:2:3' | awk -F \":\" '{print $1+$2+$3}'\n\n# Print line number 12 of file.txt\nawk 'NR==12' file.txt\n\n# Print first field for each record in file.txt\nawk '{print $1}' file.txt\n\nPrint only lines that match regex in file.txt\nawk '/regex/' file.txt\n\n# Print only lines that do not match regex in file.txt\nawk '!/regex/' file.txt\n\n# Print any line where field 2 is equal to \"foo\" in file.txt\nawk '$2 == \"foo\"' file.txt\n\n# Print lines where field 2 is NOT equal to \"foo\" in file.txt\nawk '$2 != \"foo\"' file.txt\n\n# Print line if field 1 matches regex in file.txt\nawk '$1 ~ /regex/' file.txt\n\n# Print line if field 1 does NOT match regex in file.txt\nawk '$1 !~ /regex/' file.txt\n\n# Print lines with more than 80 characters in file.txt\nawk 'length > 80' file.txt\n\n# Print a multiplication table.\nawk -v RS='' '\n    {\n        for(i=1;i<=NF;i++){\n            printf(\"%dx%d=%d%s\", i, NR, i*NR, i==NR?\"\\n\":\"\\t\")\n        }\n    }\n' <<< \"$(seq 9 | sed 'H;g')\"\n\n# Specify output separator character.\nprintf '1 2 3' | awk 'BEGIN {OFS=\":\"}; {print $1,$2,$3}'\n\n# Search paragraph for the given REGEX match.\n# Paragraphs will be collapsed together.\nawk -v RS='' '/42B/' file\n\n# Search paragraph for the given REGEX match.\n# Paragraphs will be separated with a new line.\nawk -v RS= ORS='\\n\\n' '/42B/' file\n\n# Display only first field in text taken from STDIN.\necho 'Field_1  Field_2  Field_3' | awk '{print $1}'\n# Note that in this case, you're far better off using cut(1).\n\n# Use AWK solo; without the need for something via STDIN.\nawk 'BEGIN {print(\"Example text.\")}'\n\n# Access environment variables from within AWK.\nawk 'BEGIN {print ENVIRON[\"LS_COLORS\"]}'\n\n# Count number of lines taken from STDIN.\nfree | awk '{L++} END {print(L)}'\n# Cleaner, more efficient approach to the above.\nfree | awk 'END {print(NR)}'\n\n# Output unique list of available sections under which to create a DEB package.\nawk '!A[$1]++ {print($1)}' <<< \"$(dpkg-query --show -f='${Section}\\n')\"\n\n# Using process substitution (`<()` is NOT command substitution), with AWK and\n# its associative array variables, we can print just column 2 for lines whose\n# first column is equal to what's between the double-quotes.\nawk '{NR != 1 && A[$1]=$2} END {print(A[\"Mem:\"])}' <(free -h)\n# While below is an easier and simpler solution to the above, it's not at all\n# the same, and in other cases, the above is definitely preferable.\nawk '/^Mem:/ {print($2)}' <(free -h)\n\n# Output list of unique uppercase-only, sigil-omitted variables used in FILE.\nawk '\n    {\n        for(F=0; F<NF; F++){\n            if($F~/^\\$[A-Z_]+$/){\n                A[$F]++\n            }\n        }\n    }\n    END {\n        for(I in A){\n            X=substr(I, 2, length(I))\n            printf(\"%s\\n\", X)\n        }\n    }\n' FILE\n\n# Output only lines from FILE between PATTERN_1 and PATTERN_2. Good for logs.\nawk '/PATTERN_1/,/PATTERN_2/ {print}' FILE\n\n# Pretty-print a table of an overview of the non-system users on the system.\nawk -F ':' '\n    BEGIN {\n        printf(\"%-17s %-4s %-4s %-s\\n\", \"NAME\", \"UID\", \"GID\", \"SHELL\")\n    }\n    $3 >= 1000 && $1 != \"nobody\" {\n        printf(\"%-17s %-d %-d %-s\\n\", $1, $3, $4, $7)\n    }\n' /etc/passwd\n\n# Display the total amount of MiB of RAM available in the machine. This is also\n# a painful but useful workaround to get the units comma-separated, as would be\n# doable with Bash's own `printf` built-in.\nawk '/^MemTotal:/ {printf(\"%'\"'\"'dMiB\\n\", $2 / 1024)}'\n\n# It's possible to sort strings in AWK, as well as uniq-ing, meaning you can\n# replace uniq(1) and sort(1) calls with just the one call of AWK. Granted, you\n# can use `sort -u` to do both, but AWK offers much more functionality.\n#\n# Unlike when using AWK to uniq-ify, uniq(1) only works by adjacency, meaning\n# the duplicate lines must be adjacent to one another for them to be handled.\nawk '\n\t{\n\t\t!Lines[$0]++\n\t}\n\tEND {\n\t\tasorti(Lines, Sorted)\n\t\tfor (Line in Sorted) {\n\t\t\tprint(Sorted[Line])\n\t\t}\n\t}\n' FILE\n\n# Remove duplicate lines\nawk '!seen[$0]++' file.txt\n\n# Remove all empty lines\nawk 'NF > 0' file.txt\n#[cheat:awk]\n# To sum integers from a file or stdin, one integer per line:\nprintf '1\\n2\\n3\\n' | awk '{ sum += $1} END {print sum}'\n\n# To use a specific character as separator to sum integers from a file or stdin:\nprintf '1:2:3' | awk -F \":\" '{print $1+$2+$3}'\n\n# To print a multiplication table:\nseq 9 | sed 'H;g' | awk -v RS='' '{for(i=1;i<=NF;i++)printf(\"%dx%d=%d%s\", i, NR, i*NR, i==NR?\"\\n\":\"\\t\")}'\n\n# To specify an output separator character:\nprintf '1 2 3' | awk 'BEGIN {OFS=\":\"}; {print $1,$2,$3}'\n\n# To execute commands only on rows that satisfy a certain condtion\nprintf \"george jetson\\nolive oyl\\nbeetle bailey\" | awk '$2==\"bailey\"{print $0}'\n#\n# To execute commands only on matching rows using regex\nprintf \"george jetson\\nolive oyl\\nbeetle bailey\" | awk '/ley$/{print $0}'\n#[tldr:awk]\n# awk\n# A versatile programming language for working on files.\n# More information: <https://github.com/onetrueawk/awk>.\n\n# Print the fifth column (a.k.a. field) in a space-separated file:\nawk '{print $5}' path/to/file\n\n# Print the second column of the lines containing \"foo\" in a space-separated file:\nawk '/foo/ {print $2}' path/to/file\n\n# Print the last column of each line in a file, using a comma (instead of space) as a field separator:\nawk -F ',' '{print $NF}' path/to/file\n\n# Sum the values in the first column of a file and print the total:\nawk '{s+=$1} END {print s}' path/to/file\n\n# Print every third line starting from the first line:\nawk 'NR%3==1' path/to/file\n\n# Print different values based on conditions:\nawk '{if ($1 == \"foo\") print \"Exact match foo\"; else if ($1 ~ \"bar\") print \"Partial match bar\"; else print \"Baz\"}' path/to/file\n\n# Print all lines where the 10th column value equals the specified value:\nawk '($10 == value)'\n\n# Print all the lines which the 10th column value is between a min and a max:\nawk '($10 >= min_value && $10 <= max_value)'",
+      "hits": [],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The cheat.sh `awk` sheet is returned directly and includes immediately useful field-separator examples using `-F` and `OFS`."
+    },
+    {
+      "index": 145,
+      "language": "haskell",
+      "query": "qs gh haskell-unordered-containers",
+      "expected": "GitHub repositories for haskell-unordered-containers",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "gh",
+        "haskell-unordered-containers"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.330431,
+      "provider": "github",
+      "source_url": "https://github.com/search?type=repositories&q=haskell-unordered-containers",
+      "hits": [
+        {
+          "title": "konsumlamm/extended-containers",
+          "url": "https://github.com/konsumlamm/extended-containers",
+          "snippet": "A Haskell library for containers to extend the containers and unordered-containers packages.",
+          "meta": [
+            "5 stars  ·  Haskell"
+          ]
+        },
+        {
+          "title": "solus-packages/haskell-unordered-containers",
+          "url": "https://github.com/solus-packages/haskell-unordered-containers",
+          "snippet": "To report an issue or request an update, go to: https://issues.getsol.us",
+          "meta": [
+            "0 stars  ·  Makefile"
+          ]
+        },
+        {
+          "title": "deepin-community/haskell-unordered-containers",
+          "url": "https://github.com/deepin-community/haskell-unordered-containers",
+          "meta": [
+            "0 stars  ·  Haskell"
+          ]
+        },
+        {
+          "title": "comatose/stl-container",
+          "url": "https://github.com/comatose/stl-container",
+          "snippet": "haskell bindings to C++ STL containers such as unordered_map",
+          "meta": [
+            "0 stars  ·  Haskell"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 3,
+      "assessment": "The query routes to GitHub repository search, but the canonical `unordered-containers` repository is absent and the returned repositories are weak matches."
+    },
+    {
+      "index": 146,
+      "language": "python",
+      "query": "qs mdn python webassembly api",
+      "expected": "MDN search for python webassembly api",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "mdn",
+        "python",
+        "webassembly",
+        "api"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.094571,
+      "provider": "mdn",
+      "source_url": "https://developer.mozilla.org/en-US/search?q=python%20webassembly%20api",
+      "hits": [
+        {
+          "title": "Python",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Python",
+          "snippet": "Python is a high-level general-purpose programming language. It uses a multi-paradigm approach, meaning it supports procedural, object-oriented, and some functional programming constructs."
+        },
+        {
+          "title": "Using the WebAssembly JavaScript API",
+          "url": "https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API",
+          "snippet": "This article teaches you how to use the key features of the WebAssembly JavaScript API, including loading Wasm modules and manipulating WebAssembly memories, tables, and globals."
+        },
+        {
+          "title": "Django Web Framework (Python)",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django",
+          "snippet": "Django is an extremely popular and fully featured server-side web framework, written in Python. This module shows you why Django is one of the most popular web server frameworks, how to set up a development environment, and how to start using it to create your own web applications."
+        },
+        {
+          "title": "WebAssembly",
+          "url": "https://developer.mozilla.org/en-US/docs/WebAssembly/Reference/JavaScript_interface",
+          "snippet": "The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality."
+        },
+        {
+          "title": "WebAssembly",
+          "url": "https://developer.mozilla.org/en-US/docs/WebAssembly",
+          "snippet": "WebAssembly (Wasm) is a low-level assembly-like language that brings near-native performance to the web. It serves as a compilation target for languages like C/C++, C#, and Rust, allowing high-performance code to run directly in the browser."
+        }
+      ],
+      "stderr": null,
+      "score": 4,
+      "assessment": "The useful WebAssembly JavaScript API result is second, behind a generic Python glossary result."
+    },
+    {
+      "index": 147,
+      "language": "go",
+      "query": "qs web go vulnerability database",
+      "expected": "DuckDuckGo results for Go vulnerability database",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "web",
+        "go",
+        "vulnerability",
+        "database"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 5.005978,
+      "provider": "web",
+      "source_url": "https://duckduckgo.com/?q=go%20vulnerability%20database",
+      "hits": [
+        {
+          "title": "Search DuckDuckGo for go vulnerability database",
+          "url": "https://duckduckgo.com/?q=go%20vulnerability%20database",
+          "snippet": "Open this search in your browser."
+        }
+      ],
+      "stderr": null,
+      "score": 3,
+      "assessment": "The web provider returns a relevant DuckDuckGo search link, but no fetched results or direct target."
+    },
+    {
+      "index": 148,
+      "language": "rust",
+      "query": "qs docs core::cell::OnceCell",
+      "expected": "Official Rust core docs for core::cell::OnceCell",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "docs",
+        "core::cell::OnceCell"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.181364,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=core%20cell%20OnceCell",
+      "hits": [
+        {
+          "title": "OnceCell in core::cell - Rust",
+          "url": "https://doc.rust-lang.org/core/cell/struct.OnceCell.html",
+          "snippet": "A cell which can nominally be written to only once."
+        },
+        {
+          "title": "Search Rust standard library for core::cell::OnceCell",
+          "url": "https://doc.rust-lang.org/std/?search=core%20cell%20OnceCell",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`OnceCell in core::cell - Rust`). It is immediately useful."
+    },
+    {
+      "index": 149,
+      "language": "cpp",
+      "query": "qs wiki C++ name mangling",
+      "expected": "Wikipedia result for C++ name mangling",
+      "class": "source-routing",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "wiki",
+        "C++",
+        "name",
+        "mangling"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.432932,
+      "provider": "wikipedia",
+      "source_url": "https://en.wikipedia.org/w/index.php?search=C%2B%2B%20name%20mangling",
+      "hits": [
+        {
+          "title": "Name mangling",
+          "url": "https://en.wikipedia.org/wiki/Name_mangling",
+          "snippet": "symbol mangling schemes that can be selected at compile time with an -Z symbol-mangling-version option. The following manglers are defined: legacy A C++ style"
+        },
+        {
+          "title": "C++ syntax",
+          "url": "https://en.wikipedia.org/wiki/C%2B%2B_syntax",
+          "snippet": "conventions and name mangling suitable for interoperability with Fortran code. C++ does not define \"fortran\" as a standard keyword; however, C++ implementations"
+        },
+        {
+          "title": "Nm (Unix)",
+          "url": "https://en.wikipedia.org/wiki/Nm_%28Unix%29",
+          "snippet": "T non_mangled_function The differences between the outputs also show an example of solving the name mangling problem by using extern \"C\" in C++ code"
+        },
+        {
+          "title": "C++",
+          "url": "https://en.wikipedia.org/wiki/C%2B%2B",
+          "snippet": "\"C\" {/*...*/} block. Such a function may not rely on features depending on name mangling (i.e., function overloading). Programs developed in C or C++"
+        },
+        {
+          "title": "Namespace",
+          "url": "https://en.wikipedia.org/wiki/Namespace",
+          "snippet": "namespaces and names for internal use in the compiler in a process called name mangling. As well as its abstract language technical usage as described above"
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The expected target is the first result (`Name mangling`). It is immediately useful."
+    }
+  ]
+}

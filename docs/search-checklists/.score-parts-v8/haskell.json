@@ -1,0 +1,1238 @@
+[
+  {
+    "query": "lists",
+    "expected": "List type, syntax, and `Data.List`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "Predefined types and classes — lists"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "tuples",
+    "expected": "Tuple types and tuple syntax",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "Predefined types and classes — tuples"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "pattern matching",
+    "expected": "Pattern matching in equations and `case`",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Expressions and functions — pattern matching"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "guards",
+    "expected": "Guard syntax",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Expressions and functions — guards"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "list comprehensions",
+    "expected": "List-comprehension syntax",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Expressions and functions — list comprehensions"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "type classes",
+    "expected": "`class` and `instance` declarations",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "Declarations and bindings — type classes"
+    ],
+    "error": null,
+    "note": "The expected subject is within the top three and has useful context, but it is not a fully direct first result."
+  },
+  {
+    "query": "algebraic data types",
+    "expected": "`data` declarations and sum/product types",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "Declarations and bindings — algebraic data types"
+    ],
+    "error": null,
+    "note": "The expected subject is within the top three and has useful context, but it is not a fully direct first result."
+  },
+  {
+    "query": "newtypes",
+    "expected": "`newtype` declarations",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "Declarations and bindings — newtypes"
+    ],
+    "error": null,
+    "note": "The expected subject is within the top three and has useful context, but it is not a fully direct first result."
+  },
+  {
+    "query": "record syntax",
+    "expected": "Record declarations, construction, and updates",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "Declarations and bindings — record syntax"
+    ],
+    "error": null,
+    "note": "The expected subject is within the top three and has useful context, but it is not a fully direct first result."
+  },
+  {
+    "query": "deriving",
+    "expected": "Derived instances and deriving strategies",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Declarations and bindings — deriving"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "modules",
+    "expected": "Module declarations and exports",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "Modules and imports — modules"
+    ],
+    "error": null,
+    "note": "The expected subject is within the top three and has useful context, but it is not a fully direct first result."
+  },
+  {
+    "query": "qualified imports",
+    "expected": "Qualified module imports",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "Modules and imports — qualified imports"
+    ],
+    "error": null,
+    "note": "The expected subject is within the top three and has useful context, but it is not a fully direct first result."
+  },
+  {
+    "query": "infix operators",
+    "expected": "Infix functions and fixity declarations",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Expressions and functions — infix operators"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "strict evaluation",
+    "expected": "Strictness, `seq`, and bang patterns",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Expressions and functions — strict evaluation"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "thunks",
+    "expected": "Lazy evaluation and deferred computations",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Expressions and functions — thunks"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "tail recursion",
+    "expected": "Tail-recursive function design",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Expressions and functions — tail recursion"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "currying",
+    "expected": "Curried functions",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Expressions and functions — currying"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "partial application",
+    "expected": "Partial function application",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Expressions and functions — partial application"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "higher order functions",
+    "expected": "Functions that accept or return functions",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Expressions and functions — higher order functions"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "function composition",
+    "expected": "The `(.)` operator",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Expressions and functions — function composition"
+    ],
+    "error": null,
+    "note": "The first synthesized Haskell Report result is relevant, but its broad chapter snippet does not explain the requested concept."
+  },
+  {
+    "query": "map",
+    "expected": "`Prelude.map`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "map :: (a -> b) -> [a] -> [b]",
+      "map :: (a -> b) -> [a] -> [b]",
+      "map :: (a -> b) -> [a] -> [b]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "filter",
+    "expected": "`Prelude.filter`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "filter :: (a -> Bool) -> [a] -> [a]",
+      "filter :: (a -> Bool) -> [a] -> [a]",
+      "filter :: (a -> Bool) -> [a] -> [a]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "zipWith",
+    "expected": "`Prelude.zipWith`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]",
+      "zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]",
+      "zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "concat map",
+    "expected": "`Data.List.concatMap`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "concatMap :: (a -> [b]) -> [a] -> [b]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "reverse",
+    "expected": "`Prelude.reverse`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "reverse :: [a] -> [a]",
+      "reverse :: [a] -> [a]",
+      "reverse :: [a] -> [a]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "take while",
+    "expected": "`Prelude.takeWhile`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "takeWhile :: (a -> Bool) -> [a] -> [a]",
+      "takeWhile :: (a -> Bool) -> [a] -> [a]",
+      "takeWhile :: (a -> Bool) -> [a] -> [a]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "dropWhile",
+    "expected": "`Prelude.dropWhile`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "dropWhile :: (a -> Bool) -> [a] -> [a]",
+      "dropWhile :: (a -> Bool) -> [a] -> [a]",
+      "dropWhile :: (a -> Bool) -> [a] -> [a]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "split list at index",
+    "expected": "`Prelude.splitAt`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "splitAt :: Int -> [a] -> ([a], [a])",
+      "splitAt :: Int -> [a] -> ([a], [a])",
+      "splitAt :: Int -> [a] -> ([a], [a])"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "partition list",
+    "expected": "`Data.List.partition`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "partition :: (a -> Bool) -> [a] -> ([a], [a])",
+      "partition :: (a -> Bool) -> NonEmpty a -> ([a], [a])",
+      "partition :: (a -> Bool) -> Set a -> (Set a, Set a)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "element membership",
+    "expected": "`elem` and `notElem`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "elem :: (Foldable t, Eq a) => a -> t a -> Bool",
+      "elem :: (Foldable t, Eq a) => a -> t a -> Bool",
+      "elem :: Eq a => a -> [a] -> Bool"
+    ],
+    "error": null,
+    "note": "elem is first with a useful membership description; notElem is not visible in the top results."
+  },
+  {
+    "query": "association list lookup",
+    "expected": "`Prelude.lookup`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "lookup :: Eq a => a -> [(a, b)] -> Maybe b",
+      "lookup :: Eq a => a -> [(a, b)] -> Maybe b",
+      "lookup :: Eq a => a -> [(a, b)] -> Maybe b"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "maximum by",
+    "expected": "`Data.List.maximumBy`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "maximumBy :: Foldable t => (a -> a -> Ordering) -> t a -> a",
+      "maximumBy :: Foldable t => (a -> a -> Ordering) -> t a -> a",
+      "maximumBy :: Foldable1 t => (a -> a -> Ordering) -> t a -> a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "sort on field",
+    "expected": "`Data.List.sortOn`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "sortOn :: Ord b => (a -> b) -> [a] -> [a]",
+      "sortOn :: Ord b => (a -> b) -> NonEmpty a -> NonEmpty a",
+      "sortOn :: Ord b => (a -> b) -> Seq a -> Seq a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "group adjacent values",
+    "expected": "`Data.List.group` / `groupBy`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "group :: Eq a => [a] -> [[a]]",
+      "group :: (Foldable f, Eq a) => f a -> [NonEmpty a]",
+      "group :: Text -> [Text]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "remove duplicates",
+    "expected": "`Data.List.nub`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "nub :: Eq a => [a] -> [a]",
+      "nub :: Eq a => NonEmpty a -> NonEmpty a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "foldr",
+    "expected": "`Prelude.foldr`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b",
+      "foldr :: (a -> b -> b) -> b -> [a] -> b",
+      "foldr :: (a -> b -> b) -> b -> [a] -> b"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "foldl'",
+    "expected": "`Data.List.foldl'`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "foldl' :: Foldable t => (b -> a -> b) -> b -> t a -> b",
+      "foldl' :: forall a b. (b -> a -> b) -> b -> [a] -> b",
+      "foldl' :: Foldable t => (b -> a -> b) -> b -> t a -> b"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "running totals",
+    "expected": "`Prelude.scanl`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "scanl :: (b -> a -> b) -> b -> [a] -> [b]",
+      "scanl :: (b -> a -> b) -> b -> [a] -> [b]",
+      "scanl :: (b -> a -> b) -> b -> [a] -> [b]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "infinite iteration",
+    "expected": "`Prelude.iterate`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "iterate :: (a -> a) -> a -> [a]",
+      "iterate :: (a -> a) -> a -> [a]",
+      "iterate :: (a -> a) -> a -> [a]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "repeat value n times",
+    "expected": "`Prelude.replicate`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "replicate :: Int -> a -> [a]",
+      "replicate :: Int -> a -> [a]",
+      "replicate :: Int -> a -> [a]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "Maybe",
+    "expected": "`Maybe`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Maybe a",
+      "maybe :: b -> (a -> b) -> Maybe a -> b",
+      "data Maybe a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "default maybe value",
+    "expected": "`Data.Maybe.fromMaybe`",
+    "score": 2,
+    "provider": "Haskell",
+    "top_titles": [
+      "<$ :: Functor f => a -> f b -> f a",
+      "<$ :: Functor f => a -> f b -> f a",
+      "<$ :: Functor f => a -> f b -> f a"
+    ],
+    "error": null,
+    "note": "Expected fromMaybe is only rank 5; the top three <$ results do not answer the fallback-value task."
+  },
+  {
+    "query": "map_maybe",
+    "expected": "`Data.Maybe.mapMaybe`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "mapMaybe :: (a -> Maybe b) -> [a] -> [b]",
+      "mapMaybe :: Ord b => (a -> Maybe b) -> Set a -> Set b",
+      "mapMaybe :: (a -> Maybe b) -> Seq a -> Seq b"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "discard Nothing values",
+    "expected": "`Data.Maybe.catMaybes`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "void :: Functor f => f a -> f ()",
+      "void :: Functor f => f a -> f ()",
+      "catMaybes :: [Maybe a] -> [a]"
+    ],
+    "error": null,
+    "note": "catMaybes is rank 3 and useful, but two unrelated void results precede it."
+  },
+  {
+    "query": "Either",
+    "expected": "`Either`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Either a b",
+      "either :: (a -> c) -> (b -> c) -> Either a b -> c",
+      "data Either a b"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "separate lefts and rights",
+    "expected": "`Data.Either.partitionEithers`",
+    "score": 2,
+    "provider": "Haskell",
+    "top_titles": [
+      "data ST s a",
+      "data ST s a",
+      "data ST s a"
+    ],
+    "error": null,
+    "note": "partitionEithers is only rank 5; four unrelated ST results dominate the output."
+  },
+  {
+    "query": "parse string safely",
+    "expected": "`Text.Read.readMaybe`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "readMaybe :: Read a => String -> Maybe a",
+      "readMaybe :: (PrimMonad m, MVector v a) => v (PrimState m) a -> Int -> m (Maybe a)",
+      "readMaybe :: PrimMonad m => MVector (PrimState m) a -> Int -> m (Maybe a)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "convert value to string",
+    "expected": "`Show` and `show`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Show a",
+      "show :: Show a => a -> String",
+      "class Show a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "ordering comparison",
+    "expected": "`Ord` and `compare`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "maximumBy :: Foldable t => (a -> a -> Ordering) -> t a -> a",
+      "minimumBy :: Foldable t => (a -> a -> Ordering) -> t a -> a",
+      "class Eq a => Ord a"
+    ],
+    "error": null,
+    "note": "Ord is rank 3; comparison-related maximumBy/minimumBy results precede it, and compare is not directly returned."
+  },
+  {
+    "query": "enumerate range",
+    "expected": "`Enum` and range syntax",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "enumFromTo :: Enum a => a -> a -> [a]",
+      "enumFromTo :: Enum a => a -> a -> [a]",
+      "enumFromTo :: Enum a => a -> a -> [a]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "Functor",
+    "expected": "`Functor` and `fmap`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Functor (f :: Type -> Type)",
+      "class Functor (f :: Type -> Type)",
+      "class Functor (f :: Type -> Type)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "applicatives",
+    "expected": "`Applicative`, `pure`, and `<*>`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Functor f => Applicative (f :: Type -> Type)",
+      "class Functor f => Applicative (f :: Type -> Type)",
+      "class Functor f => Applicative (f :: Type -> Type)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "monadic bind",
+    "expected": "`Monad` and `(>>=)`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      ">>= :: Monad m => m a -> (a -> m b) -> m b",
+      ">>= :: Monad m => m a -> (a -> m b) -> m b",
+      ">>= :: Monad m => m a -> (a -> m b) -> m b"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "Alternative",
+    "expected": "`Control.Applicative.Alternative`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Applicative f => Alternative (f :: Type -> Type)",
+      "class Applicative f => Alternative (f :: Type -> Type)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "foldables",
+    "expected": "`Data.Foldable.Foldable`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Foldable (t :: Type -> Type)",
+      "class Foldable (t :: Type -> Type)",
+      "foldable :: (Foldable t, ToJSON a) => t a -> Encoding"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "traverse",
+    "expected": "`Data.Traversable.traverse`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "traverse :: (Traversable t, Applicative f) => (a -> f b) -> t a -> f (t b)",
+      "traverse :: (Traversable t, Applicative f) => (a -> f b) -> t a -> f (t b)",
+      "traverse :: Applicative f => (v1 -> f v2) -> KeyMap v1 -> f (KeyMap v2)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "Semigroup",
+    "expected": "`Semigroup` and `(<>)`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Semigroup a",
+      "class Semigroup a",
+      "class Semigroup a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "monoids",
+    "expected": "`Monoid`, `mempty`, and `mappend`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Semigroup a => Monoid a",
+      "class Semigroup a => Monoid a",
+      "class Semigroup a => Monoid a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "bimap",
+    "expected": "`Data.Bifunctor.bimap`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "bimap :: Bifunctor p => (a -> b) -> (c -> d) -> p a c -> p b d",
+      "bimap :: Bifunctor p => (a -> b) -> (c -> d) -> p a c -> p b d",
+      "bimap :: Bifunctor p => (a -> b) -> (c -> d) -> p a c -> p b d"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "monad transformers",
+    "expected": "Transformer types and `lift`",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Monad m => MonadIO (m :: Type -> Type)",
+      "liftIO :: MonadIO m => IO a -> m a",
+      "class (Magnified m ~ Magnified n, MonadReader b m, MonadReader a n) => Magnify (m :: Type -> Type) (n :: Type -> Type) b a | m -> b, n -> a, m a -> n, n b -> m"
+    ],
+    "error": null,
+    "note": "Results discuss MonadIO and liftIO, but do not return transformer types or the general lift operation."
+  },
+  {
+    "query": "Data.Map.Strict.lookup",
+    "expected": "`Data.Map.Strict.lookup`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "lookup :: Ord k => k -> Map k a -> Maybe a",
+      "lookup :: Eq a => a -> [(a, b)] -> Maybe b",
+      "lookup :: Eq a => a -> [(a, b)] -> Maybe b"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "insert map key",
+    "expected": "`Data.Map.insert`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "lookup :: Int -> Seq a -> Maybe a",
+      "insert :: Ord k => k -> a -> Map k a -> Map k a",
+      "insertWith :: Ord k => (a -> a -> a) -> k -> a -> Map k a -> Map k a"
+    ],
+    "error": null,
+    "note": "Data.Map insert is useful at rank 2, behind an unrelated Seq lookup result."
+  },
+  {
+    "query": "integer keyed maps",
+    "expected": "`Data.IntMap`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data IntMap a",
+      "data IntMap a",
+      "data IntMap a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "set intersection",
+    "expected": "`Data.Set.intersection`",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "mergeA :: (Applicative f, Ord a) => WhenMissing f a -> WhenMissing f a -> WhenMatched f a -> Set a -> Set a -> f (Set a)",
+      "isSubsetOf :: Ord a => Set a -> Set a -> Bool",
+      "disjoint :: Ord a => Set a -> Set a -> Bool"
+    ],
+    "error": null,
+    "note": "Data.Set.intersection is rank 4; the top results are related set operations but miss the requested operation."
+  },
+  {
+    "query": "hash maps",
+    "expected": "`Data.HashMap` from `unordered-containers`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data HashMap k v",
+      "data HashMap k v",
+      "hashMap :: forall a p f. (Profunctor p, Functor f) => p (HashMap a ()) (f (HashMap a ())) -> p (HashSet a) (f (HashSet a))"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "sequences",
+    "expected": "`Data.Sequence.Seq`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Seq a",
+      "seq :: a -> b -> b",
+      "seq :: a -> b -> b"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "vectors",
+    "expected": "`Data.Vector.Vector`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class MVector Mutable v a => Vector (v :: Type -> Type) a",
+      "data Vector a",
+      "data Vector a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "byte strings",
+    "expected": "`Data.ByteString.ByteString`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data ByteString",
+      "data ByteString",
+      "data ByteString"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "Text",
+    "expected": "`Data.Text.Text`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "Text :: Symbol -> ErrorMessage",
+      "Text :: Symbol -> ErrorMessage",
+      "data Text"
+    ],
+    "error": null,
+    "note": "Data.Text.Text is rank 3, behind two GHC type-level Text results."
+  },
+  {
+    "query": "split_on",
+    "expected": "`Data.Text.splitOn`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "splitOn :: HasCallStack => Text -> Text -> [Text]",
+      "splitOn :: HasCallStack => Text -> Text -> [Text]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "replace substring",
+    "expected": "`Data.Text.replace`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "replace :: HasCallStack => Text -> Text -> Text -> Text",
+      "replace :: b -> OnError a b",
+      "replace :: HasCallStack => Text -> Text -> Text -> Text"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "encode utf8",
+    "expected": "`Data.Text.Encoding.encodeUtf8`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "encodeUtf8 :: Text -> ByteString",
+      "encodeUtf8 :: Text -> ByteString"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "handle invalid Unicode",
+    "expected": "`Data.Text.Encoding.decodeUtf8With` and `lenientDecode`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "decodeUtf8With :: OnDecodeError -> ByteString -> Text",
+      "decodeUtf8With :: OnDecodeError -> ByteString -> Text"
+    ],
+    "error": null,
+    "note": "decodeUtf8With is first and useful, but lenientDecode is absent."
+  },
+  {
+    "query": "parse JSON",
+    "expected": "`Data.Aeson.eitherDecode` / `FromJSON`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "eitherDecode :: FromJSON a => ByteString -> Either String a",
+      "eitherDecode :: FromJSON a => ByteString -> Either String a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "generic programming",
+    "expected": "`GHC.Generics.Generic`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Generic a where {",
+      "generic :: (Generic a, Generic b) => Iso a b (Rep a g) (Rep b h)",
+      "Generic :: FPFormat"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "lens view set",
+    "expected": "`Control.Lens.view`, `set`, and lens basics",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "view :: MonadReader s m => Getting a s a -> m a",
+      "view :: MonadReader s m => Getting a s a -> m a"
+    ],
+    "error": null,
+    "note": "view is first and useful, but set and basic lens context are absent."
+  },
+  {
+    "query": "putStrLn",
+    "expected": "`Prelude.putStrLn`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "putStrLn :: String -> IO ()",
+      "putStrLn :: String -> IO ()",
+      "putStrLn :: Text -> IO ()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "readFile",
+    "expected": "`Prelude.readFile`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "readFile :: FilePath -> IO String",
+      "readFile :: FilePath -> IO String",
+      "readFile :: FilePath -> IO Text"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "write text file",
+    "expected": "`writeFile`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "writeFile :: FilePath -> Text -> IO ()",
+      "writeFile :: FilePath -> Text -> IO ()",
+      "writeFile :: FilePath -> String -> IO ()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "safe file handle",
+    "expected": "`System.IO.withFile`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "withFile :: FilePath -> IOMode -> (Handle -> IO r) -> IO r",
+      "withFile :: FilePath -> IOMode -> (Handle -> IO r) -> IO r",
+      "withFile :: FilePath -> IOMode -> (Handle -> IO r) -> IO r"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "command line arguments",
+    "expected": "`System.Environment.getArgs`",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "getFullArgs :: IO [String]",
+      "getFileSystemEncoding :: IO TextEncoding",
+      "getOpt :: ArgOrder a -> [OptDescr a] -> [String] -> ([a], [String], [String])"
+    ],
+    "error": null,
+    "note": "getArgs appears only at ranks 4 and 5; higher results do not directly answer the task."
+  },
+  {
+    "query": "environment variables",
+    "expected": "`System.Environment.lookupEnv` / `getEnv`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "lookupEnv :: String -> IO (Maybe String)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "list directory",
+    "expected": "`System.Directory.listDirectory`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "listDirectory :: FilePath -> IO [FilePath]",
+      "listDirectory :: OsPath -> IO [OsPath]"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "check file exists",
+    "expected": "`System.Directory.doesFileExist`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "doesFileExist :: FilePath -> IO Bool",
+      "doesFileExist :: OsPath -> IO Bool"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "file extension",
+    "expected": "`System.FilePath.takeExtension` / `replaceExtension`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "takeExtension :: FilePath -> String",
+      "takeExtension :: FilePath -> String",
+      "takeExtension :: FilePath -> String"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "temporary files",
+    "expected": "`System.IO.Temp`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "withSystemTempFile :: (MonadIO m, MonadMask m) => String -> (FilePath -> Handle -> m a) -> m a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "exceptions",
+    "expected": "`Control.Exception`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class (Typeable e, Show e) => Exception e",
+      "class (Typeable e, Show e) => Exception e",
+      "class (Typeable e, Show e) => Exception e"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "bracket resource cleanup",
+    "expected": "`Control.Exception.bracket`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "withCreateProcess :: CreateProcess -> (Maybe Handle -> Maybe Handle -> Maybe Handle -> ProcessHandle -> IO a) -> IO a",
+      "mask :: ((forall a. () => IO a -> IO a) -> IO b) -> IO b",
+      "bracket :: IO a -> (a -> IO b) -> (a -> IO c) -> IO c"
+    ],
+    "error": null,
+    "note": "bracket is rank 3 and useful, behind related cleanup/masking APIs."
+  },
+  {
+    "query": "async concurrency",
+    "expected": "`Control.Concurrent.Async`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Async a",
+      "async :: IO a -> IO (Async a)",
+      "data Async a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "forkIO",
+    "expected": "`Control.Concurrent.forkIO`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "forkIO :: IO () -> IO ThreadId",
+      "forkIO :: IO () -> IO ThreadId",
+      "forkIO :: IO () -> IO ThreadId"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "MVar",
+    "expected": "`Control.Concurrent.MVar.MVar`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data MVar a",
+      "data MVar a",
+      "data MVar# a (b :: TYPE 'BoxedRep l) :: UnliftedType"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "software transactional memory",
+    "expected": "`Control.Concurrent.STM`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "atomically :: STM a -> IO a",
+      "atomically :: STM a -> IO a",
+      "atomically :: STM a -> IO a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "operation timeout",
+    "expected": "`System.Timeout.timeout`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Timeout",
+      "timeout :: Int -> IO a -> IO (Maybe a)"
+    ],
+    "error": null,
+    "note": "timeout is useful at rank 2, behind the Timeout exception type."
+  },
+  {
+    "query": "run external process",
+    "expected": "`System.Process` / `readProcess`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "readProcess :: FilePath -> [String] -> String -> IO String"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "random numbers",
+    "expected": "`System.Random` and `randomRIO`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "randomRIO :: (Random a, MonadIO m) => (a, a) -> m a",
+      "randomRIO :: (Random a, MonadIO m) => (a, a) -> m a"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "HTTP client request",
+    "expected": "`Network.HTTP.Client`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "httpLbs :: Request -> Manager -> IO (Response ByteString)",
+      "httpLbs :: Request -> Manager -> IO (Response ByteString)"
+    ],
+    "error": null,
+    "note": "httpLbs is immediately useful for an HTTP client request, but the expected Network.HTTP.Client module is not identified directly."
+  },
+  {
+    "query": "QuickCheck properties",
+    "expected": "`Test.QuickCheck` and `property`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Property",
+      "property :: Testable prop => prop -> Property"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "Hspec",
+    "expected": "`Test.Hspec`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "hspec :: Spec -> IO ()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "GHCi commands",
+    "expected": "GHCi interactive commands",
+    "score": 5,
+    "provider": "ghc-guide",
+    "top_titles": [
+      "Documenting command-line options and GHCi commands",
+      "GHCi commands",
+      "GHCi commands"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  },
+  {
+    "query": "language extensions",
+    "expected": "GHC language extensions and `LANGUAGE` pragmas",
+    "score": 5,
+    "provider": "ghc-guide",
+    "top_titles": [
+      "Language extensions",
+      "Overview of all language extensions"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected subject and provides useful context."
+  }
+]

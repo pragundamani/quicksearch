@@ -1,0 +1,1812 @@
+[
+  {
+    "language": "c",
+    "query": "qs c reference standard code example quick answer feclearexcept floating environment",
+    "expected": "feclearexcept",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "index": 100,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"C\",\n  \"query\": \"reference standard code example quick answer feclearexcept floating environment\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"feclearexcept\",\n      \"url\": \"https://devdocs.io/c/numeric/fenv/feclearexcept\",\n      \"snippet\": \"0 if all indicated exceptions were successfully cleared or if excepts is zero. Returns a non-zero value on error.\",\n      \"meta\": [\n        \"C  \u00b7  Numerics\",\n        \"#include <fenv.h>\\n#include <stdio.h>\\n#include <math.h>\\n#include <float.h>\\n\\n/*\\n * A possible implementation of hypot which makes use of many advanced\\n * floating-point features.\\n */\\ndouble hypot_demo(double a, double b) {\\n  const int range_problem = FE_OVERFLOW | FE_UNDERFLOW;\\n  feclearexcept(range_problem);\\n  // try a fast algorithm\\n  double result = sqrt(a * a + b * b);\\n  if (!fetestexcept(range_problem))  // no overflow or underflow\\n    return result;                   // return the fast result\\n  // do a more complicated calculation to avoid overflow or underflow\\n  int a_exponent,b_exponent;\\n  frexp(a, &a_exponent);\\n  frexp(b, &b_exponent);\\n\\n  if (a_exponent - b_exponent > DBL_MAX_EXP)\\n    return fabs(a) + fabs(b);        // we can ignore the smaller value\\n  // scale so that fabs(a) is near 1\\n  double a_scaled = scalbn(a, -a_exponent);\\n  double b_scaled = scalbn(b, -a_exponent);\\n  // overflow and underflow is now impossible \\n  result = sqrt(a_scaled * a_scaled + b_scaled * b_scaled);\\n  // undo scaling\\n  return scalbn(result, a_exponent);\\n}\\n\\nint main(void)\\n{\\n  // Normal case takes the fast route\\n  printf(\\\"hypot(%f, %f) = %f\\\\n\\\", 3.0, 4.0, hypot_demo(3.0, 4.0));\\n  // Extreme case takes the slow but more accurate route\\n  printf(\\\"hypot(%e, %e) = %e\\\\n\\\", DBL_MAX / 2.0, \\n                                DBL_MAX / 2.0, \\n                                hypot_demo(DBL_MAX / 2.0, DBL_MAX / 2.0));\\n\\n  return 0;\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.03696629699697951,
+    "parsed": {
+      "provider": "C",
+      "query": "reference standard code example quick answer feclearexcept floating environment",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "feclearexcept",
+          "url": "https://devdocs.io/c/numeric/fenv/feclearexcept",
+          "snippet": "0 if all indicated exceptions were successfully cleared or if excepts is zero. Returns a non-zero value on error.",
+          "meta": [
+            "C  \u00b7  Numerics",
+            "#include <fenv.h>\n#include <stdio.h>\n#include <math.h>\n#include <float.h>\n\n/*\n * A possible implementation of hypot which makes use of many advanced\n * floating-point features.\n */\ndouble hypot_demo(double a, double b) {\n  const int range_problem = FE_OVERFLOW | FE_UNDERFLOW;\n  feclearexcept(range_problem);\n  // try a fast algorithm\n  double result = sqrt(a * a + b * b);\n  if (!fetestexcept(range_problem))  // no overflow or underflow\n    return result;                   // return the fast result\n  // do a more complicated calculation to avoid overflow or underflow\n  int a_exponent,b_exponent;\n  frexp(a, &a_exponent);\n  frexp(b, &b_exponent);\n\n  if (a_exponent - b_exponent > DBL_MAX_EXP)\n    return fabs(a) + fabs(b);        // we can ignore the smaller value\n  // scale so that fabs(a) is near 1\n  double a_scaled = scalbn(a, -a_exponent);\n  double b_scaled = scalbn(b, -a_exponent);\n  // overflow and underflow is now impossible \n  result = sqrt(a_scaled * a_scaled + b_scaled * b_scaled);\n  // undo scaling\n  return scalbn(result, a_exponent);\n}\n\nint main(void)\n{\n  // Normal case takes the fast route\n  printf(\"hypot(%f, %f) = %f\\n\", 3.0, 4.0, hypot_demo(3.0, 4.0));\n  // Extreme case takes the slow but more accurate route\n  printf(\"hypot(%e, %e) = %e\\n\", DBL_MAX / 2.0, \n                                DBL_MAX / 2.0, \n                                hypot_demo(DBL_MAX / 2.0, DBL_MAX / 2.0));\n\n  return 0;\n}"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.IntMap.lookupGE",
+    "expected": "Data.IntMap.lookupGE",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 101,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Haskell\",\n  \"query\": \"Data.IntMap.lookupGE\",\n  \"source_url\": \"https://hackage.haskell.org/\",\n  \"hits\": [\n    {\n      \"title\": \"lookupGE :: Key -> IntMap a -> Maybe (Key, a)\",\n      \"url\": \"https://hackage.haskell.org/package/containers-0.8.1/docs/Data-IntMap-Strict.html#v:lookupGE\",\n      \"snippet\": \"<math>. Find smallest key greater or equal to the given one and return the corresponding (key, value) pair. lookupGE 3 (fromList [(3,'a'), (5,'b')]) == Just (3, 'a') lookupGE 4 (fromList [(3,'a'), (5,'b')]) == Just (5, 'b') lookupGE 6 (fromList [(3,'a'), (5,'b')]) == Nothing\",\n      \"meta\": [\n        \"containers  \u00b7  Data.IntMap.Strict\"\n      ]\n    },\n    {\n      \"title\": \"lookupGE :: Key -> IntMap a -> Maybe (Key, a)\",\n      \"url\": \"https://hackage.haskell.org/package/containers-0.8.1/docs/Data-IntMap-Lazy.html#v:lookupGE\",\n      \"snippet\": \"<math>. Find smallest key greater or equal to the given one and return the corresponding (key, value) pair. lookupGE 3 (fromList [(3,'a'), (5,'b')]) == Just (3, 'a') lookupGE 4 (fromList [(3,'a'), (5,'b')]) == Just (5, 'b') lookupGE 6 (fromList [(3,'a'), (5,'b')]) == Nothing\",\n      \"meta\": [\n        \"containers  \u00b7  Data.IntMap.Lazy\"\n      ]\n    },\n    {\n      \"title\": \"lookupGE :: Ord a => a -> Set a -> Maybe a\",\n      \"url\": \"https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Set.html#v:lookupGE\",\n      \"snippet\": \"<math>. Find smallest element greater or equal to the given one. lookupGE 3 (fromList [3, 5]) == Just 3 lookupGE 4 (fromList [3, 5]) == Just 5 lookupGE 6 (fromList [3, 5]) == Nothing\",\n      \"meta\": [\n        \"containers  \u00b7  Data.Set\"\n      ]\n    },\n    {\n      \"title\": \"lookupGE :: Ord k => k -> Map k v -> Maybe (k, v)\",\n      \"url\": \"https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Map-Strict.html#v:lookupGE\",\n      \"snippet\": \"<math>. Find smallest key greater or equal to the given one and return the corresponding (key, value) pair. lookupGE 3 (fromList [(3,'a'), (5,'b')]) == Just (3, 'a') lookupGE 4 (fromList [(3,'a'), (5,'b')]) == Just (5, 'b') lookupGE 6 (fromList [(3,'a'), (5,'b')]) == Nothing\",\n      \"meta\": [\n        \"containers  \u00b7  Data.Map.Strict\"\n      ]\n    },\n    {\n      \"title\": \"lookupGE :: Ord k => k -> Map k v -> Maybe (k, v)\",\n      \"url\": \"https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Map-Lazy.html#v:lookupGE\",\n      \"snippet\": \"<math>. Find smallest key greater or equal to the given one and return the corresponding (key, value) pair. lookupGE 3 (fromList [(3,'a'), (5,'b')]) == Just (3, 'a') lookupGE 4 (fromList [(3,'a'), (5,'b')]) == Just (5, 'b') lookupGE 6 (fromList [(3,'a'), (5,'b')]) == Nothing\",\n      \"meta\": [\n        \"containers  \u00b7  Data.Map.Lazy\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.07719259000441525,
+    "parsed": {
+      "provider": "Haskell",
+      "query": "Data.IntMap.lookupGE",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "lookupGE :: Key -> IntMap a -> Maybe (Key, a)",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-IntMap-Strict.html#v:lookupGE",
+          "snippet": "<math>. Find smallest key greater or equal to the given one and return the corresponding (key, value) pair. lookupGE 3 (fromList [(3,'a'), (5,'b')]) == Just (3, 'a') lookupGE 4 (fromList [(3,'a'), (5,'b')]) == Just (5, 'b') lookupGE 6 (fromList [(3,'a'), (5,'b')]) == Nothing",
+          "meta": [
+            "containers  \u00b7  Data.IntMap.Strict"
+          ]
+        },
+        {
+          "title": "lookupGE :: Key -> IntMap a -> Maybe (Key, a)",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-IntMap-Lazy.html#v:lookupGE",
+          "snippet": "<math>. Find smallest key greater or equal to the given one and return the corresponding (key, value) pair. lookupGE 3 (fromList [(3,'a'), (5,'b')]) == Just (3, 'a') lookupGE 4 (fromList [(3,'a'), (5,'b')]) == Just (5, 'b') lookupGE 6 (fromList [(3,'a'), (5,'b')]) == Nothing",
+          "meta": [
+            "containers  \u00b7  Data.IntMap.Lazy"
+          ]
+        },
+        {
+          "title": "lookupGE :: Ord a => a -> Set a -> Maybe a",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Set.html#v:lookupGE",
+          "snippet": "<math>. Find smallest element greater or equal to the given one. lookupGE 3 (fromList [3, 5]) == Just 3 lookupGE 4 (fromList [3, 5]) == Just 5 lookupGE 6 (fromList [3, 5]) == Nothing",
+          "meta": [
+            "containers  \u00b7  Data.Set"
+          ]
+        },
+        {
+          "title": "lookupGE :: Ord k => k -> Map k v -> Maybe (k, v)",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Map-Strict.html#v:lookupGE",
+          "snippet": "<math>. Find smallest key greater or equal to the given one and return the corresponding (key, value) pair. lookupGE 3 (fromList [(3,'a'), (5,'b')]) == Just (3, 'a') lookupGE 4 (fromList [(3,'a'), (5,'b')]) == Just (5, 'b') lookupGE 6 (fromList [(3,'a'), (5,'b')]) == Nothing",
+          "meta": [
+            "containers  \u00b7  Data.Map.Strict"
+          ]
+        },
+        {
+          "title": "lookupGE :: Ord k => k -> Map k v -> Maybe (k, v)",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Map-Lazy.html#v:lookupGE",
+          "snippet": "<math>. Find smallest key greater or equal to the given one and return the corresponding (key, value) pair. lookupGE 3 (fromList [(3,'a'), (5,'b')]) == Just (3, 'a') lookupGE 4 (fromList [(3,'a'), (5,'b')]) == Just (5, 'b') lookupGE 6 (fromList [(3,'a'), (5,'b')]) == Nothing",
+          "meta": [
+            "containers  \u00b7  Data.Map.Lazy"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "python",
+    "query": "qs python mmap.mmap.madvise",
+    "expected": "mmap.mmap.madvise()",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 102,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"mmap.mmap.madvise\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"mmap.mmap.madvise()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/mmap#mmap.mmap.madvise\",\n      \"snippet\": \"Send advice option to the kernel about the memory region beginning at start and extending length bytes. option must be one of the MADV_* constants available on the system. If start and length are omitted, the entire mapping is spanned. On some systems (including Linux), start must be a multiple of the PAGESIZE.\",\n      \"meta\": [\n        \"Python  \u00b7  Networking & Interprocess Communication\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.3762663829984376,
+    "parsed": {
+      "provider": "Python 3.15.0",
+      "query": "mmap.mmap.madvise",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "mmap.mmap.madvise()",
+          "url": "https://devdocs.io/python~3.15/library/mmap#mmap.mmap.madvise",
+          "snippet": "Send advice option to the kernel about the memory region beginning at start and extending length bytes. option must be one of the MADV_* constants available on the system. If start and length are omitted, the entire mapping is spanned. On some systems (including Linux), start must be a multiple of the PAGESIZE.",
+          "meta": [
+            "Python  \u00b7  Networking & Interprocess Communication"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "go",
+    "query": "qs go net/netip.ParsePrefix",
+    "expected": "net/netip.ParsePrefix",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 103,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"net/netip.ParsePrefix\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"func MustParsePrefix 1.18\",\n      \"url\": \"https://devdocs.io/go/net/netip/index\",\n      \"snippet\": \"func MustParsePrefix 1.18 \u2014 func MustParsePrefix(s string) Prefix MustParsePrefix calls ParsePrefix(s) and panics on error. It is intended for use in tests with hard-coded strings.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"func ParseCIDR\",\n      \"url\": \"https://devdocs.io/go/net/index\",\n      \"snippet\": \"func ParseCIDR \u2014 func ParseCIDR(s string) (IP, *IPNet, error) ParseCIDR parses s as a CIDR notation IP address and prefix length, like \\\"192.0.2.0/24\\\" or \\\"2001:db8::/32\\\", as defined in RFC 4632 and RFC 4291. It returns the IP address and the network implied by the IP and prefix length. For example, ParseCIDR(\\\"192.0.2.1/24\\\") returns the IP address 192.0.2.1 a\u2026\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"netip.ParsePrefix()\",\n      \"url\": \"https://devdocs.io/go/net/netip/index#ParsePrefix\",\n      \"snippet\": \"func ParsePrefix(s string) (Prefix, error) ParsePrefix parses s as an IP address prefix. The string can be in the form \\\"192.168.1.0/24\\\" or \\\"2001:db8::/32\\\", the CIDR notation defined in RFC 4632 and RFC 4291. IPv6 zones are not permitted in prefixes, and an error will be returned if a zone is present.\",\n      \"meta\": [\n        \"Go  \u00b7  net/netip\"\n      ]\n    },\n    {\n      \"title\": \"Example (StripPrefix)\",\n      \"url\": \"https://devdocs.io/go/net/http/index\",\n      \"snippet\": \"Example (StripPrefix) \u2014 Code: // To serve a directory on disk (/tmp) under an alternate URL // path (/tmpfiles/), use StripPrefix to modify the request // URL's path before the FileServer sees it: http.Handle(\\\"/tmpfiles/\\\", http.StripPrefix(\\\"/tmpfiles/\\\", http.FileServer(http.Dir(\\\"/tmp\\\"))))\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"func (*QUICConn) Start 1.21\",\n      \"url\": \"https://devdocs.io/go/crypto/tls/index\",\n      \"snippet\": \"func (*QUICConn) Start 1.21 \u2014 func (q *QUICConn) Start(ctx context.Context) error Start starts the client or server handshake protocol. It may produce connection events, which may be read with QUICConn.NextEvent. Start must be called at most once.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.3888503429989214,
+    "parsed": {
+      "provider": "Go 1.27.0",
+      "query": "net/netip.ParsePrefix",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "func MustParsePrefix 1.18",
+          "url": "https://devdocs.io/go/net/netip/index",
+          "snippet": "func MustParsePrefix 1.18 \u2014 func MustParsePrefix(s string) Prefix MustParsePrefix calls ParsePrefix(s) and panics on error. It is intended for use in tests with hard-coded strings.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func ParseCIDR",
+          "url": "https://devdocs.io/go/net/index",
+          "snippet": "func ParseCIDR \u2014 func ParseCIDR(s string) (IP, *IPNet, error) ParseCIDR parses s as a CIDR notation IP address and prefix length, like \"192.0.2.0/24\" or \"2001:db8::/32\", as defined in RFC 4632 and RFC 4291. It returns the IP address and the network implied by the IP and prefix length. For example, ParseCIDR(\"192.0.2.1/24\") returns the IP address 192.0.2.1 a\u2026",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "netip.ParsePrefix()",
+          "url": "https://devdocs.io/go/net/netip/index#ParsePrefix",
+          "snippet": "func ParsePrefix(s string) (Prefix, error) ParsePrefix parses s as an IP address prefix. The string can be in the form \"192.168.1.0/24\" or \"2001:db8::/32\", the CIDR notation defined in RFC 4632 and RFC 4291. IPv6 zones are not permitted in prefixes, and an error will be returned if a zone is present.",
+          "meta": [
+            "Go  \u00b7  net/netip"
+          ]
+        },
+        {
+          "title": "Example (StripPrefix)",
+          "url": "https://devdocs.io/go/net/http/index",
+          "snippet": "Example (StripPrefix) \u2014 Code: // To serve a directory on disk (/tmp) under an alternate URL // path (/tmpfiles/), use StripPrefix to modify the request // URL's path before the FileServer sees it: http.Handle(\"/tmpfiles/\", http.StripPrefix(\"/tmpfiles/\", http.FileServer(http.Dir(\"/tmp\"))))",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func (*QUICConn) Start 1.21",
+          "url": "https://devdocs.io/go/crypto/tls/index",
+          "snippet": "func (*QUICConn) Start 1.21 \u2014 func (q *QUICConn) Start(ctx context.Context) error Start starts the client or server handshake protocol. It may produce connection events, which may be read with QUICConn.NextEvent. Start must be called at most once.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::sync::LazyLock::force_mut",
+    "expected": "LazyLock::force_mut",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 104,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"rust\",\n  \"query\": \"std::sync::LazyLock::force_mut\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20sync%20LazyLock%20force_mut\",\n  \"hits\": [\n    {\n      \"title\": \"LazyLock::force_mut\",\n      \"url\": \"https://doc.rust-lang.org/std/sync/struct.LazyLock.html#method.force_mut\",\n      \"snippet\": \"A value which is initialized on the first access.\"\n    },\n    {\n      \"title\": \"Search Rust standard library for std::sync::LazyLock::force_mut\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20sync%20LazyLock%20force_mut\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "duration": 0.3989999510013149,
+    "parsed": {
+      "provider": "rust",
+      "query": "std::sync::LazyLock::force_mut",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20sync%20LazyLock%20force_mut",
+      "hits": [
+        {
+          "title": "LazyLock::force_mut",
+          "url": "https://doc.rust-lang.org/std/sync/struct.LazyLock.html#method.force_mut",
+          "snippet": "A value which is initialized on the first access."
+        },
+        {
+          "title": "Search Rust standard library for std::sync::LazyLock::force_mut",
+          "url": "https://doc.rust-lang.org/std/?search=std%20sync%20LazyLock%20force_mut",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ]
+    }
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::ranges::cartesian_product_view",
+    "expected": "std::ranges::cartesian_product_view",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 105,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"C++\",\n  \"query\": \"std::ranges::cartesian_product_view\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::ranges::cartesian_product_view\",\n      \"url\": \"https://devdocs.io/cpp/ranges/cartesian_product_view\",\n      \"snippet\": \"The name views::cartesian_product denotes a customization point object, which is a const function object of a literal semiregular class type. See CustomizationPointObject for details.\",\n      \"meta\": [\n        \"C++  \u00b7  Ranges\",\n        \"#include <array>\\n#include <iostream>\\n#include <list>\\n#include <ranges>\\n#include <string>\\n#include <vector>\\n\\nvoid print(std::tuple<char const&, int const&, std::string const&> t, int pos)\\n{\\n    const auto& [a, b, c] = t;\\n    std::cout << '(' << a << ' ' << b << ' ' << c << ')' << (pos % 4 ? \\\" \\\" : \\\"\\\\n\\\");\\n}\\n\\nint main()\\n{\\n    const auto x = std::array{'A', 'B'};\\n    const auto y = std::vector{1, 2, 3};\\n    const auto z = std::list<std::string>{\\\"\u03b1\\\", \\\"\u03b2\\\", \\\"\u03b3\\\", \\\"\u03b4\\\"};\\n\\n    for (int i{1}; auto const& tuple : std::views::cartesian_product(x, y, z))\\n        print(tuple, i++);\\n}\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::cartesian_product_view::end\",\n      \"url\": \"https://devdocs.io/cpp/ranges/cartesian_product_view/end\",\n      \"snippet\": \"Let bases_ be the underlying tuple of views.\",\n      \"meta\": [\n        \"C++  \u00b7  Ranges\",\n        \"#include <array>\\n#include <format>\\n#include <iostream>\\n#include <ranges>\\n#include <string_view>\\n#include <tuple>\\nusing namespace std::literals;\\n\\nint main()\\n{\\n    constexpr auto a = std::array{ \\\"bool\\\"sv, \\\"goto\\\"sv, \\\"extern\\\"sv, \\\"long\\\"sv }; /*\\n                                       ^         ^           ^         ^        */\\n    constexpr auto v = std::ranges::cartesian_product_view(a[0], a[1], a[2], a[3]);\\n\\n    constexpr std::tuple<char const&,\\n                         char const&,\\n                         char const&,\\n                         char const&> last{*(v.end() - 1)};\\n\\n    std::cout << std::format(\\\"{}{}{}{}{}\\\",\\n                             std::get<0>(last),\\n                             std::get<1>(last),\\n                             std::get<2>(last),\\n                             std::get<3>(last), '\\\\n');\\n}\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::cartesian_product_view::size\",\n      \"url\": \"https://devdocs.io/cpp/ranges/cartesian_product_view/size\",\n      \"meta\": [\n        \"C++  \u00b7  Ranges\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::cartesian_product_view<First\",\n      \"url\": \"https://devdocs.io/cpp/ranges/cartesian_product_view/iterator/helpers\",\n      \"meta\": [\n        \"C++  \u00b7  Ranges\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::cartesian_product_view::begin\",\n      \"url\": \"https://devdocs.io/cpp/ranges/cartesian_product_view/begin\",\n      \"meta\": [\n        \"C++  \u00b7  Ranges\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.15336618100263877,
+    "parsed": {
+      "provider": "C++",
+      "query": "std::ranges::cartesian_product_view",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::ranges::cartesian_product_view",
+          "url": "https://devdocs.io/cpp/ranges/cartesian_product_view",
+          "snippet": "The name views::cartesian_product denotes a customization point object, which is a const function object of a literal semiregular class type. See CustomizationPointObject for details.",
+          "meta": [
+            "C++  \u00b7  Ranges",
+            "#include <array>\n#include <iostream>\n#include <list>\n#include <ranges>\n#include <string>\n#include <vector>\n\nvoid print(std::tuple<char const&, int const&, std::string const&> t, int pos)\n{\n    const auto& [a, b, c] = t;\n    std::cout << '(' << a << ' ' << b << ' ' << c << ')' << (pos % 4 ? \" \" : \"\\n\");\n}\n\nint main()\n{\n    const auto x = std::array{'A', 'B'};\n    const auto y = std::vector{1, 2, 3};\n    const auto z = std::list<std::string>{\"\u03b1\", \"\u03b2\", \"\u03b3\", \"\u03b4\"};\n\n    for (int i{1}; auto const& tuple : std::views::cartesian_product(x, y, z))\n        print(tuple, i++);\n}"
+          ]
+        },
+        {
+          "title": "std::ranges::cartesian_product_view::end",
+          "url": "https://devdocs.io/cpp/ranges/cartesian_product_view/end",
+          "snippet": "Let bases_ be the underlying tuple of views.",
+          "meta": [
+            "C++  \u00b7  Ranges",
+            "#include <array>\n#include <format>\n#include <iostream>\n#include <ranges>\n#include <string_view>\n#include <tuple>\nusing namespace std::literals;\n\nint main()\n{\n    constexpr auto a = std::array{ \"bool\"sv, \"goto\"sv, \"extern\"sv, \"long\"sv }; /*\n                                       ^         ^           ^         ^        */\n    constexpr auto v = std::ranges::cartesian_product_view(a[0], a[1], a[2], a[3]);\n\n    constexpr std::tuple<char const&,\n                         char const&,\n                         char const&,\n                         char const&> last{*(v.end() - 1)};\n\n    std::cout << std::format(\"{}{}{}{}{}\",\n                             std::get<0>(last),\n                             std::get<1>(last),\n                             std::get<2>(last),\n                             std::get<3>(last), '\\n');\n}"
+          ]
+        },
+        {
+          "title": "std::ranges::cartesian_product_view::size",
+          "url": "https://devdocs.io/cpp/ranges/cartesian_product_view/size",
+          "meta": [
+            "C++  \u00b7  Ranges"
+          ]
+        },
+        {
+          "title": "std::ranges::cartesian_product_view<First",
+          "url": "https://devdocs.io/cpp/ranges/cartesian_product_view/iterator/helpers",
+          "meta": [
+            "C++  \u00b7  Ranges"
+          ]
+        },
+        {
+          "title": "std::ranges::cartesian_product_view::begin",
+          "url": "https://devdocs.io/cpp/ranges/cartesian_product_view/begin",
+          "meta": [
+            "C++  \u00b7  Ranges"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "c",
+    "query": "qs c fgetpos",
+    "expected": "fgetpos",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 106,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"C\",\n  \"query\": \"fgetpos\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"fgetpos\",\n      \"url\": \"https://devdocs.io/c/io/fgetpos\",\n      \"snippet\": \"0 upon success, nonzero value otherwise.\",\n      \"meta\": [\n        \"C  \u00b7  File input/output\",\n        \"#include <assert.h>\\n#include <stdio.h>\\n#include <stdlib.h>\\n\\nint main(void)\\n{\\n    // prepare a file holding 4 values of type double\\n    enum {SIZE = 4};\\n    FILE* fp = fopen(\\\"test.bin\\\", \\\"wb\\\");\\n    assert(fp);\\n    int rc = fwrite((double[SIZE]){1.1, 2.2, 3.3, 4.4}, sizeof(double), SIZE, fp);\\n    assert(rc == SIZE);\\n    fclose(fp);\\n\\n    // demo using fsetpos to return to the beginning of a file\\n    fp = fopen(\\\"test.bin\\\", \\\"rb\\\");\\n    fpos_t pos;\\n    fgetpos(fp, &pos);               // store start of file in pos\\n    double d;\\n    rc = fread(&d, sizeof d, 1, fp); // read the first double\\n    assert(rc == 1);\\n    printf(\\\"First value in the file: %.1f\\\\n\\\", d);\\n    fsetpos(fp,&pos);                // move file position back to the start of the file\\n    rc = fread(&d, sizeof d, 1, fp); // read the first double again\\n    assert(rc == 1);\\n    printf(\\\"First value in the file again: %.1f\\\\n\\\", d);\\n    fclose(fp);\\n\\n    // demo error handling\\n    rc = fsetpos(stdin, &pos);\\n    if (rc)\\n        perror(\\\"could not fsetpos stdin\\\");\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.023182468001323286,
+    "parsed": {
+      "provider": "C",
+      "query": "fgetpos",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "fgetpos",
+          "url": "https://devdocs.io/c/io/fgetpos",
+          "snippet": "0 upon success, nonzero value otherwise.",
+          "meta": [
+            "C  \u00b7  File input/output",
+            "#include <assert.h>\n#include <stdio.h>\n#include <stdlib.h>\n\nint main(void)\n{\n    // prepare a file holding 4 values of type double\n    enum {SIZE = 4};\n    FILE* fp = fopen(\"test.bin\", \"wb\");\n    assert(fp);\n    int rc = fwrite((double[SIZE]){1.1, 2.2, 3.3, 4.4}, sizeof(double), SIZE, fp);\n    assert(rc == SIZE);\n    fclose(fp);\n\n    // demo using fsetpos to return to the beginning of a file\n    fp = fopen(\"test.bin\", \"rb\");\n    fpos_t pos;\n    fgetpos(fp, &pos);               // store start of file in pos\n    double d;\n    rc = fread(&d, sizeof d, 1, fp); // read the first double\n    assert(rc == 1);\n    printf(\"First value in the file: %.1f\\n\", d);\n    fsetpos(fp,&pos);                // move file position back to the start of the file\n    rc = fread(&d, sizeof d, 1, fp); // read the first double again\n    assert(rc == 1);\n    printf(\"First value in the file again: %.1f\\n\", d);\n    fclose(fp);\n\n    // demo error handling\n    rc = fsetpos(stdin, &pos);\n    if (rc)\n        perror(\"could not fsetpos stdin\");\n}"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Array.accumArray",
+    "expected": "Data.Array.accumArray",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 107,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Haskell\",\n  \"query\": \"Data.Array.accumArray\",\n  \"source_url\": \"https://hackage.haskell.org/\",\n  \"hits\": [\n    {\n      \"title\": \"accumArray :: Ix i => (e -> a -> e) -> e -> (i, i) -> [(i, a)] -> Array i e\",\n      \"url\": \"https://hackage.haskell.org/package/base-4.22.0.0/docs/GHC-Arr.html#v:accumArray\",\n      \"snippet\": \"The accumArray function deals with repeated indices in the association list using an accumulating function which combines the values of associations with the same index. For example, given a list of values of some index type, hist produces a histogram of the number of occurrences of each index within a specified range\u2026\",\n      \"meta\": [\n        \"base  \u00b7  GHC.Arr\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.08259225000074366,
+    "parsed": {
+      "provider": "Haskell",
+      "query": "Data.Array.accumArray",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "accumArray :: Ix i => (e -> a -> e) -> e -> (i, i) -> [(i, a)] -> Array i e",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/GHC-Arr.html#v:accumArray",
+          "snippet": "The accumArray function deals with repeated indices in the association list using an accumulating function which combines the values of associations with the same index. For example, given a list of values of some index type, hist produces a histogram of the number of occurrences of each index within a specified range\u2026",
+          "meta": [
+            "base  \u00b7  GHC.Arr"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "python",
+    "query": "qs python os.posix_spawnp",
+    "expected": "os.posix_spawnp()",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 108,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"os.posix_spawnp\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"os.posix_spawnp()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/os#os.posix_spawnp\",\n      \"snippet\": \"Wraps the posix_spawnp() C library API for use from Python.\",\n      \"meta\": [\n        \"Python  \u00b7  Operating System\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.21324265700241085,
+    "parsed": {
+      "provider": "Python 3.15.0",
+      "query": "os.posix_spawnp",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "os.posix_spawnp()",
+          "url": "https://devdocs.io/python~3.15/library/os#os.posix_spawnp",
+          "snippet": "Wraps the posix_spawnp() C library API for use from Python.",
+          "meta": [
+            "Python  \u00b7  Operating System"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "go",
+    "query": "qs go slices.Chunk",
+    "expected": "slices.Chunk",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 109,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"slices.Chunk\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"slices.Chunk()\",\n      \"url\": \"https://devdocs.io/go/slices/index#Chunk\",\n      \"snippet\": \"func Chunk[Slice ~[]E, E any](s Slice, n int) iter.Seq[Slice] Chunk returns an iterator over consecutive sub-slices of up to n elements of s. All but the last sub-slice will have size n. All sub-slices are clipped to have no capacity beyond the length. If s is empty, the sequence is empty: there is no empty slice in t\u2026\",\n      \"meta\": [\n        \"Go  \u00b7  slices\",\n        \"type Person struct {\\n    Name string\\n    Age  int\\n}\\n\\ntype People []Person\\n\\npeople := People{\\n    {\\\"Gopher\\\", 13},\\n    {\\\"Alice\\\", 20},\\n    {\\\"Bob\\\", 5},\\n    {\\\"Vera\\\", 24},\\n    {\\\"Zac\\\", 15},\\n}\\n\\n// Chunk people into []Person 2 elements at a time.\\nfor c := range slices.Chunk(people, 2) {\\n    fmt.Println(c)\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.12389828000596026,
+    "parsed": {
+      "provider": "Go 1.27.0",
+      "query": "slices.Chunk",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "slices.Chunk()",
+          "url": "https://devdocs.io/go/slices/index#Chunk",
+          "snippet": "func Chunk[Slice ~[]E, E any](s Slice, n int) iter.Seq[Slice] Chunk returns an iterator over consecutive sub-slices of up to n elements of s. All but the last sub-slice will have size n. All sub-slices are clipped to have no capacity beyond the length. If s is empty, the sequence is empty: there is no empty slice in t\u2026",
+          "meta": [
+            "Go  \u00b7  slices",
+            "type Person struct {\n    Name string\n    Age  int\n}\n\ntype People []Person\n\npeople := People{\n    {\"Gopher\", 13},\n    {\"Alice\", 20},\n    {\"Bob\", 5},\n    {\"Vera\", 24},\n    {\"Zac\", 15},\n}\n\n// Chunk people into []Person 2 elements at a time.\nfor c := range slices.Chunk(people, 2) {\n    fmt.Println(c)\n}"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::io::BorrowedBuf",
+    "expected": "std::io::BorrowedBuf",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 110,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"rust\",\n  \"query\": \"std::io::BorrowedBuf\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20io%20BorrowedBuf\",\n  \"hits\": [\n    {\n      \"title\": \"BorrowedBuf in std::io - Rust\",\n      \"url\": \"https://doc.rust-lang.org/std/io/struct.BorrowedBuf.html\",\n      \"snippet\": \"A borrowed buffer of initially uninitialized elements, which is incrementally filled.\"\n    },\n    {\n      \"title\": \"Search Rust standard library for std::io::BorrowedBuf\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20io%20BorrowedBuf\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "duration": 0.12412652299826732,
+    "parsed": {
+      "provider": "rust",
+      "query": "std::io::BorrowedBuf",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20io%20BorrowedBuf",
+      "hits": [
+        {
+          "title": "BorrowedBuf in std::io - Rust",
+          "url": "https://doc.rust-lang.org/std/io/struct.BorrowedBuf.html",
+          "snippet": "A borrowed buffer of initially uninitialized elements, which is incrementally filled."
+        },
+        {
+          "title": "Search Rust standard library for std::io::BorrowedBuf",
+          "url": "https://doc.rust-lang.org/std/?search=std%20io%20BorrowedBuf",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ]
+    }
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::flat_map",
+    "expected": "std::flat_map",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 111,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"C++\",\n  \"query\": \"std::flat_map\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::flat_map\",\n      \"url\": \"https://devdocs.io/cpp/container/flat_map\",\n      \"snippet\": \"template< class Key, class T, class Compare = std::less<Key>, class KeyContainer = std::vector<Key>, class MappedContainer = std::vector<T> > class flat_map; (since C++23) The flat map is a container adaptor that gives the functionality of an associative container that contains key-value pairs with unique keys. Keys a\u2026\",\n      \"meta\": [\n        \"C++  \u00b7  Containers\",\n        \"template<\\n    class Key,\\n    class T,\\n    class Compare = std::less<Key>,\\n    class KeyContainer = std::vector<Key>,\\n    class MappedContainer = std::vector<T>\\n> class flat_map;\"\n      ]\n    },\n    {\n      \"title\": \"std::flat_map::at\",\n      \"url\": \"https://devdocs.io/cpp/container/flat_map/at\",\n      \"snippet\": \"A reference to the mapped value of the requested element.\",\n      \"meta\": [\n        \"C++  \u00b7  Containers\",\n        \"#include <cassert>\\n#include <iostream>\\n#include <flat_map>\\n\\nstruct LightKey { int o; };\\nstruct HeavyKey { int o[1000]; };\\n\\n// The container must use std::less<> (or other transparent Comparator) to\\n// access overloads (3,4). This includes standard overloads, such as\\n// comparison between std::string and std::string_view.\\nbool operator<(const HeavyKey& x, const LightKey& y) { return x.o[0] < y.o; }\\nbool operator<(const LightKey& x, const HeavyKey& y) { return x.o < y.o[0]; }\\nbool operator<(const HeavyKey& x, const HeavyKey& y) { return x.o[0] < y.o[0]; }\\n\\nint main()\\n{\\n    std::flat_map<int, char> map{{1, 'a'}, {2, 'b'}};\\n    assert(map.at(1) == 'a');\\n    assert(map.at(2) == 'b');\\n    try\\n    {\\n        map.at(13);\\n    }\\n    catch(const std::out_of_range& ex)\\n    {\\n        std::cout << \\\"1) out_of_range::what(): \\\" << ex.what() << '\\\\n';\\n    }\\n\\n#ifdef __cpp_lib_associative_heterogeneous_insertion\\n    // Transparent comparison demo.\\n    std::flat_map<HeavyKey, char, std::less<>> map2{{{1}, 'a'}, {{2}, 'b'}};\\n    assert(map2.at(LightKey{1}) == 'a');\\n    assert(map2.at(LightKey{2}) == 'b');\\n    try\\n    {\\n        map2.at(LightKey{13});\\n    }\\n    catch(const std::out_of_range& ex)\\n    {\\n        std::cout << \\\"2) out_of_range::what(): \\\" << ex.what() << '\\\\n';\\n    }\\n#endif\\n}\"\n      ]\n    },\n    {\n      \"title\": \"std::flat_map::end\",\n      \"url\": \"https://devdocs.io/cpp/container/flat_map/end\",\n      \"meta\": [\n        \"C++  \u00b7  Containers\"\n      ]\n    },\n    {\n      \"title\": \"std::flat_map::find\",\n      \"url\": \"https://devdocs.io/cpp/container/flat_map/find\",\n      \"meta\": [\n        \"C++  \u00b7  Containers\"\n      ]\n    },\n    {\n      \"title\": \"std::flat_map::keys\",\n      \"url\": \"https://devdocs.io/cpp/container/flat_map/keys\",\n      \"meta\": [\n        \"C++  \u00b7  Containers\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.10940825199941173,
+    "parsed": {
+      "provider": "C++",
+      "query": "std::flat_map",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::flat_map",
+          "url": "https://devdocs.io/cpp/container/flat_map",
+          "snippet": "template< class Key, class T, class Compare = std::less<Key>, class KeyContainer = std::vector<Key>, class MappedContainer = std::vector<T> > class flat_map; (since C++23) The flat map is a container adaptor that gives the functionality of an associative container that contains key-value pairs with unique keys. Keys a\u2026",
+          "meta": [
+            "C++  \u00b7  Containers",
+            "template<\n    class Key,\n    class T,\n    class Compare = std::less<Key>,\n    class KeyContainer = std::vector<Key>,\n    class MappedContainer = std::vector<T>\n> class flat_map;"
+          ]
+        },
+        {
+          "title": "std::flat_map::at",
+          "url": "https://devdocs.io/cpp/container/flat_map/at",
+          "snippet": "A reference to the mapped value of the requested element.",
+          "meta": [
+            "C++  \u00b7  Containers",
+            "#include <cassert>\n#include <iostream>\n#include <flat_map>\n\nstruct LightKey { int o; };\nstruct HeavyKey { int o[1000]; };\n\n// The container must use std::less<> (or other transparent Comparator) to\n// access overloads (3,4). This includes standard overloads, such as\n// comparison between std::string and std::string_view.\nbool operator<(const HeavyKey& x, const LightKey& y) { return x.o[0] < y.o; }\nbool operator<(const LightKey& x, const HeavyKey& y) { return x.o < y.o[0]; }\nbool operator<(const HeavyKey& x, const HeavyKey& y) { return x.o[0] < y.o[0]; }\n\nint main()\n{\n    std::flat_map<int, char> map{{1, 'a'}, {2, 'b'}};\n    assert(map.at(1) == 'a');\n    assert(map.at(2) == 'b');\n    try\n    {\n        map.at(13);\n    }\n    catch(const std::out_of_range& ex)\n    {\n        std::cout << \"1) out_of_range::what(): \" << ex.what() << '\\n';\n    }\n\n#ifdef __cpp_lib_associative_heterogeneous_insertion\n    // Transparent comparison demo.\n    std::flat_map<HeavyKey, char, std::less<>> map2{{{1}, 'a'}, {{2}, 'b'}};\n    assert(map2.at(LightKey{1}) == 'a');\n    assert(map2.at(LightKey{2}) == 'b');\n    try\n    {\n        map2.at(LightKey{13});\n    }\n    catch(const std::out_of_range& ex)\n    {\n        std::cout << \"2) out_of_range::what(): \" << ex.what() << '\\n';\n    }\n#endif\n}"
+          ]
+        },
+        {
+          "title": "std::flat_map::end",
+          "url": "https://devdocs.io/cpp/container/flat_map/end",
+          "meta": [
+            "C++  \u00b7  Containers"
+          ]
+        },
+        {
+          "title": "std::flat_map::find",
+          "url": "https://devdocs.io/cpp/container/flat_map/find",
+          "meta": [
+            "C++  \u00b7  Containers"
+          ]
+        },
+        {
+          "title": "std::flat_map::keys",
+          "url": "https://devdocs.io/cpp/container/flat_map/keys",
+          "meta": [
+            "C++  \u00b7  Containers"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "c",
+    "query": "qs c wcscoll",
+    "expected": "wcscoll",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 112,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"C\",\n  \"query\": \"wcscoll\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"wcscoll\",\n      \"url\": \"https://devdocs.io/c/string/wide/wcscoll\",\n      \"snippet\": \"Negative value if lhs is less than (precedes) rhs.\",\n      \"meta\": [\n        \"C  \u00b7  Strings\",\n        \"#include <stdio.h>\\n#include <wchar.h>\\n#include <locale.h>\\n\\nvoid try_compare(const wchar_t* p1, const wchar_t* p2)\\n{\\n    if(wcscoll(p1, p2) < 0)\\n        printf(\\\"%ls before %ls\\\\n\\\", p1, p2);\\n    else\\n        printf(\\\"%ls before %ls\\\\n\\\", p2, p1);\\n}\\n\\nint main(void)\\n{\\n    setlocale(LC_ALL, \\\"en_US.utf8\\\");\\n    printf(\\\"In the American locale: \\\");\\n    try_compare(L\\\"hrnec\\\", L\\\"chrt\\\");\\n\\n    setlocale(LC_COLLATE, \\\"cs_CZ.utf8\\\");\\n    printf(\\\"In the Czech locale: \\\");\\n    try_compare(L\\\"hrnec\\\", L\\\"chrt\\\");\\n\\n    setlocale(LC_COLLATE, \\\"en_US.utf8\\\");\\n    printf(\\\"In the American locale: \\\");\\n    try_compare(L\\\"\u00e5r\\\", L\\\"\u00e4ngel\\\");\\n\\n    setlocale(LC_COLLATE, \\\"sv_SE.utf8\\\");\\n    printf(\\\"In the Swedish locale: \\\");\\n    try_compare(L\\\"\u00e5r\\\", L\\\"\u00e4ngel\\\");\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.022550340996531304,
+    "parsed": {
+      "provider": "C",
+      "query": "wcscoll",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "wcscoll",
+          "url": "https://devdocs.io/c/string/wide/wcscoll",
+          "snippet": "Negative value if lhs is less than (precedes) rhs.",
+          "meta": [
+            "C  \u00b7  Strings",
+            "#include <stdio.h>\n#include <wchar.h>\n#include <locale.h>\n\nvoid try_compare(const wchar_t* p1, const wchar_t* p2)\n{\n    if(wcscoll(p1, p2) < 0)\n        printf(\"%ls before %ls\\n\", p1, p2);\n    else\n        printf(\"%ls before %ls\\n\", p2, p1);\n}\n\nint main(void)\n{\n    setlocale(LC_ALL, \"en_US.utf8\");\n    printf(\"In the American locale: \");\n    try_compare(L\"hrnec\", L\"chrt\");\n\n    setlocale(LC_COLLATE, \"cs_CZ.utf8\");\n    printf(\"In the Czech locale: \");\n    try_compare(L\"hrnec\", L\"chrt\");\n\n    setlocale(LC_COLLATE, \"en_US.utf8\");\n    printf(\"In the American locale: \");\n    try_compare(L\"\u00e5r\", L\"\u00e4ngel\");\n\n    setlocale(LC_COLLATE, \"sv_SE.utf8\");\n    printf(\"In the Swedish locale: \");\n    try_compare(L\"\u00e5r\", L\"\u00e4ngel\");\n}"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Graph.stronglyConnCompR",
+    "expected": "Data.Graph.stronglyConnCompR",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 113,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Haskell\",\n  \"query\": \"Data.Graph.stronglyConnCompR\",\n  \"source_url\": \"https://hackage.haskell.org/\",\n  \"hits\": [\n    {\n      \"title\": \"stronglyConnCompR :: Ord key => [(node, key, [key])] -> [SCC (node, key, [key])]\",\n      \"url\": \"https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Graph.html#v:stronglyConnCompR\",\n      \"snippet\": \"<math>. The strongly connected components of a directed graph, reverse topologically sorted. The function is the same as stronglyConnComp, except that all the information about each node retained. This interface is used when you expect to apply SCC to (some of) the result of SCC, so you don't want to lose the dependen\u2026\",\n      \"meta\": [\n        \"containers  \u00b7  Data.Graph\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.08572018700215267,
+    "parsed": {
+      "provider": "Haskell",
+      "query": "Data.Graph.stronglyConnCompR",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "stronglyConnCompR :: Ord key => [(node, key, [key])] -> [SCC (node, key, [key])]",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Graph.html#v:stronglyConnCompR",
+          "snippet": "<math>. The strongly connected components of a directed graph, reverse topologically sorted. The function is the same as stronglyConnComp, except that all the information about each node retained. This interface is used when you expect to apply SCC to (some of) the result of SCC, so you don't want to lose the dependen\u2026",
+          "meta": [
+            "containers  \u00b7  Data.Graph"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "python",
+    "query": "qs python ssl.SSLContext.num_tickets",
+    "expected": "SSLContext.num_tickets",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 114,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"ssl.SSLContext.num_tickets\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"ssl.SSLContext.num_tickets\",\n      \"url\": \"https://devdocs.io/python~3.15/library/ssl#ssl.SSLContext.num_tickets\",\n      \"snippet\": \"Control the number of TLS 1.3 session tickets of a PROTOCOL_TLS_SERVER context. The setting has no impact on TLS 1.0 to 1.2 connections.\",\n      \"meta\": [\n        \"Python  \u00b7  Networking & Interprocess Communication\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.38163541100220755,
+    "parsed": {
+      "provider": "Python 3.15.0",
+      "query": "ssl.SSLContext.num_tickets",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "ssl.SSLContext.num_tickets",
+          "url": "https://devdocs.io/python~3.15/library/ssl#ssl.SSLContext.num_tickets",
+          "snippet": "Control the number of TLS 1.3 session tickets of a PROTOCOL_TLS_SERVER context. The setting has no impact on TLS 1.0 to 1.2 connections.",
+          "meta": [
+            "Python  \u00b7  Networking & Interprocess Communication"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "go",
+    "query": "qs go reflect.TypeFor",
+    "expected": "reflect.TypeFor",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 115,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"reflect.TypeFor\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"reflect.TypeFor()\",\n      \"url\": \"https://devdocs.io/go/reflect/index#TypeFor\",\n      \"snippet\": \"func TypeFor[T any]() Type TypeFor returns the Type that represents the type argument T.\",\n      \"meta\": [\n        \"Go  \u00b7  reflect\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.11205254300148226,
+    "parsed": {
+      "provider": "Go 1.27.0",
+      "query": "reflect.TypeFor",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "reflect.TypeFor()",
+          "url": "https://devdocs.io/go/reflect/index#TypeFor",
+          "snippet": "func TypeFor[T any]() Type TypeFor returns the Type that represents the type argument T.",
+          "meta": [
+            "Go  \u00b7  reflect"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::task::Waker::data",
+    "expected": "Waker::data",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 116,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"rust\",\n  \"query\": \"std::task::Waker::data\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20task%20Waker%20data\",\n  \"hits\": [\n    {\n      \"title\": \"Waker::data\",\n      \"url\": \"https://doc.rust-lang.org/std/task/struct.Waker.html#method.data\",\n      \"snippet\": \"A `Waker` is a handle for waking up a task by notifying its executor that it is ready to be run.\"\n    },\n    {\n      \"title\": \"Search Rust standard library for std::task::Waker::data\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20task%20Waker%20data\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "duration": 0.3393277609939105,
+    "parsed": {
+      "provider": "rust",
+      "query": "std::task::Waker::data",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20task%20Waker%20data",
+      "hits": [
+        {
+          "title": "Waker::data",
+          "url": "https://doc.rust-lang.org/std/task/struct.Waker.html#method.data",
+          "snippet": "A `Waker` is a handle for waking up a task by notifying its executor that it is ready to be run."
+        },
+        {
+          "title": "Search Rust standard library for std::task::Waker::data",
+          "url": "https://doc.rust-lang.org/std/?search=std%20task%20Waker%20data",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ]
+    }
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::ranges::fold_left_with_iter",
+    "expected": "std::ranges::fold_left_with_iter",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 117,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"C++\",\n  \"query\": \"std::ranges::fold_left_with_iter\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::ranges::fold_left_with_iter\",\n      \"url\": \"https://devdocs.io/cpp/algorithm/ranges/fold_left_with_iter\",\n      \"snippet\": \"Left-folds the elements of the source range, that is, returns the result of evaluation of the chain expression:f(f(f(f(init, x1), x2), ...), xn), where x1, x2, ..., xn are elements of the source range. Also returns the past-the-end iterator of the source range.\",\n      \"meta\": [\n        \"C++  \u00b7  Algorithm\",\n        \"#include <algorithm>\\n#include <cassert>\\n#include <complex>\\n#include <functional>\\n#include <ranges>\\n#include <utility>\\n#include <vector>\\n\\nint main()\\n{\\n    namespace ranges = std::ranges;\\n\\n    std::vector v{1, 2, 3, 4, 5, 6, 7, 8};\\n    \\n    auto sum = ranges::fold_left_with_iter(v.begin(), v.end(), 6, std::plus<int>());\\n    assert(sum.value == 42);\\n    assert(sum.in == v.end());\\n    \\n    auto mul = ranges::fold_left_with_iter(v, 0X69, std::multiplies<int>());\\n    assert(mul.value == 4233600);\\n    assert(mul.in == v.end());\\n    \\n    // Get the product of the std::pair::second of all pairs in the vector:\\n    std::vector<std::pair<char, float>> data {{'A', 2.f}, {'B', 3.f}, {'C', 3.5f}};\\n    auto sec = ranges::fold_left_with_iter\\n    (\\n        data | ranges::views::values, 2.0f, std::multiplies<>()\\n    );\\n    assert(sec.value == 42);\\n    \\n    // Use a program defined function object (lambda-expression):\\n    auto lambda = [](int x, int y){ return x + 0B110 + y; };\\n    auto val = ranges::fold_left_with_iter(v, -42, lambda);\\n    assert(val.value == 42);\\n    assert(val.in == v.end());\\n\\n    using CD = std::complex<double>;\\n    std::vector<CD> nums{{1, 1}, {2, 0}, {3, 0}};\\n    #ifdef __cpp_lib_algorithm_default_value_type\\n        auto res = ranges::fold_left_with_iter(nums, {7, 0}, std::multiplies{});\\n    #else\\n        auto res = ranges::fold_left_with_iter(nums, CD{7, 0}, std::multiplies{});\\n    #endif\\n    assert((res.value == CD{42, 42}));\\n}\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::fold_left_first_with_iter\",\n      \"url\": \"https://devdocs.io/cpp/algorithm/ranges/fold_left_first_with_iter\",\n      \"snippet\": \"Left-folds the elements of the source range, that is, returns the result of evaluation of the chain expression:f(f(f(f(x1, x2), x3), ...), xn), where x1, x2, ..., xn are elements of the source range. Also returns the past-the-end iterator of the source range.\",\n      \"meta\": [\n        \"C++  \u00b7  Algorithm\",\n        \"#include <algorithm>\\n#include <cassert>\\n#include <functional>\\n#include <iostream>\\n#include <ranges>\\n#include <utility>\\n#include <vector>\\n\\nint main()\\n{\\n    std::vector v{1, 2, 3, 4, 5, 6, 7, 8};\\n    \\n    auto sum = std::ranges::fold_left_first_with_iter\\n    (\\n        v.begin(), v.end(), std::plus<int>()\\n    );\\n    std::cout << \\\"sum: \\\" << sum.value.value() << '\\\\n';\\n    assert(sum.in == v.end());\\n    \\n    auto mul = std::ranges::fold_left_first_with_iter(v, std::multiplies<int>());\\n    std::cout << \\\"mul: \\\" << mul.value.value() << '\\\\n';\\n    assert(mul.in == v.end());\\n    \\n    // get the product of the std::pair::second of all pairs in the vector:\\n    std::vector<std::pair<char, float>> data {{'A', 2.f}, {'B', 3.f}, {'C', 7.f}};\\n    auto sec = std::ranges::fold_left_first_with_iter\\n    (\\n        data | std::ranges::views::values, std::multiplies<>()\\n    );\\n    std::cout << \\\"sec: \\\" << sec.value.value() << '\\\\n';\\n    \\n    // use a program defined function object (lambda-expression):\\n    auto lambda = [](int x, int y) { return x + y + 2; };\\n    auto val = std::ranges::fold_left_first_with_iter(v, lambda);\\n    std::cout << \\\"val: \\\" << val.value.value() << '\\\\n';\\n    assert(val.in == v.end());\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.19489933300064877,
+    "parsed": {
+      "provider": "C++",
+      "query": "std::ranges::fold_left_with_iter",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::ranges::fold_left_with_iter",
+          "url": "https://devdocs.io/cpp/algorithm/ranges/fold_left_with_iter",
+          "snippet": "Left-folds the elements of the source range, that is, returns the result of evaluation of the chain expression:f(f(f(f(init, x1), x2), ...), xn), where x1, x2, ..., xn are elements of the source range. Also returns the past-the-end iterator of the source range.",
+          "meta": [
+            "C++  \u00b7  Algorithm",
+            "#include <algorithm>\n#include <cassert>\n#include <complex>\n#include <functional>\n#include <ranges>\n#include <utility>\n#include <vector>\n\nint main()\n{\n    namespace ranges = std::ranges;\n\n    std::vector v{1, 2, 3, 4, 5, 6, 7, 8};\n    \n    auto sum = ranges::fold_left_with_iter(v.begin(), v.end(), 6, std::plus<int>());\n    assert(sum.value == 42);\n    assert(sum.in == v.end());\n    \n    auto mul = ranges::fold_left_with_iter(v, 0X69, std::multiplies<int>());\n    assert(mul.value == 4233600);\n    assert(mul.in == v.end());\n    \n    // Get the product of the std::pair::second of all pairs in the vector:\n    std::vector<std::pair<char, float>> data {{'A', 2.f}, {'B', 3.f}, {'C', 3.5f}};\n    auto sec = ranges::fold_left_with_iter\n    (\n        data | ranges::views::values, 2.0f, std::multiplies<>()\n    );\n    assert(sec.value == 42);\n    \n    // Use a program defined function object (lambda-expression):\n    auto lambda = [](int x, int y){ return x + 0B110 + y; };\n    auto val = ranges::fold_left_with_iter(v, -42, lambda);\n    assert(val.value == 42);\n    assert(val.in == v.end());\n\n    using CD = std::complex<double>;\n    std::vector<CD> nums{{1, 1}, {2, 0}, {3, 0}};\n    #ifdef __cpp_lib_algorithm_default_value_type\n        auto res = ranges::fold_left_with_iter(nums, {7, 0}, std::multiplies{});\n    #else\n        auto res = ranges::fold_left_with_iter(nums, CD{7, 0}, std::multiplies{});\n    #endif\n    assert((res.value == CD{42, 42}));\n}"
+          ]
+        },
+        {
+          "title": "std::ranges::fold_left_first_with_iter",
+          "url": "https://devdocs.io/cpp/algorithm/ranges/fold_left_first_with_iter",
+          "snippet": "Left-folds the elements of the source range, that is, returns the result of evaluation of the chain expression:f(f(f(f(x1, x2), x3), ...), xn), where x1, x2, ..., xn are elements of the source range. Also returns the past-the-end iterator of the source range.",
+          "meta": [
+            "C++  \u00b7  Algorithm",
+            "#include <algorithm>\n#include <cassert>\n#include <functional>\n#include <iostream>\n#include <ranges>\n#include <utility>\n#include <vector>\n\nint main()\n{\n    std::vector v{1, 2, 3, 4, 5, 6, 7, 8};\n    \n    auto sum = std::ranges::fold_left_first_with_iter\n    (\n        v.begin(), v.end(), std::plus<int>()\n    );\n    std::cout << \"sum: \" << sum.value.value() << '\\n';\n    assert(sum.in == v.end());\n    \n    auto mul = std::ranges::fold_left_first_with_iter(v, std::multiplies<int>());\n    std::cout << \"mul: \" << mul.value.value() << '\\n';\n    assert(mul.in == v.end());\n    \n    // get the product of the std::pair::second of all pairs in the vector:\n    std::vector<std::pair<char, float>> data {{'A', 2.f}, {'B', 3.f}, {'C', 7.f}};\n    auto sec = std::ranges::fold_left_first_with_iter\n    (\n        data | std::ranges::views::values, std::multiplies<>()\n    );\n    std::cout << \"sec: \" << sec.value.value() << '\\n';\n    \n    // use a program defined function object (lambda-expression):\n    auto lambda = [](int x, int y) { return x + y + 2; };\n    auto val = std::ranges::fold_left_first_with_iter(v, lambda);\n    std::cout << \"val: \" << val.value.value() << '\\n';\n    assert(val.in == v.end());\n}"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "c",
+    "query": "qs c quick_exit",
+    "expected": "quick_exit",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 118,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"C\",\n  \"query\": \"quick_exit\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"quick_exit\",\n      \"url\": \"https://devdocs.io/c/program/quick_exit\",\n      \"snippet\": \"Functions passed to at_quick_exit are called in reverse order of their registration. After calling the registered functions, calls _Exit(exit_code).\",\n      \"meta\": [\n        \"C  \u00b7  Program support\",\n        \"#include <stdlib.h>\\n#include <stdio.h>\\n \\nvoid f1(void)\\n{\\n    puts(\\\"pushed first\\\");\\n    fflush(stdout);\\n}\\n \\nvoid f2(void)\\n{\\n    puts(\\\"pushed second\\\");\\n}\\n\\nvoid f3(void)\\n{\\n    puts(\\\"won't be called\\\");\\n}\\n \\nint main(void)\\n{\\n    at_quick_exit(f1);\\n    at_quick_exit(f2);\\n    atexit(f3);\\n    quick_exit(0);\\n}\"\n      ]\n    },\n    {\n      \"title\": \"at_quick_exit\",\n      \"url\": \"https://devdocs.io/c/program/at_quick_exit\",\n      \"snippet\": \"Calling the function from several threads does not induce a data race. The implementation is guaranteed to support the registration of at least 32 functions. The exact limit is implementation-defined.\",\n      \"meta\": [\n        \"C  \u00b7  Program support\",\n        \"#include <stdlib.h>\\n#include <stdio.h>\\n \\nvoid f1(void)\\n{\\n    puts(\\\"pushed first\\\");\\n    fflush(stdout);\\n}\\n \\nvoid f2(void)\\n{\\n    puts(\\\"pushed second\\\");\\n}\\n \\nint main(void)\\n{\\n    at_quick_exit(f1);\\n    at_quick_exit(f2);\\n    quick_exit(0);\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.04187114800151903,
+    "parsed": {
+      "provider": "C",
+      "query": "quick_exit",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "quick_exit",
+          "url": "https://devdocs.io/c/program/quick_exit",
+          "snippet": "Functions passed to at_quick_exit are called in reverse order of their registration. After calling the registered functions, calls _Exit(exit_code).",
+          "meta": [
+            "C  \u00b7  Program support",
+            "#include <stdlib.h>\n#include <stdio.h>\n \nvoid f1(void)\n{\n    puts(\"pushed first\");\n    fflush(stdout);\n}\n \nvoid f2(void)\n{\n    puts(\"pushed second\");\n}\n\nvoid f3(void)\n{\n    puts(\"won't be called\");\n}\n \nint main(void)\n{\n    at_quick_exit(f1);\n    at_quick_exit(f2);\n    atexit(f3);\n    quick_exit(0);\n}"
+          ]
+        },
+        {
+          "title": "at_quick_exit",
+          "url": "https://devdocs.io/c/program/at_quick_exit",
+          "snippet": "Calling the function from several threads does not induce a data race. The implementation is guaranteed to support the registration of at least 32 functions. The exact limit is implementation-defined.",
+          "meta": [
+            "C  \u00b7  Program support",
+            "#include <stdlib.h>\n#include <stdio.h>\n \nvoid f1(void)\n{\n    puts(\"pushed first\");\n    fflush(stdout);\n}\n \nvoid f2(void)\n{\n    puts(\"pushed second\");\n}\n \nint main(void)\n{\n    at_quick_exit(f1);\n    at_quick_exit(f2);\n    quick_exit(0);\n}"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Text.ParserCombinators.ReadP.gather",
+    "expected": "ReadP.gather",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 119,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Haskell\",\n  \"query\": \"Text.ParserCombinators.ReadP.gather\",\n  \"source_url\": \"https://hackage.haskell.org/\",\n  \"hits\": [\n    {\n      \"title\": \"gather :: ReadP a -> ReadP (String, a)\",\n      \"url\": \"https://hackage.haskell.org/package/base-4.22.0.0/docs/Text-ParserCombinators-ReadP.html#v:gather\",\n      \"snippet\": \"Transforms a parser into one that does the same, but in addition returns the exact characters read. IMPORTANT NOTE: gather gives a runtime error if its first argument is built using any occurrences of readS_to_P.\",\n      \"meta\": [\n        \"base  \u00b7  Text.ParserCombinators.ReadP\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.10687630400207127,
+    "parsed": {
+      "provider": "Haskell",
+      "query": "Text.ParserCombinators.ReadP.gather",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "gather :: ReadP a -> ReadP (String, a)",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Text-ParserCombinators-ReadP.html#v:gather",
+          "snippet": "Transforms a parser into one that does the same, but in addition returns the exact characters read. IMPORTANT NOTE: gather gives a runtime error if its first argument is built using any occurrences of readS_to_P.",
+          "meta": [
+            "base  \u00b7  Text.ParserCombinators.ReadP"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "python",
+    "query": "qs python tarfile.data_filter",
+    "expected": "tarfile.data_filter",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 120,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"tarfile.data_filter\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"tarfile.data_filter()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/tarfile#tarfile.data_filter\",\n      \"snippet\": \"Implements the 'data' filter. In addition to what tar_filter does:\",\n      \"meta\": [\n        \"Python  \u00b7  Data Compression\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.21048608900309773,
+    "parsed": {
+      "provider": "Python 3.15.0",
+      "query": "tarfile.data_filter",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "tarfile.data_filter()",
+          "url": "https://devdocs.io/python~3.15/library/tarfile#tarfile.data_filter",
+          "snippet": "Implements the 'data' filter. In addition to what tar_filter does:",
+          "meta": [
+            "Python  \u00b7  Data Compression"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "go",
+    "query": "qs go archive/zip.Writer.Copy",
+    "expected": "archive/zip.Writer.Copy",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 121,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"archive/zip.Writer.Copy\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"func (*Writer) SetOffset 1.5\",\n      \"url\": \"https://devdocs.io/go/archive/zip/index\",\n      \"snippet\": \"func (*Writer) SetOffset 1.5 \u2014 func (w *Writer) SetOffset(n int64) SetOffset sets the offset of the beginning of the zip data within the underlying writer. It should be used when the zip data is appended to an existing file, such as a binary executable. It must be called before any data is written. &copy; Google, Inc.Licensed under the Creative Commons Attr\u2026\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"func (*Writer) WriteHeader\",\n      \"url\": \"https://devdocs.io/go/archive/tar/index\",\n      \"snippet\": \"func (*Writer) WriteHeader \u2014 func (tw *Writer) WriteHeader(hdr *Header) error WriteHeader writes hdr and prepares to accept the file's contents. The Header.Size determines how many bytes can be written for the next file. If the current file is not fully written, then this returns an error. This implicitly flushes any padding necessary before writing the hea\u2026\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"zip.Writer.Copy()\",\n      \"url\": \"https://devdocs.io/go/archive/zip/index#Writer.Copy\",\n      \"snippet\": \"func (w *Writer) Copy(f *File) error Copy copies the file f (obtained from a Reader) into w. It copies the raw form directly bypassing decompression, compression, and validation.\",\n      \"meta\": [\n        \"Go  \u00b7  archive\"\n      ]\n    },\n    {\n      \"title\": \"type ValueKind 1.16\",\n      \"url\": \"https://devdocs.io/go/runtime/metrics/index\",\n      \"snippet\": \"type ValueKind 1.16 \u2014 ValueKind is a tag for a metric Value which indicates its type. type ValueKind int const ( // KindBad indicates that the Value has no type and should not be used. KindBad ValueKind = iota // KindUint64 indicates that the type of the Value is a uint64. KindUint64 // KindFloat64 indicates that the type of the Value is a float64. KindFloa\u2026\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"Constants\",\n      \"url\": \"https://devdocs.io/go/hash/crc32/index\",\n      \"snippet\": \"Constants \u2014 Predefined polynomials. const ( // IEEE is by far and away the most common CRC-32 polynomial. // Used by ethernet (IEEE 802.3), v.42, fddi, gzip, zip, png, ... IEEE = 0xedb88320 // Castagnoli's polynomial, used in iSCSI. // Has better error detection characteristics than IEEE. // https://dx.doi.org/10.1109/26.231911 Castagnoli = 0x82f63b78 // Ko\u2026\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.36777515900030266,
+    "parsed": {
+      "provider": "Go 1.27.0",
+      "query": "archive/zip.Writer.Copy",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "func (*Writer) SetOffset 1.5",
+          "url": "https://devdocs.io/go/archive/zip/index",
+          "snippet": "func (*Writer) SetOffset 1.5 \u2014 func (w *Writer) SetOffset(n int64) SetOffset sets the offset of the beginning of the zip data within the underlying writer. It should be used when the zip data is appended to an existing file, such as a binary executable. It must be called before any data is written. &copy; Google, Inc.Licensed under the Creative Commons Attr\u2026",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func (*Writer) WriteHeader",
+          "url": "https://devdocs.io/go/archive/tar/index",
+          "snippet": "func (*Writer) WriteHeader \u2014 func (tw *Writer) WriteHeader(hdr *Header) error WriteHeader writes hdr and prepares to accept the file's contents. The Header.Size determines how many bytes can be written for the next file. If the current file is not fully written, then this returns an error. This implicitly flushes any padding necessary before writing the hea\u2026",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "zip.Writer.Copy()",
+          "url": "https://devdocs.io/go/archive/zip/index#Writer.Copy",
+          "snippet": "func (w *Writer) Copy(f *File) error Copy copies the file f (obtained from a Reader) into w. It copies the raw form directly bypassing decompression, compression, and validation.",
+          "meta": [
+            "Go  \u00b7  archive"
+          ]
+        },
+        {
+          "title": "type ValueKind 1.16",
+          "url": "https://devdocs.io/go/runtime/metrics/index",
+          "snippet": "type ValueKind 1.16 \u2014 ValueKind is a tag for a metric Value which indicates its type. type ValueKind int const ( // KindBad indicates that the Value has no type and should not be used. KindBad ValueKind = iota // KindUint64 indicates that the type of the Value is a uint64. KindUint64 // KindFloat64 indicates that the type of the Value is a float64. KindFloa\u2026",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "Constants",
+          "url": "https://devdocs.io/go/hash/crc32/index",
+          "snippet": "Constants \u2014 Predefined polynomials. const ( // IEEE is by far and away the most common CRC-32 polynomial. // Used by ethernet (IEEE 802.3), v.42, fddi, gzip, zip, png, ... IEEE = 0xedb88320 // Castagnoli's polynomial, used in iSCSI. // Has better error detection characteristics than IEEE. // https://dx.doi.org/10.1109/26.231911 Castagnoli = 0x82f63b78 // Ko\u2026",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::thread::scope",
+    "expected": "std::thread::scope",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 122,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"rust\",\n  \"query\": \"std::thread::scope\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20thread%20scope\",\n  \"hits\": [\n    {\n      \"title\": \"scope in std::thread - Rust\",\n      \"url\": \"https://doc.rust-lang.org/std/thread/fn.scope.html\",\n      \"snippet\": \"Creates a scope for spawning scoped threads.\"\n    },\n    {\n      \"title\": \"Search Rust standard library for std::thread::scope\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20thread%20scope\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "duration": 0.1300384700007271,
+    "parsed": {
+      "provider": "rust",
+      "query": "std::thread::scope",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20thread%20scope",
+      "hits": [
+        {
+          "title": "scope in std::thread - Rust",
+          "url": "https://doc.rust-lang.org/std/thread/fn.scope.html",
+          "snippet": "Creates a scope for spawning scoped threads."
+        },
+        {
+          "title": "Search Rust standard library for std::thread::scope",
+          "url": "https://doc.rust-lang.org/std/?search=std%20thread%20scope",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ]
+    }
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::expected::transform_error",
+    "expected": "std::expected::transform_error",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 123,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"C++\",\n  \"query\": \"std::expected::transform_error\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::expected::transform_error\",\n      \"url\": \"https://devdocs.io/cpp/utility/expected/transform_error\",\n      \"snippet\": \"template< class F > constexpr auto transform_error( F&& f ) &; (1) (since C++23) template< class F > constexpr auto transform_error( F&& f ) const&; (2) (since C++23) template< class F > constexpr auto transform_error( F&& f ) &&; (3) (since C++23) template< class F > constexpr auto transform_error( F&& f ) const&&; (\u2026\",\n      \"meta\": [\n        \"C++  \u00b7  Utilities\",\n        \"template< class F >\\nconstexpr auto transform_error( F&& f ) &;\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.1919606079973164,
+    "parsed": {
+      "provider": "C++",
+      "query": "std::expected::transform_error",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::expected::transform_error",
+          "url": "https://devdocs.io/cpp/utility/expected/transform_error",
+          "snippet": "template< class F > constexpr auto transform_error( F&& f ) &; (1) (since C++23) template< class F > constexpr auto transform_error( F&& f ) const&; (2) (since C++23) template< class F > constexpr auto transform_error( F&& f ) &&; (3) (since C++23) template< class F > constexpr auto transform_error( F&& f ) const&&; (\u2026",
+          "meta": [
+            "C++  \u00b7  Utilities",
+            "template< class F >\nconstexpr auto transform_error( F&& f ) &;"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "c",
+    "query": "qs c thrd_sleep",
+    "expected": "thrd_sleep",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 124,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"C\",\n  \"query\": \"thrd_sleep\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"thrd_sleep\",\n      \"url\": \"https://devdocs.io/c/thread/thrd_sleep\",\n      \"snippet\": \"The sleep may resume earlier if a signal that is not ignored is received. In such case, if remaining is not NULL, the remaining time duration is stored into the object pointed to by remaining.\",\n      \"meta\": [\n        \"C  \u00b7  Concurrency support\",\n        \"#include <threads.h>\\n#include <time.h>\\n#include <stdio.h>\\n\\nint main(void)\\n{\\n    printf(\\\"Time: %s\\\", ctime(&(time_t){time(NULL)}));\\n    thrd_sleep(&(struct timespec){.tv_sec=1}, NULL); // sleep 1 sec\\n    printf(\\\"Time: %s\\\", ctime(&(time_t){time(NULL)}));\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.04132599299919093,
+    "parsed": {
+      "provider": "C",
+      "query": "thrd_sleep",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "thrd_sleep",
+          "url": "https://devdocs.io/c/thread/thrd_sleep",
+          "snippet": "The sleep may resume earlier if a signal that is not ignored is received. In such case, if remaining is not NULL, the remaining time duration is stored into the object pointed to by remaining.",
+          "meta": [
+            "C  \u00b7  Concurrency support",
+            "#include <threads.h>\n#include <time.h>\n#include <stdio.h>\n\nint main(void)\n{\n    printf(\"Time: %s\", ctime(&(time_t){time(NULL)}));\n    thrd_sleep(&(struct timespec){.tv_sec=1}, NULL); // sleep 1 sec\n    printf(\"Time: %s\", ctime(&(time_t){time(NULL)}));\n}"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Typeable.eqT",
+    "expected": "Data.Typeable.eqT",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 125,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Haskell\",\n  \"query\": \"Data.Typeable.eqT\",\n  \"source_url\": \"https://hackage.haskell.org/\",\n  \"hits\": [\n    {\n      \"title\": \"eqT :: forall {k} (a :: k) (b :: k). (Typeable a, Typeable b) => Maybe (a :~: b)\",\n      \"url\": \"https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Typeable.html#v:eqT\",\n      \"snippet\": \"Extract a witness of equality of two types\",\n      \"meta\": [\n        \"base  \u00b7  Data.Typeable\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.08456810100324219,
+    "parsed": {
+      "provider": "Haskell",
+      "query": "Data.Typeable.eqT",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "eqT :: forall {k} (a :: k) (b :: k). (Typeable a, Typeable b) => Maybe (a :~: b)",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Typeable.html#v:eqT",
+          "snippet": "Extract a witness of equality of two types",
+          "meta": [
+            "base  \u00b7  Data.Typeable"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "python",
+    "query": "qs python sqlite3.Connection.blobopen",
+    "expected": "Connection.blobopen()",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 126,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"sqlite3.Connection.blobopen\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"sqlite3.Connection.blobopen()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/sqlite3#sqlite3.Connection.blobopen\",\n      \"meta\": [\n        \"Python  \u00b7  Data Persistence\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.21531050599878654,
+    "parsed": {
+      "provider": "Python 3.15.0",
+      "query": "sqlite3.Connection.blobopen",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "sqlite3.Connection.blobopen()",
+          "url": "https://devdocs.io/python~3.15/library/sqlite3#sqlite3.Connection.blobopen",
+          "meta": [
+            "Python  \u00b7  Data Persistence"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "go",
+    "query": "qs go crypto/ecdh.X25519",
+    "expected": "crypto/ecdh.X25519",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 127,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"crypto/ecdh.X25519\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"Package ecdh\",\n      \"url\": \"https://devdocs.io/go/crypto/ecdh/index\",\n      \"snippet\": \"Package ecdh \u2014 import \\\"crypto/ecdh\\\" Overview Index\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"Index\",\n      \"url\": \"https://devdocs.io/go/crypto/hpke/index\",\n      \"snippet\": \"Index \u2014 func Open(k PrivateKey, kdf KDF, aead AEAD, info, ciphertext []byte) ([]byte, error) func Seal(pk PublicKey, kdf KDF, aead AEAD, info, plaintext []byte) ([]byte, error) type AEAD func AES128GCM() AEAD func AES256GCM() AEAD func ChaCha20Poly1305() AEAD func ExportOnly() AEAD func NewAEAD(id uint16) (AEAD, error) type KDF func HKDFSHA256() KDF func HK\u2026\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"func (*PrivateKey) ECDH 1.20\",\n      \"url\": \"https://devdocs.io/go/crypto/ecdsa/index\",\n      \"snippet\": \"func (*PrivateKey) ECDH 1.20 \u2014 func (priv *PrivateKey) ECDH() (*ecdh.PrivateKey, error) ECDH returns k as a ecdh.PrivateKey. It returns an error if the key is invalid according to the definition of ecdh.Curve.NewPrivateKey, or if the Curve is not supported by crypto/ecdh.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"func ParsePKCS8PrivateKey\",\n      \"url\": \"https://devdocs.io/go/crypto/x509/index\",\n      \"snippet\": \"func ParsePKCS8PrivateKey \u2014 func ParsePKCS8PrivateKey(der []byte) (key any, err error) ParsePKCS8PrivateKey parses an unencrypted private key in PKCS #8, ASN.1 DER form. It returns a *rsa.PrivateKey, an *ecdsa.PrivateKey, an ed25519.PrivateKey (not a pointer), a *mldsa.PrivateKey, or an *ecdh.PrivateKey (for X25519). More types might be supported in the fut\u2026\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"Package crypto\",\n      \"url\": \"https://devdocs.io/go/crypto/index\",\n      \"snippet\": \"Package crypto \u2014 import \\\"crypto\\\" Overview Index Subdirectories\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.183929636994435,
+    "parsed": {
+      "provider": "Go 1.27.0",
+      "query": "crypto/ecdh.X25519",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "Package ecdh",
+          "url": "https://devdocs.io/go/crypto/ecdh/index",
+          "snippet": "Package ecdh \u2014 import \"crypto/ecdh\" Overview Index",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "Index",
+          "url": "https://devdocs.io/go/crypto/hpke/index",
+          "snippet": "Index \u2014 func Open(k PrivateKey, kdf KDF, aead AEAD, info, ciphertext []byte) ([]byte, error) func Seal(pk PublicKey, kdf KDF, aead AEAD, info, plaintext []byte) ([]byte, error) type AEAD func AES128GCM() AEAD func AES256GCM() AEAD func ChaCha20Poly1305() AEAD func ExportOnly() AEAD func NewAEAD(id uint16) (AEAD, error) type KDF func HKDFSHA256() KDF func HK\u2026",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func (*PrivateKey) ECDH 1.20",
+          "url": "https://devdocs.io/go/crypto/ecdsa/index",
+          "snippet": "func (*PrivateKey) ECDH 1.20 \u2014 func (priv *PrivateKey) ECDH() (*ecdh.PrivateKey, error) ECDH returns k as a ecdh.PrivateKey. It returns an error if the key is invalid according to the definition of ecdh.Curve.NewPrivateKey, or if the Curve is not supported by crypto/ecdh.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func ParsePKCS8PrivateKey",
+          "url": "https://devdocs.io/go/crypto/x509/index",
+          "snippet": "func ParsePKCS8PrivateKey \u2014 func ParsePKCS8PrivateKey(der []byte) (key any, err error) ParsePKCS8PrivateKey parses an unencrypted private key in PKCS #8, ASN.1 DER form. It returns a *rsa.PrivateKey, an *ecdsa.PrivateKey, an ed25519.PrivateKey (not a pointer), a *mldsa.PrivateKey, or an *ecdh.PrivateKey (for X25519). More types might be supported in the fut\u2026",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "Package crypto",
+          "url": "https://devdocs.io/go/crypto/index",
+          "snippet": "Package crypto \u2014 import \"crypto\" Overview Index Subdirectories",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::net::Ipv6Addr::to_ipv4_mapped",
+    "expected": "Ipv6Addr::to_ipv4_mapped",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 128,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"rust\",\n  \"query\": \"std::net::Ipv6Addr::to_ipv4_mapped\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20net%20Ipv6Addr%20to_ipv4_mapped\",\n  \"hits\": [\n    {\n      \"title\": \"Ipv6Addr::to_ipv4_mapped\",\n      \"url\": \"https://doc.rust-lang.org/std/net/struct.Ipv6Addr.html#method.to_ipv4_mapped\",\n      \"snippet\": \"An IPv6 address.\"\n    },\n    {\n      \"title\": \"Search Rust standard library for std::net::Ipv6Addr::to_ipv4_mapped\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20net%20Ipv6Addr%20to_ipv4_mapped\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "duration": 0.36340109199954895,
+    "parsed": {
+      "provider": "rust",
+      "query": "std::net::Ipv6Addr::to_ipv4_mapped",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20net%20Ipv6Addr%20to_ipv4_mapped",
+      "hits": [
+        {
+          "title": "Ipv6Addr::to_ipv4_mapped",
+          "url": "https://doc.rust-lang.org/std/net/struct.Ipv6Addr.html#method.to_ipv4_mapped",
+          "snippet": "An IPv6 address."
+        },
+        {
+          "title": "Search Rust standard library for std::net::Ipv6Addr::to_ipv4_mapped",
+          "url": "https://doc.rust-lang.org/std/?search=std%20net%20Ipv6Addr%20to_ipv4_mapped",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ]
+    }
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::generator",
+    "expected": "std::generator",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 129,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"C++\",\n  \"query\": \"std::generator\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::generator\",\n      \"url\": \"https://devdocs.io/cpp/coroutine/generator\",\n      \"snippet\": \"template< class Ref, class V = void, class Allocator = void > class generator : public ranges::view_interface<generator<Ref, V, Allocator>> (1) (since C++23) namespace pmr { template< class Ref, class V = void > using generator = std::generator<Ref, V, std::pmr::polymorphic_allocator<>>; } (2) (since C++23) 1) The cla\u2026\",\n      \"meta\": [\n        \"C++  \u00b7  Utilities\",\n        \"#include <generator>\\n#include <iostream>\\n\\ntemplate<typename T>\\nstruct Tree\\n{\\n    T value;\\n    Tree *left{}, *right{};\\n\\n    std::generator<const T&> traverse_inorder() const\\n    {\\n        if (left)\\n            co_yield std::ranges::elements_of(left->traverse_inorder());\\n\\n        co_yield value;\\n\\n        if (right)\\n            co_yield std::ranges::elements_of(right->traverse_inorder());\\n    }\\n};\\n\\nint main()\\n{\\n    Tree<char> tree[]\\n    {\\n                                    {'D', tree + 1, tree + 2},\\n        //                            \u2502\\n        //            \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\\n        //            \u2502                                \u2502\\n                    {'B', tree + 3, tree + 4},       {'F', tree + 5, tree + 6},\\n        //            \u2502                                \u2502\\n        //  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510      \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\\n        //  \u2502                       \u2502      \u2502                         \u2502\\n          {'A'},                  {'C'}, {'E'},                    {'G'}\\n    };\\n\\n    for (char x : tree->traverse_inorder())\\n        std::cout << x << ' ';\\n    std::cout << '\\\\n';\\n}\"\n      ]\n    },\n    {\n      \"title\": \"std::generator::end\",\n      \"url\": \"https://devdocs.io/cpp/coroutine/generator/end\",\n      \"snippet\": \"std::default_sentinel_t end() const noexcept; (since C++23) Equivalent to return std::default_sentinel.\",\n      \"meta\": [\n        \"C++  \u00b7  Utilities\"\n      ]\n    },\n    {\n      \"title\": \"std::generator::begin\",\n      \"url\": \"https://devdocs.io/cpp/coroutine/generator/begin\",\n      \"meta\": [\n        \"C++  \u00b7  Utilities\"\n      ]\n    },\n    {\n      \"title\": \"std::generator::iterator\",\n      \"url\": \"https://devdocs.io/cpp/coroutine/generator/iterator\",\n      \"meta\": [\n        \"C++  \u00b7  Utilities\"\n      ]\n    },\n    {\n      \"title\": \"std::generator::generator\",\n      \"url\": \"https://devdocs.io/cpp/coroutine/generator/generator\",\n      \"meta\": [\n        \"C++  \u00b7  Utilities\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.104617741999391,
+    "parsed": {
+      "provider": "C++",
+      "query": "std::generator",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::generator",
+          "url": "https://devdocs.io/cpp/coroutine/generator",
+          "snippet": "template< class Ref, class V = void, class Allocator = void > class generator : public ranges::view_interface<generator<Ref, V, Allocator>> (1) (since C++23) namespace pmr { template< class Ref, class V = void > using generator = std::generator<Ref, V, std::pmr::polymorphic_allocator<>>; } (2) (since C++23) 1) The cla\u2026",
+          "meta": [
+            "C++  \u00b7  Utilities",
+            "#include <generator>\n#include <iostream>\n\ntemplate<typename T>\nstruct Tree\n{\n    T value;\n    Tree *left{}, *right{};\n\n    std::generator<const T&> traverse_inorder() const\n    {\n        if (left)\n            co_yield std::ranges::elements_of(left->traverse_inorder());\n\n        co_yield value;\n\n        if (right)\n            co_yield std::ranges::elements_of(right->traverse_inorder());\n    }\n};\n\nint main()\n{\n    Tree<char> tree[]\n    {\n                                    {'D', tree + 1, tree + 2},\n        //                            \u2502\n        //            \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n        //            \u2502                                \u2502\n                    {'B', tree + 3, tree + 4},       {'F', tree + 5, tree + 6},\n        //            \u2502                                \u2502\n        //  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510      \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n        //  \u2502                       \u2502      \u2502                         \u2502\n          {'A'},                  {'C'}, {'E'},                    {'G'}\n    };\n\n    for (char x : tree->traverse_inorder())\n        std::cout << x << ' ';\n    std::cout << '\\n';\n}"
+          ]
+        },
+        {
+          "title": "std::generator::end",
+          "url": "https://devdocs.io/cpp/coroutine/generator/end",
+          "snippet": "std::default_sentinel_t end() const noexcept; (since C++23) Equivalent to return std::default_sentinel.",
+          "meta": [
+            "C++  \u00b7  Utilities"
+          ]
+        },
+        {
+          "title": "std::generator::begin",
+          "url": "https://devdocs.io/cpp/coroutine/generator/begin",
+          "meta": [
+            "C++  \u00b7  Utilities"
+          ]
+        },
+        {
+          "title": "std::generator::iterator",
+          "url": "https://devdocs.io/cpp/coroutine/generator/iterator",
+          "meta": [
+            "C++  \u00b7  Utilities"
+          ]
+        },
+        {
+          "title": "std::generator::generator",
+          "url": "https://devdocs.io/cpp/coroutine/generator/generator",
+          "meta": [
+            "C++  \u00b7  Utilities"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "c",
+    "query": "qs c ckd_add",
+    "expected": "ckd_add",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 130,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"C\",\n  \"query\": \"ckd_add\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"ckd_add\",\n      \"url\": \"https://devdocs.io/c/numeric/ckd_add\",\n      \"snippet\": \"false if the value assigned to *result correctly represents the mathematical result of the addition, true otherwise.\",\n      \"meta\": [\n        \"C  \u00b7  Numerics\",\n        \"#include <limits.h>\\n#include <stdckdint.h>\\n#include <stdint.h>\\n#include <stdio.h>\\n\\nconst char* text(bool overflow) { return overflow ? \\\"Overflow\\\" : \\\"OK\\\"; }\\n\\nint main()\\n{\\n    uint8_t x;\\n    uint16_t y;\\n    uint16_t result_uint16;\\n    uint32_t result_uint32;\\n    bool overflow;\\n\\n    x = 14;\\n    y = 28;\\n    overflow = ckd_add(&result_uint16, x, y);\\n    printf(\\\"%u + %u => %u (%s)\\\\n\\\", x, y, result_uint16, text(overflow));\\n\\n    x = 14;\\n    y = UINT16_MAX;\\n    overflow = ckd_add(&result_uint16, x, y);\\n    printf(\\\"%u + %u => %u (%s)\\\\n\\\", x, y, result_uint16, text(overflow));\\n\\n    x = 14;\\n    y = UINT16_MAX;\\n    overflow = ckd_add(&result_uint32, x, y);\\n    printf(\\\"%u + %u => %u (%s)\\\\n\\\", x, y, result_uint32, text(overflow));\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.040179162002459634,
+    "parsed": {
+      "provider": "C",
+      "query": "ckd_add",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "ckd_add",
+          "url": "https://devdocs.io/c/numeric/ckd_add",
+          "snippet": "false if the value assigned to *result correctly represents the mathematical result of the addition, true otherwise.",
+          "meta": [
+            "C  \u00b7  Numerics",
+            "#include <limits.h>\n#include <stdckdint.h>\n#include <stdint.h>\n#include <stdio.h>\n\nconst char* text(bool overflow) { return overflow ? \"Overflow\" : \"OK\"; }\n\nint main()\n{\n    uint8_t x;\n    uint16_t y;\n    uint16_t result_uint16;\n    uint32_t result_uint32;\n    bool overflow;\n\n    x = 14;\n    y = 28;\n    overflow = ckd_add(&result_uint16, x, y);\n    printf(\"%u + %u => %u (%s)\\n\", x, y, result_uint16, text(overflow));\n\n    x = 14;\n    y = UINT16_MAX;\n    overflow = ckd_add(&result_uint16, x, y);\n    printf(\"%u + %u => %u (%s)\\n\", x, y, result_uint16, text(overflow));\n\n    x = 14;\n    y = UINT16_MAX;\n    overflow = ckd_add(&result_uint32, x, y);\n    printf(\"%u + %u => %u (%s)\\n\", x, y, result_uint32, text(overflow));\n}"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Foldable.foldMap1",
+    "expected": "Data.Foldable.foldMap1",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 131,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Haskell\",\n  \"query\": \"Data.Foldable.foldMap1\",\n  \"source_url\": \"https://hackage.haskell.org/\",\n  \"hits\": [\n    {\n      \"title\": \"foldMap1 :: (Foldable1 t, Semigroup m) => (a -> m) -> t a -> m\",\n      \"url\": \"https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Foldable1.html#v:foldMap1\",\n      \"snippet\": \"Map each element of the structure to a semigroup, and combine the results with (<>). This fold is right-associative and lazy in the accumulator. For strict left-associative folds consider foldMap1' instead. >>> foldMap1 (:[]) (1 :| [2, 3, 4]) [1,2,3,4]\",\n      \"meta\": [\n        \"base  \u00b7  Data.Foldable1\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.07681030400271993,
+    "parsed": {
+      "provider": "Haskell",
+      "query": "Data.Foldable.foldMap1",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "foldMap1 :: (Foldable1 t, Semigroup m) => (a -> m) -> t a -> m",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Foldable1.html#v:foldMap1",
+          "snippet": "Map each element of the structure to a semigroup, and combine the results with (<>). This fold is right-associative and lazy in the accumulator. For strict left-associative folds consider foldMap1' instead. >>> foldMap1 (:[]) (1 :| [2, 3, 4]) [1,2,3,4]",
+          "meta": [
+            "base  \u00b7  Data.Foldable1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "python",
+    "query": "qs python asyncio.Barrier",
+    "expected": "asyncio.Barrier",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 132,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"asyncio.Barrier\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"asyncio.Barrier\",\n      \"url\": \"https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier\",\n      \"snippet\": \"A barrier is a simple synchronization primitive that allows to block until parties number of tasks are waiting on it. Tasks can wait on the wait() method and would be blocked until the specified number of tasks end up waiting on wait(). At that point all of the waiting tasks would unblock simultaneously.\",\n      \"meta\": [\n        \"Python  \u00b7  Asynchronous I/O\",\n        \"async def example_barrier():\\n   # barrier with 3 parties\\n   b = asyncio.Barrier(3)\\n\\n   # create 2 new waiting tasks\\n   asyncio.create_task(b.wait())\\n   asyncio.create_task(b.wait())\\n\\n   await asyncio.sleep(0)\\n   print(b)\\n\\n   # The third .wait() call passes the barrier\\n   await b.wait()\\n   print(b)\\n   print(\\\"barrier passed\\\")\\n\\n   await asyncio.sleep(0)\\n   print(b)\\n\\nasyncio.run(example_barrier())\"\n      ]\n    },\n    {\n      \"title\": \"asyncio.Barrier.broken\",\n      \"url\": \"https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.broken\",\n      \"snippet\": \"A boolean that is True if the barrier is in the broken state.\",\n      \"meta\": [\n        \"Python  \u00b7  Asynchronous I/O\"\n      ]\n    },\n    {\n      \"title\": \"asyncio.Barrier.wait()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.wait\",\n      \"meta\": [\n        \"Python  \u00b7  Asynchronous I/O\"\n      ]\n    },\n    {\n      \"title\": \"asyncio.Barrier.abort()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.abort\",\n      \"meta\": [\n        \"Python  \u00b7  Asynchronous I/O\"\n      ]\n    },\n    {\n      \"title\": \"asyncio.Barrier.parties\",\n      \"url\": \"https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.parties\",\n      \"meta\": [\n        \"Python  \u00b7  Asynchronous I/O\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.17460438199486816,
+    "parsed": {
+      "provider": "Python 3.15.0",
+      "query": "asyncio.Barrier",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "asyncio.Barrier",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier",
+          "snippet": "A barrier is a simple synchronization primitive that allows to block until parties number of tasks are waiting on it. Tasks can wait on the wait() method and would be blocked until the specified number of tasks end up waiting on wait(). At that point all of the waiting tasks would unblock simultaneously.",
+          "meta": [
+            "Python  \u00b7  Asynchronous I/O",
+            "async def example_barrier():\n   # barrier with 3 parties\n   b = asyncio.Barrier(3)\n\n   # create 2 new waiting tasks\n   asyncio.create_task(b.wait())\n   asyncio.create_task(b.wait())\n\n   await asyncio.sleep(0)\n   print(b)\n\n   # The third .wait() call passes the barrier\n   await b.wait()\n   print(b)\n   print(\"barrier passed\")\n\n   await asyncio.sleep(0)\n   print(b)\n\nasyncio.run(example_barrier())"
+          ]
+        },
+        {
+          "title": "asyncio.Barrier.broken",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.broken",
+          "snippet": "A boolean that is True if the barrier is in the broken state.",
+          "meta": [
+            "Python  \u00b7  Asynchronous I/O"
+          ]
+        },
+        {
+          "title": "asyncio.Barrier.wait()",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.wait",
+          "meta": [
+            "Python  \u00b7  Asynchronous I/O"
+          ]
+        },
+        {
+          "title": "asyncio.Barrier.abort()",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.abort",
+          "meta": [
+            "Python  \u00b7  Asynchronous I/O"
+          ]
+        },
+        {
+          "title": "asyncio.Barrier.parties",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-sync#asyncio.Barrier.parties",
+          "meta": [
+            "Python  \u00b7  Asynchronous I/O"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "go",
+    "query": "qs go math/big.Float.Scan",
+    "expected": "math/big.Float.Scan",
+    "class": "unseen-api",
+    "label": "positive",
+    "index": 133,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"math/big.Float.Scan\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"func (*Float) Scan 1.8\",\n      \"url\": \"https://devdocs.io/go/math/big/index\",\n      \"snippet\": \"func (*Float) Scan 1.8 \u2014 func (z *Float) Scan(s fmt.ScanState, ch rune) error Scan is a support routine for fmt.Scanner; it sets z to the value of the scanned number. It accepts formats whose verbs are supported by fmt.Scan for floating point values, which are: 'b' (binary), 'e', 'E', 'f', 'F', 'g' and 'G'. Scan doesn't handle \u00b1Inf.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"func Scan\",\n      \"url\": \"https://devdocs.io/go/fmt/index\",\n      \"snippet\": \"func Scan \u2014 func Scan(a ...any) (n int, err error) Scan scans text read from standard input, storing successive space-separated values into successive arguments. Newlines count as space. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"big.Float.Scan()\",\n      \"url\": \"https://devdocs.io/go/math/big/index#Float.Scan\",\n      \"snippet\": \"func (z *Float) Scan(s fmt.ScanState, ch rune) error Scan is a support routine for fmt.Scanner; it sets z to the value of the scanned number. It accepts formats whose verbs are supported by fmt.Scan for floating point values, which are: 'b' (binary), 'e', 'E', 'f', 'F', 'g' and 'G'. Scan doesn't handle \u00b1Inf.\",\n      \"meta\": [\n        \"Go  \u00b7  math/big\",\n        \"// The Scan function is rarely used directly;\\n// the fmt package recognizes it as an implementation of fmt.Scanner.\\nf := new(big.Float)\\n_, err := fmt.Sscan(\\\"1.19282e99\\\", f)\\nif err != nil {\\n    log.Println(\\\"error scanning value:\\\", err)\\n} else {\\n    fmt.Println(f)\\n}\"\n      ]\n    },\n    {\n      \"title\": \"func ToFloat 1.6\",\n      \"url\": \"https://devdocs.io/go/go/constant/index\",\n      \"snippet\": \"func ToFloat 1.6 \u2014 func ToFloat(x Value) Value ToFloat converts x to a Float value if x is representable as a Float. Otherwise it returns an Unknown.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"A note about floats\",\n      \"url\": \"https://devdocs.io/go/runtime/metrics/index\",\n      \"snippet\": \"A note about floats \u2014 This package supports metrics whose values have a floating-point representation. In order to improve ease-of-use, this package promises to never produce the following classes of floating-point values: NaN, infinity.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.23994052199850557,
+    "parsed": {
+      "provider": "Go 1.27.0",
+      "query": "math/big.Float.Scan",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "func (*Float) Scan 1.8",
+          "url": "https://devdocs.io/go/math/big/index",
+          "snippet": "func (*Float) Scan 1.8 \u2014 func (z *Float) Scan(s fmt.ScanState, ch rune) error Scan is a support routine for fmt.Scanner; it sets z to the value of the scanned number. It accepts formats whose verbs are supported by fmt.Scan for floating point values, which are: 'b' (binary), 'e', 'E', 'f', 'F', 'g' and 'G'. Scan doesn't handle \u00b1Inf.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func Scan",
+          "url": "https://devdocs.io/go/fmt/index",
+          "snippet": "func Scan \u2014 func Scan(a ...any) (n int, err error) Scan scans text read from standard input, storing successive space-separated values into successive arguments. Newlines count as space. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "big.Float.Scan()",
+          "url": "https://devdocs.io/go/math/big/index#Float.Scan",
+          "snippet": "func (z *Float) Scan(s fmt.ScanState, ch rune) error Scan is a support routine for fmt.Scanner; it sets z to the value of the scanned number. It accepts formats whose verbs are supported by fmt.Scan for floating point values, which are: 'b' (binary), 'e', 'E', 'f', 'F', 'g' and 'G'. Scan doesn't handle \u00b1Inf.",
+          "meta": [
+            "Go  \u00b7  math/big",
+            "// The Scan function is rarely used directly;\n// the fmt package recognizes it as an implementation of fmt.Scanner.\nf := new(big.Float)\n_, err := fmt.Sscan(\"1.19282e99\", f)\nif err != nil {\n    log.Println(\"error scanning value:\", err)\n} else {\n    fmt.Println(f)\n}"
+          ]
+        },
+        {
+          "title": "func ToFloat 1.6",
+          "url": "https://devdocs.io/go/go/constant/index",
+          "snippet": "func ToFloat 1.6 \u2014 func ToFloat(x Value) Value ToFloat converts x to a Float value if x is representable as a Float. Otherwise it returns an Unknown.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "A note about floats",
+          "url": "https://devdocs.io/go/runtime/metrics/index",
+          "snippet": "A note about floats \u2014 This package supports metrics whose values have a floating-point representation. In order to improve ease-of-use, this package promises to never produce the following classes of floating-point values: NaN, infinity.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "python",
+    "query": "qs pypi msgspec",
+    "expected": "PyPI package page for msgspec",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 134,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"pypi\",\n  \"query\": \"msgspec\",\n  \"source_url\": \"https://pypi.org/search/?q=msgspec\",\n  \"hits\": [\n    {\n      \"title\": \"msgspec on PyPI\",\n      \"url\": \"https://pypi.org/project/msgspec/\",\n      \"snippet\": \"Open the project page on the Python Package Index.\"\n    }\n  ]\n}\n",
+    "duration": 0.024516550998669118,
+    "parsed": {
+      "provider": "pypi",
+      "query": "msgspec",
+      "source_url": "https://pypi.org/search/?q=msgspec",
+      "hits": [
+        {
+          "title": "msgspec on PyPI",
+          "url": "https://pypi.org/project/msgspec/",
+          "snippet": "Open the project page on the Python Package Index."
+        }
+      ]
+    }
+  },
+  {
+    "language": "go",
+    "query": "qs go-mod golang.org/x/sync",
+    "expected": "Go package registry result for golang.org/x/sync",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 135,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"go modules\",\n  \"query\": \"golang.org/x/sync\",\n  \"source_url\": \"https://pkg.go.dev/search?q=golang.org%2Fx%2Fsync\",\n  \"hits\": [\n    {\n      \"title\": \"golang.org/x/sync/errgroup\",\n      \"url\": \"https://pkg.go.dev/golang.org/x/sync/errgroup\",\n      \"snippet\": \"Package errgroup provides synchronization, error propagation, and Context cancellation for groups of goroutines working on subtasks of a common task.\",\n      \"meta\": [\n        \"v0.24.0  \u00b7  module golang.org/x/sync\"\n      ]\n    },\n    {\n      \"title\": \"golang.org/x/sync/singleflight\",\n      \"url\": \"https://pkg.go.dev/golang.org/x/sync/singleflight\",\n      \"snippet\": \"Package singleflight provides a duplicate function call suppression mechanism.\",\n      \"meta\": [\n        \"v0.24.0  \u00b7  module golang.org/x/sync\"\n      ]\n    },\n    {\n      \"title\": \"golang.org/x/sync/semaphore\",\n      \"url\": \"https://pkg.go.dev/golang.org/x/sync/semaphore\",\n      \"snippet\": \"Package semaphore provides a weighted semaphore implementation.\",\n      \"meta\": [\n        \"v0.24.0  \u00b7  module golang.org/x/sync\"\n      ]\n    },\n    {\n      \"title\": \"golang.org/x/sync/syncmap\",\n      \"url\": \"https://pkg.go.dev/golang.org/x/sync/syncmap\",\n      \"snippet\": \"Package syncmap provides a concurrent map implementation.\",\n      \"meta\": [\n        \"v0.24.0  \u00b7  module golang.org/x/sync\"\n      ]\n    },\n    {\n      \"title\": \"github.com/bir3/gocompiler/src/xvendor/golang.org/x/sync/semaphore\",\n      \"url\": \"https://pkg.go.dev/github.com/bir3/gocompiler/src/xvendor/golang.org/x/sync/semaphore\",\n      \"snippet\": \"Package semaphore provides a weighted semaphore implementation.\",\n      \"meta\": [\n        \"v0.9.2202  \u00b7  module github.com/bir3/gocompiler\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.02241022499947576,
+    "parsed": {
+      "provider": "go modules",
+      "query": "golang.org/x/sync",
+      "source_url": "https://pkg.go.dev/search?q=golang.org%2Fx%2Fsync",
+      "hits": [
+        {
+          "title": "golang.org/x/sync/errgroup",
+          "url": "https://pkg.go.dev/golang.org/x/sync/errgroup",
+          "snippet": "Package errgroup provides synchronization, error propagation, and Context cancellation for groups of goroutines working on subtasks of a common task.",
+          "meta": [
+            "v0.24.0  \u00b7  module golang.org/x/sync"
+          ]
+        },
+        {
+          "title": "golang.org/x/sync/singleflight",
+          "url": "https://pkg.go.dev/golang.org/x/sync/singleflight",
+          "snippet": "Package singleflight provides a duplicate function call suppression mechanism.",
+          "meta": [
+            "v0.24.0  \u00b7  module golang.org/x/sync"
+          ]
+        },
+        {
+          "title": "golang.org/x/sync/semaphore",
+          "url": "https://pkg.go.dev/golang.org/x/sync/semaphore",
+          "snippet": "Package semaphore provides a weighted semaphore implementation.",
+          "meta": [
+            "v0.24.0  \u00b7  module golang.org/x/sync"
+          ]
+        },
+        {
+          "title": "golang.org/x/sync/syncmap",
+          "url": "https://pkg.go.dev/golang.org/x/sync/syncmap",
+          "snippet": "Package syncmap provides a concurrent map implementation.",
+          "meta": [
+            "v0.24.0  \u00b7  module golang.org/x/sync"
+          ]
+        },
+        {
+          "title": "github.com/bir3/gocompiler/src/xvendor/golang.org/x/sync/semaphore",
+          "url": "https://pkg.go.dev/github.com/bir3/gocompiler/src/xvendor/golang.org/x/sync/semaphore",
+          "snippet": "Package semaphore provides a weighted semaphore implementation.",
+          "meta": [
+            "v0.9.2202  \u00b7  module github.com/bir3/gocompiler"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "rust",
+    "query": "qs crate camino",
+    "expected": "crates.io page for camino",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 136,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"crates.io\",\n  \"query\": \"camino\",\n  \"source_url\": \"https://crates.io/search?q=camino\",\n  \"hits\": [\n    {\n      \"title\": \"camino\",\n      \"url\": \"https://docs.rs/camino\",\n      \"snippet\": \"UTF-8 paths\",\n      \"meta\": [\n        \"1.2.6  \u00b7  286M downloads  \u00b7  71.7M recent\",\n        \"https://github.com/camino-rs/camino\"\n      ]\n    },\n    {\n      \"title\": \"camino-tempfile-ext\",\n      \"url\": \"https://docs.rs/camino-tempfile-ext\",\n      \"snippet\": \"Quality-of-life extensions for camino-tempfile\",\n      \"meta\": [\n        \"0.3.3  \u00b7  219k downloads  \u00b7  52.5k recent\",\n        \"https://github.com/camino-rs/camino-tempfile\"\n      ]\n    },\n    {\n      \"title\": \"caminos\",\n      \"url\": \"https://docs.rs/caminos\",\n      \"snippet\": \"A modular interconnection network simulator.\",\n      \"meta\": [\n        \"0.6.3  \u00b7  22.8k downloads  \u00b7  74 recent\"\n      ]\n    },\n    {\n      \"title\": \"camino-tempfile\",\n      \"url\": \"https://docs.rs/camino-tempfile\",\n      \"snippet\": \"A library for managing temporary files and directories, with UTF-8 paths.\",\n      \"meta\": [\n        \"1.4.1  \u00b7  9.9M downloads  \u00b7  2.4M recent\",\n        \"https://github.com/camino-rs/camino-tempfile\"\n      ]\n    },\n    {\n      \"title\": \"camino-anchored\",\n      \"url\": \"https://docs.rs/camino-anchored\",\n      \"snippet\": \"UTF-8 paths with explicit resolution and base-relative display\",\n      \"meta\": [\n        \"0.1.1  \u00b7  225k downloads  \u00b7  225k recent\",\n        \"https://github.com/camino-rs/camino-anchored\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.11788822899688967,
+    "parsed": {
+      "provider": "crates.io",
+      "query": "camino",
+      "source_url": "https://crates.io/search?q=camino",
+      "hits": [
+        {
+          "title": "camino",
+          "url": "https://docs.rs/camino",
+          "snippet": "UTF-8 paths",
+          "meta": [
+            "1.2.6  \u00b7  286M downloads  \u00b7  71.7M recent",
+            "https://github.com/camino-rs/camino"
+          ]
+        },
+        {
+          "title": "camino-tempfile-ext",
+          "url": "https://docs.rs/camino-tempfile-ext",
+          "snippet": "Quality-of-life extensions for camino-tempfile",
+          "meta": [
+            "0.3.3  \u00b7  219k downloads  \u00b7  52.5k recent",
+            "https://github.com/camino-rs/camino-tempfile"
+          ]
+        },
+        {
+          "title": "caminos",
+          "url": "https://docs.rs/caminos",
+          "snippet": "A modular interconnection network simulator.",
+          "meta": [
+            "0.6.3  \u00b7  22.8k downloads  \u00b7  74 recent"
+          ]
+        },
+        {
+          "title": "camino-tempfile",
+          "url": "https://docs.rs/camino-tempfile",
+          "snippet": "A library for managing temporary files and directories, with UTF-8 paths.",
+          "meta": [
+            "1.4.1  \u00b7  9.9M downloads  \u00b7  2.4M recent",
+            "https://github.com/camino-rs/camino-tempfile"
+          ]
+        },
+        {
+          "title": "camino-anchored",
+          "url": "https://docs.rs/camino-anchored",
+          "snippet": "UTF-8 paths with explicit resolution and base-relative display",
+          "meta": [
+            "0.1.1  \u00b7  225k downloads  \u00b7  225k recent",
+            "https://github.com/camino-rs/camino-anchored"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "cpp",
+    "query": "qs man cmake",
+    "expected": "Local cmake manual page",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 137,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"man\",\n  \"query\": \"cmake\",\n  \"body\": \"NAME\\n       cmake - CMake Command-Line Reference\\n\\nSYNOPSIS\\n          Generate a Project Buildsystem\\n           cmake [<options>] -B <path-to-build> [-S <path-to-source>]\\n           cmake [<options>] <path-to-source | path-to-existing-build>\\n\\n          Build a Project\\n           cmake --build <dir> [<options>] [-- <build-tool-options>]\\n\\n          Install a Project\\n           cmake --install <dir> [<options>]\\n\\n          Open a Project\\n           cmake --open <dir>\\n\\n          Run a Script\\n           cmake [-D <var>=<value>]... -P <cmake-script-file>\\n\\n          Run a Command-Line Tool\\n           cmake -E <command> [<options>]\\n\\n          Run the Find-Package Tool\\n           cmake --find-package [<options>]\\n\\n          Run a Workflow Preset\\n           cmake --workflow <options>\\n\\n          View Help\\n           cmake --help[-<topic>]\\n\\nDESCRIPTION\\n       The  cmake  executable  is  the  command-line  interface  of  the cross-platform\\n       buildsystem generator CMake.  The above Synopsis lists various actions the  tool\\n       can perform as described in sections below.\\n\\n       To build a software project with CMake, Generate a Project Buildsystem.  Option\u2010\\n       ally use cmake to Build a Project, Install a Project or just run the correspond\u2010\\n       ing build tool (e.g. make) directly.  cmake can also be used to View Help.\\n\\n       The  other  actions  are meant for use by software developers writing scripts in\\n       the CMake language <#manual:cmake-language(7)> to support their builds.\\n\\n       For graphical user interfaces that may be used in place of cmake, see ccmake  <#\\n       manual:ccmake(1)> and cmake-gui <#manual:cmake-gui(1)>.  For command-line inter\u2010\\n       faces   to   the   CMake   testing   and  packaging  facilities,  see  ctest  <#\\n       manual:ctest(1)> and cpack <#manual:cpack(1)>.\",\n  \"hits\": [\n    {\n      \"title\": \"cmake (1)\",\n      \"url\": \"man://1/cmake\",\n      \"snippet\": \"CMake Command-Line Reference\"\n    },\n    {\n      \"title\": \"ccmake (1)\",\n      \"url\": \"man://1/ccmake\",\n      \"snippet\": \"CMake Curses Dialog Command-Line Reference\"\n    },\n    {\n      \"title\": \"cmake-buildsystem (7)\",\n      \"url\": \"man://7/cmake-buildsystem\",\n      \"snippet\": \"CMake Buildsystem Reference\"\n    },\n    {\n      \"title\": \"cmake-commands (7)\",\n      \"url\": \"man://7/cmake-commands\",\n      \"snippet\": \"CMake Language Command Reference\"\n    },\n    {\n      \"title\": \"cmake-compile-features (7)\",\n      \"url\": \"man://7/cmake-compile-features\",\n      \"snippet\": \"CMake Compile Features Reference\"\n    }\n  ]\n}\n",
+    "duration": 0.2260260919938446,
+    "parsed": {
+      "provider": "man",
+      "query": "cmake",
+      "body": "NAME\n       cmake - CMake Command-Line Reference\n\nSYNOPSIS\n          Generate a Project Buildsystem\n           cmake [<options>] -B <path-to-build> [-S <path-to-source>]\n           cmake [<options>] <path-to-source | path-to-existing-build>\n\n          Build a Project\n           cmake --build <dir> [<options>] [-- <build-tool-options>]\n\n          Install a Project\n           cmake --install <dir> [<options>]\n\n          Open a Project\n           cmake --open <dir>\n\n          Run a Script\n           cmake [-D <var>=<value>]... -P <cmake-script-file>\n\n          Run a Command-Line Tool\n           cmake -E <command> [<options>]\n\n          Run the Find-Package Tool\n           cmake --find-package [<options>]\n\n          Run a Workflow Preset\n           cmake --workflow <options>\n\n          View Help\n           cmake --help[-<topic>]\n\nDESCRIPTION\n       The  cmake  executable  is  the  command-line  interface  of  the cross-platform\n       buildsystem generator CMake.  The above Synopsis lists various actions the  tool\n       can perform as described in sections below.\n\n       To build a software project with CMake, Generate a Project Buildsystem.  Option\u2010\n       ally use cmake to Build a Project, Install a Project or just run the correspond\u2010\n       ing build tool (e.g. make) directly.  cmake can also be used to View Help.\n\n       The  other  actions  are meant for use by software developers writing scripts in\n       the CMake language <#manual:cmake-language(7)> to support their builds.\n\n       For graphical user interfaces that may be used in place of cmake, see ccmake  <#\n       manual:ccmake(1)> and cmake-gui <#manual:cmake-gui(1)>.  For command-line inter\u2010\n       faces   to   the   CMake   testing   and  packaging  facilities,  see  ctest  <#\n       manual:ctest(1)> and cpack <#manual:cpack(1)>.",
+      "hits": [
+        {
+          "title": "cmake (1)",
+          "url": "man://1/cmake",
+          "snippet": "CMake Command-Line Reference"
+        },
+        {
+          "title": "ccmake (1)",
+          "url": "man://1/ccmake",
+          "snippet": "CMake Curses Dialog Command-Line Reference"
+        },
+        {
+          "title": "cmake-buildsystem (7)",
+          "url": "man://7/cmake-buildsystem",
+          "snippet": "CMake Buildsystem Reference"
+        },
+        {
+          "title": "cmake-commands (7)",
+          "url": "man://7/cmake-commands",
+          "snippet": "CMake Language Command Reference"
+        },
+        {
+          "title": "cmake-compile-features (7)",
+          "url": "man://7/cmake-compile-features",
+          "snippet": "CMake Compile Features Reference"
+        }
+      ]
+    }
+  },
+  {
+    "language": "c",
+    "query": "qs man 3 getaddrinfo",
+    "expected": "Section 3 getaddrinfo manual page",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 138,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"man\",\n  \"query\": \"3 getaddrinfo\",\n  \"body\": \"NAME\\n       getaddrinfo,  freeaddrinfo,  gai_strerror - network address and service transla\u2010\\n       tion\\n\\nLIBRARY\\n       Standard C library (libc, -lc)\\n\\nSYNOPSIS\\n       #include <sys/types.h>\\n       #include <sys/socket.h>\\n       #include <netdb.h>\\n\\n       int getaddrinfo(const char *restrict node,\\n                       const char *restrict service,\\n                       const struct addrinfo *restrict hints,\\n                       struct addrinfo **restrict res);\\n\\n       void freeaddrinfo(struct addrinfo *res);\\n\\n       const char *gai_strerror(int errcode);\\n\\n   Feature Test Macro Requirements for glibc (see feature_test_macros(7)):\\n\\n       getaddrinfo(), freeaddrinfo(), gai_strerror():\\n           Since glibc 2.22:\\n               _POSIX_C_SOURCE >= 200112L\\n           glibc 2.21 and earlier:\\n               _POSIX_C_SOURCE\\n\\nDESCRIPTION\\n       Given node and service, which identify an Internet host and  a  service,  getad\u2010\\n       drinfo()  returns one or more addrinfo structures, each of which contains an In\u2010\\n       ternet address that can be specified in a call to bind(2)  or  connect(2).   The\\n       getaddrinfo()  function  combines  the  functionality provided by the gethostby\u2010\\n       name(3) and getservbyname(3) functions into a single interface, but  unlike  the\\n       latter  functions,  getaddrinfo()  is reentrant and allows programs to eliminate\\n       IPv4-versus-IPv6 dependencies.\\n\\n       The addrinfo structure used by getaddrinfo() contains the following fields:\\n\\n           struct addrinfo {\\n               int              ai_flags;\\n               int              ai_family;\\n               int              ai_socktype;\\n               int              ai_protocol;\\n               socklen_t        ai_addrlen;\\n               struct sockaddr *ai_addr;\\n               char            *ai_canonname;\",\n  \"hits\": [\n    {\n      \"title\": \"getaddrinfo (3)\",\n      \"url\": \"man://3/getaddrinfo\"\n    }\n  ]\n}\n",
+    "duration": 0.14251389999844832,
+    "parsed": {
+      "provider": "man",
+      "query": "3 getaddrinfo",
+      "body": "NAME\n       getaddrinfo,  freeaddrinfo,  gai_strerror - network address and service transla\u2010\n       tion\n\nLIBRARY\n       Standard C library (libc, -lc)\n\nSYNOPSIS\n       #include <sys/types.h>\n       #include <sys/socket.h>\n       #include <netdb.h>\n\n       int getaddrinfo(const char *restrict node,\n                       const char *restrict service,\n                       const struct addrinfo *restrict hints,\n                       struct addrinfo **restrict res);\n\n       void freeaddrinfo(struct addrinfo *res);\n\n       const char *gai_strerror(int errcode);\n\n   Feature Test Macro Requirements for glibc (see feature_test_macros(7)):\n\n       getaddrinfo(), freeaddrinfo(), gai_strerror():\n           Since glibc 2.22:\n               _POSIX_C_SOURCE >= 200112L\n           glibc 2.21 and earlier:\n               _POSIX_C_SOURCE\n\nDESCRIPTION\n       Given node and service, which identify an Internet host and  a  service,  getad\u2010\n       drinfo()  returns one or more addrinfo structures, each of which contains an In\u2010\n       ternet address that can be specified in a call to bind(2)  or  connect(2).   The\n       getaddrinfo()  function  combines  the  functionality provided by the gethostby\u2010\n       name(3) and getservbyname(3) functions into a single interface, but  unlike  the\n       latter  functions,  getaddrinfo()  is reentrant and allows programs to eliminate\n       IPv4-versus-IPv6 dependencies.\n\n       The addrinfo structure used by getaddrinfo() contains the following fields:\n\n           struct addrinfo {\n               int              ai_flags;\n               int              ai_family;\n               int              ai_socktype;\n               int              ai_protocol;\n               socklen_t        ai_addrlen;\n               struct sockaddr *ai_addr;\n               char            *ai_canonname;",
+      "hits": [
+        {
+          "title": "getaddrinfo (3)",
+          "url": "man://3/getaddrinfo"
+        }
+      ]
+    }
+  },
+  {
+    "language": "haskell",
+    "query": "qs web Hackage attoparsec",
+    "expected": "DuckDuckGo results for Hackage attoparsec",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 139,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"web\",\n  \"query\": \"Hackage attoparsec\",\n  \"source_url\": \"https://duckduckgo.com/?q=Hackage%20attoparsec\",\n  \"hits\": [\n    {\n      \"title\": \"Search DuckDuckGo for Hackage attoparsec\",\n      \"url\": \"https://duckduckgo.com/?q=Hackage%20attoparsec\",\n      \"snippet\": \"Open this search in your browser.\"\n    }\n  ]\n}\n",
+    "duration": 0.8301883329986595,
+    "parsed": {
+      "provider": "web",
+      "query": "Hackage attoparsec",
+      "source_url": "https://duckduckgo.com/?q=Hackage%20attoparsec",
+      "hits": [
+        {
+          "title": "Search DuckDuckGo for Hackage attoparsec",
+          "url": "https://duckduckgo.com/?q=Hackage%20attoparsec",
+          "snippet": "Open this search in your browser."
+        }
+      ]
+    }
+  },
+  {
+    "language": "python",
+    "query": "qs pypi platformdirs",
+    "expected": "PyPI package page for platformdirs",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 140,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"pypi\",\n  \"query\": \"platformdirs\",\n  \"source_url\": \"https://pypi.org/search/?q=platformdirs\",\n  \"hits\": [\n    {\n      \"title\": \"platformdirs on PyPI\",\n      \"url\": \"https://pypi.org/project/platformdirs/\",\n      \"snippet\": \"Open the project page on the Python Package Index.\"\n    }\n  ]\n}\n",
+    "duration": 0.017835605001891963,
+    "parsed": {
+      "provider": "pypi",
+      "query": "platformdirs",
+      "source_url": "https://pypi.org/search/?q=platformdirs",
+      "hits": [
+        {
+          "title": "platformdirs on PyPI",
+          "url": "https://pypi.org/project/platformdirs/",
+          "snippet": "Open the project page on the Python Package Index."
+        }
+      ]
+    }
+  },
+  {
+    "language": "go",
+    "query": "qs gh charmbracelet/lipgloss",
+    "expected": "GitHub repository charmbracelet/lipgloss",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 141,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"github\",\n  \"query\": \"charmbracelet/lipgloss\",\n  \"source_url\": \"https://github.com/search?type=repositories&q=charmbracelet%2Flipgloss\",\n  \"hits\": [\n    {\n      \"title\": \"charmbracelet/lipgloss\",\n      \"url\": \"https://github.com/charmbracelet/lipgloss\",\n      \"snippet\": \"Style definitions for nice terminal layouts \ud83d\udc44\",\n      \"meta\": [\n        \"11.9k stars  \u00b7  Go\"\n      ]\n    },\n    {\n      \"title\": \"76creates/stickers\",\n      \"url\": \"https://github.com/76creates/stickers\",\n      \"snippet\": \"Building blocks for charmbracelet/lipgloss \ud83d\udc7e\",\n      \"meta\": [\n        \"402 stars  \u00b7  Go\"\n      ]\n    },\n    {\n      \"title\": \"whit3rabbit/lipgloss-rs\",\n      \"url\": \"https://github.com/whit3rabbit/lipgloss-rs\",\n      \"snippet\": \"A rust port of https://github.com/charmbracelet/lipgloss\",\n      \"meta\": [\n        \"27 stars  \u00b7  Rust\"\n      ]\n    },\n    {\n      \"title\": \"oakoliver/lipgloss\",\n      \"url\": \"https://github.com/oakoliver/lipgloss\",\n      \"snippet\": \"CSS-like terminal styling for JavaScript. Zero dependencies. TypeScript port of charmbracelet/lipgloss.\",\n      \"meta\": [\n        \"2 stars  \u00b7  TypeScript\"\n      ]\n    },\n    {\n      \"title\": \"junhinhow/charm-themes\",\n      \"url\": \"https://github.com/junhinhow/charm-themes\",\n      \"snippet\": \"Unified theming system for charmbracelet libraries (lipgloss, glamour, bubbles)\",\n      \"meta\": [\n        \"1 stars  \u00b7  Go\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.35228679300053045,
+    "parsed": {
+      "provider": "github",
+      "query": "charmbracelet/lipgloss",
+      "source_url": "https://github.com/search?type=repositories&q=charmbracelet%2Flipgloss",
+      "hits": [
+        {
+          "title": "charmbracelet/lipgloss",
+          "url": "https://github.com/charmbracelet/lipgloss",
+          "snippet": "Style definitions for nice terminal layouts \ud83d\udc44",
+          "meta": [
+            "11.9k stars  \u00b7  Go"
+          ]
+        },
+        {
+          "title": "76creates/stickers",
+          "url": "https://github.com/76creates/stickers",
+          "snippet": "Building blocks for charmbracelet/lipgloss \ud83d\udc7e",
+          "meta": [
+            "402 stars  \u00b7  Go"
+          ]
+        },
+        {
+          "title": "whit3rabbit/lipgloss-rs",
+          "url": "https://github.com/whit3rabbit/lipgloss-rs",
+          "snippet": "A rust port of https://github.com/charmbracelet/lipgloss",
+          "meta": [
+            "27 stars  \u00b7  Rust"
+          ]
+        },
+        {
+          "title": "oakoliver/lipgloss",
+          "url": "https://github.com/oakoliver/lipgloss",
+          "snippet": "CSS-like terminal styling for JavaScript. Zero dependencies. TypeScript port of charmbracelet/lipgloss.",
+          "meta": [
+            "2 stars  \u00b7  TypeScript"
+          ]
+        },
+        {
+          "title": "junhinhow/charm-themes",
+          "url": "https://github.com/junhinhow/charm-themes",
+          "snippet": "Unified theming system for charmbracelet libraries (lipgloss, glamour, bubbles)",
+          "meta": [
+            "1 stars  \u00b7  Go"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "rust",
+    "query": "qs docs smallvec",
+    "expected": "docs.rs documentation for smallvec",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 142,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"docs\",\n  \"query\": \"smallvec\",\n  \"source_url\": \"https://docs.rs/smallvec/latest/smallvec\",\n  \"hits\": [\n    {\n      \"title\": \"smallvec\",\n      \"url\": \"https://docs.rs/smallvec/\",\n      \"snippet\": \"'Small vector' optimization: store up to a small number of items on the stack\",\n      \"meta\": [\n        \"1.16.3  \u00b7  1.3B downloads  \u00b7  315M recent\",\n        \"https://github.com/servo/rust-smallvec\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.1509516150035779,
+    "parsed": {
+      "provider": "docs",
+      "query": "smallvec",
+      "source_url": "https://docs.rs/smallvec/latest/smallvec",
+      "hits": [
+        {
+          "title": "smallvec",
+          "url": "https://docs.rs/smallvec/",
+          "snippet": "'Small vector' optimization: store up to a small number of items on the stack",
+          "meta": [
+            "1.16.3  \u00b7  1.3B downloads  \u00b7  315M recent",
+            "https://github.com/servo/rust-smallvec"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "cpp",
+    "query": "qs so c++ object slicing",
+    "expected": "Stack Overflow search for C++ object slicing",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 143,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"stackoverflow\",\n  \"query\": \"c++ object slicing\",\n  \"source_url\": \"https://stackoverflow.com/search?q=c%2B%2B%20object%20slicing\",\n  \"hits\": [\n    {\n      \"title\": \"What is object slicing?\",\n      \"url\": \"https://stackoverflow.com/questions/274626/what-is-object-slicing\",\n      \"meta\": [\n        \"score 934  \u00b7  17 answers  \u00b7  answered  \u00b7  c++, inheritance, c++-faq, object-slicing\"\n      ]\n    },\n    {\n      \"title\": \"Object Slicing in c++\",\n      \"url\": \"https://stackoverflow.com/questions/4780067/object-slicing-in-c\",\n      \"meta\": [\n        \"score 0  \u00b7  2 answers  \u00b7  accepted answer  \u00b7  c++, inheritance, object-slicing\"\n      ]\n    },\n    {\n      \"title\": \"how object slicing happens in c++?\",\n      \"url\": \"https://stackoverflow.com/questions/14013909/how-object-slicing-happens-in-c\",\n      \"meta\": [\n        \"score 1  \u00b7  1 answers  \u00b7  accepted answer  \u00b7  c++, inheritance\"\n      ]\n    },\n    {\n      \"title\": \"Object slicing while casting in C++\",\n      \"url\": \"https://stackoverflow.com/questions/43568410/object-slicing-while-casting-in-c\",\n      \"meta\": [\n        \"score 1  \u00b7  1 answers  \u00b7  accepted answer  \u00b7  c++, inheritance, casting\"\n      ]\n    },\n    {\n      \"title\": \"C++: object slicing and exceptions\",\n      \"url\": \"https://stackoverflow.com/questions/50410497/c-object-slicing-and-exceptions\",\n      \"meta\": [\n        \"score 3  \u00b7  2 answers  \u00b7  answered  \u00b7  c++, exception, object-slicing, rethrow\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.18638579999969807,
+    "parsed": {
+      "provider": "stackoverflow",
+      "query": "c++ object slicing",
+      "source_url": "https://stackoverflow.com/search?q=c%2B%2B%20object%20slicing",
+      "hits": [
+        {
+          "title": "What is object slicing?",
+          "url": "https://stackoverflow.com/questions/274626/what-is-object-slicing",
+          "meta": [
+            "score 934  \u00b7  17 answers  \u00b7  answered  \u00b7  c++, inheritance, c++-faq, object-slicing"
+          ]
+        },
+        {
+          "title": "Object Slicing in c++",
+          "url": "https://stackoverflow.com/questions/4780067/object-slicing-in-c",
+          "meta": [
+            "score 0  \u00b7  2 answers  \u00b7  accepted answer  \u00b7  c++, inheritance, object-slicing"
+          ]
+        },
+        {
+          "title": "how object slicing happens in c++?",
+          "url": "https://stackoverflow.com/questions/14013909/how-object-slicing-happens-in-c",
+          "meta": [
+            "score 1  \u00b7  1 answers  \u00b7  accepted answer  \u00b7  c++, inheritance"
+          ]
+        },
+        {
+          "title": "Object slicing while casting in C++",
+          "url": "https://stackoverflow.com/questions/43568410/object-slicing-while-casting-in-c",
+          "meta": [
+            "score 1  \u00b7  1 answers  \u00b7  accepted answer  \u00b7  c++, inheritance, casting"
+          ]
+        },
+        {
+          "title": "C++: object slicing and exceptions",
+          "url": "https://stackoverflow.com/questions/50410497/c-object-slicing-and-exceptions",
+          "meta": [
+            "score 3  \u00b7  2 answers  \u00b7  answered  \u00b7  c++, exception, object-slicing, rethrow"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "c",
+    "query": "qs cheat awk field separator",
+    "expected": "cheat.sh result for awk field separator",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 144,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"cheat.sh\",\n  \"query\": \"awk field separator\",\n  \"source_url\": \"https://cheat.sh/~awk+field+separator\",\n  \"summary_title\": \"No exact cheat.sh sheet\",\n  \"summary\": \"Search cheat.sh for a related sheet.\",\n  \"summary_url\": \"https://cheat.sh/~awk+field+separator\",\n  \"hits\": [\n    {\n      \"title\": \"Search cheat.sh for awk field separator\",\n      \"url\": \"https://cheat.sh/~awk+field+separator\",\n      \"snippet\": \"The exact topic was unavailable.\"\n    }\n  ]\n}\n",
+    "duration": 0.3786781839953619,
+    "parsed": {
+      "provider": "cheat.sh",
+      "query": "awk field separator",
+      "source_url": "https://cheat.sh/~awk+field+separator",
+      "summary_title": "No exact cheat.sh sheet",
+      "summary": "Search cheat.sh for a related sheet.",
+      "summary_url": "https://cheat.sh/~awk+field+separator",
+      "hits": [
+        {
+          "title": "Search cheat.sh for awk field separator",
+          "url": "https://cheat.sh/~awk+field+separator",
+          "snippet": "The exact topic was unavailable."
+        }
+      ]
+    }
+  },
+  {
+    "language": "haskell",
+    "query": "qs gh haskell-unordered-containers",
+    "expected": "GitHub repositories for haskell-unordered-containers",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 145,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"github\",\n  \"query\": \"haskell-unordered-containers\",\n  \"source_url\": \"https://github.com/search?type=repositories&q=haskell-unordered-containers\",\n  \"hits\": [\n    {\n      \"title\": \"konsumlamm/extended-containers\",\n      \"url\": \"https://github.com/konsumlamm/extended-containers\",\n      \"snippet\": \"A Haskell library for containers to extend the containers and unordered-containers packages.\",\n      \"meta\": [\n        \"5 stars  \u00b7  Haskell\"\n      ]\n    },\n    {\n      \"title\": \"solus-packages/haskell-unordered-containers\",\n      \"url\": \"https://github.com/solus-packages/haskell-unordered-containers\",\n      \"snippet\": \"To report an issue or request an update, go to: https://issues.getsol.us\",\n      \"meta\": [\n        \"0 stars  \u00b7  Makefile\"\n      ]\n    },\n    {\n      \"title\": \"deepin-community/haskell-unordered-containers\",\n      \"url\": \"https://github.com/deepin-community/haskell-unordered-containers\",\n      \"meta\": [\n        \"0 stars  \u00b7  Haskell\"\n      ]\n    },\n    {\n      \"title\": \"comatose/stl-container\",\n      \"url\": \"https://github.com/comatose/stl-container\",\n      \"snippet\": \"haskell bindings to C++ STL containers such as unordered_map\",\n      \"meta\": [\n        \"0 stars  \u00b7  Haskell\"\n      ]\n    }\n  ]\n}\n",
+    "duration": 0.3294041409972124,
+    "parsed": {
+      "provider": "github",
+      "query": "haskell-unordered-containers",
+      "source_url": "https://github.com/search?type=repositories&q=haskell-unordered-containers",
+      "hits": [
+        {
+          "title": "konsumlamm/extended-containers",
+          "url": "https://github.com/konsumlamm/extended-containers",
+          "snippet": "A Haskell library for containers to extend the containers and unordered-containers packages.",
+          "meta": [
+            "5 stars  \u00b7  Haskell"
+          ]
+        },
+        {
+          "title": "solus-packages/haskell-unordered-containers",
+          "url": "https://github.com/solus-packages/haskell-unordered-containers",
+          "snippet": "To report an issue or request an update, go to: https://issues.getsol.us",
+          "meta": [
+            "0 stars  \u00b7  Makefile"
+          ]
+        },
+        {
+          "title": "deepin-community/haskell-unordered-containers",
+          "url": "https://github.com/deepin-community/haskell-unordered-containers",
+          "meta": [
+            "0 stars  \u00b7  Haskell"
+          ]
+        },
+        {
+          "title": "comatose/stl-container",
+          "url": "https://github.com/comatose/stl-container",
+          "snippet": "haskell bindings to C++ STL containers such as unordered_map",
+          "meta": [
+            "0 stars  \u00b7  Haskell"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "language": "python",
+    "query": "qs mdn python webassembly api",
+    "expected": "MDN search for python webassembly api",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 146,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"mdn\",\n  \"query\": \"python webassembly api\",\n  \"source_url\": \"https://developer.mozilla.org/en-US/search?q=python%20webassembly%20api\",\n  \"hits\": [\n    {\n      \"title\": \"Python\",\n      \"url\": \"https://developer.mozilla.org/en-US/docs/Glossary/Python\",\n      \"snippet\": \"Python is a high-level general-purpose programming language. It uses a multi-paradigm approach, meaning it supports procedural, object-oriented, and some functional programming constructs.\"\n    },\n    {\n      \"title\": \"Using the WebAssembly JavaScript API\",\n      \"url\": \"https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API\",\n      \"snippet\": \"This article teaches you how to use the key features of the WebAssembly JavaScript API, including loading Wasm modules and manipulating WebAssembly memories, tables, and globals.\"\n    },\n    {\n      \"title\": \"Django Web Framework (Python)\",\n      \"url\": \"https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django\",\n      \"snippet\": \"Django is an extremely popular and fully featured server-side web framework, written in Python. This module shows you why Django is one of the most popular web server frameworks, how to set up a development environment, and how to start using it to create your own web applications.\"\n    },\n    {\n      \"title\": \"WebAssembly\",\n      \"url\": \"https://developer.mozilla.org/en-US/docs/WebAssembly/Reference/JavaScript_interface\",\n      \"snippet\": \"The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality.\"\n    },\n    {\n      \"title\": \"WebAssembly\",\n      \"url\": \"https://developer.mozilla.org/en-US/docs/WebAssembly\",\n      \"snippet\": \"WebAssembly (Wasm) is a low-level assembly-like language that brings near-native performance to the web. It serves as a compilation target for languages like C/C++, C#, and Rust, allowing high-performance code to run directly in the browser.\"\n    }\n  ]\n}\n",
+    "duration": 0.10217459499835968,
+    "parsed": {
+      "provider": "mdn",
+      "query": "python webassembly api",
+      "source_url": "https://developer.mozilla.org/en-US/search?q=python%20webassembly%20api",
+      "hits": [
+        {
+          "title": "Python",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Python",
+          "snippet": "Python is a high-level general-purpose programming language. It uses a multi-paradigm approach, meaning it supports procedural, object-oriented, and some functional programming constructs."
+        },
+        {
+          "title": "Using the WebAssembly JavaScript API",
+          "url": "https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API",
+          "snippet": "This article teaches you how to use the key features of the WebAssembly JavaScript API, including loading Wasm modules and manipulating WebAssembly memories, tables, and globals."
+        },
+        {
+          "title": "Django Web Framework (Python)",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django",
+          "snippet": "Django is an extremely popular and fully featured server-side web framework, written in Python. This module shows you why Django is one of the most popular web server frameworks, how to set up a development environment, and how to start using it to create your own web applications."
+        },
+        {
+          "title": "WebAssembly",
+          "url": "https://developer.mozilla.org/en-US/docs/WebAssembly/Reference/JavaScript_interface",
+          "snippet": "The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality."
+        },
+        {
+          "title": "WebAssembly",
+          "url": "https://developer.mozilla.org/en-US/docs/WebAssembly",
+          "snippet": "WebAssembly (Wasm) is a low-level assembly-like language that brings near-native performance to the web. It serves as a compilation target for languages like C/C++, C#, and Rust, allowing high-performance code to run directly in the browser."
+        }
+      ]
+    }
+  },
+  {
+    "language": "go",
+    "query": "qs web go vulnerability database",
+    "expected": "DuckDuckGo results for Go vulnerability database",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 147,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"web\",\n  \"query\": \"go vulnerability database\",\n  \"source_url\": \"https://duckduckgo.com/?q=go%20vulnerability%20database\",\n  \"hits\": [\n    {\n      \"title\": \"Search DuckDuckGo for go vulnerability database\",\n      \"url\": \"https://duckduckgo.com/?q=go%20vulnerability%20database\",\n      \"snippet\": \"Open this search in your browser.\"\n    }\n  ]\n}\n",
+    "duration": 0.9670859600009862,
+    "parsed": {
+      "provider": "web",
+      "query": "go vulnerability database",
+      "source_url": "https://duckduckgo.com/?q=go%20vulnerability%20database",
+      "hits": [
+        {
+          "title": "Search DuckDuckGo for go vulnerability database",
+          "url": "https://duckduckgo.com/?q=go%20vulnerability%20database",
+          "snippet": "Open this search in your browser."
+        }
+      ]
+    }
+  },
+  {
+    "language": "rust",
+    "query": "qs docs core::cell::OnceCell",
+    "expected": "Official Rust core docs for core::cell::OnceCell",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 148,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"rust\",\n  \"query\": \"core::cell::OnceCell\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=core%20cell%20OnceCell\",\n  \"hits\": [\n    {\n      \"title\": \"OnceCell in core::cell - Rust\",\n      \"url\": \"https://doc.rust-lang.org/core/cell/struct.OnceCell.html\",\n      \"snippet\": \"A cell which can nominally be written to only once.\"\n    },\n    {\n      \"title\": \"Search Rust standard library for core::cell::OnceCell\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=core%20cell%20OnceCell\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "duration": 0.12519373100076336,
+    "parsed": {
+      "provider": "rust",
+      "query": "core::cell::OnceCell",
+      "source_url": "https://doc.rust-lang.org/std/?search=core%20cell%20OnceCell",
+      "hits": [
+        {
+          "title": "OnceCell in core::cell - Rust",
+          "url": "https://doc.rust-lang.org/core/cell/struct.OnceCell.html",
+          "snippet": "A cell which can nominally be written to only once."
+        },
+        {
+          "title": "Search Rust standard library for core::cell::OnceCell",
+          "url": "https://doc.rust-lang.org/std/?search=core%20cell%20OnceCell",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ]
+    }
+  },
+  {
+    "language": "cpp",
+    "query": "qs wiki C++ name mangling",
+    "expected": "Wikipedia result for C++ name mangling",
+    "class": "source-routing",
+    "label": "positive",
+    "index": 149,
+    "exit_code": 0,
+    "raw": "{\n  \"provider\": \"wikipedia\",\n  \"query\": \"C++ name mangling\",\n  \"source_url\": \"https://en.wikipedia.org/w/index.php?search=C%2B%2B%20name%20mangling\",\n  \"summary_title\": \"Name mangling\",\n  \"summary\": \"In compiler construction, name mangling is a technique used to solve various problems caused by the need to resolve unique names for programming entities in many modern programming languages.\",\n  \"summary_url\": \"https://en.wikipedia.org/wiki/Name_mangling\",\n  \"hits\": [\n    {\n      \"title\": \"Name mangling\",\n      \"url\": \"https://en.wikipedia.org/wiki/Name_mangling\",\n      \"snippet\": \"symbol mangling schemes that can be selected at compile time with an -Z symbol-mangling-version option. The following manglers are defined: legacy A C++ style\"\n    },\n    {\n      \"title\": \"C++ syntax\",\n      \"url\": \"https://en.wikipedia.org/wiki/C%2B%2B_syntax\",\n      \"snippet\": \"conventions and name mangling suitable for interoperability with Fortran code. C++ does not define \\\"fortran\\\" as a standard keyword; however, C++ implementations\"\n    },\n    {\n      \"title\": \"Nm (Unix)\",\n      \"url\": \"https://en.wikipedia.org/wiki/Nm_%28Unix%29\",\n      \"snippet\": \"T non_mangled_function The differences between the outputs also show an example of solving the name mangling problem by using extern \\\"C\\\" in C++ code\"\n    },\n    {\n      \"title\": \"C++\",\n      \"url\": \"https://en.wikipedia.org/wiki/C%2B%2B\",\n      \"snippet\": \"\\\"C\\\" {/*...*/} block. Such a function may not rely on features depending on name mangling (i.e., function overloading). Programs developed in C or C++\"\n    },\n    {\n      \"title\": \"Namespace\",\n      \"url\": \"https://en.wikipedia.org/wiki/Namespace\",\n      \"snippet\": \"namespaces and names for internal use in the compiler in a process called name mangling. As well as its abstract language technical usage as described above\"\n    }\n  ]\n}\n",
+    "duration": 0.2926241500026663,
+    "parsed": {
+      "provider": "wikipedia",
+      "query": "C++ name mangling",
+      "source_url": "https://en.wikipedia.org/w/index.php?search=C%2B%2B%20name%20mangling",
+      "summary_title": "Name mangling",
+      "summary": "In compiler construction, name mangling is a technique used to solve various problems caused by the need to resolve unique names for programming entities in many modern programming languages.",
+      "summary_url": "https://en.wikipedia.org/wiki/Name_mangling",
+      "hits": [
+        {
+          "title": "Name mangling",
+          "url": "https://en.wikipedia.org/wiki/Name_mangling",
+          "snippet": "symbol mangling schemes that can be selected at compile time with an -Z symbol-mangling-version option. The following manglers are defined: legacy A C++ style"
+        },
+        {
+          "title": "C++ syntax",
+          "url": "https://en.wikipedia.org/wiki/C%2B%2B_syntax",
+          "snippet": "conventions and name mangling suitable for interoperability with Fortran code. C++ does not define \"fortran\" as a standard keyword; however, C++ implementations"
+        },
+        {
+          "title": "Nm (Unix)",
+          "url": "https://en.wikipedia.org/wiki/Nm_%28Unix%29",
+          "snippet": "T non_mangled_function The differences between the outputs also show an example of solving the name mangling problem by using extern \"C\" in C++ code"
+        },
+        {
+          "title": "C++",
+          "url": "https://en.wikipedia.org/wiki/C%2B%2B",
+          "snippet": "\"C\" {/*...*/} block. Such a function may not rely on features depending on name mangling (i.e., function overloading). Programs developed in C or C++"
+        },
+        {
+          "title": "Namespace",
+          "url": "https://en.wikipedia.org/wiki/Namespace",
+          "snippet": "namespaces and names for internal use in the compiler in a process called name mangling. As well as its abstract language technical usage as described above"
+        }
+      ]
+    }
+  }
+]

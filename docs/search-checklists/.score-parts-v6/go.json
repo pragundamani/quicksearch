@@ -1,0 +1,1301 @@
+[
+  {
+    "query": "go arrays",
+    "expected": "Array types",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "arrays"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (arrays) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go slices",
+    "expected": "Slice types and operations",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "slices"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (slices) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go append",
+    "expected": "Built-in `append`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Go built-in append"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (Go built-in append) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go copy builtin",
+    "expected": "Built-in `copy`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "builtin.copy()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (builtin.copy()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go maps",
+    "expected": "Map types",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "maps"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (maps) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go delete map key",
+    "expected": "Built-in `delete`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "delete",
+      "slices.Delete()",
+      "builtin.delete()",
+      "js.Value.Delete()",
+      "sync.Map.Delete()"
+    ],
+    "error": null,
+    "note": "The first hit is the specification section for deletion of map elements; the built-in delete entry is also third."
+  },
+  {
+    "query": "go clear map",
+    "expected": "Built-in `clear`",
+    "score": 2,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sync.Map.Clear()"
+    ],
+    "error": null,
+    "note": "Only sync.Map.Clear appears. The predeclared clear built-in for ordinary maps is missing."
+  },
+  {
+    "query": "go range loops",
+    "expected": "`range` clause in `for` statements",
+    "score": 0,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*B) Loop 1.24",
+      "func (*Int) MulRange",
+      "flag.Lookup()",
+      "func SyncFileRange",
+      "func (*Map) Range 1.9"
+    ],
+    "error": null,
+    "note": "Results concern testing.B.Loop, big.Int.MulRange, and unrelated APIs; the language range clause is absent."
+  },
+  {
+    "query": "go variadic functions",
+    "expected": "Variadic parameters",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "variadic functions"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (variadic functions) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go multiple return values",
+    "expected": "Function declarations and multiple results",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "multiple return values"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (multiple return values) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go defer statement",
+    "expected": "`defer` statements",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "defer statements"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (defer statements) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go panic and recover",
+    "expected": "Built-ins `panic` and `recover`",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func panic",
+      "type PanicNilError 1.21",
+      "log.Panic()",
+      "func Panic",
+      "func NewTicker"
+    ],
+    "error": null,
+    "note": "The first hit documents panic and the second mentions recover, but there is no direct recover built-in result."
+  },
+  {
+    "query": "go goroutines",
+    "expected": "Goroutines and `go` statements",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "goroutines"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (goroutines) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go buffered channels",
+    "expected": "Channel capacity and `make(chan T, n)`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "buffered channels"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (buffered channels) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go select statement",
+    "expected": "`select` statements",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "select statements"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (select statements) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go close channel",
+    "expected": "Built-in `close` and channel semantics",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func close",
+      "func (Value) Close",
+      "builtin.close()",
+      "type CloseNotifier 1.1",
+      "func (*Client) Close"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (func close) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go interfaces",
+    "expected": "Interface types",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "interfaces"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (interfaces) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go interface embedding",
+    "expected": "Embedded interfaces and type sets",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "types.Interface.Embedded()",
+      "types.Interface.EmbeddedType()",
+      "types.Interface.EmbeddedTypes()"
+    ],
+    "error": null,
+    "note": "The top hits are go/types inspection methods for embedded interfaces. They are relevant, but do not explain language embedding or type sets."
+  },
+  {
+    "query": "go type assertions",
+    "expected": "Type assertion expressions",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type assertions"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (type assertions) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go type switches",
+    "expected": "Type switch statements",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type switches"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (type switches) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go struct tags",
+    "expected": "Struct field tags",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "struct tags"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (struct tags) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go embedded fields",
+    "expected": "Embedded struct fields",
+    "score": 0,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "embed.FS",
+      "embed.FS.Open()",
+      "embed.FS.ReadDir()",
+      "embed.FS.ReadFile()"
+    ],
+    "error": null,
+    "note": "Results are for the embed package and embed.FS, not embedded struct fields."
+  },
+  {
+    "query": "go methods pointer receivers",
+    "expected": "Method declarations with pointer receivers",
+    "score": 0,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func MissingMethod 1.5",
+      "func CallMethodsWithLegacySemantics 1.27",
+      "math.Mod()",
+      "type Method",
+      "Example (EncodeDecode)"
+    ],
+    "error": null,
+    "note": "The results do not explain method declarations or pointer receivers."
+  },
+  {
+    "query": "go iota constants",
+    "expected": "Predeclared identifier `iota`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Constants",
+      "Constants",
+      "math.Cos()",
+      "Constants",
+      "Constants"
+    ],
+    "error": null,
+    "note": "The first builtin constants page explicitly documents iota in its snippet."
+  },
+  {
+    "query": "go type parameters",
+    "expected": "Generic type parameters",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type parameters and generics"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (type parameters and generics) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go generic constraints",
+    "expected": "Constraint interfaces and type sets",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*TypeParam) Constraint 1.18",
+      "Package constraint",
+      "math.Cos()",
+      "func (*CertPool) AddCertWithConstraint 1.22",
+      "Build Constraints"
+    ],
+    "error": null,
+    "note": "The first hit is TypeParam.Constraint in go/types. It is relevant but does not explain constraint interfaces or type sets."
+  },
+  {
+    "query": "go comparable",
+    "expected": "Predeclared constraint `comparable`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "builtin.comparable",
+      "types.Comparable()",
+      "maphash.Comparable()",
+      "maphash.WriteComparable()",
+      "reflect.Value.Comparable()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (builtin.comparable) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go new",
+    "expected": "Built-in `new`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Go built-in new"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (Go built-in new) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go make",
+    "expected": "Built-in `make`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Go built-in make"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (Go built-in make) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go nil",
+    "expected": "Predeclared identifier `nil`",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "types.Nil",
+      "uuid.Nil()",
+      "reflect.Value.IsNil()",
+      "types.TypeAndValue.IsNil()",
+      "parse.NilNode"
+    ],
+    "error": null,
+    "note": "The first hit is go/types.Nil and correctly identifies the predeclared nil value, though it is not the language/builtin page."
+  },
+  {
+    "query": "go fmt.Sprintf",
+    "expected": "`fmt.Sprintf`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "fmt.Sprintf()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (fmt.Sprintf()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go fmt.Errorf",
+    "expected": "`fmt.Errorf` and `%w` wrapping",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "fmt.Errorf()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (fmt.Errorf()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go fmt.Fscan",
+    "expected": "`fmt.Fscan`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "fmt.Fscan()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (fmt.Fscan()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go strings.Builder",
+    "expected": "`strings.Builder`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "strings.Builder",
+      "strings.Builder.Cap()",
+      "strings.Builder.Len()",
+      "strings.Builder.Grow()",
+      "strings.Builder.Reset()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (strings.Builder) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go strings.Fields",
+    "expected": "`strings.Fields`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "strings.Fields()",
+      "strings.FieldsSeq()",
+      "strings.FieldsFunc()",
+      "strings.FieldsFuncSeq()",
+      "parse.FieldNode.String()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (strings.Fields()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go strings.ReplaceAll",
+    "expected": "`strings.ReplaceAll`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "strings.ReplaceAll()",
+      "regexp.Regexp.ReplaceAllString()",
+      "regexp.Regexp.ReplaceAllStringFunc()",
+      "regexp.Regexp.ReplaceAllLiteralString()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (strings.ReplaceAll()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go bytes.Buffer",
+    "expected": "`bytes.Buffer`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "bytes.Buffer",
+      "bytes.Buffer.Cap()",
+      "bytes.Buffer.Len()",
+      "bytes.Buffer.Grow()",
+      "bytes.Buffer.Next()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (bytes.Buffer) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go bytes.Equal",
+    "expected": "`bytes.Equal`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "bytes.Equal()",
+      "bytes.EqualFold()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (bytes.Equal()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go strconv.Atoi",
+    "expected": "`strconv.Atoi`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "strconv.Atoi()",
+      "strconv.Atoi()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (strconv.Atoi()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go strconv.FormatInt",
+    "expected": "`strconv.FormatInt`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "strconv.FormatInt()",
+      "strconv.FormatInt()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (strconv.FormatInt()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go regexp.Compile",
+    "expected": "`regexp.Compile`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "regexp.Compile()",
+      "regexp.CompilePOSIX()",
+      "regexp.MustCompile()",
+      "regexp.MustCompilePOSIX()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (regexp.Compile()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go regexp named groups",
+    "expected": "Named capture groups in `regexp`",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Regexp) CapNames",
+      "func (*Regexp) SubexpNames",
+      "syntax.Regexp.CapNames()",
+      "Groups",
+      "type FileInfoNames 1.23"
+    ],
+    "error": null,
+    "note": "The top hits document CapNames and SubexpNames. They are useful for named groups, but do not directly show the named-capture syntax."
+  },
+  {
+    "query": "go unicode.IsLetter",
+    "expected": "`unicode.IsLetter`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "unicode.IsLetter()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (unicode.IsLetter()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go sort.Slice",
+    "expected": "`sort.Slice`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sort.Slice()",
+      "sort.SliceStable()",
+      "sort.SliceIsSorted()",
+      "sort.IntSlice",
+      "sort.StringSlice"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (sort.Slice()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go sort.Search",
+    "expected": "`sort.Search`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sort.Search()",
+      "sort.SearchInts()",
+      "sort.SearchStrings()",
+      "sort.SearchFloat64s()",
+      "sort.IntSlice.Search()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (sort.Search()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go slices.Sort",
+    "expected": "`slices.Sort`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "slices.Sort()",
+      "slices.SortFunc()",
+      "slices.Sorted()",
+      "slices.SortStableFunc()",
+      "slices.SortedFunc()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (slices.Sort()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go slices.Contains",
+    "expected": "`slices.Contains`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "slices.Contains()",
+      "slices.ContainsFunc()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (slices.Contains()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go maps.Clone",
+    "expected": "`maps.Clone`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "maps.Clone()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (maps.Clone()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go maps.Equal",
+    "expected": "`maps.Equal`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "maps.Equal()",
+      "maps.EqualFunc()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (maps.Equal()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go container/heap",
+    "expected": "Package `container/heap`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "container/heap"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (container/heap) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go container/list.New",
+    "expected": "`container/list.New`",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Package list",
+      "func New",
+      "list.New()",
+      "func CreateRevocationList 1.15",
+      "func NewCommentMap 1.1"
+    ],
+    "error": null,
+    "note": "The exact list.New result is third with a useful signature and description; the second hit is the unrelated ring.New."
+  },
+  {
+    "query": "go io.Copy",
+    "expected": "`io.Copy`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "io.Copy()",
+      "io.CopyN()",
+      "io.CopyBuffer()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (io.Copy()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go io.ReadAll",
+    "expected": "`io.ReadAll`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "io.ReadAll()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (io.ReadAll()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go io.Reader",
+    "expected": "`io.Reader` interface",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "io.Reader",
+      "io.ReaderAt",
+      "io.ReaderFrom",
+      "io.ByteReader",
+      "io.PipeReader"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (io.Reader) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go bufio.Scanner",
+    "expected": "`bufio.Scanner`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "bufio.Scanner",
+      "bufio.Scanner.Err()",
+      "bufio.Scanner.Scan()",
+      "bufio.Scanner.Text()",
+      "bufio.Scanner.Bytes()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (bufio.Scanner) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go bufio.NewWriter",
+    "expected": "`bufio.NewWriter`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "bufio.NewWriter()",
+      "bufio.NewWriterSize()",
+      "bufio.NewReadWriter()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (bufio.NewWriter()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go os.ReadFile",
+    "expected": "`os.ReadFile`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "os.ReadFile()",
+      "os.Root.ReadFile()",
+      "os.File.Read()",
+      "os.File.ReadAt()",
+      "os.File.ReadDir()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (os.ReadFile()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go os.WriteFile",
+    "expected": "`os.WriteFile`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "os.WriteFile()",
+      "os.Root.WriteFile()",
+      "os.File.Write()",
+      "os.File.WriteAt()",
+      "os.File.WriteTo()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (os.WriteFile()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go os.OpenFile flags",
+    "expected": "`os.OpenFile` and open flags",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "os.OpenFile()",
+      "os.Root.OpenFile()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (os.OpenFile()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go filepath.WalkDir",
+    "expected": "`path/filepath.WalkDir`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "filepath.WalkDir()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (filepath.WalkDir()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go filepath.Join",
+    "expected": "`path/filepath.Join`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "filepath.Join()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (filepath.Join()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go file permissions",
+    "expected": "`fs.FileMode` and permission bits",
+    "score": 0,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "ast.File.Pos()",
+      "token.File.Pos()"
+    ],
+    "error": null,
+    "note": "The only hits are ast.File.Pos and token.File.Pos. FileMode and permission bits are absent."
+  },
+  {
+    "query": "go temporary directory",
+    "expected": "`os.MkdirTemp`",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Error) Temporary 1.6",
+      "func TempDir",
+      "pe.DataDirectory",
+      "func (Errno) Temporary",
+      "type FileMode 1.16"
+    ],
+    "error": null,
+    "note": "The second hit is deprecated ioutil.TempDir, which performs the task, but os.MkdirTemp is absent."
+  },
+  {
+    "query": "go embed files",
+    "expected": "Package `embed` and `//go:embed`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "embed.FS",
+      "embed.FS.Open()",
+      "embed.FS.ReadDir()",
+      "embed.FS.ReadFile()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (embed.FS) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go time.Parse layout",
+    "expected": "`time.Parse` and reference-time layouts",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "time.Parse()",
+      "time.ParseError",
+      "time.ParseDuration()",
+      "time.ParseInLocation()",
+      "time.ParseError.Error()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (time.Parse()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go time.NewTicker",
+    "expected": "`time.NewTicker`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "time.NewTicker()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (time.NewTicker()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go time.AfterFunc",
+    "expected": "`time.AfterFunc`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "time.AfterFunc()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (time.AfterFunc()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go context cancellation",
+    "expected": "`context.WithCancel` and `CancelFunc`",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type Context 1.7",
+      "func CommandContext 1.7",
+      "func (*Request) Context 1.7",
+      "func (*Conn) HandshakeContext 1.17",
+      "Contexts"
+    ],
+    "error": null,
+    "note": "The first hit explains Context cancellation generally, but WithCancel and CancelFunc do not appear in the returned hits."
+  },
+  {
+    "query": "go context.WithTimeout",
+    "expected": "`context.WithTimeout`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "context.WithTimeout()",
+      "context.WithTimeoutCause()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (context.WithTimeout()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go errors.Is",
+    "expected": "`errors.Is`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "errors.Is()",
+      "http.ProtocolError.Is()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (errors.Is()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go errors.As",
+    "expected": "`errors.As`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "errors.As()",
+      "errors.AsType()",
+      "aes.KeySizeError",
+      "aes.KeySizeError.Error()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (errors.As()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go errors.Join",
+    "expected": "`errors.Join`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "errors.Join()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (errors.Join()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go sync.WaitGroup",
+    "expected": "`sync.WaitGroup`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sync.WaitGroup",
+      "sync.WaitGroup.Go()",
+      "sync.WaitGroup.Add()",
+      "sync.WaitGroup.Done()",
+      "sync.WaitGroup.Wait()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (sync.WaitGroup) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go mutexes",
+    "expected": "`sync.Mutex`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sync.Mutex",
+      "net.MX",
+      "sync.RWMutex",
+      "http.ServeMux",
+      "net.LookupMX()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (sync.Mutex) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go sync.Once",
+    "expected": "`sync.Once`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sync.Once",
+      "sync.Once.Do()",
+      "sync.OnceFunc()",
+      "sync.OnceValue()",
+      "sync.OnceValues()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (sync.Once) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go atomic counter",
+    "expected": "Package `sync/atomic` counter operations",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func ClearCounters 1.20",
+      "Example (Parallel)",
+      "Package expvar",
+      "Package atomic",
+      "Example (AddAndDone)"
+    ],
+    "error": null,
+    "note": "An atomic.Int64 example is second and the sync/atomic package is fourth. The result set is relevant but weak for counter operations."
+  },
+  {
+    "query": "go worker pool",
+    "expected": "Goroutine/channel worker-pool pattern",
+    "score": 0,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type Pool 1.3",
+      "type EncoderBufferPool 1.9",
+      "sync.Pool",
+      "type CertPool",
+      "type BufferPool 1.6"
+    ],
+    "error": null,
+    "note": "All hits concern object or buffer pools such as sync.Pool; no goroutine/channel worker-pool pattern appears."
+  },
+  {
+    "query": "go race detector",
+    "expected": "Go data race detector",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Package race",
+      "Warnings",
+      "Package build",
+      "Subdirectories",
+      "type MapFS 1.16"
+    ],
+    "error": null,
+    "note": "The first hit is the internal runtime/race package. It is related, but gives no useful race-detector usage guidance."
+  },
+  {
+    "query": "go net.DialTimeout",
+    "expected": "`net.DialTimeout`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "net.DialTimeout()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (net.DialTimeout()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go url.Parse",
+    "expected": "`net/url.Parse`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "url.Parse()",
+      "url.ParseQuery()",
+      "url.ParseRequestURI()",
+      "url.URL.Parse()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (url.Parse()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go http client timeout",
+    "expected": "`net/http.Client.Timeout`",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Clients and Transports",
+      "Example: HTTP 100 Continue",
+      "http.Client",
+      "func WithTimeout 1.7",
+      "func (*AddrError) Timeout"
+    ],
+    "error": null,
+    "note": "The first result is the net/http Clients and Transports section and http.Client is third, but the returned context does not expose Client.Timeout."
+  },
+  {
+    "query": "go http.NewRequestWithContext",
+    "expected": "`net/http.NewRequestWithContext`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "http.NewRequestWithContext()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (http.NewRequestWithContext()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go http.HandleFunc",
+    "expected": "`net/http.HandleFunc`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "http.HandleFunc()",
+      "http.ServeMux.HandleFunc()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (http.HandleFunc()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go http middleware",
+    "expected": "`net/http.Handler` middleware pattern",
+    "score": 2,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Example (ServeHTTP)",
+      "Example: HTTP 100 Continue",
+      "Package http",
+      "func (*Handler) ServeHTTP",
+      "func (*ReverseProxy) ServeHTTP"
+    ],
+    "error": null,
+    "note": "The net/http package page is third, but no result explains the Handler middleware pattern; the first two hits are unrelated examples."
+  },
+  {
+    "query": "go httptest.NewServer",
+    "expected": "`net/http/httptest.NewServer`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "httptest.NewServer()",
+      "httptest.NewTLSServer()",
+      "httptest.NewTestServer()",
+      "httptest.NewUnstartedServer()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (httptest.NewServer()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go json_marshal",
+    "expected": "`encoding/json.Marshal`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "json.Marshal()",
+      "json.MarshalIndent()",
+      "json.Number.MarshalJSONTo()",
+      "big.Int.MarshalJSON()",
+      "time.Time.MarshalJSON()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (json.Marshal()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go encoding/json.Unmarshal",
+    "expected": "`encoding/json.Unmarshal`",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Value) UnmarshalJSON 1.27",
+      "func (*Level) UnmarshalJSON 1.21",
+      "encoding/json",
+      "func (*Int) UnmarshalJSON 1.1",
+      "func (*Time) UnmarshalJSON"
+    ],
+    "error": null,
+    "note": "The encoding/json package page is third and explicitly points to Unmarshal documentation, but the exact Unmarshal function is not returned."
+  },
+  {
+    "query": "go omit empty json field",
+    "expected": "JSON struct tag option `omitempty`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "json.OmitEmptyWithLegacySemantics()"
+    ],
+    "error": null,
+    "note": "The first hit directly explains the omitempty tag option and its empty-value semantics."
+  },
+  {
+    "query": "go xml decoder",
+    "expected": "`encoding/xml.Decoder`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "xml.Decoder",
+      "xml.Decoder.Skip()",
+      "xml.Decoder.Token()",
+      "xml.Decoder.Decode()",
+      "xml.Decoder.InputPos()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (xml.Decoder) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go base64.StdEncoding",
+    "expected": "`encoding/base64.StdEncoding`",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Package base64",
+      "Example",
+      "base64.Encoding",
+      "Example (Reader)",
+      "type Encoding"
+    ],
+    "error": null,
+    "note": "The encoding/base64 package is first and Encoding is third, but StdEncoding itself is only incidentally shown in a fourth-place example."
+  },
+  {
+    "query": "go hex.DecodeString",
+    "expected": "`encoding/hex.DecodeString`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "hex.DecodeString()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (hex.DecodeString()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go sha256.Sum256",
+    "expected": "`crypto/sha256.Sum256`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sha256.Sum256()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (sha256.Sum256()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go crypto/rand.Read",
+    "expected": "`crypto/rand.Read`",
+    "score": 1,
+    "provider": "pkg.go.dev",
+    "top_titles": [
+      "github.com/ren-zxcyq/gorest/uuidGenerator"
+    ],
+    "error": null,
+    "note": "The sole hit is an unrelated third-party package that merely mentions crypto/rand.Read in its synopsis; no API documentation is returned."
+  },
+  {
+    "query": "go sql.DB.QueryContext",
+    "expected": "`database/sql.DB.QueryContext`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sql.DB.QueryContext()",
+      "sql.DB.QueryRowContext()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (sql.DB.QueryContext()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go flag.String",
+    "expected": "`flag.String`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "flag.String()",
+      "flag.StringVar()",
+      "elf.DynFlag.String()",
+      "elf.ProgFlag.String()",
+      "elf.SectionFlag.String()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (flag.String()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go log/slog.Logger",
+    "expected": "`log/slog.Logger`",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "slog.Logger.Log()",
+      "slog.NewLogLogger()",
+      "slog.Logger.LogAttrs()",
+      "slog.SetLogLoggerLevel()"
+    ],
+    "error": null,
+    "note": "The first hit is a method on slog.Logger and is useful context for the requested type, but the Logger type page itself is missing."
+  },
+  {
+    "query": "go testing.T.Run",
+    "expected": "`testing.T.Run`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "testing.T.Run()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (testing.T.Run()) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go table driven tests",
+    "expected": "Table-driven testing pattern",
+    "score": 2,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Package testing",
+      "type Table",
+      "type Table",
+      "type StringTable 1.8",
+      "type RangeTable"
+    ],
+    "error": null,
+    "note": "The first result is only the general testing package page; no returned result describes the table-driven testing pattern."
+  },
+  {
+    "query": "go benchmark functions",
+    "expected": "`testing.B` benchmark functions",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Benchmarks",
+      "Profiling a Go program",
+      "io/fs",
+      "func Examples",
+      "Functions"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (Benchmarks) and provides an authoritative URL with useful context."
+  },
+  {
+    "query": "go runtime.GOMAXPROCS",
+    "expected": "`runtime.GOMAXPROCS`",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "runtime.GOMAXPROCS()",
+      "runtime.GC()",
+      "runtime.SetDefaultGOMAXPROCS()"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic or API (runtime.GOMAXPROCS()) and provides an authoritative URL with useful context."
+  }
+]

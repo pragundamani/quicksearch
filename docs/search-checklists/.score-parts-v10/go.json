@@ -1,0 +1,3442 @@
+{
+  "suite": "Go quicksearch checklist",
+  "candidate": "/tmp/qs-gate/release/qs",
+  "candidate_sha256": "a048a86983a8877eea4240c5a24e4e9119e901ceaeff44bc8d13e15911f8cabd",
+  "checklist": "/home/paragon/settings-configs/scripts/quicksearch/docs/search-checklists/go.md",
+  "executed_at_utc": "2026-10-11T03:05:18.811474+00:00",
+  "timeout_seconds_per_command": 30,
+  "command_count": 100,
+  "scoring_rubric": {
+    "5": "first/immediately useful",
+    "4": "expected in top 3/useful",
+    "3": "relevant but weak",
+    "2": "partial",
+    "1": "misleading",
+    "0": "error or no relevant result"
+  },
+  "summary": {
+    "score": 495,
+    "maximum": 500,
+    "average": 4.95,
+    "percentage": 99.0,
+    "successful_commands": 100,
+    "errors": 0,
+    "distribution": {
+      "5": 95,
+      "4": 5,
+      "3": 0,
+      "2": 0,
+      "1": 0,
+      "0": 0
+    }
+  },
+  "results": [
+    {
+      "index": 1,
+      "checklist_command": "qs go arrays",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "arrays"
+      ],
+      "expected": "Array types",
+      "test": "Plural concept-to-language-feature matching.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "arrays",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "arrays",
+            "url": "https://go.dev/ref/spec#Array_types",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 2,
+      "checklist_command": "qs go slices",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "slices"
+      ],
+      "expected": "Slice types and operations",
+      "test": "Plural concept-to-canonical docs matching.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "slices",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "slices",
+            "url": "https://go.dev/ref/spec#Slice_types",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 3,
+      "checklist_command": "qs go append",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "append"
+      ],
+      "expected": "Built-in `append`",
+      "test": "Direct lookup of a core built-in.",
+      "exit_code": 0,
+      "duration_seconds": 0.015,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "append",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "Go built-in append",
+            "url": "https://pkg.go.dev/builtin#append",
+            "snippet": "Predeclared Go function."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 4,
+      "checklist_command": "qs go copy builtin",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "copy",
+        "builtin"
+      ],
+      "expected": "Built-in `copy`",
+      "test": "Disambiguation of a common word with a qualifier.",
+      "exit_code": 0,
+      "duration_seconds": 0.056,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "copy builtin",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "builtin.copy()",
+            "url": "https://devdocs.io/go/builtin/index#copy",
+            "snippet": "func copy(dst, src []Type) int The copy built-in function copies elements from a source slice into a destination slice. (As a special case, it also will copy bytes from a string to a slice of bytes.) The source and destination may overlap. Copy returns the number of elements copied, which will be the minimum of len(sr…",
+            "meta": [
+              "Go  ·  builtin"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 5,
+      "checklist_command": "qs go maps",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "maps"
+      ],
+      "expected": "Map types",
+      "test": "Plural morphology for a core data type.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "maps",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "maps",
+            "url": "https://go.dev/ref/spec#Map_types",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 6,
+      "checklist_command": "qs go delete map key",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "delete",
+        "map",
+        "key"
+      ],
+      "expected": "Built-in `delete`",
+      "test": "Natural task-to-built-in matching.",
+      "exit_code": 0,
+      "duration_seconds": 0.04,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "delete map key",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "delete",
+            "url": "https://go.dev/ref/spec#Deletion_of_map_elements",
+            "snippet": "Authoritative documentation for this task."
+          },
+          {
+            "title": "slices.Delete()",
+            "url": "https://devdocs.io/go/slices/index#Delete",
+            "snippet": "func Delete[S ~[]E, E any](s S, i, j int) S Delete modifies s in place by removing the elements s[i:j], and returns the modified slice. Delete panics if j > len(s) or s[i:j] is not a valid slice of s. Delete is O(len(s)-i), so if many items must be deleted, it is better to make a single call deleting them all together…",
+            "meta": [
+              "Go  ·  slices",
+              "letters := []string{\"a\", \"b\", \"c\", \"d\", \"e\"}\nletters = slices.Delete(letters, 1, 4)\nfmt.Println(letters)"
+            ]
+          },
+          {
+            "title": "builtin.delete()",
+            "url": "https://devdocs.io/go/builtin/index#delete",
+            "snippet": "func delete(m map[Type]Type1, key Type) The delete built-in function deletes the element with the specified key (m[key]) from the map. If m is nil or there is no such element, delete is a no-op.",
+            "meta": [
+              "Go  ·  builtin"
+            ]
+          },
+          {
+            "title": "js.Value.Delete()",
+            "url": "https://devdocs.io/go/syscall/js/index#Value.Delete",
+            "meta": [
+              "Go  ·  syscall"
+            ]
+          },
+          {
+            "title": "sync.Map.Delete()",
+            "url": "https://devdocs.io/go/sync/index#Map.Delete",
+            "meta": [
+              "Go  ·  sync"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 7,
+      "checklist_command": "qs go clear map",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "clear",
+        "map"
+      ],
+      "expected": "Built-in `clear`",
+      "test": "Natural map-reset task lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "clear map",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "Go built-in clear",
+            "url": "https://pkg.go.dev/builtin#clear",
+            "snippet": "Authoritative Go documentation for this task."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 8,
+      "checklist_command": "qs go range loops",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "range",
+        "loops"
+      ],
+      "expected": "`range` clause in `for` statements",
+      "test": "Plural natural phrase for iteration syntax.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "range loops",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "range clauses",
+            "url": "https://go.dev/ref/spec#For_range",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 9,
+      "checklist_command": "qs go variadic functions",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "variadic",
+        "functions"
+      ],
+      "expected": "Variadic parameters",
+      "test": "Multiword language-concept retrieval.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "variadic functions",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "variadic functions",
+            "url": "https://go.dev/ref/spec#Function_types",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 10,
+      "checklist_command": "qs go multiple return values",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "multiple",
+        "return",
+        "values"
+      ],
+      "expected": "Function declarations and multiple results",
+      "test": "Natural wording for Go function semantics.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "multiple return values",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "multiple return values",
+            "url": "https://go.dev/doc/effective_go#multiple-returns",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 11,
+      "checklist_command": "qs go defer statement",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "defer",
+        "statement"
+      ],
+      "expected": "`defer` statements",
+      "test": "Keyword plus concept-name matching.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "defer statement",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "defer statements",
+            "url": "https://go.dev/ref/spec#Defer_statements",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 12,
+      "checklist_command": "qs go panic and recover",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "panic",
+        "and",
+        "recover"
+      ],
+      "expected": "Built-ins `panic` and `recover`",
+      "test": "Paired runtime-control concepts.",
+      "exit_code": 0,
+      "duration_seconds": 0.22,
+      "score": 4,
+      "score_rationale": "`panic` is first and `recover` is discussed in the second result, but no direct `recover` result is returned.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "panic and recover",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "func panic",
+            "url": "https://devdocs.io/go/builtin/index",
+            "snippet": "func panic — func panic(v any) The panic built-in function stops normal execution of the current goroutine. When a function F calls panic, normal execution of F stops immediately. Any functions whose execution was deferred by F are run in the usual way, and then F returns to its caller. To the caller G, the invocation of F then behaves like a call to panic,…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "type PanicNilError 1.21",
+            "url": "https://devdocs.io/go/runtime/index",
+            "snippet": "type PanicNilError 1.21 — A PanicNilError happens when code calls panic(nil). Before Go 1.21, programs that called panic(nil) observed recover returning nil. Starting in Go 1.21, programs that call panic(nil) observe recover returning a *PanicNilError. Programs can change back to the old behavior by setting GODEBUG=panicnil=1. type PanicNilError struct { //…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "log.Panic()",
+            "url": "https://devdocs.io/go/log/index#Panic",
+            "snippet": "func Panic(v ...any) Panic is equivalent to Print followed by a call to panic().",
+            "meta": [
+              "Go  ·  log"
+            ]
+          },
+          {
+            "title": "func Panic",
+            "url": "https://devdocs.io/go/log/index",
+            "snippet": "func Panic — func Panic(v ...any) Panic is equivalent to Print followed by a call to panic().",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "func NewTicker",
+            "url": "https://devdocs.io/go/time/index",
+            "snippet": "func NewTicker — func NewTicker(d Duration) *Ticker NewTicker returns a new Ticker containing a channel that will send the current time on the channel after each tick. The period of the ticks is specified by the duration argument. The ticker will adjust the time interval or drop ticks to make up for slow receivers. The duration d must be greater than zero; …",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 13,
+      "checklist_command": "qs go goroutines",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "goroutines"
+      ],
+      "expected": "Goroutines and `go` statements",
+      "test": "Go-specific plural normalization.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "goroutines",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "goroutines",
+            "url": "https://go.dev/ref/spec#Go_statements",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 14,
+      "checklist_command": "qs go buffered channels",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "buffered",
+        "channels"
+      ],
+      "expected": "Channel capacity and `make(chan T, n)`",
+      "test": "Multiword concurrency concept.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "buffered channels",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "buffered channels",
+            "url": "https://go.dev/ref/spec#Channel_types",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 15,
+      "checklist_command": "qs go select statement",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "select",
+        "statement"
+      ],
+      "expected": "`select` statements",
+      "test": "Direct concurrency-syntax lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.015,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "select statement",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "select statements",
+            "url": "https://go.dev/ref/spec#Select_statements",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 16,
+      "checklist_command": "qs go close channel",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "close",
+        "channel"
+      ],
+      "expected": "Built-in `close` and channel semantics",
+      "test": "Task phrasing for channel lifecycle docs.",
+      "exit_code": 0,
+      "duration_seconds": 0.179,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "close channel",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "func close",
+            "url": "https://devdocs.io/go/builtin/index",
+            "snippet": "func close — func close(c chan<- Type) The close built-in function closes a channel, which must be either bidirectional or send-only. It should be executed only by the sender, never the receiver, and has the effect of shutting down the channel after the last sent value is received. After the last value has been received from a closed channel c, any receive …",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "func (Value) Close",
+            "url": "https://devdocs.io/go/reflect/index",
+            "snippet": "func (Value) Close — func (v Value) Close() Close closes the channel v. It panics if v's Kind is not Chan or v is a receive-only channel.",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "builtin.close()",
+            "url": "https://devdocs.io/go/builtin/index#close",
+            "snippet": "func close(c chan<- Type) The close built-in function closes a channel, which must be either bidirectional or send-only. It should be executed only by the sender, never the receiver, and has the effect of shutting down the channel after the last sent value is received. After the last value has been received from a clo…",
+            "meta": [
+              "Go  ·  builtin"
+            ]
+          },
+          {
+            "title": "type CloseNotifier 1.1",
+            "url": "https://devdocs.io/go/net/http/index",
+            "snippet": "type CloseNotifier 1.1 — The CloseNotifier interface is implemented by ResponseWriters which allow detecting when the underlying connection has gone away. This mechanism can be used to cancel long operations on the server if the client has disconnected before the response is ready. Deprecated: the CloseNotifier interface predates Go's context package. New c…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "func (*Client) Close",
+            "url": "https://devdocs.io/go/net/rpc/index",
+            "snippet": "func (*Client) Close — func (client *Client) Close() error Close calls the underlying codec's Close method. If the connection is already shutting down, ErrShutdown is returned.",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 17,
+      "checklist_command": "qs go interfaces",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "interfaces"
+      ],
+      "expected": "Interface types",
+      "test": "Plural lookup of a central type-system concept.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "interfaces",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "interfaces",
+            "url": "https://go.dev/ref/spec#Interface_types",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 18,
+      "checklist_command": "qs go interface embedding",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "interface",
+        "embedding"
+      ],
+      "expected": "Embedded interfaces and type sets",
+      "test": "Related-keyword concept discovery.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 4,
+      "score_rationale": "The authoritative interface-types section is first and useful, but the title and snippet do not expose interface embedding or type sets.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "interface embedding",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "interfaces",
+            "url": "https://go.dev/ref/spec#Interface_types",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 19,
+      "checklist_command": "qs go type assertions",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "type",
+        "assertions"
+      ],
+      "expected": "Type assertion expressions",
+      "test": "Plural syntax-concept matching.",
+      "exit_code": 0,
+      "duration_seconds": 0.015,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "type assertions",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "type assertions",
+            "url": "https://go.dev/ref/spec#Type_assertions",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 20,
+      "checklist_command": "qs go type switches",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "type",
+        "switches"
+      ],
+      "expected": "Type switch statements",
+      "test": "Morphological matching for control flow.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "type switches",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "type switches",
+            "url": "https://go.dev/ref/spec#Type_switches",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 21,
+      "checklist_command": "qs go struct tags",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "struct",
+        "tags"
+      ],
+      "expected": "Struct field tags",
+      "test": "Common plural reflection/encoding concept.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "struct tags",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "struct tags",
+            "url": "https://go.dev/ref/spec#Struct_types",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 22,
+      "checklist_command": "qs go embedded fields",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "embedded",
+        "fields"
+      ],
+      "expected": "Embedded struct fields",
+      "test": "Natural terminology for promotion and embedding.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "embedded fields",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "embedded fields",
+            "url": "https://go.dev/ref/spec#Struct_types",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 23,
+      "checklist_command": "qs go methods pointer receivers",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "methods",
+        "pointer",
+        "receivers"
+      ],
+      "expected": "Method declarations with pointer receivers",
+      "test": "Loose multiword query for receiver semantics.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "methods pointer receivers",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "method receivers",
+            "url": "https://go.dev/ref/spec#Method_declarations",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 24,
+      "checklist_command": "qs go iota constants",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "iota",
+        "constants"
+      ],
+      "expected": "Predeclared identifier `iota`",
+      "test": "Identifier plus plural contextual term.",
+      "exit_code": 0,
+      "duration_seconds": 0.217,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "iota constants",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "Constants",
+            "url": "https://devdocs.io/go/builtin/index",
+            "snippet": "Constants — true and false are the two untyped boolean values. const ( true = 0 == 0 // Untyped bool. false = 0 != 0 // Untyped bool. ) iota is a predeclared identifier representing the untyped integer ordinal number of the current const specification in a (usually parenthesized) const declaration. It is zero-indexed. const iota = 0 // Untyped int.",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "Constants",
+            "url": "https://devdocs.io/go/text/tabwriter/index",
+            "snippet": "Constants — Formatting can be controlled with these flags. const ( // Ignore html tags and treat entities (starting with '&' // and ending in ';') as single characters (width = 1). FilterHTML uint = 1 << iota // Strip Escape characters bracketing escaped text segments // instead of passing them through unchanged with the text. StripEscape // Force right-ali…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "math.Cos()",
+            "url": "https://devdocs.io/go/math/index#Cos",
+            "snippet": "func Cos(x float64) float64 Cos returns the cosine of the radian argument x.",
+            "meta": [
+              "Go  ·  math",
+              "Cos(±Inf) = NaN\nCos(NaN) = NaN"
+            ]
+          },
+          {
+            "title": "Constants",
+            "url": "https://devdocs.io/go/log/index",
+            "snippet": "Constants — These flags define which text to prefix to each log entry generated by the Logger. Bits are or'ed together to control what's printed. With the exception of the Lmsgprefix flag, there is no control over the order they appear (the order listed here) or the format they present (as described in the comments). The prefix is followed by a colon only w…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "Constants",
+            "url": "https://devdocs.io/go/unicode/index",
+            "snippet": "Constants — const ( MaxRune = '\\U0010FFFF' // Maximum valid Unicode code point. ReplacementChar = '\\uFFFD' // Represents invalid code points. MaxASCII = '\\u007F' // maximum ASCII value. MaxLatin1 = '\\u00FF' // maximum Latin-1 value. ) Indices into the Delta arrays inside CaseRanges for case mapping. const ( UpperCase = iota LowerCase TitleCase MaxCase ) If …",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 25,
+      "checklist_command": "qs go type parameters",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "type",
+        "parameters"
+      ],
+      "expected": "Generic type parameters",
+      "test": "Modern language feature in plural form.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "type parameters",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "type parameters and generics",
+            "url": "https://go.dev/ref/spec#Type_parameter_declarations",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 26,
+      "checklist_command": "qs go generic constraints",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "generic",
+        "constraints"
+      ],
+      "expected": "Constraint interfaces and type sets",
+      "test": "Natural phrase for generics documentation.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "generic constraints",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "type parameters and generics",
+            "url": "https://go.dev/ref/spec#Type_parameter_declarations",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 27,
+      "checklist_command": "qs go comparable",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "comparable"
+      ],
+      "expected": "Predeclared constraint `comparable`",
+      "test": "Exact lookup of a contextual built-in identifier.",
+      "exit_code": 0,
+      "duration_seconds": 0.042,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "comparable",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "builtin.comparable",
+            "url": "https://devdocs.io/go/builtin/index#comparable",
+            "snippet": "comparable is an interface that is implemented by all comparable types (booleans, numbers, strings, pointers, channels, arrays of comparable types, structs whose fields are all comparable types). The comparable interface may only be used as a type parameter constraint, not as the type of a variable.",
+            "meta": [
+              "Go  ·  builtin"
+            ]
+          },
+          {
+            "title": "types.Comparable()",
+            "url": "https://devdocs.io/go/go/types/index#Comparable",
+            "snippet": "func Comparable(T Type) bool Comparable reports whether values of type T are comparable.",
+            "meta": [
+              "Go  ·  go"
+            ]
+          },
+          {
+            "title": "maphash.Comparable()",
+            "url": "https://devdocs.io/go/hash/maphash/index#Comparable",
+            "meta": [
+              "Go  ·  hash"
+            ]
+          },
+          {
+            "title": "maphash.WriteComparable()",
+            "url": "https://devdocs.io/go/hash/maphash/index#WriteComparable",
+            "meta": [
+              "Go  ·  hash"
+            ]
+          },
+          {
+            "title": "reflect.Value.Comparable()",
+            "url": "https://devdocs.io/go/reflect/index#Value.Comparable",
+            "meta": [
+              "Go  ·  reflect"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 28,
+      "checklist_command": "qs go new",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "new"
+      ],
+      "expected": "Built-in `new`",
+      "test": "Short exact built-in query.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "new",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "Go built-in new",
+            "url": "https://pkg.go.dev/builtin#new",
+            "snippet": "Predeclared Go function."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 29,
+      "checklist_command": "qs go make",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "make"
+      ],
+      "expected": "Built-in `make`",
+      "test": "Core allocation built-in retrieval.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "make",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "Go built-in make",
+            "url": "https://pkg.go.dev/builtin#make",
+            "snippet": "Predeclared Go function."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 30,
+      "checklist_command": "qs go nil",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "nil"
+      ],
+      "expected": "Predeclared identifier `nil`",
+      "test": "Exact lookup of a fundamental value.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "nil",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "predeclared nil value",
+            "url": "https://go.dev/ref/spec#Predeclared_identifiers",
+            "snippet": "Go language specification."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 31,
+      "checklist_command": "qs go fmt.Sprintf",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "fmt.Sprintf"
+      ],
+      "expected": "`fmt.Sprintf`",
+      "test": "Package-qualified CamelCase function.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go fmt.Sprintf",
+        "source_url": "https://pkg.go.dev/fmt#Sprintf",
+        "hits": [
+          {
+            "title": "fmt.Sprintf",
+            "url": "https://pkg.go.dev/fmt#Sprintf",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 32,
+      "checklist_command": "qs go fmt.Errorf",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "fmt.Errorf"
+      ],
+      "expected": "`fmt.Errorf` and `%w` wrapping",
+      "test": "Qualified API with linked error behavior.",
+      "exit_code": 0,
+      "duration_seconds": 0.011,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go fmt.Errorf",
+        "source_url": "https://pkg.go.dev/fmt#Errorf",
+        "hits": [
+          {
+            "title": "fmt.Errorf",
+            "url": "https://pkg.go.dev/fmt#Errorf",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 33,
+      "checklist_command": "qs go fmt.Fscan",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "fmt.Fscan"
+      ],
+      "expected": "`fmt.Fscan`",
+      "test": "Qualified formatted-input API lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.011,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go fmt.Fscan",
+        "source_url": "https://pkg.go.dev/fmt#Fscan",
+        "hits": [
+          {
+            "title": "fmt.Fscan",
+            "url": "https://pkg.go.dev/fmt#Fscan",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 34,
+      "checklist_command": "qs go strings.Builder",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "strings.Builder"
+      ],
+      "expected": "`strings.Builder`",
+      "test": "Package-qualified exported type.",
+      "exit_code": 0,
+      "duration_seconds": 0.011,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go strings.Builder",
+        "source_url": "https://pkg.go.dev/strings#Builder",
+        "hits": [
+          {
+            "title": "strings.Builder",
+            "url": "https://pkg.go.dev/strings#Builder",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 35,
+      "checklist_command": "qs go strings.Fields",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "strings.Fields"
+      ],
+      "expected": "`strings.Fields`",
+      "test": "Exact CamelCase text-splitting API.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go strings.Fields",
+        "source_url": "https://pkg.go.dev/strings#Fields",
+        "hits": [
+          {
+            "title": "strings.Fields",
+            "url": "https://pkg.go.dev/strings#Fields",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 36,
+      "checklist_command": "qs go strings.ReplaceAll",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "strings.ReplaceAll"
+      ],
+      "expected": "`strings.ReplaceAll`",
+      "test": "Compound CamelCase method retrieval.",
+      "exit_code": 0,
+      "duration_seconds": 0.011,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go strings.ReplaceAll",
+        "source_url": "https://pkg.go.dev/strings#ReplaceAll",
+        "hits": [
+          {
+            "title": "strings.ReplaceAll",
+            "url": "https://pkg.go.dev/strings#ReplaceAll",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 37,
+      "checklist_command": "qs go bytes.Buffer",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "bytes.Buffer"
+      ],
+      "expected": "`bytes.Buffer`",
+      "test": "Qualified type with common-name disambiguation.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go bytes.Buffer",
+        "source_url": "https://pkg.go.dev/bytes#Buffer",
+        "hits": [
+          {
+            "title": "bytes.Buffer",
+            "url": "https://pkg.go.dev/bytes#Buffer",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 38,
+      "checklist_command": "qs go bytes.Equal",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "bytes.Equal"
+      ],
+      "expected": "`bytes.Equal`",
+      "test": "Exact byte-slice comparison API.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go bytes.Equal",
+        "source_url": "https://pkg.go.dev/bytes#Equal",
+        "hits": [
+          {
+            "title": "bytes.Equal",
+            "url": "https://pkg.go.dev/bytes#Equal",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 39,
+      "checklist_command": "qs go strconv.Atoi",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "strconv.Atoi"
+      ],
+      "expected": "`strconv.Atoi`",
+      "test": "Common conversion API with acronym casing.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go strconv.Atoi",
+        "source_url": "https://pkg.go.dev/strconv#Atoi",
+        "hits": [
+          {
+            "title": "strconv.Atoi",
+            "url": "https://pkg.go.dev/strconv#Atoi",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 40,
+      "checklist_command": "qs go strconv.FormatInt",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "strconv.FormatInt"
+      ],
+      "expected": "`strconv.FormatInt`",
+      "test": "Qualified numeric formatting function.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go strconv.FormatInt",
+        "source_url": "https://pkg.go.dev/strconv#FormatInt",
+        "hits": [
+          {
+            "title": "strconv.FormatInt",
+            "url": "https://pkg.go.dev/strconv#FormatInt",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 41,
+      "checklist_command": "qs go regexp.Compile",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "regexp.Compile"
+      ],
+      "expected": "`regexp.Compile`",
+      "test": "Exact regular-expression constructor.",
+      "exit_code": 0,
+      "duration_seconds": 0.011,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go regexp.Compile",
+        "source_url": "https://pkg.go.dev/regexp#Compile",
+        "hits": [
+          {
+            "title": "regexp.Compile",
+            "url": "https://pkg.go.dev/regexp#Compile",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 42,
+      "checklist_command": "qs go regexp named groups",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "regexp",
+        "named",
+        "groups"
+      ],
+      "expected": "Named capture groups in `regexp`",
+      "test": "Natural phrase for specialized pattern syntax.",
+      "exit_code": 0,
+      "duration_seconds": 0.273,
+      "score": 4,
+      "score_rationale": "Named-capture APIs are the first three results, but the named-group pattern syntax is not shown directly.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "regexp named groups",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "func (*Regexp) CapNames",
+            "url": "https://devdocs.io/go/regexp/syntax/index",
+            "snippet": "func (*Regexp) CapNames — func (re *Regexp) CapNames() []string CapNames walks the regexp to find the names of capturing groups.",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "func (*Regexp) SubexpNames",
+            "url": "https://devdocs.io/go/regexp/index",
+            "snippet": "func (*Regexp) SubexpNames — func (re *Regexp) SubexpNames() []string SubexpNames returns the names of the parenthesized subexpressions in this Regexp. The name for the first sub-expression is names[1], so that if m is a match slice, the name for m[i] is SubexpNames()[i]. Since the Regexp as a whole cannot be named, names[0] is always the empty string. The …",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "syntax.Regexp.CapNames()",
+            "url": "https://devdocs.io/go/regexp/syntax/index#Regexp.CapNames",
+            "snippet": "func (re *Regexp) CapNames() []string CapNames walks the regexp to find the names of capturing groups.",
+            "meta": [
+              "Go  ·  regexp"
+            ]
+          },
+          {
+            "title": "Groups",
+            "url": "https://devdocs.io/go/log/slog/index",
+            "snippet": "Groups — Attributes can be collected into groups. A group has a name that is used to qualify the names of its attributes. How this qualification is displayed depends on the handler. TextHandler separates the group and attribute names with a dot. JSONHandler treats each group as a separate JSON object, with the group name as the key. Use Group to create a Gr…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "type FileInfoNames 1.23",
+            "url": "https://devdocs.io/go/archive/tar/index",
+            "snippet": "type FileInfoNames 1.23 — FileInfoNames extends fs.FileInfo. Passing an instance of this to FileInfoHeader permits the caller to avoid a system-dependent name lookup by specifying the Uname and Gname directly. type FileInfoNames interface { fs.FileInfo // Uname should give a user name. Uname() (string, error) // Gname should give a group name. Gname() (stri…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 43,
+      "checklist_command": "qs go unicode.IsLetter",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "unicode.IsLetter"
+      ],
+      "expected": "`unicode.IsLetter`",
+      "test": "Qualified Unicode classification API.",
+      "exit_code": 0,
+      "duration_seconds": 0.01,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go unicode.IsLetter",
+        "source_url": "https://pkg.go.dev/unicode#IsLetter",
+        "hits": [
+          {
+            "title": "unicode.IsLetter",
+            "url": "https://pkg.go.dev/unicode#IsLetter",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 44,
+      "checklist_command": "qs go sort.Slice",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "sort.Slice"
+      ],
+      "expected": "`sort.Slice`",
+      "test": "Qualified generic-slice sorting API.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go sort.Slice",
+        "source_url": "https://pkg.go.dev/sort#Slice",
+        "hits": [
+          {
+            "title": "sort.Slice",
+            "url": "https://pkg.go.dev/sort#Slice",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 45,
+      "checklist_command": "qs go sort.Search",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "sort.Search"
+      ],
+      "expected": "`sort.Search`",
+      "test": "Exact binary-search primitive.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go sort.Search",
+        "source_url": "https://pkg.go.dev/sort#Search",
+        "hits": [
+          {
+            "title": "sort.Search",
+            "url": "https://pkg.go.dev/sort#Search",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 46,
+      "checklist_command": "qs go slices.Sort",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "slices.Sort"
+      ],
+      "expected": "`slices.Sort`",
+      "test": "Modern generic package API lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go slices.Sort",
+        "source_url": "https://pkg.go.dev/slices#Sort",
+        "hits": [
+          {
+            "title": "slices.Sort",
+            "url": "https://pkg.go.dev/slices#Sort",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 47,
+      "checklist_command": "qs go slices.Contains",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "slices.Contains"
+      ],
+      "expected": "`slices.Contains`",
+      "test": "Qualified membership helper retrieval.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go slices.Contains",
+        "source_url": "https://pkg.go.dev/slices#Contains",
+        "hits": [
+          {
+            "title": "slices.Contains",
+            "url": "https://pkg.go.dev/slices#Contains",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 48,
+      "checklist_command": "qs go maps.Clone",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "maps.Clone"
+      ],
+      "expected": "`maps.Clone`",
+      "test": "Qualified generic map-copy API.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go maps.Clone",
+        "source_url": "https://pkg.go.dev/maps#Clone",
+        "hits": [
+          {
+            "title": "maps.Clone",
+            "url": "https://pkg.go.dev/maps#Clone",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 49,
+      "checklist_command": "qs go maps.Equal",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "maps.Equal"
+      ],
+      "expected": "`maps.Equal`",
+      "test": "Qualified generic map comparison API.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go maps.Equal",
+        "source_url": "https://pkg.go.dev/maps#Equal",
+        "hits": [
+          {
+            "title": "maps.Equal",
+            "url": "https://pkg.go.dev/maps#Equal",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 50,
+      "checklist_command": "qs go container/heap",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "container/heap"
+      ],
+      "expected": "Package `container/heap`",
+      "test": "Slash-qualified standard-library package.",
+      "exit_code": 0,
+      "duration_seconds": 0.058,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "container/heap",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "container/heap",
+            "url": "https://devdocs.io/go/container/heap/index",
+            "snippet": "Package heap provides heap operations for any type that implements heap.Interface. A heap is a tree with the property that each node is the minimum-valued node in its subtree.",
+            "meta": [
+              "Go  ·  container",
+              "// This example demonstrates an integer heap built using the heap interface.\npackage heap_test\n\nimport (\n    \"container/heap\"\n    \"fmt\"\n)\n\n// An IntHeap is a min-heap of ints.\ntype IntHeap []int\n\nfunc (h IntHeap) Len() int           { return len(h) }\nfunc (h IntHeap) Less(i, j int) bool { return h[i] < h[j] }\nfunc (h IntHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }\n\nfunc (h *IntHeap) Push(x any) {\n    // Push and Pop use pointer receivers because they modify the slice's length,\n    // not just its contents.\n    *h = append(*h, x.(int))\n}\n\nfunc (h *IntHeap) Pop() any {\n    old := *h\n    n := len(old)\n    x := old[n-1]\n    *h = old[0 : n-1]\n    return x\n}\n\n// This example inserts several ints into an IntHeap, checks the minimum,\n// and removes them in order of priority.\nfunc Example_intHeap() {\n    h := &IntHeap{2, 1, 5}\n    heap.Init(h)\n    heap.Push(h, 3)\n    fmt.Printf(\"minimum: %d\\n\", (*h)[0])\n    for h.Len() > 0 {\n        fmt.Printf(\"%d \", heap.Pop(h))\n    }\n    // Output:\n    // minimum: 1\n    // 1 2 3 5\n}"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 51,
+      "checklist_command": "qs go container/list.New",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "container/list.New"
+      ],
+      "expected": "`container/list.New`",
+      "test": "Path-qualified constructor lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go container/list.New",
+        "source_url": "https://pkg.go.dev/container/list#New",
+        "hits": [
+          {
+            "title": "container/list.New",
+            "url": "https://pkg.go.dev/container/list#New",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 52,
+      "checklist_command": "qs go io.Copy",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "io.Copy"
+      ],
+      "expected": "`io.Copy`",
+      "test": "Core streaming-copy API.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go io.Copy",
+        "source_url": "https://pkg.go.dev/io#Copy",
+        "hits": [
+          {
+            "title": "io.Copy",
+            "url": "https://pkg.go.dev/io#Copy",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 53,
+      "checklist_command": "qs go io.ReadAll",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "io.ReadAll"
+      ],
+      "expected": "`io.ReadAll`",
+      "test": "Qualified full-stream read helper.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go io.ReadAll",
+        "source_url": "https://pkg.go.dev/io#ReadAll",
+        "hits": [
+          {
+            "title": "io.ReadAll",
+            "url": "https://pkg.go.dev/io#ReadAll",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 54,
+      "checklist_command": "qs go io.Reader",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "io.Reader"
+      ],
+      "expected": "`io.Reader` interface",
+      "test": "Exact foundational interface lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go io.Reader",
+        "source_url": "https://pkg.go.dev/io#Reader",
+        "hits": [
+          {
+            "title": "io.Reader",
+            "url": "https://pkg.go.dev/io#Reader",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 55,
+      "checklist_command": "qs go bufio.Scanner",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "bufio.Scanner"
+      ],
+      "expected": "`bufio.Scanner`",
+      "test": "Qualified buffered tokenization type.",
+      "exit_code": 0,
+      "duration_seconds": 0.015,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go bufio.Scanner",
+        "source_url": "https://pkg.go.dev/bufio#Scanner",
+        "hits": [
+          {
+            "title": "bufio.Scanner",
+            "url": "https://pkg.go.dev/bufio#Scanner",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 56,
+      "checklist_command": "qs go bufio.NewWriter",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "bufio.NewWriter"
+      ],
+      "expected": "`bufio.NewWriter`",
+      "test": "Qualified buffered-output constructor.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go bufio.NewWriter",
+        "source_url": "https://pkg.go.dev/bufio#NewWriter",
+        "hits": [
+          {
+            "title": "bufio.NewWriter",
+            "url": "https://pkg.go.dev/bufio#NewWriter",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 57,
+      "checklist_command": "qs go os.ReadFile",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "os.ReadFile"
+      ],
+      "expected": "`os.ReadFile`",
+      "test": "Exact whole-file read function.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go os.ReadFile",
+        "source_url": "https://pkg.go.dev/os#ReadFile",
+        "hits": [
+          {
+            "title": "os.ReadFile",
+            "url": "https://pkg.go.dev/os#ReadFile",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 58,
+      "checklist_command": "qs go os.WriteFile",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "os.WriteFile"
+      ],
+      "expected": "`os.WriteFile`",
+      "test": "Exact whole-file write function.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go os.WriteFile",
+        "source_url": "https://pkg.go.dev/os#WriteFile",
+        "hits": [
+          {
+            "title": "os.WriteFile",
+            "url": "https://pkg.go.dev/os#WriteFile",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 59,
+      "checklist_command": "qs go os.OpenFile flags",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "os.OpenFile",
+        "flags"
+      ],
+      "expected": "`os.OpenFile` and open flags",
+      "test": "API plus usage-context query.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go os.OpenFile flags",
+        "source_url": "https://pkg.go.dev/os#OpenFile",
+        "hits": [
+          {
+            "title": "os.OpenFile",
+            "url": "https://pkg.go.dev/os#OpenFile",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 60,
+      "checklist_command": "qs go filepath.WalkDir",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "filepath.WalkDir"
+      ],
+      "expected": "`path/filepath.WalkDir`",
+      "test": "Package shorthand to canonical subpackage API.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go filepath.WalkDir",
+        "source_url": "https://pkg.go.dev/filepath#WalkDir",
+        "hits": [
+          {
+            "title": "filepath.WalkDir",
+            "url": "https://pkg.go.dev/filepath#WalkDir",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 61,
+      "checklist_command": "qs go filepath.Join",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "filepath.Join"
+      ],
+      "expected": "`path/filepath.Join`",
+      "test": "Common path-building function lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go filepath.Join",
+        "source_url": "https://pkg.go.dev/filepath#Join",
+        "hits": [
+          {
+            "title": "filepath.Join",
+            "url": "https://pkg.go.dev/filepath#Join",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 62,
+      "checklist_command": "qs go file permissions",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "file",
+        "permissions"
+      ],
+      "expected": "`fs.FileMode` and permission bits",
+      "test": "Natural plural task query across packages.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "file permissions",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "fs.FileMode",
+            "url": "https://pkg.go.dev/io/fs#FileMode",
+            "snippet": "Authoritative Go documentation for this task."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 63,
+      "checklist_command": "qs go temporary directory",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "temporary",
+        "directory"
+      ],
+      "expected": "`os.MkdirTemp`",
+      "test": "Intent-based lookup without the symbol name.",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "temporary directory",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "os.MkdirTemp",
+            "url": "https://pkg.go.dev/os#MkdirTemp",
+            "snippet": "Authoritative Go documentation for this task."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 64,
+      "checklist_command": "qs go embed files",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "embed",
+        "files"
+      ],
+      "expected": "Package `embed` and `//go:embed`",
+      "test": "Natural task phrase for compiler directive docs.",
+      "exit_code": 0,
+      "duration_seconds": 0.1,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "embed files",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "embed.FS",
+            "url": "https://devdocs.io/go/embed/index#FS",
+            "snippet": "An FS is a read-only collection of files, usually initialized with a //go:embed directive. When declared without a //go:embed directive, an FS is an empty file system.",
+            "meta": [
+              "Go  ·  embed",
+              "type FS struct {\n    // contains filtered or unexported fields\n}"
+            ]
+          },
+          {
+            "title": "embed.FS.Open()",
+            "url": "https://devdocs.io/go/embed/index#FS.Open",
+            "snippet": "func (f FS) Open(name string) (fs.File, error) Open opens the named file for reading and returns it as an fs.File.",
+            "meta": [
+              "Go  ·  embed"
+            ]
+          },
+          {
+            "title": "embed.FS.ReadDir()",
+            "url": "https://devdocs.io/go/embed/index#FS.ReadDir",
+            "meta": [
+              "Go  ·  embed"
+            ]
+          },
+          {
+            "title": "embed.FS.ReadFile()",
+            "url": "https://devdocs.io/go/embed/index#FS.ReadFile",
+            "meta": [
+              "Go  ·  embed"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 65,
+      "checklist_command": "qs go time.Parse layout",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "time.Parse",
+        "layout"
+      ],
+      "expected": "`time.Parse` and reference-time layouts",
+      "test": "API plus Go-specific usage concept.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go time.Parse layout",
+        "source_url": "https://pkg.go.dev/time#Parse",
+        "hits": [
+          {
+            "title": "time.Parse",
+            "url": "https://pkg.go.dev/time#Parse",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 66,
+      "checklist_command": "qs go time.NewTicker",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "time.NewTicker"
+      ],
+      "expected": "`time.NewTicker`",
+      "test": "Qualified timer constructor.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go time.NewTicker",
+        "source_url": "https://pkg.go.dev/time#NewTicker",
+        "hits": [
+          {
+            "title": "time.NewTicker",
+            "url": "https://pkg.go.dev/time#NewTicker",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 67,
+      "checklist_command": "qs go time.AfterFunc",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "time.AfterFunc"
+      ],
+      "expected": "`time.AfterFunc`",
+      "test": "Exact delayed-callback API.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go time.AfterFunc",
+        "source_url": "https://pkg.go.dev/time#AfterFunc",
+        "hits": [
+          {
+            "title": "time.AfterFunc",
+            "url": "https://pkg.go.dev/time#AfterFunc",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 68,
+      "checklist_command": "qs go context cancellation",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "context",
+        "cancellation"
+      ],
+      "expected": "`context.WithCancel` and `CancelFunc`",
+      "test": "Conceptual lifecycle query.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "context cancellation",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "context.WithCancel",
+            "url": "https://pkg.go.dev/context#WithCancel",
+            "snippet": "Authoritative Go documentation for this task."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 69,
+      "checklist_command": "qs go context.WithTimeout",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "context.WithTimeout"
+      ],
+      "expected": "`context.WithTimeout`",
+      "test": "Qualified deadline constructor.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go context.WithTimeout",
+        "source_url": "https://pkg.go.dev/context#WithTimeout",
+        "hits": [
+          {
+            "title": "context.WithTimeout",
+            "url": "https://pkg.go.dev/context#WithTimeout",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 70,
+      "checklist_command": "qs go errors.Is",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "errors.Is"
+      ],
+      "expected": "`errors.Is`",
+      "test": "Exact wrapped-error comparison API.",
+      "exit_code": 0,
+      "duration_seconds": 0.01,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go errors.Is",
+        "source_url": "https://pkg.go.dev/errors#Is",
+        "hits": [
+          {
+            "title": "errors.Is",
+            "url": "https://pkg.go.dev/errors#Is",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 71,
+      "checklist_command": "qs go errors.As",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "errors.As"
+      ],
+      "expected": "`errors.As`",
+      "test": "Exact wrapped-error type extraction API.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go errors.As",
+        "source_url": "https://pkg.go.dev/errors#As",
+        "hits": [
+          {
+            "title": "errors.As",
+            "url": "https://pkg.go.dev/errors#As",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 72,
+      "checklist_command": "qs go errors.Join",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "errors.Join"
+      ],
+      "expected": "`errors.Join`",
+      "test": "Modern multi-error composition API.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go errors.Join",
+        "source_url": "https://pkg.go.dev/errors#Join",
+        "hits": [
+          {
+            "title": "errors.Join",
+            "url": "https://pkg.go.dev/errors#Join",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 73,
+      "checklist_command": "qs go sync.WaitGroup",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "sync.WaitGroup"
+      ],
+      "expected": "`sync.WaitGroup`",
+      "test": "Package-qualified CamelCase synchronization type.",
+      "exit_code": 0,
+      "duration_seconds": 0.011,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go sync.WaitGroup",
+        "source_url": "https://pkg.go.dev/sync#WaitGroup",
+        "hits": [
+          {
+            "title": "sync.WaitGroup",
+            "url": "https://pkg.go.dev/sync#WaitGroup",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 74,
+      "checklist_command": "qs go mutexes",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "mutexes"
+      ],
+      "expected": "`sync.Mutex`",
+      "test": "Irregular plural-to-singular API matching.",
+      "exit_code": 0,
+      "duration_seconds": 0.064,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "mutexes",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "sync.Mutex",
+            "url": "https://devdocs.io/go/sync/index#Mutex",
+            "snippet": "A Mutex is a mutual exclusion lock. The zero value for a Mutex is an unlocked mutex.",
+            "meta": [
+              "Go  ·  sync",
+              "type Mutex struct {\n    // contains filtered or unexported fields\n}"
+            ]
+          },
+          {
+            "title": "net.MX",
+            "url": "https://devdocs.io/go/net/index#MX",
+            "snippet": "An MX represents a single DNS MX record.",
+            "meta": [
+              "Go  ·  net",
+              "type MX struct {\n    Host string\n    Pref uint16\n}"
+            ]
+          },
+          {
+            "title": "sync.RWMutex",
+            "url": "https://devdocs.io/go/sync/index#RWMutex",
+            "meta": [
+              "Go  ·  sync"
+            ]
+          },
+          {
+            "title": "http.ServeMux",
+            "url": "https://devdocs.io/go/net/http/index#ServeMux",
+            "meta": [
+              "Go  ·  net/http"
+            ]
+          },
+          {
+            "title": "net.LookupMX()",
+            "url": "https://devdocs.io/go/net/index#LookupMX",
+            "meta": [
+              "Go  ·  net"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 75,
+      "checklist_command": "qs go sync.Once",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "sync.Once"
+      ],
+      "expected": "`sync.Once`",
+      "test": "Exact one-time initialization primitive.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go sync.Once",
+        "source_url": "https://pkg.go.dev/sync#Once",
+        "hits": [
+          {
+            "title": "sync.Once",
+            "url": "https://pkg.go.dev/sync#Once",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 76,
+      "checklist_command": "qs go atomic counter",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "atomic",
+        "counter"
+      ],
+      "expected": "Package `sync/atomic` counter operations",
+      "test": "Natural task query for lock-free APIs.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "atomic counter",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "sync/atomic",
+            "url": "https://pkg.go.dev/sync/atomic",
+            "snippet": "Authoritative Go documentation for this task."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 77,
+      "checklist_command": "qs go worker pool",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "worker",
+        "pool"
+      ],
+      "expected": "Goroutine/channel worker-pool pattern",
+      "test": "Common concurrency task without one exact symbol.",
+      "exit_code": 0,
+      "duration_seconds": 0.105,
+      "score": 4,
+      "score_rationale": "The useful authoritative worker-pool guide is third; unrelated `Pool` types occupy the first two positions.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "worker pool",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "type Pool 1.3",
+            "url": "https://devdocs.io/go/sync/index",
+            "snippet": "type Pool 1.3 — A Pool is a set of temporary objects that may be individually saved and retrieved. Any item stored in the Pool may be removed automatically at any time without notification. If the Pool holds the only reference when this happens, the item might be deallocated. A Pool is safe for use by multiple goroutines simultaneously. Pool's purpose is to…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "type EncoderBufferPool 1.9",
+            "url": "https://devdocs.io/go/image/png/index",
+            "snippet": "type EncoderBufferPool 1.9 — EncoderBufferPool is an interface for getting and returning temporary instances of the EncoderBuffer struct. This can be used to reuse buffers when encoding multiple images. type EncoderBufferPool interface { Get() *EncoderBuffer Put(*EncoderBuffer) }",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "Worker pools with goroutines and channels",
+            "url": "https://go.dev/doc/effective_go#concurrency",
+            "snippet": "Authoritative Go documentation for this task."
+          },
+          {
+            "title": "sync.Pool",
+            "url": "https://devdocs.io/go/sync/index#Pool",
+            "snippet": "A Pool is a set of temporary objects that may be individually saved and retrieved.",
+            "meta": [
+              "Go  ·  sync",
+              "type Pool struct {\n\n    // New optionally specifies a function to generate\n    // a value when Get would otherwise return nil.\n    // It may not be changed concurrently with calls to Get.\n    New func() any\n    // contains filtered or unexported fields\n}"
+            ]
+          },
+          {
+            "title": "type CertPool",
+            "url": "https://devdocs.io/go/crypto/x509/index",
+            "snippet": "type CertPool — CertPool is a set of certificates. type CertPool struct { // contains filtered or unexported fields }",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 78,
+      "checklist_command": "qs go race detector",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "race",
+        "detector"
+      ],
+      "expected": "Go data race detector",
+      "test": "Tooling concept retrieval from natural words.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "race detector",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "Go data race detector",
+            "url": "https://go.dev/doc/articles/race_detector",
+            "snippet": "Authoritative Go documentation for this task."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 79,
+      "checklist_command": "qs go net.DialTimeout",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "net.DialTimeout"
+      ],
+      "expected": "`net.DialTimeout`",
+      "test": "Qualified network connection API.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go net.DialTimeout",
+        "source_url": "https://pkg.go.dev/net#DialTimeout",
+        "hits": [
+          {
+            "title": "net.DialTimeout",
+            "url": "https://pkg.go.dev/net#DialTimeout",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 80,
+      "checklist_command": "qs go url.Parse",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "url.Parse"
+      ],
+      "expected": "`net/url.Parse`",
+      "test": "Short package alias to canonical API.",
+      "exit_code": 0,
+      "duration_seconds": 0.015,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go url.Parse",
+        "source_url": "https://pkg.go.dev/url#Parse",
+        "hits": [
+          {
+            "title": "url.Parse",
+            "url": "https://pkg.go.dev/url#Parse",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 81,
+      "checklist_command": "qs go http client timeout",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "http",
+        "client",
+        "timeout"
+      ],
+      "expected": "`net/http.Client.Timeout`",
+      "test": "Natural configuration task lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.255,
+      "score": 4,
+      "score_rationale": "The `http.Client` type is third and its result includes the full `Timeout` field documentation, but the exact field is not surfaced directly.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "http client timeout",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "Clients and Transports",
+            "url": "https://devdocs.io/go/net/http/index",
+            "snippet": "Clients and Transports — For control over HTTP client headers, redirect policy, and other settings, create a Client: client := &http.Client{ CheckRedirect: redirectPolicyFunc, } resp, err := client.Get(\"http://example.com\") // ... req, err := http.NewRequest(\"GET\", \"http://example.com\", nil) // ... req.Header.Add(\"If-None-Match\", `W/\"wyzzy\"`) resp, err := c…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "Example: HTTP 100 Continue",
+            "url": "https://devdocs.io/go/testing/synctest/index",
+            "snippet": "Example: HTTP 100 Continue — This example demonstrates testing [http.Transport]'s 100 Continue handling. An HTTP client sending a request can include an \"Expect: 100-continue\" header to tell the server that the client has additional data to send. The server may then respond with an 100 Continue information response to request the data, or some other status …",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "http.Client",
+            "url": "https://devdocs.io/go/net/http/index#Client",
+            "snippet": "A Client is an HTTP client. Its zero value (DefaultClient) is a usable client that uses DefaultTransport.",
+            "meta": [
+              "Go  ·  net/http",
+              "type Client struct {\n    // Transport specifies the mechanism by which individual\n    // HTTP requests are made.\n    // If nil, DefaultTransport is used.\n    Transport RoundTripper\n\n    // CheckRedirect specifies the policy for handling redirects.\n    // If CheckRedirect is not nil, the client calls it before\n    // following an HTTP redirect. The arguments req and via are\n    // the upcoming request and the requests made already, oldest\n    // first. If CheckRedirect returns an error, the Client's Get\n    // method returns both the previous Response (with its Body\n    // closed) and CheckRedirect's error (wrapped in a url.Error)\n    // instead of issuing the Request req.\n    // As a special case, if CheckRedirect returns ErrUseLastResponse,\n    // then the most recent response is returned with its body\n    // unclosed, along with a nil error.\n    //\n    // If CheckRedirect is nil, the Client uses its default policy,\n    // which is to stop after 10 consecutive requests.\n    CheckRedirect func(req *Request, via []*Request) error\n\n    // Jar specifies the cookie jar.\n    //\n    // The Jar is used to insert relevant cookies into every\n    // outbound Request and is updated with the cookie values\n    // of every inbound Response. The Jar is consulted for every\n    // redirect that the Client follows.\n    //\n    // If Jar is nil, cookies are only sent if they are explicitly\n    // set on the Request.\n    Jar CookieJar\n\n    // Timeout specifies a time limit for requests made by this\n    // Client. The timeout includes connection time, any\n    // redirects, and reading the response body. The timer remains\n    // running after Get, Head, Post, or Do return and will\n    // interrupt reading of the Response.Body.\n    //\n    // A Timeout of zero means no timeout.\n    //\n    // The Client cancels requests to the underlying Transport\n    // as if the Request's Context ended.\n    //\n    // For compatibility, the Client will also use the deprecated\n    // CancelRequest method on Transport if found. New\n    // RoundTripper implementations should use the Request's Context\n    // for cancellation instead of implementing CancelRequest.\n    Timeout time.Duration // Go 1.3\n}"
+            ]
+          },
+          {
+            "title": "func WithTimeout 1.7",
+            "url": "https://devdocs.io/go/context/index",
+            "snippet": "func WithTimeout 1.7 — func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc) WithTimeout returns WithDeadline(parent, time.Now().Add(timeout)). Canceling this context releases resources associated with it, so code should call cancel as soon as the operations running in this Context complete: func slowOperationWithTimeout(ctx context.…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "func (*AddrError) Timeout",
+            "url": "https://devdocs.io/go/net/index",
+            "snippet": "func (*AddrError) Timeout — func (e *AddrError) Timeout() bool",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 82,
+      "checklist_command": "qs go http.NewRequestWithContext",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "http.NewRequestWithContext"
+      ],
+      "expected": "`net/http.NewRequestWithContext`",
+      "test": "Long qualified CamelCase constructor.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go http.NewRequestWithContext",
+        "source_url": "https://pkg.go.dev/http#NewRequestWithContext",
+        "hits": [
+          {
+            "title": "http.NewRequestWithContext",
+            "url": "https://pkg.go.dev/http#NewRequestWithContext",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 83,
+      "checklist_command": "qs go http.HandleFunc",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "http.HandleFunc"
+      ],
+      "expected": "`net/http.HandleFunc`",
+      "test": "Common server handler registration API.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go http.HandleFunc",
+        "source_url": "https://pkg.go.dev/http#HandleFunc",
+        "hits": [
+          {
+            "title": "http.HandleFunc",
+            "url": "https://pkg.go.dev/http#HandleFunc",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 84,
+      "checklist_command": "qs go http middleware",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "http",
+        "middleware"
+      ],
+      "expected": "`net/http.Handler` middleware pattern",
+      "test": "Framework-style concept from natural wording.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "http middleware",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "HTTP middleware with http.Handler and http.HandlerFunc",
+            "url": "https://pkg.go.dev/net/http#HandlerFunc",
+            "snippet": "Authoritative Go documentation for this task."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 85,
+      "checklist_command": "qs go httptest.NewServer",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "httptest.NewServer"
+      ],
+      "expected": "`net/http/httptest.NewServer`",
+      "test": "Qualified test-server constructor.",
+      "exit_code": 0,
+      "duration_seconds": 0.011,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go httptest.NewServer",
+        "source_url": "https://pkg.go.dev/httptest#NewServer",
+        "hits": [
+          {
+            "title": "httptest.NewServer",
+            "url": "https://pkg.go.dev/httptest#NewServer",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 86,
+      "checklist_command": "qs go json_marshal",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "json_marshal"
+      ],
+      "expected": "`encoding/json.Marshal`",
+      "test": "snake_case normalization to a Go API.",
+      "exit_code": 0,
+      "duration_seconds": 0.067,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "json_marshal",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "json.Marshal()",
+            "url": "https://devdocs.io/go/encoding/json/index#Marshal",
+            "snippet": "func Marshal(v any) ([]byte, error) Marshal returns the JSON encoding of v.",
+            "meta": [
+              "Go  ·  encoding",
+              "// Field appears in JSON as key \"myName\".\nField int `json:\"myName\"`\n\n// Field appears in JSON as key \"myName\" and\n// the field is omitted from the object if its value is empty,\n// as defined above.\nField int `json:\"myName,omitempty\"`\n\n// Field appears in JSON as key \"Field\" (the default), but\n// the field is skipped if empty.\n// Note the leading comma.\nField int `json:\",omitempty\"`\n\n// Field is ignored by this package.\nField int `json:\"-\"`\n\n// Field appears in JSON as key \"-\".\nField int `json:\"'-'\"`"
+            ]
+          },
+          {
+            "title": "json.MarshalIndent()",
+            "url": "https://devdocs.io/go/encoding/json/index#MarshalIndent",
+            "snippet": "func MarshalIndent(v any, prefix, indent string) ([]byte, error) MarshalIndent is like Marshal but applies Indent to format the output. Each JSON element in the output will begin on a new line beginning with prefix followed by one or more copies of indent according to the indentation nesting.",
+            "meta": [
+              "Go  ·  encoding",
+              "data := map[string]int{\n    \"a\": 1,\n    \"b\": 2,\n}\n\nb, err := json.MarshalIndent(data, \"<prefix>\", \"<indent>\")\nif err != nil {\n    log.Fatal(err)\n}\n\nfmt.Println(string(b))"
+            ]
+          },
+          {
+            "title": "json.Number.MarshalJSONTo()",
+            "url": "https://devdocs.io/go/encoding/json/index#Number.MarshalJSONTo",
+            "meta": [
+              "Go  ·  encoding"
+            ]
+          },
+          {
+            "title": "big.Int.MarshalJSON()",
+            "url": "https://devdocs.io/go/math/big/index#Int.MarshalJSON",
+            "meta": [
+              "Go  ·  math/big"
+            ]
+          },
+          {
+            "title": "time.Time.MarshalJSON()",
+            "url": "https://devdocs.io/go/time/index#Time.MarshalJSON",
+            "meta": [
+              "Go  ·  time"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 87,
+      "checklist_command": "qs go encoding/json.Unmarshal",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "encoding/json.Unmarshal"
+      ],
+      "expected": "`encoding/json.Unmarshal`",
+      "test": "Slash-qualified package and exact symbol casing.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go encoding/json.Unmarshal",
+        "source_url": "https://pkg.go.dev/encoding/json#Unmarshal",
+        "hits": [
+          {
+            "title": "encoding/json.Unmarshal",
+            "url": "https://pkg.go.dev/encoding/json#Unmarshal",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 88,
+      "checklist_command": "qs go omit empty json field",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "omit",
+        "empty",
+        "json",
+        "field"
+      ],
+      "expected": "JSON struct tag option `omitempty`",
+      "test": "Natural serialization task-to-tag matching.",
+      "exit_code": 0,
+      "duration_seconds": 0.082,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "omit empty json field",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "json.OmitEmptyWithLegacySemantics()",
+            "url": "https://devdocs.io/go/encoding/json/index#OmitEmptyWithLegacySemantics",
+            "snippet": "func OmitEmptyWithLegacySemantics(v bool) Options OmitEmptyWithLegacySemantics specifies that the `omitempty` tag option follows a definition of empty where a field is omitted if the Go value is false, 0, a nil pointer, a nil interface value, or any empty array, slice, map, or string. This overrides the v2 semantic wh…",
+            "meta": [
+              "Go  ·  encoding"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 89,
+      "checklist_command": "qs go xml decoder",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "xml",
+        "decoder"
+      ],
+      "expected": "`encoding/xml.Decoder`",
+      "test": "Natural package/type phrase retrieval.",
+      "exit_code": 0,
+      "duration_seconds": 0.058,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "xml decoder",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "xml.Decoder",
+            "url": "https://devdocs.io/go/encoding/xml/index#Decoder",
+            "snippet": "A Decoder represents an XML parser reading a particular input stream. The parser assumes that its input is encoded in UTF-8.",
+            "meta": [
+              "Go  ·  encoding",
+              "type Decoder struct {\n    // Strict defaults to true, enforcing the requirements\n    // of the XML specification.\n    // If set to false, the parser allows input containing common\n    // mistakes:\n    //\t* If an element is missing an end tag, the parser invents\n    //\t  end tags as necessary to keep the return values from Token\n    //\t  properly balanced.\n    //\t* In attribute values and character data, unknown or malformed\n    //\t  character entities (sequences beginning with &) are left alone.\n    //\n    // Setting:\n    //\n    //\td.Strict = false\n    //\td.AutoClose = xml.HTMLAutoClose\n    //\td.Entity = xml.HTMLEntity\n    //\n    // creates a parser that can handle typical HTML.\n    //\n    // Strict mode does not enforce the requirements of the XML name spaces TR.\n    // In particular it does not reject name space tags using undefined prefixes.\n    // Such tags are recorded with the unknown prefix as the name space URL.\n    Strict bool\n\n    // When Strict == false, AutoClose indicates a set of elements to\n    // consider closed immediately after they are opened, regardless\n    // of whether an end element is present.\n    AutoClose []string\n\n    // Entity can be used to map non-standard entity names to string replacements.\n    // The parser behaves as if these standard mappings are present in the map,\n    // regardless of the actual map content:\n    //\n    //\t\"lt\": \"<\",\n    //\t\"gt\": \">\",\n    //\t\"amp\": \"&\",\n    //\t\"apos\": \"'\",\n    //\t\"quot\": `\"`,\n    Entity map[string]string\n\n    // CharsetReader, if non-nil, defines a function to generate\n    // charset-conversion readers, converting from the provided\n    // non-UTF-8 charset into UTF-8. If CharsetReader is nil or\n    // returns an error, parsing stops with an error. One of the\n    // CharsetReader's result values must be non-nil.\n    CharsetReader func(charset string, input io.Reader) (io.Reader, error)\n\n    // DefaultSpace sets the default name space used for unadorned tags,\n    // as if the entire XML stream were wrapped in an element containing\n    // the attribute xmlns=\"DefaultSpace\".\n    DefaultSpace string // Go 1.1\n    // contains filtered or unexported fields\n}"
+            ]
+          },
+          {
+            "title": "xml.Decoder.Skip()",
+            "url": "https://devdocs.io/go/encoding/xml/index#Decoder.Skip",
+            "snippet": "func (d *Decoder) Skip() error Skip reads tokens until it has consumed the end element matching the most recent start element already consumed, skipping nested structures. It returns nil if it finds an end element matching the start element; otherwise it returns an error describing the problem.",
+            "meta": [
+              "Go  ·  encoding"
+            ]
+          },
+          {
+            "title": "xml.Decoder.Token()",
+            "url": "https://devdocs.io/go/encoding/xml/index#Decoder.Token",
+            "meta": [
+              "Go  ·  encoding"
+            ]
+          },
+          {
+            "title": "xml.Decoder.Decode()",
+            "url": "https://devdocs.io/go/encoding/xml/index#Decoder.Decode",
+            "meta": [
+              "Go  ·  encoding"
+            ]
+          },
+          {
+            "title": "xml.Decoder.InputPos()",
+            "url": "https://devdocs.io/go/encoding/xml/index#Decoder.InputPos",
+            "meta": [
+              "Go  ·  encoding"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 90,
+      "checklist_command": "qs go base64.StdEncoding",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "base64.StdEncoding"
+      ],
+      "expected": "`encoding/base64.StdEncoding`",
+      "test": "Qualified exported variable lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go base64.StdEncoding",
+        "source_url": "https://pkg.go.dev/base64#StdEncoding",
+        "hits": [
+          {
+            "title": "base64.StdEncoding",
+            "url": "https://pkg.go.dev/base64#StdEncoding",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 91,
+      "checklist_command": "qs go hex.DecodeString",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "hex.DecodeString"
+      ],
+      "expected": "`encoding/hex.DecodeString`",
+      "test": "Package shorthand and CamelCase function.",
+      "exit_code": 0,
+      "duration_seconds": 0.013,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go hex.DecodeString",
+        "source_url": "https://pkg.go.dev/hex#DecodeString",
+        "hits": [
+          {
+            "title": "hex.DecodeString",
+            "url": "https://pkg.go.dev/hex#DecodeString",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 92,
+      "checklist_command": "qs go sha256.Sum256",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "sha256.Sum256"
+      ],
+      "expected": "`crypto/sha256.Sum256`",
+      "test": "Qualified cryptographic hash helper.",
+      "exit_code": 0,
+      "duration_seconds": 0.015,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go sha256.Sum256",
+        "source_url": "https://pkg.go.dev/sha256#Sum256",
+        "hits": [
+          {
+            "title": "sha256.Sum256",
+            "url": "https://pkg.go.dev/sha256#Sum256",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 93,
+      "checklist_command": "qs go crypto/rand.Read",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "crypto/rand.Read"
+      ],
+      "expected": "`crypto/rand.Read`",
+      "test": "Slash-qualified secure-random API.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go crypto/rand.Read",
+        "source_url": "https://pkg.go.dev/crypto/rand#Read",
+        "hits": [
+          {
+            "title": "crypto/rand.Read",
+            "url": "https://pkg.go.dev/crypto/rand#Read",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 94,
+      "checklist_command": "qs go sql.DB.QueryContext",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "sql.DB.QueryContext"
+      ],
+      "expected": "`database/sql.DB.QueryContext`",
+      "test": "Method-qualified database API.",
+      "exit_code": 0,
+      "duration_seconds": 0.074,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "sql.DB.QueryContext",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "sql.DB.QueryContext()",
+            "url": "https://devdocs.io/go/database/sql/index#DB.QueryContext",
+            "snippet": "func (db *DB) QueryContext(ctx context.Context, query string, args ...any) (*Rows, error) QueryContext executes a query that returns rows, typically a SELECT. The args are for any placeholder parameters in the query.",
+            "meta": [
+              "Go  ·  database",
+              "age := 27\nrows, err := db.QueryContext(ctx, \"SELECT name FROM users WHERE age=?\", age)\nif err != nil {\n    log.Fatal(err)\n}\ndefer rows.Close()\nnames := make([]string, 0)\n\nfor rows.Next() {\n    var name string\n    if err := rows.Scan(&name); err != nil {\n        // Check for a scan error.\n        // Query rows will be closed with defer.\n        log.Fatal(err)\n    }\n    names = append(names, name)\n}\n// If the database is being written to ensure to check for Close\n// errors that may be returned from the driver. The query may\n// encounter an auto-commit error and be forced to rollback changes.\nrerr := rows.Close()\nif rerr != nil {\n    log.Fatal(rerr)\n}\n\n// Rows.Err will report the last error encountered by Rows.Scan.\nif err := rows.Err(); err != nil {\n    log.Fatal(err)\n}\nfmt.Printf(\"%s are %d years old\", strings.Join(names, \", \"), age)"
+            ]
+          },
+          {
+            "title": "sql.DB.QueryRowContext()",
+            "url": "https://devdocs.io/go/database/sql/index#DB.QueryRowContext",
+            "snippet": "func (db *DB) QueryRowContext(ctx context.Context, query string, args ...any) *Row QueryRowContext executes a query that is expected to return at most one row. QueryRowContext always returns a non-nil value. Errors are deferred until Row's Scan method is called. If the query selects no rows, the *Row.Scan will return …",
+            "meta": [
+              "Go  ·  database",
+              "id := 123\nvar username string\nvar created time.Time\nerr := db.QueryRowContext(ctx, \"SELECT username, created_at FROM users WHERE id=?\", id).Scan(&username, &created)\nswitch {\ncase err == sql.ErrNoRows:\n    log.Printf(\"no user with id %d\\n\", id)\ncase err != nil:\n    log.Fatalf(\"query error: %v\\n\", err)\ndefault:\n    log.Printf(\"username is %q, account created on %s\\n\", username, created)\n}"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 95,
+      "checklist_command": "qs go flag.String",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "flag.String"
+      ],
+      "expected": "`flag.String`",
+      "test": "Exact command-line flag definition helper.",
+      "exit_code": 0,
+      "duration_seconds": 0.012,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go flag.String",
+        "source_url": "https://pkg.go.dev/flag#String",
+        "hits": [
+          {
+            "title": "flag.String",
+            "url": "https://pkg.go.dev/flag#String",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 96,
+      "checklist_command": "qs go log/slog.Logger",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "log/slog.Logger"
+      ],
+      "expected": "`log/slog.Logger`",
+      "test": "Slash-qualified structured-logging type.",
+      "exit_code": 0,
+      "duration_seconds": 0.015,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go log/slog.Logger",
+        "source_url": "https://pkg.go.dev/log/slog#Logger",
+        "hits": [
+          {
+            "title": "log/slog.Logger",
+            "url": "https://pkg.go.dev/log/slog#Logger",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 97,
+      "checklist_command": "qs go testing.T.Run",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "testing.T.Run"
+      ],
+      "expected": "`testing.T.Run`",
+      "test": "Type-qualified subtest method.",
+      "exit_code": 0,
+      "duration_seconds": 0.084,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "testing.T.Run",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "testing.T.Run()",
+            "url": "https://devdocs.io/go/testing/index#T.Run",
+            "snippet": "func (t *T) Run(name string, f func(t *T)) bool Run runs f as a subtest of t called name. It runs f in a separate goroutine and blocks until f returns or calls t.Parallel to become a parallel test. Run reports whether f succeeded (or at least did not fail before calling t.Parallel).",
+            "meta": [
+              "Go  ·  testing"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 98,
+      "checklist_command": "qs go table driven tests",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "table",
+        "driven",
+        "tests"
+      ],
+      "expected": "Table-driven testing pattern",
+      "test": "Common multiword Go testing idiom.",
+      "exit_code": 0,
+      "duration_seconds": 0.024,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "table driven tests",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "Table-driven tests",
+            "url": "https://go.dev/wiki/TableDrivenTests",
+            "snippet": "Authoritative Go documentation for this task."
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 99,
+      "checklist_command": "qs go benchmark functions",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "benchmark",
+        "functions"
+      ],
+      "expected": "`testing.B` benchmark functions",
+      "test": "Plural natural query for performance tests.",
+      "exit_code": 0,
+      "duration_seconds": 0.222,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "Go 1.27.0",
+        "query": "benchmark functions",
+        "source_url": "https://devdocs.io/go",
+        "hits": [
+          {
+            "title": "Benchmarks",
+            "url": "https://devdocs.io/go/testing/index",
+            "snippet": "Benchmarks — Functions of the form func BenchmarkXxx(*testing.B) are considered benchmarks, and are executed by the \"go test\" command when its -bench flag is provided. Benchmarks are run sequentially. For a description of the testing flags, see go help testflag. A sample benchmark function looks like this: func BenchmarkRandInt(b *testing.B) { for b.Loop() …",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "Profiling a Go program",
+            "url": "https://devdocs.io/go/runtime/pprof/index",
+            "snippet": "Profiling a Go program — The first step to profiling a Go program is to enable profiling. Support for profiling benchmarks built with the standard testing package is built into go test. For example, the following command runs benchmarks in the current directory and writes the CPU and memory profiles to cpu.prof and mem.prof: go test -cpuprofile cpu.prof -me…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "io/fs",
+            "url": "https://devdocs.io/go/io/fs/index",
+            "snippet": "Package fs defines basic interfaces to a file system. A file system can be provided by the host operating system but also by other packages.",
+            "meta": [
+              "Go  ·  io",
+              "var (\n    ErrInvalid    = errInvalid()    // \"invalid argument\"\n    ErrPermission = errPermission() // \"permission denied\"\n    ErrExist      = errExist()      // \"file already exists\"\n    ErrNotExist   = errNotExist()   // \"file does not exist\"\n)"
+            ]
+          },
+          {
+            "title": "func Examples",
+            "url": "https://devdocs.io/go/go/doc/index",
+            "snippet": "func Examples — func Examples(testFiles ...*ast.File) []*Example Examples returns the examples found in testFiles, sorted by Name field. The Order fields record the order in which the examples were encountered. The Suffix field is not populated when Examples is called directly, it is only populated by NewFromFiles for examples it finds in _test.go files. Pl…",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          },
+          {
+            "title": "Functions",
+            "url": "https://devdocs.io/go/text/template/index",
+            "snippet": "Functions — During execution functions are found in two function maps: first in the template, then in the global function map. By default, no functions are defined in the template but the Funcs method can be used to add them. Predefined global functions are named as follows. and Returns the boolean AND of its arguments by returning the first empty argument …",
+            "meta": [
+              "Go 1.27.0"
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "index": 100,
+      "checklist_command": "qs go runtime.GOMAXPROCS",
+      "invocation": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "runtime.GOMAXPROCS"
+      ],
+      "expected": "`runtime.GOMAXPROCS`",
+      "test": "Qualified all-caps identifier retrieval.",
+      "exit_code": 0,
+      "duration_seconds": 0.018,
+      "score": 5,
+      "score_rationale": "The first result directly matches the expected concept or API and is immediately useful authoritative documentation.",
+      "actual_output": {
+        "provider": "pkg.go.dev",
+        "query": "go runtime.GOMAXPROCS",
+        "source_url": "https://pkg.go.dev/runtime#GOMAXPROCS",
+        "hits": [
+          {
+            "title": "runtime.GOMAXPROCS",
+            "url": "https://pkg.go.dev/runtime#GOMAXPROCS",
+            "snippet": "Official Go package API documentation."
+          }
+        ]
+      },
+      "stderr": ""
+    }
+  ]
+}

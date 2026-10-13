@@ -1,0 +1,1232 @@
+[
+  {
+    "query": "arrays",
+    "expected": "array types, declaration, and subscripting.",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "Array initialization",
+      "Array declaration",
+      "Null-terminated wide strings",
+      "Null-terminated byte strings",
+      "Standard library header <wchar.h> (C95)"
+    ],
+    "error": null,
+    "note": "Array initialization ranks first; array declaration is second, but subscripting is not surfaced."
+  },
+  {
+    "query": "pointers",
+    "expected": "pointer types and indirection.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Pointer declaration",
+      "Member access operators",
+      "Array declaration",
+      "Undefined behavior",
+      "Implicit conversions"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "pointer arithmetic",
+    "expected": "pointer arithmetic operators.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Arithmetic operators",
+      "Implicit conversions",
+      "Complex number arithmetic",
+      "Arithmetic types",
+      "Undefined behavior"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "structures",
+    "expected": "`struct` types.",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "Enumerations",
+      "Objects and alignment",
+      "String literals",
+      "Struct declaration",
+      "Type"
+    ],
+    "error": null,
+    "note": "The exact Struct declaration page ranks fourth; the first result is Enumerations."
+  },
+  {
+    "query": "unions",
+    "expected": "`union` types.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "union"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "enumerations",
+    "expected": "`enum` types and enumerators.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Enumerations"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "bit fields",
+    "expected": "structure bit-fields.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Bit-fields"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "function pointers",
+    "expected": "pointer-to-function declarations and calls.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Pointer declaration",
+      "Implicit conversions",
+      "Functions",
+      "Other operators",
+      "Array declaration"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "variadic functions",
+    "expected": "variadic functions and `<stdarg.h>`.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Variadic functions"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "storage duration",
+    "expected": "automatic, static, thread, and allocated storage duration.",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "Static storage duration",
+      "Thread storage duration"
+    ],
+    "error": null,
+    "note": "Only static and thread storage-duration pages are returned; automatic and allocated duration are missing."
+  },
+  {
+    "query": "language linkage",
+    "expected": "internal, external, and no linkage.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Storage-class specifiers",
+      "C language",
+      "C keywords: fortran",
+      "Basic concepts",
+      "External and tentative definitions"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "type qualifiers",
+    "expected": "`const`, `restrict`, `volatile`, and `_Atomic` qualifiers.",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "const type qualifier",
+      "restrict type qualifier",
+      "volatile type qualifier"
+    ],
+    "error": null,
+    "note": "Useful qualifier pages occupy the top three, but the category view and _Atomic are not surfaced."
+  },
+  {
+    "query": "restrict",
+    "expected": "the `restrict` type qualifier.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "restrict",
+      "restrict type qualifier"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "integer promotions",
+    "expected": "integer promotion rules.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Implicit conversions",
+      "Arithmetic operators",
+      "Integer constant",
+      "Numeric limits",
+      "va_arg"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "usual arithmetic conversions",
+    "expected": "usual arithmetic conversions.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Implicit conversions",
+      "Arithmetic operators",
+      "cos",
+      "Comparison operators",
+      "Assignment operators"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "operator precedence",
+    "expected": "C operator precedence and associativity.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "C Operator Precedence"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "compound literals",
+    "expected": "compound literal expressions.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Compound literals"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "designated initializers",
+    "expected": "designated initialization of arrays and structures.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Designated initializers"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "generic selection",
+    "expected": "`_Generic` generic selection.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Generic selection"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "static assertions",
+    "expected": "`static_assert` / `_Static_assert`.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Static assertion",
+      "Static assertion"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "flexible array member",
+    "expected": "flexible array members.",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "Array declaration",
+      "Syntax",
+      "FILE",
+      "Compiler support for C99",
+      "C99"
+    ],
+    "error": null,
+    "note": "The first result is the general Array declaration page, but its snippet discusses unknown-size arrays rather than flexible array members."
+  },
+  {
+    "query": "variable length arrays",
+    "expected": "variable-length array types.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Array declaration",
+      "C99",
+      "c16rtomb",
+      "c32rtomb",
+      "Compiler support for C99"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "alignment",
+    "expected": "object alignment, `alignof`, and `alignas`.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Objects and alignment",
+      "memalignment",
+      "memalignment"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "object lifetime",
+    "expected": "C object lifetime rules.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Lifetime",
+      "Objects and alignment",
+      "Compound literals (since C99)",
+      "Value categories",
+      "Array declaration"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "undefined behavior",
+    "expected": "undefined behavior in the C abstract machine.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Undefined behavior"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "sequence points",
+    "expected": "sequencing and sequence points.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "C evaluation order and sequence points"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "command line arguments",
+    "expected": "`main` parameters `argc` and `argv`.",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "argc"
+    ],
+    "error": null,
+    "note": "The first result is argc, but the snippet is generic and argv is not shown."
+  },
+  {
+    "query": "preprocessing directives",
+    "expected": "C preprocessor directives.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Preprocessor",
+      "Conditional inclusion",
+      "div",
+      "Replacing text macros",
+      "Diagnostic directives"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "conditional compilation",
+    "expected": "`#if`, `#ifdef`, and related directives.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Conditional inclusion",
+      "Other operators",
+      "Analyzability",
+      "Preprocessor",
+      "Diagnostic directives"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "include guards",
+    "expected": "header include-guard pattern.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Header include guards"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "variadic macros",
+    "expected": "variadic macro definitions and `__VA_ARGS__`.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Variadic macros"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "escape sequences",
+    "expected": "character and string escape sequences.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Escape sequences"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "string literals",
+    "expected": "string literal syntax and types.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "String literals"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "implicit conversions",
+    "expected": "implicit conversion rules.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Implicit conversions"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "compound assignment operators",
+    "expected": "compound assignment expressions.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Assignment operators",
+      "C Operator Precedence",
+      "Punctuation",
+      "Value categories",
+      "Expressions"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "printf",
+    "expected": "`printf` formatted standard output.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "printf",
+      "vprintf",
+      "wprintf",
+      "vwprintf"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "snprintf",
+    "expected": "`snprintf` bounded formatted string output.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "snprintf",
+      "sinf",
+      "vsnprintf"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "scanf",
+    "expected": "`scanf` formatted standard input.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "scanf",
+      "vscanf",
+      "wscanf",
+      "vwscanf"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "fopen",
+    "expected": "`fopen` file-stream opening.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fopen"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "fclose",
+    "expected": "`fclose` file-stream closing.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fclose"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "fgets",
+    "expected": "`fgets` line or bounded string input.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fgets"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "fread",
+    "expected": "`fread` binary stream input.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fread"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "fwrite",
+    "expected": "`fwrite` binary stream output.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fwrite"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "fseek",
+    "expected": "`fseek` stream positioning.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fseek"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "perror",
+    "expected": "`perror` error-message output.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "perror"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "malloc",
+    "expected": "`malloc` dynamic allocation.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "malloc"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "calloc",
+    "expected": "`calloc` zero-initialized allocation.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "calloc"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "realloc",
+    "expected": "`realloc` resizing allocated storage.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "realloc"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "free",
+    "expected": "`free` deallocation.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "free",
+      "ATOMIC_*_LOCK_FREE",
+      "atomic_is_lock_free",
+      "free_sized",
+      "free_aligned_sized"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "memcpy",
+    "expected": "`memcpy` non-overlapping byte copy.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "memcpy",
+      "wmemcpy"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "memmove",
+    "expected": "`memmove` overlap-safe byte copy.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "memmove",
+      "wmemmove"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "memset",
+    "expected": "`memset` byte filling.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "memset",
+      "wmemset"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "memcmp",
+    "expected": "`memcmp` byte-sequence comparison.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "memcmp",
+      "wmemcmp"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "strlen",
+    "expected": "`strlen` string length.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strlen"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "strcmp",
+    "expected": "`strcmp` lexicographic string comparison.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strcmp"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "strchr",
+    "expected": "`strchr` character search in a string.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strchr"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "strstr",
+    "expected": "`strstr` substring search.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strstr"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "strtok",
+    "expected": "`strtok` string tokenization.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strtok"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "qsort",
+    "expected": "`qsort` generic array sorting.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "qsort"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "bsearch",
+    "expected": "`bsearch` generic binary search.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "bsearch"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "strtol",
+    "expected": "`strtol` checked string-to-integer conversion.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strtol"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "strtod",
+    "expected": "`strtod` string-to-floating conversion.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strtod"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "assert",
+    "expected": "`assert` diagnostic macro.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "assert",
+      "static_assert",
+      "static_assert",
+      "_Static_assert"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "setjmp",
+    "expected": "`setjmp` nonlocal jump setup.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "setjmp"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "signal",
+    "expected": "`signal` signal-handler installation.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "signal",
+      "cnd_signal",
+      "sinl",
+      "atomic_signal_fence"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "strftime",
+    "expected": "`strftime` formatted calendar time.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strftime"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "timespec_get",
+    "expected": "`timespec_get` wall-clock time acquisition.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "timespec_get"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "rand",
+    "expected": "`rand` pseudo-random number generation.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "rand",
+      "RAND_MAX",
+      "srand"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "sqrt",
+    "expected": "`sqrt` square-root function.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "sqrt",
+      "csqrt"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "isnan",
+    "expected": "`isnan` floating-point classification macro.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "isnan"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "isalpha",
+    "expected": "`isalpha` character classification.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "isalpha"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "toupper",
+    "expected": "`toupper` character case conversion.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "toupper"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "setlocale",
+    "expected": "`setlocale` locale configuration.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "setlocale"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "mbrtowc",
+    "expected": "`mbrtowc` multibyte-to-wide conversion.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "mbrtowc"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "thrd_create",
+    "expected": "`thrd_create` C thread creation.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "thrd_create"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "mtx_lock",
+    "expected": "`mtx_lock` mutex locking.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "mtx_lock"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "cnd_wait",
+    "expected": "`cnd_wait` condition-variable waiting.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "cnd_wait"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "call_once",
+    "expected": "`call_once` one-time initialization.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "call_once"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "atomic_fetch_add",
+    "expected": "`atomic_fetch_add` atomic read-modify-write.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "atomic_fetch_add"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "atomic_compare_exchange_strong",
+    "expected": "strong atomic compare-and-exchange.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "atomic_compare_exchange_strong"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "memory_order_acquire",
+    "expected": "acquire atomic memory ordering.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "memory_order",
+      "atomic_thread_fence",
+      "atomic_load, atomic_load_explicit",
+      "Standard library header <stdatomic.h> (C11)",
+      "Memory model"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "size_t",
+    "expected": "`size_t` unsigned size type.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "size_t"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "ptrdiff_t",
+    "expected": "`ptrdiff_t` pointer-difference type.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "ptrdiff_t"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "va_list",
+    "expected": "`va_list` variadic-argument state type.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "va_list"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "struct tm",
+    "expected": "calendar components type `struct tm`.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "tm",
+      "Struct and union initialization",
+      "Standard library header <time.h>",
+      "timegm",
+      "gmtime, gmtime_r, gmtime_s"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "FILE",
+    "expected": "`FILE` stream object type.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "FILE",
+      "EXIT_FAILURE",
+      "File scope",
+      "tmpfile",
+      "File input/output"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "NULL",
+    "expected": "null pointer macro `NULL`.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "NULL"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "errno",
+    "expected": "`errno` error indicator and error macros.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "errno",
+      "MATH_ERRNO"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "stdatomic.h",
+    "expected": "the `<stdatomic.h>` atomic operations header.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Standard library header <stdatomic.h>"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "complex numbers",
+    "expected": "C complex arithmetic and `<complex.h>`.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "Complex number arithmetic"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "read a file line by line",
+    "expected": "line input with `fgets` and stream iteration.",
+    "score": 2,
+    "provider": "C",
+    "top_titles": [
+      "fread",
+      "fread",
+      "fgets"
+    ],
+    "error": null,
+    "note": "fread ranks first and does not answer line-by-line input; fgets is third with only a return-value fragment."
+  },
+  {
+    "query": "copy overlapping memory",
+    "expected": "overlap-safe copying with `memmove`.",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "memcpy, memcpy_s",
+      "memmove, memmove_s",
+      "va_copy",
+      "Analyzability",
+      "memory_order"
+    ],
+    "error": null,
+    "note": "memmove is second and useful; memcpy ranks first, though its snippet notes that memmove handles overlap."
+  },
+  {
+    "query": "allocate zero initialized array",
+    "expected": "zeroed allocation with `calloc`.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "calloc",
+      "Array declaration",
+      "FP_ZERO",
+      "Array initialization",
+      "Initialization"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "parse integer from string",
+    "expected": "numeric parsing with `strtol`.",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "strtol",
+      "strtol",
+      "strtoul"
+    ],
+    "error": null,
+    "note": "strtol is first, but its first snippet is generic; the second strtol hit gives the useful parsing details."
+  },
+  {
+    "query": "sort array with comparator",
+    "expected": "generic sorting with `qsort`.",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "bsearch, bsearch_s",
+      "Algorithms",
+      "short",
+      "qsort, qsort_s",
+      "Array initialization"
+    ],
+    "error": null,
+    "note": "The qsort detail page ranks fourth. The second result only lists qsort, while the first is bsearch."
+  },
+  {
+    "query": "get current calendar time",
+    "expected": "`time` and calendar-time conversion.",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "timespec_get",
+      "Standard library header <time.h>",
+      "gets",
+      "Date and time utilities",
+      "time"
+    ],
+    "error": null,
+    "note": "timespec_get is useful and first, but the requested time/calendar conversion path is not directly surfaced; time ranks fifth."
+  },
+  {
+    "query": "format date and time",
+    "expected": "time formatting with `strftime`.",
+    "score": 2,
+    "provider": "C",
+    "top_titles": [
+      "Date and time utilities"
+    ],
+    "error": null,
+    "note": "Only a broad Date and time utilities page is returned, with a license-only snippet; strftime is not surfaced."
+  },
+  {
+    "query": "remove a file",
+    "expected": "`remove` file deletion.",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "remove",
+      "remove"
+    ],
+    "error": null,
+    "note": "remove is first, but its first snippet is generic; the second hit states the deletion behavior."
+  },
+  {
+    "query": "create a temporary file",
+    "expected": "temporary file creation with `tmpfile`.",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "tmpfile, tmpfile_s",
+      "tmpnam, tmpnam_s",
+      "tmpfile",
+      "FILE",
+      "fopen, fopen_s"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected C concept or API and provides a useful documentation target."
+  },
+  {
+    "query": "handle end of file",
+    "expected": "EOF indication, `feof`, and stream read results.",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "fopen, fopen_s",
+      "feof",
+      "fclose",
+      "fgetc, getc",
+      "FILE"
+    ],
+    "error": null,
+    "note": "feof ranks second and is relevant, but fopen ranks first and the results do not clearly explain EOF/read-result handling."
+  }
+]

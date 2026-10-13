@@ -1,0 +1,777 @@
+[
+  {
+    "language": "c",
+    "query": "qs c reference standard code example quick answer feclearexcept floating environment",
+    "expected": "feclearexcept",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "feclearexcept"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.IntMap.lookupGE",
+    "expected": "Data.IntMap.lookupGE",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "lookupGE :: Key -> IntMap a -> Maybe (Key, a)",
+      "lookupGE :: Key -> IntMap a -> Maybe (Key, a)",
+      "lookupGE :: Ord a => a -> Set a -> Maybe a",
+      "lookupGE :: Ord k => k -> Map k v -> Maybe (k, v)",
+      "lookupGE :: Ord k => k -> Map k v -> Maybe (k, v)"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "python",
+    "query": "qs python mmap.mmap.madvise",
+    "expected": "mmap.mmap.madvise()",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "mmap.mmap.madvise()"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "go",
+    "query": "qs go net/netip.ParsePrefix",
+    "expected": "net/netip.ParsePrefix",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func MustParsePrefix 1.18",
+      "func ParseCIDR",
+      "netip.ParsePrefix()",
+      "Example (StripPrefix)",
+      "func (*QUICConn) Start 1.21"
+    ],
+    "error": null,
+    "note": "Exact ParsePrefix result is third; the first two are related alternatives."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::sync::LazyLock::force_mut",
+    "expected": "LazyLock::force_mut",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "LazyLock::force_mut",
+      "Search Rust standard library for std::sync::LazyLock::force_mut"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::ranges::cartesian_product_view",
+    "expected": "std::ranges::cartesian_product_view",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::cartesian_product_view",
+      "std::ranges::cartesian_product_view::end",
+      "std::ranges::cartesian_product_view::size",
+      "std::ranges::cartesian_product_view<First",
+      "std::ranges::cartesian_product_view::begin"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "c",
+    "query": "qs c fgetpos",
+    "expected": "fgetpos",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "fgetpos"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Array.accumArray",
+    "expected": "Data.Array.accumArray",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "accumArray :: Ix i => (e -> a -> e) -> e -> (i, i) -> [(i, a)] -> Array i e"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "python",
+    "query": "qs python os.posix_spawnp",
+    "expected": "os.posix_spawnp()",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "os.posix_spawnp()"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "go",
+    "query": "qs go slices.Chunk",
+    "expected": "slices.Chunk",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "slices.Chunk()"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::io::BorrowedBuf",
+    "expected": "std::io::BorrowedBuf",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "BorrowedBuf in std::io - Rust",
+      "Search Rust standard library for std::io::BorrowedBuf"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::flat_map",
+    "expected": "std::flat_map",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::flat_map",
+      "std::flat_map::at",
+      "std::flat_map::end",
+      "std::flat_map::find",
+      "std::flat_map::keys"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "c",
+    "query": "qs c wcscoll",
+    "expected": "wcscoll",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "wcscoll"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Graph.stronglyConnCompR",
+    "expected": "Data.Graph.stronglyConnCompR",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "stronglyConnCompR :: Ord key => [(node, key, [key])] -> [SCC (node, key, [key])]"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "python",
+    "query": "qs python ssl.SSLContext.num_tickets",
+    "expected": "SSLContext.num_tickets",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "ssl.SSLContext.num_tickets"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "go",
+    "query": "qs go reflect.TypeFor",
+    "expected": "reflect.TypeFor",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "reflect.TypeFor()"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::task::Waker::data",
+    "expected": "Waker::data",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Waker::data",
+      "Search Rust standard library for std::task::Waker::data"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::ranges::fold_left_with_iter",
+    "expected": "std::ranges::fold_left_with_iter",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::fold_left_with_iter",
+      "std::ranges::fold_left_first_with_iter"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "c",
+    "query": "qs c quick_exit",
+    "expected": "quick_exit",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "quick_exit",
+      "at_quick_exit"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Text.ParserCombinators.ReadP.gather",
+    "expected": "ReadP.gather",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "gather :: ReadP a -> ReadP (String, a)"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "python",
+    "query": "qs python tarfile.data_filter",
+    "expected": "tarfile.data_filter",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "tarfile.data_filter()"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "go",
+    "query": "qs go archive/zip.Writer.Copy",
+    "expected": "archive/zip.Writer.Copy",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Writer) SetOffset 1.5",
+      "func (*Writer) WriteHeader",
+      "zip.Writer.Copy()",
+      "type ValueKind 1.16",
+      "Constants"
+    ],
+    "error": null,
+    "note": "Exact zip.Writer.Copy result is third; higher results are other writer APIs."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::thread::scope",
+    "expected": "std::thread::scope",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "scope in std::thread - Rust",
+      "Search Rust standard library for std::thread::scope"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::expected::transform_error",
+    "expected": "std::expected::transform_error",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::expected::transform_error"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "c",
+    "query": "qs c thrd_sleep",
+    "expected": "thrd_sleep",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "thrd_sleep"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Typeable.eqT",
+    "expected": "Data.Typeable.eqT",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "eqT :: forall {k} (a :: k) (b :: k). (Typeable a, Typeable b) => Maybe (a :~: b)"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "python",
+    "query": "qs python sqlite3.Connection.blobopen",
+    "expected": "Connection.blobopen()",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "sqlite3.Connection.blobopen()"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "go",
+    "query": "qs go crypto/ecdh.X25519",
+    "expected": "crypto/ecdh.X25519",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Package ecdh",
+      "Index",
+      "func (*PrivateKey) ECDH 1.20",
+      "func ParsePKCS8PrivateKey",
+      "Package crypto"
+    ],
+    "error": null,
+    "note": "The first result is the correct crypto/ecdh package, but no direct X25519 hit appears."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust std::net::Ipv6Addr::to_ipv4_mapped",
+    "expected": "Ipv6Addr::to_ipv4_mapped",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Ipv6Addr::to_ipv4_mapped",
+      "Search Rust standard library for std::net::Ipv6Addr::to_ipv4_mapped"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp std::generator",
+    "expected": "std::generator",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::generator",
+      "std::generator::end",
+      "std::generator::begin",
+      "std::generator::iterator",
+      "std::generator::generator"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "c",
+    "query": "qs c ckd_add",
+    "expected": "ckd_add",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "ckd_add"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell Data.Foldable.foldMap1",
+    "expected": "Data.Foldable.foldMap1",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "foldMap1 :: (Foldable1 t, Semigroup m) => (a -> m) -> t a -> m"
+    ],
+    "error": null,
+    "note": "The exact foldMap1 symbol is first, but it is under Data.Foldable1 rather than the expected Data.Foldable path."
+  },
+  {
+    "language": "python",
+    "query": "qs python asyncio.Barrier",
+    "expected": "asyncio.Barrier",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "asyncio.Barrier",
+      "asyncio.Barrier.broken",
+      "asyncio.Barrier.wait()",
+      "asyncio.Barrier.abort()",
+      "asyncio.Barrier.parties"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "go",
+    "query": "qs go math/big.Float.Scan",
+    "expected": "math/big.Float.Scan",
+    "class": "unseen-api",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Float) Scan 1.8",
+      "func Scan",
+      "big.Float.Scan()",
+      "func ToFloat 1.6",
+      "A note about floats"
+    ],
+    "error": null,
+    "note": "Exact API target is the first result."
+  },
+  {
+    "language": "python",
+    "query": "qs pypi msgspec",
+    "expected": "PyPI package page for msgspec",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "pypi",
+    "top_titles": [
+      "msgspec on PyPI"
+    ],
+    "error": null,
+    "note": "Expected source and target are the first result."
+  },
+  {
+    "language": "go",
+    "query": "qs go-mod golang.org/x/sync",
+    "expected": "Go package registry result for golang.org/x/sync",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 4,
+    "provider": "go modules",
+    "top_titles": [
+      "golang.org/x/sync/errgroup",
+      "golang.org/x/sync/singleflight",
+      "golang.org/x/sync/semaphore",
+      "golang.org/x/sync/syncmap",
+      "github.com/bir3/gocompiler/src/xvendor/golang.org/x/sync/semaphore"
+    ],
+    "error": null,
+    "note": "Correct pkg.go.dev routing, but results begin with x/sync subpackages rather than the module root."
+  },
+  {
+    "language": "rust",
+    "query": "qs crate camino",
+    "expected": "crates.io page for camino",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 4,
+    "provider": "crates.io",
+    "top_titles": [
+      "camino",
+      "camino-tempfile-ext",
+      "caminos",
+      "camino-tempfile",
+      "camino-anchored"
+    ],
+    "error": null,
+    "note": "The camino crate is first and sourced from crates.io search, but the hit URL points to docs.rs instead of the crates.io package page."
+  },
+  {
+    "language": "cpp",
+    "query": "qs man cmake",
+    "expected": "Local cmake manual page",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "man",
+    "top_titles": [
+      "cmake (1)",
+      "ccmake (1)",
+      "cmake-buildsystem (7)",
+      "cmake-commands (7)",
+      "cmake-compile-features (7)"
+    ],
+    "error": null,
+    "note": "Expected source and target are the first result."
+  },
+  {
+    "language": "c",
+    "query": "qs man 3 getaddrinfo",
+    "expected": "Section 3 getaddrinfo manual page",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "man",
+    "top_titles": [
+      "getaddrinfo (3)"
+    ],
+    "error": null,
+    "note": "Expected source and target are the first result."
+  },
+  {
+    "language": "haskell",
+    "query": "qs web Hackage attoparsec",
+    "expected": "DuckDuckGo results for Hackage attoparsec",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 3,
+    "provider": "web",
+    "top_titles": [
+      "Search DuckDuckGo for Hackage attoparsec"
+    ],
+    "error": null,
+    "note": "Relevant fallback search link only; no fetched result page or direct target was returned."
+  },
+  {
+    "language": "python",
+    "query": "qs pypi platformdirs",
+    "expected": "PyPI package page for platformdirs",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "pypi",
+    "top_titles": [
+      "platformdirs on PyPI"
+    ],
+    "error": null,
+    "note": "Expected source and target are the first result."
+  },
+  {
+    "language": "go",
+    "query": "qs gh charmbracelet/lipgloss",
+    "expected": "GitHub repository charmbracelet/lipgloss",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "github",
+    "top_titles": [
+      "charmbracelet/lipgloss",
+      "76creates/stickers",
+      "whit3rabbit/lipgloss-rs",
+      "oakoliver/lipgloss",
+      "junhinhow/charm-themes"
+    ],
+    "error": null,
+    "note": "Expected source and target are the first result."
+  },
+  {
+    "language": "rust",
+    "query": "qs docs smallvec",
+    "expected": "docs.rs documentation for smallvec",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "docs",
+    "top_titles": [
+      "smallvec"
+    ],
+    "error": null,
+    "note": "Expected source and target are the first result."
+  },
+  {
+    "language": "cpp",
+    "query": "qs so c++ object slicing",
+    "expected": "Stack Overflow search for C++ object slicing",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "stackoverflow",
+    "top_titles": [
+      "What is object slicing?",
+      "Object Slicing in c++",
+      "how object slicing happens in c++?",
+      "Object slicing while casting in C++",
+      "C++: object slicing and exceptions"
+    ],
+    "error": null,
+    "note": "Expected source and target are the first result."
+  },
+  {
+    "language": "c",
+    "query": "qs cheat awk field separator",
+    "expected": "cheat.sh result for awk field separator",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 3,
+    "provider": "cheat.sh",
+    "top_titles": [
+      "Search cheat.sh for awk field separator"
+    ],
+    "error": null,
+    "note": "Correct cheat.sh route, but it reports no exact sheet and only returns a generic related-search link."
+  },
+  {
+    "language": "haskell",
+    "query": "qs gh haskell-unordered-containers",
+    "expected": "GitHub repositories for haskell-unordered-containers",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 3,
+    "provider": "github",
+    "top_titles": [
+      "konsumlamm/extended-containers",
+      "solus-packages/haskell-unordered-containers",
+      "deepin-community/haskell-unordered-containers",
+      "comatose/stl-container"
+    ],
+    "error": null,
+    "note": "Correct GitHub repository search, but the canonical unordered-containers repository is absent and results are weak."
+  },
+  {
+    "language": "python",
+    "query": "qs mdn python webassembly api",
+    "expected": "MDN search for python webassembly api",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 4,
+    "provider": "mdn",
+    "top_titles": [
+      "Python",
+      "Using the WebAssembly JavaScript API",
+      "Django Web Framework (Python)",
+      "WebAssembly",
+      "WebAssembly"
+    ],
+    "error": null,
+    "note": "Correct MDN search; the WebAssembly JavaScript API is second, behind a generic Python glossary page."
+  },
+  {
+    "language": "go",
+    "query": "qs web go vulnerability database",
+    "expected": "DuckDuckGo results for Go vulnerability database",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 3,
+    "provider": "web",
+    "top_titles": [
+      "Search DuckDuckGo for go vulnerability database"
+    ],
+    "error": null,
+    "note": "Relevant fallback search link only; no fetched result page or direct target was returned."
+  },
+  {
+    "language": "rust",
+    "query": "qs docs core::cell::OnceCell",
+    "expected": "Official Rust core docs for core::cell::OnceCell",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "OnceCell in core::cell - Rust",
+      "Search Rust standard library for core::cell::OnceCell"
+    ],
+    "error": null,
+    "note": "Expected source and target are the first result."
+  },
+  {
+    "language": "cpp",
+    "query": "qs wiki C++ name mangling",
+    "expected": "Wikipedia result for C++ name mangling",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "wikipedia",
+    "top_titles": [
+      "Name mangling",
+      "C++ syntax",
+      "Nm (Unix)",
+      "C++",
+      "Namespace"
+    ],
+    "error": null,
+    "note": "Expected source and target are the first result."
+  }
+]

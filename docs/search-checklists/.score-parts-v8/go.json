@@ -1,0 +1,1206 @@
+[
+  {
+    "query": "go arrays",
+    "expected": "Array types.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "arrays"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go slices",
+    "expected": "Slice types and operations.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "slices"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go append",
+    "expected": "Built-in `append`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Go built-in append"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go copy builtin",
+    "expected": "Built-in `copy`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "builtin.copy()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go maps",
+    "expected": "Map types.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "maps"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go delete map key",
+    "expected": "Built-in `delete`.",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "delete",
+      "slices.Delete()",
+      "builtin.delete()"
+    ],
+    "error": null,
+    "note": "Built-in delete is third with a useful signature; the first result is exact in name but has only a generic snippet."
+  },
+  {
+    "query": "go clear map",
+    "expected": "Built-in `clear`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Go built-in clear"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go range loops",
+    "expected": "`range` clause in `for` statements.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "range clauses"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go variadic functions",
+    "expected": "Variadic parameters.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "variadic functions"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go multiple return values",
+    "expected": "Function declarations and multiple results.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "multiple return values"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go defer statement",
+    "expected": "`defer` statements.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "defer statements"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go panic and recover",
+    "expected": "Built-ins `panic` and `recover`.",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func panic",
+      "type PanicNilError 1.21",
+      "log.Panic()"
+    ],
+    "error": null,
+    "note": "The first result documents panic, but recover has no direct result; only the panic/recover interaction appears in context."
+  },
+  {
+    "query": "go goroutines",
+    "expected": "Goroutines and `go` statements.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "goroutines"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go buffered channels",
+    "expected": "Channel capacity and `make(chan T, n)`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "buffered channels"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go select statement",
+    "expected": "`select` statements.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "select statements"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go close channel",
+    "expected": "Built-in `close` and channel semantics.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func close",
+      "func (Value) Close",
+      "builtin.close()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go interfaces",
+    "expected": "Interface types.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "interfaces"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go interface embedding",
+    "expected": "Embedded interfaces and type sets.",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "types.Interface.Embedded()",
+      "types.Interface.EmbeddedType()",
+      "types.Interface.EmbeddedTypes()"
+    ],
+    "error": null,
+    "note": "Results are go/types inspection methods, not the language-spec discussion of embedded interfaces and type sets."
+  },
+  {
+    "query": "go type assertions",
+    "expected": "Type assertion expressions.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type assertions"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go type switches",
+    "expected": "Type switch statements.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type switches"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go struct tags",
+    "expected": "Struct field tags.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "struct tags"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go embedded fields",
+    "expected": "Embedded struct fields.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "embedded fields"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go methods pointer receivers",
+    "expected": "Method declarations with pointer receivers.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "method receivers"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go iota constants",
+    "expected": "Predeclared identifier `iota`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Constants",
+      "Constants",
+      "math.Cos()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go type parameters",
+    "expected": "Generic type parameters.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type parameters and generics"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go generic constraints",
+    "expected": "Constraint interfaces and type sets.",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*TypeParam) Constraint 1.18",
+      "Package constraint",
+      "math.Cos()"
+    ],
+    "error": null,
+    "note": "The first result is TypeParam.Constraint; the results do not explain constraint interfaces or type sets."
+  },
+  {
+    "query": "go comparable",
+    "expected": "Predeclared constraint `comparable`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "builtin.comparable",
+      "types.Comparable()",
+      "maphash.Comparable()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go new",
+    "expected": "Built-in `new`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Go built-in new"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go make",
+    "expected": "Built-in `make`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Go built-in make"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go nil",
+    "expected": "Predeclared identifier `nil`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "types.Nil",
+      "uuid.Nil()",
+      "reflect.Value.IsNil()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go fmt.Sprintf",
+    "expected": "`fmt.Sprintf`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "fmt.Sprintf()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go fmt.Errorf",
+    "expected": "`fmt.Errorf` and `%w` wrapping.",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "fmt.Errorf()"
+    ],
+    "error": null,
+    "note": "fmt.Errorf is first, but the output does not mention %w or error wrapping."
+  },
+  {
+    "query": "go fmt.Fscan",
+    "expected": "`fmt.Fscan`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "fmt.Fscan()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go strings.Builder",
+    "expected": "`strings.Builder`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "strings.Builder",
+      "strings.Builder.Cap()",
+      "strings.Builder.Len()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go strings.Fields",
+    "expected": "`strings.Fields`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "strings.Fields()",
+      "strings.FieldsSeq()",
+      "strings.FieldsFunc()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go strings.ReplaceAll",
+    "expected": "`strings.ReplaceAll`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "strings.ReplaceAll()",
+      "regexp.Regexp.ReplaceAllString()",
+      "regexp.Regexp.ReplaceAllStringFunc()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go bytes.Buffer",
+    "expected": "`bytes.Buffer`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "bytes.Buffer",
+      "bytes.Buffer.Cap()",
+      "bytes.Buffer.Len()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go bytes.Equal",
+    "expected": "`bytes.Equal`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "bytes.Equal()",
+      "bytes.EqualFold()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go strconv.Atoi",
+    "expected": "`strconv.Atoi`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "strconv.Atoi()",
+      "strconv.Atoi()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go strconv.FormatInt",
+    "expected": "`strconv.FormatInt`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "strconv.FormatInt()",
+      "strconv.FormatInt()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go regexp.Compile",
+    "expected": "`regexp.Compile`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "regexp.Compile()",
+      "regexp.CompilePOSIX()",
+      "regexp.MustCompile()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go regexp named groups",
+    "expected": "Named capture groups in `regexp`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Regexp) CapNames",
+      "func (*Regexp) SubexpNames",
+      "syntax.Regexp.CapNames()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go unicode.IsLetter",
+    "expected": "`unicode.IsLetter`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "unicode.IsLetter()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go sort.Slice",
+    "expected": "`sort.Slice`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sort.Slice()",
+      "sort.SliceStable()",
+      "sort.SliceIsSorted()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go sort.Search",
+    "expected": "`sort.Search`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sort.Search()",
+      "sort.SearchInts()",
+      "sort.SearchStrings()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go slices.Sort",
+    "expected": "`slices.Sort`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "slices.Sort()",
+      "slices.SortFunc()",
+      "slices.Sorted()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go slices.Contains",
+    "expected": "`slices.Contains`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "slices.Contains()",
+      "slices.ContainsFunc()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go maps.Clone",
+    "expected": "`maps.Clone`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "maps.Clone()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go maps.Equal",
+    "expected": "`maps.Equal`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "maps.Equal()",
+      "maps.EqualFunc()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go container/heap",
+    "expected": "Package `container/heap`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "container/heap"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go container/list.New",
+    "expected": "`container/list.New`.",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Package list",
+      "func New",
+      "list.New()"
+    ],
+    "error": null,
+    "note": "The exact list.New result is third with its signature and purpose; rank 2 is the unrelated ring.New."
+  },
+  {
+    "query": "go io.Copy",
+    "expected": "`io.Copy`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "io.Copy()",
+      "io.CopyN()",
+      "io.CopyBuffer()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go io.ReadAll",
+    "expected": "`io.ReadAll`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "io.ReadAll()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go io.Reader",
+    "expected": "`io.Reader` interface.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "io.Reader",
+      "io.ReaderAt",
+      "io.ReaderFrom"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go bufio.Scanner",
+    "expected": "`bufio.Scanner`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "bufio.Scanner",
+      "bufio.Scanner.Err()",
+      "bufio.Scanner.Scan()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go bufio.NewWriter",
+    "expected": "`bufio.NewWriter`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "bufio.NewWriter()",
+      "bufio.NewWriterSize()",
+      "bufio.NewReadWriter()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go os.ReadFile",
+    "expected": "`os.ReadFile`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "os.ReadFile()",
+      "os.Root.ReadFile()",
+      "os.File.Read()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go os.WriteFile",
+    "expected": "`os.WriteFile`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "os.WriteFile()",
+      "os.Root.WriteFile()",
+      "os.File.Write()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go os.OpenFile flags",
+    "expected": "`os.OpenFile` and open flags.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "os.OpenFile()",
+      "os.Root.OpenFile()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go filepath.WalkDir",
+    "expected": "`path/filepath.WalkDir`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "filepath.WalkDir()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go filepath.Join",
+    "expected": "`path/filepath.Join`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "filepath.Join()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go file permissions",
+    "expected": "`fs.FileMode` and permission bits.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "fs.FileMode"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go temporary directory",
+    "expected": "`os.MkdirTemp`.",
+    "score": 2,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Error) Temporary 1.6",
+      "func TempDir",
+      "pe.DataDirectory"
+    ],
+    "error": null,
+    "note": "The useful result is the older TempDir function at rank 2; os.MkdirTemp is absent and rank 1 is Error.Temporary."
+  },
+  {
+    "query": "go embed files",
+    "expected": "Package `embed` and `//go:embed`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "embed.FS",
+      "embed.FS.Open()",
+      "embed.FS.ReadDir()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go time.Parse layout",
+    "expected": "`time.Parse` and reference-time layouts.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "time.Parse()",
+      "time.ParseError",
+      "time.ParseDuration()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go time.NewTicker",
+    "expected": "`time.NewTicker`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "time.NewTicker()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go time.AfterFunc",
+    "expected": "`time.AfterFunc`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "time.AfterFunc()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go context cancellation",
+    "expected": "`context.WithCancel` and `CancelFunc`.",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type Context 1.7",
+      "func CommandContext 1.7",
+      "func (*Request) Context 1.7"
+    ],
+    "error": null,
+    "note": "The first result explains Context and cancellation generally, but WithCancel and CancelFunc are absent."
+  },
+  {
+    "query": "go context.WithTimeout",
+    "expected": "`context.WithTimeout`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "context.WithTimeout()",
+      "context.WithTimeoutCause()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go errors.Is",
+    "expected": "`errors.Is`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "errors.Is()",
+      "http.ProtocolError.Is()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go errors.As",
+    "expected": "`errors.As`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "errors.As()",
+      "errors.AsType()",
+      "aes.KeySizeError"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go errors.Join",
+    "expected": "`errors.Join`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "errors.Join()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go sync.WaitGroup",
+    "expected": "`sync.WaitGroup`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sync.WaitGroup",
+      "sync.WaitGroup.Go()",
+      "sync.WaitGroup.Add()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go mutexes",
+    "expected": "`sync.Mutex`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sync.Mutex",
+      "net.MX",
+      "sync.RWMutex"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go sync.Once",
+    "expected": "`sync.Once`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sync.Once",
+      "sync.Once.Do()",
+      "sync.OnceFunc()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go atomic counter",
+    "expected": "Package `sync/atomic` counter operations.",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func ClearCounters 1.20",
+      "Example (Parallel)",
+      "Package expvar"
+    ],
+    "error": null,
+    "note": "A useful atomic.Int64 counter example is second; the sync/atomic package result itself is fourth."
+  },
+  {
+    "query": "go worker pool",
+    "expected": "Goroutine/channel worker-pool pattern.",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type Pool 1.3",
+      "type EncoderBufferPool 1.9",
+      "Worker pools with goroutines and channels"
+    ],
+    "error": null,
+    "note": "The worker-pool result is third, but its snippet is generic and the first two results are unrelated Pool APIs."
+  },
+  {
+    "query": "go race detector",
+    "expected": "Go data race detector.",
+    "score": 1,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Package race",
+      "Warnings",
+      "Package build"
+    ],
+    "error": null,
+    "note": "The first result is the internal runtime/race package; no useful data-race detector or go test -race guidance appears."
+  },
+  {
+    "query": "go net.DialTimeout",
+    "expected": "`net.DialTimeout`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "net.DialTimeout()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go url.Parse",
+    "expected": "`net/url.Parse`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "url.Parse()",
+      "url.ParseQuery()",
+      "url.ParseRequestURI()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go http client timeout",
+    "expected": "`net/http.Client.Timeout`.",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Clients and Transports",
+      "Example: HTTP 100 Continue",
+      "http.Client"
+    ],
+    "error": null,
+    "note": "The full http.Client result is third and includes the Timeout field documentation."
+  },
+  {
+    "query": "go http.NewRequestWithContext",
+    "expected": "`net/http.NewRequestWithContext`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "http.NewRequestWithContext()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go http.HandleFunc",
+    "expected": "`net/http.HandleFunc`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "http.HandleFunc()",
+      "http.ServeMux.HandleFunc()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go http middleware",
+    "expected": "`net/http.Handler` middleware pattern.",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "http.Handler middleware"
+    ],
+    "error": null,
+    "note": "The first result points to http.Handler, but gives no middleware pattern or implementation context."
+  },
+  {
+    "query": "go httptest.NewServer",
+    "expected": "`net/http/httptest.NewServer`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "httptest.NewServer()",
+      "httptest.NewTLSServer()",
+      "httptest.NewTestServer()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go json_marshal",
+    "expected": "`encoding/json.Marshal`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "json.Marshal()",
+      "json.MarshalIndent()",
+      "json.Number.MarshalJSONTo()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go encoding/json.Unmarshal",
+    "expected": "`encoding/json.Unmarshal`.",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Value) UnmarshalJSON 1.27",
+      "func (*Level) UnmarshalJSON 1.21",
+      "encoding/json"
+    ],
+    "error": null,
+    "note": "The encoding/json package result is third and includes useful Unmarshal context; the first two are unrelated UnmarshalJSON methods."
+  },
+  {
+    "query": "go omit empty json field",
+    "expected": "JSON struct tag option `omitempty`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "json.OmitEmptyWithLegacySemantics()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go xml decoder",
+    "expected": "`encoding/xml.Decoder`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "xml.Decoder",
+      "xml.Decoder.Skip()",
+      "xml.Decoder.Token()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go base64.StdEncoding",
+    "expected": "`encoding/base64.StdEncoding`.",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Package base64",
+      "Example",
+      "base64.Encoding"
+    ],
+    "error": null,
+    "note": "StdEncoding appears in a useful example at rank 2, but no direct StdEncoding result is returned."
+  },
+  {
+    "query": "go hex.DecodeString",
+    "expected": "`encoding/hex.DecodeString`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "hex.DecodeString()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go sha256.Sum256",
+    "expected": "`crypto/sha256.Sum256`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sha256.Sum256()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go crypto/rand.Read",
+    "expected": "`crypto/rand.Read`.",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Rand) Read 1.6",
+      "func Read",
+      "func (StreamReader) Read"
+    ],
+    "error": null,
+    "note": "The cryptographically secure Read function is second with useful context; rank 1 is math/rand.Rand.Read."
+  },
+  {
+    "query": "go sql.DB.QueryContext",
+    "expected": "`database/sql.DB.QueryContext`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "sql.DB.QueryContext()",
+      "sql.DB.QueryRowContext()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go flag.String",
+    "expected": "`flag.String`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "flag.String()",
+      "flag.StringVar()",
+      "elf.DynFlag.String()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go log/slog.Logger",
+    "expected": "`log/slog.Logger`.",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "slog.Logger.Log()",
+      "slog.NewLogLogger()",
+      "slog.Logger.LogAttrs()"
+    ],
+    "error": null,
+    "note": "The first result is Logger.Log rather than the Logger type; results give related methods but no Logger type overview."
+  },
+  {
+    "query": "go testing.T.Run",
+    "expected": "`testing.T.Run`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "testing.T.Run()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go table driven tests",
+    "expected": "Table-driven testing pattern.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Table-driven tests"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go benchmark functions",
+    "expected": "`testing.B` benchmark functions.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Benchmarks",
+      "Profiling a Go program",
+      "io/fs"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  },
+  {
+    "query": "go runtime.GOMAXPROCS",
+    "expected": "`runtime.GOMAXPROCS`.",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "runtime.GOMAXPROCS()",
+      "runtime.GC()",
+      "runtime.SetDefaultGOMAXPROCS()"
+    ],
+    "error": null,
+    "note": "The expected target is first and the result is directly useful."
+  }
+]

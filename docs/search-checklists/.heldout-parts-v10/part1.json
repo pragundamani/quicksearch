@@ -1,0 +1,2615 @@
+{
+  "binary": "/tmp/qs-gate/release/qs",
+  "sha256": "a048a86983a8877eea4240c5a24e4e9119e901ceaeff44bc8d13e15911f8cabd",
+  "manifest": "/home/paragon/settings-configs/scripts/quicksearch/docs/search-checklists/heldout_manifest.json",
+  "indexes": [
+    0,
+    49
+  ],
+  "json_mode": true,
+  "timeout_seconds": 30,
+  "rubric": {
+    "5": "expected first/immediately useful",
+    "4": "expected top 3/useful",
+    "3": "relevant but weak",
+    "2": "partial",
+    "1": "misleading",
+    "0": "error or no relevant result"
+  },
+  "summary": {
+    "count": 50,
+    "total_score": 243,
+    "maximum_score": 250,
+    "average_score": 4.86,
+    "score_at_least_3": 50,
+    "score_at_least_4": 50,
+    "errors": 0,
+    "timeouts": 0,
+    "distribution": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 7,
+      "5": 43
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "language": "python",
+      "query": "qs python pair adjacent iterator items",
+      "expected": "itertools.pairwise()",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "pair",
+        "adjacent",
+        "iterator",
+        "items"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.014982,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "itertools.pairwise",
+          "url": "https://docs.python.org/3/library/itertools.html#itertools.pairwise",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "itertools.pairwise is the first result and exactly matches the requested adjacent pairing."
+    },
+    {
+      "index": 1,
+      "language": "go",
+      "query": "qs go find mime type from a filename extension",
+      "expected": "mime.TypeByExtension",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "find",
+        "mime",
+        "type",
+        "from",
+        "a",
+        "filename",
+        "extension"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.291072,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "func AddExtensionType",
+          "url": "https://devdocs.io/go/mime/index",
+          "snippet": "func AddExtensionType — func AddExtensionType(ext, typ string) error AddExtensionType sets the MIME type associated with the extension ext to typ. The extension should begin with a leading dot, as in \".html\".",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func FindProcess",
+          "url": "https://devdocs.io/go/os/index",
+          "snippet": "func FindProcess — func FindProcess(pid int) (*Process, error) FindProcess looks for a running process by its pid. The Process it returns can be used to obtain information about the underlying operating system process. On Unix systems, FindProcess always succeeds and returns a Process for the given pid, regardless of whether the process exists. To test whet…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "mime.TypeByExtension()",
+          "url": "https://devdocs.io/go/mime/index#TypeByExtension",
+          "snippet": "func TypeByExtension(ext string) string TypeByExtension returns the MIME type associated with the file extension ext. The extension ext should begin with a leading dot, as in \".html\". When ext has no associated type, TypeByExtension returns \"\".",
+          "meta": [
+            "Go  ·  mime",
+            "/usr/local/share/mime/globs2\n/usr/share/mime/globs2\n/etc/mime.types\n/etc/apache2/mime.types\n/etc/apache/mime.types\n/etc/httpd/conf/mime.types"
+          ]
+        },
+        {
+          "title": "type WalkFunc",
+          "url": "https://devdocs.io/go/path/filepath/index",
+          "snippet": "type WalkFunc — WalkFunc is the type of the function called by Walk to visit each file or directory. The path argument contains the argument to Walk as a prefix. That is, if Walk is called with root argument \"dir\" and finds a file named \"a\" in that directory, the walk function will be called with argument \"dir/a\". The directory and file are joined with Join…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "type ClientSessionCache 1.3",
+          "url": "https://devdocs.io/go/crypto/tls/index",
+          "snippet": "type ClientSessionCache 1.3 — ClientSessionCache is a cache of ClientSessionState objects that can be used by a client to resume a TLS session with a given server. ClientSessionCache implementations should expect to be called concurrently from different goroutines. Up to TLS 1.2, only ticket-based resumption is supported, not SessionID-based resumption. In …",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "TypeByExtension is the third hit and directly answers the query."
+    },
+    {
+      "index": 2,
+      "language": "rust",
+      "query": "qs rust keep only successful iterator values",
+      "expected": "Iterator::map_while or filter_map",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "keep",
+        "only",
+        "successful",
+        "iterator",
+        "values"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.012713,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.filter_map",
+      "hits": [
+        {
+          "title": "Iterator::filter_map",
+          "url": "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.filter_map",
+          "snippet": "Transform iterator items while keeping successful Some values."
+        }
+      ],
+      "score": 5,
+      "assessment": "filter_map is the first and exact intent match."
+    },
+    {
+      "index": 3,
+      "language": "cpp",
+      "query": "qs cpp exchange a value and return the old one",
+      "expected": "std::exchange",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "exchange",
+        "a",
+        "value",
+        "and",
+        "return",
+        "the",
+        "old",
+        "one"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.101953,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::exchange",
+          "url": "https://devdocs.io/cpp/utility/exchange",
+          "snippet": "Return value — The old value of obj.",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::atomic<T>::exchange",
+          "url": "https://devdocs.io/cpp/atomic/atomic/exchange",
+          "snippet": "Return value — The value of the atomic variable before the call.",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::extreme_value_distribution::a",
+          "url": "https://devdocs.io/cpp/numeric/random/extreme_value_distribution/params",
+          "snippet": "RealType a() const; (1) (since C++11) RealType b() const; (2) (since C++11) Returns the parameters the distribution was constructed with.",
+          "meta": [
+            "C++  ·  Numerics"
+          ]
+        },
+        {
+          "title": "std::atomic<T>::compare_exchange_weak, std::atomic<T>::compare_exchange_strong",
+          "url": "https://devdocs.io/cpp/atomic/atomic/compare_exchange",
+          "snippet": "Return value — true if the underlying atomic value was successfully changed, false otherwise.",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::atomic_...<std::shared_ptr>",
+          "url": "https://devdocs.io/cpp/memory/shared_ptr/atomic",
+          "snippet": "Return value — 1) true if atomic access is implemented using lock-free instructions. 2,3) A copy of the pointed-to shared pointer. 4,5) (none) 6,7) A copy of the formerly pointed-to shared pointer. 8-11) true if the shared pointers were equivalent and the exchange was performed, false otherwise.",
+          "meta": [
+            "C++"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "std::exchange is first and exact."
+    },
+    {
+      "index": 4,
+      "language": "c",
+      "query": "qs c duplicate part of a string into bounded buffer",
+      "expected": "strncpy",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "duplicate",
+        "part",
+        "of",
+        "a",
+        "string",
+        "into",
+        "bounded",
+        "buffer"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.013991,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "strncpy",
+          "url": "https://en.cppreference.com/w/c/string/byte/strncpy",
+          "snippet": "Authoritative C language and library documentation."
+        }
+      ],
+      "score": 5,
+      "assessment": "strncpy is first and exact."
+    },
+    {
+      "index": 5,
+      "language": "haskell",
+      "query": "qs haskell apply function to first tuple component",
+      "expected": "Data.Bifunctor.first",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "apply",
+        "function",
+        "to",
+        "first",
+        "tuple",
+        "component"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.061499,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "first :: Bifunctor p => (a -> b) -> p a c -> p b c",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Bifunctor.html#v:first",
+          "snippet": "Map covariantly over the first argument. first f ≡ bimap f id Examples >>> first toUpper ('j', 3) ('J',3) >>> first toUpper (Left 'j') Left 'J'",
+          "meta": [
+            "base  ·  Data.Bifunctor"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "Data.Bifunctor.first is first with tuple examples."
+    },
+    {
+      "index": 6,
+      "language": "python",
+      "query": "qs python find common path prefix by components",
+      "expected": "os.path.commonpath()",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "find",
+        "common",
+        "path",
+        "prefix",
+        "by",
+        "components"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.863889,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "find_closest(x, y, halo=None, start=None)",
+          "url": "https://devdocs.io/python~3.15/library/tkinter",
+          "snippet": "find_closest(x, y, halo=None, start=None) — Return a tuple containing the id of the item closest to the point (x, y). halo and start are interpreted as for addtag_closest().",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Built-in Types",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes",
+          "snippet": "str.find(sub[, start[, end]]) — Return the lowest index in the string where substring sub is found within the slice s[start:end]. Optional arguments start and end are interpreted as in slice notation. Return -1 if sub is not found. For example: >>> 'spam, spam, spam'.find('sp') 0 >>> 'spam, spam, spam'.find('sp', 5) 6 See also rfind() and index(). Note The …",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "commonprefix",
+          "url": "https://docs.python.org/3/library/os.path.html",
+          "snippet": "os.path — Common pathname manipulations¶ — Deprecated since version 3.15: Deprecated in favor of os.path.commonpath() for path prefixes. The os.path.commonprefix() function is being deprecated due to having a misleading name and module. The function is not safe to use for path prefixes despite being included in a module about path manipulation, meaning it i…"
+        },
+        {
+          "title": "Using Python on Windows",
+          "url": "https://devdocs.io/python~3.15/using/windows",
+          "snippet": "4.8. Finding modules — These notes supplement the description at The initialization of the sys.path module search path with detailed Windows notes. When no ._pth file is found, this is how sys.path is populated on Windows: An empty entry is added at the start, which corresponds to the current directory. If the environment variable PYTHONPATH exists, as desc…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "The initialization of the sys.path module search path",
+          "url": "https://devdocs.io/python~3.15/library/sys_path_init",
+          "snippet": "The initialization of the sys.path module search path — A module search path is initialized when Python starts. This module search path may be accessed at sys.path. The first entry in the module search path is the directory that contains the input script, if there is one. Otherwise, the first entry is the current directory, which is the case when executing …",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "commonprefix is third, but its snippet explicitly recommends commonpath."
+    },
+    {
+      "index": 7,
+      "language": "go",
+      "query": "qs go notify one waiting goroutine",
+      "expected": "sync.Cond.Signal",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "notify",
+        "one",
+        "waiting",
+        "goroutine"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.011047,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "sync.Cond.Signal",
+          "url": "https://pkg.go.dev/sync#Cond.Signal",
+          "snippet": "Authoritative Go documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "sync.Cond.Signal is first and exact."
+    },
+    {
+      "index": 8,
+      "language": "rust",
+      "query": "qs rust turn option into result with lazy error",
+      "expected": "Option::ok_or_else",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "turn",
+        "option",
+        "into",
+        "result",
+        "with",
+        "lazy",
+        "error"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.012061,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/option/enum.Option.html#method.ok_or_else",
+      "hits": [
+        {
+          "title": "Option::ok_or_else",
+          "url": "https://doc.rust-lang.org/std/option/enum.Option.html#method.ok_or_else",
+          "snippet": "Convert an Option to Result with a lazily created error."
+        }
+      ],
+      "score": 5,
+      "assessment": "Option::ok_or_else is first and exact."
+    },
+    {
+      "index": 9,
+      "language": "cpp",
+      "query": "qs cpp test whether range begins with another range",
+      "expected": "std::ranges::starts_with",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "test",
+        "whether",
+        "range",
+        "begins",
+        "with",
+        "another",
+        "range"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.919184,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::basic_format_parse_context",
+          "url": "https://devdocs.io/cpp/utility/format/basic_format_parse_context",
+          "snippet": "std::basic_format_parse_context::begin — constexpr const_iterator begin() const noexcept; Returns an iterator to the beginning of the format string range.",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::ranges::starts_with",
+          "url": "https://devdocs.io/cpp/algorithm/ranges/starts_with",
+          "snippet": "std::ranges::starts_with — Defined in header <algorithm> Call signature template< std::input_iterator I1, std::sentinel_for<I1> S1, std::input_iterator I2, std::sentinel_for<I2> S2, class Pred = ranges::equal_to, class Proj1 = std::identity, class Proj2 = std::identity > requires std::indirectly_comparable<I1, I2, Pred, Proj1, Proj2> constexpr bool starts_w…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::ranges::join_with_view::begin",
+          "url": "https://devdocs.io/cpp/ranges/join_with_view/begin",
+          "snippet": "&copy; cppreference.comLicensed under the Creative Commons Attribution-ShareAlike Unported License v3.0. https://en.cppreference.com/cpp/ranges/join_with_view/begin",
+          "meta": [
+            "C++  ·  Ranges",
+            "constexpr auto begin() const\n    requires ranges::forward_range<const V> &&\n             ranges::forward_range<const Pattern> &&\n             std::is_reference_v<ranges::range_reference_t<const V>> &&\n             ranges::input_range<ranges::range_reference_t<const V>> &&\n             /*concatable*/<ranges::range_reference_t<const V>,\n                            const Pattern>;"
+          ]
+        },
+        {
+          "title": "std::ranges::lazy_split_view<V,Pattern>::begin",
+          "url": "https://devdocs.io/cpp/ranges/lazy_split_view/begin",
+          "snippet": "std::ranges::lazy_split_view<V,Pattern>::begin — constexpr auto begin(); (1) (since C++20) constexpr auto begin() const requires ranges::forward_range<V> && ranges::forward_range<const V> && ranges::forward_range<const Pattern>; (2) (since C++20) Returns an outer_iterator to the first element of the lazy_split_view. Let base_ be the underlying view and curr…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::ranges::common_view<V>::begin",
+          "url": "https://devdocs.io/cpp/ranges/common_view/begin",
+          "snippet": "std::ranges::common_view<V>::begin — constexpr auto begin() requires (!/*simple_view*/<V>); (1) (since C++20) constexpr auto begin() const requires range<const V>; (2) (since C++20) 1) Returns an iterator to the first element of the common_view, that is: ranges::begin(base_), if both ranges::random_access_range<V> and ranges::sized_range<V> are satisfied, s…",
+          "meta": [
+            "C++"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "starts_with is second and exact."
+    },
+    {
+      "index": 10,
+      "language": "c",
+      "query": "qs c report current stream file position",
+      "expected": "ftell",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "report",
+        "current",
+        "stream",
+        "file",
+        "position"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.141755,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "File input/output",
+          "url": "https://devdocs.io/c/io",
+          "snippet": "File positioning — Defined in header <stdio.h> ftell returns the current file position indicator (function) fgetpos gets the file position indicator (function) fseek moves the file position indicator to a specific location in a file (function) fsetpos moves the file position indicator to a specific location in a file (function) rewind moves the file positio…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "Standard library header <stdio.h>",
+          "url": "https://devdocs.io/c/header/stdio",
+          "snippet": "File positioning — ftell returns the current file position indicator (function) fgetpos gets the file position indicator (function) fseek moves the file position indicator to a specific location in a file (function) fsetpos moves the file position indicator to a specific location in a file (function) rewind moves the file position indicator to the beginning…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "FILE",
+          "url": "https://devdocs.io/c/io/file",
+          "snippet": "typedef /* unspecified */ FILE; Each FILE object denotes a C stream.",
+          "meta": [
+            "C  ·  File input/output"
+          ]
+        },
+        {
+          "title": "fgetpos",
+          "url": "https://devdocs.io/c/io/fgetpos",
+          "snippet": "fgetpos — Defined in header <stdio.h> int fgetpos( FILE* stream, fpos_t* pos ); (until C99) int fgetpos( FILE* restrict stream, fpos_t* restrict pos ); (since C99) Obtains the file position indicator and the current parse state (if any) for the file stream stream and stores them in the object pointed to by pos. The value stored is only meaningful as the inp…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "freopen, freopen_s",
+          "url": "https://devdocs.io/c/io/freopen",
+          "snippet": "File access flags — File access mode string Meaning Explanation Action if file already exists Action if file does not exist \"r\" read Open a file for reading read from start failure to open \"w\" write Create a file for writing destroy contents create new \"a\" append Append to a file write to end create new \"r+\" read extended Open a file for read/write read fro…",
+          "meta": [
+            "C"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result snippet names ftell and its exact behavior."
+    },
+    {
+      "index": 11,
+      "language": "haskell",
+      "query": "qs haskell attach an index to every traversable value",
+      "expected": "Data.Traversable.mapAccumL",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "attach",
+        "an",
+        "index",
+        "to",
+        "every",
+        "traversable",
+        "value"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.073159,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "mapAccumL :: Traversable t => (s -> a -> (s, b)) -> s -> t a -> (s, t b)",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Traversable.html#v:mapAccumL",
+          "snippet": "The mapAccumL function behaves like a combination of fmap and foldl; it applies a function to each element of a structure, passing an accumulating parameter from left to right, and returning a final value of this accumulator together with the new structure. Examples Basic usage: >>> mapAccumL (\\a b -> (a + b, a)) 0 [1…",
+          "meta": [
+            "base  ·  Data.Traversable"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "mapAccumL is first and supports indexed traversal via state."
+    },
+    {
+      "index": 12,
+      "language": "python",
+      "query": "qs python execute cleanup when interpreter exits",
+      "expected": "atexit.register()",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "execute",
+        "cleanup",
+        "when",
+        "interpreter",
+        "exits"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.013678,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "atexit.register",
+          "url": "https://docs.python.org/3/library/atexit.html#atexit.register",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "atexit.register is first and exact."
+    },
+    {
+      "index": 13,
+      "language": "go",
+      "query": "qs go read exactly n bytes or fail",
+      "expected": "io.ReadFull",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "read",
+        "exactly",
+        "n",
+        "bytes",
+        "or",
+        "fail"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.312676,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "func (*Reader) ReadBytes",
+          "url": "https://devdocs.io/go/bufio/index",
+          "snippet": "func (*Reader) ReadBytes — func (b *Reader) ReadBytes(delim byte) ([]byte, error) ReadBytes reads until the first occurrence of delim in the input, returning a slice containing the data up to and including the delimiter. If ReadBytes encounters an error before finding a delimiter, it returns the data read before the error and the error itself (often io.EOF)…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func ReadFull",
+          "url": "https://devdocs.io/go/io/index",
+          "snippet": "func ReadFull — func ReadFull(r Reader, buf []byte) (n int, err error) ReadFull reads exactly len(buf) bytes from r into buf. It returns the number of bytes copied and an error if fewer bytes were read. The error is EOF only if no bytes were read. If an EOF happens after reading some but not all the bytes, ReadFull returns ErrUnexpectedEOF. On return, n == …",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "bytes.SplitN()",
+          "url": "https://devdocs.io/go/bytes/index#SplitN",
+          "snippet": "func SplitN(s, sep []byte, n int) [][]byte SplitN slices s into subslices separated by sep and returns a slice of the subslices between those separators. If sep is empty, SplitN splits after each UTF-8 sequence. The count determines the number of subslices to return:",
+          "meta": [
+            "Go  ·  bytes",
+            "fmt.Printf(\"%q\\n\", bytes.SplitN([]byte(\"a,b,c\"), []byte(\",\"), 2))\nz := bytes.SplitN([]byte(\"a,b,c\"), []byte(\",\"), 0)\nfmt.Printf(\"%q (nil = %v)\\n\", z, z == nil)"
+          ]
+        },
+        {
+          "title": "func (*Buffer) ReadBytes",
+          "url": "https://devdocs.io/go/bytes/index",
+          "snippet": "func (*Buffer) ReadBytes — func (b *Buffer) ReadBytes(delim byte) (line []byte, err error) ReadBytes reads until the first occurrence of delim in the input, returning a slice containing the data up to and including the delimiter. If ReadBytes encounters an error before finding a delimiter, it returns the data read before the error and the error itself (ofte…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func (*Reader) ReadByte",
+          "url": "https://devdocs.io/go/strings/index",
+          "snippet": "func (*Reader) ReadByte — func (r *Reader) ReadByte() (byte, error) ReadByte implements the io.ByteReader interface.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "ReadFull is second and its snippet states exact-length reads."
+    },
+    {
+      "index": 14,
+      "language": "rust",
+      "query": "qs rust replace matching slice prefix",
+      "expected": "slice::strip_prefix",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "replace",
+        "matching",
+        "slice",
+        "prefix"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.01411,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/primitive.slice.html#method.strip_prefix",
+      "hits": [
+        {
+          "title": "slice::strip_prefix",
+          "url": "https://doc.rust-lang.org/std/primitive.slice.html#method.strip_prefix",
+          "snippet": "Return a slice with a matching prefix removed."
+        }
+      ],
+      "score": 5,
+      "assessment": "slice::strip_prefix is first and exact."
+    },
+    {
+      "index": 15,
+      "language": "cpp",
+      "query": "qs cpp invoke callable only when invocable",
+      "expected": "std::is_invocable and std::invoke",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "invoke",
+        "callable",
+        "only",
+        "when",
+        "invocable"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.638279,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::is_invocable, std::is_invocable_r, std::is_nothrow_invocable, std::is_nothrow_invocable_r",
+          "url": "https://devdocs.io/cpp/types/is_invocable",
+          "snippet": "std::is_invocable, std::is_invocable_r, std::is_nothrow_invocable, std::is_nothrow_invocable_r — Defined in header <type_traits> template< class Fn, class... ArgTypes > struct is_invocable; (1) (since C++17) template< class R, class Fn, class... ArgTypes > struct is_invocable_r; (2) (since C++17) template< class Fn, class... ArgTypes > struct is_nothrow_inv…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::result_of, std::invoke_result",
+          "url": "https://devdocs.io/cpp/types/result_of",
+          "snippet": "std::result_of, std::invoke_result — Defined in header <type_traits> template< class > class result_of; // not defined template< class F, class... ArgTypes > class result_of<F(ArgTypes...)>; (1) (since C++11) (deprecated in C++17) (removed in C++20) template< class F, class... ArgTypes > class invoke_result; (2) (since C++17) Deduces the return type of an I…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::invoke, std::invoke_r",
+          "url": "https://devdocs.io/cpp/utility/functional/invoke",
+          "snippet": "std::invoke, std::invoke_r — Defined in header <functional> template< class F, class... Args > std::invoke_result_t<F, Args...> invoke( F&& f, Args&&... args ) noexcept(/* see below */); (1) (since C++17) (constexpr since C++20) template< class R, class F, class... Args > constexpr R invoke_r( F&& f, Args&&... args ) noexcept(/* see below */); (2) (since C+…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::invocable, std::regular_invocable",
+          "url": "https://devdocs.io/cpp/concepts/invocable",
+          "snippet": "std::invocable, std::regular_invocable — Defined in header <concepts> template< class F, class... Args > concept invocable = requires(F&& f, Args&&... args) { std::invoke(std::forward<F>(f), std::forward<Args>(args)...); /* not required to be equality-preserving */ }; (since C++20) template< class F, class... Args > concept regular_invocable = std::invocabl…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "C++ named requirements: Callable",
+          "url": "https://devdocs.io/cpp/named_req/callable",
+          "snippet": "C++ named requirements: Callable — A Callable type is a type for which the INVOKE and INVOKE<R> operations (used by, e.g., std::function, std::bind, and std::thread::thread) are applicable. INVOKE can be performed explicitly using the library function std::invoke. (since C++17) INVOKE<R> can be performed explicitly using the library function std::invoke_r. …",
+          "meta": [
+            "C++"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "is_invocable is first and std::invoke is third."
+    },
+    {
+      "index": 16,
+      "language": "c",
+      "query": "qs c clear error and eof indicators on stream",
+      "expected": "clearerr",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "clear",
+        "error",
+        "and",
+        "eof",
+        "indicators",
+        "on",
+        "stream"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.147971,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "clearerr",
+          "url": "https://devdocs.io/c/io/clearerr",
+          "snippet": "clearerr — Defined in header <stdio.h> void clearerr( FILE *stream ); Resets the error flags and the EOF indicator for the given file stream.",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "fgetc, getc",
+          "url": "https://devdocs.io/c/io/fgetc",
+          "snippet": "Return value — On success, returns the obtained character as an unsignedchar converted to an int. On failure, returns EOF. If the failure has been caused by end-of-file condition, additionally sets the eof indicator (see feof()) on stream. If the failure has been caused by some other error, sets the error indicator (see ferror()) on stream.",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "SIG_ERR",
+          "url": "https://devdocs.io/c/program/sig_err",
+          "snippet": "#define SIG_ERR /* implementation defined */ A value of type void (*)(int). When returned by signal, indicates that an error has occurred.",
+          "meta": [
+            "C  ·  Program support",
+            "#include <stdio.h>\n#include <stdlib.h>\n#include <signal.h>\n \nvoid signal_handler(int sig)\n{\n    printf(\"Received signal: %d\\n\", sig);\n}\n \nint main(void)\n{\n    /* Install a signal handler. */\n    if (signal(SIGTERM, signal_handler) == SIG_ERR)\n    {\n        printf(\"Error while installing a signal handler.\\n\");\n        exit(EXIT_FAILURE);\n    }\n \n    printf(\"Sending signal: %d\\n\", SIGTERM);\n    if (raise(SIGTERM) != 0)\n    {\n        printf(\"Error while raising the SIGTERM signal.\\n\");\n        exit(EXIT_FAILURE);\n    }\n \n    printf(\"Exit main()\\n\");\n    return EXIT_SUCCESS;\n}"
+          ]
+        },
+        {
+          "title": "fgets",
+          "url": "https://devdocs.io/c/io/fgets",
+          "snippet": "Return value — str on success, null pointer on failure. If the end-of-file condition is encountered, sets the eof indicator on stream (see feof()). This is only a failure if it causes no bytes to be read, in which case a null pointer is returned and the contents of the array pointed to by str are not altered (i.e. the first byte is not overwritten with a nu…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "fputc, putc",
+          "url": "https://devdocs.io/c/io/fputc",
+          "snippet": "Return value — On success, returns the written character. On failure, returns EOF and sets the error indicator (see ferror()) on stream.",
+          "meta": [
+            "C"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "clearerr is first and exact."
+    },
+    {
+      "index": 17,
+      "language": "haskell",
+      "query": "qs haskell combine maps and resolve duplicate keys",
+      "expected": "Data.Map.unionWith",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "combine",
+        "maps",
+        "and",
+        "resolve",
+        "duplicate",
+        "keys"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.058204,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "unionWith :: Ord k => (a -> a -> a) -> Map k a -> Map k a -> Map k a",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Map-Strict.html#v:unionWith",
+          "snippet": "<math>. Union with a combining function. unionWith (++) (fromList [(5, \"a\"), (3, \"b\")]) (fromList [(5, \"A\"), (7, \"C\")]) == fromList [(3, \"b\"), (5, \"aA\"), (7, \"C\")] Also see the performance note on fromListWith.",
+          "meta": [
+            "containers  ·  Data.Map.Strict"
+          ]
+        },
+        {
+          "title": "unionWith :: Ord k => (a -> a -> a) -> Map k a -> Map k a -> Map k a",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Map-Lazy.html#v:unionWith",
+          "snippet": "<math>. Union with a combining function. unionWith (++) (fromList [(5, \"a\"), (3, \"b\")]) (fromList [(5, \"A\"), (7, \"C\")]) == fromList [(3, \"b\"), (5, \"aA\"), (7, \"C\")] Also see the performance note on fromListWith.",
+          "meta": [
+            "containers  ·  Data.Map.Lazy"
+          ]
+        },
+        {
+          "title": "unionWith :: (a -> a -> a) -> IntMap a -> IntMap a -> IntMap a",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-IntMap-Strict.html#v:unionWith",
+          "snippet": "<math>. The union with a combining function. unionWith (++) (fromList [(5, \"a\"), (3, \"b\")]) (fromList [(5, \"A\"), (7, \"C\")]) == fromList [(3, \"b\"), (5, \"aA\"), (7, \"C\")] Also see the performance note on fromListWith.",
+          "meta": [
+            "containers  ·  Data.IntMap.Strict"
+          ]
+        },
+        {
+          "title": "unionWith :: (a -> a -> a) -> IntMap a -> IntMap a -> IntMap a",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-IntMap-Lazy.html#v:unionWith",
+          "snippet": "<math>. The union with a combining function. unionWith (++) (fromList [(5, \"a\"), (3, \"b\")]) (fromList [(5, \"A\"), (7, \"C\")]) == fromList [(3, \"b\"), (5, \"aA\"), (7, \"C\")] Also see the performance note on fromListWith.",
+          "meta": [
+            "containers  ·  Data.IntMap.Lazy"
+          ]
+        },
+        {
+          "title": "unionWith :: Eq k => (v -> v -> v) -> HashMap k v -> HashMap k v -> HashMap k v",
+          "url": "https://hackage.haskell.org/package/unordered-containers-0.2.21/docs/Data-HashMap-Strict.html#v:unionWith",
+          "snippet": "<math> The union of two maps. If a key occurs in both maps, the provided function (first argument) will be used to compute the result.",
+          "meta": [
+            "unordered-containers  ·  Data.HashMap.Strict"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "Data.Map unionWith is first and exactly combines maps while resolving duplicate keys."
+    },
+    {
+      "index": 18,
+      "language": "python",
+      "query": "qs python wait for whichever future finishes first",
+      "expected": "concurrent.futures.wait(FIRST_COMPLETED)",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "wait",
+        "for",
+        "whichever",
+        "future",
+        "finishes",
+        "first"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.832861,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Coroutines and tasks",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-task",
+          "snippet": "asyncio.FIRST_COMPLETED — The function will return when any future finishes or is cancelled.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "concurrent.futures.FIRST_COMPLETED",
+          "url": "https://devdocs.io/python~3.15/library/concurrent.futures",
+          "snippet": "concurrent.futures.FIRST_COMPLETED — The function will return when any future finishes or is cancelled.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "wait",
+          "url": "https://docs.python.org/3/library/concurrent.futures.html",
+          "snippet": "Future Objects¶ — If the method returns False then the Future was cancelled, i.e. Future.cancel() was called and returned True. Any threads waiting on the Future completing (i.e. through as_completed() or wait()) will be woken up."
+        },
+        {
+          "title": "assertEqual(first, second, msg=None)",
+          "url": "https://devdocs.io/python~3.15/library/unittest",
+          "snippet": "assertEqual(first, second, msg=None) — Test that first and second are equal. If the values do not compare equal, the test will fail. In addition, if first and second are the exact same type and one of list, tuple, dict, set, frozenset or str or any type that a subclass registers with addTypeEqualityFunc() the type-specific equality function will be called i…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "ssl.VERIFY_X509_TRUSTED_FIRST",
+          "url": "https://devdocs.io/python~3.15/library/ssl",
+          "snippet": "ssl.VERIFY_X509_TRUSTED_FIRST — Possible value for SSLContext.verify_flags. It instructs OpenSSL to prefer trusted certificates when building the trust chain to validate a certificate. This flag is enabled by default. Added in version 3.4.4.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "FIRST_COMPLETED results lead; concurrent.futures is second and wait is third."
+    },
+    {
+      "index": 19,
+      "language": "go",
+      "query": "qs go write quoted go string literal",
+      "expected": "strconv.Quote",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "write",
+        "quoted",
+        "go",
+        "string",
+        "literal"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.014105,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "strconv.Quote",
+          "url": "https://pkg.go.dev/strconv#Quote",
+          "snippet": "Authoritative Go documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "strconv.Quote is first and exact."
+    },
+    {
+      "index": 20,
+      "language": "rust",
+      "query": "qs rust split slice once on a predicate",
+      "expected": "slice::split_once",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "split",
+        "slice",
+        "once",
+        "on",
+        "a",
+        "predicate"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.012751,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/primitive.slice.html#method.split_once",
+      "hits": [
+        {
+          "title": "slice::split_once",
+          "url": "https://doc.rust-lang.org/std/primitive.slice.html#method.split_once",
+          "snippet": "Split a slice at the first matching element."
+        }
+      ],
+      "score": 5,
+      "assessment": "slice::split_once is first and exact."
+    },
+    {
+      "index": 21,
+      "language": "cpp",
+      "query": "qs cpp convert enum to underlying integer type",
+      "expected": "std::to_underlying",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "convert",
+        "enum",
+        "to",
+        "underlying",
+        "integer",
+        "type"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.01917,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::to_underlying",
+          "url": "https://devdocs.io/cpp/utility/to_underlying",
+          "snippet": "std::to_underlying — Defined in header <utility> template< class Enum > constexpr std::underlying_type_t<Enum> to_underlying( Enum e ) noexcept; (since C++23) Converts an enumeration to its underlying type. Equivalent to return static_cast<std::underlying_type_t<Enum>>(e);.",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "Enumeration declaration",
+          "url": "https://devdocs.io/cpp/language/enum",
+          "snippet": "Notes — Values of unscoped enumeration type can be promoted or converted to integral types: enum color { red, yellow, green = 20, blue }; color col = red; int n = blue; // n == 21 Values of integer, floating-point, and enumeration types can be converted to any enumeration type by using static_cast. Note that the value after such conversion may not necessari…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "Usual arithmetic conversions",
+          "url": "https://devdocs.io/cpp/language/usual_arithmetic_conversions",
+          "snippet": "Integer conversion rank — Every integer type has an integer conversion rank defined as follows: No two signed integer types other than char and signedchar (if char is signed) have the same rank, even if they have the same representation. The rank of a signed integer type is greater than the rank of any signed integer type with a smaller width. The ranks of …",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::underlying_type",
+          "url": "https://devdocs.io/cpp/types/underlying_type",
+          "snippet": "std::underlying_type — Defined in header <type_traits> template< class T > struct underlying_type; (since C++11) If T is a complete enumeration (enum) type, provides a member typedef type that names the underlying type of T. Otherwise, the behavior is undefined. (until C++20) Otherwise, if T is not an enumeration type, there is no member type. Otherwise (T …",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::byte",
+          "url": "https://devdocs.io/cpp/types/byte",
+          "snippet": "std::to_integer — template< class IntegerType > constexpr IntegerType to_integer( std::byte b ) noexcept; (since C++17) Equivalent to: return IntegerType(b); This overload participates in overload resolution only if std::is_integral_v<IntegerType> is true.",
+          "meta": [
+            "C++"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "std::to_underlying is first and exact."
+    },
+    {
+      "index": 22,
+      "language": "c",
+      "query": "qs c push one character back onto input stream",
+      "expected": "ungetc",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "push",
+        "one",
+        "character",
+        "back",
+        "onto",
+        "input",
+        "stream"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.104978,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "ungetc",
+          "url": "https://devdocs.io/c/io/ungetc",
+          "snippet": "ungetc — Defined in header <stdio.h> int ungetc( int ch, FILE* stream ); If ch does not equal EOF, pushes the character ch (reinterpreted as unsignedchar) into the input buffer associated with the stream stream in such a manner that subsequent read operation from stream will retrieve that character. The external device associated with the stream is not modi…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "ungetwc",
+          "url": "https://devdocs.io/c/io/ungetwc",
+          "snippet": "ungetwc — Defined in header <wchar.h> wint_t ungetwc( wint_t ch, FILE *stream ); (since C95) If ch does not equal WEOF, pushes the wide character ch into the input buffer associated with the stream stream in such a manner that subsequent read operation from stream will retrieve that wide character. The external device associated with the stream is not modif…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "int",
+          "url": "https://devdocs.io/c/keyword/int",
+          "snippet": "&copy; cppreference.comLicensed under the Creative Commons Attribution-ShareAlike Unported License v3.0. https://en.cppreference.com/c/keyword/int",
+          "meta": [
+            "C  ·  C keywords"
+          ]
+        },
+        {
+          "title": "File input/output",
+          "url": "https://devdocs.io/c/io",
+          "snippet": "File input/output — The <stdio.h> header provides generic file operation support and supplies functions with narrow character input/output capabilities. The <wchar.h> header supplies functions with wide character input/output capabilities. I/O streams are denoted by objects of type FILE that can only be accessed and manipulated through pointers of type FILE…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "Standard library header <stdio.h>",
+          "url": "https://devdocs.io/c/header/stdio",
+          "snippet": "Narrow character — fgetcgetc gets a character from a file stream (function) fgets gets a character string from a file stream (function) fputcputc writes a character to a file stream (function) fputs writes a character string to a file stream (function) getchar reads a character from stdin (function) getsgets_s (removed in C11)(C11) reads a character string …",
+          "meta": [
+            "C"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "ungetc is first and exact."
+    },
+    {
+      "index": 23,
+      "language": "haskell",
+      "query": "qs haskell run action only when condition is true",
+      "expected": "Control.Monad.when",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "run",
+        "action",
+        "only",
+        "when",
+        "condition",
+        "is",
+        "true"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.055231,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "when :: Applicative f => Bool -> f () -> f ()",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Control-Monad.html#v:when",
+          "snippet": "Conditional execution of Applicative expressions. For example, Examples when debug (putStrLn \"Debugging\") will output the string Debugging if the Boolean value debug is True, and otherwise do nothing. >>> putStr \"pi:\" >> when False (print 3.14159) pi:",
+          "meta": [
+            "base  ·  Control.Monad"
+          ]
+        },
+        {
+          "title": "when :: Applicative f => Bool -> f () -> f ()",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/GHC-Base.html#v:when",
+          "snippet": "Conditional execution of Applicative expressions. For example, Examples when debug (putStrLn \"Debugging\") will output the string Debugging if the Boolean value debug is True, and otherwise do nothing. >>> putStr \"pi:\" >> when False (print 3.14159) pi:",
+          "meta": [
+            "base  ·  GHC.Base"
+          ]
+        },
+        {
+          "title": "whenIoSubSystem :: IoSubSystem -> IO () -> IO ()",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/GHC-IO-SubSystem.html#v:whenIoSubSystem",
+          "meta": [
+            "base  ·  GHC.IO.SubSystem"
+          ]
+        },
+        {
+          "title": "data WhenMissing (f :: Type -> Type) a",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Set-Merge.html#t:WhenMissing",
+          "snippet": "A tactic for dealing with elements present in one set but not the other in merge or mergeA. A tactic of type WhenMissing f a is an abstract representation of a function of type a -> f Bool.",
+          "meta": [
+            "containers  ·  Data.Set.Merge"
+          ]
+        },
+        {
+          "title": "data WhenMatched (f :: Type -> Type) a",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Set-Merge.html#t:WhenMatched",
+          "snippet": "A tactic for dealing with elements present in both sets in merge or mergeA. A tactic of type WhenMatched f a is an abstract representation of a function of type a -> f Bool.",
+          "meta": [
+            "containers  ·  Data.Set.Merge"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "when is first and exact."
+    },
+    {
+      "index": 24,
+      "language": "python",
+      "query": "qs python iterate over calendar month rows",
+      "expected": "calendar.Calendar.monthdayscalendar()",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "iterate",
+        "over",
+        "calendar",
+        "month",
+        "rows"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.013977,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "calendar.monthcalendar",
+          "url": "https://docs.python.org/3/library/calendar.html#calendar.monthcalendar",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "calendar.monthcalendar is first and directly returns a month's rows; it is a useful module-level equivalent for this intent."
+    },
+    {
+      "index": 25,
+      "language": "go",
+      "query": "qs go return a reader limited to n bytes",
+      "expected": "io.LimitReader",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "return",
+        "a",
+        "reader",
+        "limited",
+        "to",
+        "n",
+        "bytes"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.014333,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "io.LimitReader",
+          "url": "https://pkg.go.dev/io#LimitReader",
+          "snippet": "Authoritative Go documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "io.LimitReader is first and exact."
+    },
+    {
+      "index": 26,
+      "language": "rust",
+      "query": "qs rust get two mutable slice elements safely",
+      "expected": "slice::get_many_mut",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "get",
+        "two",
+        "mutable",
+        "slice",
+        "elements",
+        "safely"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.013595,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/primitive.slice.html#method.get_disjoint_mut",
+      "hits": [
+        {
+          "title": "slice::get_disjoint_mut",
+          "url": "https://doc.rust-lang.org/std/primitive.slice.html#method.get_disjoint_mut",
+          "snippet": "Borrow multiple distinct slice elements mutably and safely."
+        }
+      ],
+      "score": 5,
+      "assessment": "get_disjoint_mut is first and is the current API for the requested safe borrows."
+    },
+    {
+      "index": 27,
+      "language": "cpp",
+      "query": "qs cpp count consecutive equal groups in a range",
+      "expected": "std::ranges::chunk_by_view",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "count",
+        "consecutive",
+        "equal",
+        "groups",
+        "in",
+        "a",
+        "range"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.013666,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::ranges::chunk_by_view",
+          "url": "https://en.cppreference.com/w/cpp/ranges/chunk_by_view",
+          "snippet": "Authoritative C++ reference documentation."
+        }
+      ],
+      "score": 5,
+      "assessment": "std::ranges::chunk_by_view is first and exact."
+    },
+    {
+      "index": 28,
+      "language": "c",
+      "query": "qs c transform string for locale collation",
+      "expected": "strxfrm",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "transform",
+        "string",
+        "for",
+        "locale",
+        "collation"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.098356,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "strcoll",
+          "url": "https://devdocs.io/c/string/byte/strcoll",
+          "snippet": "See also — wcscoll (C95) compares two wide strings in accordance to the current locale (function) strxfrm transform a string so that strcmp would produce the same result as strcoll (function) wcsxfrm (C95) transform a wide string so that wcscmp would produce the same result as wcscoll (function) strcmp compares two strings (function) C++ documentation for s…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "wcscoll",
+          "url": "https://devdocs.io/c/string/wide/wcscoll",
+          "snippet": "See also — strcoll compares two strings in accordance to the current locale (function) wcsxfrm (C95) transform a wide string so that wcscmp would produce the same result as wcscoll (function) wcscmp (C95) compares two wide strings (function) C++ documentation for wcscoll &copy; cppreference.comLicensed under the Creative Commons Attribution-ShareAlike Unpor…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "tm",
+          "url": "https://devdocs.io/c/chrono/tm",
+          "snippet": "struct tm; Structure holding a calendar date and time broken down into its components.",
+          "meta": [
+            "C  ·  Date and time",
+            "#include <stdio.h>\n#include <time.h>\n\nint main(void)\n{\n    struct tm start = {.tm_year = 2022 - 1900, .tm_mday = 1};\n    mktime(&start);\n    printf(\"%s\", asctime(&start)); // note implicit trailing '\\n'\n}"
+          ]
+        },
+        {
+          "title": "strxfrm",
+          "url": "https://devdocs.io/c/string/byte/strxfrm",
+          "snippet": "strxfrm — Defined in header <string.h> size_t strxfrm( char *dest, const char *src, size_t count ); (until C99) size_t strxfrm( char *restrict dest, const char *restrict src, size_t count ); (since C99) Transforms the null-terminated byte string pointed to by src into the implementation-defined form such that comparing two transformed strings with strcmp gi…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "wcsxfrm",
+          "url": "https://devdocs.io/c/string/wide/wcsxfrm",
+          "snippet": "wcsxfrm — Defined in header <wchar.h> size_t wcsxfrm( wchar_t* dest, const wchar_t* src, size_t count ); (since C95) (until C99) size_t wcsxfrm( wchar_t* restrict dest, const wchar_t* restrict src, size_t count ); (since C99) Transforms the null-terminated wide string pointed to by src into the implementation-defined form such that comparing two transformed…",
+          "meta": [
+            "C"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "strxfrm is fourth; the first strcoll snippet explicitly points to it."
+    },
+    {
+      "index": 29,
+      "language": "haskell",
+      "query": "qs haskell unfold a container from a seed",
+      "expected": "Data.List.unfoldr",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "unfold",
+        "a",
+        "container",
+        "from",
+        "a",
+        "seed"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.056693,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "unfoldr :: (b -> Maybe (a, b)) -> b -> [a]",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-List.html#v:unfoldr",
+          "snippet": "The unfoldr function is a `dual' to foldr: while foldr reduces a list to a summary value, unfoldr builds a list from a seed value. The function takes the element and returns Nothing if it is done producing the list or returns Just (a,b), in which case, a is a prepended to the list and b is used as the next element in …",
+          "meta": [
+            "base  ·  Data.List"
+          ]
+        },
+        {
+          "title": "unfoldr :: (a -> (b, Maybe a)) -> a -> NonEmpty b",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-List-NonEmpty.html#v:unfoldr",
+          "snippet": "The unfoldr function is analogous to Data.List's unfoldr operation.",
+          "meta": [
+            "base  ·  Data.List.NonEmpty"
+          ]
+        },
+        {
+          "title": "unfoldr :: (b -> Maybe (a, b)) -> b -> Seq a",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Sequence.html#v:unfoldr",
+          "snippet": "Builds a sequence from a seed value. Takes time linear in the number of generated elements. WARNING: If the number of generated elements is infinite, this method will not terminate.",
+          "meta": [
+            "containers  ·  Data.Sequence"
+          ]
+        },
+        {
+          "title": "unfoldr :: (a -> Maybe (Char, a)) -> a -> Text",
+          "url": "https://hackage.haskell.org/package/text-2.1.4/docs/Data-Text.html#v:unfoldr",
+          "snippet": "O(n), where n is the length of the result. The unfoldr function is analogous to the List unfoldr. unfoldr builds a Text from a seed value. The function takes the element and returns Nothing if it is done producing the Text, otherwise Just (a,b). In this case, a is the next Char in the string, and b is the seed value f…",
+          "meta": [
+            "text  ·  Data.Text"
+          ]
+        },
+        {
+          "title": "unfoldr :: (a -> Maybe (Char, a)) -> a -> Text",
+          "url": "https://hackage.haskell.org/package/text-2.1.4/docs/Data-Text-Lazy.html#v:unfoldr",
+          "snippet": "O(n), where n is the length of the result. The unfoldr function is analogous to the List unfoldr. unfoldr builds a Text from a seed value. The function takes the element and returns Nothing if it is done producing the Text, otherwise Just (a,b). In this case, a is the next Char in the string, and b is the seed value f…",
+          "meta": [
+            "text  ·  Data.Text.Lazy"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "Data.List.unfoldr is first and exact."
+    },
+    {
+      "index": 30,
+      "language": "python",
+      "query": "qs python preserve function metadata in decorator",
+      "expected": "functools.wraps()",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "preserve",
+        "function",
+        "metadata",
+        "in",
+        "decorator"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.015629,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "functools.wraps",
+          "url": "https://docs.python.org/3/library/functools.html#functools.wraps",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "functools.wraps is first and exact."
+    },
+    {
+      "index": 31,
+      "language": "go",
+      "query": "qs go mirror bytes read from a reader into a writer",
+      "expected": "io.TeeReader",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "mirror",
+        "bytes",
+        "read",
+        "from",
+        "a",
+        "reader",
+        "into",
+        "a",
+        "writer"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.014415,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "io.TeeReader",
+          "url": "https://pkg.go.dev/io#TeeReader",
+          "snippet": "Authoritative Go documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "io.TeeReader is first and exact."
+    },
+    {
+      "index": 32,
+      "language": "rust",
+      "query": "qs rust create an iterator that yields once",
+      "expected": "std::iter::once",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "create",
+        "an",
+        "iterator",
+        "that",
+        "yields",
+        "once"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 2.323102,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20create%20an%20iterator%20that%20yields%20once",
+      "hits": [
+        {
+          "title": "Once",
+          "url": "https://devdocs.io/rust/std/iter/index",
+          "snippet": "Once — An iterator that yields an element exactly once.",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Async Iterators",
+          "url": "https://devdocs.io/rust/std/async_iter/index",
+          "snippet": "Async Iterators — The heart and soul of this module is the AsyncIterator trait. The core of AsyncIterator looks like this: trait AsyncIterator { type Item; fn poll_next(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Option<Self::Item>>; } Unlike Iterator, AsyncIterator makes a distinction between the poll_next method which is used when implementing an …",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Function once",
+          "url": "https://devdocs.io/rust/std/iter/fn.once",
+          "snippet": "Function once — pub fn once<T>(value: T) -> Once<T> ⓘ Creates an iterator that yields an element exactly once. This is commonly used to adapt a single value into a chain() of other kinds of iteration. Maybe you have an iterator that covers almost everything, but you need an extra special case. Maybe you have a function which works on iterators, but you only…",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Struct OnceWith",
+          "url": "https://devdocs.io/rust/std/iter/struct.oncewith",
+          "snippet": "Struct OnceWith — pub struct OnceWith<F> { /* private fields */ } An iterator that yields a single element of type A by applying the provided closure F: FnOnce() -> A. This struct is created by the once_with() function. See its documentation for more.",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Struct Once",
+          "url": "https://devdocs.io/rust/std/iter/struct.once",
+          "snippet": "Struct Once — pub struct Once<T> { /* private fields */ } An iterator that yields an element exactly once. This struct is created by the once() function. See its documentation for more.",
+          "meta": [
+            "Rust"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "Once is first with exact semantics; function once is third."
+    },
+    {
+      "index": 33,
+      "language": "cpp",
+      "query": "qs cpp construct object in optional storage in place",
+      "expected": "std::optional::emplace",
+      "class": "paraphrase",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "construct",
+        "object",
+        "in",
+        "optional",
+        "storage",
+        "in",
+        "place"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.013881,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::optional::emplace",
+          "url": "https://en.cppreference.com/w/cpp/utility/optional/emplace",
+          "snippet": "Authoritative C++ reference documentation."
+        }
+      ],
+      "score": 5,
+      "assessment": "std::optional::emplace is first and exact."
+    },
+    {
+      "index": 34,
+      "language": "c",
+      "query": "qs c locate last character not first character",
+      "expected": "strrchr, not strchr",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "locate",
+        "last",
+        "character",
+        "not",
+        "first",
+        "character"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.105355,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "strrchr",
+          "url": "https://devdocs.io/c/string/byte/strrchr",
+          "snippet": "strrchr — Defined in header <string.h> char* strrchr( const char* str, int ch ); (1) /*QChar*/* strrchr( /*QChar*/* str, int ch ); (2) (since C23) 1) Finds the last occurrence of ch (after conversion to char as if by (char)ch) in the null-terminated byte string pointed to by str (each character interpreted as unsignedchar). The terminating null character is…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "strstr",
+          "url": "https://devdocs.io/c/string/byte/strstr",
+          "snippet": "See also — strchr finds the first occurrence of a character (function) strrchr finds the last occurrence of a character (function) C++ documentation for strstr &copy; cppreference.comLicensed under the Creative Commons Attribution-ShareAlike Unported License v3.0. https://en.cppreference.com/c/string/byte/strstr",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "char",
+          "url": "https://devdocs.io/c/keyword/char",
+          "snippet": "&copy; cppreference.comLicensed under the Creative Commons Attribution-ShareAlike Unported License v3.0. https://en.cppreference.com/c/keyword/char",
+          "meta": [
+            "C  ·  C keywords"
+          ]
+        },
+        {
+          "title": "Standard library header <string.h>",
+          "url": "https://devdocs.io/c/header/string",
+          "snippet": "Character array manipulation — memchr searches an array for the first occurrence of a character (function) memcmp compares two buffers (function) memsetmemset_explicitmemset_s (C23)(C11) fills a buffer with a character (function) memcpymemcpy_s (C11) copies one buffer to another (function) memmovememmove_s (C11) moves one buffer to another (function) memccp…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "strchr",
+          "url": "https://devdocs.io/c/string/byte/strchr",
+          "snippet": "See also — memchr searches an array for the first occurrence of a character (function) strrchr finds the last occurrence of a character (function) strpbrk finds the first location of any character in one string, in another string (function) C++ documentation for strchr &copy; cppreference.comLicensed under the Creative Commons Attribution-ShareAlike Unporte…",
+          "meta": [
+            "C"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "strrchr is first and exact."
+    },
+    {
+      "index": 35,
+      "language": "haskell",
+      "query": "qs haskell sequence effects and discard results not collect them",
+      "expected": "mapM_, not mapM",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "sequence",
+        "effects",
+        "and",
+        "discard",
+        "results",
+        "not",
+        "collect",
+        "them"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.061364,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "mapM_ :: (Foldable t, Monad m) => (a -> m b) -> t a -> m ()",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Control-Monad.html#v:mapM_",
+          "snippet": "Map each element of a structure to a monadic action, evaluate these actions from left to right, and ignore the results. For a version that doesn't ignore the results see mapM. mapM_ is just like traverse_, but specialised to monadic actions.",
+          "meta": [
+            "base  ·  Control.Monad"
+          ]
+        },
+        {
+          "title": "mapM_ :: (Foldable t, Monad m) => (a -> m b) -> t a -> m ()",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Foldable.html#v:mapM_",
+          "snippet": "Map each element of a structure to a monadic action, evaluate these actions from left to right, and ignore the results. For a version that doesn't ignore the results see mapM. mapM_ is just like traverse_, but specialised to monadic actions.",
+          "meta": [
+            "base  ·  Data.Foldable"
+          ]
+        },
+        {
+          "title": "mapM_ :: (Foldable t, Monad m) => (a -> m b) -> t a -> m ()",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Prelude.html#v:mapM_",
+          "snippet": "Map each element of a structure to a monadic action, evaluate these actions from left to right, and ignore the results. For a version that doesn't ignore the results see mapM. mapM_ is just like traverse_, but specialised to monadic actions.",
+          "meta": [
+            "base  ·  Prelude"
+          ]
+        },
+        {
+          "title": "mapM_ :: Monad m => (a -> m b) -> Stream m a -> m ()",
+          "url": "https://hackage.haskell.org/package/vector-0.13.2.0/docs/Data-Vector-Fusion-Stream-Monadic.html#v:mapM_",
+          "meta": [
+            "vector  ·  Data.Vector.Fusion.Stream.Monadic"
+          ]
+        },
+        {
+          "title": "mapM_ :: forall m a b (v :: Type -> Type). Monad m => (a -> m b) -> Bundle m v a -> m ()",
+          "url": "https://hackage.haskell.org/package/vector-0.13.2.0/docs/Data-Vector-Fusion-Bundle-Monadic.html#v:mapM_",
+          "snippet": "Execute a monadic action for each element of the Bundle",
+          "meta": [
+            "vector  ·  Data.Vector.Fusion.Bundle.Monadic"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "mapM_ is first and explicitly says results are ignored."
+    },
+    {
+      "index": 36,
+      "language": "python",
+      "query": "qs python shell style splitting not regular expression splitting",
+      "expected": "shlex.split(), not re.split()",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "shell",
+        "style",
+        "splitting",
+        "not",
+        "regular",
+        "expression",
+        "splitting"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.015028,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "shlex.split",
+          "url": "https://docs.python.org/3/library/shlex.html#shlex.split",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "shlex.split is first and exact."
+    },
+    {
+      "index": 37,
+      "language": "go",
+      "query": "qs go compare strings case insensitively not byte equality",
+      "expected": "strings.EqualFold, not bytes.Equal",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "compare",
+        "strings",
+        "case",
+        "insensitively",
+        "not",
+        "byte",
+        "equality"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.013959,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "strings.EqualFold",
+          "url": "https://pkg.go.dev/strings#EqualFold",
+          "snippet": "Authoritative Go documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "strings.EqualFold is first and exact."
+    },
+    {
+      "index": 38,
+      "language": "rust",
+      "query": "qs rust remove suffix not prefix from string slice",
+      "expected": "str::strip_suffix, not strip_prefix",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "remove",
+        "suffix",
+        "not",
+        "prefix",
+        "from",
+        "string",
+        "slice"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.012338,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/primitive.str.html#method.strip_suffix",
+      "hits": [
+        {
+          "title": "str::strip_suffix",
+          "url": "https://doc.rust-lang.org/std/primitive.str.html#method.strip_suffix",
+          "snippet": "Return the string slice with a matching suffix removed."
+        }
+      ],
+      "score": 5,
+      "assessment": "str::strip_suffix is first and exact."
+    },
+    {
+      "index": 39,
+      "language": "cpp",
+      "query": "qs cpp copy backward not ordinary copy",
+      "expected": "std::copy_backward, not std::copy",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "copy",
+        "backward",
+        "not",
+        "ordinary",
+        "copy"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.134446,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::ranges::copy_backward, std::ranges::copy_backward_result",
+          "url": "https://devdocs.io/cpp/algorithm/ranges/copy_backward",
+          "snippet": "std::ranges::copy_backward, std::ranges::copy_backward_result — Defined in header <algorithm> Call signature template< std::bidirectional_iterator I1, std::sentinel_for<I1> S1, std::bidirectional_iterator I2 > requires std::indirectly_copyable<I1, I2> constexpr copy_backward_result<I1, I2> copy_backward( I1 first, S1 last, I2 d_last ); (1) (since C++20) tem…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::copy_backward",
+          "url": "https://devdocs.io/cpp/algorithm/copy_backward",
+          "snippet": "std::copy_backward — Defined in header <algorithm> template< class BidirIt1, class BidirIt2 > BidirIt2 copy_backward( BidirIt1 first, BidirIt1 last, BidirIt2 d_last ); (constexpr since C++20) Copies the elements from the source range [first, last) to the destination range ending at d_last, starting from last and proceeding to first (reverse order). If d_las…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::ranges::move_backward, std::ranges::move_backward_result",
+          "url": "https://devdocs.io/cpp/algorithm/ranges/move_backward",
+          "snippet": "std::ranges::move_backward, std::ranges::move_backward_result — Defined in header <algorithm> Call signature template< std::bidirectional_iterator I1, std::sentinel_for<I1> S1, std::bidirectional_iterator I2 > requires std::indirectly_movable<I1, I2> constexpr move_backward_result<I1, I2> move_backward( I1 first, S1 last, I2 d_last ); (1) (since C++20) temp…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::move_backward",
+          "url": "https://devdocs.io/cpp/algorithm/move_backward",
+          "snippet": "std::move_backward — Defined in header <algorithm> template< class BidirIt1, class BidirIt2 > BidirIt2 move_backward( BidirIt1 first, BidirIt1 last, BidirIt2 d_last ); (since C++11) (constexpr since C++20) Moves the elements from the source range [first, last) to the destination range ending at d_last, starting from last and proceeding to first (reverse ord…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "Algorithms library",
+          "url": "https://devdocs.io/cpp/algorithm",
+          "snippet": "Copy operations — Defined in header <algorithm> copycopy_if (C++11) copies a range of elements to a new location(function template & algorithm function object) ranges::copyranges::copy_if (C++20)(C++20) copy_n (C++11) copies a number of elements to a new location(function template & algorithm function object) ranges::copy_n (C++20) copy_backward copies a ra…",
+          "meta": [
+            "C++"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The copy_backward family leads, with std::copy_backward second."
+    },
+    {
+      "index": 40,
+      "language": "c",
+      "query": "qs c write one character not a formatted string",
+      "expected": "fputc, not fprintf",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "write",
+        "one",
+        "character",
+        "not",
+        "a",
+        "formatted",
+        "string"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.014813,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "fputc",
+          "url": "https://en.cppreference.com/w/c/io/fputc",
+          "snippet": "Authoritative C language and library documentation."
+        }
+      ],
+      "score": 5,
+      "assessment": "fputc is first and exact."
+    },
+    {
+      "index": 41,
+      "language": "haskell",
+      "query": "qs haskell left fold with monadic effects not pure fold",
+      "expected": "Control.Monad.foldM, not foldl",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "left",
+        "fold",
+        "with",
+        "monadic",
+        "effects",
+        "not",
+        "pure",
+        "fold"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.070928,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "foldM :: (Foldable t, Monad m) => (b -> a -> m b) -> b -> t a -> m b",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Control-Monad.html#v:foldM",
+          "snippet": "The foldM function is analogous to foldl, except that its result is encapsulated in a monad. Note that foldM works from left-to-right over the list arguments. This could be an issue where (>>) and the `folded function' are not commutative. foldM f a1 [x1, x2, ..., xm] == do a2 <- f a1 x1 a3 <- f a2 x2 ... f am xm If r…",
+          "meta": [
+            "base  ·  Control.Monad"
+          ]
+        },
+        {
+          "title": "foldM :: Monad m => (a -> b -> m a) -> a -> Stream m b -> m a",
+          "url": "https://hackage.haskell.org/package/vector-0.13.2.0/docs/Data-Vector-Fusion-Stream-Monadic.html#v:foldM",
+          "meta": [
+            "vector  ·  Data.Vector.Fusion.Stream.Monadic"
+          ]
+        },
+        {
+          "title": "foldM :: forall m a b (v :: Type -> Type). Monad m => (a -> b -> m a) -> a -> Bundle m v b -> m a",
+          "url": "https://hackage.haskell.org/package/vector-0.13.2.0/docs/Data-Vector-Fusion-Bundle-Monadic.html#v:foldM",
+          "snippet": "Same as foldlM",
+          "meta": [
+            "vector  ·  Data.Vector.Fusion.Bundle.Monadic"
+          ]
+        },
+        {
+          "title": "foldM :: forall m a b (v :: Type -> Type). Monad m => (a -> b -> m a) -> a -> Bundle v b -> m a",
+          "url": "https://hackage.haskell.org/package/vector-0.13.2.0/docs/Data-Vector-Fusion-Bundle.html#v:foldM",
+          "snippet": "Monadic fold",
+          "meta": [
+            "vector  ·  Data.Vector.Fusion.Bundle"
+          ]
+        },
+        {
+          "title": "foldM :: (PrimMonad m, MVector v a) => (b -> a -> m b) -> b -> v (PrimState m) a -> m b",
+          "url": "https://hackage.haskell.org/package/vector-0.13.2.0/docs/Data-Vector-Generic-Mutable.html#v:foldM",
+          "snippet": "O(n) Monadic fold.",
+          "meta": [
+            "vector  ·  Data.Vector.Generic.Mutable"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "foldM is first and explicitly contrasts with foldl."
+    },
+    {
+      "index": 42,
+      "language": "python",
+      "query": "qs python decimal arithmetic not binary float",
+      "expected": "decimal.Decimal, not float",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "decimal",
+        "arithmetic",
+        "not",
+        "binary",
+        "float"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.47678,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "decimal — Decimal fixed-point and floating-point arithmetic",
+          "url": "https://devdocs.io/python~3.15/library/decimal",
+          "snippet": "decimal — Decimal fixed-point and floating-point arithmetic — Source code: Lib/decimal.py The decimal module provides support for fast correctly rounded decimal floating-point arithmetic. It offers several advantages over the float datatype: Decimal “is based on a floating-point model which was designed with people in mind, and necessarily has a paramount g…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Expressions",
+          "url": "https://devdocs.io/python~3.15/reference/expressions",
+          "snippet": "6.1. Arithmetic conversions — When a description of an arithmetic operator below uses the phrase “the numeric arguments are converted to a common real type”, this means that the operator implementation for built-in numeric types works as described in the Numeric Types section of the standard library documentation. Some additional rules apply for certain ope…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "decimal",
+          "url": "https://docs.python.org/3/library/unicodedata.html",
+          "snippet": "unicodedata — Unicode Database¶ — Returns the decimal value assigned to the character chr as integer. If no such value is defined, default is returned, or, if not given, ValueError is raised. For example:"
+        },
+        {
+          "title": "classmethod from_decimal(dec)",
+          "url": "https://devdocs.io/python~3.15/library/fractions",
+          "snippet": "classmethod from_decimal(dec) — Alternative constructor which only accepts instances of decimal.Decimal or numbers.Integral. Note From Python 3.2 onwards, you can also construct a Fraction instance directly from a decimal.Decimal instance.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Design and History FAQ",
+          "url": "https://devdocs.io/python~3.15/faq/design",
+          "snippet": "Why am I getting strange results with simple arithmetic operations? — See the next question.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The decimal module is first and directly describes decimal arithmetic."
+    },
+    {
+      "index": 43,
+      "language": "go",
+      "query": "qs go split after separator not before it",
+      "expected": "strings.SplitAfter, not strings.Split",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "split",
+        "after",
+        "separator",
+        "not",
+        "before",
+        "it"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.253812,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "func SplitAfter",
+          "url": "https://devdocs.io/go/strings/index",
+          "snippet": "func SplitAfter — func SplitAfter(s, sep string) []string SplitAfter slices s into all substrings after each instance of sep and returns a slice of those substrings. If s does not contain sep and sep is not empty, SplitAfter returns a slice of length 1 whose only element is s. If sep is empty, SplitAfter splits after each UTF-8 sequence. If both s and sep a…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func SplitAfter",
+          "url": "https://devdocs.io/go/bytes/index",
+          "snippet": "func SplitAfter — func SplitAfter(s, sep []byte) [][]byte SplitAfter slices s into all subslices after each instance of sep and returns a slice of those subslices. If sep is empty, SplitAfter splits after each UTF-8 sequence. It is equivalent to SplitAfterN with a count of -1.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "big.Int.Not()",
+          "url": "https://devdocs.io/go/math/big/index#Int.Not",
+          "snippet": "func (z *Int) Not(x *Int) *Int Not sets z = ^x and returns z.",
+          "meta": [
+            "Go  ·  math/big"
+          ]
+        },
+        {
+          "title": "func Split",
+          "url": "https://devdocs.io/go/path/filepath/index",
+          "snippet": "func Split — func Split(path string) (dir, file string) Split splits path immediately following the final Separator, separating it into a directory and file name component. If there is no Separator in path, Split returns an empty dir and file set to path. The returned values have the property that path = dir+file.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func (*Scanner) Split 1.1",
+          "url": "https://devdocs.io/go/bufio/index",
+          "snippet": "func (*Scanner) Split 1.1 — func (s *Scanner) Split(split SplitFunc) Split sets the split function for the Scanner. The default split function is ScanLines. Split panics if it is called after scanning has started.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "strings.SplitAfter is first and exact."
+    },
+    {
+      "index": 44,
+      "language": "rust",
+      "query": "qs rust weak reference not owning rc clone",
+      "expected": "std::rc::Weak, not Rc",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "weak",
+        "reference",
+        "not",
+        "owning",
+        "rc",
+        "clone"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.66228,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20weak%20reference%20not%20owning%20rc%20clone",
+      "hits": [
+        {
+          "title": "Reference Cycles Can Leak Memory",
+          "url": "https://devdocs.io/rust/book/ch15-06-reference-cycles",
+          "snippet": "Preventing Reference Cycles Using Weak<T> — So far, we’ve demonstrated that calling Rc::clone increases the strong_count of an Rc<T> instance, and an Rc<T> instance is only cleaned up if its strong_count is 0. You can also create a weak reference to the value within an Rc<T> instance by calling Rc::downgrade and passing a reference to the Rc<T>. Strong refe…",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Weak",
+          "url": "https://devdocs.io/rust/std/rc/index",
+          "snippet": "Weak — Weak is a version of Rc that holds a non-owning reference to the managed allocation.",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Struct Weak",
+          "url": "https://devdocs.io/rust/std/rc/struct.weak",
+          "snippet": "Struct Weak — pub struct Weak<T, A = Global>where A: Allocator, T: ?Sized,{ /* private fields */ } Weak is a version of Rc that holds a non-owning reference to the managed allocation. The allocation is accessed by calling upgrade on the Weak pointer, which returns an Option<Rc<T>>. Since a Weak reference does not count towards ownership, it will not prevent…",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Struct Weak",
+          "url": "https://devdocs.io/rust/std/sync/struct.weak",
+          "snippet": "Struct Weak — pub struct Weak<T, A = Global>where A: Allocator, T: ?Sized,{ /* private fields */ } Weak is a version of Arc that holds a non-owning reference to the managed allocation. The allocation is accessed by calling upgrade on the Weak pointer, which returns an Option<Arc<T>>. Since a Weak reference does not count towards ownership, it will not preve…",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Weak",
+          "url": "https://devdocs.io/rust/std/sync/index",
+          "snippet": "Weak — Weak is a version of Arc that holds a non-owning reference to the managed allocation.",
+          "meta": [
+            "Rust"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first tutorial hit explains Weak for preventing Rc cycles; Weak docs follow."
+    },
+    {
+      "index": 45,
+      "language": "cpp",
+      "query": "qs cpp shared lock not exclusive mutex lock",
+      "expected": "std::shared_lock, not std::unique_lock",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "shared",
+        "lock",
+        "not",
+        "exclusive",
+        "mutex",
+        "lock"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.432955,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::shared_lock<Mutex>::shared_lock",
+          "url": "https://devdocs.io/cpp/thread/shared_lock/shared_lock",
+          "snippet": "std::shared_lock<Mutex>::shared_lock — shared_lock() noexcept; (1) (since C++14) shared_lock( shared_lock&& other ) noexcept; (2) (since C++14) explicit shared_lock( mutex_type& m ); (3) (since C++14) shared_lock( mutex_type& m, std::defer_lock_t t ) noexcept; (4) (since C++14) shared_lock( mutex_type& m, std::try_to_lock_t t ); (5) (since C++14) shared_loc…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "Standard library header <shared_mutex> (C++14)",
+          "url": "https://devdocs.io/cpp/header/shared_mutex",
+          "snippet": "Class template std::shared_lock — namespace std { template<class Mutex> class shared_lock { public: using mutex_type = Mutex; // construct/copy/destroy shared_lock() noexcept; explicit shared_lock(mutex_type& m); // blocking shared_lock(mutex_type& m, defer_lock_t) noexcept; shared_lock(mutex_type& m, try_to_lock_t); shared_lock(mutex_type& m, adopt_lock_t)…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::shared_lock::mutex",
+          "url": "https://devdocs.io/cpp/thread/shared_lock/mutex",
+          "snippet": "mutex_type* mutex() const noexcept; (since C++14) Returns a pointer to the associated mutex, or a null pointer if there is no associated mutex.",
+          "meta": [
+            "C++  ·  Concurrency support"
+          ]
+        },
+        {
+          "title": "std::shared_lock",
+          "url": "https://devdocs.io/cpp/thread/shared_lock",
+          "snippet": "std::shared_lock — Defined in header <shared_mutex> template< class Mutex > class shared_lock; (since C++14) The class shared_lock is a general-purpose shared mutex ownership wrapper allowing deferred locking, timed locking and transfer of lock ownership. Locking a shared_lock locks the associated shared mutex in shared mode (to lock it in exclusive mode, s…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "C++ named requirements: SharedLockable (since C++14)",
+          "url": "https://devdocs.io/cpp/named_req/sharedlockable",
+          "snippet": "Shared locks — A lock on an object is said to be shared lock if it is acquired by a call to lock_shared, try_lock_shared, try_lock_shared_for, or try_lock_shared_until member function.",
+          "meta": [
+            "C++"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "std::shared_lock results fill the top positions."
+    },
+    {
+      "index": 46,
+      "language": "c",
+      "query": "qs c rename a file not remove it",
+      "expected": "rename, not remove",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "rename",
+        "a",
+        "file",
+        "not",
+        "remove",
+        "it"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.071031,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "rename",
+          "url": "https://devdocs.io/c/io/rename",
+          "snippet": "rename — Defined in header <stdio.h> int rename( const char* old_filename, const char* new_filename ); Changes the filename of a file. The file is identified by character string pointed to by old_filename. The new filename is identified by character string pointed to by new_filename. If new_filename exists, the behavior is implementation-defined.",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "Standard library header <stdio.h>",
+          "url": "https://devdocs.io/c/header/stdio",
+          "snippet": "File access — fopenfopen_s (C11) opens a file (function) freopenfreopen_s (C11) open an existing stream with a different name (function) fclose closes a file (function) fflush synchronizes an output stream with the actual file (function) setbuf sets the buffer for a file stream (function) setvbuf sets the buffer and its size for a file stream (function)",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "FE_INEXACT",
+          "url": "https://devdocs.io/c/numeric/fenv/fe_exceptions",
+          "snippet": "#define FE_DIVBYZERO /*implementation defined power of 2*/ (since C99) #define FE_INEXACT /*implementation defined power of 2*/ (since C99) #define FE_INVALID /*implementation defined power of 2*/ (since C99) #define FE_OVERFLOW /*implementation defined power of 2*/ (since C99) #define FE_UNDERFLOW /*implementation de…",
+          "meta": [
+            "C  ·  Numerics",
+            "#include <stdio.h>\n#include <math.h>\n#include <float.h>\n#include <fenv.h>\n\n#pragma STDC FENV_ACCESS ON\nvoid show_fe_exceptions(void)\n{\n    printf(\"exceptions raised:\");\n    if(fetestexcept(FE_DIVBYZERO)) printf(\" FE_DIVBYZERO\");\n    if(fetestexcept(FE_INEXACT))   printf(\" FE_INEXACT\");\n    if(fetestexcept(FE_INVALID))   printf(\" FE_INVALID\");\n    if(fetestexcept(FE_OVERFLOW))  printf(\" FE_OVERFLOW\");\n    if(fetestexcept(FE_UNDERFLOW)) printf(\" FE_UNDERFLOW\");\n    feclearexcept(FE_ALL_EXCEPT);\n    printf(\"\\n\");\n}\n\nint main(void)\n{\n    printf(\"MATH_ERREXCEPT is %s\\n\",\n           math_errhandling & MATH_ERREXCEPT ? \"set\" : \"not set\");\n\n    printf(\"0.0/0.0 = %f\\n\", 0.0/0.0);\n    show_fe_exceptions();\n\n    printf(\"1.0/0.0 = %f\\n\", 1.0/0.0);\n    show_fe_exceptions();\n\n    printf(\"1.0/10.0 = %f\\n\", 1.0/10.0);\n    show_fe_exceptions();\n\n    printf(\"sqrt(-1) = %f\\n\", sqrt(-1));\n    show_fe_exceptions();\n\n    printf(\"DBL_MAX*2.0 = %f\\n\", DBL_MAX*2.0);\n    show_fe_exceptions();\n\n    printf(\"nextafter(DBL_MIN/pow(2.0,52),0.0) = %.1f\\n\",\n                      nextafter(DBL_MIN/pow(2.0,52),0.0));\n    show_fe_exceptions();\n}"
+          ]
+        },
+        {
+          "title": "File input/output",
+          "url": "https://devdocs.io/c/io",
+          "snippet": "File input/output — The <stdio.h> header provides generic file operation support and supplies functions with narrow character input/output capabilities. The <wchar.h> header supplies functions with wide character input/output capabilities. I/O streams are denoted by objects of type FILE that can only be accessed and manipulated through pointers of type FILE…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "FILE",
+          "url": "https://devdocs.io/c/io/file",
+          "snippet": "FILE — Defined in header <stdio.h> typedef /* unspecified */ FILE; Each FILE object denotes a C stream. C standard does not specify whether FILE is a complete object type. While it may be possible to copy a valid FILE, using a pointer to such a copy as an argument for an I/O function invokes unspecified behavior. In other words, FILE may be semantically non…",
+          "meta": [
+            "C"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "rename is first and exact."
+    },
+    {
+      "index": 47,
+      "language": "haskell",
+      "query": "qs haskell catch only io errors not every exception",
+      "expected": "System.IO.Error.catchIOError, not Control.Exception.catch",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "catch",
+        "only",
+        "io",
+        "errors",
+        "not",
+        "every",
+        "exception"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.053879,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "catchIOError :: IO a -> (IOError -> IO a) -> IO a",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/System-IO-Error.html#v:catchIOError",
+          "snippet": "The catchIOError function establishes a handler that receives any IOError raised in the action protected by catchIOError. An IOError is caught by the most recent handler established by one of the exception handling functions. These handlers are not selective: all IOErrors are caught. Exception propagation must be expl…",
+          "meta": [
+            "base  ·  System.IO.Error"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "catchIOError is the sole hit and exactly limits handling to IOError."
+    },
+    {
+      "index": 48,
+      "language": "python",
+      "query": "qs python compare sequences in constant time not normal equality",
+      "expected": "hmac.compare_digest(), not ==",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "compare",
+        "sequences",
+        "in",
+        "constant",
+        "time",
+        "not",
+        "normal",
+        "equality"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.011653,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "hmac.compare_digest",
+          "url": "https://docs.python.org/3/library/hmac.html#hmac.compare_digest",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "hmac.compare_digest is first and exact."
+    },
+    {
+      "index": 49,
+      "language": "go",
+      "query": "qs go lexical path cleanup not filesystem symlink resolution",
+      "expected": "filepath.Clean, not EvalSymlinks",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "lexical",
+        "path",
+        "cleanup",
+        "not",
+        "filesystem",
+        "symlink",
+        "resolution"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.228662,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "type Cleanup 1.24",
+          "url": "https://devdocs.io/go/runtime/index",
+          "snippet": "type Cleanup 1.24 — Cleanup is a handle to a cleanup call for a specific object. type Cleanup struct { // contains filtered or unexported fields }",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func (*B) Cleanup 1.14",
+          "url": "https://devdocs.io/go/testing/index",
+          "snippet": "func (*B) Cleanup 1.14 — func (c *B) Cleanup(f func()) Cleanup registers a function to be called when the test (or subtest) and all its subtests complete. Cleanup functions will be called in last added, first called order.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "Package path",
+          "url": "https://devdocs.io/go/path/index",
+          "snippet": "Package path — import \"path\" Overview Index Examples Subdirectories",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func Clean",
+          "url": "https://devdocs.io/go/path/filepath/index",
+          "snippet": "func Clean — func Clean(path string) string Clean returns the shortest path name equivalent to path by purely lexical processing. It applies the following rules iteratively until no further processing can be done: Replace multiple Separator elements with a single one. Eliminate each . path name element (the current directory). Eliminate each inner .. path n…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "Path Names",
+          "url": "https://devdocs.io/go/io/fs/index",
+          "snippet": "Path Names — The interfaces in this package all operate on the same path name syntax, regardless of the host operating system. Path names are UTF-8-encoded, unrooted, slash-separated sequences of path elements, like “x/y/z”. Path names must not contain an element that is “.” or “..” or the empty string, except for the special case that the name \".\" may be u…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "Clean is fourth and exactly describes lexical cleanup; earlier hits are noisy."
+    }
+  ]
+}

@@ -2261,8 +2261,7 @@ mod tests {
         use std::sync::mpsc;
 
         let dir = test_dir("two-stale-observers");
-        let cache_path = dir.join("entry.json");
-        let path = lock_path(&cache_path).unwrap();
+        let path = dir.join("entry.lock");
         let stale = b"4294967295 41\n".to_vec();
         fs::write(&path, &stale).unwrap();
 
@@ -2299,8 +2298,11 @@ mod tests {
 
         observed.wait();
         assert!(first_done_rx.recv().unwrap());
-        let live = CacheLock::acquire::<String>(&cache_path).unwrap();
-        let live_identity = live.identity.clone();
+        let live_identity = try_create_identity_file(&path).unwrap().unwrap();
+        let live = CacheLock {
+            path: path.clone(),
+            identity: live_identity.clone(),
+        };
         second_go_tx.send(()).unwrap();
 
         first.join().unwrap();

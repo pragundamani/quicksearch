@@ -1,0 +1,1362 @@
+[
+  {
+    "query": "vector",
+    "expected": "`std::vector`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::vector",
+      "std::inplace_vector",
+      "operators (std::vector)",
+      "std::swap(std::vector)",
+      "operators (std::inplace_vector)"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "unordered maps",
+    "expected": "`std::unordered_map`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::unordered_map",
+      "std::unordered_multimap",
+      "std::unordered_map::at",
+      "std::unordered_map::end",
+      "std::unordered_map::cend"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "std::array",
+    "expected": "`std::array`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::array",
+      "std::array::at",
+      "std::array::end",
+      "std::array::back",
+      "std::array::data"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "forward lists",
+    "expected": "`std::forward_list`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::forward_list",
+      "std::forward_list::end",
+      "std::forward_list::sort",
+      "std::forward_list::swap",
+      "std::forward_list::begin"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "priority_queue",
+    "expected": "`std::priority_queue`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::priority_queue",
+      "std::priority_queue::pop",
+      "std::priority_queue::top",
+      "std::priority_queue::push",
+      "std::priority_queue::size"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "multisets",
+    "expected": "`std::multiset`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::multiset",
+      "std::flat_multiset",
+      "std::unordered_multiset",
+      "operators (std::multiset)",
+      "std::swap(std::multiset)"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "map::try_emplace",
+    "expected": "`std::map::try_emplace`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::map::try_emplace",
+      "std::flat_map::try_emplace",
+      "std::unordered_map::try_emplace"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "vector capacity",
+    "expected": "`std::vector::capacity` and capacity management",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::vector::capacity",
+      "std::inplace_vector::capacity"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "span",
+    "expected": "`std::span`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::span",
+      "std::basic_spanbuf::span",
+      "std::basic_spanstream::span",
+      "std::basic_ispanstream::span",
+      "std::basic_ospanstream::span"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "mdspan",
+    "expected": "`std::mdspan`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::mdspan",
+      "swap(std::mdspan)",
+      "deduction guides for std::mdspan",
+      "std::mdspan::rank",
+      "std::mdspan::size"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "tuples",
+    "expected": "`std::tuple`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::tuple",
+      "std::make_tuple",
+      "operators (std::tuple)",
+      "std::get(std::tuple)",
+      "std::make_from_tuple"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "std::variant",
+    "expected": "`std::variant`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::variant",
+      "std::variant_npos",
+      "std::variant_size",
+      "std::variant::swap",
+      "std::variant::index"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "optional value",
+    "expected": "`std::optional`",
+    "score": 3,
+    "provider": "C++",
+    "top_titles": [
+      "std::optional::value",
+      "std::optional::value_or",
+      "std::optional::has_value"
+    ],
+    "error": null,
+    "note": "Results focus on optional value accessors; the std::optional type page is absent from the top five."
+  },
+  {
+    "query": "any_cast",
+    "expected": "`std::any_cast`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::any_cast",
+      "std::bad_any_cast"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "bitsets",
+    "expected": "`std::bitset`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::bitset",
+      "operators (std::bitset)",
+      "operators (std::bitset)",
+      "std::hash<std::bitset>",
+      "std::has_single_bit"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "sort",
+    "expected": "`std::sort`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::sort",
+      "std::hive::sort",
+      "std::list::sort",
+      "std::stable_sort",
+      "std::ranges::sort"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "stable_sort",
+    "expected": "`std::stable_sort`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::stable_sort",
+      "std::ranges::stable_sort"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "lower_bound",
+    "expected": "`std::lower_bound`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::lower_bound",
+      "std::map::lower_bound",
+      "std::set::lower_bound",
+      "std::ranges::lower_bound",
+      "std::multimap::lower_bound"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "ranges::filter_view",
+    "expected": "`std::ranges::filter_view`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::filter_view",
+      "std::ranges::filter_view::iterator",
+      "std::ranges::filter_view::sentinel"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "std::ranges::sort",
+    "expected": "`std::ranges::sort`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::sort",
+      "std::ranges::sort_heap",
+      "std::ranges::stable_sort",
+      "std::ranges::partial_sort",
+      "std::ranges::partial_sort_copy"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "transform_reduce",
+    "expected": "`std::transform_reduce`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::transform_reduce"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "partition point",
+    "expected": "`std::partition_point`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::partition_point",
+      "std::ranges::partition_point"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "nth_element",
+    "expected": "`std::nth_element`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::nth_element",
+      "std::ranges::nth_element"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "heap algorithms",
+    "expected": "Heap operations such as `std::make_heap`",
+    "score": 3,
+    "provider": "C++",
+    "top_titles": [
+      "std::push_heap",
+      "std::is_heap",
+      "Constrained algorithms",
+      "std::ranges::pop_heap",
+      "std::is_heap_until"
+    ],
+    "error": null,
+    "note": "Top results are individual heap operations (push_heap and is_heap), but make_heap and a clear family overview are absent."
+  },
+  {
+    "query": "set intersection",
+    "expected": "`std::set_intersection`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::set_intersection",
+      "std::ranges::set_intersection"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "accumulate",
+    "expected": "`std::accumulate`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::accumulate"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "remove_if",
+    "expected": "`std::remove_if`",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "remove_if",
+      "remove_if",
+      "std::remove_if",
+      "std::ranges::remove_if",
+      "std::remove_copy_if"
+    ],
+    "error": null,
+    "note": "std::remove_if is third; the first two titles are ambiguous unqualified remove_if entries."
+  },
+  {
+    "query": "binary search",
+    "expected": "`std::binary_search`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::binary_search",
+      "std::ranges::binary_search"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "shuffle range",
+    "expected": "`std::shuffle`",
+    "score": 3,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::shuffle"
+    ],
+    "error": null,
+    "note": "std::ranges::shuffle is first and useful, but the expected std::shuffle page is absent."
+  },
+  {
+    "query": "unique_ptr",
+    "expected": "`std::unique_ptr`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::unique_ptr",
+      "std::unique_ptr::get",
+      "std::unique_ptr::swap",
+      "std::unique_ptr::reset",
+      "std::unique_ptr::release"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "make shared",
+    "expected": "`std::make_shared`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::make_shared"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "weak pointers",
+    "expected": "`std::weak_ptr`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::weak_ptr",
+      "std::bad_weak_ptr",
+      "std::weak_ptr::lock",
+      "std::weak_ptr::swap",
+      "std::weak_ptr::reset"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "std::move",
+    "expected": "`std::move`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::move",
+      "std::move",
+      "std::move_backward",
+      "std::move_iterator",
+      "std::move_sentinel"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "perfect forwarding",
+    "expected": "Forwarding references and `std::forward`",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "Placeholder type specifiers (since C++11)",
+      "std::forward",
+      "advance-fwd",
+      "decltype",
+      "std::is_convertible, std::is_nothrow_convertible"
+    ],
+    "error": null,
+    "note": "A relevant forwarding example is first and std::forward is second, but forwarding-reference guidance is indirect."
+  },
+  {
+    "query": "allocator_traits",
+    "expected": "`std::allocator_traits`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::allocator_traits",
+      "std::allocator_traits::destroy",
+      "std::allocator_traits::allocate",
+      "std::allocator_traits::construct",
+      "std::allocator_traits::deallocate"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "polymorphic memory resource",
+    "expected": "`std::pmr::memory_resource`",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "std::pmr::polymorphic_allocator<T>::resource",
+      "Standard library header <memory_resource> (C++17)",
+      "std::pmr::memory_resource",
+      "std::pmr::polymorphic_allocator<T>::polymorphic_allocator",
+      "std::pmr::polymorphic_allocator"
+    ],
+    "error": null,
+    "note": "The memory_resource header is second and std::pmr::memory_resource is third; the first result is allocator::resource."
+  },
+  {
+    "query": "reference_wrapper",
+    "expected": "`std::reference_wrapper`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::reference_wrapper",
+      "std::reference_wrapper::get",
+      "std::reference_wrapper::operator=",
+      "operators (std::reference_wrapper)",
+      "std::reference_wrapper::operator()"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "type traits",
+    "expected": "The `<type_traits>` library",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Type traits",
+      "named requirements: UnaryTypeTrait",
+      "named requirements: BinaryTypeTrait",
+      "std::char_traits::eq_int_type",
+      "std::char_traits::to_int_type"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "std::function",
+    "expected": "`std::function`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::function",
+      "std::function_ref",
+      "std::function::swap",
+      "std::function::assign",
+      "std::function::target"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "string views",
+    "expected": "`std::string_view`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::basic_string_view",
+      "std::basic_string_view::at",
+      "std::basic_string_view::end",
+      "std::hash<std::string_view>",
+      "std::basic_string_view::back"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "from_chars",
+    "expected": "`std::from_chars`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::from_chars",
+      "std::from_chars_result"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "format string",
+    "expected": "`std::format` and format strings",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::format"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "regex_match",
+    "expected": "`std::regex_match`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::regex_match",
+      "std::regex_constants::match_flag_type"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "getline",
+    "expected": "`std::getline`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::getline",
+      "std::basic_istream::getline"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "stringstreams",
+    "expected": "`std::basic_stringstream` / `std::stringstream`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::basic_stringstream",
+      "std::swap(std::basic_stringstream)",
+      "std::filesystem::path::stem",
+      "std::chrono::hh_mm_ss",
+      "std::filesystem::path::has_stem"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "filesystem path",
+    "expected": "`std::filesystem::path`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::filesystem::path",
+      "std::filesystem::path::end",
+      "std::filesystem::path::path",
+      "std::filesystem::path::stem",
+      "std::filesystem::path::swap"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "recursive_directory_iterator",
+    "expected": "`std::filesystem::recursive_directory_iterator`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::filesystem::recursive_directory_iterator",
+      "std::filesystem::recursive_directory_iterator::pop",
+      "std::filesystem::begin(recursive_directory_iterator)",
+      "std::filesystem::recursive_directory_iterator::depth",
+      "std::filesystem::recursive_directory_iterator::options"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "ifstream",
+    "expected": "`std::basic_ifstream` / `std::ifstream`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::basic_ifstream",
+      "std::swap(std::basic_ifstream)"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "write binary file",
+    "expected": "Binary output with `std::ofstream`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ofstream",
+      "std::basic_ofstream",
+      "std::basic_ofstream::open",
+      "std::basic_ofstream::swap",
+      "std::basic_ofstream::close"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "std::print",
+    "expected": "`std::print`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::print",
+      "std::print(std::ostream)"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "source_location",
+    "expected": "`std::source_location`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::source_location",
+      "std::source_location::line",
+      "std::source_location::column",
+      "std::source_location::current",
+      "std::meta::source_location_of"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "stacktrace",
+    "expected": "`std::stacktrace`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::basic_stacktrace",
+      "operators (std::basic_stacktrace)",
+      "std::hash<std::basic_stacktrace>",
+      "std::swap(std::basic_stacktrace)",
+      "std::formatter<std::basic_stacktrace>"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "error codes",
+    "expected": "`std::error_code`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::error_code",
+      "std::error_code::clear",
+      "std::error_code::value",
+      "std::regex_error::code",
+      "std::error_code::assign"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "exception hierarchy",
+    "expected": "Standard exception classes rooted at `std::exception`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "C++ exception hierarchy"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "RAII",
+    "expected": "Resource Acquisition Is Initialization",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "RAII"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "move semantics",
+    "expected": "Rvalue references, move construction, and move assignment",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Move constructors and move assignment"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "copy elision",
+    "expected": "Copy elision and return value optimization",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Copy elision"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "rule of five",
+    "expected": "Rule of five special member functions",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "The rule of three/five/zero"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "structured bindings",
+    "expected": "Structured binding declaration",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Structured binding declaration",
+      "std::meta::is_structured_binding"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "lambda captures",
+    "expected": "Lambda capture syntax and semantics",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Lambda expressions (since C++11)",
+      "Pack (since C++11)",
+      "std::exponential_distribution::lambda",
+      "Pack (since C++11)",
+      "Scope"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "generic lambdas",
+    "expected": "Generic lambda expressions",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Lambda expressions (since C++11)",
+      "std::apply",
+      "std::labs",
+      "Placeholder type specifiers (since C++11)",
+      "std::filesystem::path::generic_string, std::filesystem::path::generic_wstring, std::filesystem::path::generic_u8string, std::filesystem::path::generic_u16string, std::filesystem::path::generic_u32string"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "template specializations",
+    "expected": "Explicit and partial template specialization",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Partial template specialization",
+      "Explicit template specialization"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "concepts requires clause",
+    "expected": "Constraints, concepts, and requires clauses",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Constraints and concepts (since C++20)",
+      "Constraints and concepts (since C++20)",
+      "std::cos",
+      "requires",
+      "Templates"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "fold expressions",
+    "expected": "Fold expressions",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Fold expressions"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "constexpr functions",
+    "expected": "`constexpr` functions",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "constexpr",
+      "Standard library header <functional>",
+      "Functions",
+      "Constant expressions",
+      "std::function_ref::operator="
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "consteval",
+    "expected": "Immediate functions and the `consteval` specifier",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "keyword: consteval",
+      "std::cosl",
+      "consteval specifier"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "decltype(auto)",
+    "expected": "`decltype(auto)` placeholder type",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "decltype",
+      "Template argument deduction",
+      "keyword: auto",
+      "C++ keyword: decltype",
+      "Placeholder type specifiers (since C++11)"
+    ],
+    "error": null,
+    "note": "The decltype page is first and auto deduction is second, but decltype(auto) is not an exact result title."
+  },
+  {
+    "query": "type deduction",
+    "expected": "`auto` and template argument deduction",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "Template argument deduction",
+      "Function declaration",
+      "Type",
+      "Class template argument deduction (CTAD) (since C++17)",
+      "Class template argument deduction (CTAD) (since C++17)"
+    ],
+    "error": null,
+    "note": "Template argument deduction is first and auto-related context appears, but coverage of both expected topics is indirect."
+  },
+  {
+    "query": "range based for",
+    "expected": "Range-based `for` statement",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Range-based for loop"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "coroutines",
+    "expected": "C++ coroutines",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Coroutines",
+      "std::cin",
+      "std::cos",
+      "std::noop_coroutine"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "modules",
+    "expected": "C++ modules and import declarations",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Modules",
+      "ckd_mul",
+      "std::codecvt_mode",
+      "std::saturating_mul",
+      "identifier with special meaning: module"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "three way comparison",
+    "expected": "The spaceship operator and `std::strong_ordering`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "Comparison operators",
+      "Default comparisons (since C++20)",
+      "synth-three-way",
+      "Utility library",
+      "std::three_way_comparable, std::three_way_comparable_with"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "threads",
+    "expected": "`std::thread`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::thread",
+      "std::swap(std::thread)"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "jthread stop token",
+    "expected": "`std::jthread` and `std::stop_token`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::jthread::get_stop_token"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "mutexes",
+    "expected": "`std::mutex`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::mutex",
+      "std::timed_mutex",
+      "std::shared_mutex",
+      "std::recursive_mutex",
+      "named requirements: Mutex"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "condition variables",
+    "expected": "`std::condition_variable`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::condition_variable",
+      "std::condition_variable_any",
+      "std::condition_variable::wait",
+      "std::condition_variable::wait_for",
+      "std::condition_variable_any::wait"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "atomic compare exchange",
+    "expected": "`std::atomic::compare_exchange_weak/strong`",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "std::atomic_compare_exchange_weak",
+      "std::atomic::compare_exchange_weak",
+      "std::atomic_ref::compare_exchange_weak"
+    ],
+    "error": null,
+    "note": "Weak compare-exchange APIs are first and second; compare_exchange_strong is absent."
+  },
+  {
+    "query": "memory ordering",
+    "expected": "`std::memory_order`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::memory_order"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "futures",
+    "expected": "`std::future`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::future",
+      "std::shared_future",
+      "std::promise::get_future",
+      "std::packaged_task::get_future"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "async launch policies",
+    "expected": "`std::async` and `std::launch`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::async",
+      "std::launch",
+      "std::future<T>::get",
+      "std::future<T>::wait",
+      "std::shared_future<T>::wait"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "counting_semaphore",
+    "expected": "`std::counting_semaphore`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::counting_semaphore",
+      "std::counting_semaphore::max",
+      "std::counting_semaphore::acquire",
+      "std::counting_semaphore::release",
+      "std::counting_semaphore::try_acquire"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "latches",
+    "expected": "`std::latch`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::latch",
+      "cmp_less",
+      "std::less",
+      "std::owner_less",
+      "std::owner_less"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "barriers",
+    "expected": "`std::barrier`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::barrier",
+      "std::meta::has_inaccessible_bases"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "duration_cast",
+    "expected": "`std::chrono::duration_cast`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::chrono::duration_cast"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "steady clock",
+    "expected": "`std::chrono::steady_clock`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::chrono::steady_clock",
+      "std::chrono::steady_clock::now"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "calendar dates",
+    "expected": "`std::chrono` calendar types such as `year_month_day`",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "std::chrono::operator/(calendar)",
+      "Date and time library",
+      "keyword: default",
+      "std::chrono::operator==,<=>(std::chrono::year_month_day)",
+      "std::chrono::operator==,<=>(std::chrono::year_month_day_last)"
+    ],
+    "error": null,
+    "note": "Calendar operator and calendar library pages are top two, but year_month_day is not a direct top result."
+  },
+  {
+    "query": "time zones",
+    "expected": "`std::chrono::time_zone` and `zoned_time`",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "std::chrono::time_zone",
+      "std::chrono::time_zone_link",
+      "std::chrono::time_zone::name",
+      "std::chrono::time_zone::to_sys",
+      "std::chrono::time_zone::get_info"
+    ],
+    "error": null,
+    "note": "std::chrono::time_zone is first, but zoned_time is absent from the top five."
+  },
+  {
+    "query": "complex numbers",
+    "expected": "`std::complex`",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "Numerics library",
+      "std::complex",
+      "std::polar(std::complex)",
+      "std::complex<T>::operator+(unary), operator-(unary)",
+      "std::complex<T>::operator="
+    ],
+    "error": null,
+    "note": "The numerics overview is first and std::complex is second."
+  },
+  {
+    "query": "gcd lcm",
+    "expected": "`std::gcd` and `std::lcm`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::gcd",
+      "std::lcm",
+      "C++17",
+      "Compiler support for C++17",
+      "Numerics library"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "random number engine",
+    "expected": "C++ random number engines such as `std::mt19937`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::mt19937"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "uniform_int_distribution",
+    "expected": "`std::uniform_int_distribution`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::uniform_int_distribution",
+      "std::uniform_int_distribution::a",
+      "std::uniform_int_distribution::max",
+      "std::uniform_int_distribution::min",
+      "std::uniform_int_distribution::param"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "remove elements from vector",
+    "expected": "`std::erase_if` and the erase-remove idiom",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "std::erase_if"
+    ],
+    "error": null,
+    "note": "std::erase_if is first, but the erase-remove idiom is not represented."
+  },
+  {
+    "query": "erase map key",
+    "expected": "`std::map::erase` / `std::unordered_map::erase`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::map::erase",
+      "std::map::erase",
+      "std::multimap::erase",
+      "std::flat_map::erase",
+      "std::unordered_map::erase"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "read whole file",
+    "expected": "File input with `std::ifstream` and iterators or buffers",
+    "score": 3,
+    "provider": "C++",
+    "top_titles": [
+      "std::ifstream",
+      "std::basic_ifstream",
+      "std::basic_ifstream::open",
+      "std::basic_ifstream::swap",
+      "std::basic_ifstream::close"
+    ],
+    "error": null,
+    "note": "ifstream is first, but results do not show a whole-file iterator or buffer recipe."
+  },
+  {
+    "query": "split string delimiter",
+    "expected": "String splitting with `std::views::split`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::views::split"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "convert string to integer",
+    "expected": "`std::stoi` or `std::from_chars`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::stoi",
+      "std::stoi",
+      "std::from_chars",
+      "std::from_chars_result"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "sort custom objects",
+    "expected": "`std::sort` with a comparator",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::sort",
+      "std::ranges::sort",
+      "Object",
+      "std::ranges::stable_sort",
+      "std::ranges::inplace_merge"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "find duplicate values",
+    "expected": "Duplicate detection with sorting, sets, or adjacent search",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::adjacent_find",
+      "Constrained algorithms (since C++20)",
+      "std::find",
+      "Algorithms library",
+      "std::ranges::adjacent_find"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "measure elapsed time",
+    "expected": "`std::chrono::steady_clock` and durations",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::chrono::steady_clock",
+      "std::chrono::steady_clock",
+      "std::chrono::steady_clock::now",
+      "std::chrono::duration",
+      "operators (std::chrono::duration)"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  },
+  {
+    "query": "visit variant",
+    "expected": "`std::visit`",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::visit"
+    ],
+    "error": null,
+    "note": "The expected API or concept is the first result and is immediately useful."
+  }
+]

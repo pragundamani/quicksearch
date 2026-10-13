@@ -1,0 +1,1314 @@
+[
+  {
+    "query": "python dictionaries",
+    "expected": "Mapping Types — `dict`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "dictionary",
+      "dis",
+      "5.5. Dictionaries",
+      "calendar.Day",
+      "turtle.done()"
+    ],
+    "error": null,
+    "note": "The expected dict section is third; the first glossary hit is still useful."
+  },
+  {
+    "query": "python list comprehensions",
+    "expected": "List displays and list comprehensions",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "list comprehension"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python generator expressions",
+    "expected": "Generator expressions",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "generator",
+      "generator expression",
+      "9.10. Generator Expressions"
+    ],
+    "error": null,
+    "note": "The exact generator-expression entry is second, with useful context."
+  },
+  {
+    "query": "python decorators",
+    "expected": "Function and class decorators",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "decorator",
+      "contextlib.ContextDecorator",
+      "contextlib.AsyncContextDecorator",
+      "http.cookiejar.DefaultCookiePolicy.DomainStrictNoDots"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python context managers",
+    "expected": "Context manager types and the `with` statement",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "context manager",
+      "Available Context Managers (warnings)",
+      "typing.ContextManager",
+      "asynchronous context manager",
+      "typing.AsyncContextManager"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python async iterators",
+    "expected": "Asynchronous iterator protocol",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "typing.AsyncIterator",
+      "collections.abc.AsyncIterator",
+      "pyclbr.Function.is_async"
+    ],
+    "error": null,
+    "note": "The protocol is represented by AsyncIterator hits in the top two."
+  },
+  {
+    "query": "python structural pattern matching",
+    "expected": "`match` statements and patterns",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Data model",
+      "Compound statements",
+      "pattern",
+      "re.match(pattern, string, flags=0)",
+      "class ast.match_case(pattern, guard, body)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python positional only parameters",
+    "expected": "Positional-only parameters using `/`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "More Control Flow Tools",
+      "class inspect.Signature(parameters=None, *, return_annotation=Signature.empty)",
+      "parameters",
+      "Glossary",
+      "Programming FAQ"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python keyword only arguments",
+    "expected": "Keyword-only parameters using `*`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Keyword-only parameters"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python exception chaining",
+    "expected": "Exception context and `raise ... from`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "8.5. Exception Chaining"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python assignment expressions",
+    "expected": "Assignment expressions using `:=`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "6.12. Assignment expressions",
+      "ast.Expression"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python function type annotations",
+    "expected": "Function annotations and `typing`",
+    "score": 1,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "function"
+    ],
+    "error": null,
+    "note": "Only a generic glossary definition of function appears; annotations and typing are absent."
+  },
+  {
+    "query": "python generic type aliases",
+    "expected": "Generic aliases and type aliases",
+    "score": 2,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "types.GenericAlias"
+    ],
+    "error": null,
+    "note": "GenericAlias is first, but type aliases and broader context are absent."
+  },
+  {
+    "query": "python dataclasses",
+    "expected": "The `dataclasses` module",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "dataclasses",
+      "Inheritance (dataclasses)",
+      "Class variables (dataclasses)",
+      "Module contents (dataclasses)",
+      "Frozen instances (dataclasses)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python frozen dataclass",
+    "expected": "`@dataclass(frozen=True)`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Frozen instances (dataclasses)",
+      "dataclasses.FrozenInstanceError"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python enumerations",
+    "expected": "The `enum` module and `Enum`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "enum.Enum"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python abstract base classes",
+    "expected": "The `abc` module and `ABC`",
+    "score": 3,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "abstract base class",
+      "Collections Abstract Base Classes (collections.abc)",
+      "importlib.abc – Abstract base classes related to import (importlib)",
+      "Collections Abstract Base Classes – Detailed Descriptions (collections.abc)"
+    ],
+    "error": null,
+    "note": "The exact concept is first, but the expected abc module and ABC API are absent."
+  },
+  {
+    "query": "python method resolution order",
+    "expected": "Class MRO and `type.mro()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "method resolution order",
+      "The Python 2.3 Method Resolution Order"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python descriptor protocol",
+    "expected": "Descriptors and `__get__` / `__set__`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "descriptor"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python iterator protocol",
+    "expected": "Iterator types, `__iter__`, and `__next__`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Iterator Protocol",
+      "iterator"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python enumerate",
+    "expected": "Built-in `enumerate()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "enumerate()",
+      "threading.enumerate()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python zip",
+    "expected": "Built-in `zip()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "zip()",
+      "zipapp",
+      "Examples (zipapp)",
+      "Python API (zipapp)",
+      "Basic Example (zipapp)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python isinstance",
+    "expected": "Built-in `isinstance()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "isinstance()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python super",
+    "expected": "Built-in `super()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "super",
+      "pyclbr.Class.super",
+      "mmap.MAP_ALIGNED_SUPER",
+      "curses.KEY_SR"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python convert string to integer",
+    "expected": "Built-in `int()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "int",
+      "int",
+      "object.__int__()",
+      "input()",
+      "inspect"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python memoryview",
+    "expected": "Built-in `memoryview` type",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "memoryview",
+      "memoryview.obj",
+      "memoryview.ndim",
+      "memoryview.hex()",
+      "memoryview.cast()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python breakpoint",
+    "expected": "Built-in `breakpoint()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "breakpoint()",
+      "bdb.Breakpoint",
+      "mmap.MAP_32BIT",
+      "bdb.Breakpoint.cond",
+      "bdb.Breakpoint.file"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python str.removeprefix",
+    "expected": "`str.removeprefix()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "str.removeprefix()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python str.splitlines",
+    "expected": "`str.splitlines()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "str.splitlines()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python bytes.fromhex",
+    "expected": "`bytes.fromhex()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "bytes.fromhex()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python sort list by key",
+    "expected": "`list.sort(key=...)` and the Sorting HOW TO",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "sorted key",
+      "pstats.SortKey",
+      "pstats.SortKey.NFL",
+      "pstats.SortKey.LINE",
+      "pstats.SortKey.NAME"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python dict.setdefault",
+    "expected": "`dict.setdefault()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "dict.setdefault()",
+      "c.PyDict_SetItem()",
+      "c.PyDict_SetDefault()",
+      "c.PyODict_SetItem()",
+      "c.PyDict_SetDefaultRef()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python merge dictionaries",
+    "expected": "Dictionary union operators `|` and `|=`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Dictionary union operators"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python set symmetric_difference",
+    "expected": "`set.symmetric_difference()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "set.symmetric_difference()",
+      "set.symmetric_difference_update()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python frozenset",
+    "expected": "Built-in `frozenset` type",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "frozenset",
+      "tkinter.font",
+      "frozenset.copy()",
+      "frozenset.union()",
+      "frozenset.issubset()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python format specification mini language",
+    "expected": "Format specification mini-language",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Format specification mini-language",
+      "__format__(format_spec, /)",
+      "format",
+      "Text Processing Services",
+      "Data model"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python f string debugging",
+    "expected": "Self-documenting f-string expressions using `=`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Debugging C API extensions and CPython Internals with GDB",
+      "Input and output",
+      "STRING",
+      "Functional Programming HOWTO",
+      "Introduction"
+    ],
+    "error": null,
+    "note": "The f-string documentation is second; the first result is unrelated GDB debugging."
+  },
+  {
+    "query": "python FileNotFoundError",
+    "expected": "Built-in `FileNotFoundError` exception",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "FileNotFoundError",
+      "ModuleNotFoundError",
+      "zoneinfo.ZoneInfoNotFoundError",
+      "importlib.metadata.PackageNotFoundError",
+      "concurrent.interpreters.InterpreterNotFoundError"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python ExceptionGroup",
+    "expected": "Built-in `ExceptionGroup`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "ExceptionGroup",
+      "BaseExceptionGroup",
+      "BaseExceptionGroup.message",
+      "BaseExceptionGroup.split()",
+      "BaseExceptionGroup.derive()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python property setter",
+    "expected": "`property` and its `setter()` decorator",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "property.setter()",
+      "property",
+      "xml.sax.handler.property_xml_string",
+      "c.PyObject_Str()",
+      "c.PyRun_String()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python pathlib.Path.read_text",
+    "expected": "`Path.read_text()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "pathlib.Path.read_text()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python pathlib.Path.glob",
+    "expected": "`Path.glob()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "pathlib.Path.glob()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python expand home directory",
+    "expected": "`os.path.expanduser()`",
+    "score": 2,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Home scheme",
+      "classmethod Path.home()",
+      "home",
+      "Expand Word",
+      "Interpreter initialization and finalization"
+    ],
+    "error": null,
+    "note": "Results mention Path.home and pathlib expansion, but omit the expected os.path.expanduser entry."
+  },
+  {
+    "query": "python environment variables",
+    "expected": "`os.environ`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "os.environ"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python sys.argv",
+    "expected": "`sys.argv`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "sys.argv",
+      "sys.orig_argv",
+      "c.PySys_SetArgv()",
+      "c.PySys_SetArgvEx()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python sys.path",
+    "expected": "`sys.path`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "sys.path",
+      "sys.path_hooks",
+      "sys.path_importer_cache",
+      "sys.meta_path",
+      "test.support.import_helper.DirsOnSysPath"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python argparse subcommands",
+    "expected": "`argparse` subparsers via `add_subparsers()`",
+    "score": 1,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "argparse"
+    ],
+    "error": null,
+    "note": "Only the generic argparse module page appears; subparsers/add_subparsers are absent."
+  },
+  {
+    "query": "python json.dumps",
+    "expected": "`json.dumps()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "json.dumps()",
+      "json.dump()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python json custom encoder",
+    "expected": "`json.JSONEncoder` and `default()`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "json — JSON encoder and decoder",
+      "Internet Data Handling",
+      "json",
+      "Logging Cookbook",
+      "Module json"
+    ],
+    "error": null,
+    "note": "The JSON module is first and an extending-JSONEncoder section is third, but the exact API is not surfaced."
+  },
+  {
+    "query": "python csv.DictReader",
+    "expected": "`csv.DictReader`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "csv.DictReader",
+      "csv.DictReader.fieldnames"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python configparser",
+    "expected": "The `configparser` module",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "configparser",
+      "Exceptions (configparser)",
+      "Quick Start (configparser)",
+      "Fallback Values (configparser)",
+      "Unnamed Sections (configparser)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python tomllib.load",
+    "expected": "`tomllib.load()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "tomllib.load()",
+      "tomllib.loads()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python pickle security",
+    "expected": "`pickle` security warning",
+    "score": 3,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Security Considerations",
+      "makePickle(record)",
+      "pickle",
+      "exception pickle.UnpicklingError",
+      "class multiprocessing.managers.BaseManager(address=None, authkey=None, serializer='pickle', ctx=None, *, shutdown_timeout=1.0)"
+    ],
+    "error": null,
+    "note": "The first result is a general security-considerations page and the third is a pickle page, but the pickle security warning is not surfaced in the output."
+  },
+  {
+    "query": "python sqlite3 row factory",
+    "expected": "`Connection.row_factory` and `sqlite3.Row`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "sqlite3.Cursor.row_factory",
+      "sqlite3.Connection.row_factory"
+    ],
+    "error": null,
+    "note": "Connection.row_factory is second; the first Cursor.row_factory result also mentions sqlite3.Row."
+  },
+  {
+    "query": "python regular expression named groups",
+    "expected": "`re` named groups using `(?P<name>...)`",
+    "score": 0,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "expression"
+    ],
+    "error": null,
+    "note": "The only result is an unrelated glossary definition of expression; named regular-expression groups are absent."
+  },
+  {
+    "query": "python re.escape",
+    "expected": "`re.escape()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "re.escape()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python parse ISO date time",
+    "expected": "`datetime.fromisoformat()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "datetime.fromisoformat"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python timezone aware datetime",
+    "expected": "Aware `datetime` objects and `tzinfo`",
+    "score": 2,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "datetime"
+    ],
+    "error": null,
+    "note": "The datetime module overview is only partial; it gives no aware-datetime or tzinfo context."
+  },
+  {
+    "query": "python zoneinfo.ZoneInfo",
+    "expected": "`zoneinfo.ZoneInfo`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "zoneinfo.ZoneInfo",
+      "zoneinfo.ZoneInfo.key",
+      "zoneinfo.ZoneInfo.no_cache()",
+      "zoneinfo.ZoneInfo.from_file()",
+      "zoneinfo.ZoneInfo.clear_cache()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python time.monotonic",
+    "expected": "`time.monotonic()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "time.monotonic()",
+      "time.monotonic_ns()",
+      "c.PyTime_Monotonic()",
+      "time.CLOCK_MONOTONIC",
+      "c.PyTime_MonotonicRaw()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python collections.defaultdict",
+    "expected": "`collections.defaultdict`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "collections.defaultdict",
+      "collections.defaultdict.__missing__()",
+      "collections.defaultdict.default_factory",
+      "collections.UserDict",
+      "collections.OrderedDict"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python collections.Counter.most_common",
+    "expected": "`Counter.most_common()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "collections.Counter.most_common()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python collections.ChainMap",
+    "expected": "`collections.ChainMap`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "collections.ChainMap",
+      "collections.ChainMap.maps",
+      "collections.ChainMap.parents",
+      "collections.ChainMap.new_child()",
+      "ChainMap objects (collections)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python heapq.nlargest",
+    "expected": "`heapq.nlargest()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "heapq.nlargest()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python bisect.insort",
+    "expected": "`bisect.insort()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "bisect.insort()",
+      "bisect.insort_left()",
+      "bisect.insort_right()",
+      "int.bit_count()",
+      "int.bit_length()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python itertools.zip_longest",
+    "expected": "`itertools.zip_longest()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "itertools.zip_longest()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python itertools.groupby",
+    "expected": "`itertools.groupby()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "itertools.groupby()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python functools.lru_cache",
+    "expected": "`functools.lru_cache()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "functools.lru_cache()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python functools.partial",
+    "expected": "`functools.partial()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "functools.partial()",
+      "functools.partial.args",
+      "functools.partial.func",
+      "functools.partial.keywords",
+      "partial Objects (functools)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python operator.itemgetter",
+    "expected": "`operator.itemgetter()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "operator.itemgetter()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python math.isclose",
+    "expected": "`math.isclose()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "math.isclose()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python calculate median",
+    "expected": "`statistics.median()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "statistics.median(data)",
+      "Other Applications",
+      "median",
+      "Brief tour of the standard library",
+      "Simple hashing"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python random choices weights",
+    "expected": "`random.choices(..., weights=...)`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "random.choices(population, weights=None, *, cum_weights=None, k=1)",
+      "statistics.fmean(data, weights=None)",
+      "choices",
+      "Option.choices",
+      "weight"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python secrets.token_urlsafe",
+    "expected": "`secrets.token_urlsafe()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "secrets.token_urlsafe()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python hashlib.sha256",
+    "expected": "`hashlib.sha256()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "hashlib.sha256()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python uuid.uuid4",
+    "expected": "`uuid.uuid4()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "uuid.uuid4()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python base64 urlsafe encoding",
+    "expected": "`base64.urlsafe_b64encode()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "base64.urlsafe_b64encode(s, *, padded=True)",
+      "binascii.URLSAFE_BASE64_ALPHABET",
+      "base64",
+      "secrets.token_urlsafe(nbytes=None)",
+      "email.charset: Representing character sets"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python build URL query string",
+    "expected": "`urllib.parse.urlencode()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "urllib.parse.urlencode"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python logging.basicConfig",
+    "expected": "`logging.basicConfig()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "logging.basicConfig()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python create temporary directory",
+    "expected": "`tempfile.TemporaryDirectory`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "class tempfile.TemporaryDirectory(suffix=None, prefix=None, dir=None, ignore_cleanup_errors=False, *, delete=True)",
+      "os.symlink(src, dst, target_is_directory=False, *, dir_fd=None)",
+      "create",
+      "File and Directory Access",
+      "--create <tarfile> <source1> ... <sourceN>"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python copy directory tree",
+    "expected": "`shutil.copytree()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "shutil.copytree(src, dst, symlinks=False, ignore=None, copy_function=copy2, ignore_dangling_symlinks=False, dirs_exist_ok=False)",
+      "Path.copy(target, *, follow_symlinks=True, preserve_metadata=False)",
+      "copy",
+      "Module compileall",
+      "Save Copy As…"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python deep copy object",
+    "expected": "`copy.deepcopy()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "copy — Shallow and deep copy operations",
+      "TarInfo.replace(name=..., mtime=..., mode=..., linkname=..., uid=..., gid=..., uname=..., gname=..., deep=True)",
+      "__deepcopy__",
+      "Module copy",
+      "Document.importNode(importedNode, deep)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python walk directory recursively",
+    "expected": "`os.walk()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "os.walk",
+      "os.walk()",
+      "pathlib.Path.rglob()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python run command capture output",
+    "expected": "`subprocess.run(..., capture_output=True)`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "subprocess.run(args, *, stdin=None, input=None, stdout=None, stderr=None, capture_output=False, shell=False, cwd=None, timeout=None, check=False, encoding=None, errors=None, text=None, env=None, universal_newlines=None, **other_popen_kwargs)",
+      "The run command",
+      "run",
+      "profiling.tracing.run(command, filename=None, sort=-1)",
+      "Python Initialization Configuration"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python concurrent.futures.ThreadPoolExecutor",
+    "expected": "`ThreadPoolExecutor`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "concurrent.futures.ThreadPoolExecutor",
+      "ThreadPoolExecutor (concurrent.futures)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python multiprocessing Queue",
+    "expected": "`multiprocessing.Queue`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "multiprocessing.Queue",
+      "multiprocessing",
+      "multiprocessing.Queue.get()",
+      "multiprocessing.Queue.put()",
+      "multiprocessing.Queue.full()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python threading Lock",
+    "expected": "`threading.Lock`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "threading.Lock",
+      "threading",
+      "threading.Lock.locked()",
+      "threading.Lock.acquire()",
+      "threading.Lock.release()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python run async tasks concurrently",
+    "expected": "`asyncio.gather()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Running tasks concurrently (Coroutines and tasks)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python asyncio timeout",
+    "expected": "`asyncio.timeout()`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "asyncio.Timeout",
+      "asyncio.timeout()",
+      "asyncio.timeout_at()",
+      "asyncio.TimeoutError",
+      "asyncio.Timeout.when()"
+    ],
+    "error": null,
+    "note": "The expected asyncio.timeout() result is second, after the related asyncio.Timeout class."
+  },
+  {
+    "query": "python queue.PriorityQueue",
+    "expected": "`queue.PriorityQueue`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "queue.PriorityQueue",
+      "Priority Queue (Queues)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python socket.create_connection",
+    "expected": "`socket.create_connection()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "socket.create_connection()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python unittest.mock.patch",
+    "expected": "`unittest.mock.patch()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "unittest.mock.patch()",
+      "unittest.mock.patch.dict()",
+      "unittest.mock.patch.object()",
+      "unittest.mock.patch.stopall()",
+      "unittest.mock.patch.multiple()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python doctest",
+    "expected": "The `doctest` module",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "doctest",
+      "Soapbox (doctest)",
+      "Debugging (doctest)",
+      "Basic API (doctest)",
+      "Advanced API (doctest)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python warnings filterwarnings",
+    "expected": "`warnings.filterwarnings()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "warnings.filterwarnings()",
+      "warnings",
+      "sys.flags.context_aware_warnings",
+      "sys.flags.bytes_warning"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python importlib.resources.files",
+    "expected": "`importlib.resources.files()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "importlib.resources.files()",
+      "importlib.resources.as_file()",
+      "importlib.resources.abc.TraversableResources.files()",
+      "importlib.resources.abc.Traversable.is_file()",
+      "Functional API (importlib.resources)"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python inspect.signature",
+    "expected": "`inspect.signature()`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "inspect.Signature",
+      "inspect.signature()",
+      "inspect.Signature.empty",
+      "inspect.Signature.bind()",
+      "inspect.Signature.format()"
+    ],
+    "error": null,
+    "note": "The expected inspect.signature() result is second, after inspect.Signature."
+  },
+  {
+    "query": "python trace memory allocations",
+    "expected": "The `tracemalloc` module",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "tracemalloc — Trace memory allocations",
+      "Memory Management",
+      "Trace",
+      "C API Extension Support for Free Threading",
+      "Configure Python"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python typing.Protocol",
+    "expected": "`typing.Protocol`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "typing.Protocol",
+      "typing.is_protocol()",
+      "typing.get_protocol_members()"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python typing.TypedDict",
+    "expected": "`typing.TypedDict`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "typing.TypedDict",
+      "typing.TypedDict.__total__",
+      "typing.TypedDict.__closed__",
+      "typing.TypedDict.__extra_items__",
+      "typing.TypedDict.__mutable_keys__"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  },
+  {
+    "query": "python typing.Literal",
+    "expected": "`typing.Literal`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "typing.Literal",
+      "typing.LiteralString"
+    ],
+    "error": null,
+    "note": "The first result directly matches the expected documentation and is immediately useful."
+  }
+]

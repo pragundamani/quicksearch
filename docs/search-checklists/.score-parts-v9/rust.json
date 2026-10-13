@@ -1,0 +1,2842 @@
+[
+  {
+    "index": 1,
+    "checklist_command": "qs rust ownership",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust ownership",
+    "expected": "Ownership, moves, and scope.",
+    "test": "Direct lookup of the central language concept.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.018373,
+    "provider": "rust",
+    "query": "ownership",
+    "source_url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+    "hits": [
+      {
+        "title": "Understanding ownership",
+        "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+        "snippet": "Ownership, moves, borrowing, slices, Rc, and Arc explained in context."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 2,
+    "checklist_command": "qs rust borrow checker",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust borrow checker",
+    "expected": "Borrowing rules and the borrow checker.",
+    "test": "Natural two-word terminology search.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.021247,
+    "provider": "rust",
+    "query": "borrow checker",
+    "source_url": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+    "hits": [
+      {
+        "title": "References and borrowing",
+        "url": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+        "snippet": "Rust checks shared and mutable borrows so references remain valid."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 3,
+    "checklist_command": "qs rust lifetimes",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust lifetimes",
+    "expected": "Lifetime annotations and lifetime elision.",
+    "test": "Plural concept normalization.",
+    "score": 3,
+    "note": "First result covers borrowing but does not explain lifetime annotations or elision.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.022446,
+    "provider": "rust",
+    "query": "lifetimes",
+    "source_url": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+    "hits": [
+      {
+        "title": "References and borrowing",
+        "url": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+        "snippet": "Rust checks shared and mutable borrows so references remain valid."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 4,
+    "checklist_command": "qs rust mutable references",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust mutable references",
+    "expected": "Mutable borrows written as `&mut T`.",
+    "test": "Multiword type-system concept retrieval.",
+    "score": 4,
+    "note": "First result is the right borrowing page, but output omits the `&mut T` syntax.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.02325,
+    "provider": "rust",
+    "query": "mutable references",
+    "source_url": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+    "hits": [
+      {
+        "title": "References and borrowing",
+        "url": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+        "snippet": "Rust checks shared and mutable borrows so references remain valid."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 5,
+    "checklist_command": "qs rust move closures",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust move closures",
+    "expected": "`move` closures and captured values.",
+    "test": "Modifier-plus-concept phrase matching.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.020185,
+    "provider": "rust",
+    "query": "move closures",
+    "source_url": "https://doc.rust-lang.org/book/ch13-01-closures.html#moving-captured-values-out-of-closures-and-the-fn-traits",
+    "hits": [
+      {
+        "title": "Moving captured values into closures",
+        "url": "https://doc.rust-lang.org/book/ch13-01-closures.html#moving-captured-values-out-of-closures-and-the-fn-traits",
+        "snippet": "Move closures take ownership of captured values."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 6,
+    "checklist_command": "qs rust pattern matching",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust pattern matching",
+    "expected": "Patterns and `match` expressions.",
+    "test": "Common natural-language concept search.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.019222,
+    "provider": "rust",
+    "query": "pattern matching",
+    "source_url": "https://doc.rust-lang.org/reference/patterns.html",
+    "hits": [
+      {
+        "title": "Patterns",
+        "url": "https://doc.rust-lang.org/reference/patterns.html",
+        "snippet": "Patterns destructure values in let bindings, if let, while let, and match."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 7,
+    "checklist_command": "qs rust struct destructuring",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust struct destructuring",
+    "expected": "Destructuring patterns for structs.",
+    "test": "Qualified pattern concept retrieval.",
+    "score": 4,
+    "note": "First result explains patterns and destructuring, but not struct-specific syntax.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.02599,
+    "provider": "rust",
+    "query": "struct destructuring",
+    "source_url": "https://doc.rust-lang.org/reference/patterns.html",
+    "hits": [
+      {
+        "title": "Patterns",
+        "url": "https://doc.rust-lang.org/reference/patterns.html",
+        "snippet": "Patterns destructure values in let bindings, if let, while let, and match."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 8,
+    "checklist_command": "qs rust if let",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust if let",
+    "expected": "`if let` conditional pattern matching.",
+    "test": "Exact spaced syntax phrase.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.020302,
+    "provider": "rust",
+    "query": "if let",
+    "source_url": "https://doc.rust-lang.org/reference/patterns.html",
+    "hits": [
+      {
+        "title": "Patterns",
+        "url": "https://doc.rust-lang.org/reference/patterns.html",
+        "snippet": "Patterns destructure values in let bindings, if let, while let, and match."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 9,
+    "checklist_command": "qs rust let else",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust let else",
+    "expected": "`let...else` refutable pattern binding.",
+    "test": "Punctuation-free lookup of modern syntax.",
+    "score": 3,
+    "note": "The patterns page is relevant, but the output does not identify `let...else`.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.021959,
+    "provider": "rust",
+    "query": "let else",
+    "source_url": "https://doc.rust-lang.org/reference/patterns.html",
+    "hits": [
+      {
+        "title": "Patterns",
+        "url": "https://doc.rust-lang.org/reference/patterns.html",
+        "snippet": "Patterns destructure values in let bindings, if let, while let, and match."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 10,
+    "checklist_command": "qs rust while let",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust while let",
+    "expected": "`while let` conditional loops.",
+    "test": "Exact multiword control-flow syntax.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.025592,
+    "provider": "rust",
+    "query": "while let",
+    "source_url": "https://doc.rust-lang.org/reference/patterns.html",
+    "hits": [
+      {
+        "title": "Patterns",
+        "url": "https://doc.rust-lang.org/reference/patterns.html",
+        "snippet": "Patterns destructure values in let bindings, if let, while let, and match."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 11,
+    "checklist_command": "qs rust traits",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust traits",
+    "expected": "Trait definitions and implementations.",
+    "test": "Plural-to-canonical language topic matching.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.032958,
+    "provider": "rust",
+    "query": "traits",
+    "source_url": "https://doc.rust-lang.org/reference/items/traits.html",
+    "hits": [
+      {
+        "title": "Traits and generics",
+        "url": "https://doc.rust-lang.org/reference/items/traits.html",
+        "snippet": "Trait items, associated types, bounds, and implementations."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 12,
+    "checklist_command": "qs rust dyn Trait",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust dyn Trait",
+    "expected": "Trait objects written as `dyn Trait`.",
+    "test": "Mixed-case exact syntax lookup.",
+    "score": 3,
+    "note": "The traits page is relevant, but the output does not mention trait objects or `dyn Trait`.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.025445,
+    "provider": "rust",
+    "query": "dyn Trait",
+    "source_url": "https://doc.rust-lang.org/reference/items/traits.html",
+    "hits": [
+      {
+        "title": "Traits and generics",
+        "url": "https://doc.rust-lang.org/reference/items/traits.html",
+        "snippet": "Trait items, associated types, bounds, and implementations."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 13,
+    "checklist_command": "qs rust associated types",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust associated types",
+    "expected": "Trait associated types.",
+    "test": "Plural multiword concept retrieval.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.0277,
+    "provider": "rust",
+    "query": "associated types",
+    "source_url": "https://doc.rust-lang.org/reference/items/traits.html",
+    "hits": [
+      {
+        "title": "Traits and generics",
+        "url": "https://doc.rust-lang.org/reference/items/traits.html",
+        "snippet": "Trait items, associated types, bounds, and implementations."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 14,
+    "checklist_command": "qs rust generic functions",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust generic functions",
+    "expected": "Generic type parameters on functions.",
+    "test": "Natural phrase for a core abstraction.",
+    "score": 3,
+    "note": "The generic traits page is relevant, but the output does not explain generic functions.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.023963,
+    "provider": "rust",
+    "query": "generic functions",
+    "source_url": "https://doc.rust-lang.org/reference/items/traits.html",
+    "hits": [
+      {
+        "title": "Traits and generics",
+        "url": "https://doc.rust-lang.org/reference/items/traits.html",
+        "snippet": "Trait items, associated types, bounds, and implementations."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 15,
+    "checklist_command": "qs rust where clauses",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust where clauses",
+    "expected": "`where` clauses for generic bounds.",
+    "test": "Plural syntax terminology normalization.",
+    "score": 3,
+    "note": "The result mentions bounds, but does not identify `where` clauses.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.018784,
+    "provider": "rust",
+    "query": "where clauses",
+    "source_url": "https://doc.rust-lang.org/reference/items/traits.html",
+    "hits": [
+      {
+        "title": "Traits and generics",
+        "url": "https://doc.rust-lang.org/reference/items/traits.html",
+        "snippet": "Trait items, associated types, bounds, and implementations."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 16,
+    "checklist_command": "qs rust const generics",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust const generics",
+    "expected": "Const generic parameters.",
+    "test": "Modern two-word language feature search.",
+    "score": 3,
+    "note": "The generic traits page is relevant, but const generic parameters are not shown.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.022223,
+    "provider": "rust",
+    "query": "const generics",
+    "source_url": "https://doc.rust-lang.org/reference/items/traits.html",
+    "hits": [
+      {
+        "title": "Traits and generics",
+        "url": "https://doc.rust-lang.org/reference/items/traits.html",
+        "snippet": "Trait items, associated types, bounds, and implementations."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 17,
+    "checklist_command": "qs rust modules",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust modules",
+    "expected": "The module system and `mod` items.",
+    "test": "Plural language concept lookup.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.017095,
+    "provider": "rust",
+    "query": "modules",
+    "source_url": "https://doc.rust-lang.org/reference/items/modules.html",
+    "hits": [
+      {
+        "title": "Modules and visibility",
+        "url": "https://doc.rust-lang.org/reference/items/modules.html",
+        "snippet": "Modules organize items; use imports names and visibility controls access."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 18,
+    "checklist_command": "qs rust pub(crate)",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust pub(crate)",
+    "expected": "Crate-scoped visibility with `pub(crate)`.",
+    "test": "Exact punctuation-heavy syntax search.",
+    "score": 3,
+    "note": "The visibility page is relevant, but crate-scoped `pub(crate)` is not shown.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.01982,
+    "provider": "rust",
+    "query": "pub(crate)",
+    "source_url": "https://doc.rust-lang.org/reference/items/modules.html",
+    "hits": [
+      {
+        "title": "Modules and visibility",
+        "url": "https://doc.rust-lang.org/reference/items/modules.html",
+        "snippet": "Modules organize items; use imports names and visibility controls access."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 19,
+    "checklist_command": "qs rust use declarations",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust use declarations",
+    "expected": "`use` declarations and imported names.",
+    "test": "Formal plural terminology lookup.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.01991,
+    "provider": "rust",
+    "query": "use declarations",
+    "source_url": "https://doc.rust-lang.org/reference/items/modules.html",
+    "hits": [
+      {
+        "title": "Modules and visibility",
+        "url": "https://doc.rust-lang.org/reference/items/modules.html",
+        "snippet": "Modules organize items; use imports names and visibility controls access."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 20,
+    "checklist_command": "qs rust external crates",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust external crates",
+    "expected": "External crates and the extern prelude.",
+    "test": "Multiword package-organization concept.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.019516,
+    "provider": "rust",
+    "query": "external crates",
+    "source_url": "https://doc.rust-lang.org/reference/names/preludes.html#extern-prelude",
+    "hits": [
+      {
+        "title": "External crates and the extern prelude",
+        "url": "https://doc.rust-lang.org/reference/names/preludes.html#extern-prelude",
+        "snippet": "Names from dependencies are available through the extern prelude."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 21,
+    "checklist_command": "qs rust attributes",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust attributes",
+    "expected": "Outer and inner attributes.",
+    "test": "Broad plural syntax concept.",
+    "score": 4,
+    "note": "The first result is the attributes topic, but outer versus inner attributes is omitted.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.016408,
+    "provider": "rust",
+    "query": "attributes",
+    "source_url": "https://doc.rust-lang.org/reference/attributes.html",
+    "hits": [
+      {
+        "title": "Rust attributes",
+        "url": "https://doc.rust-lang.org/reference/attributes.html",
+        "snippet": "Attributes control conditional compilation, derives, crate behavior, and tools."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 22,
+    "checklist_command": "qs rust derive macros",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust derive macros",
+    "expected": "The `derive` attribute and derivable traits.",
+    "test": "Common plural macro phrase.",
+    "score": 3,
+    "note": "The macros page is relevant, but the derive attribute and derivable traits are not shown.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.018444,
+    "provider": "rust",
+    "query": "derive macros",
+    "source_url": "https://doc.rust-lang.org/reference/macros.html",
+    "hits": [
+      {
+        "title": "Rust macros",
+        "url": "https://doc.rust-lang.org/reference/macros.html",
+        "snippet": "Rust supports declarative macro_rules! macros and procedural macros."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 23,
+    "checklist_command": "qs rust macro_rules!",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust macro_rules!",
+    "expected": "Declarative macros defined with `macro_rules!`.",
+    "test": "Exact identifier with punctuation.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.016681,
+    "provider": "rust",
+    "query": "macro_rules!",
+    "source_url": "https://doc.rust-lang.org/reference/macros-by-example.html",
+    "hits": [
+      {
+        "title": "Macros by example: macro_rules!",
+        "url": "https://doc.rust-lang.org/reference/macros-by-example.html",
+        "snippet": "Declarative macro_rules! syntax and matching rules."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 24,
+    "checklist_command": "qs rust procedural macros",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust procedural macros",
+    "expected": "Function-like, derive, and attribute procedural macros.",
+    "test": "Plural multiword metaprogramming topic.",
+    "score": 4,
+    "note": "Procedural macros are identified, but their three forms are not described.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.016695,
+    "provider": "rust",
+    "query": "procedural macros",
+    "source_url": "https://doc.rust-lang.org/reference/macros.html",
+    "hits": [
+      {
+        "title": "Rust macros",
+        "url": "https://doc.rust-lang.org/reference/macros.html",
+        "snippet": "Rust supports declarative macro_rules! macros and procedural macros."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 25,
+    "checklist_command": "qs rust async fn",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust async fn",
+    "expected": "Asynchronous functions and returned futures.",
+    "test": "Exact abbreviated syntax phrase.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.016235,
+    "provider": "rust",
+    "query": "async fn",
+    "source_url": "https://doc.rust-lang.org/reference/expressions/await-expr.html",
+    "hits": [
+      {
+        "title": "Async and await expressions",
+        "url": "https://doc.rust-lang.org/reference/expressions/await-expr.html",
+        "snippet": "Async functions return futures; .await polls a future to completion."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 26,
+    "checklist_command": "qs rust .await",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust .await",
+    "expected": "The postfix `.await` expression.",
+    "test": "Leading-punctuation keyword lookup.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.01634,
+    "provider": "rust",
+    "query": ".await",
+    "source_url": "https://doc.rust-lang.org/reference/expressions/await-expr.html",
+    "hits": [
+      {
+        "title": "Async and await expressions",
+        "url": "https://doc.rust-lang.org/reference/expressions/await-expr.html",
+        "snippet": "Async functions return futures; .await polls a future to completion."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 27,
+    "checklist_command": "qs rust std::pin::Pin",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust std::pin::Pin",
+    "expected": "`std::pin::Pin` and pinning guarantees.",
+    "test": "Fully qualified CamelCase API lookup.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.129899,
+    "provider": "rust",
+    "query": "std::pin::Pin",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20pin%20Pin",
+    "hits": [
+      {
+        "title": "Pin in std::pin - Rust",
+        "url": "https://doc.rust-lang.org/std/pin/struct.Pin.html",
+        "snippet": "A pointer which pins its pointee in place."
+      },
+      {
+        "title": "Search Rust standard library for std::pin::Pin",
+        "url": "https://doc.rust-lang.org/std/?search=std%20pin%20Pin",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 28,
+    "checklist_command": "qs rust Send and Sync",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Send and Sync",
+    "expected": "The `Send` and `Sync` marker traits.",
+    "test": "Two related case-sensitive identifiers.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.016823,
+    "provider": "rust",
+    "query": "Send and Sync",
+    "source_url": "https://doc.rust-lang.org/nomicon/send-and-sync.html",
+    "hits": [
+      {
+        "title": "Send and Sync",
+        "url": "https://doc.rust-lang.org/nomicon/send-and-sync.html",
+        "snippet": "The Send and Sync marker traits define thread-safety boundaries."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 29,
+    "checklist_command": "qs rust unsafe Rust",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust unsafe Rust",
+    "expected": "Unsafe operations and unsafe blocks.",
+    "test": "Case variation in a language topic.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.01701,
+    "provider": "rust",
+    "query": "unsafe Rust",
+    "source_url": "https://doc.rust-lang.org/book/ch20-01-unsafe-rust.html",
+    "hits": [
+      {
+        "title": "Unsafe Rust",
+        "url": "https://doc.rust-lang.org/book/ch20-01-unsafe-rust.html",
+        "snippet": "Unsafe blocks permit raw-pointer operations, FFI, and other unsafe operations."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 30,
+    "checklist_command": "qs rust raw pointers",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust raw pointers",
+    "expected": "Raw pointer types `*const T` and `*mut T`.",
+    "test": "Plural low-level concept retrieval.",
+    "score": 4,
+    "note": "The first result mentions raw-pointer operations, but omits `*const T` and `*mut T`.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.015361,
+    "provider": "rust",
+    "query": "raw pointers",
+    "source_url": "https://doc.rust-lang.org/book/ch20-01-unsafe-rust.html",
+    "hits": [
+      {
+        "title": "Unsafe Rust",
+        "url": "https://doc.rust-lang.org/book/ch20-01-unsafe-rust.html",
+        "snippet": "Unsafe blocks permit raw-pointer operations, FFI, and other unsafe operations."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 31,
+    "checklist_command": "qs rust foreign function interface",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust foreign function interface",
+    "expected": "FFI with `extern` blocks and ABI strings.",
+    "test": "Expanded natural-language acronym search.",
+    "score": 4,
+    "note": "The first result mentions FFI, but omits extern blocks and ABI strings.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.014233,
+    "provider": "rust",
+    "query": "foreign function interface",
+    "source_url": "https://doc.rust-lang.org/book/ch20-01-unsafe-rust.html",
+    "hits": [
+      {
+        "title": "Unsafe Rust",
+        "url": "https://doc.rust-lang.org/book/ch20-01-unsafe-rust.html",
+        "snippet": "Unsafe blocks permit raw-pointer operations, FFI, and other unsafe operations."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 32,
+    "checklist_command": "qs rust recoverable errors",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust recoverable errors",
+    "expected": "Recoverable error handling with `Result`.",
+    "test": "Task-oriented conceptual lookup.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.015367,
+    "provider": "rust",
+    "query": "recoverable errors",
+    "source_url": "https://doc.rust-lang.org/book/ch09-00-error-handling.html",
+    "hits": [
+      {
+        "title": "Error handling",
+        "url": "https://doc.rust-lang.org/book/ch09-00-error-handling.html",
+        "snippet": "Result represents recoverable errors; the ? operator propagates them."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 33,
+    "checklist_command": "qs rust question mark operator",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust question mark operator",
+    "expected": "The `?` error-propagation operator.",
+    "test": "Natural name for punctuation syntax.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.015968,
+    "provider": "rust",
+    "query": "question mark operator",
+    "source_url": "https://doc.rust-lang.org/book/ch09-00-error-handling.html",
+    "hits": [
+      {
+        "title": "Error handling",
+        "url": "https://doc.rust-lang.org/book/ch09-00-error-handling.html",
+        "snippet": "Result represents recoverable errors; the ? operator propagates them."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 34,
+    "checklist_command": "qs rust std::panic::set_hook",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust std::panic::set_hook",
+    "expected": "`std::panic::set_hook`.",
+    "test": "Fully qualified snake_case function lookup.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.182848,
+    "provider": "rust",
+    "query": "std::panic::set_hook",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20panic%20set_hook",
+    "hits": [
+      {
+        "title": "set_hook in std::panic - Rust",
+        "url": "https://doc.rust-lang.org/std/panic/fn.set_hook.html",
+        "snippet": "Registers a custom panic hook, replacing the previously registered hook."
+      },
+      {
+        "title": "Search Rust standard library for std::panic::set_hook",
+        "url": "https://doc.rust-lang.org/std/?search=std%20panic%20set_hook",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 35,
+    "checklist_command": "qs rust Result<T, E>",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Result<T, E>",
+    "expected": "The `Result<T, E>` enum.",
+    "test": "Exact generic type syntax search.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.265596,
+    "provider": "rust",
+    "query": "Result<T, E>",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20result%20Result",
+    "hits": [
+      {
+        "title": "Enum Result",
+        "url": "https://devdocs.io/rust/std/result/enum.result",
+        "snippet": "Enum Result — pub enum Result<T, E> { Ok(T), Err(E), } Result is a type that represents either success (Ok) or failure (Err). See the module documentation for details.",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Module result",
+        "url": "https://devdocs.io/rust/std/result/index",
+        "snippet": "Module result — Error handling with the Result type. Result<T, E> is the type used for returning and propagating errors. It is an enum with the variants, Ok(T), representing success and containing a value, and Err(E), representing error and containing an error value. enum Result<T, E> { Ok(T), Err(E), } Functions return Result whenever errors are expected a…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Recoverable Errors with Result",
+        "url": "https://devdocs.io/rust/book/ch09-02-recoverable-errors-with-result",
+        "snippet": "Recoverable Errors with Result — Most errors aren’t serious enough to require the program to stop entirely. Sometimes when a function fails, it’s for a reason that you can easily interpret and respond to. For example, if you try to open a file and that operation fails because the file doesn’t exist, you might want to create the file instead of terminating t…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct BarrierWaitResult",
+        "url": "https://devdocs.io/rust/std/sync/struct.barrierwaitresult",
+        "snippet": "Struct BarrierWaitResult — pub struct BarrierWaitResult(/* private fields */); A BarrierWaitResult is returned by Barrier::wait() when all threads in the Barrier have rendezvoused.",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct WaitTimeoutResult",
+        "url": "https://devdocs.io/rust/std/sync/struct.waittimeoutresult",
+        "snippet": "Struct WaitTimeoutResult — pub struct WaitTimeoutResult(/* private fields */); A type indicating whether a timed wait on a condition variable returned due to a time out or not. It is returned by the wait_timeout method.",
+        "meta": [
+          "Rust"
+        ]
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 36,
+    "checklist_command": "qs rust Option::and_then",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Option::and_then",
+    "expected": "`Option::and_then` combinator.",
+    "test": "Type-qualified method identifier.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.759085,
+    "provider": "rust",
+    "query": "Option::and_then",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20option%20Option%20and_then",
+    "hits": [
+      {
+        "title": "Option::and_then",
+        "url": "https://doc.rust-lang.org/std/option/enum.Option.html#method.and_then",
+        "snippet": "The `Option` type. See the module level documentation for more."
+      },
+      {
+        "title": "Search Rust standard library for Option::and_then",
+        "url": "https://doc.rust-lang.org/std/?search=std%20option%20Option%20and_then",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 37,
+    "checklist_command": "qs rust Vec::push",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Vec::push",
+    "expected": "`Vec::push`.",
+    "test": "Exact collection method lookup.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.788386,
+    "provider": "rust",
+    "query": "Vec::push",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20vec%20Vec%20push",
+    "hits": [
+      {
+        "title": "Vec::push",
+        "url": "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.push",
+        "snippet": "A contiguous growable array type, written as `Vec<T>`, short for ‘vector’."
+      },
+      {
+        "title": "Search Rust standard library for Vec::push",
+        "url": "https://doc.rust-lang.org/std/?search=std%20vec%20Vec%20push",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 38,
+    "checklist_command": "qs rust VecDeque",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust VecDeque",
+    "expected": "`std::collections::VecDeque`.",
+    "test": "Unqualified CamelCase collection lookup.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.230946,
+    "provider": "rust",
+    "query": "VecDeque",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20collections%20VecDeque",
+    "hits": [
+      {
+        "title": "VecDeque in std::collections - Rust",
+        "url": "https://doc.rust-lang.org/std/collections/struct.VecDeque.html",
+        "snippet": "A double-ended queue implemented with a growable ring buffer."
+      },
+      {
+        "title": "Search Rust standard library for VecDeque",
+        "url": "https://doc.rust-lang.org/std/?search=std%20collections%20VecDeque",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 39,
+    "checklist_command": "qs rust HashMap::entry",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust HashMap::entry",
+    "expected": "`HashMap::entry` and the entry API.",
+    "test": "Qualified map method retrieval.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.573498,
+    "provider": "rust",
+    "query": "HashMap::entry",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20collections%20HashMap%20entry",
+    "hits": [
+      {
+        "title": "HashMap::entry",
+        "url": "https://doc.rust-lang.org/std/collections/struct.HashMap.html#method.entry",
+        "snippet": "A hash map implemented with quadratic probing and SIMD lookup."
+      },
+      {
+        "title": "Search Rust standard library for HashMap::entry",
+        "url": "https://doc.rust-lang.org/std/?search=std%20collections%20HashMap%20entry",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 40,
+    "checklist_command": "qs rust BTreeMap",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust BTreeMap",
+    "expected": "`std::collections::BTreeMap`.",
+    "test": "Exact ordered-map type name.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.212386,
+    "provider": "rust",
+    "query": "BTreeMap",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20collections%20BTreeMap",
+    "hits": [
+      {
+        "title": "BTreeMap in std::collections - Rust",
+        "url": "https://doc.rust-lang.org/std/collections/struct.BTreeMap.html",
+        "snippet": "An ordered map based on a B-Tree."
+      },
+      {
+        "title": "Search Rust standard library for BTreeMap",
+        "url": "https://doc.rust-lang.org/std/?search=std%20collections%20BTreeMap",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 41,
+    "checklist_command": "qs rust hash sets",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust hash sets",
+    "expected": "`std::collections::HashSet`.",
+    "test": "Natural plural-to-type matching.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.208002,
+    "provider": "rust",
+    "query": "hash sets",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20collections%20HashSet",
+    "hits": [
+      {
+        "title": "HashSet in std::collections - Rust",
+        "url": "https://doc.rust-lang.org/std/collections/struct.HashSet.html",
+        "snippet": "A hash set implemented as a `HashMap` where the value is `()`."
+      },
+      {
+        "title": "Search Rust standard library for std::collections::HashSet",
+        "url": "https://doc.rust-lang.org/std/?search=std%20collections%20HashSet",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 42,
+    "checklist_command": "qs rust binary heaps",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust binary heaps",
+    "expected": "`std::collections::BinaryHeap`.",
+    "test": "Spaced plural-to-CamelCase matching.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.201186,
+    "provider": "rust",
+    "query": "binary heaps",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20collections%20BinaryHeap",
+    "hits": [
+      {
+        "title": "BinaryHeap in std::collections - Rust",
+        "url": "https://doc.rust-lang.org/std/collections/struct.BinaryHeap.html",
+        "snippet": "A priority queue implemented with a binary heap."
+      },
+      {
+        "title": "Search Rust standard library for std::collections::BinaryHeap",
+        "url": "https://doc.rust-lang.org/std/?search=std%20collections%20BinaryHeap",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 43,
+    "checklist_command": "qs rust String::from_utf8",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust String::from_utf8",
+    "expected": "`String::from_utf8` and `FromUtf8Error`.",
+    "test": "Qualified underscore method lookup.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.712801,
+    "provider": "rust",
+    "query": "String::from_utf8",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20string%20String%20from_utf8",
+    "hits": [
+      {
+        "title": "String::from_utf8",
+        "url": "https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8",
+        "snippet": "A UTF-8–encoded, growable string."
+      },
+      {
+        "title": "Search Rust standard library for String::from_utf8",
+        "url": "https://doc.rust-lang.org/std/?search=std%20string%20String%20from_utf8",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 44,
+    "checklist_command": "qs rust str::split_whitespace",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust str::split_whitespace",
+    "expected": "`str::split_whitespace`.",
+    "test": "Primitive-type qualified snake_case method.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.84746,
+    "provider": "rust",
+    "query": "str::split_whitespace",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20str%20split_whitespace",
+    "hits": [
+      {
+        "title": "str::split_whitespace",
+        "url": "https://doc.rust-lang.org/std/primitive.str.html#method.split_whitespace",
+        "snippet": "String slices."
+      },
+      {
+        "title": "Search Rust standard library for str::split_whitespace",
+        "url": "https://doc.rust-lang.org/std/?search=std%20str%20split_whitespace",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 45,
+    "checklist_command": "qs rust format!",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust format!",
+    "expected": "The `format!` macro.",
+    "test": "Exact macro name with exclamation mark.",
+    "score": 4,
+    "note": "`format!` is present in the top results, but `format_args!` ranks first.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.144135,
+    "provider": "rust",
+    "query": "format!",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20format",
+    "hits": [
+      {
+        "title": "Macro format_args",
+        "url": "https://devdocs.io/rust/std/macro.format_args",
+        "snippet": "Macro format_args — macro_rules! format_args { ($fmt:expr) => { ... }; ($fmt:expr, $($args:tt)*) => { ... }; } Constructs parameters for the other string-formatting macros. This macro functions by taking a formatting string literal containing {} for each additional argument passed. format_args! prepares the additional parameters to ensure the output can be …",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Macro format",
+        "url": "https://devdocs.io/rust/std/macro.format",
+        "snippet": "Macro format — macro_rules! format { ($($arg:tt)*) => { ... }; } Creates a String using interpolation of runtime expressions. The first argument format! receives is a format string. This must be a string literal. The power of the formatting string is in the {}s contained. Additional parameters passed to format! replace the {}s within the formatting string i…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "format_args!",
+        "url": "https://devdocs.io/rust/std/fmt/index",
+        "snippet": "format_args! — format_args! is a curious macro used to safely pass around an opaque object describing the format string. This object does not require any heap allocations to create, and it only references information on the stack. Under the hood, all of the related macros are implemented in terms of this. First off, some example usage is: use std::fmt; use …",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Function format",
+        "url": "https://devdocs.io/rust/std/fmt/fn.format",
+        "snippet": "Function format — pub fn format(args: Arguments<'_>) -> String Takes an Arguments struct and returns the resulting formatted string. The Arguments instance can be created with the format_args! macro.",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Macro const_format_args",
+        "url": "https://devdocs.io/rust/std/macro.const_format_args",
+        "snippet": "Macro const_format_args — macro_rules! const_format_args { ($fmt:expr) => { ... }; ($fmt:expr, $($args:tt)*) => { ... }; } 🔬This is a nightly-only experimental API. (const_format_args) Same as format_args, but can be used in some const contexts. This macro is used by the panic macros for the const_panic feature. This macro will be removed once format_args i…",
+        "meta": [
+          "Rust"
+        ]
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 46,
+    "checklist_command": "qs rust print a line",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust print a line",
+    "expected": "The `println!` macro.",
+    "test": "Natural task phrase mapped to a macro.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.41872,
+    "provider": "rust",
+    "query": "print a line",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20println",
+    "hits": [
+      {
+        "title": "println in std - Rust",
+        "url": "https://doc.rust-lang.org/std/macro.println.html",
+        "snippet": "Prints to the standard output, with a newline."
+      },
+      {
+        "title": "Search Rust standard library for std::println",
+        "url": "https://doc.rust-lang.org/std/?search=std%20println",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 47,
+    "checklist_command": "qs rust Iterator::map",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Iterator::map",
+    "expected": "`Iterator::map`.",
+    "test": "Exact trait-method identifier.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.822711,
+    "provider": "rust",
+    "query": "Iterator::map",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20iter%20Iterator%20map",
+    "hits": [
+      {
+        "title": "Iterator::map",
+        "url": "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.map",
+        "snippet": "A trait for dealing with iterators."
+      },
+      {
+        "title": "Search Rust standard library for Iterator::map",
+        "url": "https://doc.rust-lang.org/std/?search=std%20iter%20Iterator%20map",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 48,
+    "checklist_command": "qs rust collect iterator into vector",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust collect iterator into vector",
+    "expected": "`Iterator::collect` with `Vec` type inference.",
+    "test": "Natural multiword conversion task.",
+    "score": 3,
+    "note": "Iterator pages are relevant, but no top result clearly shows `collect::<Vec<_>>()` or Vec inference.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.156223,
+    "provider": "rust",
+    "query": "collect iterator into vector",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20collect%20iterator%20into%20vector",
+    "hits": [
+      {
+        "title": "Improving Our I/O Project",
+        "url": "https://devdocs.io/rust/book/ch13-03-improving-our-io-project",
+        "snippet": "Choosing Between Loops and Iterators — The next logical question is which style you should choose in your own code and why: the original implementation in Listing 13-21 or the version using iterators in Listing 13-22 (assuming we’re collecting all the results before returning them rather than returning the iterator). Most Rust programmers prefer to use the …",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Processing a Series of Items with Iterators",
+        "url": "https://devdocs.io/rust/book/ch13-02-iterators",
+        "snippet": "Processing a Series of Items with Iterators — The iterator pattern allows you to perform some task on a sequence of items in turn. An iterator is responsible for the logic of iterating over each item and determining when the sequence has finished. When you use iterators, you don’t have to reimplement that logic yourself. In Rust, iterators are lazy, meaning…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Iterators of known length",
+        "url": "https://devdocs.io/rust/std/sync/struct.arc",
+        "snippet": "Iterators of known length — When your Iterator implements TrustedLen and is of an exact size, a single allocation will be made for the Arc<[T]>. For example: let evens: Arc<[u8]> = (0..10).collect(); // Just a single allocation happens here. 1.0.0Sourceimpl<T, A> Hash for Arc<T, A>where T: Hash + ?Sized, A: Allocator, Sourcefn hash<H>(&self, state: &mut H)w…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Accepting Command Line Arguments",
+        "url": "https://devdocs.io/rust/book/ch12-01-accepting-command-line-arguments",
+        "snippet": "Reading the Argument Values — To enable minigrep to read the values of command line arguments we pass to it, we’ll need the std::env::args function provided in Rust’s standard library. This function returns an iterator of the command line arguments passed to minigrep. We’ll cover iterators fully in Chapter 13. For now, you only need to know two details abou…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Iterator behavior",
+        "url": "https://devdocs.io/rust/std/string/struct.string",
+        "snippet": "Iterator behavior — The returned iterator will be a DoubleEndedIterator if the pattern allows a reverse search and forward/reverse search yields the same elements. This is true for, e.g., char, but not for &str. If the pattern allows a reverse search but its results might differ from a forward search, the rsplit method can be used.",
+        "meta": [
+          "Rust"
+        ]
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 49,
+    "checklist_command": "qs rust fold values",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust fold values",
+    "expected": "`Iterator::fold`.",
+    "test": "Verb phrase mapped to an iterator combinator.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.027187,
+    "provider": "rust",
+    "query": "fold values",
+    "source_url": "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold",
+    "hits": [
+      {
+        "title": "Iterator::fold",
+        "url": "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold",
+        "snippet": "Combine iterator elements into one accumulated value."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 50,
+    "checklist_command": "qs rust IntoIterator",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust IntoIterator",
+    "expected": "The `IntoIterator` trait and `into_iter`.",
+    "test": "Exact CamelCase trait retrieval.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.436661,
+    "provider": "rust",
+    "query": "IntoIterator",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20iter%20IntoIterator",
+    "hits": [
+      {
+        "title": "IntoIterator in std::iter - Rust",
+        "url": "https://doc.rust-lang.org/std/iter/trait.IntoIterator.html",
+        "snippet": "Conversion into an `Iterator`."
+      },
+      {
+        "title": "Search Rust standard library for IntoIterator",
+        "url": "https://doc.rust-lang.org/std/?search=std%20iter%20IntoIterator",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 51,
+    "checklist_command": "qs rust ExactSizeIterator",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust ExactSizeIterator",
+    "expected": "The `ExactSizeIterator` trait.",
+    "test": "Long exact CamelCase identifier.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.427636,
+    "provider": "rust",
+    "query": "ExactSizeIterator",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20iter%20ExactSizeIterator",
+    "hits": [
+      {
+        "title": "ExactSizeIterator in std::iter - Rust",
+        "url": "https://doc.rust-lang.org/std/iter/trait.ExactSizeIterator.html",
+        "snippet": "An iterator that knows its exact length."
+      },
+      {
+        "title": "Search Rust standard library for ExactSizeIterator",
+        "url": "https://doc.rust-lang.org/std/?search=std%20iter%20ExactSizeIterator",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 52,
+    "checklist_command": "qs rust From and Into",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust From and Into",
+    "expected": "The `From` and `Into` conversion traits.",
+    "test": "Related exact trait-name query.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.018165,
+    "provider": "rust",
+    "query": "From and Into",
+    "source_url": "https://doc.rust-lang.org/std/convert/index.html",
+    "hits": [
+      {
+        "title": "From and Into conversions",
+        "url": "https://doc.rust-lang.org/std/convert/index.html",
+        "snippet": "Standard traits for value-to-value conversions."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 53,
+    "checklist_command": "qs rust TryFrom",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust TryFrom",
+    "expected": "The `TryFrom` fallible conversion trait.",
+    "test": "Unqualified CamelCase API search.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.471382,
+    "provider": "rust",
+    "query": "TryFrom",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20convert%20TryFrom",
+    "hits": [
+      {
+        "title": "TryFrom in std::convert - Rust",
+        "url": "https://doc.rust-lang.org/std/convert/trait.TryFrom.html",
+        "snippet": "Simple and safe type conversions that may fail in a controlled way under some circumstances. It is the reciprocal of `TryInto`."
+      },
+      {
+        "title": "Search Rust standard library for TryFrom",
+        "url": "https://doc.rust-lang.org/std/?search=std%20convert%20TryFrom",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 54,
+    "checklist_command": "qs rust AsRef<Path>",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust AsRef<Path>",
+    "expected": "`AsRef<Path>` bounds and borrowed conversions.",
+    "test": "Generic bound with angle brackets.",
+    "score": 4,
+    "note": "The first result is `AsRef`, but the output does not explain the `Path` bound.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.460683,
+    "provider": "rust",
+    "query": "AsRef<Path>",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20convert%20AsRef",
+    "hits": [
+      {
+        "title": "AsRef in std::convert - Rust",
+        "url": "https://doc.rust-lang.org/std/convert/trait.AsRef.html",
+        "snippet": "Used to do a cheap reference-to-reference conversion."
+      },
+      {
+        "title": "Search Rust standard library for AsRef<Path>",
+        "url": "https://doc.rust-lang.org/std/?search=std%20convert%20AsRef",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 55,
+    "checklist_command": "qs rust Cow<'a, str>",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Cow<'a, str>",
+    "expected": "`std::borrow::Cow` clone-on-write type.",
+    "test": "Lifetime-bearing generic type syntax.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.185149,
+    "provider": "rust",
+    "query": "Cow<'a, str>",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20borrow%20Cow",
+    "hits": [
+      {
+        "title": "Enum Cow",
+        "url": "https://devdocs.io/rust/std/borrow/enum.cow",
+        "snippet": "Enum Cow — pub enum Cow<'a, B>where B: 'a + ToOwned + ?Sized,{ Borrowed(&'a B), Owned(<B as ToOwned>::Owned), } A clone-on-write smart pointer. The type Cow is a smart pointer providing clone-on-write functionality: it can enclose and provide immutable access to borrowed data, and clone the data lazily when mutation or ownership is required. The type is des…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Extracting a raw pointer to the whole C string",
+        "url": "https://devdocs.io/rust/std/ffi/c_str/struct.cstring",
+        "snippet": "Extracting a raw pointer to the whole C string — CString implements an as_ptr method through the Deref trait. This method will give you a *const c_char which you can feed directly to extern functions that expect a nul-terminated string, like C’s strdup(). Notice that as_ptr returns a read-only pointer; if the C code writes to it, that causes undefined behav…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Extracting a raw pointer to the whole C string",
+        "url": "https://devdocs.io/rust/std/ffi/struct.cstring",
+        "snippet": "Extracting a raw pointer to the whole C string — CString implements an as_ptr method through the Deref trait. This method will give you a *const c_char which you can feed directly to extern functions that expect a nul-terminated string, like C’s strdup(). Notice that as_ptr returns a read-only pointer; if the C code writes to it, that causes undefined behav…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct OsStr",
+        "url": "https://devdocs.io/rust/std/ffi/os_str/struct.osstr",
+        "snippet": "Struct OsStr — pub struct OsStr { /* private fields */ } Borrowed reference to an OS string (see OsString). This type represents a borrowed reference to a string in the operating system’s preferred representation. &OsStr is to OsString as &str is to String: the former in each pair are borrowed references; the latter are owned strings. See the module’s tople…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct OsStr",
+        "url": "https://devdocs.io/rust/std/ffi/struct.osstr",
+        "snippet": "Struct OsStr — pub struct OsStr { /* private fields */ } Borrowed reference to an OS string (see OsString). This type represents a borrowed reference to a string in the operating system’s preferred representation. &OsStr is to OsString as &str is to String: the former in each pair are borrowed references; the latter are owned strings. See the module’s tople…",
+        "meta": [
+          "Rust"
+        ]
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 56,
+    "checklist_command": "qs rust Box<T>",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Box<T>",
+    "expected": "`std::boxed::Box<T>`.",
+    "test": "Generic smart-pointer type lookup.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.306841,
+    "provider": "rust",
+    "query": "Box<T>",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20boxed%20Box",
+    "hits": [
+      {
+        "title": "Box in std::boxed - Rust",
+        "url": "https://doc.rust-lang.org/std/boxed/struct.Box.html",
+        "snippet": "A pointer type that uniquely owns a heap allocation of type `T`."
+      },
+      {
+        "title": "Search Rust standard library for Box<T>",
+        "url": "https://doc.rust-lang.org/std/?search=std%20boxed%20Box",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 57,
+    "checklist_command": "qs rust reference counted pointer",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust reference counted pointer",
+    "expected": "`std::rc::Rc`.",
+    "test": "Descriptive phrase mapped to an abbreviated type.",
+    "score": 3,
+    "note": "The ownership result mentions Rc, but does not identify it as the reference-counted pointer API.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.03064,
+    "provider": "rust",
+    "query": "reference counted pointer",
+    "source_url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+    "hits": [
+      {
+        "title": "Understanding ownership",
+        "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+        "snippet": "Ownership, moves, borrowing, slices, Rc, and Arc explained in context."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 58,
+    "checklist_command": "qs rust atomic reference counting",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust atomic reference counting",
+    "expected": "`std::sync::Arc`.",
+    "test": "Natural concept mapped to a concurrency type.",
+    "score": 3,
+    "note": "The ownership result mentions Arc, but does not identify it as atomic reference counting.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.023411,
+    "provider": "rust",
+    "query": "atomic reference counting",
+    "source_url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+    "hits": [
+      {
+        "title": "Understanding ownership",
+        "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+        "snippet": "Ownership, moves, borrowing, slices, Rc, and Arc explained in context."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 59,
+    "checklist_command": "qs rust RefCell::borrow_mut",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust RefCell::borrow_mut",
+    "expected": "`RefCell::borrow_mut` and runtime borrow checking.",
+    "test": "Qualified interior-mutability method.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.476998,
+    "provider": "rust",
+    "query": "RefCell::borrow_mut",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20cell%20RefCell%20borrow_mut",
+    "hits": [
+      {
+        "title": "RefCell::borrow_mut",
+        "url": "https://doc.rust-lang.org/std/cell/struct.RefCell.html#method.borrow_mut",
+        "snippet": "A mutable memory location with dynamically checked borrow rules"
+      },
+      {
+        "title": "Search Rust standard library for RefCell::borrow_mut",
+        "url": "https://doc.rust-lang.org/std/?search=std%20cell%20RefCell%20borrow_mut",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 60,
+    "checklist_command": "qs rust mutexes",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust mutexes",
+    "expected": "`std::sync::Mutex`.",
+    "test": "Plural-to-singular synchronization type.",
+    "score": 4,
+    "note": "The stable `std::sync::Mutex` result is third; two nightly mutex variants rank above it.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.961681,
+    "provider": "rust",
+    "query": "mutexes",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20mutexes",
+    "hits": [
+      {
+        "title": "Struct Mutex",
+        "url": "https://devdocs.io/rust/std/sync/nonpoison/struct.mutex",
+        "snippet": "Struct Mutex — pub struct Mutex<T: ?Sized> { /* private fields */ } 🔬This is a nightly-only experimental API. (nonpoison_mutex #134645) A mutual exclusion primitive useful for protecting shared data that does not keep track of lock poisoning. For more information about mutexes, check out the documentation for the poisoning variant of this lock at poison::Mu…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct Mutex",
+        "url": "https://devdocs.io/rust/std/sync/poison/struct.mutex",
+        "snippet": "Struct Mutex — pub struct Mutex<T: ?Sized> { /* private fields */ } 🔬This is a nightly-only experimental API. (sync_poison_mod #134646) A mutual exclusion primitive useful for protecting shared data This mutex will block threads waiting for the lock to become available. The mutex can be created via a new constructor. Each mutex has a type parameter which re…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct Mutex",
+        "url": "https://devdocs.io/rust/std/sync/struct.mutex",
+        "snippet": "Struct Mutex — pub struct Mutex<T: ?Sized> { /* private fields */ } A mutual exclusion primitive useful for protecting shared data This mutex will block threads waiting for the lock to become available. The mutex can be created via a new constructor. Each mutex has a type parameter which represents the data that it is protecting. The data can only be access…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Shared-State Concurrency",
+        "url": "https://devdocs.io/rust/book/ch16-03-shared-state",
+        "snippet": "Controlling Access with Mutexes — Mutex is an abbreviation for mutual exclusion, as in a mutex allows only one thread to access some data at any given time. To access the data in a mutex, a thread must first signal that it wants access by asking to acquire the mutex’s lock. The lock is a data structure that is part of the mutex that keeps track of who curre…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct MappedMutexGuard",
+        "url": "https://devdocs.io/rust/std/sync/nonpoison/struct.mappedmutexguard",
+        "snippet": "Struct MappedMutexGuard — pub struct MappedMutexGuard<'a, T: ?Sized + 'a> { /* private fields */ } 🔬This is a nightly-only experimental API. (mapped_lock_guards #117108) An RAII mutex guard returned by MutexGuard::map, which can point to a subfield of the protected data. When this structure is dropped (falls out of scope), the lock will be unlocked. The mai…",
+        "meta": [
+          "Rust"
+        ]
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 61,
+    "checklist_command": "qs rust RwLock",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust RwLock",
+    "expected": "`std::sync::RwLock`.",
+    "test": "Exact mixed-case synchronization identifier.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.280148,
+    "provider": "rust",
+    "query": "RwLock",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20sync%20RwLock",
+    "hits": [
+      {
+        "title": "RwLock in std::sync - Rust",
+        "url": "https://doc.rust-lang.org/std/sync/struct.RwLock.html",
+        "snippet": "A reader-writer lock"
+      },
+      {
+        "title": "Search Rust standard library for RwLock",
+        "url": "https://doc.rust-lang.org/std/?search=std%20sync%20RwLock",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 62,
+    "checklist_command": "qs rust OnceLock::get_or_init",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust OnceLock::get_or_init",
+    "expected": "`OnceLock::get_or_init`.",
+    "test": "Qualified lazy-initialization method.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.398969,
+    "provider": "rust",
+    "query": "OnceLock::get_or_init",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20sync%20OnceLock%20get_or_init",
+    "hits": [
+      {
+        "title": "OnceLock::get_or_init",
+        "url": "https://doc.rust-lang.org/std/sync/struct.OnceLock.html#method.get_or_init",
+        "snippet": "A synchronization primitive which can nominally be written to only once."
+      },
+      {
+        "title": "Search Rust standard library for OnceLock::get_or_init",
+        "url": "https://doc.rust-lang.org/std/?search=std%20sync%20OnceLock%20get_or_init",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 63,
+    "checklist_command": "qs rust spawn a thread",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust spawn a thread",
+    "expected": "`std::thread::spawn`.",
+    "test": "Natural action phrase mapped to a function.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.26762,
+    "provider": "rust",
+    "query": "spawn a thread",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20thread%20spawn",
+    "hits": [
+      {
+        "title": "spawn in std::thread - Rust",
+        "url": "https://doc.rust-lang.org/std/thread/fn.spawn.html",
+        "snippet": "Spawns a new thread, returning a `JoinHandle` for it."
+      },
+      {
+        "title": "Search Rust standard library for std::thread::spawn",
+        "url": "https://doc.rust-lang.org/std/?search=std%20thread%20spawn",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 64,
+    "checklist_command": "qs rust mpsc channels",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust mpsc channels",
+    "expected": "`std::sync::mpsc` channels.",
+    "test": "Acronym-plus-plural module concept.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.302777,
+    "provider": "rust",
+    "query": "mpsc channels",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20sync%20mpsc",
+    "hits": [
+      {
+        "title": "std::sync::mpsc - Rust",
+        "url": "https://doc.rust-lang.org/std/sync/mpsc/index.html",
+        "snippet": "Multi-producer, single-consumer FIFO queue communication primitives."
+      },
+      {
+        "title": "Search Rust standard library for std::sync::mpsc",
+        "url": "https://doc.rust-lang.org/std/?search=std%20sync%20mpsc",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 65,
+    "checklist_command": "qs rust AtomicUsize ordering",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust AtomicUsize ordering",
+    "expected": "`AtomicUsize` operations and `Ordering`.",
+    "test": "Type-plus-parameter concurrency search.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.022635,
+    "provider": "rust",
+    "query": "AtomicUsize ordering",
+    "source_url": "https://doc.rust-lang.org/std/sync/atomic/struct.AtomicUsize.html",
+    "hits": [
+      {
+        "title": "AtomicUsize and Ordering",
+        "url": "https://doc.rust-lang.org/std/sync/atomic/struct.AtomicUsize.html",
+        "snippet": "Atomic integer operations take explicit memory orderings."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 66,
+    "checklist_command": "qs rust read file to string",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust read file to string",
+    "expected": "`std::fs::read_to_string`.",
+    "test": "Natural task mapped to snake_case API.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.276074,
+    "provider": "rust",
+    "query": "read file to string",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20fs%20read_to_string",
+    "hits": [
+      {
+        "title": "read_to_string in std::fs - Rust",
+        "url": "https://doc.rust-lang.org/std/fs/fn.read_to_string.html",
+        "snippet": "Reads the entire contents of a file into a string."
+      },
+      {
+        "title": "Search Rust standard library for std::fs::read_to_string",
+        "url": "https://doc.rust-lang.org/std/?search=std%20fs%20read_to_string",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 67,
+    "checklist_command": "qs rust write bytes to a file",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust write bytes to a file",
+    "expected": "`std::fs::write`.",
+    "test": "Multiword I/O task retrieval.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.283322,
+    "provider": "rust",
+    "query": "write bytes to a file",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20fs%20write",
+    "hits": [
+      {
+        "title": "write in std::fs - Rust",
+        "url": "https://doc.rust-lang.org/std/fs/fn.write.html",
+        "snippet": "Writes a slice as the entire contents of a file."
+      },
+      {
+        "title": "Search Rust standard library for std::fs::write",
+        "url": "https://doc.rust-lang.org/std/?search=std%20fs%20write",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 68,
+    "checklist_command": "qs rust canonicalize a path",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust canonicalize a path",
+    "expected": "`std::fs::canonicalize`.",
+    "test": "Verb phrase mapped to filesystem API.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.321179,
+    "provider": "rust",
+    "query": "canonicalize a path",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20fs%20canonicalize",
+    "hits": [
+      {
+        "title": "canonicalize in std::fs - Rust",
+        "url": "https://doc.rust-lang.org/std/fs/fn.canonicalize.html",
+        "snippet": "Returns the canonical, absolute form of a path with all intermediate components normalized and symbolic links resolved."
+      },
+      {
+        "title": "Search Rust standard library for std::fs::canonicalize",
+        "url": "https://doc.rust-lang.org/std/?search=std%20fs%20canonicalize",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 69,
+    "checklist_command": "qs rust create directories recursively",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust create directories recursively",
+    "expected": "`std::fs::create_dir_all`.",
+    "test": "Plural morphological task-to-API matching.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.31414,
+    "provider": "rust",
+    "query": "create directories recursively",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20fs%20create_dir_all",
+    "hits": [
+      {
+        "title": "create_dir_all in std::fs - Rust",
+        "url": "https://doc.rust-lang.org/std/fs/fn.create_dir_all.html",
+        "snippet": "Recursively create a directory and all of its parent components if they are missing."
+      },
+      {
+        "title": "Search Rust standard library for std::fs::create_dir_all",
+        "url": "https://doc.rust-lang.org/std/?search=std%20fs%20create_dir_all",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 70,
+    "checklist_command": "qs rust run command and capture output",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust run command and capture output",
+    "expected": "`std::process::Command::output`.",
+    "test": "Long natural task mapped to a method.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.493522,
+    "provider": "rust",
+    "query": "run command and capture output",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20process%20Command%20output",
+    "hits": [
+      {
+        "title": "Command::output",
+        "url": "https://doc.rust-lang.org/std/process/struct.Command.html#method.output",
+        "snippet": "A process builder, providing fine-grained control over how a new process should be spawned."
+      },
+      {
+        "title": "Search Rust standard library for std::process::Command::output",
+        "url": "https://doc.rust-lang.org/std/?search=std%20process%20Command%20output",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 71,
+    "checklist_command": "qs rust environment variables",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust environment variables",
+    "expected": "`std::env::var` and `vars`.",
+    "test": "Plural task concept mapped to environment APIs.",
+    "score": 4,
+    "note": "`std::env::var` is first and useful, but `vars` is not surfaced.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.311496,
+    "provider": "rust",
+    "query": "environment variables",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20env%20var",
+    "hits": [
+      {
+        "title": "var in std::env - Rust",
+        "url": "https://doc.rust-lang.org/std/env/fn.var.html",
+        "snippet": "Fetches the environment variable `key` from the current process."
+      },
+      {
+        "title": "Search Rust standard library for std::env::var",
+        "url": "https://doc.rust-lang.org/std/?search=std%20env%20var",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 72,
+    "checklist_command": "qs rust command line arguments",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust command line arguments",
+    "expected": "`std::env::args` and `args_os`.",
+    "test": "Natural CLI task phrase.",
+    "score": 4,
+    "note": "`std::env::args` is first and useful, but `args_os` is not surfaced.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.304685,
+    "provider": "rust",
+    "query": "command line arguments",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20env%20args",
+    "hits": [
+      {
+        "title": "args in std::env - Rust",
+        "url": "https://doc.rust-lang.org/std/env/fn.args.html",
+        "snippet": "Returns the arguments that this program was started with (normally passed via the command line)."
+      },
+      {
+        "title": "Search Rust standard library for std::env::args",
+        "url": "https://doc.rust-lang.org/std/?search=std%20env%20args",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 73,
+    "checklist_command": "qs rust TcpListener::bind",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust TcpListener::bind",
+    "expected": "`std::net::TcpListener::bind`.",
+    "test": "Type-qualified networking method.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.495214,
+    "provider": "rust",
+    "query": "TcpListener::bind",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20net%20TcpListener%20bind",
+    "hits": [
+      {
+        "title": "TcpListener::bind",
+        "url": "https://doc.rust-lang.org/std/net/struct.TcpListener.html#method.bind",
+        "snippet": "A TCP socket server, listening for connections."
+      },
+      {
+        "title": "Search Rust standard library for TcpListener::bind",
+        "url": "https://doc.rust-lang.org/std/?search=std%20net%20TcpListener%20bind",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 74,
+    "checklist_command": "qs rust parse socket address",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust parse socket address",
+    "expected": "`std::net::SocketAddr` and `FromStr`.",
+    "test": "Natural networking conversion task.",
+    "score": 4,
+    "note": "Parsing and FromStr context is in the top results, but SocketAddr itself is not surfaced in the top three.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.121405,
+    "provider": "rust",
+    "query": "parse socket address",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20parse%20socket%20address",
+    "hits": [
+      {
+        "title": "AddrParseError",
+        "url": "https://devdocs.io/rust/std/net/index",
+        "snippet": "AddrParseError — An error which can be returned when parsing an IP address or a socket address.",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct AddrParseError",
+        "url": "https://devdocs.io/rust/std/net/struct.addrparseerror",
+        "snippet": "Struct AddrParseError — pub struct AddrParseError(/* private fields */); An error which can be returned when parsing an IP address or a socket address. This error is used as the error type for the FromStr implementation for IpAddr, Ipv4Addr, Ipv6Addr, SocketAddr, SocketAddrV4, and SocketAddrV6.",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Trait ToSocketAddrs",
+        "url": "https://devdocs.io/rust/std/net/trait.tosocketaddrs",
+        "snippet": "Trait ToSocketAddrs — pub trait ToSocketAddrs { type Iter: Iterator<Item = SocketAddr>; // Required method fn to_socket_addrs(&self) -> Result<Self::Iter>; } A trait for objects which can be converted or resolved to one or more SocketAddr values. This trait is used for generic address resolution when constructing network objects. By default it is implemente…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Enum SocketAddr",
+        "url": "https://devdocs.io/rust/std/net/enum.socketaddr",
+        "snippet": "Enum SocketAddr — pub enum SocketAddr { V4(SocketAddrV4), V6(SocketAddrV6), } An internet socket address, either IPv4 or IPv6. Internet socket addresses consist of an IP address, a 16-bit port number, as well as possibly some version-dependent additional information. See SocketAddrV4’s and SocketAddrV6’s respective documentation for more details.",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct SocketAddr",
+        "url": "https://devdocs.io/rust/std/os/unix/net/struct.socketaddr",
+        "snippet": "Struct SocketAddr — pub struct SocketAddr { /* private fields */ } Available on Unix only.An address associated with a Unix socket.",
+        "meta": [
+          "Rust"
+        ]
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 75,
+    "checklist_command": "qs rust Duration::from_secs",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Duration::from_secs",
+    "expected": "`std::time::Duration::from_secs`.",
+    "test": "Qualified constructor-style method.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.39747,
+    "provider": "rust",
+    "query": "Duration::from_secs",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20time%20Duration%20from_secs",
+    "hits": [
+      {
+        "title": "Duration::from_secs",
+        "url": "https://doc.rust-lang.org/std/time/struct.Duration.html#method.from_secs",
+        "snippet": "A `Duration` type to represent a span of time, typically used for system timeouts."
+      },
+      {
+        "title": "Search Rust standard library for Duration::from_secs",
+        "url": "https://doc.rust-lang.org/std/?search=std%20time%20Duration%20from_secs",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 76,
+    "checklist_command": "qs rust measure elapsed time",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust measure elapsed time",
+    "expected": "`std::time::Instant::elapsed`.",
+    "test": "Natural timing task mapped to API.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.434591,
+    "provider": "rust",
+    "query": "measure elapsed time",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20time%20Instant%20elapsed",
+    "hits": [
+      {
+        "title": "Instant::elapsed",
+        "url": "https://doc.rust-lang.org/std/time/struct.Instant.html#method.elapsed",
+        "snippet": "A measurement of a monotonically nondecreasing clock. Opaque and useful only with `Duration`."
+      },
+      {
+        "title": "Search Rust standard library for std::time::Instant::elapsed",
+        "url": "https://doc.rust-lang.org/std/?search=std%20time%20Instant%20elapsed",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 77,
+    "checklist_command": "qs rust unix timestamp",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust unix timestamp",
+    "expected": "`SystemTime` relative to `UNIX_EPOCH`.",
+    "test": "Common term mapped to time primitives.",
+    "score": 3,
+    "note": "SystemTime ranks third, but the output does not surface `UNIX_EPOCH` or the conversion pattern.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.855218,
+    "provider": "rust",
+    "query": "unix timestamp",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20unix%20timestamp",
+    "hits": [
+      {
+        "title": "Function set_times",
+        "url": "https://devdocs.io/rust/std/fs/fn.set_times",
+        "snippet": "Function set_times — pub fn set_times<P: AsRef<Path>>(path: P, times: FileTimes) -> Result<()> 🔬This is a nightly-only experimental API. (fs_set_times #147455) Changes the timestamps of the file or directory at the specified path. This function will attempt to set the access and modification times to the times specified. If the path refers to a symbolic lin…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Function set_times_nofollow",
+        "url": "https://devdocs.io/rust/std/fs/fn.set_times_nofollow",
+        "snippet": "Function set_times_nofollow — pub fn set_times_nofollow<P: AsRef<Path>>( path: P, times: FileTimes, ) -> Result<()> 🔬This is a nightly-only experimental API. (fs_set_times #147455) Changes the timestamps of the file or symlink at the specified path. This function will attempt to set the access and modification times to the times specified. Differ from set_t…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct SystemTime",
+        "url": "https://devdocs.io/rust/std/time/struct.systemtime",
+        "snippet": "Struct SystemTime — pub struct SystemTime(/* private fields */); A measurement of the system clock, useful for talking to external entities like the file system or other processes. Distinct from the Instant type, this time measurement is not monotonic. This means that you can save a file to the file system, then save another file to the file system, and the…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Platform-specific behavior",
+        "url": "https://devdocs.io/rust/std/fs/struct.file",
+        "snippet": "Platform-specific behavior — This function currently corresponds to the futimens function on Unix (falling back to futimes on macOS before 10.13) and the SetFileTime function on Windows. Note that this may change in the future. On most platforms, including UNIX and Windows platforms, this function can also change the timestamps of a directory. To get a File…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct UnixDatagram",
+        "url": "https://devdocs.io/rust/std/os/unix/net/struct.unixdatagram",
+        "snippet": "Struct UnixDatagram — pub struct UnixDatagram(/* private fields */); Available on Unix only.A Unix datagram socket.",
+        "meta": [
+          "Rust"
+        ]
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 78,
+    "checklist_command": "qs rust sort vectors",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust sort vectors",
+    "expected": "Slice sorting methods such as `sort` and `sort_by`.",
+    "test": "Plural collection task and method family.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.53425,
+    "provider": "rust",
+    "query": "sort vectors",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20slice%20sort",
+    "hits": [
+      {
+        "title": "slice::sort",
+        "url": "https://doc.rust-lang.org/std/primitive.slice.html#method.sort",
+        "snippet": "A dynamically-sized view into a contiguous sequence, `[T]`."
+      },
+      {
+        "title": "Search Rust standard library for std::slice::sort",
+        "url": "https://doc.rust-lang.org/std/?search=std%20slice%20sort",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 79,
+    "checklist_command": "qs rust binary_search",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust binary_search",
+    "expected": "Slice method `binary_search`.",
+    "test": "Bare snake_case method-name lookup.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.038881,
+    "provider": "rust",
+    "query": "binary_search",
+    "source_url": "https://doc.rust-lang.org/std/primitive.slice.html#method.binary_search",
+    "hits": [
+      {
+        "title": "slice::binary_search",
+        "url": "https://doc.rust-lang.org/std/primitive.slice.html#method.binary_search",
+        "snippet": "Binary search a sorted slice."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 80,
+    "checklist_command": "qs rust parse integer",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust parse integer",
+    "expected": "`str::parse` with integer types and `ParseIntError`.",
+    "test": "Natural conversion task retrieval.",
+    "score": 4,
+    "note": "`str::parse` is first, but integer types and `ParseIntError` are not surfaced.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.528265,
+    "provider": "rust",
+    "query": "parse integer",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20str%20parse",
+    "hits": [
+      {
+        "title": "str::parse",
+        "url": "https://doc.rust-lang.org/std/primitive.str.html#method.parse",
+        "snippet": "String slices."
+      },
+      {
+        "title": "Search Rust standard library for std::str::parse",
+        "url": "https://doc.rust-lang.org/std/?search=std%20str%20parse",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 81,
+    "checklist_command": "qs rust f64::total_cmp",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust f64::total_cmp",
+    "expected": "`f64::total_cmp`.",
+    "test": "Primitive-qualified floating-point method.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.4875,
+    "provider": "rust",
+    "query": "f64::total_cmp",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20f64%20total_cmp",
+    "hits": [
+      {
+        "title": "f64::total_cmp",
+        "url": "https://doc.rust-lang.org/std/primitive.f64.html#method.total_cmp",
+        "snippet": "A 64-bit floating-point type (specifically, the “binary64” type defined in IEEE 754-2008)."
+      },
+      {
+        "title": "Search Rust standard library for f64::total_cmp",
+        "url": "https://doc.rust-lang.org/std/?search=std%20f64%20total_cmp",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 82,
+    "checklist_command": "qs rust inclusive ranges",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust inclusive ranges",
+    "expected": "`RangeInclusive` and `..=` syntax.",
+    "test": "Plural concept mapped to type and operator.",
+    "score": 3,
+    "note": "The top three results are `RangeToInclusive`; the expected `RangeInclusive` is not surfaced.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.867958,
+    "provider": "rust",
+    "query": "inclusive ranges",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20inclusive%20ranges",
+    "hits": [
+      {
+        "title": "Struct RangeToInclusive",
+        "url": "https://devdocs.io/rust/std/range/struct.rangetoinclusive",
+        "snippet": "Struct RangeToInclusive — pub struct RangeToInclusive<Idx> { pub last: Idx, } A range only bounded inclusively above. The RangeToInclusive contains all values with x <= last. It cannot serve as an Iterator because it doesn’t have a starting point.",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct RangeToInclusive",
+        "url": "https://devdocs.io/rust/std/ops/struct.rangetoinclusive",
+        "snippet": "Struct RangeToInclusive — pub struct RangeToInclusive<Idx> { pub end: Idx, } A range only bounded inclusively above (..=end). The RangeToInclusive ..=end contains all values with x <= end. It cannot serve as an Iterator because it doesn’t have a starting point.",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct RangeToInclusive",
+        "url": "https://devdocs.io/rust/std/range/legacy/struct.rangetoinclusive",
+        "snippet": "Struct RangeToInclusive — pub struct RangeToInclusive<Idx> { pub end: Idx, } A range only bounded inclusively above (..=end). The RangeToInclusive ..=end contains all values with x <= end. It cannot serve as an Iterator because it doesn’t have a starting point.",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct RangeInclusive",
+        "url": "https://devdocs.io/rust/std/range/struct.rangeinclusive",
+        "snippet": "Struct RangeInclusive — pub struct RangeInclusive<Idx> { pub start: Idx, pub last: Idx, } A range bounded inclusively below and above. The RangeInclusive contains all values with x >= start and x <= last. It is empty unless start <= last.",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Struct RangeInclusive",
+        "url": "https://devdocs.io/rust/std/ops/struct.rangeinclusive",
+        "snippet": "Struct RangeInclusive — pub struct RangeInclusive<Idx> { /* private fields */ } A range bounded inclusively below and above (start..=end). The RangeInclusive start..=end contains all values with x >= start and x <= end. It is empty unless start <= end. This iterator is fused, but the specific values of start and end after iteration has finished are unspecif…",
+        "meta": [
+          "Rust"
+        ]
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 83,
+    "checklist_command": "qs rust chunks_exact_mut",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust chunks_exact_mut",
+    "expected": "Slice method `chunks_exact_mut`.",
+    "test": "Long bare snake_case identifier.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.044858,
+    "provider": "rust",
+    "query": "chunks_exact_mut",
+    "source_url": "https://doc.rust-lang.org/std/primitive.slice.html#method.chunks_exact_mut",
+    "hits": [
+      {
+        "title": "slice::chunks_exact_mut",
+        "url": "https://doc.rust-lang.org/std/primitive.slice.html#method.chunks_exact_mut",
+        "snippet": "Iterate over exact-size mutable slice chunks."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 84,
+    "checklist_command": "qs rust fixed size arrays",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust fixed size arrays",
+    "expected": "Array types `[T; N]` and array operations.",
+    "test": "Natural spaced type description.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.045249,
+    "provider": "rust",
+    "query": "fixed size arrays",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20fixed%20size%20arrays",
+    "hits": [
+      {
+        "title": "Array types",
+        "url": "https://devdocs.io/rust/reference/types/array",
+        "snippet": "Array types — Syntax ArrayType → [ Type ; Expression ] Syntax diagram ArrayType [ Type ; Expression ] An array is a fixed-size sequence of N elements of type T. The array type is written as [T; N]. The size is a constant expression that evaluates to a usize. Examples: #![allow(unused)] fn main() { // A stack-allocated array let array: [i32; 3] = [1, 2, 3]; …",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Primitive Type array",
+        "url": "https://devdocs.io/rust/std/primitive.array",
+        "snippet": "Primitive Type array — A fixed-size array, denoted [T; N], for the element type, T, and the non-negative compile-time constant size, N. There are two syntactic forms for creating an array: A list with each element, i.e., [x, y, z]. A repeat expression [expr; N] where N is how many times to repeat expr in the array. expr must either be: A value of a type imp…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Data Types",
+        "url": "https://devdocs.io/rust/book/ch03-02-data-types",
+        "snippet": "The Array Type — Another way to have a collection of multiple values is with an array. Unlike a tuple, every element of an array must have the same type. Unlike arrays in some other languages, arrays in Rust have a fixed length. We write the values in an array as a comma-separated list inside square brackets: Filename: src/main.rs fn main() { let a = [1, 2,…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Glossary",
+        "url": "https://devdocs.io/rust/reference/glossary",
+        "snippet": "Array — An array, sometimes also called a fixed-size array or an inline array, is a value describing a collection of elements, each selected by an index that can be computed at run time by the program. It occupies a contiguous region of memory.",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Crate std",
+        "url": "https://devdocs.io/rust/std/index",
+        "snippet": "array — A fixed-size array, denoted [T; N], for the element type, T, and the non-negative compile-time constant size, N.",
+        "meta": [
+          "Rust"
+        ]
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 85,
+    "checklist_command": "qs rust tuple structs",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust tuple structs",
+    "expected": "Tuple struct declarations and construction.",
+    "test": "Two-word data-type concept.",
+    "score": 3,
+    "note": "The structs topic is relevant, but tuple struct declaration and construction are not shown.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.038428,
+    "provider": "rust",
+    "query": "tuple structs",
+    "source_url": "https://doc.rust-lang.org/reference/items.html",
+    "hits": [
+      {
+        "title": "Structs, enums, and implementations",
+        "url": "https://doc.rust-lang.org/reference/items.html",
+        "snippet": "Rust item syntax defines structs, enums, and inherent impl blocks."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 86,
+    "checklist_command": "qs rust named field structs",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust named field structs",
+    "expected": "Structs with named fields.",
+    "test": "Natural contrastive data-model phrase.",
+    "score": 3,
+    "note": "The structs topic is relevant, but named-field syntax is not shown.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.039518,
+    "provider": "rust",
+    "query": "named field structs",
+    "source_url": "https://doc.rust-lang.org/reference/items.html",
+    "hits": [
+      {
+        "title": "Structs, enums, and implementations",
+        "url": "https://doc.rust-lang.org/reference/items.html",
+        "snippet": "Rust item syntax defines structs, enums, and inherent impl blocks."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 87,
+    "checklist_command": "qs rust enums with data",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust enums with data",
+    "expected": "Enum variants containing fields.",
+    "test": "Task-oriented algebraic-data-type query.",
+    "score": 3,
+    "note": "The enums topic is relevant, but data-carrying variant syntax is not shown.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.035409,
+    "provider": "rust",
+    "query": "enums with data",
+    "source_url": "https://doc.rust-lang.org/reference/items.html",
+    "hits": [
+      {
+        "title": "Structs, enums, and implementations",
+        "url": "https://doc.rust-lang.org/reference/items.html",
+        "snippet": "Rust item syntax defines structs, enums, and inherent impl blocks."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 88,
+    "checklist_command": "qs rust impl blocks",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust impl blocks",
+    "expected": "Inherent implementations using `impl`.",
+    "test": "Plural language-structure phrase.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.049006,
+    "provider": "rust",
+    "query": "impl blocks",
+    "source_url": "https://doc.rust-lang.org/reference/items.html",
+    "hits": [
+      {
+        "title": "Structs, enums, and implementations",
+        "url": "https://doc.rust-lang.org/reference/items.html",
+        "snippet": "Rust item syntax defines structs, enums, and inherent impl blocks."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 89,
+    "checklist_command": "qs rust Drop::drop",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Drop::drop",
+    "expected": "The `Drop` trait and `drop` method.",
+    "test": "Exact trait-method path.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.39348,
+    "provider": "rust",
+    "query": "Drop::drop",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20ops%20Drop%20drop",
+    "hits": [
+      {
+        "title": "Drop::drop",
+        "url": "https://doc.rust-lang.org/std/ops/trait.Drop.html#method.drop",
+        "snippet": "Custom code within the destructor."
+      },
+      {
+        "title": "Search Rust standard library for Drop::drop",
+        "url": "https://doc.rust-lang.org/std/?search=std%20ops%20Drop%20drop",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 90,
+    "checklist_command": "qs rust Default::default",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Default::default",
+    "expected": "The `Default` trait and `default` method.",
+    "test": "Qualified constructor convention.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.385054,
+    "provider": "rust",
+    "query": "Default::default",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20default%20Default%20default",
+    "hits": [
+      {
+        "title": "Default::default",
+        "url": "https://doc.rust-lang.org/std/default/trait.Default.html#tymethod.default",
+        "snippet": "A trait for giving a type a useful default value."
+      },
+      {
+        "title": "Search Rust standard library for Default::default",
+        "url": "https://doc.rust-lang.org/std/?search=std%20default%20Default%20default",
+        "snippet": "Searches matching items in std, core, and alloc."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 91,
+    "checklist_command": "qs rust Clone vs Copy",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Clone vs Copy",
+    "expected": "Semantics of the `Clone` and `Copy` traits.",
+    "test": "Comparison-style trait query.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.026798,
+    "provider": "rust",
+    "query": "Clone vs Copy",
+    "source_url": "https://doc.rust-lang.org/book/appendix-03-derivable-traits.html#clone-and-copy-for-duplicating-values",
+    "hits": [
+      {
+        "title": "Clone and Copy",
+        "url": "https://doc.rust-lang.org/book/appendix-03-derivable-traits.html#clone-and-copy-for-duplicating-values",
+        "snippet": "Copy duplicates implicitly; Clone duplicates explicitly."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 92,
+    "checklist_command": "qs rust derive PartialEq and Ord",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust derive PartialEq and Ord",
+    "expected": "Derived equality and ordering traits.",
+    "test": "Natural derive task with exact trait names.",
+    "score": 3,
+    "note": "Results cover PartialOrd and related derives, but not the requested combined PartialEq and Ord behavior.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.990037,
+    "provider": "rust",
+    "query": "derive PartialEq and Ord",
+    "source_url": "https://doc.rust-lang.org/std/?search=std%20derive%20PartialEq%20and%20Ord",
+    "hits": [
+      {
+        "title": "Examples of incorrect PartialOrd implementations",
+        "url": "https://devdocs.io/rust/std/cmp/trait.partialord",
+        "snippet": "Examples of incorrect PartialOrd implementations — use std::cmp::Ordering; #[derive(PartialEq, Debug)] struct Character { health: u32, experience: u32, } impl PartialOrd for Character { fn partial_cmp(&self, other: &Self) -> Option<Ordering> { Some(self.health.cmp(&other.health)) } } let a = Character { health: 10, experience: 5, }; let b = Character { heal…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Derive Macro PartialOrd",
+        "url": "https://devdocs.io/rust/std/cmp/derive.partialord",
+        "snippet": "Derive Macro PartialOrd — #[derive(PartialOrd)] Derive macro generating an impl of the trait PartialOrd. The behavior of this macro is described in detail here. &copy; 2010 The Rust Project DevelopersLicensed under the Apache License, Version 2.0 or the MIT license, at your option. https://doc.rust-lang.org/std/cmp/derive.PartialOrd.html",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Clone and PartialEq/Eq",
+        "url": "https://devdocs.io/rust/std/clone/trait.clone",
+        "snippet": "Clone and PartialEq/Eq — Clone is intended for the duplication of objects. Consequently, when implementing both Clone and PartialEq, the following property is expected to hold: x == x -> x.clone() == x In other words, if an object compares equal to itself, its clone must also compare equal to the original. For types that also implement Eq – for which x == x…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Appendix C: Derivable Traits",
+        "url": "https://devdocs.io/rust/book/appendix-03-derivable-traits",
+        "snippet": "PartialOrd and Ord for Ordering Comparisons — The PartialOrd trait allows you to compare instances of a type for sorting purposes. A type that implements PartialOrd can be used with the <, >, <=, and >= operators. You can only apply the PartialOrd trait to types that also implement PartialEq. Deriving PartialOrd implements the partial_cmp method, which retu…",
+        "meta": [
+          "Rust"
+        ]
+      },
+      {
+        "title": "Derive Macro PartialEq",
+        "url": "https://devdocs.io/rust/std/cmp/derive.partialeq",
+        "snippet": "Derive Macro PartialEq — #[derive(PartialEq)] Derive macro generating an impl of the trait PartialEq. The behavior of this macro is described in detail here. &copy; 2010 The Rust Project DevelopersLicensed under the Apache License, Version 2.0 or the MIT license, at your option. https://doc.rust-lang.org/std/cmp/derive.PartialEq.html",
+        "meta": [
+          "Rust"
+        ]
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 93,
+    "checklist_command": "qs rust unit tests",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust unit tests",
+    "expected": "`#[test]` functions and the test harness.",
+    "test": "Common plural testing concept.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.020229,
+    "provider": "rust",
+    "query": "unit tests",
+    "source_url": "https://doc.rust-lang.org/book/ch11-01-writing-tests.html",
+    "hits": [
+      {
+        "title": "Writing automated tests",
+        "url": "https://doc.rust-lang.org/book/ch11-01-writing-tests.html",
+        "snippet": "Use #[test] functions with Rust's test harness."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 94,
+    "checklist_command": "qs rust documentation tests",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust documentation tests",
+    "expected": "Rustdoc code examples run as doctests.",
+    "test": "Expanded phrase for doctest discovery.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.034775,
+    "provider": "rust",
+    "query": "documentation tests",
+    "source_url": "https://doc.rust-lang.org/rustdoc/write-documentation/documentation-tests.html",
+    "hits": [
+      {
+        "title": "Rustdoc documentation tests",
+        "url": "https://doc.rust-lang.org/rustdoc/write-documentation/documentation-tests.html",
+        "snippet": "Rustdoc compiles and runs Rust code blocks as documentation tests."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 95,
+    "checklist_command": "qs rust Cargo features",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Cargo features",
+    "expected": "Cargo feature flags and optional dependencies.",
+    "test": "Tooling concept with case variation.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.031744,
+    "provider": "rust",
+    "query": "Cargo features",
+    "source_url": "https://doc.rust-lang.org/cargo/reference/features.html",
+    "hits": [
+      {
+        "title": "Cargo features and optional dependencies",
+        "url": "https://doc.rust-lang.org/cargo/reference/features.html",
+        "snippet": "Cargo feature flags enable conditional compilation and optional dependencies."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 96,
+    "checklist_command": "qs rust cfg target_os",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust cfg target_os",
+    "expected": "Conditional compilation with `#[cfg(target_os = ...)]`.",
+    "test": "Attribute keyword and snake_case key.",
+    "score": 4,
+    "note": "The attributes result mentions conditional compilation, but not `target_os` syntax.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.033241,
+    "provider": "rust",
+    "query": "cfg target_os",
+    "source_url": "https://doc.rust-lang.org/reference/attributes.html",
+    "hits": [
+      {
+        "title": "Rust attributes",
+        "url": "https://doc.rust-lang.org/reference/attributes.html",
+        "snippet": "Attributes control conditional compilation, derives, crate behavior, and tools."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 97,
+    "checklist_command": "qs rust no_std",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust no_std",
+    "expected": "The `#![no_std]` attribute and `core`.",
+    "test": "Underscore feature term mapped to attribute.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.029801,
+    "provider": "rust",
+    "query": "no_std",
+    "source_url": "https://doc.rust-lang.org/reference/names/preludes.html#the-no_std-attribute",
+    "hits": [
+      {
+        "title": "The no_std attribute",
+        "url": "https://doc.rust-lang.org/reference/names/preludes.html#the-no_std-attribute",
+        "snippet": "Use core instead of the standard-library prelude in no_std crates."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 98,
+    "checklist_command": "qs rust intra-doc links",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust intra-doc links",
+    "expected": "Rustdoc intra-doc link syntax.",
+    "test": "Hyphenated documentation concept.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.022924,
+    "provider": "rust",
+    "query": "intra-doc links",
+    "source_url": "https://doc.rust-lang.org/rustdoc/write-documentation/linking-to-items-by-name.html",
+    "hits": [
+      {
+        "title": "Rustdoc intra-doc links",
+        "url": "https://doc.rust-lang.org/rustdoc/write-documentation/linking-to-items-by-name.html",
+        "snippet": "Link to Rust items by path and let rustdoc check the link."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 99,
+    "checklist_command": "qs rust Rust 2024 edition",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust Rust 2024 edition",
+    "expected": "The Rust 2024 Edition Guide and migration changes.",
+    "test": "Versioned natural-language query.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.023565,
+    "provider": "rust",
+    "query": "Rust 2024 edition",
+    "source_url": "https://doc.rust-lang.org/edition-guide/rust-2024/index.html",
+    "hits": [
+      {
+        "title": "Rust 2024 Edition Guide",
+        "url": "https://doc.rust-lang.org/edition-guide/rust-2024/index.html",
+        "snippet": "Migration notes and changes for the Rust 2024 edition."
+      }
+    ],
+    "parse_error": null
+  },
+  {
+    "index": 100,
+    "checklist_command": "qs rust raw identifiers",
+    "executed_command": "/tmp/qs-gate/release/qs --json rust raw identifiers",
+    "expected": "Raw identifiers such as `r#type`.",
+    "test": "Plural naming concept mapped to unusual syntax.",
+    "score": 5,
+    "note": "The first result directly matches the expected topic and gives useful context.",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.015849,
+    "provider": "rust",
+    "query": "raw identifiers",
+    "source_url": "https://doc.rust-lang.org/reference/identifiers.html",
+    "hits": [
+      {
+        "title": "Identifiers",
+        "url": "https://doc.rust-lang.org/reference/identifiers.html",
+        "snippet": "Raw identifiers such as r#type use a keyword as an identifier."
+      }
+    ],
+    "parse_error": null
+  }
+]

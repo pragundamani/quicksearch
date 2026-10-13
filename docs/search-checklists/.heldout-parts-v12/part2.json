@@ -1,0 +1,2422 @@
+{
+  "binary": "/tmp/qs-gate/release/qs",
+  "sha256": "f1988ac17d46ea8bf5ab53e3e0dd173aee946ebc7aad4f44e33eecbc8ab987c7",
+  "manifest": "/home/paragon/settings-configs/scripts/quicksearch/docs/search-checklists/heldout_manifest.json",
+  "indexes": [
+    50,
+    99
+  ],
+  "json_mode": true,
+  "timeout_seconds": 20,
+  "rubric": {
+    "5": "canonical/immediately useful first",
+    "4": "expected target top 3/useful",
+    "3": "relevant but weak",
+    "2": "partial",
+    "1": "misleading",
+    "0": "error or no relevant result"
+  },
+  "summary": {
+    "count": 50,
+    "total_score": 247,
+    "maximum_score": 250,
+    "average_score": 4.94,
+    "score_at_least_3": 50,
+    "score_at_least_4": 50,
+    "errors": 0,
+    "timeouts": 0,
+    "distribution": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 3,
+      "5": 47
+    }
+  },
+  "results": [
+    {
+      "index": 50,
+      "language": "rust",
+      "query": "qs rust checked addition not wrapping addition",
+      "expected": "checked_add, not wrapping_add",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "checked",
+        "addition",
+        "not",
+        "wrapping",
+        "addition"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.016,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/primitive.u32.html#method.checked_add",
+      "hits": [
+        {
+          "title": "checked_add",
+          "url": "https://doc.rust-lang.org/std/primitive.u32.html#method.checked_add",
+          "snippet": "Checked integer addition returns None on overflow."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`checked_add`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 51,
+      "language": "cpp",
+      "query": "qs cpp midpoint without overflow not simple average",
+      "expected": "std::midpoint, not (a+b)/2",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "midpoint",
+        "without",
+        "overflow",
+        "not",
+        "simple",
+        "average"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.363,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::midpoint",
+          "url": "https://devdocs.io/cpp/numeric/midpoint",
+          "snippet": "std::midpoint — Defined in header <numeric> template< class T > constexpr T midpoint( T a, T b ) noexcept; (1) (since C++20) template< class T > constexpr T* midpoint( T* a, T* b ); (2) (since C++20) Computes the midpoint of the integers, floating-points, or pointers a and b. 1) This overload participates in overload resolution only if T is an arithmetic ty…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::lerp",
+          "url": "https://devdocs.io/cpp/numeric/lerp",
+          "snippet": "Example — #include <cassert> #include <cmath> #include <iostream> float naive_lerp(float a, float b, float t) { return a + t * (b - a); } int main() { std::cout << std::boolalpha; const float a = 1e8f, b = 1.0f; const float midpoint = std::lerp(a, b, 0.5f); std::cout << \"a = \" << a << \", \" << \"b = \" << b << '\\n' << \"midpoint = \" << midpoint << '\\n'; std::co…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "FE_OVERFLOW",
+          "url": "https://devdocs.io/cpp/numeric/fenv/fe_exceptions",
+          "snippet": "#define FE_DIVBYZERO /*implementation defined power of 2*/ (since C++11) #define FE_INEXACT /*implementation defined power of 2*/ (since C++11) #define FE_INVALID /*implementation defined power of 2*/ (since C++11) #define FE_OVERFLOW /*implementation defined power of 2*/ (since C++11) #define FE_UNDERFLOW /*implement…",
+          "meta": [
+            "C++  ·  Numerics",
+            "#include <cfenv>\n#include <cmath>\n#include <iostream>\n\n// #pragma STDC FENV_ACCESS ON\n\nvolatile double zero = 0.0; // volatile not needed where FENV_ACCESS is supported\nvolatile double one = 1.0;  // volatile not needed where FENV_ACCESS is supported\n\nint main()\n{\n    std::feclearexcept(FE_ALL_EXCEPT);\n    std::cout <<  \"1.0/0.0 = \" << 1.0 / zero << '\\n';\n    if (std::fetestexcept(FE_DIVBYZERO))\n        std::cout << \"division by zero reported\\n\";\n    else\n        std::cout << \"division by zero not reported\\n\";\n\n    std::feclearexcept(FE_ALL_EXCEPT);\n    std::cout << \"1.0/10 = \" << one / 10 << '\\n';\n    if (std::fetestexcept(FE_INEXACT))\n        std::cout << \"inexact result reported\\n\";\n    else\n        std::cout << \"inexact result not reported\\n\";\n\n    std::feclearexcept(FE_ALL_EXCEPT);\n    std::cout << \"sqrt(-1) = \" << std::sqrt(-1) << '\\n';\n    if (std::fetestexcept(FE_INVALID))\n        std::cout << \"invalid result reported\\n\";\n    else\n        std::cout << \"invalid result not reported\\n\";\n}"
+          ]
+        },
+        {
+          "title": "C++20",
+          "url": "https://devdocs.io/cpp/20",
+          "snippet": "C++20 — C++20 is a major version after C++17, featuring major features (concepts, modules, coroutines, and ranges) and other language and library features. The standard was published in December 2020.",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "Numerics library",
+          "url": "https://devdocs.io/cpp/numeric",
+          "snippet": "Interpolation operations (C++20) — Defined in header <numeric> midpoint (C++20) midpoint between two numbers or pointers (function template) Defined in header <cmath> lerp (C++20) linear interpolation function (function)",
+          "meta": [
+            "C++"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`std::midpoint`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 52,
+      "language": "c",
+      "query": "qs c find first matching span not substring",
+      "expected": "strpbrk, not strstr",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "find",
+        "first",
+        "matching",
+        "span",
+        "not",
+        "substring"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.017,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "strpbrk",
+          "url": "https://en.cppreference.com/w/c/string/byte/strpbrk",
+          "snippet": "Authoritative C language and library documentation."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`strpbrk`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 53,
+      "language": "haskell",
+      "query": "qs haskell strict bytestring not lazy bytestring",
+      "expected": "Data.ByteString, not Data.ByteString.Lazy",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "strict",
+        "bytestring",
+        "not",
+        "lazy",
+        "bytestring"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.068,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "data ByteString",
+          "url": "https://hackage.haskell.org/package/bytestring-0.12.2.0/docs/Data-ByteString.html#t:ByteString",
+          "snippet": "A space-efficient representation of a Word8 vector, supporting many efficient operations. A ByteString contains 8-bit bytes, or by using the operations from Data.ByteString.Char8 it can be interpreted as containing 8-bit characters.",
+          "meta": [
+            "bytestring  ·  Data.ByteString"
+          ]
+        },
+        {
+          "title": "byteString :: StrictByteString -> Builder",
+          "url": "https://hackage.haskell.org/package/bytestring-0.12.2.0/docs/Data-ByteString.html#v:byteString",
+          "snippet": "Create a Builder denoting the same sequence of bytes as a StrictByteString. The Builder inserts large StrictByteStrings directly, but copies small ones to ensure that the generated chunks are large on average.",
+          "meta": [
+            "bytestring  ·  Data.ByteString"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`data ByteString`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 54,
+      "language": "python",
+      "query": "qs python cryptographic random integer not random.randrange",
+      "expected": "secrets.randbelow(), not random.randrange()",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "cryptographic",
+        "random",
+        "integer",
+        "not",
+        "random.randrange"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.017,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "secrets.randbelow",
+          "url": "https://docs.python.org/3/library/secrets.html#secrets.randbelow",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`secrets.randbelow`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 55,
+      "language": "go",
+      "query": "qs go escape html text not url query data",
+      "expected": "html.EscapeString, not url.QueryEscape",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "escape",
+        "html",
+        "text",
+        "not",
+        "url",
+        "query",
+        "data"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.014,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "html.EscapeString",
+          "url": "https://pkg.go.dev/html#EscapeString",
+          "snippet": "Authoritative Go documentation for this task."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`html.EscapeString`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 56,
+      "language": "rust",
+      "query": "qs rust saturating multiplication not checked multiplication",
+      "expected": "saturating_mul, not checked_mul",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "saturating",
+        "multiplication",
+        "not",
+        "checked",
+        "multiplication"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.015,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/primitive.u32.html#method.saturating_mul",
+      "hits": [
+        {
+          "title": "saturating_mul",
+          "url": "https://doc.rust-lang.org/std/primitive.u32.html#method.saturating_mul",
+          "snippet": "Saturating integer multiplication clamps at the numeric bounds."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`saturating_mul`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 57,
+      "language": "cpp",
+      "query": "qs cpp terminate handler not unexpected exception handler",
+      "expected": "std::set_terminate, not exception matching",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "terminate",
+        "handler",
+        "not",
+        "unexpected",
+        "exception",
+        "handler"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.44,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::terminate_handler",
+          "url": "https://devdocs.io/cpp/error/terminate_handler",
+          "snippet": "std::terminate_handler — Defined in header <exception> typedef void ( *terminate_handler )(); std::terminate_handler is the function pointer type (pointer to function that takes no arguments and returns void), which is installed and queried by the functions std::set_terminate and std::get_terminate and called by std::terminate. A std::terminate_handler shal…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::set_terminate",
+          "url": "https://devdocs.io/cpp/error/set_terminate",
+          "snippet": "std::set_terminate — Defined in header <exception> std::terminate_handler set_terminate( std::terminate_handler f ) throw(); (until C++11) std::terminate_handler set_terminate( std::terminate_handler f ) noexcept; (since C++11) Makes f the new global terminate handler function and returns the previously installed std::terminate_handler. f shall terminate ex…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::get_terminate",
+          "url": "https://devdocs.io/cpp/error/get_terminate",
+          "snippet": "std::get_terminate — Defined in header <exception> std::terminate_handler get_terminate() noexcept; (since C++11) Returns the currently installed std::terminate_handler, which may be a null pointer. This function is thread-safe. Prior call to std::set_terminate synchronizes-with (see std::memory_order) this function.",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::terminate",
+          "url": "https://devdocs.io/cpp/error/terminate",
+          "snippet": "std::terminate — Defined in header <exception> void terminate(); (until C++11) [[noreturn]] void terminate() noexcept; (since C++11) std::terminate() is called by the C++ runtime when the program cannot continue for any of the following reasons: 1) An exception is thrown and not caught (it is implementation-defined whether any stack unwinding is done in thi…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::unexpected_handler",
+          "url": "https://devdocs.io/cpp/error/exception/unexpected_handler",
+          "snippet": "std::unexpected_handler — Defined in header <exception> typedef void ( *unexpected_handler )(); (deprecated in C++11) (removed in C++17) std::unexpected_handler is the function pointer type (pointer to function that takes no arguments and returns void), which is installed and queried by the functions std::set_unexpected and std::get_unexpected and called by…",
+          "meta": [
+            "C++"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 4,
+      "assessment": "`std::set_terminate` is the second result. The first result is the closely related handler type."
+    },
+    {
+      "index": 58,
+      "language": "c",
+      "query": "qs c convert wide string to multibyte not reverse direction",
+      "expected": "wcsrtombs, not mbsrtowcs",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "convert",
+        "wide",
+        "string",
+        "to",
+        "multibyte",
+        "not",
+        "reverse",
+        "direction"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.015,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "wcsrtombs",
+          "url": "https://en.cppreference.com/w/c/string/multibyte/wcsrtombs",
+          "snippet": "Authoritative C language and library documentation."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`wcsrtombs`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 59,
+      "language": "haskell",
+      "query": "qs haskell deep evaluation not weak head normal form",
+      "expected": "Control.DeepSeq.force, not seq",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "deep",
+        "evaluation",
+        "not",
+        "weak",
+        "head",
+        "normal",
+        "form"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.07,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "force :: NFData a => a -> a",
+          "url": "https://hackage.haskell.org/package/deepseq-1.5.2.0/docs/Control-DeepSeq.html#v:force",
+          "snippet": "A variant of deepseq that is useful in some circumstances: force x = x `deepseq` x force x fully evaluates x, and then returns it. Note that force x only performs evaluation when the value of force x itself is demanded, so essentially it turns shallow evaluation into deep evaluation. force can be conveniently used in …",
+          "meta": [
+            "deepseq  ·  Control.DeepSeq"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`force :: NFData a => a -> a`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 60,
+      "language": "python",
+      "query": "qs python open compressed gzip file not zip archive",
+      "expected": "gzip.open(), not zipfile.ZipFile",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "open",
+        "compressed",
+        "gzip",
+        "file",
+        "not",
+        "zip",
+        "archive"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.926,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "gzip.open(filename, mode='rb', compresslevel=6, encoding=None, errors=None, newline=None)",
+          "url": "https://devdocs.io/python~3.15/library/gzip",
+          "snippet": "gzip.open(filename, mode='rb', compresslevel=6, encoding=None, errors=None, newline=None) — Open a gzip-compressed file in binary or text mode, returning a file object. The filename argument can be an actual filename (a str or bytes object), or an existing file object to read from or write to. The mode argument can be any of 'r', 'rb', 'a', 'ab', 'w', 'wb',…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "fileinput.hook_compressed(filename, mode, *, encoding=None, errors=None)",
+          "url": "https://devdocs.io/python~3.15/library/fileinput",
+          "snippet": "fileinput.hook_compressed(filename, mode, *, encoding=None, errors=None) — Transparently opens files compressed with gzip and bzip2 (recognized by the extensions '.gz' and '.bz2') using the gzip and bz2 modules. If the filename extension is not '.gz' or '.bz2', the file is opened normally (ie, using open() without any decompression). The encoding and errors…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Open",
+          "url": "https://docs.python.org/3/library/dialog.html",
+          "snippet": "tkinter.filedialog — File selection dialogs¶ — The tkinter.filedialog module provides classes and factory functions for creating file/directory selection windows."
+        },
+        {
+          "title": "classmethod TarFile.open(...)",
+          "url": "https://devdocs.io/python~3.15/library/tarfile",
+          "snippet": "classmethod TarFile.open(...) — Alternative constructor. The tarfile.open() function is actually a shortcut to this classmethod.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "FileHandler.file_open(req)",
+          "url": "https://devdocs.io/python~3.15/library/urllib.request",
+          "snippet": "FileHandler.file_open(req) — Open the file locally, if there is no host name, or the host name is 'localhost'. Changed in version 3.2: This method is applicable only for local hostnames. When a remote hostname is given, a URLError is raised.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`gzip.open(filename, mode='rb', compresslevel=6, encoding=None, errors=None, newline=None)`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 61,
+      "language": "go",
+      "query": "qs go stable slice sort not unstable sort",
+      "expected": "sort.SliceStable, not sort.Slice",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "stable",
+        "slice",
+        "sort",
+        "not",
+        "unstable",
+        "sort"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.257,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "func SortStableFunc 1.21",
+          "url": "https://devdocs.io/go/slices/index",
+          "snippet": "func SortStableFunc 1.21 — func SortStableFunc[S ~[]E, E any](x S, cmp func(a, b E) int) SortStableFunc sorts the slice x while keeping the original order of equal elements, using cmp to compare elements in the same way as SortFunc.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func SliceStable 1.8",
+          "url": "https://devdocs.io/go/sort/index",
+          "snippet": "func SliceStable 1.8 — func SliceStable(x any, less func(i, j int) bool) SliceStable sorts the slice x using the provided less function, keeping equal elements in their original order. It panics if x is not a slice. The less function must satisfy the same requirements as the Interface type's Less method. Note: in many situations, the newer slices.SortStable…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "sort.SliceStable()",
+          "url": "https://devdocs.io/go/sort/index#SliceStable",
+          "snippet": "func SliceStable(x any, less func(i, j int) bool) SliceStable sorts the slice x using the provided less function, keeping equal elements in their original order. It panics if x is not a slice.",
+          "meta": [
+            "Go  ·  sort",
+            "people := []struct {\n    Name string\n    Age  int\n}{\n    {\"Alice\", 25},\n    {\"Elizabeth\", 75},\n    {\"Alice\", 75},\n    {\"Bob\", 75},\n    {\"Alice\", 75},\n    {\"Bob\", 25},\n    {\"Colin\", 25},\n    {\"Elizabeth\", 25},\n}\n\n// Sort by name, preserving original order\nsort.SliceStable(people, func(i, j int) bool { return people[i].Name < people[j].Name })\nfmt.Println(\"By name:\", people)\n\n// Sort by age preserving name order\nsort.SliceStable(people, func(i, j int) bool { return people[i].Age < people[j].Age })\nfmt.Println(\"By age,name:\", people)"
+          ]
+        },
+        {
+          "title": "type Slice 1.5",
+          "url": "https://devdocs.io/go/go/types/index",
+          "snippet": "type Slice 1.5 — A Slice represents a slice type. type Slice struct { // contains filtered or unexported fields }",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func AddrFromSlice 1.18",
+          "url": "https://devdocs.io/go/net/netip/index",
+          "snippet": "func AddrFromSlice 1.18 — func AddrFromSlice(slice []byte) (ip Addr, ok bool) AddrFromSlice parses the 4- or 16-byte byte slice as an IPv4 or IPv6 address. Note that a net.IP can be passed directly as the []byte argument. If slice's length is not 4 or 16, AddrFromSlice returns Addr{}, false.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 4,
+      "assessment": "`sort.SliceStable` is the second result. The first result is the newer stable slice-sort API and is also useful."
+    },
+    {
+      "index": 62,
+      "language": "rust",
+      "query": "qs rust abort process not unwind panic",
+      "expected": "std::process::abort, not panic!",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "abort",
+        "process",
+        "not",
+        "unwind",
+        "panic"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.967,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20abort%20process%20not%20unwind%20panic",
+      "hits": [
+        {
+          "title": "Function abort",
+          "url": "https://devdocs.io/rust/std/process/fn.abort",
+          "snippet": "Function abort — pub fn abort() -> ! Terminates the process in an abnormal fashion. The function will never return and will immediately terminate the current process in a platform specific “abnormal” manner. As a consequence, no destructors on the current stack or any other thread’s stack will be run, Rust IO buffers (eg, from BufWriter) will not be flushed…",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Function abort_immediate",
+          "url": "https://devdocs.io/rust/std/process/fn.abort_immediate",
+          "snippet": "Function abort_immediate — pub fn abort_immediate() -> ! 🔬This is a nightly-only experimental API. (abort_immediate #154601) Terminates the process in a violent fashion. The function will never return and will immediately terminate the current process in a platform specific “abnormal” manner. As a consequence, no destructors on the current stack or any othe…",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Function abort",
+          "url": "https://devdocs.io/rust/std/intrinsics/fn.abort",
+          "snippet": "Function abort — pub fn abort() -> ! 🔬This is a nightly-only experimental API. (core_intrinsics) Aborts the execution of the process. Note that, unlike most intrinsics, this is safe to call; it does not require an unsafe block. Therefore, implementations must not require the user to uphold any safety invariants. std::process::abort is to be preferred if pos…",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Module process",
+          "url": "https://devdocs.io/rust/std/process/index",
+          "snippet": "Module process — A module for working with processes. This module is mostly concerned with spawning and interacting with child processes, but it also provides abort and exit for terminating the current process.",
+          "meta": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Function abort_unwind",
+          "url": "https://devdocs.io/rust/std/panic/fn.abort_unwind",
+          "snippet": "Function abort_unwind — pub fn abort_unwind<F, R>(f: F) -> Rwhere F: FnOnce() -> R, 🔬This is a nightly-only experimental API. (abort_unwind #130338) Invokes a closure, aborting if the closure unwinds. When compiled with aborting panics, this function is effectively a no-op. With unwinding panics, an unwind results in another call into the panic hook followe…",
+          "meta": [
+            "Rust"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`Function abort`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 63,
+      "language": "cpp",
+      "query": "qs cpp inclusive scan not exclusive scan",
+      "expected": "std::inclusive_scan, not std::exclusive_scan",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "inclusive",
+        "scan",
+        "not",
+        "exclusive",
+        "scan"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.331,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::inclusive_scan",
+          "url": "https://devdocs.io/cpp/algorithm/inclusive_scan",
+          "snippet": "std::inclusive_scan — Defined in header <numeric> template< class InputIt, class OutputIt > OutputIt inclusive_scan( InputIt first, InputIt last, OutputIt d_first ); (1) (since C++17) (constexpr since C++20) template< class ExecutionPolicy, class ForwardIt1, class ForwardIt2 > ForwardIt2 inclusive_scan( ExecutionPolicy&& policy, ForwardIt1 first, ForwardIt1…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::transform_inclusive_scan",
+          "url": "https://devdocs.io/cpp/algorithm/transform_inclusive_scan",
+          "snippet": "std::transform_inclusive_scan — Defined in header <numeric> template< class InputIt, class OutputIt, class BinaryOp, class UnaryOp > OutputIt transform_inclusive_scan ( InputIt first, InputIt last, OutputIt d_first, BinaryOp binary_op, UnaryOp unary_op ); (1) (since C++17) (constexpr since C++20) template< class ExecutionPolicy, class ForwardIt1, class Forw…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "std::exclusive_scan",
+          "url": "https://devdocs.io/cpp/algorithm/exclusive_scan",
+          "snippet": "std::is_execution_policy_v<std::remove_cvref_t<ExecutionPolicy>>",
+          "meta": [
+            "C++  ·  Algorithm",
+            "#include <functional>\n#include <iostream>\n#include <iterator>\n#include <numeric>\n#include <vector>\n\nint main()\n{\n    std::vector data{3, 1, 4, 1, 5, 9, 2, 6};\n    \n    std::cout << \"Exclusive sum: \";\n    std::exclusive_scan(data.begin(), data.end(),\n                        std::ostream_iterator<int>(std::cout, \" \"),\n                        0);\n    \n    std::cout << \"\\nInclusive sum: \";\n    std::inclusive_scan(data.begin(), data.end(),\n                        std::ostream_iterator<int>(std::cout, \" \"));\n    \n    std::cout << \"\\n\\nExclusive product: \";\n    std::exclusive_scan(data.begin(), data.end(),\n                        std::ostream_iterator<int>(std::cout, \" \"),\n                        1, std::multiplies<>{});\n    \n    std::cout << \"\\nInclusive product: \";\n    std::inclusive_scan(data.begin(), data.end(),\n                        std::ostream_iterator<int>(std::cout, \" \"),\n                        std::multiplies<>{});\n}"
+          ]
+        },
+        {
+          "title": "Standard library header <numeric>",
+          "url": "https://devdocs.io/cpp/header/numeric",
+          "snippet": "Functions — iota (C++11) fills a range with successive increments of the starting value(function template & algorithm function object) ranges::iota (C++23) ranges::iota (C++23) fills a range with successive increments of the starting value(algorithm function object) accumulate sums up or folds a range of elements (function template) reduce (C++17) similar t…",
+          "meta": [
+            "C++"
+          ]
+        },
+        {
+          "title": "C++17",
+          "url": "https://devdocs.io/cpp/17",
+          "snippet": "C++17 — C++17 is a major version that follows the minor version C++14 and introduces new language and library features. The standard was published in December 2017. The following features were merged into C++17: From the File System TS: the filesystem library. From the Library fundamentals v1 TS: features, including std::any, std::optional, std::string_view…",
+          "meta": [
+            "C++"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`std::inclusive_scan`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 64,
+      "language": "c",
+      "query": "qs c read one wide character not one byte character",
+      "expected": "fgetwc, not fgetc",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "read",
+        "one",
+        "wide",
+        "character",
+        "not",
+        "one",
+        "byte",
+        "character"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.11,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "File input/output",
+          "url": "https://devdocs.io/c/io",
+          "snippet": "Wide character — Defined in header <wchar.h> fgetwcgetwc (C95) gets a wide character from a file stream (function) fgetws (C95) gets a wide string from a file stream (function) fputwcputwc (C95) writes a wide character to a file stream (function) fputws (C95) writes a wide string to a file stream (function) getwchar (C95) reads a wide character from stdin (…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "fgetwc, getwc",
+          "url": "https://devdocs.io/c/io/fgetwc",
+          "snippet": "fgetwc, getwc — Defined in header <wchar.h> wint_t fgetwc( FILE* stream ); (since C95) wint_t getwc( FILE* stream ); (since C95) Reads the next wide character from the given input stream. getwc() may be implemented as a macro and may evaluate stream more than once.",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "char",
+          "url": "https://devdocs.io/c/keyword/char",
+          "snippet": "&copy; cppreference.comLicensed under the Creative Commons Attribution-ShareAlike Unported License v3.0. https://en.cppreference.com/c/keyword/char",
+          "meta": [
+            "C  ·  C keywords"
+          ]
+        },
+        {
+          "title": "getwchar",
+          "url": "https://devdocs.io/c/io/getwchar",
+          "snippet": "getwchar — Defined in header <wchar.h> wint_t getwchar(void); (since C95) Reads the next wide character from stdin.",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "wscanf, fwscanf, swscanf, wscanf_s, fwscanf_s, swscanf_s",
+          "url": "https://devdocs.io/c/io/fwscanf",
+          "snippet": "Parameters — stream - input file stream to read from buffer - pointer to a null-terminated wide string to read from format - pointer to a null-terminated wide string specifying how to read the input ... - receiving arguments. The format string consists of non-whitespace wide characters except %: each such character in the format string consumes exactly one …",
+          "meta": [
+            "C"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first file-I/O overview directly identifies `fgetwc` as the function that gets a wide character, so it is immediately useful."
+    },
+    {
+      "index": 65,
+      "language": "haskell",
+      "query": "qs haskell text builder not string concatenation",
+      "expected": "Data.Text.Lazy.Builder, not (++)",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "text",
+        "builder",
+        "not",
+        "string",
+        "concatenation"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.071,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "data Builder",
+          "url": "https://hackage.haskell.org/package/text-2.1.4/docs/Data-Text-Lazy-Builder.html#t:Builder",
+          "snippet": "A Builder is an efficient way to build lazy Text values. There are several functions for constructing builders, but only one to inspect them: to extract any data, you have to turn them into lazy Text values using toLazyText. Internally, a builder constructs a lazy Text by filling arrays piece by piece. As each buffer …",
+          "meta": [
+            "text  ·  Data.Text.Lazy.Builder"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`data Builder`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 66,
+      "language": "python",
+      "query": "qs python parse email address not url address",
+      "expected": "email.utils.parseaddr(), not urllib.parse",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "parse",
+        "email",
+        "address",
+        "not",
+        "url",
+        "address"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.016,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "email.utils.parseaddr()",
+          "url": "https://docs.python.org/3/library/email.utils.html#email.utils.parseaddr",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`email.utils.parseaddr()`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 67,
+      "language": "go",
+      "query": "qs go cryptographic subtle constant time compare not bytes compare",
+      "expected": "subtle.ConstantTimeCompare, not bytes.Equal",
+      "class": "negative-contrast",
+      "label": "negative",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "cryptographic",
+        "subtle",
+        "constant",
+        "time",
+        "compare",
+        "not",
+        "bytes",
+        "compare"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.316,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "func ConstantTimeCompare",
+          "url": "https://devdocs.io/go/crypto/subtle/index",
+          "snippet": "func ConstantTimeCompare — func ConstantTimeCompare(x, y []byte) int ConstantTimeCompare returns 1 if the two slices, x and y, have equal contents and 0 otherwise. The time taken is a function of the length of the slices and is independent of the contents. If the lengths of x and y do not match it returns 0 immediately.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "func (Time) Compare 1.20",
+          "url": "https://devdocs.io/go/time/index",
+          "snippet": "func (Time) Compare 1.20 — func (t Time) Compare(u Time) int Compare compares the time instant t with u. If t is before u, it returns -1; if t is after u, it returns +1; if they're the same, it returns 0.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "subtle.ConstantTimeCompare()",
+          "url": "https://devdocs.io/go/crypto/subtle/index#ConstantTimeCompare",
+          "snippet": "func ConstantTimeCompare(x, y []byte) int ConstantTimeCompare returns 1 if the two slices, x and y, have equal contents and 0 otherwise. The time taken is a function of the length of the slices and is independent of the contents. If the lengths of x and y do not match it returns 0 immediately.",
+          "meta": [
+            "Go  ·  crypto"
+          ]
+        },
+        {
+          "title": "Constants",
+          "url": "https://devdocs.io/go/crypto/tls/index",
+          "snippet": "Constants — A list of cipher suite IDs that are, or have been, implemented by this package. See https://www.iana.org/assignments/tls-parameters/tls-parameters.xml const ( // TLS 1.0 - 1.2 cipher suites. TLS_RSA_WITH_RC4_128_SHA uint16 = 0x0005 TLS_RSA_WITH_3DES_EDE_CBC_SHA uint16 = 0x000a TLS_RSA_WITH_AES_128_CBC_SHA uint16 = 0x002f TLS_RSA_WITH_AES_256_CBC…",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        },
+        {
+          "title": "Package crypto",
+          "url": "https://devdocs.io/go/crypto/index",
+          "snippet": "Overview — Package crypto collects common cryptographic constants.",
+          "meta": [
+            "Go 1.27.0"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`func ConstantTimeCompare`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 68,
+      "language": "rust",
+      "query": "qs rust docs please exact api lookup today std::mem::take examples stable",
+      "expected": "std::mem::take",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "docs",
+        "please",
+        "exact",
+        "api",
+        "lookup",
+        "today",
+        "std::mem::take",
+        "examples",
+        "stable"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.127,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20mem%20take",
+      "hits": [
+        {
+          "title": "take in std::mem - Rust",
+          "url": "https://doc.rust-lang.org/std/mem/fn.take.html",
+          "snippet": "Replaces `dest` with the default value of `T`, returning the previous `dest` value."
+        },
+        {
+          "title": "Search Rust standard library for std::mem::take",
+          "url": "https://doc.rust-lang.org/std/?search=std%20mem%20take",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`take in std::mem - Rust`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 69,
+      "language": "cpp",
+      "query": "qs cpp modern standard library reference quick answer std::ranges::iota_view usage",
+      "expected": "std::ranges::iota_view",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "modern",
+        "standard",
+        "library",
+        "reference",
+        "quick",
+        "answer",
+        "std::ranges::iota_view",
+        "usage"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.117,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::ranges::iota_view",
+          "url": "https://devdocs.io/cpp/ranges/iota_view",
+          "snippet": "The name views::indices denotes a customization point object, which is a const function object of a literal semiregular class type. See CustomizationPointObject for details.",
+          "meta": [
+            "C++  ·  Ranges",
+            "#include <print>\n#include <ranges>\n    \nstruct Bound\n{\n    int bound;\n    bool operator==(int x) const { return x == bound; }\n};\n\nint main()\n{\n    std::print(\"{}\\n\", std::ranges::iota_view{1, 10});\n    std::print(\"{}\\n\", std::views::iota(1, 10));\n    std::print(\"{}\\n\", std::views::iota(1, Bound{10}));\n    std::print(\"{}\\n\", std::views::iota(1) | std::views::take(9));\n    \n    constexpr int v[]{9, 8, 7, 6, 5, 4, 3, 2, 1};\n\n    // auto broken_indices = views::iota(0, std::ranges::size(v));\n    //     does not compile due to types (int VS size_t) mismatch\n\n    auto good_indices = std::views::indices(std::ranges::size(v));\n    std::print(\"{}\\n\", good_indices);\n}"
+          ]
+        },
+        {
+          "title": "std::ranges::iota_view::end",
+          "url": "https://devdocs.io/cpp/ranges/iota_view/end",
+          "snippet": "constexpr auto end() const; (1) (since C++20) constexpr /*iterator*/ end() const requires std::same_as<W, Bound>; (2) (since C++20) 1) Obtains a sentinel representing the sentinel value: If Bound is std::unreachable_sentinel_t, returns std::unreachable_sentinel. Otherwise, returns sentinel ﻿{bound_ ﻿}. 2) Obtains an i…",
+          "meta": [
+            "C++  ·  Ranges",
+            "#include <iostream>\n#include <ranges>\n\nint main()\n{\n    auto iota{std::views::iota(2, 6)};\n    auto end{iota.end()};\n    for (auto iter{iota.begin()}; iter != end; ++iter)\n        std::cout << *iter << ' ';\n    std::cout << '\\n';\n}"
+          ]
+        },
+        {
+          "title": "std::ranges::iota_view::size",
+          "url": "https://devdocs.io/cpp/ranges/iota_view/size",
+          "meta": [
+            "C++  ·  Ranges"
+          ]
+        },
+        {
+          "title": "std::ranges::iota_view::begin",
+          "url": "https://devdocs.io/cpp/ranges/iota_view/begin",
+          "meta": [
+            "C++  ·  Ranges"
+          ]
+        },
+        {
+          "title": "std::ranges::iota_view::empty",
+          "url": "https://devdocs.io/cpp/ranges/iota_view/empty",
+          "meta": [
+            "C++  ·  Ranges"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`std::ranges::iota_view`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 70,
+      "language": "c",
+      "query": "qs c standard library portable example urgently get environment variable getenv",
+      "expected": "getenv",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "standard",
+        "library",
+        "portable",
+        "example",
+        "urgently",
+        "get",
+        "environment",
+        "variable",
+        "getenv"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.168,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "getenv, getenv_s",
+          "url": "https://devdocs.io/c/program/getenv",
+          "snippet": "getenv, getenv_s — Defined in header <stdlib.h> char *getenv( const char *name ); (1) errno_t getenv_s( size_t *restrict len, char *restrict value, rsize_t valuesz, const char *restrict name ); (2) (since C11) 1) Searches for an environmental variable with name name in the host-specified environment list and returns a pointer to the string that is associate…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "Error handling",
+          "url": "https://devdocs.io/c/error",
+          "snippet": "Bounds checking — The standard library provides bounds-checked versions of some existing functions (gets_s, fopen_s, printf_s, strcpy_s, wcscpy_s, mbstowcs_s, qsort_s, getenv_s, etc). This functionality is optional and is only available if __STDC_LIB_EXT1__ is defined. The following macros and functions support this functionality. Defined in header <errno.h…",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "gets",
+          "url": "https://devdocs.io/c/io/gets",
+          "snippet": "If the failure has been caused by end of file condition, additionally sets the eof indicator (see feof()) on stdin. If the failure has been caused by some other error, sets the error indicator (see ferror()) on stdin.",
+          "meta": [
+            "C  ·  File input/output"
+          ]
+        },
+        {
+          "title": "Standard library header <fenv.h> (C99)",
+          "url": "https://devdocs.io/c/header/fenv",
+          "snippet": "Standard library header <fenv.h> (C99) — This header is part of the floating-point environment library.",
+          "meta": [
+            "C"
+          ]
+        },
+        {
+          "title": "Conformance",
+          "url": "https://devdocs.io/c/language/conformance",
+          "snippet": "Freestanding standard library headers — All standard library features in every fully freestanding header are required to be provided by a freestanding implementation. Some standard library headers are conditionally freestanding. If the implementation predefines the macro __STDC_IEC_60559_BFP__ or __STDC_IEC_60559_DFP__, then <math.h> and <fenv.h> are fully …",
+          "meta": [
+            "C"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`getenv, getenv_s`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 71,
+      "language": "haskell",
+      "query": "qs haskell hoogle package docs simple example now Data.Set.fromList",
+      "expected": "Data.Set.fromList",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "hoogle",
+        "package",
+        "docs",
+        "simple",
+        "example",
+        "now",
+        "Data.Set.fromList"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.065,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "fromList :: Ord a => [a] -> Set a",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Set.html#v:fromList",
+          "snippet": "<math>. Create a set from a list of elements. If the elements are in non-decreasing order, this function takes <math> time.",
+          "meta": [
+            "containers  ·  Data.Set"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`fromList :: Ord a => [a] -> Set a`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 72,
+      "language": "python",
+      "query": "qs python official docs latest version quick example contextlib.ExitStack",
+      "expected": "contextlib.ExitStack",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "official",
+        "docs",
+        "latest",
+        "version",
+        "quick",
+        "example",
+        "contextlib.ExitStack"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.149,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "contextlib.ExitStack",
+          "url": "https://devdocs.io/python~3.15/library/contextlib#contextlib.ExitStack",
+          "snippet": "A context manager that is designed to make it easy to programmatically combine other context managers and cleanup functions, especially those that are optional or otherwise driven by input data.",
+          "meta": [
+            "Python  ·  Runtime",
+            "with ExitStack() as stack:\n    files = [stack.enter_context(open(fname)) for fname in filenames]\n    # All opened files will automatically be closed at the end of\n    # the with statement, even if attempts to open files later\n    # in the list raise an exception"
+          ]
+        },
+        {
+          "title": "contextlib.ExitStack.push()",
+          "url": "https://devdocs.io/python~3.15/library/contextlib#contextlib.ExitStack.push",
+          "snippet": "Adds a context manager’s __exit__() method to the callback stack.",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "contextlib.ExitStack.close()",
+          "url": "https://devdocs.io/python~3.15/library/contextlib#contextlib.ExitStack.close",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "contextlib.ExitStack.callback()",
+          "url": "https://devdocs.io/python~3.15/library/contextlib#contextlib.ExitStack.callback",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "contextlib.ExitStack.pop_all()",
+          "url": "https://devdocs.io/python~3.15/library/contextlib#contextlib.ExitStack.pop_all",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`contextlib.ExitStack`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 73,
+      "language": "go",
+      "query": "qs go package documentation current release example net.IP.IsPrivate",
+      "expected": "net.IP.IsPrivate",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "package",
+        "documentation",
+        "current",
+        "release",
+        "example",
+        "net.IP.IsPrivate"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.079,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "net.IP.IsPrivate()",
+          "url": "https://devdocs.io/go/net/index#IP.IsPrivate",
+          "snippet": "func (ip IP) IsPrivate() bool IsPrivate reports whether ip is a private address, according to RFC 1918 (IPv4 addresses) and RFC 4193 (IPv6 addresses). That is, it reports whether ip is in 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, or fc00::/7.",
+          "meta": [
+            "Go  ·  net",
+            "ipv6Private := net.ParseIP(\"fc00::\")\nipv6Public := net.ParseIP(\"fe00::\")\nipv4Private := net.ParseIP(\"10.255.0.0\")\nipv4Public := net.ParseIP(\"11.0.0.0\")\n\nfmt.Println(ipv6Private.IsPrivate())\nfmt.Println(ipv6Public.IsPrivate())\nfmt.Println(ipv4Private.IsPrivate())\nfmt.Println(ipv4Public.IsPrivate())"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`net.IP.IsPrivate()`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 74,
+      "language": "rust",
+      "query": "qs rust beginner tutorial standard docs show me slice rotate_left method now",
+      "expected": "slice::rotate_left",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "beginner",
+        "tutorial",
+        "standard",
+        "docs",
+        "show",
+        "me",
+        "slice",
+        "rotate_left",
+        "method",
+        "now"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.022,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/primitive.slice.html#method.rotate_left",
+      "hits": [
+        {
+          "title": "slice::rotate_left",
+          "url": "https://doc.rust-lang.org/std/primitive.slice.html#method.rotate_left",
+          "snippet": "Rotate a slice in-place to the left."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`slice::rotate_left`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 75,
+      "language": "cpp",
+      "query": "qs cpp reference safe portable c++23 example std::byteswap integer please",
+      "expected": "std::byteswap",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "reference",
+        "safe",
+        "portable",
+        "c++23",
+        "example",
+        "std::byteswap",
+        "integer",
+        "please"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.06,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::byteswap",
+          "url": "https://devdocs.io/cpp/numeric/byteswap",
+          "snippet": "template< class T > constexpr T byteswap( T n ) noexcept; (since C++23) Reverses the bytes in the given integer value n.",
+          "meta": [
+            "C++  ·  Utilities",
+            "#include <bit>\n#include <concepts>\n#include <cstdint>\n#include <iomanip>\n#include <iostream>\n\ntemplate<std::integral T>\nvoid dump(T v, char term = '\\n')\n{\n    std::cout << std::hex << std::uppercase << std::setfill('0')\n              << std::setw(sizeof(T) * 2) << v << \" : \";\n    for (std::size_t i{}; i != sizeof(T); ++i, v >>= 8)\n        std::cout << std::setw(2) << static_cast<unsigned>(T(0xFF) & v) << ' ';\n    std::cout << std::dec << term;\n}\n\nint main()\n{\n    static_assert(std::byteswap('a') == 'a');\n\n    std::cout << \"byteswap for U16:\\n\";\n    constexpr auto x = std::uint16_t(0xCAFE);\n    dump(x);\n    dump(std::byteswap(x));\n\n    std::cout << \"\\nbyteswap for U32:\\n\";\n    constexpr auto y = std::uint32_t(0xDEADBEEFu);\n    dump(y);\n    dump(std::byteswap(y));\n\n    std::cout << \"\\nbyteswap for U64:\\n\";\n    constexpr auto z = std::uint64_t{0x0123456789ABCDEFull};\n    dump(z);\n    dump(std::byteswap(z));\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`std::byteswap`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 76,
+      "language": "c",
+      "query": "qs c reference manual safe code sample portable convert time difftime seconds",
+      "expected": "difftime",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "reference",
+        "manual",
+        "safe",
+        "code",
+        "sample",
+        "portable",
+        "convert",
+        "time",
+        "difftime",
+        "seconds"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.03,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "difftime",
+          "url": "https://devdocs.io/c/chrono/difftime",
+          "snippet": "Difference between two times in seconds.",
+          "meta": [
+            "C  ·  Date and time",
+            "#include <stdio.h>\n#include <time.h>\n\nint main(void)\n{\n    time_t now = time(0);\n\n    struct tm beg = *localtime(&now);\n\n    // set beg to the beginning of the month\n    beg.tm_hour = 0,\n    beg.tm_min = 0,\n    beg.tm_sec = 0,\n    beg.tm_mday = 1;\n\n    double seconds = difftime(now, mktime(&beg));\n\n    printf(\"%.f seconds have passed since the beginning of the month.\\n\", seconds);\n\n    return 0;\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`difftime`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 77,
+      "language": "haskell",
+      "query": "qs haskell latest base library documentation beginner example Data.Char.generalCategory",
+      "expected": "Data.Char.generalCategory",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "latest",
+        "base",
+        "library",
+        "documentation",
+        "beginner",
+        "example",
+        "Data.Char.generalCategory"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.064,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "data GeneralCategory",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Char.html#t:GeneralCategory",
+          "snippet": "Unicode General Categories (column 2 of the UnicodeData table) in the order they are listed in the Unicode standard (the Unicode Character Database, in particular). Examples Basic usage: >>> :t OtherLetter OtherLetter :: GeneralCategory Eq instance: >>> UppercaseLetter == UppercaseLetter True >>> UppercaseLetter == Lo…",
+          "meta": [
+            "base  ·  Data.Char"
+          ]
+        },
+        {
+          "title": "generalCategory :: Char -> GeneralCategory",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Char.html#v:generalCategory",
+          "snippet": "The Unicode general category of the character. This relies on the Enum instance of GeneralCategory, which must remain in the same order as the categories are presented in the Unicode standard. Examples Basic usage: >>> generalCategory 'a' LowercaseLetter >>> generalCategory 'A' UppercaseLetter >>> generalCategory '0' …",
+          "meta": [
+            "base  ·  Data.Char"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 4,
+      "assessment": "`generalCategory` is the second result. The first result is its result type, `GeneralCategory`."
+    },
+    {
+      "index": 78,
+      "language": "python",
+      "query": "qs python docs tutorial best practice code sample pathlib.PurePath.match",
+      "expected": "PurePath.match()",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "docs",
+        "tutorial",
+        "best",
+        "practice",
+        "code",
+        "sample",
+        "pathlib.PurePath.match"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.188,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "pathlib.PurePath.match()",
+          "url": "https://devdocs.io/python~3.15/library/pathlib#pathlib.PurePath.match",
+          "snippet": "Match this path against the provided non-recursive glob-style pattern. Return True if matching is successful, False otherwise.",
+          "meta": [
+            "Python  ·  File & Directory Access",
+            ">>> PurePath('a/b.py').match('*.py')\nTrue\n>>> PurePath('/a/b/c.py').match('b/*.py')\nTrue\n>>> PurePath('/a/b/c.py').match('a/*.py')\nFalse"
+          ]
+        },
+        {
+          "title": "pathlib.PurePath.full_match()",
+          "url": "https://devdocs.io/python~3.15/library/pathlib#pathlib.PurePath.full_match",
+          "snippet": "Match this path against the provided glob-style pattern. Return True if matching is successful, False otherwise. For example:",
+          "meta": [
+            "Python  ·  File & Directory Access",
+            ">>> PurePath('a/b.py').full_match('a/*.py')\nTrue\n>>> PurePath('a/b.py').full_match('*.py')\nFalse\n>>> PurePath('/a/b/c.py').full_match('/a/**')\nTrue\n>>> PurePath('/a/b/c.py').full_match('**/*.py')\nTrue"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`pathlib.PurePath.match()`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 79,
+      "language": "go",
+      "query": "qs go official reference beginner quick code example cmp.Or zero values",
+      "expected": "cmp.Or",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "official",
+        "reference",
+        "beginner",
+        "quick",
+        "code",
+        "example",
+        "cmp.Or",
+        "zero",
+        "values"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.028,
+      "provider": "pkg.go.dev",
+      "source_url": "https://pkg.go.dev/cmp#Or",
+      "hits": [
+        {
+          "title": "cmp.Or",
+          "url": "https://pkg.go.dev/cmp#Or",
+          "snippet": "Official Go package API documentation."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`cmp.Or`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 80,
+      "language": "rust",
+      "query": "qs rust standard library fast safe idiomatic example Vec::spare_capacity_mut docs",
+      "expected": "Vec::spare_capacity_mut",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "standard",
+        "library",
+        "fast",
+        "safe",
+        "idiomatic",
+        "example",
+        "Vec::spare_capacity_mut",
+        "docs"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.497,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20vec%20Vec%20spare_capacity_mut",
+      "hits": [
+        {
+          "title": "Vec::spare_capacity_mut",
+          "url": "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.spare_capacity_mut",
+          "snippet": "A contiguous growable array type, written as `Vec<T>`, short for ‘vector’."
+        },
+        {
+          "title": "Search Rust standard library for Vec::spare_capacity_mut",
+          "url": "https://doc.rust-lang.org/std/?search=std%20vec%20Vec%20spare_capacity_mut",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`Vec::spare_capacity_mut`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 81,
+      "language": "cpp",
+      "query": "qs cpp standard official documentation tutorial std::ranges::fold_left sample code",
+      "expected": "std::ranges::fold_left",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "standard",
+        "official",
+        "documentation",
+        "tutorial",
+        "std::ranges::fold_left",
+        "sample",
+        "code"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.104,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::ranges::fold_left",
+          "url": "https://devdocs.io/cpp/algorithm/ranges/fold_left",
+          "snippet": "Left-folds the elements of the source range, that is, returns the result of evaluation of the chain expression:f(f(f(f(init, x1), x2), ...), xn), where x1, x2, ..., xn are elements of the source range.",
+          "meta": [
+            "C++  ·  Algorithm",
+            "#include <algorithm>\n#include <complex>\n#include <functional>\n#include <iostream>\n#include <ranges>\n#include <string>\n#include <utility>\n#include <vector>\n\nint main()\n{\n    namespace ranges = std::ranges;\n    \n    std::vector v{1, 2, 3, 4, 5, 6, 7, 8};\n    \n    int sum = ranges::fold_left(v.begin(), v.end(), 0, std::plus<int>()); // (1)\n    std::cout << \"sum: \" << sum << '\\n';\n    \n    int mul = ranges::fold_left(v, 1, std::multiplies<int>()); // (2)\n    std::cout << \"mul: \" << mul << '\\n';\n    \n    // get the product of the std::pair::second of all pairs in the vector:\n    std::vector<std::pair<char, float>> data {{'A', 2.f}, {'B', 3.f}, {'C', 3.5f}};\n    float sec = ranges::fold_left\n    (\n        data | ranges::views::values, 2.0f, std::multiplies<>()\n    );\n    std::cout << \"sec: \" << sec << '\\n';\n    \n    // use a program defined function object (lambda-expression):\n    std::string str = ranges::fold_left\n    (\n        v, \"A\", [](std::string s, int x) { return s + ':' + std::to_string(x); }\n    );\n    std::cout << \"str: \" << str << '\\n';\n    \n    using CD = std::complex<double>;\n    std::vector<CD> nums{{1, 1}, {2, 0}, {3, 0}};\n    #ifdef __cpp_lib_algorithm_default_value_type\n        auto res = ranges::fold_left(nums, {7, 0}, std::multiplies{}); // (2)\n    #else\n        auto res = ranges::fold_left(nums, CD{7, 0}, std::multiplies{}); // (2)\n    #endif\n    std::cout << \"res: \" << res << '\\n';\n}"
+          ]
+        },
+        {
+          "title": "std::ranges::fold_left_first",
+          "url": "https://devdocs.io/cpp/algorithm/ranges/fold_left_first",
+          "snippet": "Left-folds the elements of the source range, that is, returns the result of evaluation of the chain expression:f(f(f(f(x1, x2), x3), ...), xn), where x1, x2, ..., xn are elements of the source range.",
+          "meta": [
+            "C++  ·  Algorithm",
+            "#include <algorithm>\n#include <array>\n#include <functional>\n#include <ranges>\n#include <utility>\n\nint main()\n{\n    constexpr std::array v{1, 2, 3, 4, 5, 6, 7, 8};\n    static_assert\n    (\n        *std::ranges::fold_left_first(v.begin(), v.end(), std::plus{}) == 36\n        && *std::ranges::fold_left_first(v, std::multiplies{}) == 40320\n    );\n    \n    constexpr std::array w\n    {\n        1, 2, 3, 4, 13,\n        1, 2, 3, 4, 13,\n        1, 2, 3, 4, 13,\n        1, 2, 3, 4,\n    };\n    static_assert\n    (\n        \"Find the only value that (by precondition) occurs odd number of times:\"\n        && *std::ranges::fold_left_first(w, [](int p, int q){ return p ^ q; }) == 13\n    );\n    \n    constexpr auto pairs = std::to_array<std::pair<char, float>>\n    ({\n        {'A', 3.0f},\n        {'B', 3.5f},\n        {'C', 4.0f}\n    });\n    static_assert\n    (\n        \"Get the product of all pair::second in pairs:\"\n        && *std::ranges::fold_left_first\n        (\n            pairs | std::ranges::views::values, std::multiplies{}\n        ) == 42\n    );\n}"
+          ]
+        },
+        {
+          "title": "std::ranges::fold_left_with_iter",
+          "url": "https://devdocs.io/cpp/algorithm/ranges/fold_left_with_iter",
+          "meta": [
+            "C++  ·  Algorithm"
+          ]
+        },
+        {
+          "title": "std::ranges::fold_left_first_with_iter",
+          "url": "https://devdocs.io/cpp/algorithm/ranges/fold_left_first_with_iter",
+          "meta": [
+            "C++  ·  Algorithm"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`std::ranges::fold_left`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 82,
+      "language": "c",
+      "query": "qs c language library specification easy tutorial sample code div integer quotient remainder",
+      "expected": "div",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "language",
+        "library",
+        "specification",
+        "easy",
+        "tutorial",
+        "sample",
+        "code",
+        "div",
+        "integer",
+        "quotient",
+        "remainder"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.022,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "div",
+          "url": "https://en.cppreference.com/w/c/numeric/math/div",
+          "snippet": "Authoritative C language and library documentation."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`div`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 83,
+      "language": "haskell",
+      "query": "qs haskell package docs latest tutorial quick answer Data.Sequence.adjust examples",
+      "expected": "Data.Sequence.adjust",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "package",
+        "docs",
+        "latest",
+        "tutorial",
+        "quick",
+        "answer",
+        "Data.Sequence.adjust",
+        "examples"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.064,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "adjust :: (a -> a) -> Int -> Seq a -> Seq a",
+          "url": "https://hackage.haskell.org/package/containers-0.8.1/docs/Data-Sequence.html#v:adjust",
+          "snippet": "<math>. Update the element at the specified position. If the position is out of range, the original sequence is returned. adjust can lead to poor performance and even memory leaks, because it does not force the new value before installing it in the sequence. adjust' should usually be preferred.",
+          "meta": [
+            "containers  ·  Data.Sequence"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`adjust :: (a -> a) -> Int -> Seq a -> Seq a`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 84,
+      "language": "python",
+      "query": "qs python standard library official guide simple example graphlib.TopologicalSorter",
+      "expected": "graphlib.TopologicalSorter",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "standard",
+        "library",
+        "official",
+        "guide",
+        "simple",
+        "example",
+        "graphlib.TopologicalSorter"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.159,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "graphlib.TopologicalSorter",
+          "url": "https://devdocs.io/python~3.15/library/graphlib#graphlib.TopologicalSorter",
+          "snippet": "Provides functionality to topologically sort a graph of hashable nodes.",
+          "meta": [
+            "Python  ·  Data Types",
+            ">>> graph = {\"D\": {\"B\", \"C\"}, \"C\": {\"A\"}, \"B\": {\"A\"}}\n>>> ts = TopologicalSorter(graph)\n>>> tuple(ts.static_order())\n('A', 'C', 'B', 'D')"
+          ]
+        },
+        {
+          "title": "graphlib.TopologicalSorter.add()",
+          "url": "https://devdocs.io/python~3.15/library/graphlib#graphlib.TopologicalSorter.add",
+          "snippet": "Add a new node and its predecessors to the graph. Both the node and all elements in predecessors must be hashable.",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "graphlib.TopologicalSorter.done()",
+          "url": "https://devdocs.io/python~3.15/library/graphlib#graphlib.TopologicalSorter.done",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "graphlib.TopologicalSorter.prepare()",
+          "url": "https://devdocs.io/python~3.15/library/graphlib#graphlib.TopologicalSorter.prepare",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "graphlib.TopologicalSorter.get_ready()",
+          "url": "https://devdocs.io/python~3.15/library/graphlib#graphlib.TopologicalSorter.get_ready",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`graphlib.TopologicalSorter`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 85,
+      "language": "go",
+      "query": "qs go current stable standard package docs quick example math.Nextafter",
+      "expected": "math.Nextafter",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "current",
+        "stable",
+        "standard",
+        "package",
+        "docs",
+        "quick",
+        "example",
+        "math.Nextafter"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.028,
+      "provider": "pkg.go.dev",
+      "source_url": "https://pkg.go.dev/math#Nextafter",
+      "hits": [
+        {
+          "title": "math.Nextafter",
+          "url": "https://pkg.go.dev/math#Nextafter",
+          "snippet": "Official Go package API documentation."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`math.Nextafter`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 86,
+      "language": "rust",
+      "query": "qs rust official stable docs easy example std::path::Path::ancestors iterator",
+      "expected": "Path::ancestors",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "official",
+        "stable",
+        "docs",
+        "easy",
+        "example",
+        "std::path::Path::ancestors",
+        "iterator"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.583,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20path%20Path%20ancestors",
+      "hits": [
+        {
+          "title": "Path::ancestors",
+          "url": "https://doc.rust-lang.org/std/path/struct.Path.html#method.ancestors",
+          "snippet": "A slice of a path (akin to `str`)."
+        },
+        {
+          "title": "Search Rust standard library for std::path::Path::ancestors",
+          "url": "https://doc.rust-lang.org/std/?search=std%20path%20Path%20ancestors",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`Path::ancestors`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 87,
+      "language": "cpp",
+      "query": "qs cpp latest standard reference concise example std::launder object pointer",
+      "expected": "std::launder",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "latest",
+        "standard",
+        "reference",
+        "concise",
+        "example",
+        "std::launder",
+        "object",
+        "pointer"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.061,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::launder",
+          "url": "https://devdocs.io/cpp/utility/launder",
+          "snippet": "template< class T > constexpr T* launder( T* p ) noexcept; (since C++17) Devirtualization fence with respect to p. Returns a pointer to an object at the same address that p represents, while the object can be a new base class subobject whose most derived class is different from that of the original *p object.",
+          "meta": [
+            "C++  ·  Utilities",
+            "#include <cassert>\n#include <cstddef>\n#include <new>\n\nstruct Base\n{\n    virtual int transmogrify();\n};\n\nstruct Derived : Base\n{\n    int transmogrify() override\n    {\n        new(this) Base;\n        return 2;\n    }\n};\n\nint Base::transmogrify()\n{\n    new(this) Derived;\n    return 1;\n}\n\nstatic_assert(sizeof(Derived) == sizeof(Base));\n\nint main()\n{\n    // Case 1: the new object failed to be transparently replaceable because\n    // it is a base subobject but the old object is a complete object.\n    Base base;\n    int n = base.transmogrify();\n    // int m = base.transmogrify(); // undefined behavior\n    int m = std::launder(&base)->transmogrify(); // OK\n    assert(m + n == 3);\n    \n    // Case 2: access to a new object whose storage is provided\n    // by a byte array through a pointer to the array.\n    struct Y { int z; };\n    alignas(Y) std::byte s[sizeof(Y)];\n    Y* q = new(&s) Y{2};\n    const int f = reinterpret_cast<Y*>(&s)->z; // Class member access is undefined\n                                               // behavior: reinterpret_cast<Y*>(&s)\n                                               // has value \"pointer to s\" and does\n                                               // not point to a Y object\n    const int g = q->z; // OK\n    const int h = std::launder(reinterpret_cast<Y*>(&s))->z; // OK\n    \n    [](...){}(f, g, h); // evokes [[maybe_unused]] effect\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`std::launder`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 88,
+      "language": "c",
+      "query": "qs c standard portable reference example localeconv monetary formatting fields",
+      "expected": "localeconv",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "standard",
+        "portable",
+        "reference",
+        "example",
+        "localeconv",
+        "monetary",
+        "formatting",
+        "fields"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.031,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "localeconv",
+          "url": "https://devdocs.io/c/locale/localeconv",
+          "snippet": "struct lconv* localeconv(void); The localeconv function obtains a pointer to a static object of type lconv, which represents numeric and monetary formatting rules of the current C locale.",
+          "meta": [
+            "C  ·  Localization support",
+            "#include <locale.h>\n#include <stdio.h>\n\nint main(void)\n{\n    setlocale(LC_MONETARY, \"en_IN.utf8\");\n    struct lconv* lc = localeconv();\n    printf(\"Local Currency Symbol        : %s\\n\", lc->currency_symbol);\n    printf(\"International Currency Symbol: %s\\n\", lc->int_curr_symbol);\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`localeconv`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 89,
+      "language": "haskell",
+      "query": "qs haskell current base hoogle quick tutorial Control.Arrow.loop examples",
+      "expected": "Control.Arrow.loop",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "current",
+        "base",
+        "hoogle",
+        "quick",
+        "tutorial",
+        "Control.Arrow.loop",
+        "examples"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.063,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "loop :: ArrowLoop a => a (b, d) (c, d) -> a b c",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Control-Arrow.html#v:loop",
+          "snippet": "╭──────────────╮ b │ ╭───╮ │ c >───┼─────┤ ├────┼───> │ ┌─┤ ├─┐ │ │ d │ ╰───╯ │ │ │ └───<───┘ │ ╰──────────────╯",
+          "meta": [
+            "base  ·  Control.Arrow"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`loop :: ArrowLoop a => a (b, d) (c, d) -> a b c`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 90,
+      "language": "python",
+      "query": "qs python official stdlib current docs tiny example weakref.finalize object cleanup",
+      "expected": "weakref.finalize",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "official",
+        "stdlib",
+        "current",
+        "docs",
+        "tiny",
+        "example",
+        "weakref.finalize",
+        "object",
+        "cleanup"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.127,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "weakref.finalize",
+          "url": "https://devdocs.io/python~3.15/library/weakref#weakref.finalize",
+          "snippet": "Return a callable finalizer object which will be called when obj is garbage collected. Unlike an ordinary weak reference, a finalizer will always survive until the reference object is collected, greatly simplifying lifecycle management.",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "weakref.finalize.alive",
+          "url": "https://devdocs.io/python~3.15/library/weakref#weakref.finalize.alive",
+          "snippet": "Property which is true if the finalizer is alive, false otherwise.",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "weakref.finalize.atexit",
+          "url": "https://devdocs.io/python~3.15/library/weakref#weakref.finalize.atexit",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "weakref.finalize.peek()",
+          "url": "https://devdocs.io/python~3.15/library/weakref#weakref.finalize.peek",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "weakref.finalize.detach()",
+          "url": "https://devdocs.io/python~3.15/library/weakref#weakref.finalize.detach",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`weakref.finalize`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 91,
+      "language": "go",
+      "query": "qs go standard package reference practical sample testing.F.Cleanup fuzz docs",
+      "expected": "testing.F.Cleanup",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "standard",
+        "package",
+        "reference",
+        "practical",
+        "sample",
+        "testing.F.Cleanup",
+        "fuzz",
+        "docs"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.088,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "testing.F.Cleanup()",
+          "url": "https://devdocs.io/go/testing/index#F.Cleanup",
+          "snippet": "func (c *F) Cleanup(f func()) Cleanup registers a function to be called when the test (or subtest) and all its subtests complete. Cleanup functions will be called in last added, first called order.",
+          "meta": [
+            "Go  ·  testing"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`testing.F.Cleanup()`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 92,
+      "language": "rust",
+      "query": "qs rust docs quick beginner correct idiomatic std::array::from_fn example",
+      "expected": "std::array::from_fn",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "docs",
+        "quick",
+        "beginner",
+        "correct",
+        "idiomatic",
+        "std::array::from_fn",
+        "example"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.238,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20array%20from_fn",
+      "hits": [
+        {
+          "title": "from_fn in std::array - Rust",
+          "url": "https://doc.rust-lang.org/std/array/fn.from_fn.html",
+          "snippet": "Creates an array where each element is produced by calling `f` with that element’s index while walking forward through the array."
+        },
+        {
+          "title": "Search Rust standard library for std::array::from_fn",
+          "url": "https://doc.rust-lang.org/std/?search=std%20array%20from_fn",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`from_fn in std::array - Rust`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 93,
+      "language": "cpp",
+      "query": "qs cpp portable modern reference sample std::ranges::borrowed_range concept details",
+      "expected": "std::ranges::borrowed_range",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "portable",
+        "modern",
+        "reference",
+        "sample",
+        "std::ranges::borrowed_range",
+        "concept",
+        "details"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.128,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::ranges::borrowed_range",
+          "url": "https://devdocs.io/cpp/ranges/borrowed_range",
+          "snippet": "A program may specialize enable_borrowed_range to true for cv-unqualified program-defined types which model borrowed_range, and false for types which do not. Such specializations shall be usable in constant expression and have type constbool.",
+          "meta": [
+            "C++  ·  Ranges",
+            "#include <algorithm>\n#include <array>\n#include <cstddef>\n#include <iostream>\n#include <ranges>\n#include <span>\n#include <type_traits>\n\ntemplate<typename T, std::size_t N>\nstruct MyRange : std::array<T, N> {};\n\ntemplate<typename T, std::size_t N>\nconstexpr bool std::ranges::enable_borrowed_range<MyRange<T, N>> = false;\n\ntemplate<typename T, std::size_t N>\nstruct MyBorrowedRange : std::span<T, N> {};\n\ntemplate<typename T, std::size_t N>\nconstexpr bool std::ranges::enable_borrowed_range<MyBorrowedRange<T, N>> = true;\n\nint main()\n{\n    static_assert(std::ranges::range<MyRange<int, 8>>);\n    static_assert(std::ranges::borrowed_range<MyRange<int, 8>> == false);\n    static_assert(std::ranges::range<MyBorrowedRange<int, 8>>);\n    static_assert(std::ranges::borrowed_range<MyBorrowedRange<int, 8>> == true);\n    \n    auto getMyRangeByValue = []{ return MyRange<int, 4>{{1, 2, 42, 3}}; };\n    auto dangling_iter = std::ranges::max_element(getMyRangeByValue());\n    static_assert(std::is_same_v<std::ranges::dangling, decltype(dangling_iter)>);\n    // *dangling_iter; // compilation error (i.e. dangling protection works.)\n    \n    auto my = MyRange<int, 4>{{1, 2, 42, 3}};\n    auto valid_iter = std::ranges::max_element(my);\n    std::cout << *valid_iter << ' '; // OK: 42\n    \n    auto getMyBorrowedRangeByValue = []\n    {\n        static int sa[4]{1, 2, 42, 3};\n        return MyBorrowedRange<int, std::size(sa)>{sa};\n    };\n    auto valid_iter2 = std::ranges::max_element(getMyBorrowedRangeByValue());\n    std::cout << *valid_iter2 << '\\n'; // OK: 42\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`std::ranges::borrowed_range`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 94,
+      "language": "c",
+      "query": "qs c official standard library guide sample code nearbyint rounding mode",
+      "expected": "nearbyint",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "c",
+        "official",
+        "standard",
+        "library",
+        "guide",
+        "sample",
+        "code",
+        "nearbyint",
+        "rounding",
+        "mode"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.047,
+      "provider": "C",
+      "source_url": "https://devdocs.io/c",
+      "hits": [
+        {
+          "title": "nearbyint",
+          "url": "https://devdocs.io/c/numeric/math/nearbyint",
+          "snippet": "This function is not subject to any of the errors specified in math_errhandling.",
+          "meta": [
+            "C  ·  Numerics",
+            "#include <fenv.h>\n#include <math.h>\n#include <stdio.h>\n\nint main(void)\n{\n// #pragma STDC FENV_ACCESS ON\n    fesetround(FE_TONEAREST);\n    printf(\"rounding to nearest:\\nnearbyint(+2.3) = %+.1f  \", nearbyint(2.3));\n    printf(\"nearbyint(+2.5) = %+.1f  \", nearbyint(2.5));\n    printf(\"nearbyint(+3.5) = %+.1f\\n\", nearbyint(3.5));\n    printf(\"nearbyint(-2.3) = %+.1f  \", nearbyint(-2.3));\n    printf(\"nearbyint(-2.5) = %+.1f  \", nearbyint(-2.5));\n    printf(\"nearbyint(-3.5) = %+.1f\\n\", nearbyint(-3.5));\n\n    fesetround(FE_DOWNWARD);\n    printf(\"rounding down: \\nnearbyint(+2.3) = %+.1f  \", nearbyint(2.3));\n    printf(\"nearbyint(+2.5) = %+.1f  \", nearbyint(2.5));\n    printf(\"nearbyint(+3.5) = %+.1f\\n\", nearbyint(3.5));\n    printf(\"nearbyint(-2.3) = %+.1f  \", nearbyint(-2.3));\n    printf(\"nearbyint(-2.5) = %+.1f  \", nearbyint(-2.5));\n    printf(\"nearbyint(-3.5) = %+.1f\\n\", nearbyint(-3.5));\n\n    printf(\"nearbyint(-0.0) = %+.1f\\n\", nearbyint(-0.0));\n    printf(\"nearbyint(-Inf) = %+.1f\\n\", nearbyint(-INFINITY));\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`nearbyint`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 95,
+      "language": "haskell",
+      "query": "qs haskell hoogle official base docs concise example Data.Ord.clamp",
+      "expected": "Data.Ord.clamp",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "haskell",
+        "hoogle",
+        "official",
+        "base",
+        "docs",
+        "concise",
+        "example",
+        "Data.Ord.clamp"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.066,
+      "provider": "Haskell",
+      "source_url": "https://hackage.haskell.org/",
+      "hits": [
+        {
+          "title": "clamp :: Ord a => (a, a) -> a -> a",
+          "url": "https://hackage.haskell.org/package/base-4.22.0.0/docs/Data-Ord.html#v:clamp",
+          "snippet": "clamp (low, high) a = min high (max a low) Function for ensuring the value a is within the inclusive bounds given by low and high. If it is, a is returned unchanged. The result is otherwise low if a <= low, or high if high <= a. When clamp is used at Double and Float, it has NaN propagating semantics in its second arg…",
+          "meta": [
+            "base  ·  Data.Ord"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`clamp :: Ord a => (a, a) -> a -> a`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 96,
+      "language": "python",
+      "query": "qs python latest official manual quick practical example socket.socketpair",
+      "expected": "socket.socketpair()",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "python",
+        "latest",
+        "official",
+        "manual",
+        "quick",
+        "practical",
+        "example",
+        "socket.socketpair"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.129,
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "socket.socketpair()",
+          "url": "https://devdocs.io/python~3.15/library/socket#socket.socketpair",
+          "snippet": "Build a pair of connected socket objects using the given address family, socket type, and protocol number. Address family, socket type, and protocol number are as for the socket() function. The default family is AF_UNIX if defined on the platform; otherwise, the default is AF_INET.",
+          "meta": [
+            "Python  ·  Networking & Interprocess Communication"
+          ]
+        },
+        {
+          "title": "c.PyErr_SetString()",
+          "url": "https://devdocs.io/python~3.15/c-api/exceptions#c.PyErr_SetString",
+          "snippet": "This is the most common way to set the error indicator. The first argument specifies the exception type; it is normally one of the standard exceptions, e.g. PyExc_RuntimeError. You need not create a new strong reference to it (e.g. with Py_INCREF()). The second argument is an error message; it is decoded from 'utf-8'.",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        },
+        {
+          "title": "c.PyConfig_SetString()",
+          "url": "https://devdocs.io/python~3.15/c-api/init_config#c.PyConfig_SetString",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        },
+        {
+          "title": "c.PyInitConfig_SetStr()",
+          "url": "https://devdocs.io/python~3.15/c-api/init_config#c.PyInitConfig_SetStr",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        },
+        {
+          "title": "c.PyInitConfig_SetStrList()",
+          "url": "https://devdocs.io/python~3.15/c-api/init_config#c.PyInitConfig_SetStrList",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`socket.socketpair()`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 97,
+      "language": "go",
+      "query": "qs go docs current version best practice example log.Logger.Writer method",
+      "expected": "log.Logger.Writer",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "go",
+        "docs",
+        "current",
+        "version",
+        "best",
+        "practice",
+        "example",
+        "log.Logger.Writer",
+        "method"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.079,
+      "provider": "Go 1.27.0",
+      "source_url": "https://devdocs.io/go",
+      "hits": [
+        {
+          "title": "log.Logger.Writer()",
+          "url": "https://devdocs.io/go/log/index#Logger.Writer",
+          "snippet": "func (l *Logger) Writer() io.Writer Writer returns the output destination for the logger.",
+          "meta": [
+            "Go  ·  log"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`log.Logger.Writer()`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 98,
+      "language": "rust",
+      "query": "qs rust safe fast standard library tutorial std::ffi::OsStr::as_encoded_bytes",
+      "expected": "OsStr::as_encoded_bytes",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "rust",
+        "safe",
+        "fast",
+        "standard",
+        "library",
+        "tutorial",
+        "std::ffi::OsStr::as_encoded_bytes"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.577,
+      "provider": "rust",
+      "source_url": "https://doc.rust-lang.org/std/?search=std%20ffi%20OsStr%20as_encoded_bytes",
+      "hits": [
+        {
+          "title": "OsStr::as_encoded_bytes",
+          "url": "https://doc.rust-lang.org/std/ffi/struct.OsStr.html#method.as_encoded_bytes",
+          "snippet": "Borrowed reference to an OS string (see `OsString`)."
+        },
+        {
+          "title": "Search Rust standard library for std::ffi::OsStr::as_encoded_bytes",
+          "url": "https://doc.rust-lang.org/std/?search=std%20ffi%20OsStr%20as_encoded_bytes",
+          "snippet": "Searches matching items in std, core, and alloc."
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`OsStr::as_encoded_bytes`) is the expected target or an immediately useful canonical result."
+    },
+    {
+      "index": 99,
+      "language": "cpp",
+      "query": "qs cpp official c++ reference beginner sample std::unreachable_sentinel_t iterator",
+      "expected": "std::unreachable_sentinel_t",
+      "class": "surplus-token-adversarial",
+      "label": "positive",
+      "command": [
+        "/tmp/qs-gate/release/qs",
+        "--json",
+        "cpp",
+        "official",
+        "c++",
+        "reference",
+        "beginner",
+        "sample",
+        "std::unreachable_sentinel_t",
+        "iterator"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.087,
+      "provider": "C++",
+      "source_url": "https://devdocs.io/cpp",
+      "hits": [
+        {
+          "title": "std::unreachable_sentinel_t",
+          "url": "https://devdocs.io/cpp/iterator/unreachable_sentinel_t",
+          "snippet": "struct unreachable_sentinel_t; (1) (since C++20) inline constexpr unreachable_sentinel_t unreachable_sentinel{}; (2) (since C++20) 1) unreachable_sentinel_t is an empty class type that can be used to denote the “upper bound” of an unbounded interval. 2) unreachable_sentinel is a constant of type unreachable_sentinel_t…",
+          "meta": [
+            "C++  ·  Iterator",
+            "#include <algorithm>\n#include <cstddef>\n#include <iostream>\n#include <iterator>\n\ntemplate<class CharT>\nconstexpr std::size_t strlen(const CharT* s)\n{\n    return std::ranges::find(s, std::unreachable_sentinel, CharT{}) - s;\n}\n\ntemplate<class CharT>\nconstexpr std::size_t find_first(const CharT* haystack, const CharT* needle)\n{\n    const char* needle_end = needle + strlen(needle);\n    // search(begin, unreachable_sentinel) is usually more efficient than\n    // search(begin, end) due to one less comparison per cycle.\n    // But \"needle\" MUST BE PRESENT in the \"haystack\", otherwise the call\n    // is UB (which is a compile-time error in constexpr context).\n    auto found = std::ranges::search(haystack, std::unreachable_sentinel,\n                                     needle, needle_end);\n    return found.begin() - haystack;\n}\n\nint main()\n{\n    static_assert(strlen(\"The quick brown fox jumps over a lazy dog.\") == 42);\n    static_assert(find_first(\"unsigned short int\", \"short\") == 9);\n//  static_assert(find_first(\"long int\", \"float\")); // compile-time error\n}"
+          ]
+        }
+      ],
+      "stderr": null,
+      "score": 5,
+      "assessment": "The first result (`std::unreachable_sentinel_t`) is the expected target or an immediately useful canonical result."
+    }
+  ]
+}

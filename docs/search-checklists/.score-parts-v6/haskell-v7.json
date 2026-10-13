@@ -1,0 +1,1341 @@
+[
+  {
+    "query": "qs haskell lists",
+    "expected": "List type, syntax, and `Data.List`",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — lists"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested List type, syntax, and `Data.List` topic."
+  },
+  {
+    "query": "qs haskell tuples",
+    "expected": "Tuple types and tuple syntax",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — tuples"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Tuple types and tuple syntax topic."
+  },
+  {
+    "query": "qs haskell pattern matching",
+    "expected": "Pattern matching in equations and `case`",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — pattern matching"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Pattern matching in equations and `case` topic."
+  },
+  {
+    "query": "qs haskell guards",
+    "expected": "Guard syntax",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — guards"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Guard syntax topic."
+  },
+  {
+    "query": "qs haskell list comprehensions",
+    "expected": "List-comprehension syntax",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — list comprehensions"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested List-comprehension syntax topic."
+  },
+  {
+    "query": "qs haskell type classes",
+    "expected": "`class` and `instance` declarations",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — type classes"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested `class` and `instance` declarations topic."
+  },
+  {
+    "query": "qs haskell algebraic data types",
+    "expected": "`data` declarations and sum/product types",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — algebraic data types"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested `data` declarations and sum/product types topic."
+  },
+  {
+    "query": "qs haskell newtypes",
+    "expected": "`newtype` declarations",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — newtypes"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested `newtype` declarations topic."
+  },
+  {
+    "query": "qs haskell record syntax",
+    "expected": "Record declarations, construction, and updates",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — record syntax"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Record declarations, construction, and updates topic."
+  },
+  {
+    "query": "qs haskell deriving",
+    "expected": "Derived instances and deriving strategies",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — deriving"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Derived instances and deriving strategies topic."
+  },
+  {
+    "query": "qs haskell modules",
+    "expected": "Module declarations and exports",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — modules"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Module declarations and exports topic."
+  },
+  {
+    "query": "qs haskell qualified imports",
+    "expected": "Qualified module imports",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — qualified imports"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Qualified module imports topic."
+  },
+  {
+    "query": "qs haskell infix operators",
+    "expected": "Infix functions and fixity declarations",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — infix operators"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Infix functions and fixity declarations topic."
+  },
+  {
+    "query": "qs haskell strict evaluation",
+    "expected": "Strictness, `seq`, and bang patterns",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — strict evaluation"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Strictness, `seq`, and bang patterns topic."
+  },
+  {
+    "query": "qs haskell thunks",
+    "expected": "Lazy evaluation and deferred computations",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — thunks"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Lazy evaluation and deferred computations topic."
+  },
+  {
+    "query": "qs haskell tail recursion",
+    "expected": "Tail-recursive function design",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — tail recursion"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Tail-recursive function design topic."
+  },
+  {
+    "query": "qs haskell currying",
+    "expected": "Curried functions",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — currying"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Curried functions topic."
+  },
+  {
+    "query": "qs haskell partial application",
+    "expected": "Partial function application",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — partial application"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Partial function application topic."
+  },
+  {
+    "query": "qs haskell higher order functions",
+    "expected": "Functions that accept or return functions",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — higher order functions"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested Functions that accept or return functions topic."
+  },
+  {
+    "query": "qs haskell function composition",
+    "expected": "The `(.)` operator",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — function composition"
+    ],
+    "error": null,
+    "note": "The only hit is a generic Haskell 2010 Report fallback; it does not surface the requested The `(.)` operator topic."
+  },
+  {
+    "query": "qs haskell map",
+    "expected": "`Prelude.map`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "map :: (a -> b) -> [a] -> [b]",
+      "map :: (a -> b) -> [a] -> [b]",
+      "map :: (a -> b) -> [a] -> [b]",
+      "map :: (a -> b) -> [a] -> [b]",
+      "map :: (a -> b) -> NonEmpty a -> NonEmpty b"
+    ],
+    "error": null,
+    "note": "map is rank 1 with its signature, focused documentation, and examples."
+  },
+  {
+    "query": "qs haskell filter",
+    "expected": "`Prelude.filter`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "filter :: (a -> Bool) -> [a] -> [a]",
+      "filter :: (a -> Bool) -> [a] -> [a]",
+      "filter :: (a -> Bool) -> [a] -> [a]",
+      "filter :: (a -> Bool) -> NonEmpty a -> [a]",
+      "filter :: (a -> Bool) -> Set a -> Set a"
+    ],
+    "error": null,
+    "note": "filter is rank 1 with its signature, focused documentation, and examples."
+  },
+  {
+    "query": "qs haskell zipWith",
+    "expected": "`Prelude.zipWith`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]",
+      "zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]",
+      "zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]",
+      "zipWith :: (a -> b -> c) -> NonEmpty a -> NonEmpty b -> NonEmpty c",
+      "zipWith :: (a -> b -> c) -> Seq a -> Seq b -> Seq c"
+    ],
+    "error": null,
+    "note": "zipWith is rank 1 with the expected signature and focused documentation."
+  },
+  {
+    "query": "qs haskell concat map",
+    "expected": "`Data.List.concatMap`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "concatMap :: (a -> [b]) -> [a] -> [b]"
+    ],
+    "error": null,
+    "note": "concatMap is the sole hit and includes its signature, explanation, and examples."
+  },
+  {
+    "query": "qs haskell reverse",
+    "expected": "`Prelude.reverse`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "reverse :: [a] -> [a]",
+      "reverse :: [a] -> [a]",
+      "reverse :: [a] -> [a]",
+      "reverse :: NonEmpty a -> NonEmpty a",
+      "reverse :: Seq a -> Seq a"
+    ],
+    "error": null,
+    "note": "reverse is rank 1 with the expected list signature and focused documentation."
+  },
+  {
+    "query": "qs haskell take while",
+    "expected": "`Prelude.takeWhile`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "takeWhile :: (a -> Bool) -> [a] -> [a]",
+      "takeWhile :: (a -> Bool) -> [a] -> [a]",
+      "takeWhile :: (a -> Bool) -> [a] -> [a]",
+      "takeWhile :: (a -> Bool) -> NonEmpty a -> [a]",
+      "takeWhile :: (Char -> Bool) -> Text -> Text"
+    ],
+    "error": null,
+    "note": "The expected `Prelude.takeWhile` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell dropWhile",
+    "expected": "`Prelude.dropWhile`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "dropWhile :: (a -> Bool) -> [a] -> [a]",
+      "dropWhile :: (a -> Bool) -> [a] -> [a]",
+      "dropWhile :: (a -> Bool) -> [a] -> [a]",
+      "dropWhile :: (a -> Bool) -> NonEmpty a -> [a]",
+      "dropWhile :: (Char -> Bool) -> Text -> Text"
+    ],
+    "error": null,
+    "note": "dropWhile is rank 1 with its expected list signature and documentation."
+  },
+  {
+    "query": "qs haskell split list at index",
+    "expected": "`Prelude.splitAt`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "splitAt :: Int -> [a] -> ([a], [a])",
+      "splitAt :: Int -> [a] -> ([a], [a])",
+      "splitAt :: Int -> [a] -> ([a], [a])",
+      "splitAt :: Int -> NonEmpty a -> ([a], [a])",
+      "splitAt :: Int -> Set a -> (Set a, Set a)"
+    ],
+    "error": null,
+    "note": "splitAt is rank 1 with its expected list signature and documentation."
+  },
+  {
+    "query": "qs haskell partition list",
+    "expected": "`Data.List.partition`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "partition :: (a -> Bool) -> [a] -> ([a], [a])",
+      "partition :: (a -> Bool) -> NonEmpty a -> ([a], [a])",
+      "partition :: (a -> Bool) -> Set a -> (Set a, Set a)",
+      "partition :: (a -> Bool) -> Seq a -> (Seq a, Seq a)",
+      "partition :: (a -> Bool) -> Map k a -> (Map k a, Map k a)"
+    ],
+    "error": null,
+    "note": "List partition is rank 1 with its signature and focused documentation."
+  },
+  {
+    "query": "qs haskell element membership",
+    "expected": "`elem` and `notElem`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "elem :: (Foldable t, Eq a) => a -> t a -> Bool",
+      "elem :: (Foldable t, Eq a) => a -> t a -> Bool",
+      "elem :: Eq a => a -> [a] -> Bool",
+      "elem :: (Foldable t, Eq a) => a -> t a -> Bool",
+      "elem :: Char -> Text -> Bool"
+    ],
+    "error": null,
+    "note": "elem is rank 1 with useful docs; notElem is missing from the visible results."
+  },
+  {
+    "query": "qs haskell association list lookup",
+    "expected": "`Prelude.lookup`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "lookup :: Eq a => a -> [(a, b)] -> Maybe b",
+      "lookup :: Eq a => a -> [(a, b)] -> Maybe b",
+      "lookup :: Eq a => a -> [(a, b)] -> Maybe b",
+      "lookup :: Int -> Seq a -> Maybe a",
+      "lookup :: Ord k => k -> Map k a -> Maybe a"
+    ],
+    "error": null,
+    "note": "The association-list lookup is rank 1 with the exact signature and examples."
+  },
+  {
+    "query": "qs haskell maximum by",
+    "expected": "`Data.List.maximumBy`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "maximumBy :: Foldable t => (a -> a -> Ordering) -> t a -> a",
+      "maximumBy :: Foldable t => (a -> a -> Ordering) -> t a -> a",
+      "maximumBy :: Foldable1 t => (a -> a -> Ordering) -> t a -> a",
+      "maximumBy :: Vector v a => (a -> a -> Ordering) -> v a -> a",
+      "maximumBy :: (a -> a -> Ordering) -> Vector a -> a"
+    ],
+    "error": null,
+    "note": "The expected `Data.List.maximumBy` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell sort on field",
+    "expected": "`Data.List.sortOn`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "sortOn :: Ord b => (a -> b) -> [a] -> [a]",
+      "sortOn :: Ord b => (a -> b) -> NonEmpty a -> NonEmpty a",
+      "sortOn :: Ord b => (a -> b) -> Seq a -> Seq a",
+      "sortOn :: Ord b => (a -> b) -> Seq a -> Seq a"
+    ],
+    "error": null,
+    "note": "sortOn is rank 1 with the exact projection-sorting signature and docs."
+  },
+  {
+    "query": "qs haskell group adjacent values",
+    "expected": "`Data.List.group` / `groupBy`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "group :: Eq a => [a] -> [[a]]",
+      "group :: (Foldable f, Eq a) => f a -> [NonEmpty a]",
+      "group :: Text -> [Text]",
+      "group :: Text -> [Text]",
+      "group :: ByteString -> [ByteString]"
+    ],
+    "error": null,
+    "note": "group is rank 1 with the expected adjacent-grouping signature; this directly answers the task."
+  },
+  {
+    "query": "qs haskell remove duplicates",
+    "expected": "`Data.List.nub`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "nub :: Eq a => [a] -> [a]",
+      "nub :: Eq a => NonEmpty a -> NonEmpty a"
+    ],
+    "error": null,
+    "note": "nub is rank 1 with the expected deduplication signature."
+  },
+  {
+    "query": "qs haskell foldr",
+    "expected": "`Prelude.foldr`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b",
+      "foldr :: (a -> b -> b) -> b -> [a] -> b",
+      "foldr :: (a -> b -> b) -> b -> [a] -> b",
+      "foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b",
+      "foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b"
+    ],
+    "error": null,
+    "note": "foldr is rank 1 with its signature and focused docs."
+  },
+  {
+    "query": "qs haskell \"foldl'\"",
+    "expected": "`Data.List.foldl'`",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — \"foldl'\""
+    ],
+    "error": null,
+    "note": "The quoted identifier falls back to the generic Haskell 2010 Report; foldl' is not returned."
+  },
+  {
+    "query": "qs haskell running totals",
+    "expected": "`Prelude.scanl`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "scanl :: (b -> a -> b) -> b -> [a] -> [b]",
+      "scanl :: (b -> a -> b) -> b -> [a] -> [b]",
+      "scanl :: (b -> a -> b) -> b -> [a] -> [b]",
+      "scanl :: Foldable f => (b -> a -> b) -> b -> f a -> NonEmpty b",
+      "scanl :: (a -> b -> a) -> a -> Seq b -> Seq a"
+    ],
+    "error": null,
+    "note": "scanl is rank 1 with its prefix-fold signature and documentation."
+  },
+  {
+    "query": "qs haskell infinite iteration",
+    "expected": "`Prelude.iterate`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "iterate :: (a -> a) -> a -> [a]",
+      "iterate :: (a -> a) -> a -> [a]",
+      "iterate :: (a -> a) -> a -> [a]",
+      "iterate :: (a -> a) -> a -> NonEmpty a",
+      "iterate :: (Char -> Char) -> Char -> Text"
+    ],
+    "error": null,
+    "note": "iterate is rank 1 with the expected infinite-list generator signature."
+  },
+  {
+    "query": "qs haskell repeat value n times",
+    "expected": "`Prelude.replicate`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "replicate :: Int -> a -> [a]",
+      "replicate :: Int -> a -> [a]",
+      "replicate :: Int -> a -> [a]",
+      "replicate :: Int -> a -> Seq a",
+      "replicate :: Int -> Text -> Text"
+    ],
+    "error": null,
+    "note": "replicate is rank 1 with its count-and-value signature."
+  },
+  {
+    "query": "qs haskell Maybe",
+    "expected": "`Maybe`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Maybe a",
+      "maybe :: b -> (a -> b) -> Maybe a -> b",
+      "data Maybe a",
+      "data Maybe a",
+      "maybe :: b -> (a -> b) -> Maybe a -> b"
+    ],
+    "error": null,
+    "note": "The expected `Maybe` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell default maybe value",
+    "expected": "`Data.Maybe.fromMaybe`",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "<$ :: Functor f => a -> f b -> f a",
+      "<$ :: Functor f => a -> f b -> f a",
+      "<$ :: Functor f => a -> f b -> f a",
+      "maybe :: b -> (a -> b) -> Maybe a -> b",
+      "fromMaybe :: a -> Maybe a -> a"
+    ],
+    "error": null,
+    "note": "fromMaybe appears only at rank 5; higher results are mostly unrelated replacement operators."
+  },
+  {
+    "query": "qs haskell map_maybe",
+    "expected": "`Data.Maybe.mapMaybe`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "mapMaybe :: (a -> Maybe b) -> [a] -> [b]",
+      "mapMaybe :: Ord b => (a -> Maybe b) -> Set a -> Set b",
+      "mapMaybe :: (a -> Maybe b) -> Seq a -> Seq b",
+      "mapMaybe :: (a -> Maybe b) -> Map k a -> Map k b",
+      "mapMaybe :: (a -> Maybe b) -> Map k a -> Map k b"
+    ],
+    "error": null,
+    "note": "mapMaybe is rank 1 with the expected signature and focused docs."
+  },
+  {
+    "query": "qs haskell discard Nothing values",
+    "expected": "`Data.Maybe.catMaybes`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "void :: Functor f => f a -> f ()",
+      "void :: Functor f => f a -> f ()",
+      "catMaybes :: [Maybe a] -> [a]",
+      "traverse :: (Traversable t, Applicative f) => (a -> f b) -> t a -> f (t b)",
+      "*> :: Applicative f => f a -> f b -> f b"
+    ],
+    "error": null,
+    "note": "catMaybes is rank 3 with an exact explanation; two void results rank ahead of it."
+  },
+  {
+    "query": "qs haskell Either",
+    "expected": "`Either`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Either a b",
+      "either :: (a -> c) -> (b -> c) -> Either a b -> c",
+      "data Either a b",
+      "either :: (a -> c) -> (b -> c) -> Either a b -> c",
+      "eitherB :: BoundedPrim a -> BoundedPrim b -> BoundedPrim (Either a b)"
+    ],
+    "error": null,
+    "note": "The expected `Either` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell separate lefts and rights",
+    "expected": "`Data.Either.partitionEithers`",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "data ST s a",
+      "data ST s a",
+      "data ST s a",
+      "data ST s a",
+      "partitionEithers :: [Either a b] -> ([a], [b])"
+    ],
+    "error": null,
+    "note": "partitionEithers is returned at rank 5 with the exact signature, but four unrelated ST results rank ahead of it."
+  },
+  {
+    "query": "qs haskell parse string safely",
+    "expected": "`Text.Read.readMaybe`",
+    "score": 2,
+    "provider": "Haskell",
+    "top_titles": [
+      "maybe :: b -> (a -> b) -> Maybe a -> b",
+      "fromMaybe :: a -> Maybe a -> a",
+      "class Read a",
+      "readsPrec :: Read a => Int -> ReadS a",
+      "choose :: [(String, ReadPrec a)] -> ReadPrec a"
+    ],
+    "error": null,
+    "note": "readMaybe is absent; Read and readsPrec provide lower-level parsing context but not the requested safe API."
+  },
+  {
+    "query": "qs haskell convert value to string",
+    "expected": "`Show` and `show`",
+    "score": 0,
+    "provider": "Haskell",
+    "top_titles": [
+      "fmap :: Functor f => (a -> b) -> f a -> f b",
+      "fmap :: Functor f => (a -> b) -> f a -> f b",
+      "fmap :: Functor f => (a -> b) -> f a -> f b",
+      "fmap :: Functor f => (a -> b) -> f a -> f b",
+      "data ThreadId"
+    ],
+    "error": null,
+    "note": "The results are fmap entries and ThreadId; Show and show are absent."
+  },
+  {
+    "query": "qs haskell ordering comparison",
+    "expected": "`Ord` and `compare`",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "maximumBy :: Foldable t => (a -> a -> Ordering) -> t a -> a",
+      "minimumBy :: Foldable t => (a -> a -> Ordering) -> t a -> a",
+      "class Eq a => Ord a",
+      "class Eq a => Ord a",
+      "sortBy :: (a -> a -> Ordering) -> [a] -> [a]"
+    ],
+    "error": null,
+    "note": "Ord appears at ranks 3-4, but compare is absent and maximumBy/minimumBy rank ahead."
+  },
+  {
+    "query": "qs haskell enumerate range",
+    "expected": "`Enum` and range syntax",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "Haskell language documentation — enumerate range"
+    ],
+    "error": null,
+    "note": "Only a generic Haskell report fallback is returned, without focused Enum or range syntax."
+  },
+  {
+    "query": "qs haskell Functor",
+    "expected": "`Functor` and `fmap`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Functor (f :: Type -> Type)",
+      "class Functor (f :: Type -> Type)",
+      "class Functor (f :: Type -> Type)",
+      "class Functor (f :: Type -> Type)",
+      "class Functor (f :: Type -> Type)"
+    ],
+    "error": null,
+    "note": "The expected `Functor` and `fmap` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell applicatives",
+    "expected": "`Applicative`, `pure`, and `<*>`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Functor f => Applicative (f :: Type -> Type)",
+      "class Functor f => Applicative (f :: Type -> Type)",
+      "class Functor f => Applicative (f :: Type -> Type)"
+    ],
+    "error": null,
+    "note": "The expected `Applicative`, `pure`, and `<*>` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell monadic bind",
+    "expected": "`Monad` and `(>>=)`",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "foldrM :: (Foldable t, Monad m) => (a -> b -> m b) -> b -> t a -> m b",
+      "foldlM :: (Foldable t, Monad m) => (b -> a -> m b) -> b -> t a -> m b",
+      "imapMOf :: Over (Indexed i) (WrappedMonad m) s t a b -> (i -> a -> m b) -> s -> m t",
+      "imapMOf :: Over (Indexed i) (WrappedMonad m) s t a b -> (i -> a -> m b) -> s -> m t"
+    ],
+    "error": null,
+    "note": "Monad bind and >>= are absent; the returned monadic folds and lens traversal APIs do not answer the query."
+  },
+  {
+    "query": "qs haskell Alternative",
+    "expected": "`Control.Applicative.Alternative`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Applicative f => Alternative (f :: Type -> Type)",
+      "class Applicative f => Alternative (f :: Type -> Type)"
+    ],
+    "error": null,
+    "note": "The expected `Control.Applicative.Alternative` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell foldables",
+    "expected": "`Data.Foldable.Foldable`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Foldable (t :: Type -> Type)",
+      "class Foldable (t :: Type -> Type)",
+      "foldable :: (Foldable t, ToJSON a) => t a -> Encoding",
+      "foldable :: (Foldable t, ToJSON a) => t a -> Encoding",
+      "class Foldable t => Foldable1 (t :: Type -> Type)"
+    ],
+    "error": null,
+    "note": "The expected `Data.Foldable.Foldable` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell traverse",
+    "expected": "`Data.Traversable.traverse`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "traverse :: (Traversable t, Applicative f) => (a -> f b) -> t a -> f (t b)",
+      "traverse :: (Traversable t, Applicative f) => (a -> f b) -> t a -> f (t b)",
+      "traverse :: Applicative f => (v1 -> f v2) -> KeyMap v1 -> f (KeyMap v2)",
+      "traverse :: (Traversable t, Applicative f) => (a -> f b) -> t a -> f (t b)",
+      "traverse :: (Traversable t, Applicative f) => (a -> f b) -> t a -> f (t b)"
+    ],
+    "error": null,
+    "note": "The expected `Data.Traversable.traverse` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell Semigroup",
+    "expected": "`Semigroup` and `(<>)`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Semigroup a",
+      "class Semigroup a",
+      "class Semigroup a"
+    ],
+    "error": null,
+    "note": "The expected `Semigroup` and `(<>)` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell monoids",
+    "expected": "`Monoid`, `mempty`, and `mappend`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Semigroup a => Monoid a",
+      "class Semigroup a => Monoid a",
+      "class Semigroup a => Monoid a",
+      "stimesMonoid :: (Integral b, Monoid a) => b -> a -> a",
+      "stimesIdempotentMonoid :: (Integral b, Monoid a) => b -> a -> a"
+    ],
+    "error": null,
+    "note": "The expected `Monoid`, `mempty`, and `mappend` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell bimap",
+    "expected": "`Data.Bifunctor.bimap`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "bimap :: Bifunctor p => (a -> b) -> (c -> d) -> p a c -> p b d",
+      "bimap :: Bifunctor p => (a -> b) -> (c -> d) -> p a c -> p b d",
+      "bimap :: Bifunctor p => (a -> b) -> (c -> d) -> p a c -> p b d",
+      "bimapM_ :: (Bifoldable t, Applicative f) => (a -> f c) -> (b -> f d) -> t a b -> f ()",
+      "bimapM :: (Bitraversable t, Applicative f) => (a -> f c) -> (b -> f d) -> t a b -> f (t c d)"
+    ],
+    "error": null,
+    "note": "The expected `Data.Bifunctor.bimap` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell monad transformers",
+    "expected": "Transformer types and `lift`",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Monad m => MonadIO (m :: Type -> Type)",
+      "liftIO :: MonadIO m => IO a -> m a",
+      "class (Magnified m ~ Magnified n, MonadReader b m, MonadReader a n) => Magnify (m :: Type -> Type) (n :: Type -> Type) b a | m -> b, n -> a, m a -> n, n b -> m",
+      "class (MonadState s m, MonadState t n) => Zoom (m :: Type -> Type) (n :: Type -> Type) s t | m -> s, n -> t, m t -> n, n s -> m",
+      "class (MonadState s m, MonadState t n) => Zoom (m :: Type -> Type) (n :: Type -> Type) s t | m -> s, n -> t, m t -> n, n s -> m"
+    ],
+    "error": null,
+    "note": "MonadIO and liftIO give useful transformer-stack context, but general transformer types and lift are absent."
+  },
+  {
+    "query": "qs haskell Data.Map.Strict.lookup",
+    "expected": "`Data.Map.Strict.lookup`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "lookup :: Ord k => k -> Map k a -> Maybe a",
+      "lookup :: Eq a => a -> [(a, b)] -> Maybe b",
+      "lookup :: Eq a => a -> [(a, b)] -> Maybe b",
+      "lookup :: Eq a => a -> [(a, b)] -> Maybe b",
+      "lookup :: Int -> Seq a -> Maybe a"
+    ],
+    "error": null,
+    "note": "The fully qualified lookup resolves to Data.Map.Strict at rank 1 with exact docs."
+  },
+  {
+    "query": "qs haskell insert map key",
+    "expected": "`Data.Map.insert`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "lookup :: Int -> Seq a -> Maybe a",
+      "insert :: Ord k => k -> a -> Map k a -> Map k a",
+      "insertWith :: Ord k => (a -> a -> a) -> k -> a -> Map k a -> Map k a",
+      "insertWithKey :: Ord k => (k -> a -> a -> a) -> k -> a -> Map k a -> Map k a",
+      "insertLookupWithKey :: Ord k => (k -> a -> a -> a) -> k -> a -> Map k a -> (Maybe a, Map k a)"
+    ],
+    "error": null,
+    "note": "Data.Map insert is rank 2 with exact signature and useful map context; Seq lookup ranks first."
+  },
+  {
+    "query": "qs haskell integer keyed maps",
+    "expected": "`Data.IntMap`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data IntMap a",
+      "data IntMap a",
+      "data IntMap a",
+      "data IntMap a"
+    ],
+    "error": null,
+    "note": "The expected `Data.IntMap` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell set intersection",
+    "expected": "`Data.Set.intersection`",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "mergeA :: (Applicative f, Ord a) => WhenMissing f a -> WhenMissing f a -> WhenMatched f a -> Set a -> Set a -> f (Set a)",
+      "isSubsetOf :: Ord a => Set a -> Set a -> Bool",
+      "disjoint :: Ord a => Set a -> Set a -> Bool",
+      "intersection :: Ord a => Set a -> Set a -> Set a",
+      "intersections :: Ord a => NonEmpty (Set a) -> Set a"
+    ],
+    "error": null,
+    "note": "intersection appears only at rank 4; the top three are related Set operations but not the requested API."
+  },
+  {
+    "query": "qs haskell hash maps",
+    "expected": "`Data.HashMap` from `unordered-containers`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data HashMap k v",
+      "data HashMap k v",
+      "hashMap :: forall a p f. (Profunctor p, Functor f) => p (HashMap a ()) (f (HashMap a ())) -> p (HashSet a) (f (HashSet a))",
+      "data HashMap k v",
+      "data HashMap k v"
+    ],
+    "error": null,
+    "note": "The expected `Data.HashMap` from `unordered-containers` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell sequences",
+    "expected": "`Data.Sequence.Seq`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Seq a",
+      "seq :: a -> b -> b",
+      "seq :: a -> b -> b",
+      "seq :: a -> b -> b",
+      "newtype Seq a"
+    ],
+    "error": null,
+    "note": "The expected `Data.Sequence.Seq` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell vectors",
+    "expected": "`Data.Vector.Vector`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class MVector Mutable v a => Vector (v :: Type -> Type) a",
+      "data Vector a",
+      "data Vector a",
+      "data Vector a",
+      "data Vector a"
+    ],
+    "error": null,
+    "note": "The expected `Data.Vector.Vector` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell byte strings",
+    "expected": "`Data.ByteString.ByteString`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data ByteString",
+      "data ByteString",
+      "data ByteString",
+      "data ByteString",
+      "byteString :: StrictByteString -> Builder"
+    ],
+    "error": null,
+    "note": "The expected `Data.ByteString.ByteString` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell Text",
+    "expected": "`Data.Text.Text`",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "Text :: Symbol -> ErrorMessage",
+      "Text :: Symbol -> ErrorMessage",
+      "data Text",
+      "data Text",
+      "text :: Text -> Encoding' a"
+    ],
+    "error": null,
+    "note": "Data.Text.Text appears at rank 3, behind two unrelated type-level Text constructors."
+  },
+  {
+    "query": "qs haskell split_on",
+    "expected": "`Data.Text.splitOn`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "splitOn :: HasCallStack => Text -> Text -> [Text]",
+      "splitOn :: HasCallStack => Text -> Text -> [Text]"
+    ],
+    "error": null,
+    "note": "splitOn is rank 1 with the expected Text signature and module docs."
+  },
+  {
+    "query": "qs haskell replace substring",
+    "expected": "`Data.Text.replace`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "replace :: HasCallStack => Text -> Text -> Text -> Text",
+      "replace :: b -> OnError a b",
+      "replace :: HasCallStack => Text -> Text -> Text -> Text"
+    ],
+    "error": null,
+    "note": "Data.Text.replace is rank 1 with the expected signature and docs."
+  },
+  {
+    "query": "qs haskell encode utf8",
+    "expected": "`Data.Text.Encoding.encodeUtf8`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "encodeUtf8 :: Text -> ByteString",
+      "encodeUtf8 :: Text -> ByteString"
+    ],
+    "error": null,
+    "note": "encodeUtf8 is rank 1 with the expected Text-to-ByteString signature."
+  },
+  {
+    "query": "qs haskell handle invalid Unicode",
+    "expected": "`Data.Text.Encoding.decodeUtf8With` and `lenientDecode`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "decodeUtf8With :: OnDecodeError -> ByteString -> Text",
+      "decodeUtf8With :: OnDecodeError -> ByteString -> Text"
+    ],
+    "error": null,
+    "note": "decodeUtf8With is rank 1 with useful malformed-input context, but lenientDecode is absent."
+  },
+  {
+    "query": "qs haskell parse JSON",
+    "expected": "`Data.Aeson.eitherDecode` / `FromJSON`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "eitherDecode :: FromJSON a => ByteString -> Either String a",
+      "eitherDecode :: FromJSON a => ByteString -> Either String a"
+    ],
+    "error": null,
+    "note": "The expected `Data.Aeson.eitherDecode` / `FromJSON` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell generic programming",
+    "expected": "`GHC.Generics.Generic`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class Generic a where {",
+      "generic :: (Generic a, Generic b) => Iso a b (Rep a g) (Rep b h)",
+      "Generic :: FPFormat",
+      "generic :: FloatFormat"
+    ],
+    "error": null,
+    "note": "The expected `GHC.Generics.Generic` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell lens view set",
+    "expected": "`Control.Lens.view`, `set`, and lens basics",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "view :: MonadReader s m => Getting a s a -> m a",
+      "view :: MonadReader s m => Getting a s a -> m a"
+    ],
+    "error": null,
+    "note": "view is returned directly, but set and general lens basics are absent."
+  },
+  {
+    "query": "qs haskell putStrLn",
+    "expected": "`Prelude.putStrLn`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "putStrLn :: String -> IO ()",
+      "putStrLn :: String -> IO ()",
+      "putStrLn :: Text -> IO ()",
+      "putStrLn :: Text -> IO ()",
+      "putStrLn :: Text -> IO ()"
+    ],
+    "error": null,
+    "note": "putStrLn is rank 1 with the expected signature and docs."
+  },
+  {
+    "query": "qs haskell readFile",
+    "expected": "`Prelude.readFile`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "readFile :: FilePath -> IO String",
+      "readFile :: FilePath -> IO String",
+      "readFile :: FilePath -> IO Text",
+      "readFile :: FilePath -> IO Text",
+      "readFile :: FilePath -> IO Text"
+    ],
+    "error": null,
+    "note": "readFile is rank 1 with the expected Prelude signature and docs."
+  },
+  {
+    "query": "qs haskell write text file",
+    "expected": "`writeFile`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "writeFile :: FilePath -> Text -> IO ()",
+      "writeFile :: FilePath -> Text -> IO ()",
+      "writeFile :: FilePath -> String -> IO ()",
+      "writeFile :: FilePath -> String -> IO ()",
+      "writeFile :: FilePath -> Text -> IO ()"
+    ],
+    "error": null,
+    "note": "writeFile is rank 1 with useful Text and String signatures."
+  },
+  {
+    "query": "qs haskell safe file handle",
+    "expected": "`System.IO.withFile`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "withFile :: FilePath -> IOMode -> (Handle -> IO r) -> IO r",
+      "withFile :: FilePath -> IOMode -> (Handle -> IO r) -> IO r",
+      "withFile :: FilePath -> IOMode -> (Handle -> IO r) -> IO r"
+    ],
+    "error": null,
+    "note": "The expected `System.IO.withFile` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell command line arguments",
+    "expected": "`System.Environment.getArgs`",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "getFullArgs :: IO [String]",
+      "getFileSystemEncoding :: IO TextEncoding",
+      "getOpt :: ArgOrder a -> [OptDescr a] -> [String] -> ([a], [String], [String])",
+      "getArgs :: IO [String]",
+      "getArgs :: IO [String]"
+    ],
+    "error": null,
+    "note": "getArgs is rank 4, while getFullArgs and getOpt provide related command-line context above it."
+  },
+  {
+    "query": "qs haskell environment variables",
+    "expected": "`System.Environment.lookupEnv` / `getEnv`",
+    "score": 2,
+    "provider": "Haskell",
+    "top_titles": [
+      "unsafePerformIO :: IO a -> a",
+      "getFileSystemEncoding :: IO TextEncoding",
+      "unsafePerformIO :: IO a -> a",
+      "setEnv :: String -> String -> IO ()",
+      "unsetEnv :: String -> IO ()"
+    ],
+    "error": null,
+    "note": "lookupEnv/getEnv are absent; setEnv and unsetEnv at ranks 4-5 only partially cover environment variables."
+  },
+  {
+    "query": "qs haskell list directory",
+    "expected": "`System.Directory.listDirectory`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "listDirectory :: FilePath -> IO [FilePath]",
+      "listDirectory :: OsPath -> IO [OsPath]"
+    ],
+    "error": null,
+    "note": "The expected `System.Directory.listDirectory` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell check file exists",
+    "expected": "`System.Directory.doesFileExist`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "doesFileExist :: FilePath -> IO Bool",
+      "doesFileExist :: OsPath -> IO Bool"
+    ],
+    "error": null,
+    "note": "The expected `System.Directory.doesFileExist` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell file extension",
+    "expected": "`System.FilePath.takeExtension` / `replaceExtension`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "takeExtension :: FilePath -> String",
+      "takeExtension :: FilePath -> String",
+      "takeExtension :: FilePath -> String",
+      "takeExtension :: PosixPath -> PosixString",
+      "takeExtension :: OsPath -> OsString"
+    ],
+    "error": null,
+    "note": "The expected `System.FilePath.takeExtension` / `replaceExtension` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell temporary files",
+    "expected": "`System.IO.Temp`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "withSystemTempFile :: (MonadIO m, MonadMask m) => String -> (FilePath -> Handle -> m a) -> m a"
+    ],
+    "error": null,
+    "note": "The expected `System.IO.Temp` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell exceptions",
+    "expected": "`Control.Exception`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "class (Typeable e, Show e) => Exception e",
+      "class (Typeable e, Show e) => Exception e",
+      "class (Typeable e, Show e) => Exception e",
+      "class (Typeable e, Show e) => Exception e",
+      "exception :: Exception a => Prism' SomeException a"
+    ],
+    "error": null,
+    "note": "The expected `Control.Exception` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell bracket resource cleanup",
+    "expected": "`Control.Exception.bracket`",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "withCreateProcess :: CreateProcess -> (Maybe Handle -> Maybe Handle -> Maybe Handle -> ProcessHandle -> IO a) -> IO a",
+      "mask :: ((forall a. () => IO a -> IO a) -> IO b) -> IO b",
+      "bracket :: IO a -> (a -> IO b) -> (a -> IO c) -> IO c",
+      "mask :: ((forall a. () => IO a -> IO a) -> IO b) -> IO b",
+      "bracket :: IO a -> (a -> IO b) -> (a -> IO c) -> IO c"
+    ],
+    "error": null,
+    "note": "bracket appears at rank 3 with its exact acquire/use/release signature, behind related cleanup and masking APIs."
+  },
+  {
+    "query": "qs haskell async concurrency",
+    "expected": "`Control.Concurrent.Async`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Async a",
+      "async :: IO a -> IO (Async a)",
+      "data Async a",
+      "async :: IO a -> IO (Async a)"
+    ],
+    "error": null,
+    "note": "The expected `Control.Concurrent.Async` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell forkIO",
+    "expected": "`Control.Concurrent.forkIO`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "forkIO :: IO () -> IO ThreadId",
+      "forkIO :: IO () -> IO ThreadId",
+      "forkIO :: IO () -> IO ThreadId",
+      "forkIOWithUnmask :: ((forall a. () => IO a -> IO a) -> IO ()) -> IO ThreadId",
+      "forkIOWithUnmask :: ((forall a. () => IO a -> IO a) -> IO ()) -> IO ThreadId"
+    ],
+    "error": null,
+    "note": "forkIO is rank 1 with the expected signature and concurrency docs."
+  },
+  {
+    "query": "qs haskell MVar",
+    "expected": "`Control.Concurrent.MVar.MVar`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data MVar a",
+      "data MVar a",
+      "data MVar# a (b :: TYPE 'BoxedRep l) :: UnliftedType",
+      "data MVar# a (b :: TYPE 'BoxedRep l) :: UnliftedType",
+      "newEmptyMVar :: IO (MVar a)"
+    ],
+    "error": null,
+    "note": "The expected `Control.Concurrent.MVar.MVar` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell software transactional memory",
+    "expected": "`Control.Concurrent.STM`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "atomically :: STM a -> IO a",
+      "atomically :: STM a -> IO a",
+      "atomically :: STM a -> IO a"
+    ],
+    "error": null,
+    "note": "The expected `Control.Concurrent.STM` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell operation timeout",
+    "expected": "`System.Timeout.timeout`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Timeout",
+      "timeout :: Int -> IO a -> IO (Maybe a)"
+    ],
+    "error": null,
+    "note": "The expected `System.Timeout.timeout` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell run external process",
+    "expected": "`System.Process` / `readProcess`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "readProcess :: FilePath -> [String] -> String -> IO String"
+    ],
+    "error": null,
+    "note": "The expected `System.Process` / `readProcess` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell random numbers",
+    "expected": "`System.Random` and `randomRIO`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "randomRIO :: (Random a, MonadIO m) => (a, a) -> m a",
+      "randomRIO :: (Random a, MonadIO m) => (a, a) -> m a"
+    ],
+    "error": null,
+    "note": "The expected `System.Random` and `randomRIO` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell HTTP client request",
+    "expected": "`Network.HTTP.Client`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "httpLbs :: Request -> Manager -> IO (Response ByteString)",
+      "httpLbs :: Request -> Manager -> IO (Response ByteString)"
+    ],
+    "error": null,
+    "note": "The expected `Network.HTTP.Client` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell QuickCheck properties",
+    "expected": "`Test.QuickCheck` and `property`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "data Property",
+      "property :: Testable prop => prop -> Property"
+    ],
+    "error": null,
+    "note": "The expected `Test.QuickCheck` and `property` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell Hspec",
+    "expected": "`Test.Hspec`",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "hspec :: Spec -> IO ()"
+    ],
+    "error": null,
+    "note": "The expected `Test.Hspec` documentation is returned directly with a useful signature or focused description."
+  },
+  {
+    "query": "qs haskell GHCi commands",
+    "expected": "GHCi interactive commands",
+    "score": 5,
+    "provider": "ghc-guide",
+    "top_titles": [
+      "Documenting command-line options and GHCi commands",
+      "GHCi commands",
+      "GHCi commands",
+      "Bugs in GHCi (the interactive GHC)",
+      "Building GHCi libraries"
+    ],
+    "error": null,
+    "note": "Focused GHCi commands pages occupy the top results and directly answer the query."
+  },
+  {
+    "query": "qs haskell language extensions",
+    "expected": "GHC language extensions and `LANGUAGE` pragmas",
+    "score": 5,
+    "provider": "ghc-guide",
+    "top_titles": [
+      "Language extensions",
+      "Overview of all language extensions"
+    ],
+    "error": null,
+    "note": "Language extensions and the complete overview are the first two focused results."
+  }
+]

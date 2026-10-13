@@ -1,0 +1,1363 @@
+[
+  {
+    "index": 50,
+    "entry": {
+      "language": "rust",
+      "query": "qs rust checked addition not wrapping addition",
+      "expected": "checked_add, not wrapping_add",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "rust",
+      "checked",
+      "addition",
+      "not",
+      "wrapping",
+      "addition"
+    ],
+    "exit": 0,
+    "elapsed": 1.3534817695617676,
+    "stdout": "{\n  \"provider\": \"rust\",\n  \"query\": \"checked addition not wrapping addition\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20checked%20addition%20not%20wrapping%20addition\",\n  \"hits\": [\n    {\n      \"title\": \"How to Write Tests\",\n      \"url\": \"https://devdocs.io/rust/book/ch11-01-writing-tests\",\n      \"snippet\": \"Checking for Panics with should_panic \u2014 In addition to checking return values, it\u2019s important to check that our code handles error conditions as we expect. For example, consider the Guess type that we created in Chapter 9, Listing 9-13. Other code that uses Guess depends on the guarantee that Guess instances will contain only values between 1 and 100. We ca\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Test Organization\",\n      \"url\": \"https://devdocs.io/rust/book/ch11-03-test-organization\",\n      \"snippet\": \"Test Organization \u2014 As mentioned at the start of the chapter, testing is a complex discipline, and different people use different terminology and organization. The Rust community thinks about tests in terms of two main categories: unit tests and integration tests. Unit tests are small and more focused, testing one module in isolation at a time, and can test\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Unsafe Rust\",\n      \"url\": \"https://devdocs.io/rust/book/ch20-01-unsafe-rust\",\n      \"snippet\": \"Using Miri to Check Unsafe Code \u2014 When writing unsafe code, you might want to check that what you have written actually is safe and correct. One of the best ways to do that is to use Miri, an official Rust tool for detecting undefined behavior. Whereas the borrow checker is a static tool that works at compile time, Miri is a dynamic tool that works at runti\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Function add_with_overflow\",\n      \"url\": \"https://devdocs.io/rust/std/intrinsics/fn.add_with_overflow\",\n      \"snippet\": \"Function add_with_overflow \u2014 pub const fn add_with_overflow<T>(x: T, y: T) -> (T, bool)where T: Copy, \ud83d\udd2cThis is a nightly-only experimental API. (core_intrinsics) Performs checked integer addition. Note that, unlike most intrinsics, this is safe to call; it does not require an unsafe block. Therefore, implementations must not require the user to uphold any s\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Controlling How Tests Are Run\",\n      \"url\": \"https://devdocs.io/rust/book/ch11-02-running-tests\",\n      \"snippet\": \"Controlling How Tests Are Run \u2014 Just as cargo run compiles your code and then runs the resultant binary, cargo test compiles your code in test mode and runs the resultant test binary. The default behavior of the binary produced by cargo test is to run all the tests in parallel and capture output generated during test runs, preventing the output from being d\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Search Rust standard library for checked addition not wrapping addition\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20checked%20addition%20not%20wrapping%20addition\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 51,
+    "entry": {
+      "language": "cpp",
+      "query": "qs cpp midpoint without overflow not simple average",
+      "expected": "std::midpoint, not (a+b)/2",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "cpp",
+      "midpoint",
+      "without",
+      "overflow",
+      "not",
+      "simple",
+      "average"
+    ],
+    "exit": 0,
+    "elapsed": 0.5266547203063965,
+    "stdout": "{\n  \"provider\": \"C++\",\n  \"query\": \"midpoint without overflow not simple average\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::midpoint\",\n      \"url\": \"https://devdocs.io/cpp/numeric/midpoint\",\n      \"snippet\": \"std::midpoint \u2014 Defined in header <numeric> template< class T > constexpr T midpoint( T a, T b ) noexcept; (1) (since C++20) template< class T > constexpr T* midpoint( T* a, T* b ); (2) (since C++20) Computes the midpoint of the integers, floating-points, or pointers a and b. 1) This overload participates in overload resolution only if T is an arithmetic ty\u2026\",\n      \"meta\": [\n        \"C++\"\n      ]\n    },\n    {\n      \"title\": \"std::lerp\",\n      \"url\": \"https://devdocs.io/cpp/numeric/lerp\",\n      \"snippet\": \"Example \u2014 #include <cassert> #include <cmath> #include <iostream> float naive_lerp(float a, float b, float t) { return a + t * (b - a); } int main() { std::cout << std::boolalpha; const float a = 1e8f, b = 1.0f; const float midpoint = std::lerp(a, b, 0.5f); std::cout << \\\"a = \\\" << a << \\\", \\\" << \\\"b = \\\" << b << '\\\\n' << \\\"midpoint = \\\" << midpoint << '\\\\n'; std::co\u2026\",\n      \"meta\": [\n        \"C++\"\n      ]\n    },\n    {\n      \"title\": \"FE_OVERFLOW\",\n      \"url\": \"https://devdocs.io/cpp/numeric/fenv/fe_exceptions\",\n      \"snippet\": \"#define FE_DIVBYZERO /*implementation defined power of 2*/ (since C++11) #define FE_INEXACT /*implementation defined power of 2*/ (since C++11) #define FE_INVALID /*implementation defined power of 2*/ (since C++11) #define FE_OVERFLOW /*implementation defined power of 2*/ (since C++11) #define FE_UNDERFLOW /*implement\u2026\",\n      \"meta\": [\n        \"C++  \u00b7  Numerics\",\n        \"#include <cfenv>\\n#include <cmath>\\n#include <iostream>\\n\\n// #pragma STDC FENV_ACCESS ON\\n\\nvolatile double zero = 0.0; // volatile not needed where FENV_ACCESS is supported\\nvolatile double one = 1.0;  // volatile not needed where FENV_ACCESS is supported\\n\\nint main()\\n{\\n    std::feclearexcept(FE_ALL_EXCEPT);\\n    std::cout <<  \\\"1.0/0.0 = \\\" << 1.0 / zero << '\\\\n';\\n    if (std::fetestexcept(FE_DIVBYZERO))\\n        std::cout << \\\"division by zero reported\\\\n\\\";\\n    else\\n        std::cout << \\\"division by zero not reported\\\\n\\\";\\n\\n    std::feclearexcept(FE_ALL_EXCEPT);\\n    std::cout << \\\"1.0/10 = \\\" << one / 10 << '\\\\n';\\n    if (std::fetestexcept(FE_INEXACT))\\n        std::cout << \\\"inexact result reported\\\\n\\\";\\n    else\\n        std::cout << \\\"inexact result not reported\\\\n\\\";\\n\\n    std::feclearexcept(FE_ALL_EXCEPT);\\n    std::cout << \\\"sqrt(-1) = \\\" << std::sqrt(-1) << '\\\\n';\\n    if (std::fetestexcept(FE_INVALID))\\n        std::cout << \\\"invalid result reported\\\\n\\\";\\n    else\\n        std::cout << \\\"invalid result not reported\\\\n\\\";\\n}\"\n      ]\n    },\n    {\n      \"title\": \"C++20\",\n      \"url\": \"https://devdocs.io/cpp/20\",\n      \"snippet\": \"C++20 \u2014 C++20 is a major version after C++17, featuring major features (concepts, modules, coroutines, and ranges) and other language and library features. The standard was published in December 2020.\",\n      \"meta\": [\n        \"C++\"\n      ]\n    },\n    {\n      \"title\": \"Numerics library\",\n      \"url\": \"https://devdocs.io/cpp/numeric\",\n      \"snippet\": \"Interpolation operations (C++20) \u2014 Defined in header <numeric> midpoint (C++20) midpoint between two numbers or pointers (function template) Defined in header <cmath> lerp (C++20) linear interpolation function (function)\",\n      \"meta\": [\n        \"C++\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 52,
+    "entry": {
+      "language": "c",
+      "query": "qs c find first matching span not substring",
+      "expected": "strpbrk, not strstr",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "c",
+      "find",
+      "first",
+      "matching",
+      "span",
+      "not",
+      "substring"
+    ],
+    "exit": 0,
+    "elapsed": 0.1352987289428711,
+    "stdout": "{\n  \"provider\": \"C\",\n  \"query\": \"find first matching span not substring\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"memchr\",\n      \"url\": \"https://devdocs.io/c/string/byte/memchr\",\n      \"snippet\": \"memchr \u2014 Defined in header <string.h> void* memchr( const void* ptr, int ch, size_t count ); (1) /*QVoid*/ *memchr( /*QVoid*/ *ptr, int ch, size_t count ); (2) (since C23) 1) Finds the first occurrence of (unsigned char)ch in the initial count bytes (each interpreted as unsignedchar) of the object pointed to by ptr. 2) Type-generic function equivalent to (1\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"strspn\",\n      \"url\": \"https://devdocs.io/c/string/byte/strspn\",\n      \"snippet\": \"See also \u2014 strcspn returns the length of the maximum initial segment that consists of only the characters not found in another byte string (function) wcsspn (C95) returns the length of the maximum initial segment that consists of only the wide characters found in another wide string (function) strpbrk finds the first location of any character in one string,\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"Type-generic math\",\n      \"url\": \"https://devdocs.io/c/numeric/tgmath\",\n      \"snippet\": \"The header <tgmath.h> includes the headers <math.h> and <complex.h> and defines several type-generic macros that determine which real or, when applicable, complex function to call based on the types of the arguments.\",\n      \"meta\": [\n        \"C  \u00b7  Numerics\"\n      ]\n    },\n    {\n      \"title\": \"wcspbrk\",\n      \"url\": \"https://devdocs.io/c/string/wide/wcspbrk\",\n      \"snippet\": \"wcspbrk \u2014 Defined in header <wchar.h> wchar_t *wcspbrk( const wchar_t *dest, const wchar_t *str ); (1) (since C95) /*QWchar_t*/ *wcspbrk( /*QWchar_t*/ *dest, const wchar_t *str ); (2) (since C23) 1) Finds the first character in wide string pointed to by dest, that is also in wide string pointed to by str. 2) Type-generic function equivalent to (1). Let T be\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"strcspn\",\n      \"url\": \"https://devdocs.io/c/string/byte/strcspn\",\n      \"snippet\": \"See also \u2014 strspn returns the length of the maximum initial segment that consists of only the characters found in another byte string (function) wcscspn (C95) returns the length of the maximum initial segment that consists of only the wide chars not found in another wide string (function) strpbrk finds the first location of any character in one string, in a\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 53,
+    "entry": {
+      "language": "haskell",
+      "query": "qs haskell strict bytestring not lazy bytestring",
+      "expected": "Data.ByteString, not Data.ByteString.Lazy",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "haskell",
+      "strict",
+      "bytestring",
+      "not",
+      "lazy",
+      "bytestring"
+    ],
+    "exit": 0,
+    "elapsed": 0.02520275115966797,
+    "stdout": "{\n  \"provider\": \"ghc-guide\",\n  \"query\": \"strict bytestring not lazy bytestring\",\n  \"source_url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/searchindex.js\",\n  \"hits\": [\n    {\n      \"title\": \"Bang patterns and Strict Haskell\",\n      \"url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/exts/strict.html#bang-patterns-and-strict-haskell\",\n      \"snippet\": \"<span class=\\\"section-number\\\">6.14. </span>Bang patterns and Strict Haskell\"\n    },\n    {\n      \"title\": \"Building secure systems (restricted IO Monads)\",\n      \"url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/exts/safe_haskell.html#building-secure-systems-restricted-io-monads\",\n      \"snippet\": \"<span class=\\\"section-number\\\">6.18. </span>Safe Haskell\"\n    },\n    {\n      \"title\": \"Loosening restrictions on class contexts\",\n      \"url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/exts/flexible_contexts.html#loosening-restrictions-on-class-contexts\",\n      \"snippet\": \"<span class=\\\"section-number\\\">6.10.1. </span>Loosening restrictions on class contexts\"\n    },\n    {\n      \"title\": \"Restrictions\",\n      \"url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/exts/existential_quantification.html#restrictions\",\n      \"snippet\": \"<span class=\\\"section-number\\\">6.4.7. </span>Existentially quantified data constructors\"\n    },\n    {\n      \"title\": \"Restrictions on unlifted boxed arguments passed to foreign C calls.\\n        Cells marked as \u201cUnsound\u201d represent combinations that lead to\\n        undefined runtime behavior. GHC does not reject such unsound\\n        programs at compile time.\",\n      \"url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/exts/ffi.html#id9\",\n      \"snippet\": \"<span class=\\\"section-number\\\">6.17. </span>Foreign function interface (FFI)\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 54,
+    "entry": {
+      "language": "python",
+      "query": "qs python cryptographic random integer not random.randrange",
+      "expected": "secrets.randbelow(), not random.randrange()",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "python",
+      "cryptographic",
+      "random",
+      "integer",
+      "not",
+      "random.randrange"
+    ],
+    "exit": 0,
+    "elapsed": 0.12165427207946777,
+    "stdout": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"random.randrange\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"random.randrange()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/random#random.randrange\",\n      \"snippet\": \"Return a randomly selected element from range(start, stop, step).\",\n      \"meta\": [\n        \"Python  \u00b7  Numeric & Mathematical\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 55,
+    "entry": {
+      "language": "go",
+      "query": "qs go escape html text not url query data",
+      "expected": "html.EscapeString, not url.QueryEscape",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "go",
+      "escape",
+      "html",
+      "text",
+      "not",
+      "url",
+      "query",
+      "data"
+    ],
+    "exit": 0,
+    "elapsed": 0.31793999671936035,
+    "stdout": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"escape html text not url query data\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"func EscapeText 1.1\",\n      \"url\": \"https://devdocs.io/go/encoding/xml/index\",\n      \"snippet\": \"func EscapeText 1.1 \u2014 func EscapeText(w io.Writer, s []byte) error EscapeText writes to w the properly escaped XML equivalent of the plain text data s.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"func (*Encoder) SetEscapeHTML 1.7\",\n      \"url\": \"https://devdocs.io/go/encoding/json/index\",\n      \"snippet\": \"func (*Encoder) SetEscapeHTML 1.7 \u2014 func (enc *Encoder) SetEscapeHTML(on bool) SetEscapeHTML specifies whether problematic HTML characters should be escaped inside JSON quoted strings. The default behavior is to escape &, <, and > to \\\\u0026, \\\\u003c, and \\\\u003e to avoid certain safety problems that can arise when embedding JSON in HTML. In non-HTML settings \u2026\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"url.QueryEscape()\",\n      \"url\": \"https://devdocs.io/go/net/url/index#QueryEscape\",\n      \"snippet\": \"func QueryEscape(s string) string QueryEscape escapes the string so it can be safely placed inside a URL query.\",\n      \"meta\": [\n        \"Go  \u00b7  net/url\",\n        \"query := url.QueryEscape(\\\"my/cool+blog&about,stuff\\\")\\nfmt.Println(query)\"\n      ]\n    },\n    {\n      \"title\": \"Text and spaces\",\n      \"url\": \"https://devdocs.io/go/text/template/index\",\n      \"snippet\": \"Text and spaces \u2014 By default, all text between actions is copied verbatim when the template is executed. For example, the string \\\" items are made of \\\" in the example above appears on standard output when the program is run. However, to aid in formatting template source code, if an action's left delimiter (by default \\\"{{\\\") is followed immediately by a minus \u2026\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"func EscapeForHTML 1.27\",\n      \"url\": \"https://devdocs.io/go/encoding/json/jsontext/index\",\n      \"snippet\": \"func EscapeForHTML 1.27 \u2014 func EscapeForHTML(v bool) Options EscapeForHTML specifies that '<', '>', and '&' characters within JSON strings should be escaped as a hexadecimal Unicode codepoint (e.g., \\\\u003c) so that the output is safe to embed within HTML. This only affects encoding and is ignored when decoding.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 56,
+    "entry": {
+      "language": "rust",
+      "query": "qs rust saturating multiplication not checked multiplication",
+      "expected": "saturating_mul, not checked_mul",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "rust",
+      "saturating",
+      "multiplication",
+      "not",
+      "checked",
+      "multiplication"
+    ],
+    "exit": 0,
+    "elapsed": 1.079913854598999,
+    "stdout": "{\n  \"provider\": \"rust\",\n  \"query\": \"saturating multiplication not checked multiplication\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20saturating%20multiplication%20not%20checked%20multiplication\",\n  \"hits\": [\n    {\n      \"title\": \"Struct Saturating\",\n      \"url\": \"https://devdocs.io/rust/std/num/struct.saturating\",\n      \"snippet\": \"Struct Saturating \u2014 #[repr(transparent)]pub struct Saturating<T>(pub T); Provides intentionally-saturating arithmetic on T. Operations like + on u32 values are intended to never overflow, and in some debug configurations overflow is detected and results in a panic. While most arithmetic falls into this category, some code explicitly expects and relies upon \u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Function saturating_add\",\n      \"url\": \"https://devdocs.io/rust/std/intrinsics/fn.saturating_add\",\n      \"snippet\": \"Function saturating_add \u2014 pub const fn saturating_add<T>(a: T, b: T) -> Twhere T: Copy, \ud83d\udd2cThis is a nightly-only experimental API. (core_intrinsics) Computes a + b, saturating at numeric bounds. Note that, unlike most intrinsics, this is safe to call; it does not require an unsafe block. Therefore, implementations must not require the user to uphold any safe\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Function saturating_sub\",\n      \"url\": \"https://devdocs.io/rust/std/intrinsics/fn.saturating_sub\",\n      \"snippet\": \"Function saturating_sub \u2014 pub const fn saturating_sub<T>(a: T, b: T) -> Twhere T: Copy, \ud83d\udd2cThis is a nightly-only experimental API. (core_intrinsics) Computes a - b, saturating at numeric bounds. Note that, unlike most intrinsics, this is safe to call; it does not require an unsafe block. Therefore, implementations must not require the user to uphold any safe\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Function simd_saturating_add\",\n      \"url\": \"https://devdocs.io/rust/std/intrinsics/simd/fn.simd_saturating_add\",\n      \"snippet\": \"Function simd_saturating_add \u2014 pub const unsafe fn simd_saturating_add<T>(x: T, y: T) -> T \ud83d\udd2cThis is a nightly-only experimental API. (core_intrinsics) Adds two simd vectors elementwise, with saturation. T must be a vector of integer primitive types. &copy; 2010 The Rust Project DevelopersLicensed under the Apache License, Version 2.0 or the MIT license, at \u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Function simd_saturating_sub\",\n      \"url\": \"https://devdocs.io/rust/std/intrinsics/simd/fn.simd_saturating_sub\",\n      \"snippet\": \"Function simd_saturating_sub \u2014 pub const unsafe fn simd_saturating_sub<T>(lhs: T, rhs: T) -> T \ud83d\udd2cThis is a nightly-only experimental API. (core_intrinsics) Subtracts two simd vectors elementwise, with saturation. T must be a vector of integer primitive types. Subtract rhs from lhs. &copy; 2010 The Rust Project DevelopersLicensed under the Apache License, Ver\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Search Rust standard library for saturating multiplication not checked multiplication\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20saturating%20multiplication%20not%20checked%20multiplication\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 57,
+    "entry": {
+      "language": "cpp",
+      "query": "qs cpp terminate handler not unexpected exception handler",
+      "expected": "std::set_terminate, not exception matching",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "cpp",
+      "terminate",
+      "handler",
+      "not",
+      "unexpected",
+      "exception",
+      "handler"
+    ],
+    "exit": 0,
+    "elapsed": 0.5558474063873291,
+    "stdout": "{\n  \"provider\": \"C++\",\n  \"query\": \"terminate handler not unexpected exception handler\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::terminate_handler\",\n      \"url\": \"https://devdocs.io/cpp/error/terminate_handler\",\n      \"snippet\": \"std::terminate_handler \u2014 Defined in header <exception> typedef void ( *terminate_handler )(); std::terminate_handler is the function pointer type (pointer to function that takes no arguments and returns void), which is installed and queried by the functions std::set_terminate and std::get_terminate and called by std::terminate. A std::terminate_handler shal\u2026\",\n      \"meta\": [\n        \"C++\"\n      ]\n    },\n    {\n      \"title\": \"std::set_terminate\",\n      \"url\": \"https://devdocs.io/cpp/error/set_terminate\",\n      \"snippet\": \"std::set_terminate \u2014 Defined in header <exception> std::terminate_handler set_terminate( std::terminate_handler f ) throw(); (until C++11) std::terminate_handler set_terminate( std::terminate_handler f ) noexcept; (since C++11) Makes f the new global terminate handler function and returns the previously installed std::terminate_handler. f shall terminate ex\u2026\",\n      \"meta\": [\n        \"C++\"\n      ]\n    },\n    {\n      \"title\": \"std::get_terminate\",\n      \"url\": \"https://devdocs.io/cpp/error/get_terminate\",\n      \"snippet\": \"std::get_terminate \u2014 Defined in header <exception> std::terminate_handler get_terminate() noexcept; (since C++11) Returns the currently installed std::terminate_handler, which may be a null pointer. This function is thread-safe. Prior call to std::set_terminate synchronizes-with (see std::memory_order) this function.\",\n      \"meta\": [\n        \"C++\"\n      ]\n    },\n    {\n      \"title\": \"std::terminate\",\n      \"url\": \"https://devdocs.io/cpp/error/terminate\",\n      \"snippet\": \"std::terminate \u2014 Defined in header <exception> void terminate(); (until C++11) [[noreturn]] void terminate() noexcept; (since C++11) std::terminate() is called by the C++ runtime when the program cannot continue for any of the following reasons: 1) An exception is thrown and not caught (it is implementation-defined whether any stack unwinding is done in thi\u2026\",\n      \"meta\": [\n        \"C++\"\n      ]\n    },\n    {\n      \"title\": \"std::unexpected_handler\",\n      \"url\": \"https://devdocs.io/cpp/error/exception/unexpected_handler\",\n      \"snippet\": \"std::unexpected_handler \u2014 Defined in header <exception> typedef void ( *unexpected_handler )(); (deprecated in C++11) (removed in C++17) std::unexpected_handler is the function pointer type (pointer to function that takes no arguments and returns void), which is installed and queried by the functions std::set_unexpected and std::get_unexpected and called by\u2026\",\n      \"meta\": [\n        \"C++\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 58,
+    "entry": {
+      "language": "c",
+      "query": "qs c convert wide string to multibyte not reverse direction",
+      "expected": "wcsrtombs, not mbsrtowcs",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "c",
+      "convert",
+      "wide",
+      "string",
+      "to",
+      "multibyte",
+      "not",
+      "reverse",
+      "direction"
+    ],
+    "exit": 0,
+    "elapsed": 0.1532738208770752,
+    "stdout": "{\n  \"provider\": \"C\",\n  \"query\": \"convert wide string to multibyte not reverse direction\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"Null-terminated multibyte strings\",\n      \"url\": \"https://devdocs.io/c/string/multibyte\",\n      \"snippet\": \"Multibyte/wide character conversions \u2014 Defined in header <stdlib.h> mblen returns the number of bytes in the next multibyte character (function) mbtowc converts the next multibyte character to wide character (function) wctombwctomb_s (C11) converts a wide character to its multibyte representation (function) mbstowcsmbstowcs_s (C11) converts a narrow multiby\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"Null-terminated wide strings\",\n      \"url\": \"https://devdocs.io/c/string/wide\",\n      \"snippet\": \"Conversions to numeric formats \u2014 Defined in header <wchar.h> wcstolwcstoll (C95)(C99) converts a wide string to an integer value (function) wcstoulwcstoull (C95)(C99) converts a wide string to an unsigned integer value (function) wcstofwcstodwcstold (C99)(C95)(C99) converts a wide string to a floating-point value (function) Defined in header <inttypes.h> wc\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"mbtowc\",\n      \"url\": \"https://devdocs.io/c/string/multibyte/mbtowc\",\n      \"snippet\": \"Example \u2014 #include <locale.h> #include <stdio.h> #include <stdlib.h> #include <string.h> #include <wchar.h> // print multibyte string to wide-oriented stdout // equivalent to wprintf(L\\\"%s\\\\n\\\", ptr); void print_mb(const char* ptr) { mbtowc(NULL, NULL, 0); // reset the conversion state const char* end = ptr + strlen(ptr); int ret = 0; for (wchar_t wc; (ret = m\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"mbsrtowcs, mbsrtowcs_s\",\n      \"url\": \"https://devdocs.io/c/string/multibyte/mbsrtowcs\",\n      \"snippet\": \"Parameters \u2014 dst - pointer to wide character array where the results will be stored src - pointer to pointer to the first element of a null-terminated multibyte string len - number of wide characters available in the array pointed to by dst ps - pointer to the conversion state object dstsz - max number of wide characters that will be written (size of the ds\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"wcsrtombs, wcsrtombs_s\",\n      \"url\": \"https://devdocs.io/c/string/multibyte/wcsrtombs\",\n      \"snippet\": \"Parameters \u2014 dst - pointer to narrow character array where the multibyte characters will be stored src - pointer to pointer to the first element of a null-terminated wide string len - number of bytes available in the array pointed to by dst ps - pointer to the conversion state object dstsz - max number of bytes that will be written (size of the dst array) r\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 59,
+    "entry": {
+      "language": "haskell",
+      "query": "qs haskell deep evaluation not weak head normal form",
+      "expected": "Control.DeepSeq.force, not seq",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "haskell",
+      "deep",
+      "evaluation",
+      "not",
+      "weak",
+      "head",
+      "normal",
+      "form"
+    ],
+    "exit": 0,
+    "elapsed": 0.02188253402709961,
+    "stdout": "{\n  \"provider\": \"ghc-guide\",\n  \"query\": \"deep evaluation not weak head normal form\",\n  \"source_url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/searchindex.js\",\n  \"hits\": [\n    {\n      \"title\": \"<span class=\\\"section-number\\\">6.4.20. </span>Arbitrary-rank polymorphism\",\n      \"url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/exts/rank_polymorphism.html\",\n      \"snippet\": \"Matched guide text: deep, evaluation\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 60,
+    "entry": {
+      "language": "python",
+      "query": "qs python open compressed gzip file not zip archive",
+      "expected": "gzip.open(), not zipfile.ZipFile",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "python",
+      "open",
+      "compressed",
+      "gzip",
+      "file",
+      "not",
+      "zip",
+      "archive"
+    ],
+    "exit": 0,
+    "elapsed": 0.9842429161071777,
+    "stdout": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"open compressed gzip file not zip archive\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"gzip.open(filename, mode='rb', compresslevel=6, encoding=None, errors=None, newline=None)\",\n      \"url\": \"https://devdocs.io/python~3.15/library/gzip\",\n      \"snippet\": \"gzip.open(filename, mode='rb', compresslevel=6, encoding=None, errors=None, newline=None) \u2014 Open a gzip-compressed file in binary or text mode, returning a file object. The filename argument can be an actual filename (a str or bytes object), or an existing file object to read from or write to. The mode argument can be any of 'r', 'rb', 'a', 'ab', 'w', 'wb',\u2026\",\n      \"meta\": [\n        \"Python 3.15.0\"\n      ]\n    },\n    {\n      \"title\": \"fileinput.hook_compressed(filename, mode, *, encoding=None, errors=None)\",\n      \"url\": \"https://devdocs.io/python~3.15/library/fileinput\",\n      \"snippet\": \"fileinput.hook_compressed(filename, mode, *, encoding=None, errors=None) \u2014 Transparently opens files compressed with gzip and bzip2 (recognized by the extensions '.gz' and '.bz2') using the gzip and bz2 modules. If the filename extension is not '.gz' or '.bz2', the file is opened normally (ie, using open() without any decompression). The encoding and errors\u2026\",\n      \"meta\": [\n        \"Python 3.15.0\"\n      ]\n    },\n    {\n      \"title\": \"Open\",\n      \"url\": \"https://docs.python.org/3/library/dialog.html\",\n      \"snippet\": \"tkinter.filedialog \u2014 File selection dialogs\u00b6 \u2014 The tkinter.filedialog module provides classes and factory functions for creating file/directory selection windows.\"\n    },\n    {\n      \"title\": \"classmethod TarFile.open(...)\",\n      \"url\": \"https://devdocs.io/python~3.15/library/tarfile\",\n      \"snippet\": \"classmethod TarFile.open(...) \u2014 Alternative constructor. The tarfile.open() function is actually a shortcut to this classmethod.\",\n      \"meta\": [\n        \"Python 3.15.0\"\n      ]\n    },\n    {\n      \"title\": \"FileHandler.file_open(req)\",\n      \"url\": \"https://devdocs.io/python~3.15/library/urllib.request\",\n      \"snippet\": \"FileHandler.file_open(req) \u2014 Open the file locally, if there is no host name, or the host name is 'localhost'. Changed in version 3.2: This method is applicable only for local hostnames. When a remote hostname is given, a URLError is raised.\",\n      \"meta\": [\n        \"Python 3.15.0\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 61,
+    "entry": {
+      "language": "go",
+      "query": "qs go stable slice sort not unstable sort",
+      "expected": "sort.SliceStable, not sort.Slice",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "go",
+      "stable",
+      "slice",
+      "sort",
+      "not",
+      "unstable",
+      "sort"
+    ],
+    "exit": 0,
+    "elapsed": 0.26763129234313965,
+    "stdout": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"stable slice sort not unstable sort\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"func SortStableFunc 1.21\",\n      \"url\": \"https://devdocs.io/go/slices/index\",\n      \"snippet\": \"func SortStableFunc 1.21 \u2014 func SortStableFunc[S ~[]E, E any](x S, cmp func(a, b E) int) SortStableFunc sorts the slice x while keeping the original order of equal elements, using cmp to compare elements in the same way as SortFunc.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"func SliceStable 1.8\",\n      \"url\": \"https://devdocs.io/go/sort/index\",\n      \"snippet\": \"func SliceStable 1.8 \u2014 func SliceStable(x any, less func(i, j int) bool) SliceStable sorts the slice x using the provided less function, keeping equal elements in their original order. It panics if x is not a slice. The less function must satisfy the same requirements as the Interface type's Less method. Note: in many situations, the newer slices.SortStable\u2026\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"sort.SliceStable()\",\n      \"url\": \"https://devdocs.io/go/sort/index#SliceStable\",\n      \"snippet\": \"func SliceStable(x any, less func(i, j int) bool) SliceStable sorts the slice x using the provided less function, keeping equal elements in their original order. It panics if x is not a slice.\",\n      \"meta\": [\n        \"Go  \u00b7  sort\",\n        \"people := []struct {\\n    Name string\\n    Age  int\\n}{\\n    {\\\"Alice\\\", 25},\\n    {\\\"Elizabeth\\\", 75},\\n    {\\\"Alice\\\", 75},\\n    {\\\"Bob\\\", 75},\\n    {\\\"Alice\\\", 75},\\n    {\\\"Bob\\\", 25},\\n    {\\\"Colin\\\", 25},\\n    {\\\"Elizabeth\\\", 25},\\n}\\n\\n// Sort by name, preserving original order\\nsort.SliceStable(people, func(i, j int) bool { return people[i].Name < people[j].Name })\\nfmt.Println(\\\"By name:\\\", people)\\n\\n// Sort by age preserving name order\\nsort.SliceStable(people, func(i, j int) bool { return people[i].Age < people[j].Age })\\nfmt.Println(\\\"By age,name:\\\", people)\"\n      ]\n    },\n    {\n      \"title\": \"type Slice 1.5\",\n      \"url\": \"https://devdocs.io/go/go/types/index\",\n      \"snippet\": \"type Slice 1.5 \u2014 A Slice represents a slice type. type Slice struct { // contains filtered or unexported fields }\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"func AddrFromSlice 1.18\",\n      \"url\": \"https://devdocs.io/go/net/netip/index\",\n      \"snippet\": \"func AddrFromSlice 1.18 \u2014 func AddrFromSlice(slice []byte) (ip Addr, ok bool) AddrFromSlice parses the 4- or 16-byte byte slice as an IPv4 or IPv6 address. Note that a net.IP can be passed directly as the []byte argument. If slice's length is not 4 or 16, AddrFromSlice returns Addr{}, false.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 62,
+    "entry": {
+      "language": "rust",
+      "query": "qs rust abort process not unwind panic",
+      "expected": "std::process::abort, not panic!",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "rust",
+      "abort",
+      "process",
+      "not",
+      "unwind",
+      "panic"
+    ],
+    "exit": 0,
+    "elapsed": 1.7998764514923096,
+    "stdout": "{\n  \"provider\": \"rust\",\n  \"query\": \"abort process not unwind panic\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20abort%20process%20not%20unwind%20panic\",\n  \"hits\": [\n    {\n      \"title\": \"Function abort\",\n      \"url\": \"https://devdocs.io/rust/std/process/fn.abort\",\n      \"snippet\": \"Function abort \u2014 pub fn abort() -> ! Terminates the process in an abnormal fashion. The function will never return and will immediately terminate the current process in a platform specific \u201cabnormal\u201d manner. As a consequence, no destructors on the current stack or any other thread\u2019s stack will be run, Rust IO buffers (eg, from BufWriter) will not be flushed\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Function abort_immediate\",\n      \"url\": \"https://devdocs.io/rust/std/process/fn.abort_immediate\",\n      \"snippet\": \"Function abort_immediate \u2014 pub fn abort_immediate() -> ! \ud83d\udd2cThis is a nightly-only experimental API. (abort_immediate #154601) Terminates the process in a violent fashion. The function will never return and will immediately terminate the current process in a platform specific \u201cabnormal\u201d manner. As a consequence, no destructors on the current stack or any othe\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Function abort\",\n      \"url\": \"https://devdocs.io/rust/std/intrinsics/fn.abort\",\n      \"snippet\": \"Function abort \u2014 pub fn abort() -> ! \ud83d\udd2cThis is a nightly-only experimental API. (core_intrinsics) Aborts the execution of the process. Note that, unlike most intrinsics, this is safe to call; it does not require an unsafe block. Therefore, implementations must not require the user to uphold any safety invariants. std::process::abort is to be preferred if pos\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Module process\",\n      \"url\": \"https://devdocs.io/rust/std/process/index\",\n      \"snippet\": \"Module process \u2014 A module for working with processes. This module is mostly concerned with spawning and interacting with child processes, but it also provides abort and exit for terminating the current process.\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Function abort_unwind\",\n      \"url\": \"https://devdocs.io/rust/std/panic/fn.abort_unwind\",\n      \"snippet\": \"Function abort_unwind \u2014 pub fn abort_unwind<F, R>(f: F) -> Rwhere F: FnOnce() -> R, \ud83d\udd2cThis is a nightly-only experimental API. (abort_unwind #130338) Invokes a closure, aborting if the closure unwinds. When compiled with aborting panics, this function is effectively a no-op. With unwinding panics, an unwind results in another call into the panic hook followe\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Search Rust standard library for abort process not unwind panic\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20abort%20process%20not%20unwind%20panic\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 63,
+    "entry": {
+      "language": "cpp",
+      "query": "qs cpp inclusive scan not exclusive scan",
+      "expected": "std::inclusive_scan, not std::exclusive_scan",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "cpp",
+      "inclusive",
+      "scan",
+      "not",
+      "exclusive",
+      "scan"
+    ],
+    "exit": 0,
+    "elapsed": 0.4578826427459717,
+    "stdout": "{\n  \"provider\": \"C++\",\n  \"query\": \"inclusive scan not exclusive scan\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::inclusive_scan\",\n      \"url\": \"https://devdocs.io/cpp/algorithm/inclusive_scan\",\n      \"snippet\": \"std::inclusive_scan \u2014 Defined in header <numeric> template< class InputIt, class OutputIt > OutputIt inclusive_scan( InputIt first, InputIt last, OutputIt d_first ); (1) (since C++17) (constexpr since C++20) template< class ExecutionPolicy, class ForwardIt1, class ForwardIt2 > ForwardIt2 inclusive_scan( ExecutionPolicy&& policy, ForwardIt1 first, ForwardIt1\u2026\",\n      \"meta\": [\n        \"C++\"\n      ]\n    },\n    {\n      \"title\": \"std::transform_inclusive_scan\",\n      \"url\": \"https://devdocs.io/cpp/algorithm/transform_inclusive_scan\",\n      \"snippet\": \"std::transform_inclusive_scan \u2014 Defined in header <numeric> template< class InputIt, class OutputIt, class BinaryOp, class UnaryOp > OutputIt transform_inclusive_scan ( InputIt first, InputIt last, OutputIt d_first, BinaryOp binary_op, UnaryOp unary_op ); (1) (since C++17) (constexpr since C++20) template< class ExecutionPolicy, class ForwardIt1, class Forw\u2026\",\n      \"meta\": [\n        \"C++\"\n      ]\n    },\n    {\n      \"title\": \"std::exclusive_scan\",\n      \"url\": \"https://devdocs.io/cpp/algorithm/exclusive_scan\",\n      \"snippet\": \"std::is_execution_policy_v<std::remove_cvref_t<ExecutionPolicy>>\",\n      \"meta\": [\n        \"C++  \u00b7  Algorithm\",\n        \"#include <functional>\\n#include <iostream>\\n#include <iterator>\\n#include <numeric>\\n#include <vector>\\n\\nint main()\\n{\\n    std::vector data{3, 1, 4, 1, 5, 9, 2, 6};\\n    \\n    std::cout << \\\"Exclusive sum: \\\";\\n    std::exclusive_scan(data.begin(), data.end(),\\n                        std::ostream_iterator<int>(std::cout, \\\" \\\"),\\n                        0);\\n    \\n    std::cout << \\\"\\\\nInclusive sum: \\\";\\n    std::inclusive_scan(data.begin(), data.end(),\\n                        std::ostream_iterator<int>(std::cout, \\\" \\\"));\\n    \\n    std::cout << \\\"\\\\n\\\\nExclusive product: \\\";\\n    std::exclusive_scan(data.begin(), data.end(),\\n                        std::ostream_iterator<int>(std::cout, \\\" \\\"),\\n                        1, std::multiplies<>{});\\n    \\n    std::cout << \\\"\\\\nInclusive product: \\\";\\n    std::inclusive_scan(data.begin(), data.end(),\\n                        std::ostream_iterator<int>(std::cout, \\\" \\\"),\\n                        std::multiplies<>{});\\n}\"\n      ]\n    },\n    {\n      \"title\": \"Standard library header <numeric>\",\n      \"url\": \"https://devdocs.io/cpp/header/numeric\",\n      \"snippet\": \"Functions \u2014 iota (C++11) fills a range with successive increments of the starting value(function template & algorithm function object) ranges::iota (C++23) ranges::iota (C++23) fills a range with successive increments of the starting value(algorithm function object) accumulate sums up or folds a range of elements (function template) reduce (C++17) similar t\u2026\",\n      \"meta\": [\n        \"C++\"\n      ]\n    },\n    {\n      \"title\": \"C++17\",\n      \"url\": \"https://devdocs.io/cpp/17\",\n      \"snippet\": \"C++17 \u2014 C++17 is a major version that follows the minor version C++14 and introduces new language and library features. The standard was published in December 2017. The following features were merged into C++17: From the File System TS: the filesystem library. From the Library fundamentals v1 TS: features, including std::any, std::optional, std::string_view\u2026\",\n      \"meta\": [\n        \"C++\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 64,
+    "entry": {
+      "language": "c",
+      "query": "qs c read one wide character not one byte character",
+      "expected": "fgetwc, not fgetc",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "c",
+      "read",
+      "one",
+      "wide",
+      "character",
+      "not",
+      "one",
+      "byte",
+      "character"
+    ],
+    "exit": 0,
+    "elapsed": 0.12964844703674316,
+    "stdout": "{\n  \"provider\": \"C\",\n  \"query\": \"read one wide character not one byte character\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"File input/output\",\n      \"url\": \"https://devdocs.io/c/io\",\n      \"snippet\": \"Wide character \u2014 Defined in header <wchar.h> fgetwcgetwc (C95) gets a wide character from a file stream (function) fgetws (C95) gets a wide string from a file stream (function) fputwcputwc (C95) writes a wide character to a file stream (function) fputws (C95) writes a wide string to a file stream (function) getwchar (C95) reads a wide character from stdin (\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"fgetwc, getwc\",\n      \"url\": \"https://devdocs.io/c/io/fgetwc\",\n      \"snippet\": \"fgetwc, getwc \u2014 Defined in header <wchar.h> wint_t fgetwc( FILE* stream ); (since C95) wint_t getwc( FILE* stream ); (since C95) Reads the next wide character from the given input stream. getwc() may be implemented as a macro and may evaluate stream more than once.\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"char\",\n      \"url\": \"https://devdocs.io/c/keyword/char\",\n      \"snippet\": \"&copy; cppreference.comLicensed under the Creative Commons Attribution-ShareAlike Unported License v3.0. https://en.cppreference.com/c/keyword/char\",\n      \"meta\": [\n        \"C  \u00b7  C keywords\"\n      ]\n    },\n    {\n      \"title\": \"getwchar\",\n      \"url\": \"https://devdocs.io/c/io/getwchar\",\n      \"snippet\": \"getwchar \u2014 Defined in header <wchar.h> wint_t getwchar(void); (since C95) Reads the next wide character from stdin.\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"wscanf, fwscanf, swscanf, wscanf_s, fwscanf_s, swscanf_s\",\n      \"url\": \"https://devdocs.io/c/io/fwscanf\",\n      \"snippet\": \"Parameters \u2014 stream - input file stream to read from buffer - pointer to a null-terminated wide string to read from format - pointer to a null-terminated wide string specifying how to read the input ... - receiving arguments. The format string consists of non-whitespace wide characters except %: each such character in the format string consumes exactly one \u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 65,
+    "entry": {
+      "language": "haskell",
+      "query": "qs haskell text builder not string concatenation",
+      "expected": "Data.Text.Lazy.Builder, not (++)",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "haskell",
+      "text",
+      "builder",
+      "not",
+      "string",
+      "concatenation"
+    ],
+    "exit": 0,
+    "elapsed": 0.019844532012939453,
+    "stdout": "{\n  \"provider\": \"ghc-guide\",\n  \"query\": \"text builder not string concatenation\",\n  \"source_url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/searchindex.js\",\n  \"hits\": [\n    {\n      \"title\": \"Data type contexts\",\n      \"url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/exts/datatype_contexts.html#data-type-contexts\",\n      \"snippet\": \"<span class=\\\"section-number\\\">6.4.2. </span>Data type contexts\"\n    },\n    {\n      \"title\": \"Inferred context for deriving clauses\",\n      \"url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/exts/deriving_inferred.html#inferred-context-for-deriving-clauses\",\n      \"snippet\": \"<span class=\\\"section-number\\\">6.6.2. </span>Inferred context for deriving clauses\"\n    },\n    {\n      \"title\": \"Loosening restrictions on class contexts\",\n      \"url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/exts/flexible_contexts.html#loosening-restrictions-on-class-contexts\",\n      \"snippet\": \"<span class=\\\"section-number\\\">6.10.1. </span>Loosening restrictions on class contexts\"\n    },\n    {\n      \"title\": \"<span class=\\\"section-number\\\">19. </span>Care and feeding of your GHC User\u2019s Guide\",\n      \"url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/editing-guide.html\",\n      \"snippet\": \"Matched guide text: text, builder\"\n    },\n    {\n      \"title\": \"<span class=\\\"section-number\\\">6.11.3. </span>Named <code class=\\\"docutils literal notranslate\\\"><span class=\\\"pre\\\">default</span></code> declarations\",\n      \"url\": \"https://downloads.haskell.org/ghc/latest/docs/users_guide/exts/named_defaults.html\",\n      \"snippet\": \"Matched guide text: text, builder\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 66,
+    "entry": {
+      "language": "python",
+      "query": "qs python parse email address not url address",
+      "expected": "email.utils.parseaddr(), not urllib.parse",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "python",
+      "parse",
+      "email",
+      "address",
+      "not",
+      "url",
+      "address"
+    ],
+    "exit": 0,
+    "elapsed": 0.8450107574462891,
+    "stdout": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"parse email address not url address\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"email.headerregistry: Custom Header Objects\",\n      \"url\": \"https://devdocs.io/python~3.15/library/email.headerregistry\",\n      \"snippet\": \"class email.headerregistry.Address(display_name='', username='', domain='', addr_spec=None) \u2014 The class used to represent an email address. The general form of an address is: [display_name] <username@domain> or: username@domain where each part must conform to specific syntax rules spelled out in RFC 5322. As a convenience addr_spec can be specified instead \u2026\",\n      \"meta\": [\n        \"Python 3.15.0\"\n      ]\n    },\n    {\n      \"title\": \"email.utils: Miscellaneous utilities\",\n      \"url\": \"https://devdocs.io/python~3.15/library/email.utils\",\n      \"snippet\": \"email.utils.parseaddr(address, *, strict=True) \u2014 Parse address \u2013 which should be the value of some address-containing field such as To or Cc \u2013 into its constituent realname and email address parts. Returns a tuple of that information, unless the parse fails, in which case a 2-tuple of ('', '') is returned. If strict is true, use a strict parser which reject\u2026\",\n      \"meta\": [\n        \"Python 3.15.0\"\n      ]\n    },\n    {\n      \"title\": \"parse\",\n      \"url\": \"https://docs.python.org/3/library/email.parser.html\",\n      \"snippet\": \"email.parser: Parsing email messages\u00b6 \u2014 Note that the parser can be extended in limited ways, and of course you can implement your own parser completely from scratch. All of the logic that connects the email package\u2019s bundled parser and the EmailMessage class is embodied in the Policy class, so a custom parser can create message object trees any way it find\u2026\"\n    },\n    {\n      \"title\": \"email: Examples\",\n      \"url\": \"https://devdocs.io/python~3.15/library/email.examples\",\n      \"snippet\": \"email: Examples \u2014 Here are a few examples of how to use the email package to read, write, and send simple email messages, as well as more complex MIME messages. First, let\u2019s see how to create and send a simple text message (both the text content and the addresses may contain Unicode characters): # Import smtplib for the actual sending function import smtpli\u2026\",\n      \"meta\": [\n        \"Python 3.15.0\"\n      ]\n    },\n    {\n      \"title\": \"email.parser: Parsing email messages\",\n      \"url\": \"https://devdocs.io/python~3.15/library/email.parser\",\n      \"snippet\": \"email.parser: Parsing email messages \u2014 Source code: Lib/email/parser.py Message object structures can be created in one of two ways: they can be created from whole cloth by creating an EmailMessage object, adding headers using the dictionary interface, and adding payload(s) using set_content() and related methods, or they can be created by parsing a seriali\u2026\",\n      \"meta\": [\n        \"Python 3.15.0\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 67,
+    "entry": {
+      "language": "go",
+      "query": "qs go cryptographic subtle constant time compare not bytes compare",
+      "expected": "subtle.ConstantTimeCompare, not bytes.Equal",
+      "class": "negative-contrast",
+      "label": "negative"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "go",
+      "cryptographic",
+      "subtle",
+      "constant",
+      "time",
+      "compare",
+      "not",
+      "bytes",
+      "compare"
+    ],
+    "exit": 0,
+    "elapsed": 0.34635353088378906,
+    "stdout": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"cryptographic subtle constant time compare not bytes compare\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"func ConstantTimeCompare\",\n      \"url\": \"https://devdocs.io/go/crypto/subtle/index\",\n      \"snippet\": \"func ConstantTimeCompare \u2014 func ConstantTimeCompare(x, y []byte) int ConstantTimeCompare returns 1 if the two slices, x and y, have equal contents and 0 otherwise. The time taken is a function of the length of the slices and is independent of the contents. If the lengths of x and y do not match it returns 0 immediately.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"func (Time) Compare 1.20\",\n      \"url\": \"https://devdocs.io/go/time/index\",\n      \"snippet\": \"func (Time) Compare 1.20 \u2014 func (t Time) Compare(u Time) int Compare compares the time instant t with u. If t is before u, it returns -1; if t is after u, it returns +1; if they're the same, it returns 0.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"subtle.ConstantTimeCompare()\",\n      \"url\": \"https://devdocs.io/go/crypto/subtle/index#ConstantTimeCompare\",\n      \"snippet\": \"func ConstantTimeCompare(x, y []byte) int ConstantTimeCompare returns 1 if the two slices, x and y, have equal contents and 0 otherwise. The time taken is a function of the length of the slices and is independent of the contents. If the lengths of x and y do not match it returns 0 immediately.\",\n      \"meta\": [\n        \"Go  \u00b7  crypto\"\n      ]\n    },\n    {\n      \"title\": \"Constants\",\n      \"url\": \"https://devdocs.io/go/crypto/tls/index\",\n      \"snippet\": \"Constants \u2014 A list of cipher suite IDs that are, or have been, implemented by this package. See https://www.iana.org/assignments/tls-parameters/tls-parameters.xml const ( // TLS 1.0 - 1.2 cipher suites. TLS_RSA_WITH_RC4_128_SHA uint16 = 0x0005 TLS_RSA_WITH_3DES_EDE_CBC_SHA uint16 = 0x000a TLS_RSA_WITH_AES_128_CBC_SHA uint16 = 0x002f TLS_RSA_WITH_AES_256_CBC\u2026\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    },\n    {\n      \"title\": \"Package crypto\",\n      \"url\": \"https://devdocs.io/go/crypto/index\",\n      \"snippet\": \"Overview \u2014 Package crypto collects common cryptographic constants.\",\n      \"meta\": [\n        \"Go 1.27.0\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 68,
+    "entry": {
+      "language": "rust",
+      "query": "qs rust docs please exact api lookup today std::mem::take examples stable",
+      "expected": "std::mem::take",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "rust",
+      "docs",
+      "please",
+      "exact",
+      "api",
+      "lookup",
+      "today",
+      "std::mem::take",
+      "examples",
+      "stable"
+    ],
+    "exit": 0,
+    "elapsed": 0.38422083854675293,
+    "stdout": "{\n  \"provider\": \"rust\",\n  \"query\": \"docs please exact api lookup today std::mem::take examples stable\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20mem%20take\",\n  \"hits\": [\n    {\n      \"title\": \"take in std::mem - Rust\",\n      \"url\": \"https://doc.rust-lang.org/std/mem/fn.take.html\",\n      \"snippet\": \"Replaces `dest` with the default value of `T`, returning the previous `dest` value.\"\n    },\n    {\n      \"title\": \"Search Rust standard library for std::mem::take\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20mem%20take\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 69,
+    "entry": {
+      "language": "cpp",
+      "query": "qs cpp modern standard library reference quick answer std::ranges::iota_view usage",
+      "expected": "std::ranges::iota_view",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "cpp",
+      "modern",
+      "standard",
+      "library",
+      "reference",
+      "quick",
+      "answer",
+      "std::ranges::iota_view",
+      "usage"
+    ],
+    "exit": 0,
+    "elapsed": 0.09159374237060547,
+    "stdout": "{\n  \"provider\": \"C++\",\n  \"query\": \"std::ranges::iota_view\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::ranges::iota_view\",\n      \"url\": \"https://devdocs.io/cpp/ranges/iota_view\",\n      \"snippet\": \"The name views::indices denotes a customization point object, which is a const function object of a literal semiregular class type. See CustomizationPointObject for details.\",\n      \"meta\": [\n        \"C++  \u00b7  Ranges\",\n        \"#include <print>\\n#include <ranges>\\n    \\nstruct Bound\\n{\\n    int bound;\\n    bool operator==(int x) const { return x == bound; }\\n};\\n\\nint main()\\n{\\n    std::print(\\\"{}\\\\n\\\", std::ranges::iota_view{1, 10});\\n    std::print(\\\"{}\\\\n\\\", std::views::iota(1, 10));\\n    std::print(\\\"{}\\\\n\\\", std::views::iota(1, Bound{10}));\\n    std::print(\\\"{}\\\\n\\\", std::views::iota(1) | std::views::take(9));\\n    \\n    constexpr int v[]{9, 8, 7, 6, 5, 4, 3, 2, 1};\\n\\n    // auto broken_indices = views::iota(0, std::ranges::size(v));\\n    //     does not compile due to types (int VS size_t) mismatch\\n\\n    auto good_indices = std::views::indices(std::ranges::size(v));\\n    std::print(\\\"{}\\\\n\\\", good_indices);\\n}\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::iota_view::end\",\n      \"url\": \"https://devdocs.io/cpp/ranges/iota_view/end\",\n      \"snippet\": \"constexpr auto end() const; (1) (since C++20) constexpr /*iterator*/ end() const requires std::same_as<W, Bound>; (2) (since C++20) 1) Obtains a sentinel representing the sentinel value: If Bound is std::unreachable_sentinel_t, returns std::unreachable_sentinel. Otherwise, returns sentinel \ufeff{bound_ \ufeff}. 2) Obtains an i\u2026\",\n      \"meta\": [\n        \"C++  \u00b7  Ranges\",\n        \"#include <iostream>\\n#include <ranges>\\n\\nint main()\\n{\\n    auto iota{std::views::iota(2, 6)};\\n    auto end{iota.end()};\\n    for (auto iter{iota.begin()}; iter != end; ++iter)\\n        std::cout << *iter << ' ';\\n    std::cout << '\\\\n';\\n}\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::iota_view::size\",\n      \"url\": \"https://devdocs.io/cpp/ranges/iota_view/size\",\n      \"meta\": [\n        \"C++  \u00b7  Ranges\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::iota_view::begin\",\n      \"url\": \"https://devdocs.io/cpp/ranges/iota_view/begin\",\n      \"meta\": [\n        \"C++  \u00b7  Ranges\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::iota_view::empty\",\n      \"url\": \"https://devdocs.io/cpp/ranges/iota_view/empty\",\n      \"meta\": [\n        \"C++  \u00b7  Ranges\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 70,
+    "entry": {
+      "language": "c",
+      "query": "qs c standard library portable example urgently get environment variable getenv",
+      "expected": "getenv",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "c",
+      "standard",
+      "library",
+      "portable",
+      "example",
+      "urgently",
+      "get",
+      "environment",
+      "variable",
+      "getenv"
+    ],
+    "exit": 0,
+    "elapsed": 0.17222380638122559,
+    "stdout": "{\n  \"provider\": \"C\",\n  \"query\": \"standard library portable example urgently get environment variable getenv\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"getenv, getenv_s\",\n      \"url\": \"https://devdocs.io/c/program/getenv\",\n      \"snippet\": \"getenv, getenv_s \u2014 Defined in header <stdlib.h> char *getenv( const char *name ); (1) errno_t getenv_s( size_t *restrict len, char *restrict value, rsize_t valuesz, const char *restrict name ); (2) (since C11) 1) Searches for an environmental variable with name name in the host-specified environment list and returns a pointer to the string that is associate\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"Error handling\",\n      \"url\": \"https://devdocs.io/c/error\",\n      \"snippet\": \"Bounds checking \u2014 The standard library provides bounds-checked versions of some existing functions (gets_s, fopen_s, printf_s, strcpy_s, wcscpy_s, mbstowcs_s, qsort_s, getenv_s, etc). This functionality is optional and is only available if __STDC_LIB_EXT1__ is defined. The following macros and functions support this functionality. Defined in header <errno.h\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"gets\",\n      \"url\": \"https://devdocs.io/c/io/gets\",\n      \"snippet\": \"If the failure has been caused by end of file condition, additionally sets the eof indicator (see feof()) on stdin. If the failure has been caused by some other error, sets the error indicator (see ferror()) on stdin.\",\n      \"meta\": [\n        \"C  \u00b7  File input/output\"\n      ]\n    },\n    {\n      \"title\": \"Standard library header <fenv.h> (C99)\",\n      \"url\": \"https://devdocs.io/c/header/fenv\",\n      \"snippet\": \"Standard library header <fenv.h> (C99) \u2014 This header is part of the floating-point environment library.\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"Conformance\",\n      \"url\": \"https://devdocs.io/c/language/conformance\",\n      \"snippet\": \"Freestanding standard library headers \u2014 All standard library features in every fully freestanding header are required to be provided by a freestanding implementation. Some standard library headers are conditionally freestanding. If the implementation predefines the macro __STDC_IEC_60559_BFP__ or __STDC_IEC_60559_DFP__, then <math.h> and <fenv.h> are fully \u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 71,
+    "entry": {
+      "language": "haskell",
+      "query": "qs haskell hoogle package docs simple example now Data.Set.fromList",
+      "expected": "Data.Set.fromList",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "haskell",
+      "hoogle",
+      "package",
+      "docs",
+      "simple",
+      "example",
+      "now",
+      "Data.Set.fromList"
+    ],
+    "exit": 0,
+    "elapsed": 0.30497288703918457,
+    "stdout": "{\n  \"provider\": \"Haskell\",\n  \"query\": \"Data.Set.fromList\",\n  \"source_url\": \"https://hoogle.haskell.org/?hoogle=Data.Set.fromList\",\n  \"hits\": [\n    {\n      \"title\": \"fromList :: Ord a => [a] -> Set a\",\n      \"url\": \"https://hackage.haskell.org/package/containers/docs/Data-Set.html#v:fromList\",\n      \"snippet\": \"Create a set from a list of elements. If the elements are in non-decreasing order, this function takes <math> time.\",\n      \"meta\": [\n        \"containers  \u00b7  Data.Set\"\n      ]\n    },\n    {\n      \"title\": \"fromList :: Ord a => [a] -> Set a\",\n      \"url\": \"https://hackage.haskell.org/package/containers/docs/Data-Set-Internal.html#v:fromList\",\n      \"snippet\": \"Create a set from a list of elements. If the elements are in non-decreasing order, this function takes <math> time.\",\n      \"meta\": [\n        \"containers  \u00b7  Data.Set.Internal\"\n      ]\n    },\n    {\n      \"title\": \"fromList :: Ord a => [a] -> OSet a\",\n      \"url\": \"https://hackage.haskell.org/package/ordered-containers/docs/Data-Set-Ordered.html#v:fromList\",\n      \"snippet\": \"If a value occurs multiple times, only the first occurrence is used.\",\n      \"meta\": [\n        \"ordered-containers  \u00b7  Data.Set.Ordered\"\n      ]\n    },\n    {\n      \"title\": \"fromList :: Ord a => NonEmpty a -> NESet a\",\n      \"url\": \"https://hackage.haskell.org/package/nonempty-containers/docs/Data-Set-NonEmpty.html#v:fromList\",\n      \"snippet\": \"O(n*log n). Create a set from a list of elements.\",\n      \"meta\": [\n        \"nonempty-containers  \u00b7  Data.Set.NonEmpty\"\n      ]\n    },\n    {\n      \"title\": \"fromList :: Ord a => NonEmpty a -> NESet a\",\n      \"url\": \"https://hackage.haskell.org/package/nonempty-containers/docs/Data-Set-NonEmpty-Internal.html#v:fromList\",\n      \"snippet\": \"O(n*log n). Create a set from a list of elements.\",\n      \"meta\": [\n        \"nonempty-containers  \u00b7  Data.Set.NonEmpty.Internal\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 72,
+    "entry": {
+      "language": "python",
+      "query": "qs python official docs latest version quick example contextlib.ExitStack",
+      "expected": "contextlib.ExitStack",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "python",
+      "official",
+      "docs",
+      "latest",
+      "version",
+      "quick",
+      "example",
+      "contextlib.ExitStack"
+    ],
+    "exit": 0,
+    "elapsed": 0.13848662376403809,
+    "stdout": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"contextlib.ExitStack\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"contextlib.ExitStack\",\n      \"url\": \"https://devdocs.io/python~3.15/library/contextlib#contextlib.ExitStack\",\n      \"snippet\": \"A context manager that is designed to make it easy to programmatically combine other context managers and cleanup functions, especially those that are optional or otherwise driven by input data.\",\n      \"meta\": [\n        \"Python  \u00b7  Runtime\",\n        \"with ExitStack() as stack:\\n    files = [stack.enter_context(open(fname)) for fname in filenames]\\n    # All opened files will automatically be closed at the end of\\n    # the with statement, even if attempts to open files later\\n    # in the list raise an exception\"\n      ]\n    },\n    {\n      \"title\": \"contextlib.ExitStack.push()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/contextlib#contextlib.ExitStack.push\",\n      \"snippet\": \"Adds a context manager\u2019s __exit__() method to the callback stack.\",\n      \"meta\": [\n        \"Python  \u00b7  Runtime\"\n      ]\n    },\n    {\n      \"title\": \"contextlib.ExitStack.close()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/contextlib#contextlib.ExitStack.close\",\n      \"meta\": [\n        \"Python  \u00b7  Runtime\"\n      ]\n    },\n    {\n      \"title\": \"contextlib.ExitStack.callback()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/contextlib#contextlib.ExitStack.callback\",\n      \"meta\": [\n        \"Python  \u00b7  Runtime\"\n      ]\n    },\n    {\n      \"title\": \"contextlib.ExitStack.pop_all()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/contextlib#contextlib.ExitStack.pop_all\",\n      \"meta\": [\n        \"Python  \u00b7  Runtime\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 73,
+    "entry": {
+      "language": "go",
+      "query": "qs go package documentation current release example net.IP.IsPrivate",
+      "expected": "net.IP.IsPrivate",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "go",
+      "package",
+      "documentation",
+      "current",
+      "release",
+      "example",
+      "net.IP.IsPrivate"
+    ],
+    "exit": 0,
+    "elapsed": 0.0616304874420166,
+    "stdout": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"net.IP.IsPrivate\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"net.IP.IsPrivate()\",\n      \"url\": \"https://devdocs.io/go/net/index#IP.IsPrivate\",\n      \"snippet\": \"func (ip IP) IsPrivate() bool IsPrivate reports whether ip is a private address, according to RFC 1918 (IPv4 addresses) and RFC 4193 (IPv6 addresses). That is, it reports whether ip is in 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, or fc00::/7.\",\n      \"meta\": [\n        \"Go  \u00b7  net\",\n        \"ipv6Private := net.ParseIP(\\\"fc00::\\\")\\nipv6Public := net.ParseIP(\\\"fe00::\\\")\\nipv4Private := net.ParseIP(\\\"10.255.0.0\\\")\\nipv4Public := net.ParseIP(\\\"11.0.0.0\\\")\\n\\nfmt.Println(ipv6Private.IsPrivate())\\nfmt.Println(ipv6Public.IsPrivate())\\nfmt.Println(ipv4Private.IsPrivate())\\nfmt.Println(ipv4Public.IsPrivate())\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 74,
+    "entry": {
+      "language": "rust",
+      "query": "qs rust beginner tutorial standard docs show me slice rotate_left method now",
+      "expected": "slice::rotate_left",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "rust",
+      "beginner",
+      "tutorial",
+      "standard",
+      "docs",
+      "show",
+      "me",
+      "slice",
+      "rotate_left",
+      "method",
+      "now"
+    ],
+    "exit": 0,
+    "elapsed": 4.072207689285278,
+    "stdout": "{\n  \"provider\": \"rust\",\n  \"query\": \"beginner tutorial standard docs show me slice rotate_left method now\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20beginner%20tutorial%20standard%20docs%20show%20me%20slice%20rotate_left%20method%20now\",\n  \"hits\": [\n    {\n      \"title\": \"Function rotate_left\",\n      \"url\": \"https://devdocs.io/rust/std/intrinsics/fn.rotate_left\",\n      \"snippet\": \"Function rotate_left \u2014 pub const fn rotate_left<T>(x: T, shift: u32) -> Twhere T: FunnelShift, \ud83d\udd2cThis is a nightly-only experimental API. (core_intrinsics) Performs rotate left. Note that, unlike most intrinsics, this is safe to call; it does not require an unsafe block. Therefore, implementations must not require the user to uphold any safety invariants. Th\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Programming a Guessing Game\",\n      \"url\": \"https://devdocs.io/rust/book/ch02-00-guessing-game-tutorial\",\n      \"snippet\": \"Summary \u2014 This project was a hands-on way to introduce you to many new Rust concepts: let, match, functions, the use of external crates, and more. In the next few chapters, you\u2019ll learn about these concepts in more detail. Chapter 3 covers concepts that most programming languages have, such as variables, data types, and functions, and shows how to use them \u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Unsafe Rust\",\n      \"url\": \"https://devdocs.io/rust/book/ch20-01-unsafe-rust\",\n      \"snippet\": \"Creating a Safe Abstraction over Unsafe Code \u2014 Just because a function contains unsafe code doesn\u2019t mean we need to mark the entire function as unsafe. In fact, wrapping unsafe code in a safe function is a common abstraction. As an example, let\u2019s study the split_at_mut function from the standard library, which requires some unsafe code. We\u2019ll explore how we\u2026\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Methods from Deref<Target = [T]>\",\n      \"url\": \"https://devdocs.io/rust/std/bstr/struct.bytestring\",\n      \"snippet\": \"Methods from Deref<Target = [T]> \u2014 1.0.0Sourcepub fn len(&self) -> usize Returns the number of elements in the slice.\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Methods from Deref<Target = [T]>\",\n      \"url\": \"https://devdocs.io/rust/std/vec/struct.vec\",\n      \"snippet\": \"Methods from Deref<Target = [T]> \u2014 1.0.0Sourcepub fn len(&self) -> usize Returns the number of elements in the slice.\",\n      \"meta\": [\n        \"Rust\"\n      ]\n    },\n    {\n      \"title\": \"Search Rust standard library for beginner tutorial standard docs show me slice rotate_left method now\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20beginner%20tutorial%20standard%20docs%20show%20me%20slice%20rotate_left%20method%20now\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 75,
+    "entry": {
+      "language": "cpp",
+      "query": "qs cpp reference safe portable c++23 example std::byteswap integer please",
+      "expected": "std::byteswap",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "cpp",
+      "reference",
+      "safe",
+      "portable",
+      "c++23",
+      "example",
+      "std::byteswap",
+      "integer",
+      "please"
+    ],
+    "exit": 0,
+    "elapsed": 0.04763007164001465,
+    "stdout": "{\n  \"provider\": \"C++\",\n  \"query\": \"std::byteswap\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::byteswap\",\n      \"url\": \"https://devdocs.io/cpp/numeric/byteswap\",\n      \"snippet\": \"template< class T > constexpr T byteswap( T n ) noexcept; (since C++23) Reverses the bytes in the given integer value n.\",\n      \"meta\": [\n        \"C++  \u00b7  Utilities\",\n        \"#include <bit>\\n#include <concepts>\\n#include <cstdint>\\n#include <iomanip>\\n#include <iostream>\\n\\ntemplate<std::integral T>\\nvoid dump(T v, char term = '\\\\n')\\n{\\n    std::cout << std::hex << std::uppercase << std::setfill('0')\\n              << std::setw(sizeof(T) * 2) << v << \\\" : \\\";\\n    for (std::size_t i{}; i != sizeof(T); ++i, v >>= 8)\\n        std::cout << std::setw(2) << static_cast<unsigned>(T(0xFF) & v) << ' ';\\n    std::cout << std::dec << term;\\n}\\n\\nint main()\\n{\\n    static_assert(std::byteswap('a') == 'a');\\n\\n    std::cout << \\\"byteswap for U16:\\\\n\\\";\\n    constexpr auto x = std::uint16_t(0xCAFE);\\n    dump(x);\\n    dump(std::byteswap(x));\\n\\n    std::cout << \\\"\\\\nbyteswap for U32:\\\\n\\\";\\n    constexpr auto y = std::uint32_t(0xDEADBEEFu);\\n    dump(y);\\n    dump(std::byteswap(y));\\n\\n    std::cout << \\\"\\\\nbyteswap for U64:\\\\n\\\";\\n    constexpr auto z = std::uint64_t{0x0123456789ABCDEFull};\\n    dump(z);\\n    dump(std::byteswap(z));\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 76,
+    "entry": {
+      "language": "c",
+      "query": "qs c reference manual safe code sample portable convert time difftime seconds",
+      "expected": "difftime",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "c",
+      "reference",
+      "manual",
+      "safe",
+      "code",
+      "sample",
+      "portable",
+      "convert",
+      "time",
+      "difftime",
+      "seconds"
+    ],
+    "exit": 0,
+    "elapsed": 0.1333904266357422,
+    "stdout": "{\n  \"provider\": \"C\",\n  \"query\": \"reference manual safe code sample portable convert time difftime seconds\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"Standard library header <time.h>\",\n      \"url\": \"https://devdocs.io/c/header/time\",\n      \"snippet\": \"Time manipulation \u2014 difftime computes the difference between times (function) time returns the current calendar time of the system as time since epoch (function) clock returns raw processor clock time since the program is started (function) timespec_get (C11) returns the calendar time in seconds and nanoseconds based on a given time base (function) timespec\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"difftime\",\n      \"url\": \"https://devdocs.io/c/chrono/difftime\",\n      \"snippet\": \"difftime \u2014 Defined in header <time.h> double difftime( time_t time_end, time_t time_beg ); Computes difference between two calendar times as time_t objects (time_end - time_beg) in seconds. If time_end refers to time point before time_beg then the result is negative.\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"time\",\n      \"url\": \"https://devdocs.io/c/chrono/time\",\n      \"snippet\": \"Current calendar time encoded as time_t object on success, (time_t)(-1) on error. If arg is not a null pointer, the return value is also stored in the object pointed to by arg.\",\n      \"meta\": [\n        \"C  \u00b7  Date and time\",\n        \"#include <stdint.h>\\n#include <stdio.h>\\n#include <time.h>\\n\\nint main(void)\\n{\\n    time_t result = time(NULL);\\n    if (result != (time_t)(-1))\\n        printf(\\\"The current time is %s(%jd seconds since the Epoch)\\\\n\\\",\\n               asctime(gmtime(&result)), (intmax_t)result);\\n}\"\n      ]\n    },\n    {\n      \"title\": \"Date and time utilities\",\n      \"url\": \"https://devdocs.io/c/chrono\",\n      \"snippet\": \"Time manipulation \u2014 Defined in header <time.h> difftime computes the difference between times (function) time returns the current calendar time of the system as time since epoch (function) clock returns raw processor clock time since the program is started (function) timespec_get (C11) returns the calendar time in seconds and nanoseconds based on a given ti\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"ctime, ctime_s\",\n      \"url\": \"https://devdocs.io/c/chrono/ctime\",\n      \"snippet\": \"ctime, ctime_s \u2014 Defined in header <time.h> char* ctime( const time_t* timer ); (1) (until C23) [[deprecated]] char* ctime( const time_t* timer ); (since C23) errno_t ctime_s( char *buf, rsize_t bufsz, const time_t* timer ); (2) (since C11) 1) Converts given time since epoch to a calendar local time and then to a textual representation, as if by calling asc\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 77,
+    "entry": {
+      "language": "haskell",
+      "query": "qs haskell latest base library documentation beginner example Data.Char.generalCategory",
+      "expected": "Data.Char.generalCategory",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "haskell",
+      "latest",
+      "base",
+      "library",
+      "documentation",
+      "beginner",
+      "example",
+      "Data.Char.generalCategory"
+    ],
+    "exit": 0,
+    "elapsed": 0.24756336212158203,
+    "stdout": "{\n  \"provider\": \"Haskell\",\n  \"query\": \"Data.Char.generalCategory\",\n  \"source_url\": \"https://hoogle.haskell.org/?hoogle=Data.Char.generalCategory\",\n  \"hits\": [\n    {\n      \"title\": \"generalCategory :: Char -> GeneralCategory\",\n      \"url\": \"https://hackage.haskell.org/package/base/docs/Data-Char.html#v:generalCategory\",\n      \"snippet\": \"The Unicode general category of the character. This relies on the Enum instance of GeneralCategory, which must remain in the same order as the categories are presented in the Unicode standard. Examples Basic usage: >>> generalCategory 'a' LowercaseLetter >>> generalCategory 'A' UppercaseLetter >>> generalCategory '0' \u2026\",\n      \"meta\": [\n        \"base  \u00b7  Data.Char\"\n      ]\n    },\n    {\n      \"title\": \"data GeneralCategory\",\n      \"url\": \"https://hackage.haskell.org/package/base/docs/Data-Char.html#t:GeneralCategory\",\n      \"snippet\": \"Unicode General Categories (column 2 of the UnicodeData table) in the order they are listed in the Unicode standard (the Unicode Character Database, in particular). Examples Basic usage: >>> :t OtherLetter OtherLetter :: GeneralCategory Eq instance: >>> UppercaseLetter == UppercaseLetter True >>> UppercaseLetter == Lo\u2026\",\n      \"meta\": [\n        \"base  \u00b7  Data.Char\"\n      ]\n    },\n    {\n      \"title\": \"showbGeneralCategory :: GeneralCategory -> Builder\",\n      \"url\": \"https://hackage.haskell.org/package/text-show/docs/TextShow-Data-Char.html#v:showbGeneralCategory\",\n      \"snippet\": \"Convert a GeneralCategory to a Builder. Since: 2\",\n      \"meta\": [\n        \"text-show  \u00b7  TextShow.Data.Char\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 78,
+    "entry": {
+      "language": "python",
+      "query": "qs python docs tutorial best practice code sample pathlib.PurePath.match",
+      "expected": "PurePath.match()",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "python",
+      "docs",
+      "tutorial",
+      "best",
+      "practice",
+      "code",
+      "sample",
+      "pathlib.PurePath.match"
+    ],
+    "exit": 0,
+    "elapsed": 0.17921113967895508,
+    "stdout": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"pathlib.PurePath.match\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"pathlib.PurePath.match()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/pathlib#pathlib.PurePath.match\",\n      \"snippet\": \"Match this path against the provided non-recursive glob-style pattern. Return True if matching is successful, False otherwise.\",\n      \"meta\": [\n        \"Python  \u00b7  File & Directory Access\",\n        \">>> PurePath('a/b.py').match('*.py')\\nTrue\\n>>> PurePath('/a/b/c.py').match('b/*.py')\\nTrue\\n>>> PurePath('/a/b/c.py').match('a/*.py')\\nFalse\"\n      ]\n    },\n    {\n      \"title\": \"pathlib.PurePath.full_match()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/pathlib#pathlib.PurePath.full_match\",\n      \"snippet\": \"Match this path against the provided glob-style pattern. Return True if matching is successful, False otherwise. For example:\",\n      \"meta\": [\n        \"Python  \u00b7  File & Directory Access\",\n        \">>> PurePath('a/b.py').full_match('a/*.py')\\nTrue\\n>>> PurePath('a/b.py').full_match('*.py')\\nFalse\\n>>> PurePath('/a/b/c.py').full_match('/a/**')\\nTrue\\n>>> PurePath('/a/b/c.py').full_match('**/*.py')\\nTrue\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 79,
+    "entry": {
+      "language": "go",
+      "query": "qs go official reference beginner quick code example cmp.Or zero values",
+      "expected": "cmp.Or",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "go",
+      "official",
+      "reference",
+      "beginner",
+      "quick",
+      "code",
+      "example",
+      "cmp.Or",
+      "zero",
+      "values"
+    ],
+    "exit": 0,
+    "elapsed": 0.0410304069519043,
+    "stdout": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"cmp.Or\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"cmp.Or()\",\n      \"url\": \"https://devdocs.io/go/cmp/index#Or\",\n      \"snippet\": \"func Or[T comparable](vals ...T) T Or returns the first of its arguments that is not equal to the zero value. If no argument is non-zero, it returns the zero value.\",\n      \"meta\": [\n        \"Go  \u00b7  cmp\",\n        \"// Suppose we have some user input\\n// that may or may not be an empty string\\nuserInput1 := \\\"\\\"\\nuserInput2 := \\\"some text\\\"\\n\\nfmt.Println(cmp.Or(userInput1, \\\"default\\\"))\\nfmt.Println(cmp.Or(userInput2, \\\"default\\\"))\\nfmt.Println(cmp.Or(userInput1, userInput2, \\\"default\\\"))\"\n      ]\n    },\n    {\n      \"title\": \"cmp.Ordered\",\n      \"url\": \"https://devdocs.io/go/cmp/index#Ordered\",\n      \"snippet\": \"Ordered is a constraint that permits any ordered type: any type that supports the operators < <= >= >. If future releases of Go add new ordered types, this constraint will be modified to include them.\",\n      \"meta\": [\n        \"Go  \u00b7  cmp\",\n        \"type Ordered interface {\\n    ~int | ~int8 | ~int16 | ~int32 | ~int64 |\\n        ~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr |\\n        ~float32 | ~float64 |\\n        ~string\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 80,
+    "entry": {
+      "language": "rust",
+      "query": "qs rust standard library fast safe idiomatic example Vec::spare_capacity_mut docs",
+      "expected": "Vec::spare_capacity_mut",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "rust",
+      "standard",
+      "library",
+      "fast",
+      "safe",
+      "idiomatic",
+      "example",
+      "Vec::spare_capacity_mut",
+      "docs"
+    ],
+    "exit": 0,
+    "elapsed": 0.8813107013702393,
+    "stdout": "{\n  \"provider\": \"rust\",\n  \"query\": \"standard library fast safe idiomatic example Vec::spare_capacity_mut docs\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20vec%20Vec%20spare_capacity_mut\",\n  \"hits\": [\n    {\n      \"title\": \"Vec::spare_capacity_mut\",\n      \"url\": \"https://doc.rust-lang.org/std/vec/struct.Vec.html#method.spare_capacity_mut\",\n      \"snippet\": \"A contiguous growable array type, written as `Vec<T>`, short for \u2018vector\u2019.\"\n    },\n    {\n      \"title\": \"Search Rust standard library for Vec::spare_capacity_mut\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20vec%20Vec%20spare_capacity_mut\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 81,
+    "entry": {
+      "language": "cpp",
+      "query": "qs cpp standard official documentation tutorial std::ranges::fold_left sample code",
+      "expected": "std::ranges::fold_left",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "cpp",
+      "standard",
+      "official",
+      "documentation",
+      "tutorial",
+      "std::ranges::fold_left",
+      "sample",
+      "code"
+    ],
+    "exit": 0,
+    "elapsed": 0.09937286376953125,
+    "stdout": "{\n  \"provider\": \"C++\",\n  \"query\": \"std::ranges::fold_left\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::ranges::fold_left\",\n      \"url\": \"https://devdocs.io/cpp/algorithm/ranges/fold_left\",\n      \"snippet\": \"Left-folds the elements of the source range, that is, returns the result of evaluation of the chain expression:f(f(f(f(init, x1), x2), ...), xn), where x1, x2, ..., xn are elements of the source range.\",\n      \"meta\": [\n        \"C++  \u00b7  Algorithm\",\n        \"#include <algorithm>\\n#include <complex>\\n#include <functional>\\n#include <iostream>\\n#include <ranges>\\n#include <string>\\n#include <utility>\\n#include <vector>\\n\\nint main()\\n{\\n    namespace ranges = std::ranges;\\n    \\n    std::vector v{1, 2, 3, 4, 5, 6, 7, 8};\\n    \\n    int sum = ranges::fold_left(v.begin(), v.end(), 0, std::plus<int>()); // (1)\\n    std::cout << \\\"sum: \\\" << sum << '\\\\n';\\n    \\n    int mul = ranges::fold_left(v, 1, std::multiplies<int>()); // (2)\\n    std::cout << \\\"mul: \\\" << mul << '\\\\n';\\n    \\n    // get the product of the std::pair::second of all pairs in the vector:\\n    std::vector<std::pair<char, float>> data {{'A', 2.f}, {'B', 3.f}, {'C', 3.5f}};\\n    float sec = ranges::fold_left\\n    (\\n        data | ranges::views::values, 2.0f, std::multiplies<>()\\n    );\\n    std::cout << \\\"sec: \\\" << sec << '\\\\n';\\n    \\n    // use a program defined function object (lambda-expression):\\n    std::string str = ranges::fold_left\\n    (\\n        v, \\\"A\\\", [](std::string s, int x) { return s + ':' + std::to_string(x); }\\n    );\\n    std::cout << \\\"str: \\\" << str << '\\\\n';\\n    \\n    using CD = std::complex<double>;\\n    std::vector<CD> nums{{1, 1}, {2, 0}, {3, 0}};\\n    #ifdef __cpp_lib_algorithm_default_value_type\\n        auto res = ranges::fold_left(nums, {7, 0}, std::multiplies{}); // (2)\\n    #else\\n        auto res = ranges::fold_left(nums, CD{7, 0}, std::multiplies{}); // (2)\\n    #endif\\n    std::cout << \\\"res: \\\" << res << '\\\\n';\\n}\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::fold_left_first\",\n      \"url\": \"https://devdocs.io/cpp/algorithm/ranges/fold_left_first\",\n      \"snippet\": \"Left-folds the elements of the source range, that is, returns the result of evaluation of the chain expression:f(f(f(f(x1, x2), x3), ...), xn), where x1, x2, ..., xn are elements of the source range.\",\n      \"meta\": [\n        \"C++  \u00b7  Algorithm\",\n        \"#include <algorithm>\\n#include <array>\\n#include <functional>\\n#include <ranges>\\n#include <utility>\\n\\nint main()\\n{\\n    constexpr std::array v{1, 2, 3, 4, 5, 6, 7, 8};\\n    static_assert\\n    (\\n        *std::ranges::fold_left_first(v.begin(), v.end(), std::plus{}) == 36\\n        && *std::ranges::fold_left_first(v, std::multiplies{}) == 40320\\n    );\\n    \\n    constexpr std::array w\\n    {\\n        1, 2, 3, 4, 13,\\n        1, 2, 3, 4, 13,\\n        1, 2, 3, 4, 13,\\n        1, 2, 3, 4,\\n    };\\n    static_assert\\n    (\\n        \\\"Find the only value that (by precondition) occurs odd number of times:\\\"\\n        && *std::ranges::fold_left_first(w, [](int p, int q){ return p ^ q; }) == 13\\n    );\\n    \\n    constexpr auto pairs = std::to_array<std::pair<char, float>>\\n    ({\\n        {'A', 3.0f},\\n        {'B', 3.5f},\\n        {'C', 4.0f}\\n    });\\n    static_assert\\n    (\\n        \\\"Get the product of all pair::second in pairs:\\\"\\n        && *std::ranges::fold_left_first\\n        (\\n            pairs | std::ranges::views::values, std::multiplies{}\\n        ) == 42\\n    );\\n}\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::fold_left_with_iter\",\n      \"url\": \"https://devdocs.io/cpp/algorithm/ranges/fold_left_with_iter\",\n      \"meta\": [\n        \"C++  \u00b7  Algorithm\"\n      ]\n    },\n    {\n      \"title\": \"std::ranges::fold_left_first_with_iter\",\n      \"url\": \"https://devdocs.io/cpp/algorithm/ranges/fold_left_first_with_iter\",\n      \"meta\": [\n        \"C++  \u00b7  Algorithm\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 82,
+    "entry": {
+      "language": "c",
+      "query": "qs c language library specification easy tutorial sample code div integer quotient remainder",
+      "expected": "div",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "c",
+      "language",
+      "library",
+      "specification",
+      "easy",
+      "tutorial",
+      "sample",
+      "code",
+      "div",
+      "integer",
+      "quotient",
+      "remainder"
+    ],
+    "exit": 0,
+    "elapsed": 0.15844440460205078,
+    "stdout": "{\n  \"provider\": \"C\",\n  \"query\": \"language library specification easy tutorial sample code div integer quotient remainder\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"div, ldiv, lldiv, imaxdiv\",\n      \"url\": \"https://devdocs.io/c/numeric/math/div\",\n      \"snippet\": \"div, ldiv, lldiv, imaxdiv \u2014 Defined in header <stdlib.h> div_t div( int x, int y ); (1) ldiv_t ldiv( long x, long y ); (2) lldiv_t lldiv( long long x, long long y ); (3) (since C99) Defined in header <inttypes.h> imaxdiv_t imaxdiv( intmax_t x, intmax_t y ); (4) (since C99) Computes both the quotient and the remainder of the division of the numerator x by th\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"Arithmetic operators\",\n      \"url\": \"https://devdocs.io/c/language/operator_arithmetic\",\n      \"snippet\": \"Remainder \u2014 The binary operator % yields the remainder of the division of the first operand by the second (after usual arithmetic conversions). The sign of the remainder is defined in such a way that if the quotient a/b is representable in the result type, then (a/b)*b + a%b == a. If the second operand is zero, the behavior is undefined. If the quotient a/b\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"Common mathematical functions\",\n      \"url\": \"https://devdocs.io/c/numeric/math\",\n      \"snippet\": \"Functions \u2014 Defined in header <stdlib.h> abslabsllabs (C99) computes absolute value of an integral value (\\\\(\\\\small{|x|}\\\\)|x|) (function) divldivlldiv (C99) computes quotient and remainder of integer division (function) Defined in header <inttypes.h> imaxabs (C99) computes absolute value of an integral value (\\\\(\\\\small{|x|}\\\\)|x|) (function) imaxdiv (C99) comp\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"Standard library header <limits.h>\",\n      \"url\": \"https://devdocs.io/c/header/limits\",\n      \"snippet\": \"Limits of core language integer types \u2014 BOOL_WIDTH (C23) bit width of bool (macro constant) BOOL_MAX (C29) maximum value of _Bool (macro constant) CHAR_BIT bit width of byte (macro constant) MB_LEN_MAX maximum number of bytes in a multibyte character (macro constant) CHAR_WIDTH (C23) bit width of char (macro constant) CHAR_MIN minimum value of char (macro c\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"remainder, remainderf, remainderl\",\n      \"url\": \"https://devdocs.io/c/numeric/math/remainder\",\n      \"snippet\": \"remainder, remainderf, remainderl \u2014 Defined in header <math.h> float remainderf( float x, float y ); (1) (since C99) double remainder( double x, double y ); (2) (since C99) long double remainderl( long double x, long double y ); (3) (since C99) Defined in header <tgmath.h> #define remainder( x, y ) (4) (since C99) 1-3) Computes the IEEE remainder of the flo\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 83,
+    "entry": {
+      "language": "haskell",
+      "query": "qs haskell package docs latest tutorial quick answer Data.Sequence.adjust examples",
+      "expected": "Data.Sequence.adjust",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "haskell",
+      "package",
+      "docs",
+      "latest",
+      "tutorial",
+      "quick",
+      "answer",
+      "Data.Sequence.adjust",
+      "examples"
+    ],
+    "exit": 0,
+    "elapsed": 0.3712036609649658,
+    "stdout": "{\n  \"provider\": \"Haskell\",\n  \"query\": \"Data.Sequence.adjust\",\n  \"source_url\": \"https://hoogle.haskell.org/?hoogle=Data.Sequence.adjust\",\n  \"hits\": [\n    {\n      \"title\": \"adjust :: (a -> a) -> Int -> Seq a -> Seq a\",\n      \"url\": \"https://hackage.haskell.org/package/containers/docs/Data-Sequence.html#v:adjust\",\n      \"snippet\": \"Update the element at the specified position. If the position is out of range, the original sequence is returned. adjust can lead to poor performance and even memory leaks, because it does not force the new value before installing it in the sequence. adjust' should usually be preferred.\",\n      \"meta\": [\n        \"containers  \u00b7  Data.Sequence\"\n      ]\n    },\n    {\n      \"title\": \"adjust :: (a -> a) -> Int -> Seq a -> Seq a\",\n      \"url\": \"https://hackage.haskell.org/package/containers/docs/Data-Sequence-Internal.html#v:adjust\",\n      \"snippet\": \"Update the element at the specified position. If the position is out of range, the original sequence is returned. adjust can lead to poor performance and even memory leaks, because it does not force the new value before installing it in the sequence. adjust' should usually be preferred.\",\n      \"meta\": [\n        \"containers  \u00b7  Data.Sequence.Internal\"\n      ]\n    },\n    {\n      \"title\": \"adjust' :: (a -> a) -> Int -> Seq a -> Seq a\",\n      \"url\": \"https://hackage.haskell.org/package/containers/docs/Data-Sequence.html#v:adjust-39-\",\n      \"snippet\": \"Update the element at the specified position. If the position is out of range, the original sequence is returned. The new value is forced before it is installed in the sequence. adjust' f i xs = case xs !? i of Nothing -> xs Just x -> let !x' = f x in update i x' xs\",\n      \"meta\": [\n        \"containers  \u00b7  Data.Sequence\"\n      ]\n    },\n    {\n      \"title\": \"adjust' :: (a -> a) -> Int -> Seq a -> Seq a\",\n      \"url\": \"https://hackage.haskell.org/package/containers/docs/Data-Sequence-Internal.html#v:adjust-39-\",\n      \"snippet\": \"Update the element at the specified position. If the position is out of range, the original sequence is returned. The new value is forced before it is installed in the sequence. adjust' f i xs = case xs !? i of Nothing -> xs Just x -> let !x' = f x in update i x' xs\",\n      \"meta\": [\n        \"containers  \u00b7  Data.Sequence.Internal\"\n      ]\n    },\n    {\n      \"title\": \"adjust :: (a -> a) -> Int -> NESeq a -> NESeq a\",\n      \"url\": \"https://hackage.haskell.org/package/nonempty-containers/docs/Data-Sequence-NonEmpty.html#v:adjust\",\n      \"snippet\": \"Update the element at the specified position. If the position is out of range, the original sequence is returned. adjust can lead to poor performance and even memory leaks, because it does not force the new value before installing it in the sequence. adjust' should usually be preferred.\",\n      \"meta\": [\n        \"nonempty-containers  \u00b7  Data.Sequence.NonEmpty\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 84,
+    "entry": {
+      "language": "python",
+      "query": "qs python standard library official guide simple example graphlib.TopologicalSorter",
+      "expected": "graphlib.TopologicalSorter",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "python",
+      "standard",
+      "library",
+      "official",
+      "guide",
+      "simple",
+      "example",
+      "graphlib.TopologicalSorter"
+    ],
+    "exit": 0,
+    "elapsed": 0.1391901969909668,
+    "stdout": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"graphlib.TopologicalSorter\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"graphlib.TopologicalSorter\",\n      \"url\": \"https://devdocs.io/python~3.15/library/graphlib#graphlib.TopologicalSorter\",\n      \"snippet\": \"Provides functionality to topologically sort a graph of hashable nodes.\",\n      \"meta\": [\n        \"Python  \u00b7  Data Types\",\n        \">>> graph = {\\\"D\\\": {\\\"B\\\", \\\"C\\\"}, \\\"C\\\": {\\\"A\\\"}, \\\"B\\\": {\\\"A\\\"}}\\n>>> ts = TopologicalSorter(graph)\\n>>> tuple(ts.static_order())\\n('A', 'C', 'B', 'D')\"\n      ]\n    },\n    {\n      \"title\": \"graphlib.TopologicalSorter.add()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/graphlib#graphlib.TopologicalSorter.add\",\n      \"snippet\": \"Add a new node and its predecessors to the graph. Both the node and all elements in predecessors must be hashable.\",\n      \"meta\": [\n        \"Python  \u00b7  Data Types\"\n      ]\n    },\n    {\n      \"title\": \"graphlib.TopologicalSorter.done()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/graphlib#graphlib.TopologicalSorter.done\",\n      \"meta\": [\n        \"Python  \u00b7  Data Types\"\n      ]\n    },\n    {\n      \"title\": \"graphlib.TopologicalSorter.prepare()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/graphlib#graphlib.TopologicalSorter.prepare\",\n      \"meta\": [\n        \"Python  \u00b7  Data Types\"\n      ]\n    },\n    {\n      \"title\": \"graphlib.TopologicalSorter.get_ready()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/graphlib#graphlib.TopologicalSorter.get_ready\",\n      \"meta\": [\n        \"Python  \u00b7  Data Types\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 85,
+    "entry": {
+      "language": "go",
+      "query": "qs go current stable standard package docs quick example math.Nextafter",
+      "expected": "math.Nextafter",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "go",
+      "current",
+      "stable",
+      "standard",
+      "package",
+      "docs",
+      "quick",
+      "example",
+      "math.Nextafter"
+    ],
+    "exit": 0,
+    "elapsed": 0.05006265640258789,
+    "stdout": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"math.Nextafter\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"math.Nextafter()\",\n      \"url\": \"https://devdocs.io/go/math/index#Nextafter\",\n      \"snippet\": \"func Nextafter(x, y float64) (r float64) Nextafter returns the next representable float64 value after x towards y.\",\n      \"meta\": [\n        \"Go  \u00b7  math\",\n        \"Nextafter(x, y)   = x when x == y\\nNextafter(0, y)   = \u00b1SmallestNonzeroFloat64 towards y, for y \u2260 0\\nNextafter(NaN, y) = NaN\\nNextafter(x, NaN) = NaN\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 86,
+    "entry": {
+      "language": "rust",
+      "query": "qs rust official stable docs easy example std::path::Path::ancestors iterator",
+      "expected": "Path::ancestors",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "rust",
+      "official",
+      "stable",
+      "docs",
+      "easy",
+      "example",
+      "std::path::Path::ancestors",
+      "iterator"
+    ],
+    "exit": 0,
+    "elapsed": 0.9765641689300537,
+    "stdout": "{\n  \"provider\": \"rust\",\n  \"query\": \"official stable docs easy example std::path::Path::ancestors iterator\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20path%20Path%20ancestors\",\n  \"hits\": [\n    {\n      \"title\": \"Path::ancestors\",\n      \"url\": \"https://doc.rust-lang.org/std/path/struct.Path.html#method.ancestors\",\n      \"snippet\": \"A slice of a path (akin to `str`).\"\n    },\n    {\n      \"title\": \"Search Rust standard library for std::path::Path::ancestors\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20path%20Path%20ancestors\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 87,
+    "entry": {
+      "language": "cpp",
+      "query": "qs cpp latest standard reference concise example std::launder object pointer",
+      "expected": "std::launder",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "cpp",
+      "latest",
+      "standard",
+      "reference",
+      "concise",
+      "example",
+      "std::launder",
+      "object",
+      "pointer"
+    ],
+    "exit": 0,
+    "elapsed": 0.05444192886352539,
+    "stdout": "{\n  \"provider\": \"C++\",\n  \"query\": \"std::launder\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::launder\",\n      \"url\": \"https://devdocs.io/cpp/utility/launder\",\n      \"snippet\": \"template< class T > constexpr T* launder( T* p ) noexcept; (since C++17) Devirtualization fence with respect to p. Returns a pointer to an object at the same address that p represents, while the object can be a new base class subobject whose most derived class is different from that of the original *p object.\",\n      \"meta\": [\n        \"C++  \u00b7  Utilities\",\n        \"#include <cassert>\\n#include <cstddef>\\n#include <new>\\n\\nstruct Base\\n{\\n    virtual int transmogrify();\\n};\\n\\nstruct Derived : Base\\n{\\n    int transmogrify() override\\n    {\\n        new(this) Base;\\n        return 2;\\n    }\\n};\\n\\nint Base::transmogrify()\\n{\\n    new(this) Derived;\\n    return 1;\\n}\\n\\nstatic_assert(sizeof(Derived) == sizeof(Base));\\n\\nint main()\\n{\\n    // Case 1: the new object failed to be transparently replaceable because\\n    // it is a base subobject but the old object is a complete object.\\n    Base base;\\n    int n = base.transmogrify();\\n    // int m = base.transmogrify(); // undefined behavior\\n    int m = std::launder(&base)->transmogrify(); // OK\\n    assert(m + n == 3);\\n    \\n    // Case 2: access to a new object whose storage is provided\\n    // by a byte array through a pointer to the array.\\n    struct Y { int z; };\\n    alignas(Y) std::byte s[sizeof(Y)];\\n    Y* q = new(&s) Y{2};\\n    const int f = reinterpret_cast<Y*>(&s)->z; // Class member access is undefined\\n                                               // behavior: reinterpret_cast<Y*>(&s)\\n                                               // has value \\\"pointer to s\\\" and does\\n                                               // not point to a Y object\\n    const int g = q->z; // OK\\n    const int h = std::launder(reinterpret_cast<Y*>(&s))->z; // OK\\n    \\n    [](...){}(f, g, h); // evokes [[maybe_unused]] effect\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 88,
+    "entry": {
+      "language": "c",
+      "query": "qs c standard portable reference example localeconv monetary formatting fields",
+      "expected": "localeconv",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "c",
+      "standard",
+      "portable",
+      "reference",
+      "example",
+      "localeconv",
+      "monetary",
+      "formatting",
+      "fields"
+    ],
+    "exit": 0,
+    "elapsed": 0.17789006233215332,
+    "stdout": "{\n  \"provider\": \"C\",\n  \"query\": \"standard portable reference example localeconv monetary formatting fields\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"lconv\",\n      \"url\": \"https://devdocs.io/c/locale/lconv\",\n      \"snippet\": \"Non-monetary numeric formatting parameters \u2014 char* decimal_point the character used as the decimal point (public member object) char* thousands_sep the character used to separate groups of digits before the decimal point (public member object) char* grouping a string whose elements indicate the sizes of digit groups (public member object)\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"localeconv\",\n      \"url\": \"https://devdocs.io/c/locale/localeconv\",\n      \"snippet\": \"localeconv \u2014 Defined in header <locale.h> struct lconv* localeconv(void); The localeconv function obtains a pointer to a static object of type lconv, which represents numeric and monetary formatting rules of the current C locale.\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"Standard library header <locale.h>\",\n      \"url\": \"https://devdocs.io/c/header/locale\",\n      \"snippet\": \"Standard library header <locale.h> \u2014 This header is part of the localization library.\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"Localization support\",\n      \"url\": \"https://devdocs.io/c/locale\",\n      \"snippet\": \"Localization support \u2014 Defined in header <locale.h> setlocale gets and sets the current C locale (function) localeconv queries numeric and monetary formatting details of the current locale (function) lconv formatting details, returned by localeconv(struct)\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"LC_ALL, LC_COLLATE, LC_CTYPE, LC_MONETARY, LC_NUMERIC, LC_TIME\",\n      \"url\": \"https://devdocs.io/c/locale/lc_categories\",\n      \"snippet\": \"LC_ALL, LC_COLLATE, LC_CTYPE, LC_MONETARY, LC_NUMERIC, LC_TIME \u2014 Defined in header <locale.h> #define LC_ALL /* implementation-defined */ #define LC_COLLATE /* implementation-defined */ #define LC_CTYPE /* implementation-defined */ #define LC_MONETARY /* implementation-defined */ #define LC_NUMERIC /* implementation-defined */ #define LC_TIME /* implementat\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 89,
+    "entry": {
+      "language": "haskell",
+      "query": "qs haskell current base hoogle quick tutorial Control.Arrow.loop examples",
+      "expected": "Control.Arrow.loop",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "haskell",
+      "current",
+      "base",
+      "hoogle",
+      "quick",
+      "tutorial",
+      "Control.Arrow.loop",
+      "examples"
+    ],
+    "exit": 0,
+    "elapsed": 0.3308136463165283,
+    "stdout": "{\n  \"provider\": \"Haskell\",\n  \"query\": \"Control.Arrow.loop\",\n  \"source_url\": \"https://hoogle.haskell.org/?hoogle=Control.Arrow.loop\",\n  \"hits\": [\n    {\n      \"title\": \"loop :: ArrowLoop a => a (b, d) (c, d) -> a b c\",\n      \"url\": \"https://hackage.haskell.org/package/base/docs/Control-Arrow.html#v:loop\",\n      \"snippet\": \"\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e b \u2502 \u256d\u2500\u2500\u2500\u256e \u2502 c >\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2524 \u251c\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500> \u2502 \u250c\u2500\u2524 \u251c\u2500\u2510 \u2502 \u2502 d \u2502 \u2570\u2500\u2500\u2500\u256f \u2502 \u2502 \u2502 \u2514\u2500\u2500\u2500<\u2500\u2500\u2500\u2518 \u2502 \u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\",\n      \"meta\": [\n        \"base  \u00b7  Control.Arrow\"\n      ]\n    },\n    {\n      \"title\": \"class Arrow a => ArrowLoop (a :: Type -> Type -> Type)\",\n      \"url\": \"https://hackage.haskell.org/package/base/docs/Control-Arrow.html#t:ArrowLoop\",\n      \"snippet\": \"The loop operator expresses computations in which an output value is fed back as input, although the computation occurs only once. It underlies the rec value recursion construct in arrow notation. loop should satisfy the following laws: extension loop (arr f) = arr (\\\\ b -> fst (fix (\\\\ (c,d) -> f (b,d)))) left tighteni\u2026\",\n      \"meta\": [\n        \"base  \u00b7  Control.Arrow\"\n      ]\n    },\n    {\n      \"title\": \"loop :: ArrowLoop a => a (b, d) (c, d) -> a b c\",\n      \"url\": \"https://hackage.haskell.org/package/ghc-internal/docs/GHC-Internal-Control-Arrow.html#v:loop\",\n      \"snippet\": \"\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e b \u2502 \u256d\u2500\u2500\u2500\u256e \u2502 c >\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2524 \u251c\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500> \u2502 \u250c\u2500\u2524 \u251c\u2500\u2510 \u2502 \u2502 d \u2502 \u2570\u2500\u2500\u2500\u256f \u2502 \u2502 \u2502 \u2514\u2500\u2500\u2500<\u2500\u2500\u2500\u2518 \u2502 \u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\",\n      \"meta\": [\n        \"ghc-internal  \u00b7  GHC.Internal.Control.Arrow\"\n      ]\n    },\n    {\n      \"title\": \"class Arrow a => ArrowLoop (a :: Type -> Type -> Type)\",\n      \"url\": \"https://hackage.haskell.org/package/ghc-internal/docs/GHC-Internal-Control-Arrow.html#t:ArrowLoop\",\n      \"snippet\": \"The loop operator expresses computations in which an output value is fed back as input, although the computation occurs only once. It underlies the rec value recursion construct in arrow notation. loop should satisfy the following laws: extension loop (arr f) = arr (\\\\ b -> fst (fix (\\\\ (c,d) -> f (b,d)))) left tighteni\u2026\",\n      \"meta\": [\n        \"ghc-internal  \u00b7  GHC.Internal.Control.Arrow\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 90,
+    "entry": {
+      "language": "python",
+      "query": "qs python official stdlib current docs tiny example weakref.finalize object cleanup",
+      "expected": "weakref.finalize",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "python",
+      "official",
+      "stdlib",
+      "current",
+      "docs",
+      "tiny",
+      "example",
+      "weakref.finalize",
+      "object",
+      "cleanup"
+    ],
+    "exit": 0,
+    "elapsed": 0.10875964164733887,
+    "stdout": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"weakref.finalize\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"weakref.finalize\",\n      \"url\": \"https://devdocs.io/python~3.15/library/weakref#weakref.finalize\",\n      \"snippet\": \"Return a callable finalizer object which will be called when obj is garbage collected. Unlike an ordinary weak reference, a finalizer will always survive until the reference object is collected, greatly simplifying lifecycle management.\",\n      \"meta\": [\n        \"Python  \u00b7  Data Types\"\n      ]\n    },\n    {\n      \"title\": \"weakref.finalize.alive\",\n      \"url\": \"https://devdocs.io/python~3.15/library/weakref#weakref.finalize.alive\",\n      \"snippet\": \"Property which is true if the finalizer is alive, false otherwise.\",\n      \"meta\": [\n        \"Python  \u00b7  Data Types\"\n      ]\n    },\n    {\n      \"title\": \"weakref.finalize.atexit\",\n      \"url\": \"https://devdocs.io/python~3.15/library/weakref#weakref.finalize.atexit\",\n      \"meta\": [\n        \"Python  \u00b7  Data Types\"\n      ]\n    },\n    {\n      \"title\": \"weakref.finalize.peek()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/weakref#weakref.finalize.peek\",\n      \"meta\": [\n        \"Python  \u00b7  Data Types\"\n      ]\n    },\n    {\n      \"title\": \"weakref.finalize.detach()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/weakref#weakref.finalize.detach\",\n      \"meta\": [\n        \"Python  \u00b7  Data Types\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 91,
+    "entry": {
+      "language": "go",
+      "query": "qs go standard package reference practical sample testing.F.Cleanup fuzz docs",
+      "expected": "testing.F.Cleanup",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "go",
+      "standard",
+      "package",
+      "reference",
+      "practical",
+      "sample",
+      "testing.F.Cleanup",
+      "fuzz",
+      "docs"
+    ],
+    "exit": 0,
+    "elapsed": 0.07596826553344727,
+    "stdout": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"testing.F.Cleanup\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"testing.F.Cleanup()\",\n      \"url\": \"https://devdocs.io/go/testing/index#F.Cleanup\",\n      \"snippet\": \"func (c *F) Cleanup(f func()) Cleanup registers a function to be called when the test (or subtest) and all its subtests complete. Cleanup functions will be called in last added, first called order.\",\n      \"meta\": [\n        \"Go  \u00b7  testing\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 92,
+    "entry": {
+      "language": "rust",
+      "query": "qs rust docs quick beginner correct idiomatic std::array::from_fn example",
+      "expected": "std::array::from_fn",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "rust",
+      "docs",
+      "quick",
+      "beginner",
+      "correct",
+      "idiomatic",
+      "std::array::from_fn",
+      "example"
+    ],
+    "exit": 0,
+    "elapsed": 0.548114538192749,
+    "stdout": "{\n  \"provider\": \"rust\",\n  \"query\": \"docs quick beginner correct idiomatic std::array::from_fn example\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20array%20from_fn\",\n  \"hits\": [\n    {\n      \"title\": \"from_fn in std::array - Rust\",\n      \"url\": \"https://doc.rust-lang.org/std/array/fn.from_fn.html\",\n      \"snippet\": \"Creates an array where each element is produced by calling `f` with that element\u2019s index while walking forward through the array.\"\n    },\n    {\n      \"title\": \"Search Rust standard library for std::array::from_fn\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20array%20from_fn\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 93,
+    "entry": {
+      "language": "cpp",
+      "query": "qs cpp portable modern reference sample std::ranges::borrowed_range concept details",
+      "expected": "std::ranges::borrowed_range",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "cpp",
+      "portable",
+      "modern",
+      "reference",
+      "sample",
+      "std::ranges::borrowed_range",
+      "concept",
+      "details"
+    ],
+    "exit": 0,
+    "elapsed": 0.11502242088317871,
+    "stdout": "{\n  \"provider\": \"C++\",\n  \"query\": \"std::ranges::borrowed_range\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::ranges::borrowed_range\",\n      \"url\": \"https://devdocs.io/cpp/ranges/borrowed_range\",\n      \"snippet\": \"A program may specialize enable_borrowed_range to true for cv-unqualified program-defined types which model borrowed_range, and false for types which do not. Such specializations shall be usable in constant expression and have type constbool.\",\n      \"meta\": [\n        \"C++  \u00b7  Ranges\",\n        \"#include <algorithm>\\n#include <array>\\n#include <cstddef>\\n#include <iostream>\\n#include <ranges>\\n#include <span>\\n#include <type_traits>\\n\\ntemplate<typename T, std::size_t N>\\nstruct MyRange : std::array<T, N> {};\\n\\ntemplate<typename T, std::size_t N>\\nconstexpr bool std::ranges::enable_borrowed_range<MyRange<T, N>> = false;\\n\\ntemplate<typename T, std::size_t N>\\nstruct MyBorrowedRange : std::span<T, N> {};\\n\\ntemplate<typename T, std::size_t N>\\nconstexpr bool std::ranges::enable_borrowed_range<MyBorrowedRange<T, N>> = true;\\n\\nint main()\\n{\\n    static_assert(std::ranges::range<MyRange<int, 8>>);\\n    static_assert(std::ranges::borrowed_range<MyRange<int, 8>> == false);\\n    static_assert(std::ranges::range<MyBorrowedRange<int, 8>>);\\n    static_assert(std::ranges::borrowed_range<MyBorrowedRange<int, 8>> == true);\\n    \\n    auto getMyRangeByValue = []{ return MyRange<int, 4>{{1, 2, 42, 3}}; };\\n    auto dangling_iter = std::ranges::max_element(getMyRangeByValue());\\n    static_assert(std::is_same_v<std::ranges::dangling, decltype(dangling_iter)>);\\n    // *dangling_iter; // compilation error (i.e. dangling protection works.)\\n    \\n    auto my = MyRange<int, 4>{{1, 2, 42, 3}};\\n    auto valid_iter = std::ranges::max_element(my);\\n    std::cout << *valid_iter << ' '; // OK: 42\\n    \\n    auto getMyBorrowedRangeByValue = []\\n    {\\n        static int sa[4]{1, 2, 42, 3};\\n        return MyBorrowedRange<int, std::size(sa)>{sa};\\n    };\\n    auto valid_iter2 = std::ranges::max_element(getMyBorrowedRangeByValue());\\n    std::cout << *valid_iter2 << '\\\\n'; // OK: 42\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 94,
+    "entry": {
+      "language": "c",
+      "query": "qs c official standard library guide sample code nearbyint rounding mode",
+      "expected": "nearbyint",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "c",
+      "official",
+      "standard",
+      "library",
+      "guide",
+      "sample",
+      "code",
+      "nearbyint",
+      "rounding",
+      "mode"
+    ],
+    "exit": 0,
+    "elapsed": 0.1699047088623047,
+    "stdout": "{\n  \"provider\": \"C\",\n  \"query\": \"official standard library guide sample code nearbyint rounding mode\",\n  \"source_url\": \"https://devdocs.io/c\",\n  \"hits\": [\n    {\n      \"title\": \"Implementation defined behavior control\",\n      \"url\": \"https://devdocs.io/c/preprocessor/impl\",\n      \"snippet\": \"Standard pragmas \u2014 The following three pragmas are defined by the language standard: #pragma STDC FENV_ACCESS arg (1) (since C99) #pragma STDC FP_CONTRACT arg (2) (since C99) #pragma STDC CX_LIMITED_RANGE arg (3) (since C99) where arg is either ON or OFF or DEFAULT. 1) If set to ON, informs the compiler that the program will access or modify floating-point \u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"Standard library header <tgmath.h> (C99)\",\n      \"url\": \"https://devdocs.io/c/header/tgmath\",\n      \"snippet\": \"Standard library header <tgmath.h> (C99) \u2014 This header is part of numeric library and provides type-generic macros that determine which real or, when applicable, complex function to call based on the types of the arguments.\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"nearbyint, nearbyintf, nearbyintl\",\n      \"url\": \"https://devdocs.io/c/numeric/math/nearbyint\",\n      \"snippet\": \"nearbyint, nearbyintf, nearbyintl \u2014 Defined in header <math.h> float nearbyintf( float arg ); (1) (since C99) double nearbyint( double arg ); (2) (since C99) long double nearbyintl( long double arg ); (3) (since C99) Defined in header <tgmath.h> #define nearbyint( arg ) (4) (since C99) 1-3) Rounds the floating-point argument arg to an integer value in float\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"FE_DOWNWARD, FE_TONEAREST, FE_TOWARDZERO, FE_UPWARD\",\n      \"url\": \"https://devdocs.io/c/numeric/fenv/fe_round\",\n      \"snippet\": \"FE_DOWNWARD, FE_TONEAREST, FE_TOWARDZERO, FE_UPWARD \u2014 Defined in header <fenv.h> #define FE_DOWNWARD /*implementation defined*/ (since C99) #define FE_TONEAREST /*implementation defined*/ (since C99) #define FE_TOWARDZERO /*implementation defined*/ (since C99) #define FE_UPWARD /*implementation defined*/ (since C99) Each of these macro constants expands to \u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    },\n    {\n      \"title\": \"round, roundf, roundl, lround, lroundf, lroundl, llround, llroundf, llroundl\",\n      \"url\": \"https://devdocs.io/c/numeric/math/round\",\n      \"snippet\": \"round, roundf, roundl, lround, lroundf, lroundl, llround, llroundf, llroundl \u2014 Defined in header <math.h> float roundf( float arg ); (1) (since C99) double round( double arg ); (2) (since C99) long double roundl( long double arg ); (3) (since C99) Defined in header <tgmath.h> #define round( arg ) (4) (since C99) Defined in header <math.h> long lroundf( floa\u2026\",\n      \"meta\": [\n        \"C\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 95,
+    "entry": {
+      "language": "haskell",
+      "query": "qs haskell hoogle official base docs concise example Data.Ord.clamp",
+      "expected": "Data.Ord.clamp",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "haskell",
+      "hoogle",
+      "official",
+      "base",
+      "docs",
+      "concise",
+      "example",
+      "Data.Ord.clamp"
+    ],
+    "exit": 0,
+    "elapsed": 0.5119166374206543,
+    "stdout": "{\n  \"provider\": \"Haskell\",\n  \"query\": \"Data.Ord.clamp\",\n  \"source_url\": \"https://hoogle.haskell.org/?hoogle=Data.Ord.clamp\",\n  \"hits\": [\n    {\n      \"title\": \"clamp :: Ord a => (a, a) -> a -> a\",\n      \"url\": \"https://hackage.haskell.org/package/base/docs/Data-Ord.html#v:clamp\",\n      \"snippet\": \"clamp (low, high) a = min high (max a low) Function for ensuring the value a is within the inclusive bounds given by low and high. If it is, a is returned unchanged. The result is otherwise low if a <= low, or high if high <= a. When clamp is used at Double and Float, it has NaN propagating semantics in its second arg\u2026\",\n      \"meta\": [\n        \"base  \u00b7  Data.Ord\"\n      ]\n    },\n    {\n      \"title\": \"clamp :: FastMinMax x => x -> x\",\n      \"url\": \"https://hackage.haskell.org/package/DPutils/docs/Data-Ord-Fast.html#v:clamp\",\n      \"snippet\": \"Clamp values to >=0.\",\n      \"meta\": [\n        \"DPutils  \u00b7  Data.Ord.Fast\"\n      ]\n    },\n    {\n      \"title\": \"clamp :: Ord a => (a, a) -> a -> a\",\n      \"url\": \"https://hackage.haskell.org/package/ghc-internal/docs/GHC-Internal-Data-Ord.html#v:clamp\",\n      \"snippet\": \"clamp (low, high) a = min high (max a low) Function for ensuring the value a is within the inclusive bounds given by low and high. If it is, a is returned unchanged. The result is otherwise low if a <= low, or high if high <= a. When clamp is used at Double and Float, it has NaN propagating semantics in its second arg\u2026\",\n      \"meta\": [\n        \"ghc-internal  \u00b7  GHC.Internal.Data.Ord\"\n      ]\n    },\n    {\n      \"title\": \"clamp :: Ord a => Min a -> Max a -> a -> a\",\n      \"url\": \"https://hackage.haskell.org/package/tools-yj/docs/Data-Ord-ToolsYj.html#v:clamp\",\n      \"meta\": [\n        \"tools-yj  \u00b7  Data.Ord.ToolsYj\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 96,
+    "entry": {
+      "language": "python",
+      "query": "qs python latest official manual quick practical example socket.socketpair",
+      "expected": "socket.socketpair()",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "python",
+      "latest",
+      "official",
+      "manual",
+      "quick",
+      "practical",
+      "example",
+      "socket.socketpair"
+    ],
+    "exit": 0,
+    "elapsed": 0.1034703254699707,
+    "stdout": "{\n  \"provider\": \"Python 3.15.0\",\n  \"query\": \"socket.socketpair\",\n  \"source_url\": \"https://devdocs.io/python~3.15\",\n  \"hits\": [\n    {\n      \"title\": \"socket.socketpair()\",\n      \"url\": \"https://devdocs.io/python~3.15/library/socket#socket.socketpair\",\n      \"snippet\": \"Build a pair of connected socket objects using the given address family, socket type, and protocol number. Address family, socket type, and protocol number are as for the socket() function. The default family is AF_UNIX if defined on the platform; otherwise, the default is AF_INET.\",\n      \"meta\": [\n        \"Python  \u00b7  Networking & Interprocess Communication\"\n      ]\n    },\n    {\n      \"title\": \"c.PyErr_SetString()\",\n      \"url\": \"https://devdocs.io/python~3.15/c-api/exceptions#c.PyErr_SetString\",\n      \"snippet\": \"This is the most common way to set the error indicator. The first argument specifies the exception type; it is normally one of the standard exceptions, e.g. PyExc_RuntimeError. You need not create a new strong reference to it (e.g. with Py_INCREF()). The second argument is an error message; it is decoded from 'utf-8'.\",\n      \"meta\": [\n        \"Python  \u00b7  Python/C API\"\n      ]\n    },\n    {\n      \"title\": \"c.PyConfig_SetString()\",\n      \"url\": \"https://devdocs.io/python~3.15/c-api/init_config#c.PyConfig_SetString\",\n      \"meta\": [\n        \"Python  \u00b7  Python/C API\"\n      ]\n    },\n    {\n      \"title\": \"c.PyInitConfig_SetStr()\",\n      \"url\": \"https://devdocs.io/python~3.15/c-api/init_config#c.PyInitConfig_SetStr\",\n      \"meta\": [\n        \"Python  \u00b7  Python/C API\"\n      ]\n    },\n    {\n      \"title\": \"c.PyInitConfig_SetStrList()\",\n      \"url\": \"https://devdocs.io/python~3.15/c-api/init_config#c.PyInitConfig_SetStrList\",\n      \"meta\": [\n        \"Python  \u00b7  Python/C API\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 97,
+    "entry": {
+      "language": "go",
+      "query": "qs go docs current version best practice example log.Logger.Writer method",
+      "expected": "log.Logger.Writer",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "go",
+      "docs",
+      "current",
+      "version",
+      "best",
+      "practice",
+      "example",
+      "log.Logger.Writer",
+      "method"
+    ],
+    "exit": 0,
+    "elapsed": 0.05933690071105957,
+    "stdout": "{\n  \"provider\": \"Go 1.27.0\",\n  \"query\": \"log.Logger.Writer\",\n  \"source_url\": \"https://devdocs.io/go\",\n  \"hits\": [\n    {\n      \"title\": \"log.Logger.Writer()\",\n      \"url\": \"https://devdocs.io/go/log/index#Logger.Writer\",\n      \"snippet\": \"func (l *Logger) Writer() io.Writer Writer returns the output destination for the logger.\",\n      \"meta\": [\n        \"Go  \u00b7  log\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 98,
+    "entry": {
+      "language": "rust",
+      "query": "qs rust safe fast standard library tutorial std::ffi::OsStr::as_encoded_bytes",
+      "expected": "OsStr::as_encoded_bytes",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "rust",
+      "safe",
+      "fast",
+      "standard",
+      "library",
+      "tutorial",
+      "std::ffi::OsStr::as_encoded_bytes"
+    ],
+    "exit": 0,
+    "elapsed": 0.9264881610870361,
+    "stdout": "{\n  \"provider\": \"rust\",\n  \"query\": \"safe fast standard library tutorial std::ffi::OsStr::as_encoded_bytes\",\n  \"source_url\": \"https://doc.rust-lang.org/std/?search=std%20ffi%20OsStr%20as_encoded_bytes\",\n  \"hits\": [\n    {\n      \"title\": \"OsStr::as_encoded_bytes\",\n      \"url\": \"https://doc.rust-lang.org/std/ffi/struct.OsStr.html#method.as_encoded_bytes\",\n      \"snippet\": \"Borrowed reference to an OS string (see `OsString`).\"\n    },\n    {\n      \"title\": \"Search Rust standard library for std::ffi::OsStr::as_encoded_bytes\",\n      \"url\": \"https://doc.rust-lang.org/std/?search=std%20ffi%20OsStr%20as_encoded_bytes\",\n      \"snippet\": \"Searches matching items in std, core, and alloc.\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  },
+  {
+    "index": 99,
+    "entry": {
+      "language": "cpp",
+      "query": "qs cpp official c++ reference beginner sample std::unreachable_sentinel_t iterator",
+      "expected": "std::unreachable_sentinel_t",
+      "class": "surplus-token-adversarial",
+      "label": "positive"
+    },
+    "cmd": [
+      "/tmp/qs-gate/release/qs",
+      "--json",
+      "cpp",
+      "official",
+      "c++",
+      "reference",
+      "beginner",
+      "sample",
+      "std::unreachable_sentinel_t",
+      "iterator"
+    ],
+    "exit": 0,
+    "elapsed": 0.07270932197570801,
+    "stdout": "{\n  \"provider\": \"C++\",\n  \"query\": \"std::unreachable_sentinel_t\",\n  \"source_url\": \"https://devdocs.io/cpp\",\n  \"hits\": [\n    {\n      \"title\": \"std::unreachable_sentinel_t\",\n      \"url\": \"https://devdocs.io/cpp/iterator/unreachable_sentinel_t\",\n      \"snippet\": \"struct unreachable_sentinel_t; (1) (since C++20) inline constexpr unreachable_sentinel_t unreachable_sentinel{}; (2) (since C++20) 1) unreachable_sentinel_t is an empty class type that can be used to denote the \u201cupper bound\u201d of an unbounded interval. 2) unreachable_sentinel is a constant of type unreachable_sentinel_t\u2026\",\n      \"meta\": [\n        \"C++  \u00b7  Iterator\",\n        \"#include <algorithm>\\n#include <cstddef>\\n#include <iostream>\\n#include <iterator>\\n\\ntemplate<class CharT>\\nconstexpr std::size_t strlen(const CharT* s)\\n{\\n    return std::ranges::find(s, std::unreachable_sentinel, CharT{}) - s;\\n}\\n\\ntemplate<class CharT>\\nconstexpr std::size_t find_first(const CharT* haystack, const CharT* needle)\\n{\\n    const char* needle_end = needle + strlen(needle);\\n    // search(begin, unreachable_sentinel) is usually more efficient than\\n    // search(begin, end) due to one less comparison per cycle.\\n    // But \\\"needle\\\" MUST BE PRESENT in the \\\"haystack\\\", otherwise the call\\n    // is UB (which is a compile-time error in constexpr context).\\n    auto found = std::ranges::search(haystack, std::unreachable_sentinel,\\n                                     needle, needle_end);\\n    return found.begin() - haystack;\\n}\\n\\nint main()\\n{\\n    static_assert(strlen(\\\"The quick brown fox jumps over a lazy dog.\\\") == 42);\\n    static_assert(find_first(\\\"unsigned short int\\\", \\\"short\\\") == 9);\\n//  static_assert(find_first(\\\"long int\\\", \\\"float\\\")); // compile-time error\\n}\"\n      ]\n    }\n  ]\n}\n",
+    "stderr": "",
+    "timeout": false
+  }
+]

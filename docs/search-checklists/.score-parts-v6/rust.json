@@ -1,0 +1,1188 @@
+[
+  {
+    "query": "rust ownership",
+    "expected": "Ownership, moves, and scope.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Understanding ownership"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Understanding ownership."
+  },
+  {
+    "query": "rust borrow checker",
+    "expected": "Borrowing rules and the borrow checker.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "References and borrowing"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: References and borrowing."
+  },
+  {
+    "query": "rust lifetimes",
+    "expected": "Lifetime annotations and lifetime elision.",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "References and borrowing"
+    ],
+    "error": null,
+    "note": "The first hit is the general borrowing page and does not mention lifetime annotations or elision."
+  },
+  {
+    "query": "rust mutable references",
+    "expected": "Mutable borrows written as `&mut T`.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "References and borrowing"
+    ],
+    "error": null,
+    "note": "The first hit discusses shared and mutable borrows, but it does not show `&mut T`."
+  },
+  {
+    "query": "rust move closures",
+    "expected": "`move` closures and captured values.",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "Understanding ownership"
+    ],
+    "error": null,
+    "note": "The ownership page mentions moves but not move closures or captured values."
+  },
+  {
+    "query": "rust pattern matching",
+    "expected": "Patterns and `match` expressions.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Patterns"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Patterns."
+  },
+  {
+    "query": "rust struct destructuring",
+    "expected": "Destructuring patterns for structs.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Patterns"
+    ],
+    "error": null,
+    "note": "The patterns page is useful, but its summary does not specifically explain struct destructuring."
+  },
+  {
+    "query": "rust if let",
+    "expected": "`if let` conditional pattern matching.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Patterns"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Patterns."
+  },
+  {
+    "query": "rust let else",
+    "expected": "`let...else` refutable pattern binding.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Patterns"
+    ],
+    "error": null,
+    "note": "The patterns page is relevant, but its summary does not identify `let...else`."
+  },
+  {
+    "query": "rust while let",
+    "expected": "`while let` conditional loops.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Patterns"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Patterns."
+  },
+  {
+    "query": "rust traits",
+    "expected": "Trait definitions and implementations.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Traits and generics"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Traits and generics."
+  },
+  {
+    "query": "rust dyn Trait",
+    "expected": "Trait objects written as `dyn Trait`.",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "Traits and generics"
+    ],
+    "error": null,
+    "note": "The general traits page does not mention trait objects or `dyn Trait`."
+  },
+  {
+    "query": "rust associated types",
+    "expected": "Trait associated types.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Traits and generics"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Traits and generics."
+  },
+  {
+    "query": "rust generic functions",
+    "expected": "Generic type parameters on functions.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Traits and generics"
+    ],
+    "error": null,
+    "note": "The traits-and-generics overview is useful but does not specifically describe generic functions."
+  },
+  {
+    "query": "rust where clauses",
+    "expected": "`where` clauses for generic bounds.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Traits and generics"
+    ],
+    "error": null,
+    "note": "The traits-and-generics overview is useful but does not specifically show `where` clauses."
+  },
+  {
+    "query": "rust const generics",
+    "expected": "Const generic parameters.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Traits and generics"
+    ],
+    "error": null,
+    "note": "The traits-and-generics overview is useful but does not specifically explain const generics."
+  },
+  {
+    "query": "rust modules",
+    "expected": "The module system and `mod` items.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Modules and visibility"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Modules and visibility."
+  },
+  {
+    "query": "rust pub(crate)",
+    "expected": "Crate-scoped visibility with `pub(crate)`.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Modules and visibility"
+    ],
+    "error": null,
+    "note": "The modules-and-visibility page is useful but does not explicitly show `pub(crate)`."
+  },
+  {
+    "query": "rust use declarations",
+    "expected": "`use` declarations and imported names.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Modules and visibility"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Modules and visibility."
+  },
+  {
+    "query": "rust external crates",
+    "expected": "External crates and the extern prelude.",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "Modules and visibility"
+    ],
+    "error": null,
+    "note": "The module overview does not mention external crates or the extern prelude."
+  },
+  {
+    "query": "rust attributes",
+    "expected": "Outer and inner attributes.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Rust attributes"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Rust attributes."
+  },
+  {
+    "query": "rust derive macros",
+    "expected": "The `derive` attribute and derivable traits.",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "Rust macros"
+    ],
+    "error": null,
+    "note": "The generic macros page does not mention the `derive` attribute or derivable traits in its summary."
+  },
+  {
+    "query": "rust macro_rules!",
+    "expected": "Declarative macros defined with `macro_rules!`.",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "Search Rust standard library for macro_rules"
+    ],
+    "error": null,
+    "note": "The only hit is a standard-library search link, not documentation for `macro_rules!`."
+  },
+  {
+    "query": "rust procedural macros",
+    "expected": "Function-like, derive, and attribute procedural macros.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Rust macros"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Rust macros."
+  },
+  {
+    "query": "rust async fn",
+    "expected": "Asynchronous functions and returned futures.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Async and await expressions"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Async and await expressions."
+  },
+  {
+    "query": "rust .await",
+    "expected": "The postfix `.await` expression.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Async and await expressions"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Async and await expressions."
+  },
+  {
+    "query": "rust std::pin::Pin",
+    "expected": "`std::pin::Pin` and pinning guarantees.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Pin in std::pin - Rust",
+      "Search Rust standard library for std::pin::Pin"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Pin in std::pin - Rust."
+  },
+  {
+    "query": "rust Send and Sync",
+    "expected": "The `Send` and `Sync` marker traits.",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "Traits and generics"
+    ],
+    "error": null,
+    "note": "The generic traits page does not mention either `Send` or `Sync`."
+  },
+  {
+    "query": "rust unsafe Rust",
+    "expected": "Unsafe operations and unsafe blocks.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Unsafe Rust"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Unsafe Rust."
+  },
+  {
+    "query": "rust raw pointers",
+    "expected": "Raw pointer types `*const T` and `*mut T`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Unsafe Rust"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Unsafe Rust."
+  },
+  {
+    "query": "rust foreign function interface",
+    "expected": "FFI with `extern` blocks and ABI strings.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Unsafe Rust"
+    ],
+    "error": null,
+    "note": "The unsafe-Rust page mentions FFI, but its summary omits extern blocks and ABI strings."
+  },
+  {
+    "query": "rust recoverable errors",
+    "expected": "Recoverable error handling with `Result`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Error handling"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Error handling."
+  },
+  {
+    "query": "rust question mark operator",
+    "expected": "The `?` error-propagation operator.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Error handling"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Error handling."
+  },
+  {
+    "query": "rust std::panic::set_hook",
+    "expected": "`std::panic::set_hook`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "set_hook in std::panic - Rust",
+      "Search Rust standard library for std::panic::set_hook"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: set_hook in std::panic - Rust."
+  },
+  {
+    "query": "rust Result<T, E>",
+    "expected": "The `Result<T, E>` enum.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Enum Result",
+      "Module result",
+      "Recoverable Errors with Result",
+      "Struct BarrierWaitResult",
+      "Struct WaitTimeoutResult"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Enum Result."
+  },
+  {
+    "query": "rust Option::and_then",
+    "expected": "`Option::and_then` combinator.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Option::and_then",
+      "Search Rust standard library for Option::and_then"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Option::and_then."
+  },
+  {
+    "query": "rust Vec::push",
+    "expected": "`Vec::push`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Vec::push",
+      "Search Rust standard library for Vec::push"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Vec::push."
+  },
+  {
+    "query": "rust VecDeque",
+    "expected": "`std::collections::VecDeque`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "VecDeque in std::collections - Rust",
+      "Search Rust standard library for VecDeque"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: VecDeque in std::collections - Rust."
+  },
+  {
+    "query": "rust HashMap::entry",
+    "expected": "`HashMap::entry` and the entry API.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "HashMap::entry",
+      "Search Rust standard library for HashMap::entry"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: HashMap::entry."
+  },
+  {
+    "query": "rust BTreeMap",
+    "expected": "`std::collections::BTreeMap`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "BTreeMap in std::collections - Rust",
+      "Search Rust standard library for BTreeMap"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: BTreeMap in std::collections - Rust."
+  },
+  {
+    "query": "rust hash sets",
+    "expected": "`std::collections::HashSet`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "HashSet in std::collections - Rust",
+      "Search Rust standard library for std::collections::HashSet"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: HashSet in std::collections - Rust."
+  },
+  {
+    "query": "rust binary heaps",
+    "expected": "`std::collections::BinaryHeap`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "BinaryHeap in std::collections - Rust",
+      "Search Rust standard library for std::collections::BinaryHeap"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: BinaryHeap in std::collections - Rust."
+  },
+  {
+    "query": "rust String::from_utf8",
+    "expected": "`String::from_utf8` and `FromUtf8Error`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "String::from_utf8",
+      "Search Rust standard library for String::from_utf8"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: String::from_utf8."
+  },
+  {
+    "query": "rust str::split_whitespace",
+    "expected": "`str::split_whitespace`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "str::split_whitespace",
+      "Search Rust standard library for str::split_whitespace"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: str::split_whitespace."
+  },
+  {
+    "query": "rust format!",
+    "expected": "The `format!` macro.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Macro format_args",
+      "Macro format",
+      "format_args!",
+      "Function format",
+      "Macro const_format_args"
+    ],
+    "error": null,
+    "note": "The exact `format!` macro is second; `format_args!` is ranked first."
+  },
+  {
+    "query": "rust print a line",
+    "expected": "The `println!` macro.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "println in std - Rust",
+      "Search Rust standard library for std::println"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: println in std - Rust."
+  },
+  {
+    "query": "rust Iterator::map",
+    "expected": "`Iterator::map`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Iterator::map",
+      "Search Rust standard library for Iterator::map"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Iterator::map."
+  },
+  {
+    "query": "rust collect iterator into vector",
+    "expected": "`Iterator::collect` with `Vec` type inference.",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "Improving Our I/O Project",
+      "Processing a Series of Items with Iterators",
+      "Iterators of known length",
+      "Accepting Command Line Arguments",
+      "Iterator behavior"
+    ],
+    "error": null,
+    "note": "The results discuss iterators and collecting only indirectly; none leads with `Iterator::collect` into `Vec`."
+  },
+  {
+    "query": "rust fold values",
+    "expected": "`Iterator::fold`.",
+    "score": 0,
+    "provider": "rust",
+    "top_titles": [
+      "Struct ValuesMut",
+      "Struct IntoValues",
+      "Struct Values",
+      "Struct ValuesMut",
+      "Struct IntoValues"
+    ],
+    "error": null,
+    "note": "All five hits are collection value iterators; none covers `Iterator::fold`."
+  },
+  {
+    "query": "rust IntoIterator",
+    "expected": "The `IntoIterator` trait and `into_iter`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "IntoIterator in std::iter - Rust",
+      "Search Rust standard library for IntoIterator"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: IntoIterator in std::iter - Rust."
+  },
+  {
+    "query": "rust ExactSizeIterator",
+    "expected": "The `ExactSizeIterator` trait.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "ExactSizeIterator in std::iter - Rust",
+      "Search Rust standard library for ExactSizeIterator"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: ExactSizeIterator in std::iter - Rust."
+  },
+  {
+    "query": "rust From and Into",
+    "expected": "The `From` and `Into` conversion traits.",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "Traits and generics"
+    ],
+    "error": null,
+    "note": "The generic traits page does not mention the `From` or `Into` conversion traits."
+  },
+  {
+    "query": "rust TryFrom",
+    "expected": "The `TryFrom` fallible conversion trait.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "TryFrom in std::convert - Rust",
+      "Search Rust standard library for TryFrom"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: TryFrom in std::convert - Rust."
+  },
+  {
+    "query": "rust AsRef<Path>",
+    "expected": "`AsRef<Path>` bounds and borrowed conversions.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "AsRef in std::convert - Rust",
+      "Search Rust standard library for AsRef<Path>"
+    ],
+    "error": null,
+    "note": "The first hit correctly explains `AsRef`, but does not specifically cover `AsRef<Path>`."
+  },
+  {
+    "query": "rust Cow<'a, str>",
+    "expected": "`std::borrow::Cow` clone-on-write type.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Enum Cow",
+      "Extracting a raw pointer to the whole C string",
+      "Extracting a raw pointer to the whole C string",
+      "Struct OsStr",
+      "Struct OsStr"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Enum Cow."
+  },
+  {
+    "query": "rust Box<T>",
+    "expected": "`std::boxed::Box<T>`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Box in std::boxed - Rust",
+      "Search Rust standard library for Box<T>"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Box in std::boxed - Rust."
+  },
+  {
+    "query": "rust reference counted pointer",
+    "expected": "`std::rc::Rc`.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Understanding ownership"
+    ],
+    "error": null,
+    "note": "The ownership overview mentions `Rc` but does not directly document the reference-counted pointer API."
+  },
+  {
+    "query": "rust atomic reference counting",
+    "expected": "`std::sync::Arc`.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Understanding ownership"
+    ],
+    "error": null,
+    "note": "The ownership overview mentions `Arc` but does not directly document atomic reference counting."
+  },
+  {
+    "query": "rust RefCell::borrow_mut",
+    "expected": "`RefCell::borrow_mut` and runtime borrow checking.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "RefCell::borrow_mut",
+      "Search Rust standard library for RefCell::borrow_mut"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: RefCell::borrow_mut."
+  },
+  {
+    "query": "rust mutexes",
+    "expected": "`std::sync::Mutex`.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Struct Mutex",
+      "Struct Mutex",
+      "Struct Mutex",
+      "Shared-State Concurrency",
+      "Struct MappedMutexGuard"
+    ],
+    "error": null,
+    "note": "The stable `std::sync::Mutex` result is third, after two experimental mutex variants."
+  },
+  {
+    "query": "rust RwLock",
+    "expected": "`std::sync::RwLock`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "RwLock in std::sync - Rust",
+      "Search Rust standard library for RwLock"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: RwLock in std::sync - Rust."
+  },
+  {
+    "query": "rust OnceLock::get_or_init",
+    "expected": "`OnceLock::get_or_init`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "OnceLock::get_or_init",
+      "Search Rust standard library for OnceLock::get_or_init"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: OnceLock::get_or_init."
+  },
+  {
+    "query": "rust spawn a thread",
+    "expected": "`std::thread::spawn`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "spawn in std::thread - Rust",
+      "Search Rust standard library for std::thread::spawn"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: spawn in std::thread - Rust."
+  },
+  {
+    "query": "rust mpsc channels",
+    "expected": "`std::sync::mpsc` channels.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "std::sync::mpsc - Rust",
+      "Search Rust standard library for std::sync::mpsc"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: std::sync::mpsc - Rust."
+  },
+  {
+    "query": "rust AtomicUsize ordering",
+    "expected": "`AtomicUsize` operations and `Ordering`.",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "ATOMIC_USIZE_INITDeprecated64-bit",
+      "AtomicOrderingExperimental",
+      "Function atomic_and",
+      "Function atomic_nand",
+      "Function atomic_or"
+    ],
+    "error": null,
+    "note": "The results lead with a deprecated constant and experimental intrinsics instead of normal `AtomicUsize` operations and `Ordering`."
+  },
+  {
+    "query": "rust read file to string",
+    "expected": "`std::fs::read_to_string`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "read_to_string in std::fs - Rust",
+      "Search Rust standard library for std::fs::read_to_string"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: read_to_string in std::fs - Rust."
+  },
+  {
+    "query": "rust write bytes to a file",
+    "expected": "`std::fs::write`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "write in std::fs - Rust",
+      "Search Rust standard library for std::fs::write"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: write in std::fs - Rust."
+  },
+  {
+    "query": "rust canonicalize a path",
+    "expected": "`std::fs::canonicalize`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "canonicalize in std::fs - Rust",
+      "Search Rust standard library for std::fs::canonicalize"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: canonicalize in std::fs - Rust."
+  },
+  {
+    "query": "rust create directories recursively",
+    "expected": "`std::fs::create_dir_all`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "create_dir_all in std::fs - Rust",
+      "Search Rust standard library for std::fs::create_dir_all"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: create_dir_all in std::fs - Rust."
+  },
+  {
+    "query": "rust run command and capture output",
+    "expected": "`std::process::Command::output`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Command::output",
+      "Search Rust standard library for std::process::Command::output"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Command::output."
+  },
+  {
+    "query": "rust environment variables",
+    "expected": "`std::env::var` and `vars`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "var in std::env - Rust",
+      "Search Rust standard library for std::env::var"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: var in std::env - Rust."
+  },
+  {
+    "query": "rust command line arguments",
+    "expected": "`std::env::args` and `args_os`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "args in std::env - Rust",
+      "Search Rust standard library for std::env::args"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: args in std::env - Rust."
+  },
+  {
+    "query": "rust TcpListener::bind",
+    "expected": "`std::net::TcpListener::bind`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "TcpListener::bind",
+      "Search Rust standard library for TcpListener::bind"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: TcpListener::bind."
+  },
+  {
+    "query": "rust parse socket address",
+    "expected": "`std::net::SocketAddr` and `FromStr`.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "AddrParseError",
+      "Struct AddrParseError",
+      "Trait ToSocketAddrs",
+      "Enum SocketAddr",
+      "Struct SocketAddr"
+    ],
+    "error": null,
+    "note": "`AddrParseError` ranks first; a useful `FromStr`/`SocketAddr` explanation is second."
+  },
+  {
+    "query": "rust Duration::from_secs",
+    "expected": "`std::time::Duration::from_secs`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Duration::from_secs",
+      "Search Rust standard library for Duration::from_secs"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Duration::from_secs."
+  },
+  {
+    "query": "rust measure elapsed time",
+    "expected": "`std::time::Instant::elapsed`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Instant::elapsed",
+      "Search Rust standard library for std::time::Instant::elapsed"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Instant::elapsed."
+  },
+  {
+    "query": "rust unix timestamp",
+    "expected": "`SystemTime` relative to `UNIX_EPOCH`.",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "Function set_times",
+      "Function set_times_nofollow",
+      "Struct SystemTime",
+      "Platform-specific behavior",
+      "Struct UnixDatagram"
+    ],
+    "error": null,
+    "note": "`SystemTime` is only third and the visible results do not explain conversion relative to `UNIX_EPOCH`."
+  },
+  {
+    "query": "rust sort vectors",
+    "expected": "Slice sorting methods such as `sort` and `sort_by`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "slice::sort",
+      "Search Rust standard library for std::slice::sort"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: slice::sort."
+  },
+  {
+    "query": "rust binary_search",
+    "expected": "Slice method `binary_search`.",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "Search Rust standard library for binary_search"
+    ],
+    "error": null,
+    "note": "The only hit is a generic standard-library search link rather than the slice `binary_search` method."
+  },
+  {
+    "query": "rust parse integer",
+    "expected": "`str::parse` with integer types and `ParseIntError`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "str::parse",
+      "Search Rust standard library for std::str::parse"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: str::parse."
+  },
+  {
+    "query": "rust f64::total_cmp",
+    "expected": "`f64::total_cmp`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "f64::total_cmp",
+      "Search Rust standard library for f64::total_cmp"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: f64::total_cmp."
+  },
+  {
+    "query": "rust inclusive ranges",
+    "expected": "`RangeInclusive` and `..=` syntax.",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "Struct RangeToInclusive",
+      "Struct RangeToInclusive",
+      "Struct RangeToInclusive",
+      "Struct RangeInclusive",
+      "Struct RangeInclusive"
+    ],
+    "error": null,
+    "note": "The top results are `RangeToInclusive`; the requested `RangeInclusive` result appears fourth."
+  },
+  {
+    "query": "rust chunks_exact_mut",
+    "expected": "Slice method `chunks_exact_mut`.",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "Search Rust standard library for chunks_exact_mut"
+    ],
+    "error": null,
+    "note": "The only hit is a generic standard-library search link rather than the `chunks_exact_mut` method."
+  },
+  {
+    "query": "rust fixed size arrays",
+    "expected": "Array types `[T; N]` and array operations.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Array types",
+      "Primitive Type array",
+      "Data Types",
+      "Glossary",
+      "Crate std"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Array types."
+  },
+  {
+    "query": "rust tuple structs",
+    "expected": "Tuple struct declarations and construction.",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "Structs, enums, and implementations"
+    ],
+    "error": null,
+    "note": "The structs overview is relevant but does not specifically show tuple struct syntax."
+  },
+  {
+    "query": "rust named field structs",
+    "expected": "Structs with named fields.",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "Structs, enums, and implementations"
+    ],
+    "error": null,
+    "note": "The structs overview is relevant but does not specifically show named fields."
+  },
+  {
+    "query": "rust enums with data",
+    "expected": "Enum variants containing fields.",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "Structs, enums, and implementations"
+    ],
+    "error": null,
+    "note": "The structs/enums overview is relevant but does not specifically show data-bearing enum variants."
+  },
+  {
+    "query": "rust impl blocks",
+    "expected": "Inherent implementations using `impl`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Structs, enums, and implementations"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Structs, enums, and implementations."
+  },
+  {
+    "query": "rust Drop::drop",
+    "expected": "The `Drop` trait and `drop` method.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Drop::drop",
+      "Search Rust standard library for Drop::drop"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Drop::drop."
+  },
+  {
+    "query": "rust Default::default",
+    "expected": "The `Default` trait and `default` method.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Default::default",
+      "Search Rust standard library for Default::default"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Default::default."
+  },
+  {
+    "query": "rust Clone vs Copy",
+    "expected": "Semantics of the `Clone` and `Copy` traits.",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "Understanding ownership"
+    ],
+    "error": null,
+    "note": "The ownership overview does not explain the semantic difference between `Clone` and `Copy`."
+  },
+  {
+    "query": "rust derive PartialEq and Ord",
+    "expected": "Derived equality and ordering traits.",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "Examples of incorrect PartialOrd implementations",
+      "Derive Macro PartialOrd",
+      "Clone and PartialEq/Eq",
+      "Appendix C: Derivable Traits",
+      "Derive Macro PartialEq"
+    ],
+    "error": null,
+    "note": "The first hit is about incorrect `PartialOrd` implementations; derivation material appears lower and does not cleanly cover the full request."
+  },
+  {
+    "query": "rust unit tests",
+    "expected": "`#[test]` functions and the test harness.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Writing automated tests"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Writing automated tests."
+  },
+  {
+    "query": "rust documentation tests",
+    "expected": "Rustdoc code examples run as doctests.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Rustdoc documentation tests"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Rustdoc documentation tests."
+  },
+  {
+    "query": "rust Cargo features",
+    "expected": "Cargo feature flags and optional dependencies.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Cargo features and optional dependencies"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Cargo features and optional dependencies."
+  },
+  {
+    "query": "rust cfg target_os",
+    "expected": "Conditional compilation with `#[cfg(target_os = ...)]`.",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Rust attributes"
+    ],
+    "error": null,
+    "note": "The attributes overview mentions conditional compilation but does not show `cfg(target_os = ...)`."
+  },
+  {
+    "query": "rust no_std",
+    "expected": "The `#![no_std]` attribute and `core`.",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "Search Rust standard library for no_std"
+    ],
+    "error": null,
+    "note": "The only hit is a generic standard-library search link rather than documentation for `#![no_std]` and `core`."
+  },
+  {
+    "query": "rust intra-doc links",
+    "expected": "Rustdoc intra-doc link syntax.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Rustdoc intra-doc links"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Rustdoc intra-doc links."
+  },
+  {
+    "query": "rust Rust 2024 edition",
+    "expected": "The Rust 2024 Edition Guide and migration changes.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Rust 2024 Edition Guide"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Rust 2024 Edition Guide."
+  },
+  {
+    "query": "rust raw identifiers",
+    "expected": "Raw identifiers such as `r#type`.",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Identifiers"
+    ],
+    "error": null,
+    "note": "The first hit directly matches the expected topic: Identifiers."
+  }
+]

@@ -134,6 +134,10 @@ pub fn route_command(name: &str, inner: &str) -> Option<CommandRoute> {
         || man_page_exists(&page);
     if subcommand && (rest.is_empty() || tool == "podman") {
         Some(CommandRoute::Manual(page))
+    } else if subcommand && tool == "podman" {
+        Some(CommandRoute::Manual(
+            podman_nested_manual(first, rest).unwrap_or(page),
+        ))
     } else if subcommand {
         Some(CommandRoute::Package {
             tool: tool.to_string(),

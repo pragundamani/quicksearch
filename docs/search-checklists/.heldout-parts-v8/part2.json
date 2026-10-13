@@ -1,0 +1,804 @@
+[
+  {
+    "language": "rust",
+    "query": "qs rust checked addition not wrapping addition",
+    "expected": "checked_add, not wrapping_add",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "checked_add"
+    ],
+    "error": null,
+    "note": "Exact checked_add result is first; wrapping_add is avoided."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp midpoint without overflow not simple average",
+    "expected": "std::midpoint, not (a+b)/2",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::midpoint",
+      "std::lerp",
+      "FE_OVERFLOW",
+      "C++20",
+      "Numerics library"
+    ],
+    "error": null,
+    "note": "std::midpoint is first and directly addresses overflow-safe midpoint."
+  },
+  {
+    "language": "c",
+    "query": "qs c find first matching span not substring",
+    "expected": "strpbrk, not strstr",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strpbrk"
+    ],
+    "error": null,
+    "note": "strpbrk is the only and first result."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell strict bytestring not lazy bytestring",
+    "expected": "Data.ByteString, not Data.ByteString.Lazy",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 0,
+    "provider": "Haskell",
+    "top_titles": [
+      "foldMap :: (Foldable t, Monoid m) => (a -> m) -> t a -> m",
+      "foldMap :: (Foldable t, Monoid m) => (a -> m) -> t a -> m",
+      "data ST s a",
+      "strictToLazyST :: ST s a -> ST s a",
+      "data ST s a"
+    ],
+    "error": null,
+    "note": "No Data.ByteString result; hits are unrelated foldMap and ST APIs."
+  },
+  {
+    "language": "python",
+    "query": "qs python cryptographic random integer not random.randrange",
+    "expected": "secrets.randbelow(), not random.randrange()",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "secrets.randbelow"
+    ],
+    "error": null,
+    "note": "Exact secrets.randbelow result is first."
+  },
+  {
+    "language": "go",
+    "query": "qs go escape html text not url query data",
+    "expected": "html.EscapeString, not url.QueryEscape",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "html.EscapeString"
+    ],
+    "error": null,
+    "note": "Exact html.EscapeString result is first."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust saturating multiplication not checked multiplication",
+    "expected": "saturating_mul, not checked_mul",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "Struct Saturating",
+      "Function saturating_add",
+      "Function saturating_sub",
+      "Function simd_saturating_add",
+      "Function simd_saturating_sub"
+    ],
+    "error": null,
+    "note": "saturating_mul is absent; the Saturating wrapper is only a partial workaround."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp terminate handler not unexpected exception handler",
+    "expected": "std::set_terminate, not exception matching",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "std::terminate_handler",
+      "std::set_terminate",
+      "std::get_terminate",
+      "std::terminate",
+      "std::unexpected_handler"
+    ],
+    "error": null,
+    "note": "std::set_terminate is second after the related handler type."
+  },
+  {
+    "language": "c",
+    "query": "qs c convert wide string to multibyte not reverse direction",
+    "expected": "wcsrtombs, not mbsrtowcs",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "Null-terminated multibyte strings",
+      "Null-terminated wide strings",
+      "mbtowc",
+      "mbsrtowcs, mbsrtowcs_s",
+      "wcsrtombs, wcsrtombs_s"
+    ],
+    "error": null,
+    "note": "wcsrtombs appears fifth, below the opposite-direction mbsrtowcs result."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell deep evaluation not weak head normal form",
+    "expected": "Control.DeepSeq.force, not seq",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "evaluate :: a -> IO a",
+      "evaluate :: a -> IO a",
+      "seq :: a -> b -> b",
+      "seq :: a -> b -> b",
+      "evaluate :: a -> IO a"
+    ],
+    "error": null,
+    "note": "No deep evaluation or force result; hits describe weak-head evaluation instead."
+  },
+  {
+    "language": "python",
+    "query": "qs python open compressed gzip file not zip archive",
+    "expected": "gzip.open(), not zipfile.ZipFile",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "gzip.open(filename, mode='rb', compresslevel=6, encoding=None, errors=None, newline=None)",
+      "fileinput.hook_compressed(filename, mode, *, encoding=None, errors=None)",
+      "Open",
+      "classmethod TarFile.open(...)",
+      "FileHandler.file_open(req)"
+    ],
+    "error": null,
+    "note": "gzip.open is first with a useful signature and description."
+  },
+  {
+    "language": "go",
+    "query": "qs go stable slice sort not unstable sort",
+    "expected": "sort.SliceStable, not sort.Slice",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func SortStableFunc 1.21",
+      "func SliceStable 1.8",
+      "sort.SliceStable()",
+      "type Slice 1.5",
+      "func AddrFromSlice 1.18"
+    ],
+    "error": null,
+    "note": "A stable generic sort is first and SliceStable is second; expected API is useful within top three."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust abort process not unwind panic",
+    "expected": "std::process::abort, not panic!",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Function abort",
+      "Function abort_immediate",
+      "Function abort",
+      "Module process",
+      "Function abort_unwind"
+    ],
+    "error": null,
+    "note": "std::process::abort is first and directly useful."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp inclusive scan not exclusive scan",
+    "expected": "std::inclusive_scan, not std::exclusive_scan",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::inclusive_scan",
+      "std::transform_inclusive_scan",
+      "std::exclusive_scan",
+      "Standard library header <numeric>",
+      "C++17"
+    ],
+    "error": null,
+    "note": "std::inclusive_scan is first."
+  },
+  {
+    "language": "c",
+    "query": "qs c read one wide character not one byte character",
+    "expected": "fgetwc, not fgetc",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "File input/output",
+      "fgetwc, getwc",
+      "char",
+      "getwchar",
+      "wscanf, fwscanf, swscanf, wscanf_s, fwscanf_s, swscanf_s"
+    ],
+    "error": null,
+    "note": "The wide-character I/O overview is first and fgetwc is second."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell text builder not string concatenation",
+    "expected": "Data.Text.Lazy.Builder, not (++)",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 0,
+    "provider": "Haskell",
+    "top_titles": [
+      "type String = [Char]",
+      "type String = [Char]",
+      "unescapeArgs :: String -> [String]",
+      "type String = [Char]",
+      "UndefinedElement :: String -> ArrayException"
+    ],
+    "error": null,
+    "note": "No Data.Text.Lazy.Builder result; hits focus on String and unrelated APIs."
+  },
+  {
+    "language": "python",
+    "query": "qs python parse email address not url address",
+    "expected": "email.utils.parseaddr(), not urllib.parse",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "email.headerregistry: Custom Header Objects",
+      "email.utils: Miscellaneous utilities",
+      "parse",
+      "email: Examples",
+      "email.parser: Parsing email messages"
+    ],
+    "error": null,
+    "note": "The email address overview is first and parseaddr is shown in the second result."
+  },
+  {
+    "language": "go",
+    "query": "qs go cryptographic subtle constant time compare not bytes compare",
+    "expected": "subtle.ConstantTimeCompare, not bytes.Equal",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func ConstantTimeCompare",
+      "func (Time) Compare 1.20",
+      "subtle.ConstantTimeCompare()",
+      "Constants",
+      "Package crypto"
+    ],
+    "error": null,
+    "note": "subtle.ConstantTimeCompare is first."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust docs please exact api lookup today std::mem::take examples stable",
+    "expected": "std::mem::take",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "take in std::mem - Rust",
+      "Search Rust standard library for std::mem::take"
+    ],
+    "error": null,
+    "note": "std::mem::take is first with a clear description."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp modern standard library reference quick answer std::ranges::iota_view usage",
+    "expected": "std::ranges::iota_view",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::iota_view",
+      "std::ranges::iota_view::end",
+      "std::ranges::iota_view::size",
+      "std::ranges::iota_view::begin",
+      "std::ranges::iota_view::empty"
+    ],
+    "error": null,
+    "note": "std::ranges::iota_view is first."
+  },
+  {
+    "language": "c",
+    "query": "qs c standard library portable example urgently get environment variable getenv",
+    "expected": "getenv",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "getenv, getenv_s",
+      "Error handling",
+      "gets",
+      "Standard library header <fenv.h> (C99)",
+      "Conformance"
+    ],
+    "error": null,
+    "note": "getenv is first with signature details."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell hoogle package docs simple example now Data.Set.fromList",
+    "expected": "Data.Set.fromList",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "fromList :: Ord a => [a] -> Set a",
+      "fromList :: IsList l => [Item l] -> l",
+      "fromList :: IsList l => [Item l] -> l",
+      "fromList :: HasCallStack => [a] -> NonEmpty a",
+      "fromList :: [a] -> Seq a"
+    ],
+    "error": null,
+    "note": "Data.Set.fromList is first and distinguished by its Set signature."
+  },
+  {
+    "language": "python",
+    "query": "qs python official docs latest version quick example contextlib.ExitStack",
+    "expected": "contextlib.ExitStack",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "contextlib.ExitStack",
+      "contextlib.ExitStack.push()",
+      "contextlib.ExitStack.close()",
+      "contextlib.ExitStack.callback()",
+      "contextlib.ExitStack.pop_all()"
+    ],
+    "error": null,
+    "note": "contextlib.ExitStack is first."
+  },
+  {
+    "language": "go",
+    "query": "qs go package documentation current release example net.IP.IsPrivate",
+    "expected": "net.IP.IsPrivate",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "net.IP.IsPrivate()"
+    ],
+    "error": null,
+    "note": "net.IP.IsPrivate is the only and first result."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust beginner tutorial standard docs show me slice rotate_left method now",
+    "expected": "slice::rotate_left",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "slice::rotate_left"
+    ],
+    "error": null,
+    "note": "slice::rotate_left is the only and first result."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp reference safe portable c++23 example std::byteswap integer please",
+    "expected": "std::byteswap",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::byteswap"
+    ],
+    "error": null,
+    "note": "std::byteswap is first."
+  },
+  {
+    "language": "c",
+    "query": "qs c reference manual safe code sample portable convert time difftime seconds",
+    "expected": "difftime",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "difftime"
+    ],
+    "error": null,
+    "note": "difftime is first with the requested meaning."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell latest base library documentation beginner example Data.Char.generalCategory",
+    "expected": "Data.Char.generalCategory",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 4,
+    "provider": "Haskell",
+    "top_titles": [
+      "data GeneralCategory",
+      "generalCategory :: Char -> GeneralCategory",
+      "data GeneralCategory",
+      "generalCategory :: Char -> GeneralCategory"
+    ],
+    "error": null,
+    "note": "generalCategory is second after its related result type."
+  },
+  {
+    "language": "python",
+    "query": "qs python docs tutorial best practice code sample pathlib.PurePath.match",
+    "expected": "PurePath.match()",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "pathlib.PurePath.match()",
+      "pathlib.PurePath.full_match()"
+    ],
+    "error": null,
+    "note": "PurePath.match is first."
+  },
+  {
+    "language": "go",
+    "query": "qs go official reference beginner quick code example cmp.Or zero values",
+    "expected": "cmp.Or",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "cmp.Or()",
+      "cmp.Ordered"
+    ],
+    "error": null,
+    "note": "cmp.Or is first with its zero-value behavior."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust standard library fast safe idiomatic example Vec::spare_capacity_mut docs",
+    "expected": "Vec::spare_capacity_mut",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Vec::spare_capacity_mut",
+      "Search Rust standard library for Vec::spare_capacity_mut"
+    ],
+    "error": null,
+    "note": "Vec::spare_capacity_mut is first."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp standard official documentation tutorial std::ranges::fold_left sample code",
+    "expected": "std::ranges::fold_left",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::fold_left",
+      "std::ranges::fold_left_first",
+      "std::ranges::fold_left_with_iter",
+      "std::ranges::fold_left_first_with_iter"
+    ],
+    "error": null,
+    "note": "std::ranges::fold_left is first."
+  },
+  {
+    "language": "c",
+    "query": "qs c language library specification easy tutorial sample code div integer quotient remainder",
+    "expected": "div",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 1,
+    "provider": "C",
+    "top_titles": [
+      "remainder"
+    ],
+    "error": null,
+    "note": "Expected div is absent; the sole remainder hit concerns floating-point remainder and is misleading."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell package docs latest tutorial quick answer Data.Sequence.adjust examples",
+    "expected": "Data.Sequence.adjust",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "adjust :: (a -> a) -> Int -> Seq a -> Seq a",
+      "adjust :: (e -> a -> e) -> MutableArray# s e -> (Int, a) -> STRep s b -> STRep s b",
+      "adjust :: Ord k => (a -> a) -> k -> Map k a -> Map k a",
+      "adjust :: Ord k => (a -> a) -> k -> Map k a -> Map k a",
+      "adjust :: (a -> a) -> Key -> IntMap a -> IntMap a"
+    ],
+    "error": null,
+    "note": "The Seq-specific adjust signature is first."
+  },
+  {
+    "language": "python",
+    "query": "qs python standard library official guide simple example graphlib.TopologicalSorter",
+    "expected": "graphlib.TopologicalSorter",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "graphlib.TopologicalSorter",
+      "graphlib.TopologicalSorter.add()",
+      "graphlib.TopologicalSorter.done()",
+      "graphlib.TopologicalSorter.prepare()",
+      "graphlib.TopologicalSorter.get_ready()"
+    ],
+    "error": null,
+    "note": "graphlib.TopologicalSorter is first."
+  },
+  {
+    "language": "go",
+    "query": "qs go current stable standard package docs quick example math.Nextafter",
+    "expected": "math.Nextafter",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "math.Nextafter()"
+    ],
+    "error": null,
+    "note": "math.Nextafter is first."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust official stable docs easy example std::path::Path::ancestors iterator",
+    "expected": "Path::ancestors",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Path::ancestors",
+      "Search Rust standard library for std::path::Path::ancestors"
+    ],
+    "error": null,
+    "note": "Path::ancestors is first."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp latest standard reference concise example std::launder object pointer",
+    "expected": "std::launder",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::launder"
+    ],
+    "error": null,
+    "note": "std::launder is first."
+  },
+  {
+    "language": "c",
+    "query": "qs c standard portable reference example localeconv monetary formatting fields",
+    "expected": "localeconv",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "localeconv"
+    ],
+    "error": null,
+    "note": "localeconv is first."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell current base hoogle quick tutorial Control.Arrow.loop examples",
+    "expected": "Control.Arrow.loop",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "loop :: ArrowLoop a => a (b, d) (c, d) -> a b c"
+    ],
+    "error": null,
+    "note": "Control.Arrow.loop is first with its type signature."
+  },
+  {
+    "language": "python",
+    "query": "qs python official stdlib current docs tiny example weakref.finalize object cleanup",
+    "expected": "weakref.finalize",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "weakref.finalize",
+      "weakref.finalize.alive",
+      "weakref.finalize.atexit",
+      "weakref.finalize.peek()",
+      "weakref.finalize.detach()"
+    ],
+    "error": null,
+    "note": "weakref.finalize is first."
+  },
+  {
+    "language": "go",
+    "query": "qs go standard package reference practical sample testing.F.Cleanup fuzz docs",
+    "expected": "testing.F.Cleanup",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "testing.F.Cleanup()"
+    ],
+    "error": null,
+    "note": "testing.F.Cleanup is first."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust docs quick beginner correct idiomatic std::array::from_fn example",
+    "expected": "std::array::from_fn",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "from_fn in std::array - Rust",
+      "Search Rust standard library for std::array::from_fn"
+    ],
+    "error": null,
+    "note": "std::array::from_fn is first."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp portable modern reference sample std::ranges::borrowed_range concept details",
+    "expected": "std::ranges::borrowed_range",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::borrowed_range"
+    ],
+    "error": null,
+    "note": "std::ranges::borrowed_range is first."
+  },
+  {
+    "language": "c",
+    "query": "qs c official standard library guide sample code nearbyint rounding mode",
+    "expected": "nearbyint",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "nearbyint"
+    ],
+    "error": null,
+    "note": "nearbyint is first."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell hoogle official base docs concise example Data.Ord.clamp",
+    "expected": "Data.Ord.clamp",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "clamp :: Ord a => (a, a) -> a -> a",
+      "clamp :: Int -> Int -> Int"
+    ],
+    "error": null,
+    "note": "Data.Ord.clamp is first with the expected signature."
+  },
+  {
+    "language": "python",
+    "query": "qs python latest official manual quick practical example socket.socketpair",
+    "expected": "socket.socketpair()",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "socket.socketpair()",
+      "c.PyErr_SetString()",
+      "c.PyConfig_SetString()",
+      "c.PyInitConfig_SetStr()",
+      "c.PyInitConfig_SetStrList()"
+    ],
+    "error": null,
+    "note": "socket.socketpair is first."
+  },
+  {
+    "language": "go",
+    "query": "qs go docs current version best practice example log.Logger.Writer method",
+    "expected": "log.Logger.Writer",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "log.Logger.Writer()"
+    ],
+    "error": null,
+    "note": "log.Logger.Writer is first."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust safe fast standard library tutorial std::ffi::OsStr::as_encoded_bytes",
+    "expected": "OsStr::as_encoded_bytes",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "OsStr::as_encoded_bytes",
+      "Search Rust standard library for std::ffi::OsStr::as_encoded_bytes"
+    ],
+    "error": null,
+    "note": "OsStr::as_encoded_bytes is first."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp official c++ reference beginner sample std::unreachable_sentinel_t iterator",
+    "expected": "std::unreachable_sentinel_t",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::unreachable_sentinel_t"
+    ],
+    "error": null,
+    "note": "std::unreachable_sentinel_t is first."
+  }
+]

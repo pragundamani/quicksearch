@@ -1,0 +1,834 @@
+[
+  {
+    "language": "rust",
+    "query": "qs rust checked addition not wrapping addition",
+    "expected": "checked_add, not wrapping_add",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "How to Write Tests",
+      "Test Organization",
+      "Unsafe Rust",
+      "Function add_with_overflow",
+      "Controlling How Tests Are Run"
+    ],
+    "error": null,
+    "note": "Expected checked_add is absent; rank 4 add_with_overflow is only a partial match."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp midpoint without overflow not simple average",
+    "expected": "std::midpoint, not (a+b)/2",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::midpoint",
+      "std::lerp",
+      "FE_OVERFLOW",
+      "C++20",
+      "Numerics library"
+    ],
+    "error": null,
+    "note": "std::midpoint is first with its signature and useful context."
+  },
+  {
+    "language": "c",
+    "query": "qs c find first matching span not substring",
+    "expected": "strpbrk, not strstr",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 2,
+    "provider": "C",
+    "top_titles": [
+      "memchr",
+      "strspn",
+      "Type-generic math",
+      "wcspbrk",
+      "strcspn"
+    ],
+    "error": null,
+    "note": "strpbrk is absent; results include only partial analogues such as memchr and wcspbrk."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell strict bytestring not lazy bytestring",
+    "expected": "Data.ByteString, not Data.ByteString.Lazy",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "foldMap :: (Foldable t, Monoid m) => (a -> m) -> t a -> m",
+      "foldMap :: (Foldable t, Monoid m) => (a -> m) -> t a -> m",
+      "strictToLazyST :: ST s a -> ST s a",
+      "strictToLazyST :: ST s a -> ST s a",
+      "fold :: (Foldable t, Monoid m) => t m -> m"
+    ],
+    "error": null,
+    "note": "Data.ByteString is absent; generic strict/lazy results do not answer the query."
+  },
+  {
+    "language": "python",
+    "query": "qs python cryptographic random integer not random.randrange",
+    "expected": "secrets.randbelow(), not random.randrange()",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 1,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "random.randrange()"
+    ],
+    "error": null,
+    "note": "Only random.randrange is returned, which is the explicitly rejected API."
+  },
+  {
+    "language": "go",
+    "query": "qs go escape html text not url query data",
+    "expected": "html.EscapeString, not url.QueryEscape",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 2,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func EscapeText 1.1",
+      "func (*Encoder) SetEscapeHTML 1.7",
+      "url.QueryEscape()",
+      "Text and spaces",
+      "func EscapeForHTML 1.27"
+    ],
+    "error": null,
+    "note": "html.EscapeString is absent; XML EscapeText is first and QueryEscape is third."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust saturating multiplication not checked multiplication",
+    "expected": "saturating_mul, not checked_mul",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 3,
+    "provider": "rust",
+    "top_titles": [
+      "Struct Saturating",
+      "Function saturating_add",
+      "Function saturating_sub",
+      "Function simd_saturating_add",
+      "Function simd_saturating_sub"
+    ],
+    "error": null,
+    "note": "Saturating arithmetic is relevant, but saturating_mul is absent."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp terminate handler not unexpected exception handler",
+    "expected": "std::set_terminate, not exception matching",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "std::terminate_handler",
+      "std::set_terminate",
+      "std::get_terminate",
+      "std::terminate",
+      "std::unexpected_handler"
+    ],
+    "error": null,
+    "note": "std::set_terminate is rank 2; rank 1 is the directly related handler type."
+  },
+  {
+    "language": "c",
+    "query": "qs c convert wide string to multibyte not reverse direction",
+    "expected": "wcsrtombs, not mbsrtowcs",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 3,
+    "provider": "C",
+    "top_titles": [
+      "Null-terminated multibyte strings",
+      "Null-terminated wide strings",
+      "mbtowc",
+      "mbsrtowcs, mbsrtowcs_s",
+      "wcsrtombs, wcsrtombs_s"
+    ],
+    "error": null,
+    "note": "wcsrtombs is correct but only rank 5; the reverse conversion is rank 4."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell deep evaluation not weak head normal form",
+    "expected": "Control.DeepSeq.force, not seq",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 1,
+    "provider": "Haskell",
+    "top_titles": [
+      "evaluate :: a -> IO a",
+      "evaluate :: a -> IO a",
+      "seq :: a -> b -> b",
+      "seq :: a -> b -> b",
+      "evaluate :: a -> IO a"
+    ],
+    "error": null,
+    "note": "force/deepseq is absent; the results focus on the explicitly rejected WHNF operations."
+  },
+  {
+    "language": "python",
+    "query": "qs python open compressed gzip file not zip archive",
+    "expected": "gzip.open(), not zipfile.ZipFile",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "gzip.open(filename, mode='rb', compresslevel=6, encoding=None, errors=None, newline=None)",
+      "fileinput.hook_compressed(filename, mode, *, encoding=None, errors=None)",
+      "Open",
+      "classmethod TarFile.open(...)",
+      "FileHandler.file_open(req)"
+    ],
+    "error": null,
+    "note": "gzip.open is first with a direct, useful description."
+  },
+  {
+    "language": "go",
+    "query": "qs go stable slice sort not unstable sort",
+    "expected": "sort.SliceStable, not sort.Slice",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func SortStableFunc 1.21",
+      "func SliceStable 1.8",
+      "sort.SliceStable()",
+      "type Slice 1.5",
+      "func AddrFromSlice 1.18"
+    ],
+    "error": null,
+    "note": "sort.SliceStable is rank 2, after the closely related generic stable sort."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust abort process not unwind panic",
+    "expected": "std::process::abort, not panic!",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Function abort",
+      "Function abort_immediate",
+      "Function abort",
+      "Module process",
+      "Function abort_unwind"
+    ],
+    "error": null,
+    "note": "std::process::abort is first with a direct description."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp inclusive scan not exclusive scan",
+    "expected": "std::inclusive_scan, not std::exclusive_scan",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::inclusive_scan",
+      "std::transform_inclusive_scan",
+      "std::exclusive_scan",
+      "Standard library header <numeric>",
+      "C++17"
+    ],
+    "error": null,
+    "note": "std::inclusive_scan is first with its signature."
+  },
+  {
+    "language": "c",
+    "query": "qs c read one wide character not one byte character",
+    "expected": "fgetwc, not fgetc",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "File input/output",
+      "fgetwc, getwc",
+      "char",
+      "getwchar",
+      "wscanf, fwscanf, swscanf, wscanf_s, fwscanf_s, swscanf_s"
+    ],
+    "error": null,
+    "note": "fgetwc is rank 2 after the relevant wide-character I/O category page."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell text builder not string concatenation",
+    "expected": "Data.Text.Lazy.Builder, not (++)",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 0,
+    "provider": "Haskell",
+    "top_titles": [
+      "unescapeArgs :: String -> [String]",
+      "UndefinedElement :: String -> ArrayException",
+      "UndefinedElement :: String -> ArrayException",
+      "maybe :: b -> (a -> b) -> Maybe a -> b",
+      "fromMaybe :: a -> Maybe a -> a"
+    ],
+    "error": null,
+    "note": "Data.Text.Lazy.Builder is absent and the returned items are not useful for text building."
+  },
+  {
+    "language": "python",
+    "query": "qs python parse email address not url address",
+    "expected": "email.utils.parseaddr(), not urllib.parse",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "email.headerregistry: Custom Header Objects",
+      "email.utils: Miscellaneous utilities",
+      "parse",
+      "email: Examples",
+      "email.parser: Parsing email messages"
+    ],
+    "error": null,
+    "note": "email.utils.parseaddr is rank 2 with a direct description."
+  },
+  {
+    "language": "go",
+    "query": "qs go cryptographic subtle constant time compare not bytes compare",
+    "expected": "subtle.ConstantTimeCompare, not bytes.Equal",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func ConstantTimeCompare",
+      "func (Time) Compare 1.20",
+      "subtle.ConstantTimeCompare()",
+      "Constants",
+      "Package crypto"
+    ],
+    "error": null,
+    "note": "subtle.ConstantTimeCompare is first and directly described."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust docs please exact api lookup today std::mem::take examples stable",
+    "expected": "std::mem::take",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "take in std::mem - Rust",
+      "Search Rust standard library for std::mem::take"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp modern standard library reference quick answer std::ranges::iota_view usage",
+    "expected": "std::ranges::iota_view",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::iota_view",
+      "std::ranges::iota_view::end",
+      "std::ranges::iota_view::size",
+      "std::ranges::iota_view::begin",
+      "std::ranges::iota_view::empty"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "c",
+    "query": "qs c standard library portable example urgently get environment variable getenv",
+    "expected": "getenv",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "getenv, getenv_s",
+      "Error handling",
+      "gets",
+      "Standard library header <fenv.h> (C99)",
+      "Conformance"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell hoogle package docs simple example now Data.Set.fromList",
+    "expected": "Data.Set.fromList",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "fromList :: Ord a => [a] -> Set a",
+      "fromList :: IsList l => [Item l] -> l",
+      "fromList :: IsList l => [Item l] -> l",
+      "fromList :: HasCallStack => [a] -> NonEmpty a",
+      "fromList :: [a] -> Seq a"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "python",
+    "query": "qs python official docs latest version quick example contextlib.ExitStack",
+    "expected": "contextlib.ExitStack",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "contextlib.ExitStack",
+      "contextlib.ExitStack.push()",
+      "contextlib.ExitStack.close()",
+      "contextlib.ExitStack.callback()",
+      "contextlib.ExitStack.pop_all()"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "go",
+    "query": "qs go package documentation current release example net.IP.IsPrivate",
+    "expected": "net.IP.IsPrivate",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "net.IP.IsPrivate()"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust beginner tutorial standard docs show me slice rotate_left method now",
+    "expected": "slice::rotate_left",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 1,
+    "provider": "rust",
+    "top_titles": [
+      "Function rotate_left",
+      "Programming a Guessing Game",
+      "Unsafe Rust",
+      "Methods from Deref<Target = [T]>",
+      "Methods from Deref<Target = [T]>"
+    ],
+    "error": null,
+    "note": "The first result is the unrelated integer rotate_left intrinsic; the slice method is absent."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp reference safe portable c++23 example std::byteswap integer please",
+    "expected": "std::byteswap",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::byteswap"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "c",
+    "query": "qs c reference manual safe code sample portable convert time difftime seconds",
+    "expected": "difftime",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "Standard library header <time.h>",
+      "difftime",
+      "time",
+      "Date and time utilities",
+      "ctime, ctime_s"
+    ],
+    "error": null,
+    "note": "difftime is rank 2 after a useful time.h overview that names it."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell latest base library documentation beginner example Data.Char.generalCategory",
+    "expected": "Data.Char.generalCategory",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "generalCategory :: Char -> GeneralCategory",
+      "generalCategory :: Char -> GeneralCategory"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "python",
+    "query": "qs python docs tutorial best practice code sample pathlib.PurePath.match",
+    "expected": "PurePath.match()",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "pathlib.PurePath.match()",
+      "pathlib.PurePath.full_match()"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "go",
+    "query": "qs go official reference beginner quick code example cmp.Or zero values",
+    "expected": "cmp.Or",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "cmp.Or()",
+      "cmp.Ordered"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust standard library fast safe idiomatic example Vec::spare_capacity_mut docs",
+    "expected": "Vec::spare_capacity_mut",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Vec::spare_capacity_mut",
+      "Search Rust standard library for Vec::spare_capacity_mut"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp standard official documentation tutorial std::ranges::fold_left sample code",
+    "expected": "std::ranges::fold_left",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::fold_left",
+      "std::ranges::fold_left_first",
+      "std::ranges::fold_left_with_iter",
+      "std::ranges::fold_left_first_with_iter"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "c",
+    "query": "qs c language library specification easy tutorial sample code div integer quotient remainder",
+    "expected": "div",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "div, ldiv, lldiv, imaxdiv",
+      "Arithmetic operators",
+      "Common mathematical functions",
+      "Standard library header <limits.h>",
+      "remainder, remainderf, remainderl"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell package docs latest tutorial quick answer Data.Sequence.adjust examples",
+    "expected": "Data.Sequence.adjust",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "adjust :: (a -> a) -> Int -> Seq a -> Seq a",
+      "adjust :: (e -> a -> e) -> MutableArray# s e -> (Int, a) -> STRep s b -> STRep s b",
+      "adjust :: Ord k => (a -> a) -> k -> Map k a -> Map k a",
+      "adjust :: Ord k => (a -> a) -> k -> Map k a -> Map k a",
+      "adjust :: (a -> a) -> Key -> IntMap a -> IntMap a"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "python",
+    "query": "qs python standard library official guide simple example graphlib.TopologicalSorter",
+    "expected": "graphlib.TopologicalSorter",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "graphlib.TopologicalSorter",
+      "graphlib.TopologicalSorter.add()",
+      "graphlib.TopologicalSorter.done()",
+      "graphlib.TopologicalSorter.prepare()",
+      "graphlib.TopologicalSorter.get_ready()"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "go",
+    "query": "qs go current stable standard package docs quick example math.Nextafter",
+    "expected": "math.Nextafter",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "math.Nextafter()"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust official stable docs easy example std::path::Path::ancestors iterator",
+    "expected": "Path::ancestors",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Path::ancestors",
+      "Search Rust standard library for std::path::Path::ancestors"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp latest standard reference concise example std::launder object pointer",
+    "expected": "std::launder",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::launder"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "c",
+    "query": "qs c standard portable reference example localeconv monetary formatting fields",
+    "expected": "localeconv",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "lconv",
+      "localeconv",
+      "Standard library header <locale.h>",
+      "Localization support",
+      "LC_ALL, LC_COLLATE, LC_CTYPE, LC_MONETARY, LC_NUMERIC, LC_TIME"
+    ],
+    "error": null,
+    "note": "localeconv is rank 2 after the closely related lconv fields page."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell current base hoogle quick tutorial Control.Arrow.loop examples",
+    "expected": "Control.Arrow.loop",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "loop :: ArrowLoop a => a (b, d) (c, d) -> a b c"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "python",
+    "query": "qs python official stdlib current docs tiny example weakref.finalize object cleanup",
+    "expected": "weakref.finalize",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "weakref.finalize",
+      "weakref.finalize.alive",
+      "weakref.finalize.atexit",
+      "weakref.finalize.peek()",
+      "weakref.finalize.detach()"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "go",
+    "query": "qs go standard package reference practical sample testing.F.Cleanup fuzz docs",
+    "expected": "testing.F.Cleanup",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "testing.F.Cleanup()"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust docs quick beginner correct idiomatic std::array::from_fn example",
+    "expected": "std::array::from_fn",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "from_fn in std::array - Rust",
+      "Search Rust standard library for std::array::from_fn"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp portable modern reference sample std::ranges::borrowed_range concept details",
+    "expected": "std::ranges::borrowed_range",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::borrowed_range"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "c",
+    "query": "qs c official standard library guide sample code nearbyint rounding mode",
+    "expected": "nearbyint",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "Implementation defined behavior control",
+      "Standard library header <tgmath.h> (C99)",
+      "nearbyint, nearbyintf, nearbyintl",
+      "FE_DOWNWARD, FE_TONEAREST, FE_TOWARDZERO, FE_UPWARD",
+      "round, roundf, roundl, lround, lroundf, lroundl, llround, llroundf, llroundl"
+    ],
+    "error": null,
+    "note": "nearbyint is rank 3 with its exact signature and header."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell hoogle official base docs concise example Data.Ord.clamp",
+    "expected": "Data.Ord.clamp",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "clamp :: Ord a => (a, a) -> a -> a",
+      "clamp :: Int -> Int -> Int"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "python",
+    "query": "qs python latest official manual quick practical example socket.socketpair",
+    "expected": "socket.socketpair()",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "socket.socketpair()",
+      "c.PyErr_SetString()",
+      "c.PyConfig_SetString()",
+      "c.PyInitConfig_SetStr()",
+      "c.PyInitConfig_SetStrList()"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "go",
+    "query": "qs go docs current version best practice example log.Logger.Writer method",
+    "expected": "log.Logger.Writer",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "log.Logger.Writer()"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust safe fast standard library tutorial std::ffi::OsStr::as_encoded_bytes",
+    "expected": "OsStr::as_encoded_bytes",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "OsStr::as_encoded_bytes",
+      "Search Rust standard library for std::ffi::OsStr::as_encoded_bytes"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp official c++ reference beginner sample std::unreachable_sentinel_t iterator",
+    "expected": "std::unreachable_sentinel_t",
+    "class": "surplus-token-adversarial",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::unreachable_sentinel_t"
+    ],
+    "error": null,
+    "note": "The expected API is the first result with direct reference context."
+  }
+]

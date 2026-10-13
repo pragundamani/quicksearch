@@ -1,0 +1,3904 @@
+{
+  "suite": "python",
+  "candidate": "/tmp/qs-gate/release/qs",
+  "candidate_sha256": "a048a86983a8877eea4240c5a24e4e9119e901ceaeff44bc8d13e15911f8cabd",
+  "checklist": "/home/paragon/settings-configs/scripts/quicksearch/docs/search-checklists/python.md",
+  "timeout_seconds": 30,
+  "run_at": "2026-10-11T03:06:02.657846+00:00",
+  "rubric": {
+    "5": "first result or immediately useful",
+    "4": "expected result in top 3 or useful",
+    "3": "relevant but weak",
+    "2": "partial",
+    "1": "misleading",
+    "0": "error or no relevant result"
+  },
+  "summary": {
+    "commands": 100,
+    "completed": 100,
+    "errors": 0,
+    "total_score": 494,
+    "maximum_score": 500,
+    "average_score": 4.94,
+    "percent": 98.8,
+    "score_counts": {
+      "5": 94,
+      "4": 6,
+      "3": 0,
+      "2": 0,
+      "1": 0,
+      "0": 0
+    }
+  },
+  "results": [
+    {
+      "index": 1,
+      "checklist_command": "qs python dictionaries",
+      "executed_command": "/tmp/qs-gate/release/qs --json python dictionaries",
+      "expected": "Mapping Types — `dict`",
+      "test": "Maps a plural term to its canonical built-in type.",
+      "exit_code": 0,
+      "duration_seconds": 0.233855,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "dictionary",
+          "url": "https://devdocs.io/python~3.15/glossary#term-dictionary",
+          "snippet": "An associative array, where arbitrary keys are mapped to values. The keys can be any object with __hash__() and __eq__() methods. Called a hash in Perl.",
+          "meta": [
+            "Python  ·  Glossary"
+          ]
+        },
+        {
+          "title": "dis",
+          "url": "https://devdocs.io/python~3.15/library/dis",
+          "snippet": "The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter.",
+          "meta": [
+            "Python  ·  Language",
+            "def myfunc(alist):\n    return len(alist)"
+          ]
+        },
+        {
+          "title": "5.5. Dictionaries",
+          "url": "https://devdocs.io/python~3.15/tutorial/datastructures#dictionaries",
+          "meta": [
+            "Python  ·  Tutorial"
+          ]
+        },
+        {
+          "title": "calendar.Day",
+          "url": "https://devdocs.io/python~3.15/library/calendar#calendar.Day",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "turtle.done()",
+          "url": "https://devdocs.io/python~3.15/library/turtle#turtle.done",
+          "meta": [
+            "Python  ·  Graphical user interfaces with Tk"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "Dictionary glossary is first and the Dictionaries tutorial is third; useful, but the requested dict mapping reference is not first."
+    },
+    {
+      "index": 2,
+      "checklist_command": "qs python list comprehensions",
+      "executed_command": "/tmp/qs-gate/release/qs --json python list comprehensions",
+      "expected": "List displays and list comprehensions",
+      "test": "Finds a common multiword syntax concept.",
+      "exit_code": 0,
+      "duration_seconds": 0.243292,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "list comprehension",
+          "url": "https://devdocs.io/python~3.15/glossary#term-list-comprehension",
+          "snippet": "A compact way to process all or part of the elements in a sequence and return a list with the results. result = ['{:#04x}'.format(x) for x in range(256) if x % 2 == 0] generates a list of strings containing even hex numbers (0x..) in the range from 0 to 255. The if clause is optional. If omitted, all elements in range…",
+          "meta": [
+            "Python  ·  Glossary"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 3,
+      "checklist_command": "qs python generator expressions",
+      "executed_command": "/tmp/qs-gate/release/qs --json python generator expressions",
+      "expected": "Generator expressions",
+      "test": "Distinguishes lazy expressions from list comprehensions.",
+      "exit_code": 0,
+      "duration_seconds": 0.221883,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "generator",
+          "url": "https://devdocs.io/python~3.15/glossary#term-generator",
+          "snippet": "Informally used to mean either a generator function or a generator iterator, depending on context. The formal terms generator function and generator iterator are uncommon in practice; “generator” alone is almost always sufficient.",
+          "meta": [
+            "Python  ·  Glossary"
+          ]
+        },
+        {
+          "title": "generator expression",
+          "url": "https://devdocs.io/python~3.15/glossary#term-generator-expression",
+          "snippet": "An expression that returns an iterator. It looks like a normal expression followed by a for clause defining a loop variable, range, and an optional if clause. The combined expression generates values for an enclosing function:",
+          "meta": [
+            "Python  ·  Glossary",
+            ">>> sum(i*i for i in range(10))         # sum of squares 0, 1, 4, ... 81\n285"
+          ]
+        },
+        {
+          "title": "9.10. Generator Expressions",
+          "url": "https://devdocs.io/python~3.15/tutorial/classes#generator-expressions",
+          "meta": [
+            "Python  ·  Tutorial"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "A general generator glossary entry is first; the generator-expression glossary and tutorial are second and third."
+    },
+    {
+      "index": 4,
+      "checklist_command": "qs python decorators",
+      "executed_command": "/tmp/qs-gate/release/qs --json python decorators",
+      "expected": "Function and class decorators",
+      "test": "Maps plural morphology to decorator syntax.",
+      "exit_code": 0,
+      "duration_seconds": 0.244085,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "decorator",
+          "url": "https://devdocs.io/python~3.15/glossary#term-decorator",
+          "snippet": "A function returning another function, usually applied as a function transformation using the @wrapper syntax. Common examples for decorators are @classmethod and @staticmethod.",
+          "meta": [
+            "Python  ·  Glossary",
+            "def f(arg):\n    ...\nf = staticmethod(f)\n\n@staticmethod\ndef f(arg):\n    ..."
+          ]
+        },
+        {
+          "title": "contextlib.ContextDecorator",
+          "url": "https://devdocs.io/python~3.15/library/contextlib#contextlib.ContextDecorator",
+          "snippet": "A base class that enables a context manager to also be used as a decorator.",
+          "meta": [
+            "Python  ·  Runtime",
+            "from contextlib import ContextDecorator\n\nclass mycontext(ContextDecorator):\n    def __enter__(self):\n        print('Starting')\n        return self\n\n    def __exit__(self, *exc):\n        print('Finishing')\n        return False"
+          ]
+        },
+        {
+          "title": "contextlib.AsyncContextDecorator",
+          "url": "https://devdocs.io/python~3.15/library/contextlib#contextlib.AsyncContextDecorator",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "http.cookiejar.DefaultCookiePolicy.DomainStrictNoDots",
+          "url": "https://devdocs.io/python~3.15/library/http.cookiejar#http.cookiejar.DefaultCookiePolicy.DomainStrictNoDots",
+          "meta": [
+            "Python  ·  Internet"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 5,
+      "checklist_command": "qs python context managers",
+      "executed_command": "/tmp/qs-gate/release/qs --json python context managers",
+      "expected": "Context manager types and the `with` statement",
+      "test": "Finds a protocol from a plural concept query.",
+      "exit_code": 0,
+      "duration_seconds": 0.271081,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "context manager",
+          "url": "https://devdocs.io/python~3.15/glossary#term-context-manager",
+          "snippet": "An object which implements the context management protocol and controls the environment seen in a with statement. See PEP 343.",
+          "meta": [
+            "Python  ·  Glossary"
+          ]
+        },
+        {
+          "title": "Available Context Managers (warnings)",
+          "url": "https://devdocs.io/python~3.15/library/warnings#available-context-managers",
+          "snippet": "A context manager that copies and, upon exit, restores the warnings filter and the showwarning() function. If the record argument is False (the default) the context manager returns None on entry. If record is True, a list is returned that is progressively populated with objects as seen by a custom showwarning() functi…",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "typing.ContextManager",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.ContextManager",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        },
+        {
+          "title": "asynchronous context manager",
+          "url": "https://devdocs.io/python~3.15/glossary#term-asynchronous-context-manager",
+          "meta": [
+            "Python  ·  Glossary"
+          ]
+        },
+        {
+          "title": "typing.AsyncContextManager",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.AsyncContextManager",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 6,
+      "checklist_command": "qs python async iterators",
+      "executed_command": "/tmp/qs-gate/release/qs --json python async iterators",
+      "expected": "Asynchronous iterator protocol",
+      "test": "Matches an abbreviated multiword language concept.",
+      "exit_code": 0,
+      "duration_seconds": 0.195193,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "typing.AsyncIterator",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.AsyncIterator",
+          "snippet": "Deprecated alias to collections.abc.AsyncIterator.",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        },
+        {
+          "title": "collections.abc.AsyncIterator",
+          "url": "https://devdocs.io/python~3.15/library/collections.abc#collections.abc.AsyncIterator",
+          "snippet": "ABC for classes that provide __aiter__ and __anext__ methods. See also the definition of asynchronous iterator.",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "pyclbr.Function.is_async",
+          "url": "https://devdocs.io/python~3.15/library/pyclbr#pyclbr.Function.is_async",
+          "meta": [
+            "Python  ·  Language"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 7,
+      "checklist_command": "qs python structural pattern matching",
+      "executed_command": "/tmp/qs-gate/release/qs --json python structural pattern matching",
+      "expected": "`match` statements and patterns",
+      "test": "Finds modern syntax from its descriptive name.",
+      "exit_code": 0,
+      "duration_seconds": 0.880039,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Data model",
+          "url": "https://devdocs.io/python~3.15/reference/datamodel",
+          "snippet": "PEP 634 - Structural Pattern Matching — The specification for the Python match statement.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Compound statements",
+          "url": "https://devdocs.io/python~3.15/reference/compound_stmts",
+          "snippet": "8.6. The match statement — Added in version 3.10. The match statement is used for pattern matching. Syntax: match_stmt: 'match' subject_expr \":\" NEWLINE INDENT case_block+ DEDENT subject_expr: flexible_expression \",\" [flexible_expression_list [',']] | assignment_expression case_block: 'case' patterns [guard] \":\" suite Note This section uses single quotes to…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "pattern",
+          "url": "https://docs.python.org/3/library/re.html",
+          "snippet": "Match objects¶ — Returns one or more subgroups of the match. If there is a single argument, the result is a single string; if there are multiple arguments, the result is a tuple with one item per argument. Without arguments, group1 defaults to zero (the whole match is returned). If a groupN argument is zero, the corresponding return value is the entire matc…"
+        },
+        {
+          "title": "re.match(pattern, string, flags=0)",
+          "url": "https://devdocs.io/python~3.15/library/re",
+          "snippet": "re.match(pattern, string, flags=0) — Soft deprecated since version 3.15: match() has been soft deprecated in favor of the alternate prefixmatch() name of this API which is more explicitly descriptive. Use it to better express intent. The norm in other languages and regular expression implementations is to use the term match to refer to the behavior of what …",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "class ast.match_case(pattern, guard, body)",
+          "url": "https://devdocs.io/python~3.15/library/ast",
+          "snippet": "class ast.match_case(pattern, guard, body) — A single case pattern in a match statement. pattern contains the match pattern that the subject will be matched against. Note that the AST nodes produced for patterns differ from those produced for expressions, even when they share the same syntax. The guard attribute contains an expression that will be evaluated…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 8,
+      "checklist_command": "qs python positional only parameters",
+      "executed_command": "/tmp/qs-gate/release/qs --json python positional only parameters",
+      "expected": "Positional-only parameters using `/`",
+      "test": "Finds parameter syntax from natural wording.",
+      "exit_code": 0,
+      "duration_seconds": 0.93446,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "More Control Flow Tools",
+          "url": "https://devdocs.io/python~3.15/tutorial/controlflow",
+          "snippet": "4.9.3.2. Positional-Only Parameters — Looking at this in a bit more detail, it is possible to mark certain parameters as positional-only. If positional-only, the parameters’ order matters, and the parameters cannot be passed by keyword. Positional-only parameters are placed before a / (forward-slash). The / is used to logically separate the positional-only …",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "class inspect.Signature(parameters=None, *, return_annotation=Signature.empty)",
+          "url": "https://devdocs.io/python~3.15/library/inspect",
+          "snippet": "class inspect.Signature(parameters=None, *, return_annotation=Signature.empty) — A Signature object represents the call signature of a function and its return annotation. For each parameter accepted by the function it stores a Parameter object in its parameters collection. The optional parameters argument is a sequence of Parameter objects, which is validat…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "parameters",
+          "url": "https://docs.python.org/3/library/inspect.html",
+          "snippet": "Classes and functions¶ — args is a list of the positional parameter names. varargs is the name of the * parameter or None if arbitrary positional arguments are not accepted. varkw is the name of the ** parameter or None if arbitrary keyword arguments are not accepted. defaults is an n-tuple of default argument values corresponding to the last n positional p…"
+        },
+        {
+          "title": "Glossary",
+          "url": "https://devdocs.io/python~3.15/glossary",
+          "snippet": "parameter — A named entity in a function (or method) definition that specifies an argument (or in some cases, arguments) that the function can accept. There are five kinds of parameter: positional-or-keyword: specifies an argument that can be passed either positionally or as a keyword argument. This is the default kind of parameter, for example foo and bar …",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Programming FAQ",
+          "url": "https://devdocs.io/python~3.15/faq/programming",
+          "snippet": "How can I pass optional or keyword parameters from one function to another? — Collect the arguments using the * and ** specifiers in the function’s parameter list; this gives you the positional arguments as a tuple and the keyword arguments as a dictionary. You can then pass these arguments when calling another function by using * and **: def f(x, *args, **…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 9,
+      "checklist_command": "qs python keyword only arguments",
+      "executed_command": "/tmp/qs-gate/release/qs --json python keyword only arguments",
+      "expected": "Keyword-only parameters using `*`",
+      "test": "Separates a related parameter-passing concept.",
+      "exit_code": 0,
+      "duration_seconds": 0.013163,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Keyword-only parameters",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#special-parameters",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 10,
+      "checklist_command": "qs python exception chaining",
+      "executed_command": "/tmp/qs-gate/release/qs --json python exception chaining",
+      "expected": "Exception context and `raise ... from`",
+      "test": "Retrieves exception semantics rather than one class.",
+      "exit_code": 0,
+      "duration_seconds": 0.266158,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "8.5. Exception Chaining",
+          "url": "https://devdocs.io/python~3.15/tutorial/errors#exception-chaining",
+          "snippet": "If an unhandled exception occurs inside an except section, it will have the exception being handled attached to it and included in the error message:",
+          "meta": [
+            "Python  ·  Tutorial",
+            ">>> try:\n...     open(\"database.sqlite\")\n... except OSError:\n...     raise RuntimeError(\"unable to handle error\")\n...\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\n    open(\"database.sqlite\")\n    ~~~~^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\n    raise RuntimeError(\"unable to handle error\")\nRuntimeError: unable to handle error"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 11,
+      "checklist_command": "qs python assignment expressions",
+      "executed_command": "/tmp/qs-gate/release/qs --json python assignment expressions",
+      "expected": "Assignment expressions using `:=`",
+      "test": "Maps the concept name to operator documentation.",
+      "exit_code": 0,
+      "duration_seconds": 0.234231,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "6.12. Assignment expressions",
+          "url": "https://devdocs.io/python~3.15/reference/expressions#assignment-expressions",
+          "snippet": "assignment_expression: [identifier \":=\"] expression An assignment expression (sometimes also called a “named expression” or “walrus”) assigns an expression to an identifier, while also returning the value of the expression.",
+          "meta": [
+            "Python  ·  Language Reference",
+            "if matching := pattern.search(data):\n    do_something(matching)"
+          ]
+        },
+        {
+          "title": "ast.Expression",
+          "url": "https://devdocs.io/python~3.15/library/ast#ast.Expression",
+          "snippet": "A single Python expression input. Node type generated by ast.parse() when mode is \"eval\".",
+          "meta": [
+            "Python  ·  Language",
+            ">>> print(ast.dump(ast.parse('123', mode='eval'), indent=4))\nExpression(\n    body=Constant(value=123))"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 12,
+      "checklist_command": "qs python function type annotations",
+      "executed_command": "/tmp/qs-gate/release/qs --json python function type annotations",
+      "expected": "Function annotations and `typing`",
+      "test": "Searches across language and library documentation.",
+      "exit_code": 0,
+      "duration_seconds": 0.015403,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Function annotations",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#function-annotations",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 13,
+      "checklist_command": "qs python generic type aliases",
+      "executed_command": "/tmp/qs-gate/release/qs --json python generic type aliases",
+      "expected": "Generic aliases and type aliases",
+      "test": "Tests plural type-system terminology.",
+      "exit_code": 0,
+      "duration_seconds": 0.015298,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Generic type aliases: type statement and TypeAliasType",
+          "url": "https://docs.python.org/3/library/typing.html#type-aliases",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 14,
+      "checklist_command": "qs python dataclasses",
+      "executed_command": "/tmp/qs-gate/release/qs --json python dataclasses",
+      "expected": "The `dataclasses` module",
+      "test": "Maps a plural package concept to its module docs.",
+      "exit_code": 0,
+      "duration_seconds": 0.252475,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "dataclasses",
+          "url": "https://devdocs.io/python~3.15/library/dataclasses",
+          "snippet": "This module provides a decorator and functions for automatically adding generated special methods such as __init__() and __repr__() to user-defined classes. It was originally described in PEP 557.",
+          "meta": [
+            "Python  ·  Runtime",
+            "from dataclasses import dataclass\n\n@dataclass\nclass InventoryItem:\n    \"\"\"Class for keeping track of an item in inventory.\"\"\"\n    name: str\n    unit_price: float\n    quantity_on_hand: int = 0\n\n    def total_cost(self) -> float:\n        return self.unit_price * self.quantity_on_hand"
+          ]
+        },
+        {
+          "title": "Inheritance (dataclasses)",
+          "url": "https://devdocs.io/python~3.15/library/dataclasses#inheritance",
+          "snippet": "When the dataclass is being created by the @dataclass decorator, it looks through all of the class’s base classes in reverse MRO (that is, starting at object) and, for each dataclass that it finds, adds the fields from that base class to an ordered mapping of fields. After all of the base class fields are added, it ad…",
+          "meta": [
+            "Python  ·  Runtime",
+            "@dataclass\nclass Base:\n    x: Any = 15.0\n    y: int = 0\n\n@dataclass\nclass C(Base):\n    z: int = 10\n    x: int = 15"
+          ]
+        },
+        {
+          "title": "Class variables (dataclasses)",
+          "url": "https://devdocs.io/python~3.15/library/dataclasses#class-variables",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "Module contents (dataclasses)",
+          "url": "https://devdocs.io/python~3.15/library/dataclasses#module-contents",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "Frozen instances (dataclasses)",
+          "url": "https://devdocs.io/python~3.15/library/dataclasses#frozen-instances",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 15,
+      "checklist_command": "qs python frozen dataclass",
+      "executed_command": "/tmp/qs-gate/release/qs --json python frozen dataclass",
+      "expected": "`@dataclass(frozen=True)`",
+      "test": "Finds a specific decorator option from plain language.",
+      "exit_code": 0,
+      "duration_seconds": 0.204994,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Frozen instances (dataclasses)",
+          "url": "https://devdocs.io/python~3.15/library/dataclasses#frozen-instances",
+          "snippet": "It is not possible to create truly immutable Python objects. However, by passing frozen=True to the @dataclass decorator you can emulate immutability. In that case, dataclasses will add __setattr__() and __delattr__() methods to the class. These methods will raise a FrozenInstanceError when invoked.",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "dataclasses.FrozenInstanceError",
+          "url": "https://devdocs.io/python~3.15/library/dataclasses#dataclasses.FrozenInstanceError",
+          "snippet": "Raised when an implicitly defined __setattr__() or __delattr__() is called on a dataclass which was defined with frozen=True. It is a subclass of AttributeError.",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 16,
+      "checklist_command": "qs python enumerations",
+      "executed_command": "/tmp/qs-gate/release/qs --json python enumerations",
+      "expected": "The `enum` module and `Enum`",
+      "test": "Tests morphological matching for a singular API.",
+      "exit_code": 0,
+      "duration_seconds": 0.016918,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "enum.Enum",
+          "url": "https://docs.python.org/3/library/enum.html#enum.Enum",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 17,
+      "checklist_command": "qs python abstract base classes",
+      "executed_command": "/tmp/qs-gate/release/qs --json python abstract base classes",
+      "expected": "The `abc` module and `ABC`",
+      "test": "Finds a standard object-model concept by expanded name.",
+      "exit_code": 0,
+      "duration_seconds": 0.016472,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "abc.ABC and abstract base classes",
+          "url": "https://docs.python.org/3/library/abc.html",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 18,
+      "checklist_command": "qs python method resolution order",
+      "executed_command": "/tmp/qs-gate/release/qs --json python method resolution order",
+      "expected": "Class MRO and `type.mro()`",
+      "test": "Retrieves inheritance behavior from a multiword term.",
+      "exit_code": 0,
+      "duration_seconds": 0.243134,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "method resolution order",
+          "url": "https://devdocs.io/python~3.15/glossary#term-method-resolution-order",
+          "snippet": "Method Resolution Order is the order in which base classes are searched for a member during lookup. See The Python 2.3 Method Resolution Order for details of the algorithm used by the Python interpreter since the 2.3 release.",
+          "meta": [
+            "Python  ·  Glossary"
+          ]
+        },
+        {
+          "title": "The Python 2.3 Method Resolution Order",
+          "url": "https://devdocs.io/python~3.15/howto/mro",
+          "snippet": "This is a historical document, provided as an appendix to the official documentation. The Method Resolution Order discussed here was introduced in Python 2.3, but it is still used in later versions – including Python 3.",
+          "meta": [
+            "Python  ·  Basics",
+            ">>> O = object\n>>> class X(O): pass\n>>> class Y(O): pass\n>>> class A(X,Y): pass\n>>> class B(Y,X): pass"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 19,
+      "checklist_command": "qs python descriptor protocol",
+      "executed_command": "/tmp/qs-gate/release/qs --json python descriptor protocol",
+      "expected": "Descriptors and `__get__` / `__set__`",
+      "test": "Finds a data-model protocol.",
+      "exit_code": 0,
+      "duration_seconds": 0.194108,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "descriptor",
+          "url": "https://devdocs.io/python~3.15/glossary#term-descriptor",
+          "snippet": "Any object which defines the methods __get__(), __set__(), or __delete__(). When a class attribute is a descriptor, its special binding behavior is triggered upon attribute lookup. Normally, using a.b to get, set or delete an attribute looks up the object named b in the class dictionary for a, but if b is a descriptor…",
+          "meta": [
+            "Python  ·  Glossary"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 20,
+      "checklist_command": "qs python iterator protocol",
+      "executed_command": "/tmp/qs-gate/release/qs --json python iterator protocol",
+      "expected": "Iterator types, `__iter__`, and `__next__`",
+      "test": "Tests protocol-level concept retrieval.",
+      "exit_code": 0,
+      "duration_seconds": 0.192575,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Iterator Protocol",
+          "url": "https://devdocs.io/python~3.15/c-api/iter",
+          "snippet": "There are two functions specifically for working with iterators.",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        },
+        {
+          "title": "iterator",
+          "url": "https://devdocs.io/python~3.15/glossary#term-iterator",
+          "snippet": "An object representing a stream of data. Repeated calls to the iterator’s __next__() method (or passing it to the built-in function next()) return successive items in the stream. When no more data are available a StopIteration exception is raised instead. At this point, the iterator object is exhausted and any further…",
+          "meta": [
+            "Python  ·  Glossary"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 21,
+      "checklist_command": "qs python enumerate",
+      "executed_command": "/tmp/qs-gate/release/qs --json python enumerate",
+      "expected": "Built-in `enumerate()`",
+      "test": "Performs an exact lookup of a core built-in.",
+      "exit_code": 0,
+      "duration_seconds": 0.137572,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "enumerate()",
+          "url": "https://devdocs.io/python~3.15/builtins/functions#enumerate",
+          "snippet": "Return an enumerate object. iterable must be a sequence, an iterator, or some other object which supports iteration. The __next__() method of the iterator returned by enumerate() returns a tuple containing a count (from start which defaults to 0) and the values obtained from iterating over iterable.",
+          "meta": [
+            "Python  ·  Basics",
+            ">>> seasons = ['Spring', 'Summer', 'Fall', 'Winter']\n>>> list(enumerate(seasons))\n[(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]\n>>> list(enumerate(seasons, start=1))\n[(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]"
+          ]
+        },
+        {
+          "title": "threading.enumerate()",
+          "url": "https://devdocs.io/python~3.15/library/threading#threading.enumerate",
+          "snippet": "Return a list of all Thread objects currently active. The list includes daemonic threads and dummy thread objects created by current_thread(). It excludes terminated threads and threads that have not yet been started. However, the main thread is always part of the result, even when terminated.",
+          "meta": [
+            "Python  ·  Concurrent Execution"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 22,
+      "checklist_command": "qs python zip",
+      "executed_command": "/tmp/qs-gate/release/qs --json python zip",
+      "expected": "Built-in `zip()`",
+      "test": "Tests a short identifier with many ordinary meanings.",
+      "exit_code": 0,
+      "duration_seconds": 0.096372,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "zip()",
+          "url": "https://devdocs.io/python~3.15/builtins/functions#zip",
+          "snippet": "Iterate over several iterables in parallel, producing tuples with an item from each one.",
+          "meta": [
+            "Python  ·  Basics",
+            ">>> for item in zip([1, 2, 3], ['sugar', 'spice', 'everything nice']):\n...     print(item)\n...\n(1, 'sugar')\n(2, 'spice')\n(3, 'everything nice')"
+          ]
+        },
+        {
+          "title": "zipapp",
+          "url": "https://devdocs.io/python~3.15/library/zipapp",
+          "snippet": "This module provides tools to manage the creation of zip files containing Python code, which can be executed directly by the Python interpreter. The module provides both a Command-Line Interface and a Python API.",
+          "meta": [
+            "Python  ·  Software Packaging & Distribution",
+            "$ python -m zipapp myapp -m \"myapp:main\"\n$ python myapp.pyz\n<output from myapp>"
+          ]
+        },
+        {
+          "title": "Examples (zipapp)",
+          "url": "https://devdocs.io/python~3.15/library/zipapp#examples",
+          "meta": [
+            "Python  ·  Software Packaging & Distribution"
+          ]
+        },
+        {
+          "title": "Python API (zipapp)",
+          "url": "https://devdocs.io/python~3.15/library/zipapp#python-api",
+          "meta": [
+            "Python  ·  Software Packaging & Distribution"
+          ]
+        },
+        {
+          "title": "Basic Example (zipapp)",
+          "url": "https://devdocs.io/python~3.15/library/zipapp#basic-example",
+          "meta": [
+            "Python  ·  Software Packaging & Distribution"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 23,
+      "checklist_command": "qs python isinstance",
+      "executed_command": "/tmp/qs-gate/release/qs --json python isinstance",
+      "expected": "Built-in `isinstance()`",
+      "test": "Finds an exact built-in predicate.",
+      "exit_code": 0,
+      "duration_seconds": 0.184098,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "isinstance()",
+          "url": "https://devdocs.io/python~3.15/builtins/functions#isinstance",
+          "snippet": "Return True if the object argument is an instance of the classinfo argument, or of a (direct, indirect, or virtual) subclass thereof. If object is not an object of the given type, the function always returns False. If classinfo is a tuple of type objects (or recursively, other such tuples) or a Union Type of multiple …",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 24,
+      "checklist_command": "qs python super",
+      "executed_command": "/tmp/qs-gate/release/qs --json python super",
+      "expected": "Built-in `super()`",
+      "test": "Tests a short keyword-like built-in name.",
+      "exit_code": 0,
+      "duration_seconds": 0.172634,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "super",
+          "url": "https://devdocs.io/python~3.15/builtins/functions#super",
+          "snippet": "Return a proxy object that delegates method calls to a parent or sibling class of type. This is useful for accessing inherited methods that have been overridden in a class.",
+          "meta": [
+            "Python  ·  Basics",
+            "class C(B):\n    def method(self, arg):\n        super().method(arg)    # This does the same thing as:\n                               # super(C, self).method(arg)"
+          ]
+        },
+        {
+          "title": "pyclbr.Class.super",
+          "url": "https://devdocs.io/python~3.15/library/pyclbr#pyclbr.Class.super",
+          "snippet": "A list of Class objects which describe the immediate base classes of the class being described. Classes which are named as superclasses but which are not discoverable by readmodule_ex() are listed as a string with the class name instead of as Class objects.",
+          "meta": [
+            "Python  ·  Language"
+          ]
+        },
+        {
+          "title": "mmap.MAP_ALIGNED_SUPER",
+          "url": "https://devdocs.io/python~3.15/library/mmap#mmap.MAP_ALIGNED_SUPER",
+          "meta": [
+            "Python  ·  Networking & Interprocess Communication"
+          ]
+        },
+        {
+          "title": "curses.KEY_SR",
+          "url": "https://devdocs.io/python~3.15/library/curses#curses.KEY_SR",
+          "meta": [
+            "Python  ·  Command-line interface libraries"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 25,
+      "checklist_command": "qs python convert string to integer",
+      "executed_command": "/tmp/qs-gate/release/qs --json python convert string to integer",
+      "expected": "Built-in `int()`",
+      "test": "Maps a common task to the correct constructor.",
+      "exit_code": 0,
+      "duration_seconds": 0.148084,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "int",
+          "url": "https://docs.python.org/3/library/functions.html#int",
+          "snippet": "Authoritative documentation for this task."
+        },
+        {
+          "title": "int",
+          "url": "https://devdocs.io/python~3.15/builtins/functions#int",
+          "snippet": "Return an integer object constructed from a number or a string, or return 0 if no arguments are given.",
+          "meta": [
+            "Python  ·  Basics",
+            ">>> int(123.45)\n123\n>>> int('123')\n123\n>>> int('   -12_345\\n')\n-12345\n>>> int('FACE', 16)\n64206\n>>> int('0xface', 0)\n64206\n>>> int('01110011', base=2)\n115"
+          ]
+        },
+        {
+          "title": "object.__int__()",
+          "url": "https://devdocs.io/python~3.15/reference/datamodel#object.__int__",
+          "snippet": "Called to implement the built-in functions complex(), int() and float(). Should return a value of the appropriate type.",
+          "meta": [
+            "Python  ·  Language Reference"
+          ]
+        },
+        {
+          "title": "input()",
+          "url": "https://devdocs.io/python~3.15/builtins/functions#input",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "inspect",
+          "url": "https://devdocs.io/python~3.15/library/inspect",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 26,
+      "checklist_command": "qs python memoryview",
+      "executed_command": "/tmp/qs-gate/release/qs --json python memoryview",
+      "expected": "Built-in `memoryview` type",
+      "test": "Finds a less lexical but practical built-in type.",
+      "exit_code": 0,
+      "duration_seconds": 0.144372,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "memoryview",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#memoryview",
+          "snippet": "Create a memoryview that references object. object must support the buffer protocol. Built-in objects that support the buffer protocol include bytes and bytearray.",
+          "meta": [
+            "Python  ·  Basics",
+            ">>> v = memoryview(b'abcefg')\n>>> v[1]\n98\n>>> v[-1]\n103\n>>> v[1:4]\n<memory at 0x7f3ddc9f4350>\n>>> bytes(v[1:4])\nb'bce'"
+          ]
+        },
+        {
+          "title": "memoryview.obj",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#memoryview.obj",
+          "snippet": "The underlying object of the memoryview:",
+          "meta": [
+            "Python  ·  Basics",
+            ">>> b  = bytearray(b'xyz')\n>>> m = memoryview(b)\n>>> m.obj is b\nTrue"
+          ]
+        },
+        {
+          "title": "memoryview.ndim",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#memoryview.ndim",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "memoryview.hex()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#memoryview.hex",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "memoryview.cast()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#memoryview.cast",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 27,
+      "checklist_command": "qs python breakpoint",
+      "executed_command": "/tmp/qs-gate/release/qs --json python breakpoint",
+      "expected": "Built-in `breakpoint()`",
+      "test": "Tests direct search for the debugging entry point.",
+      "exit_code": 0,
+      "duration_seconds": 0.131831,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "breakpoint()",
+          "url": "https://devdocs.io/python~3.15/builtins/functions#breakpoint",
+          "snippet": "This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or …",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "bdb.Breakpoint",
+          "url": "https://devdocs.io/python~3.15/library/bdb#bdb.Breakpoint",
+          "snippet": "This class implements temporary breakpoints, ignore counts, disabling and (re-)enabling, and conditionals.",
+          "meta": [
+            "Python  ·  Debugging & profiling"
+          ]
+        },
+        {
+          "title": "mmap.MAP_32BIT",
+          "url": "https://devdocs.io/python~3.15/library/mmap#mmap.MAP_32BIT",
+          "meta": [
+            "Python  ·  Networking & Interprocess Communication"
+          ]
+        },
+        {
+          "title": "bdb.Breakpoint.cond",
+          "url": "https://devdocs.io/python~3.15/library/bdb#bdb.Breakpoint.cond",
+          "meta": [
+            "Python  ·  Debugging & profiling"
+          ]
+        },
+        {
+          "title": "bdb.Breakpoint.file",
+          "url": "https://devdocs.io/python~3.15/library/bdb#bdb.Breakpoint.file",
+          "meta": [
+            "Python  ·  Debugging & profiling"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 28,
+      "checklist_command": "qs python str.removeprefix",
+      "executed_command": "/tmp/qs-gate/release/qs --json python str.removeprefix",
+      "expected": "`str.removeprefix()`",
+      "test": "Tests a qualified dotted method identifier.",
+      "exit_code": 0,
+      "duration_seconds": 0.219296,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "str.removeprefix()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#str.removeprefix",
+          "snippet": "If the string starts with the prefix string, return string[len(prefix):]. Otherwise, return a copy of the original string:",
+          "meta": [
+            "Python  ·  Basics",
+            ">>> 'TestHook'.removeprefix('Test')\n'Hook'\n>>> 'BaseTestCase'.removeprefix('Test')\n'BaseTestCase'"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 29,
+      "checklist_command": "qs python str.splitlines",
+      "executed_command": "/tmp/qs-gate/release/qs --json python str.splitlines",
+      "expected": "`str.splitlines()`",
+      "test": "Finds a string method without confusing `split()`.",
+      "exit_code": 0,
+      "duration_seconds": 0.253989,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "str.splitlines()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#str.splitlines",
+          "snippet": "Return a list of the lines in the string, breaking at line boundaries. Line breaks are not included in the resulting list unless keepends is given and true.",
+          "meta": [
+            "Python  ·  Basics",
+            ">>> 'ab c\\n\\nde fg\\rkl\\r\\n'.splitlines()\n['ab c', '', 'de fg', 'kl']\n>>> 'ab c\\n\\nde fg\\rkl\\r\\n'.splitlines(keepends=True)\n['ab c\\n', '\\n', 'de fg\\r', 'kl\\r\\n']"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 30,
+      "checklist_command": "qs python bytes.fromhex",
+      "executed_command": "/tmp/qs-gate/release/qs --json python bytes.fromhex",
+      "expected": "`bytes.fromhex()`",
+      "test": "Tests a qualified alternate constructor.",
+      "exit_code": 0,
+      "duration_seconds": 0.323918,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "bytes.fromhex()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#bytes.fromhex",
+          "snippet": "This bytes class method returns a bytes object, decoding the given string object. The string must contain two hexadecimal digits per byte, with ASCII whitespace being ignored.",
+          "meta": [
+            "Python  ·  Basics",
+            ">>> bytes.fromhex('2Ef0 F1f2  ')\nb'.\\xf0\\xf1\\xf2'"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 31,
+      "checklist_command": "qs python sort list by key",
+      "executed_command": "/tmp/qs-gate/release/qs --json python sort list by key",
+      "expected": "`list.sort(key=...)` and the Sorting HOW TO",
+      "test": "Maps natural task wording to sort-key documentation.",
+      "exit_code": 0,
+      "duration_seconds": 0.32038,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "sorted key",
+          "url": "https://docs.python.org/3/howto/sorting.html#key-functions",
+          "snippet": "Authoritative documentation for this task."
+        },
+        {
+          "title": "pstats.SortKey",
+          "url": "https://devdocs.io/python~3.15/library/pstats#pstats.SortKey",
+          "snippet": "An enumeration of valid sort keys for Stats.sort_stats().",
+          "meta": [
+            "Python  ·  Debugging & profiling"
+          ]
+        },
+        {
+          "title": "pstats.SortKey.NFL",
+          "url": "https://devdocs.io/python~3.15/library/pstats#pstats.SortKey.NFL",
+          "snippet": "Sort by name, then file, then line number (numeric line sort).",
+          "meta": [
+            "Python  ·  Debugging & profiling"
+          ]
+        },
+        {
+          "title": "pstats.SortKey.LINE",
+          "url": "https://devdocs.io/python~3.15/library/pstats#pstats.SortKey.LINE",
+          "meta": [
+            "Python  ·  Debugging & profiling"
+          ]
+        },
+        {
+          "title": "pstats.SortKey.NAME",
+          "url": "https://devdocs.io/python~3.15/library/pstats#pstats.SortKey.NAME",
+          "meta": [
+            "Python  ·  Debugging & profiling"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 32,
+      "checklist_command": "qs python dict.setdefault",
+      "executed_command": "/tmp/qs-gate/release/qs --json python dict.setdefault",
+      "expected": "`dict.setdefault()`",
+      "test": "Tests exact qualified mapping-method lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.195535,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "dict.setdefault()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#dict.setdefault",
+          "snippet": "If key is in the dictionary, return its value. If not, insert key with a value of default and return default. default defaults to None.",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "c.PyDict_SetItem()",
+          "url": "https://devdocs.io/python~3.15/c-api/dict#c.PyDict_SetItem",
+          "snippet": "Insert val into the dictionary p with a key of key. key must be hashable; if it isn’t, TypeError will be raised. Return 0 on success or -1 on failure. This function does not “steal” a reference to val.",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        },
+        {
+          "title": "c.PyDict_SetDefault()",
+          "url": "https://devdocs.io/python~3.15/c-api/dict#c.PyDict_SetDefault",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        },
+        {
+          "title": "c.PyODict_SetItem()",
+          "url": "https://devdocs.io/python~3.15/c-api/dict#c.PyODict_SetItem",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        },
+        {
+          "title": "c.PyDict_SetDefaultRef()",
+          "url": "https://devdocs.io/python~3.15/c-api/dict#c.PyDict_SetDefaultRef",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 33,
+      "checklist_command": "qs python merge dictionaries",
+      "executed_command": "/tmp/qs-gate/release/qs --json python merge dictionaries",
+      "expected": "Dictionary union operators `|` and `|=`",
+      "test": "Maps a common task to current language syntax.",
+      "exit_code": 0,
+      "duration_seconds": 0.036542,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Dictionary union operators",
+          "url": "https://docs.python.org/3/library/stdtypes.html#mapping-types-dict",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 34,
+      "checklist_command": "qs python set symmetric_difference",
+      "executed_command": "/tmp/qs-gate/release/qs --json python set symmetric_difference",
+      "expected": "`set.symmetric_difference()`",
+      "test": "Tests a mixed natural and snake_case query.",
+      "exit_code": 0,
+      "duration_seconds": 0.252892,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "set.symmetric_difference()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#set.symmetric_difference",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "set.symmetric_difference_update()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#set.symmetric_difference_update",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 35,
+      "checklist_command": "qs python frozenset",
+      "executed_command": "/tmp/qs-gate/release/qs --json python frozenset",
+      "expected": "Built-in `frozenset` type",
+      "test": "Finds the immutable-set API from one identifier.",
+      "exit_code": 0,
+      "duration_seconds": 0.17503,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "frozenset",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#frozenset",
+          "snippet": "Return a new set or frozenset object whose elements are taken from iterable. The elements of a set must be hashable. To represent sets of sets, the inner sets must be frozenset objects. If iterable is not specified, a new empty set is returned.",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "tkinter.font",
+          "url": "https://devdocs.io/python~3.15/library/tkinter.font",
+          "snippet": "The tkinter.font module provides the Font class for creating and using named fonts.",
+          "meta": [
+            "Python  ·  Graphical user interfaces with Tk"
+          ]
+        },
+        {
+          "title": "frozenset.copy()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#frozenset.copy",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "frozenset.union()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#frozenset.union",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "frozenset.issubset()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#frozenset.issubset",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 36,
+      "checklist_command": "qs python format specification mini language",
+      "executed_command": "/tmp/qs-gate/release/qs --json python format specification mini language",
+      "expected": "Format specification mini-language",
+      "test": "Retrieves a deep section by its formal title.",
+      "exit_code": 0,
+      "duration_seconds": 1.009075,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Format specification mini-language",
+          "url": "https://devdocs.io/python~3.15/library/string",
+          "snippet": "Format specification mini-language — “Format specifications” are used within replacement fields contained within a format string to define how individual values are presented (see Format string syntax, f-strings, and t-strings). They can also be passed directly to the built-in format() function. Each formattable type may define how the format specification …",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "__format__(format_spec, /)",
+          "url": "https://devdocs.io/python~3.15/library/fractions",
+          "snippet": "__format__(format_spec, /) — Provides support for formatting of Fraction instances via the str.format() method, the format() built-in function, or Formatted string literals. If the format_spec format specification string does not end with one of the presentation types 'e', 'E', 'f', 'F', 'g', 'G' or '%' then formatting follows the general rules for fill, al…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "format",
+          "url": "https://docs.python.org/3/library/string.html",
+          "snippet": "Format specification mini-language¶ — The width is a decimal integer defining the minimum total field width, including any prefixes, separators, and other formatting characters. If not specified, then the field width will be determined by the content."
+        },
+        {
+          "title": "Text Processing Services",
+          "url": "https://devdocs.io/python~3.15/library/text",
+          "snippet": "Text Processing Services — The modules described in this chapter provide a wide range of string manipulation operations and other text processing services. The codecs module described under Binary Data Services is also highly relevant to text processing. In addition, see the documentation for Python’s built-in string type in Text Sequence Type — str. string…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Data model",
+          "url": "https://devdocs.io/python~3.15/reference/datamodel",
+          "snippet": "object.__format__(self, format_spec) — Called by the format() built-in function, and by extension, evaluation of formatted string literals and the str.format() method, to produce a “formatted” string representation of an object. The format_spec argument is a string that contains a description of the formatting options desired. The interpretation of the form…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 37,
+      "checklist_command": "qs python f string debugging",
+      "executed_command": "/tmp/qs-gate/release/qs --json python f string debugging",
+      "expected": "Self-documenting f-string expressions using `=`",
+      "test": "Maps informal wording to f-string syntax.",
+      "exit_code": 0,
+      "duration_seconds": 0.038684,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Self-documenting f-string expressions",
+          "url": "https://docs.python.org/3/reference/lexical_analysis.html#f-strings",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 38,
+      "checklist_command": "qs python FileNotFoundError",
+      "executed_command": "/tmp/qs-gate/release/qs --json python FileNotFoundError",
+      "expected": "Built-in `FileNotFoundError` exception",
+      "test": "Tests exact CamelCase exception retrieval.",
+      "exit_code": 0,
+      "duration_seconds": 0.277533,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "FileNotFoundError",
+          "url": "https://devdocs.io/python~3.15/builtins/exceptions#FileNotFoundError",
+          "snippet": "Raised when a file or directory is requested but doesn’t exist. Corresponds to errno ENOENT.",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "ModuleNotFoundError",
+          "url": "https://devdocs.io/python~3.15/builtins/exceptions#ModuleNotFoundError",
+          "snippet": "A subclass of ImportError which is raised by import when a module could not be located. It is also raised when None is found in sys.modules.",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "zoneinfo.ZoneInfoNotFoundError",
+          "url": "https://devdocs.io/python~3.15/library/zoneinfo#zoneinfo.ZoneInfoNotFoundError",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "importlib.metadata.PackageNotFoundError",
+          "url": "https://devdocs.io/python~3.15/library/importlib.metadata#importlib.metadata.PackageNotFoundError",
+          "meta": [
+            "Python  ·  Importing"
+          ]
+        },
+        {
+          "title": "concurrent.interpreters.InterpreterNotFoundError",
+          "url": "https://devdocs.io/python~3.15/library/concurrent.interpreters#concurrent.interpreters.InterpreterNotFoundError",
+          "meta": [
+            "Python  ·  Concurrent Execution"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 39,
+      "checklist_command": "qs python ExceptionGroup",
+      "executed_command": "/tmp/qs-gate/release/qs --json python ExceptionGroup",
+      "expected": "Built-in `ExceptionGroup`",
+      "test": "Finds a modern CamelCase exception container.",
+      "exit_code": 0,
+      "duration_seconds": 0.190337,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "ExceptionGroup",
+          "url": "https://devdocs.io/python~3.15/builtins/exceptions#ExceptionGroup",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "BaseExceptionGroup",
+          "url": "https://devdocs.io/python~3.15/builtins/exceptions#BaseExceptionGroup",
+          "snippet": "Both of these exception types wrap the exceptions in the sequence excs. The msg parameter must be a string. The difference between the two classes is that BaseExceptionGroup extends BaseException and it can wrap any exception, while ExceptionGroup extends Exception and it can only wrap subclasses of Exception. This de…",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "BaseExceptionGroup.message",
+          "url": "https://devdocs.io/python~3.15/builtins/exceptions#BaseExceptionGroup.message",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "BaseExceptionGroup.split()",
+          "url": "https://devdocs.io/python~3.15/builtins/exceptions#BaseExceptionGroup.split",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "BaseExceptionGroup.derive()",
+          "url": "https://devdocs.io/python~3.15/builtins/exceptions#BaseExceptionGroup.derive",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 40,
+      "checklist_command": "qs python property setter",
+      "executed_command": "/tmp/qs-gate/release/qs --json python property setter",
+      "expected": "`property` and its `setter()` decorator",
+      "test": "Maps a two-word query to descriptor APIs.",
+      "exit_code": 0,
+      "duration_seconds": 0.16989,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "property.setter()",
+          "url": "https://devdocs.io/python~3.15/builtins/functions#property.setter",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "property",
+          "url": "https://devdocs.io/python~3.15/builtins/functions#property",
+          "snippet": "fget is a function for getting an attribute value. fset is a function for setting an attribute value. fdel is a function for deleting an attribute value. And doc creates a docstring for the attribute.",
+          "meta": [
+            "Python  ·  Basics",
+            "class C:\n    def __init__(self):\n        self._x = None\n\n    def getx(self):\n        return self._x\n\n    def setx(self, value):\n        self._x = value\n\n    def delx(self):\n        del self._x\n\n    x = property(getx, setx, delx, \"I'm the 'x' property.\")"
+          ]
+        },
+        {
+          "title": "xml.sax.handler.property_xml_string",
+          "url": "https://devdocs.io/python~3.15/library/xml.sax.handler#xml.sax.handler.property_xml_string",
+          "meta": [
+            "Python  ·  Structured Markup"
+          ]
+        },
+        {
+          "title": "c.PyObject_Str()",
+          "url": "https://devdocs.io/python~3.15/c-api/object#c.PyObject_Str",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        },
+        {
+          "title": "c.PyRun_String()",
+          "url": "https://devdocs.io/python~3.15/c-api/veryhigh#c.PyRun_String",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 41,
+      "checklist_command": "qs python pathlib.Path.read_text",
+      "executed_command": "/tmp/qs-gate/release/qs --json python pathlib.Path.read_text",
+      "expected": "`Path.read_text()`",
+      "test": "Tests a fully qualified dotted API.",
+      "exit_code": 0,
+      "duration_seconds": 0.274452,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "pathlib.Path.read_text()",
+          "url": "https://devdocs.io/python~3.15/library/pathlib#pathlib.Path.read_text",
+          "snippet": "Return the decoded contents of the pointed-to file as a string:",
+          "meta": [
+            "Python  ·  File & Directory Access",
+            ">>> p = Path('my_text_file')\n>>> p.write_text('Text file contents')\n18\n>>> p.read_text()\n'Text file contents'"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 42,
+      "checklist_command": "qs python pathlib.Path.glob",
+      "executed_command": "/tmp/qs-gate/release/qs --json python pathlib.Path.glob",
+      "expected": "`Path.glob()`",
+      "test": "Separates another method on the same qualified class.",
+      "exit_code": 0,
+      "duration_seconds": 0.227798,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "pathlib.Path.glob()",
+          "url": "https://devdocs.io/python~3.15/library/pathlib#pathlib.Path.glob",
+          "snippet": "Glob the given relative pattern in the directory represented by this path, yielding all matching files (of any kind):",
+          "meta": [
+            "Python  ·  File & Directory Access",
+            ">>> sorted(Path('.').glob('*.py'))\n[PosixPath('pathlib.py'), PosixPath('setup.py'), PosixPath('test_pathlib.py')]\n>>> sorted(Path('.').glob('*/*.py'))\n[PosixPath('docs/conf.py')]\n>>> sorted(Path('.').glob('**/*.py'))\n[PosixPath('build/lib/pathlib.py'),\n PosixPath('docs/conf.py'),\n PosixPath('pathlib.py'),\n PosixPath('setup.py'),\n PosixPath('test_pathlib.py')]"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 43,
+      "checklist_command": "qs python expand home directory",
+      "executed_command": "/tmp/qs-gate/release/qs --json python expand home directory",
+      "expected": "`os.path.expanduser()`",
+      "test": "Maps a filesystem task to a qualified function.",
+      "exit_code": 0,
+      "duration_seconds": 0.028561,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "os.path.expanduser",
+          "url": "https://docs.python.org/3/library/os.path.html#os.path.expanduser",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 44,
+      "checklist_command": "qs python environment variables",
+      "executed_command": "/tmp/qs-gate/release/qs --json python environment variables",
+      "expected": "`os.environ`",
+      "test": "Finds a mapping API from a plural natural term.",
+      "exit_code": 0,
+      "duration_seconds": 0.020728,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "os.environ",
+          "url": "https://docs.python.org/3/library/os.html#os.environ",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 45,
+      "checklist_command": "qs python sys.argv",
+      "executed_command": "/tmp/qs-gate/release/qs --json python sys.argv",
+      "expected": "`sys.argv`",
+      "test": "Tests an exact module-qualified data attribute.",
+      "exit_code": 0,
+      "duration_seconds": 0.150433,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "sys.argv",
+          "url": "https://devdocs.io/python~3.15/library/sys#sys.argv",
+          "snippet": "The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string '-c'. If no script name was passed to the Pyt…",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "sys.orig_argv",
+          "url": "https://devdocs.io/python~3.15/library/sys#sys.orig_argv",
+          "snippet": "The list of the original command line arguments passed to the Python executable.",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "c.PySys_SetArgv()",
+          "url": "https://devdocs.io/python~3.15/c-api/interp-lifecycle#c.PySys_SetArgv",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        },
+        {
+          "title": "c.PySys_SetArgvEx()",
+          "url": "https://devdocs.io/python~3.15/c-api/interp-lifecycle#c.PySys_SetArgvEx",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 46,
+      "checklist_command": "qs python sys.path",
+      "executed_command": "/tmp/qs-gate/release/qs --json python sys.path",
+      "expected": "`sys.path`",
+      "test": "Distinguishes a nearby qualified attribute from `argv`.",
+      "exit_code": 0,
+      "duration_seconds": 0.166,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "sys.path",
+          "url": "https://devdocs.io/python~3.15/library/sys#sys.path",
+          "snippet": "A list of strings that specifies the search path for modules. Initialized from the environment variable PYTHONPATH, plus an installation-dependent default.",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "sys.path_hooks",
+          "url": "https://devdocs.io/python~3.15/library/sys#sys.path_hooks",
+          "snippet": "A list of callables that take a path argument to try to create a finder for the path. If a finder can be created, it is to be returned by the callable, else raise ImportError.",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "sys.path_importer_cache",
+          "url": "https://devdocs.io/python~3.15/library/sys#sys.path_importer_cache",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "sys.meta_path",
+          "url": "https://devdocs.io/python~3.15/library/sys#sys.meta_path",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "test.support.import_helper.DirsOnSysPath",
+          "url": "https://devdocs.io/python~3.15/library/test#test.support.import_helper.DirsOnSysPath",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 47,
+      "checklist_command": "qs python argparse subcommands",
+      "executed_command": "/tmp/qs-gate/release/qs --json python argparse subcommands",
+      "expected": "`argparse` subparsers via `add_subparsers()`",
+      "test": "Finds a feature nested in a large module.",
+      "exit_code": 0,
+      "duration_seconds": 0.017495,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "argparse.add_subparsers",
+          "url": "https://docs.python.org/3/library/argparse.html#sub-commands",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 48,
+      "checklist_command": "qs python json.dumps",
+      "executed_command": "/tmp/qs-gate/release/qs --json python json.dumps",
+      "expected": "`json.dumps()`",
+      "test": "Tests exact serialization-function lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.210158,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "json.dumps()",
+          "url": "https://devdocs.io/python~3.15/library/json#json.dumps",
+          "snippet": "Serialize obj to a JSON formatted str using this conversion table. The arguments have the same meaning as in dump().",
+          "meta": [
+            "Python  ·  Internet Data"
+          ]
+        },
+        {
+          "title": "json.dump()",
+          "url": "https://devdocs.io/python~3.15/library/json#json.dump",
+          "snippet": "Serialize obj as a JSON formatted stream to fp (a .write()-supporting file-like object) using this Python-to-JSON conversion table.",
+          "meta": [
+            "Python  ·  Internet Data"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 49,
+      "checklist_command": "qs python json custom encoder",
+      "executed_command": "/tmp/qs-gate/release/qs --json python json custom encoder",
+      "expected": "`json.JSONEncoder` and `default()`",
+      "test": "Maps a task phrase to an extension API.",
+      "exit_code": 0,
+      "duration_seconds": 0.687242,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "json — JSON encoder and decoder",
+          "url": "https://devdocs.io/python~3.15/library/json",
+          "snippet": "json — JSON encoder and decoder — Source code: Lib/json/__init__.py JSON (JavaScript Object Notation), specified by RFC 7159 (which obsoletes RFC 4627) and by ECMA-404, is a lightweight data interchange format inspired by JavaScript object literal syntax (although it is not a strict subset of JavaScript [1] ). Note The term “object” in the context of JSON p…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Internet Data Handling",
+          "url": "https://devdocs.io/python~3.15/library/netdata",
+          "snippet": "Internet Data Handling — This chapter describes modules which support handling data formats commonly used on the internet. email — An email and MIME handling package email.message: Representing an email message email.parser: Parsing email messages FeedParser API Parser API Additional notes email.generator: Generating MIME documents email.policy: Policy Obje…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "json",
+          "url": "https://docs.python.org/3/library/json.html#-",
+          "snippet": "json — JSON encoder and decoder¶ — Extending JSONEncoder:"
+        },
+        {
+          "title": "Logging Cookbook",
+          "url": "https://devdocs.io/python~3.15/howto/logging-cookbook",
+          "snippet": "Custom handling of levels — Sometimes, you might want to do something slightly different from the standard handling of levels in handlers, where all levels above a threshold get processed by a handler. To do this, you need to use filters. Let’s look at a scenario where you want to arrange things as follows: Send messages of severity INFO and WARNING to sys.…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Module json",
+          "url": "https://devdocs.io/python~3.15/library/struct",
+          "snippet": "Module json — JSON encoder and decoder.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "The json module page is first and an extending-JSONEncoder result is third; useful, but JSONEncoder/default is not surfaced directly."
+    },
+    {
+      "index": 50,
+      "checklist_command": "qs python csv.DictReader",
+      "executed_command": "/tmp/qs-gate/release/qs --json python csv.DictReader",
+      "expected": "`csv.DictReader`",
+      "test": "Tests a module-qualified CamelCase class.",
+      "exit_code": 0,
+      "duration_seconds": 0.224406,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "csv.DictReader",
+          "url": "https://devdocs.io/python~3.15/library/csv#csv.DictReader",
+          "snippet": "Create an object that operates like a regular reader but maps the information in each row to a dict whose keys are given by the optional fieldnames parameter.",
+          "meta": [
+            "Python  ·  File Formats",
+            ">>> import csv\n>>> with open('names.csv', newline='') as csvfile:\n...     reader = csv.DictReader(csvfile)\n...     for row in reader:\n...         print(row['first_name'], row['last_name'])\n...\nEric Idle\nJohn Cleese\n\n>>> print(row)\n{'first_name': 'John', 'last_name': 'Cleese'}"
+          ]
+        },
+        {
+          "title": "csv.DictReader.fieldnames",
+          "url": "https://devdocs.io/python~3.15/library/csv#csv.DictReader.fieldnames",
+          "snippet": "If not passed as a parameter when creating the object, this attribute is initialized upon first access or when the first record is read from the file.",
+          "meta": [
+            "Python  ·  File Formats"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 51,
+      "checklist_command": "qs python configparser",
+      "executed_command": "/tmp/qs-gate/release/qs --json python configparser",
+      "expected": "The `configparser` module",
+      "test": "Finds configuration-file support by module name.",
+      "exit_code": 0,
+      "duration_seconds": 0.128644,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "configparser",
+          "url": "https://devdocs.io/python~3.15/library/configparser",
+          "snippet": "This module provides the ConfigParser class which implements a basic configuration language which provides a structure similar to what’s found in Microsoft Windows INI files. You can use this to write Python programs which can be customized by end users easily.",
+          "meta": [
+            "Python  ·  File Formats",
+            "[DEFAULT]\nServerAliveInterval = 45\nCompression = yes\nCompressionLevel = 9\nForwardX11 = yes\n\n[forge.example]\nUser = hg\n\n[topsecret.server.example]\nPort = 50022\nForwardX11 = no"
+          ]
+        },
+        {
+          "title": "Exceptions (configparser)",
+          "url": "https://devdocs.io/python~3.15/library/configparser#exceptions",
+          "snippet": "Base class for all other configparser exceptions.",
+          "meta": [
+            "Python  ·  File Formats"
+          ]
+        },
+        {
+          "title": "Quick Start (configparser)",
+          "url": "https://devdocs.io/python~3.15/library/configparser#quick-start",
+          "meta": [
+            "Python  ·  File Formats"
+          ]
+        },
+        {
+          "title": "Fallback Values (configparser)",
+          "url": "https://devdocs.io/python~3.15/library/configparser#fallback-values",
+          "meta": [
+            "Python  ·  File Formats"
+          ]
+        },
+        {
+          "title": "Unnamed Sections (configparser)",
+          "url": "https://devdocs.io/python~3.15/library/configparser#unnamed-sections",
+          "meta": [
+            "Python  ·  File Formats"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 52,
+      "checklist_command": "qs python tomllib.load",
+      "executed_command": "/tmp/qs-gate/release/qs --json python tomllib.load",
+      "expected": "`tomllib.load()`",
+      "test": "Tests a newer qualified standard-library API.",
+      "exit_code": 0,
+      "duration_seconds": 0.187801,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "tomllib.load()",
+          "url": "https://devdocs.io/python~3.15/library/tomllib#tomllib.load",
+          "snippet": "Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.",
+          "meta": [
+            "Python  ·  File Formats"
+          ]
+        },
+        {
+          "title": "tomllib.loads()",
+          "url": "https://devdocs.io/python~3.15/library/tomllib#tomllib.loads",
+          "snippet": "Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse_float argument has the same meaning as in load().",
+          "meta": [
+            "Python  ·  File Formats"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 53,
+      "checklist_command": "qs python pickle security",
+      "executed_command": "/tmp/qs-gate/release/qs --json python pickle security",
+      "expected": "`pickle` security warning",
+      "test": "Checks that safety guidance ranks above usage details.",
+      "exit_code": 0,
+      "duration_seconds": 0.551998,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Security Considerations",
+          "url": "https://devdocs.io/python~3.15/library/security_warnings",
+          "snippet": "Security Considerations — The following modules have specific security considerations: base64: base64 security considerations in RFC 4648 hashlib: all constructors take a “usedforsecurity” keyword-only argument disabling known insecure and blocked algorithms http.server is not suitable for production use, only implementing basic security checks. See the sec…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "makePickle(record)",
+          "url": "https://devdocs.io/python~3.15/library/logging.handlers",
+          "snippet": "makePickle(record) — Pickles the record’s attribute dictionary in binary format with a length prefix, and returns it ready for transmission across the socket. The details of this operation are equivalent to: data = pickle.dumps(record_attr_dict, 1) datalen = struct.pack('>L', len(data)) return datalen + data Note that pickles aren’t completely secure. If yo…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "pickle",
+          "url": "https://docs.python.org/3/library/pickle.html#-",
+          "snippet": "What can be pickled and unpickled?¶ — Similarly, when class instances are pickled, their class’s code and data are not pickled along with them. Only the instance data are pickled. This is done on purpose, so you can fix bugs in a class or add methods to the class and still load objects that were created with an earlier version of the class. If you plan to h…"
+        },
+        {
+          "title": "exception pickle.UnpicklingError",
+          "url": "https://devdocs.io/python~3.15/library/pickle",
+          "snippet": "exception pickle.UnpicklingError — Error raised when there is a problem unpickling an object, such as a data corruption or a security violation. It inherits from PickleError. Note that other exceptions may also be raised during unpickling, including (but not necessarily limited to) AttributeError, EOFError, ImportError, and IndexError. The pickle module exp…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "class multiprocessing.managers.BaseManager(address=None, authkey=None, serializer='pickle', ctx=None, *, shutdown_timeout=1.0)",
+          "url": "https://devdocs.io/python~3.15/library/multiprocessing",
+          "snippet": "class multiprocessing.managers.BaseManager(address=None, authkey=None, serializer='pickle', ctx=None, *, shutdown_timeout=1.0) — Create a BaseManager object. Once created one should call start() or get_server().serve_forever() to ensure that the manager object refers to a started manager process. address is the address on which the manager process listens f…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "The general Security Considerations page is first and the pickle module is third; useful official security material is present, but the exact pickle warning is not titled directly."
+    },
+    {
+      "index": 54,
+      "checklist_command": "qs python sqlite3 row factory",
+      "executed_command": "/tmp/qs-gate/release/qs --json python sqlite3 row factory",
+      "expected": "`Connection.row_factory` and `sqlite3.Row`",
+      "test": "Maps spaced terminology to related database APIs.",
+      "exit_code": 0,
+      "duration_seconds": 0.239152,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "sqlite3.Cursor.row_factory",
+          "url": "https://devdocs.io/python~3.15/library/sqlite3#sqlite3.Cursor.row_factory",
+          "snippet": "Control how a row fetched from this Cursor is represented. If None, a row is represented as a tuple. Can be set to the included sqlite3.Row; or a callable that accepts two arguments, a Cursor object and the tuple of row values, and returns a custom object representing an SQLite row.",
+          "meta": [
+            "Python  ·  Data Persistence"
+          ]
+        },
+        {
+          "title": "sqlite3.Connection.row_factory",
+          "url": "https://devdocs.io/python~3.15/library/sqlite3#sqlite3.Connection.row_factory",
+          "snippet": "The initial row_factory for Cursor objects created from this connection. Assigning to this attribute does not affect the row_factory of existing cursors belonging to this connection, only new ones. Is None by default, meaning each row is returned as a tuple.",
+          "meta": [
+            "Python  ·  Data Persistence"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 55,
+      "checklist_command": "qs python regular expression named groups",
+      "executed_command": "/tmp/qs-gate/release/qs --json python regular expression named groups",
+      "expected": "`re` named groups using `(?P<name>...)`",
+      "test": "Finds specialized syntax from a natural query.",
+      "exit_code": 0,
+      "duration_seconds": 0.037102,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Regular expression named groups",
+          "url": "https://docs.python.org/3/library/re.html#regular-expression-syntax",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 56,
+      "checklist_command": "qs python re.escape",
+      "executed_command": "/tmp/qs-gate/release/qs --json python re.escape",
+      "expected": "`re.escape()`",
+      "test": "Tests exact module-qualified regex API lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.192508,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "re.escape()",
+          "url": "https://devdocs.io/python~3.15/library/re#re.escape",
+          "snippet": "Escape special characters in pattern. This is useful if you want to match an arbitrary literal string that may have regular expression metacharacters in it. For example:",
+          "meta": [
+            "Python  ·  Text Processing",
+            ">>> print(re.escape('https://www.python.org'))\nhttps://www\\.python\\.org\n\n>>> legal_chars = string.ascii_lowercase + string.digits + \"!#$%&'*+-.^_`|~:\"\n>>> print('[%s]+' % re.escape(legal_chars))\n[abcdefghijklmnopqrstuvwxyz0123456789!\\#\\$%\\&'\\*\\+\\-\\.\\^_`\\|\\~:]+\n\n>>> operators = ['+', '-', '*', '/', '**']\n>>> print('|'.join(map(re.escape, sorted(operators, reverse=True))))\n/|\\-|\\+|\\*\\*|\\*"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 57,
+      "checklist_command": "qs python parse ISO date time",
+      "executed_command": "/tmp/qs-gate/release/qs --json python parse ISO date time",
+      "expected": "`datetime.fromisoformat()`",
+      "test": "Maps a common parsing task to its constructor.",
+      "exit_code": 0,
+      "duration_seconds": 0.02861,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "datetime.fromisoformat",
+          "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.fromisoformat",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 58,
+      "checklist_command": "qs python timezone aware datetime",
+      "executed_command": "/tmp/qs-gate/release/qs --json python timezone aware datetime",
+      "expected": "Aware `datetime` objects and `tzinfo`",
+      "test": "Retrieves a nuanced concept from natural wording.",
+      "exit_code": 0,
+      "duration_seconds": 0.024576,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Timezone-aware datetime",
+          "url": "https://docs.python.org/3/library/datetime.html#aware-and-naive-objects",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 59,
+      "checklist_command": "qs python zoneinfo.ZoneInfo",
+      "executed_command": "/tmp/qs-gate/release/qs --json python zoneinfo.ZoneInfo",
+      "expected": "`zoneinfo.ZoneInfo`",
+      "test": "Tests a qualified CamelCase time-zone class.",
+      "exit_code": 0,
+      "duration_seconds": 0.286236,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "zoneinfo.ZoneInfo",
+          "url": "https://devdocs.io/python~3.15/library/zoneinfo#zoneinfo.ZoneInfo",
+          "snippet": "A concrete datetime.tzinfo subclass that represents an IANA time zone specified by the string key. Calls to the primary constructor will always return objects that compare identically; put another way, barring cache invalidation via ZoneInfo.clear_cache(), for all values of key, the following assertion will always be …",
+          "meta": [
+            "Python  ·  Data Types",
+            "a = ZoneInfo(key)\nb = ZoneInfo(key)\nassert a is b"
+          ]
+        },
+        {
+          "title": "zoneinfo.ZoneInfo.key",
+          "url": "https://devdocs.io/python~3.15/library/zoneinfo#zoneinfo.ZoneInfo.key",
+          "snippet": "This is a read-only attribute that returns the value of key passed to the constructor, which should be a lookup key in the IANA time zone database (e.g. America/New_York, Europe/Paris or Asia/Tokyo).",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "zoneinfo.ZoneInfo.no_cache()",
+          "url": "https://devdocs.io/python~3.15/library/zoneinfo#zoneinfo.ZoneInfo.no_cache",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "zoneinfo.ZoneInfo.from_file()",
+          "url": "https://devdocs.io/python~3.15/library/zoneinfo#zoneinfo.ZoneInfo.from_file",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "zoneinfo.ZoneInfo.clear_cache()",
+          "url": "https://devdocs.io/python~3.15/library/zoneinfo#zoneinfo.ZoneInfo.clear_cache",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 60,
+      "checklist_command": "qs python time.monotonic",
+      "executed_command": "/tmp/qs-gate/release/qs --json python time.monotonic",
+      "expected": "`time.monotonic()`",
+      "test": "Finds the correct clock for elapsed-time measurement.",
+      "exit_code": 0,
+      "duration_seconds": 0.187416,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "time.monotonic()",
+          "url": "https://devdocs.io/python~3.15/library/time#time.monotonic",
+          "snippet": "Return the value (in fractional seconds) of a monotonic clock, i.e. a clock that cannot go backwards. The clock is not affected by system clock updates. The reference point of the returned value is undefined, so that only the difference between the results of two calls is valid.",
+          "meta": [
+            "Python  ·  Operating System"
+          ]
+        },
+        {
+          "title": "time.monotonic_ns()",
+          "url": "https://devdocs.io/python~3.15/library/time#time.monotonic_ns",
+          "snippet": "Similar to monotonic(), but return time as nanoseconds.",
+          "meta": [
+            "Python  ·  Operating System"
+          ]
+        },
+        {
+          "title": "c.PyTime_Monotonic()",
+          "url": "https://devdocs.io/python~3.15/c-api/time#c.PyTime_Monotonic",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        },
+        {
+          "title": "time.CLOCK_MONOTONIC",
+          "url": "https://devdocs.io/python~3.15/library/time#time.CLOCK_MONOTONIC",
+          "meta": [
+            "Python  ·  Operating System"
+          ]
+        },
+        {
+          "title": "c.PyTime_MonotonicRaw()",
+          "url": "https://devdocs.io/python~3.15/c-api/time#c.PyTime_MonotonicRaw",
+          "meta": [
+            "Python  ·  Python/C API"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 61,
+      "checklist_command": "qs python collections.defaultdict",
+      "executed_command": "/tmp/qs-gate/release/qs --json python collections.defaultdict",
+      "expected": "`collections.defaultdict`",
+      "test": "Tests a qualified container type.",
+      "exit_code": 0,
+      "duration_seconds": 0.253916,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "collections.defaultdict",
+          "url": "https://devdocs.io/python~3.15/library/collections#collections.defaultdict",
+          "snippet": "Return a new dictionary-like object. defaultdict is a subclass of the built-in dict class. It overrides one method and adds one writable instance variable. The remaining functionality is the same as for the dict class and is not documented here.",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "collections.defaultdict.__missing__()",
+          "url": "https://devdocs.io/python~3.15/library/collections#collections.defaultdict.__missing__",
+          "snippet": "If the default_factory attribute is None, this raises a KeyError exception with the key as argument.",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "collections.defaultdict.default_factory",
+          "url": "https://devdocs.io/python~3.15/library/collections#collections.defaultdict.default_factory",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "collections.UserDict",
+          "url": "https://devdocs.io/python~3.15/library/collections#collections.UserDict",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "collections.OrderedDict",
+          "url": "https://devdocs.io/python~3.15/library/collections#collections.OrderedDict",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 62,
+      "checklist_command": "qs python collections.Counter.most_common",
+      "executed_command": "/tmp/qs-gate/release/qs --json python collections.Counter.most_common",
+      "expected": "`Counter.most_common()`",
+      "test": "Tests a deeply qualified method query.",
+      "exit_code": 0,
+      "duration_seconds": 0.367345,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "collections.Counter.most_common()",
+          "url": "https://devdocs.io/python~3.15/library/collections#collections.Counter.most_common",
+          "snippet": "Return a list of the n most common elements and their counts from the most common to the least. If n is omitted or None, most_common() returns all elements in the counter. Elements with equal counts are ordered in the order first encountered:",
+          "meta": [
+            "Python  ·  Data Types",
+            ">>> Counter('abracadabra').most_common(3)\n[('a', 5), ('b', 2), ('r', 2)]"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 63,
+      "checklist_command": "qs python collections.ChainMap",
+      "executed_command": "/tmp/qs-gate/release/qs --json python collections.ChainMap",
+      "expected": "`collections.ChainMap`",
+      "test": "Finds a CamelCase collections abstraction.",
+      "exit_code": 0,
+      "duration_seconds": 0.461815,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "collections.ChainMap",
+          "url": "https://devdocs.io/python~3.15/library/collections#collections.ChainMap",
+          "snippet": "A ChainMap groups multiple dicts or other mappings together to create a single, updateable view. If no maps are specified, a single empty dictionary is provided so that a new chain always has at least one mapping.",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "collections.ChainMap.maps",
+          "url": "https://devdocs.io/python~3.15/library/collections#collections.ChainMap.maps",
+          "snippet": "A user updateable list of mappings. The list is ordered from first-searched to last-searched. It is the only stored state and can be modified to change which mappings are searched. The list should always contain at least one mapping.",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "collections.ChainMap.parents",
+          "url": "https://devdocs.io/python~3.15/library/collections#collections.ChainMap.parents",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "collections.ChainMap.new_child()",
+          "url": "https://devdocs.io/python~3.15/library/collections#collections.ChainMap.new_child",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "ChainMap objects (collections)",
+          "url": "https://devdocs.io/python~3.15/library/collections#chainmap-objects",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 64,
+      "checklist_command": "qs python heapq.nlargest",
+      "executed_command": "/tmp/qs-gate/release/qs --json python heapq.nlargest",
+      "expected": "`heapq.nlargest()`",
+      "test": "Tests qualified top-N selection API lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.209468,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "heapq.nlargest()",
+          "url": "https://devdocs.io/python~3.15/library/heapq#heapq.nlargest",
+          "snippet": "Return a list with the n largest elements from the dataset defined by iterable. key, if provided, specifies a function of one argument that is used to extract a comparison key from each element in iterable (for example, key=str.lower). Equivalent to: sorted(iterable, key=key, reverse=True)[:n].",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 65,
+      "checklist_command": "qs python bisect.insort",
+      "executed_command": "/tmp/qs-gate/release/qs --json python bisect.insort",
+      "expected": "`bisect.insort()`",
+      "test": "Finds sorted insertion rather than binary search.",
+      "exit_code": 0,
+      "duration_seconds": 0.180198,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "bisect.insort()",
+          "url": "https://devdocs.io/python~3.15/library/bisect#bisect.insort",
+          "snippet": "Similar to insort_left(), but inserting x in a after any existing entries of x.",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "bisect.insort_left()",
+          "url": "https://devdocs.io/python~3.15/library/bisect#bisect.insort_left",
+          "snippet": "This function first runs bisect_left() to locate an insertion point. Next, it runs the insert() method on a to insert x at the appropriate position to maintain sort order.",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "bisect.insort_right()",
+          "url": "https://devdocs.io/python~3.15/library/bisect#bisect.insort_right",
+          "meta": [
+            "Python  ·  Data Types"
+          ]
+        },
+        {
+          "title": "int.bit_count()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#int.bit_count",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        },
+        {
+          "title": "int.bit_length()",
+          "url": "https://devdocs.io/python~3.15/builtins/stdtypes#int.bit_length",
+          "meta": [
+            "Python  ·  Basics"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 66,
+      "checklist_command": "qs python itertools.zip_longest",
+      "executed_command": "/tmp/qs-gate/release/qs --json python itertools.zip_longest",
+      "expected": "`itertools.zip_longest()`",
+      "test": "Tests a qualified snake_case identifier.",
+      "exit_code": 0,
+      "duration_seconds": 0.388086,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "itertools.zip_longest()",
+          "url": "https://devdocs.io/python~3.15/library/itertools#itertools.zip_longest",
+          "snippet": "Make an iterator that aggregates elements from each of the iterables.",
+          "meta": [
+            "Python  ·  Functional Programming",
+            "def zip_longest(*iterables, fillvalue=None):\n    # zip_longest('ABCD', 'xy', fillvalue='-') → Ax By C- D-\n\n    iterators = list(map(iter, iterables))\n    num_active = len(iterators)\n    if not num_active:\n        return\n\n    while True:\n        values = []\n        for i, iterator in enumerate(iterators):\n            try:\n                value = next(iterator)\n            except StopIteration:\n                num_active -= 1\n                if not num_active:\n                    return\n                iterators[i] = repeat(fillvalue)\n                value = fillvalue\n            values.append(value)\n        yield tuple(values)"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 67,
+      "checklist_command": "qs python itertools.groupby",
+      "executed_command": "/tmp/qs-gate/release/qs --json python itertools.groupby",
+      "expected": "`itertools.groupby()`",
+      "test": "Finds grouping semantics in the iterator toolkit.",
+      "exit_code": 0,
+      "duration_seconds": 0.246294,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "itertools.groupby()",
+          "url": "https://devdocs.io/python~3.15/library/itertools#itertools.groupby",
+          "snippet": "Make an iterator that returns consecutive keys and groups from the iterable. The key is a function computing a key value for each element. If not specified or is None, key defaults to an identity function and returns the element unchanged. Generally, the iterable needs to already be sorted on the same key function.",
+          "meta": [
+            "Python  ·  Functional Programming",
+            "groups = []\nuniquekeys = []\ndata = sorted(data, key=keyfunc)\nfor k, g in groupby(data, keyfunc):\n    groups.append(list(g))      # Store group iterator as a list\n    uniquekeys.append(k)"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 68,
+      "checklist_command": "qs python functools.lru_cache",
+      "executed_command": "/tmp/qs-gate/release/qs --json python functools.lru_cache",
+      "expected": "`functools.lru_cache()`",
+      "test": "Tests a common qualified decorator with an acronym.",
+      "exit_code": 0,
+      "duration_seconds": 0.329175,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "functools.lru_cache()",
+          "url": "https://devdocs.io/python~3.15/library/functools#functools.lru_cache",
+          "snippet": "Decorator to wrap a function with a memoizing callable that saves up to the maxsize most recent calls. It can save time when an expensive or I/O bound function is periodically called with the same arguments.",
+          "meta": [
+            "Python  ·  Functional Programming",
+            "@lru_cache\ndef count_vowels(word):\n    return sum(word.count(vowel) for vowel in 'AEIOUaeiou')"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 69,
+      "checklist_command": "qs python functools.partial",
+      "executed_command": "/tmp/qs-gate/release/qs --json python functools.partial",
+      "expected": "`functools.partial()`",
+      "test": "Retrieves the callable argument-binding API.",
+      "exit_code": 0,
+      "duration_seconds": 0.413559,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "functools.partial()",
+          "url": "https://devdocs.io/python~3.15/library/functools#functools.partial",
+          "snippet": "Return a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords. If more arguments are supplied to the call, they are appended to args. If additional keyword arguments are supplied, they extend and override keywords. Roughly equivalent to:",
+          "meta": [
+            "Python  ·  Functional Programming",
+            "def partial(func, /, *args, **keywords):\n    def newfunc(*more_args, **more_keywords):\n        return func(*args, *more_args, **(keywords | more_keywords))\n    newfunc.func = func\n    newfunc.args = args\n    newfunc.keywords = keywords\n    return newfunc"
+          ]
+        },
+        {
+          "title": "functools.partial.args",
+          "url": "https://devdocs.io/python~3.15/library/functools#functools.partial.args",
+          "snippet": "The leftmost positional arguments that will be prepended to the positional arguments provided to a partial object call.",
+          "meta": [
+            "Python  ·  Functional Programming"
+          ]
+        },
+        {
+          "title": "functools.partial.func",
+          "url": "https://devdocs.io/python~3.15/library/functools#functools.partial.func",
+          "meta": [
+            "Python  ·  Functional Programming"
+          ]
+        },
+        {
+          "title": "functools.partial.keywords",
+          "url": "https://devdocs.io/python~3.15/library/functools#functools.partial.keywords",
+          "meta": [
+            "Python  ·  Functional Programming"
+          ]
+        },
+        {
+          "title": "partial Objects (functools)",
+          "url": "https://devdocs.io/python~3.15/library/functools#partial-objects",
+          "meta": [
+            "Python  ·  Functional Programming"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 70,
+      "checklist_command": "qs python operator.itemgetter",
+      "executed_command": "/tmp/qs-gate/release/qs --json python operator.itemgetter",
+      "expected": "`operator.itemgetter()`",
+      "test": "Finds a helper often used as a sort key.",
+      "exit_code": 0,
+      "duration_seconds": 0.21404,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "operator.itemgetter()",
+          "url": "https://devdocs.io/python~3.15/library/operator#operator.itemgetter",
+          "snippet": "Return a callable object that fetches item from its operand using the operand’s __getitem__() method. If multiple items are specified, returns a tuple of lookup values. For example:",
+          "meta": [
+            "Python  ·  Functional Programming",
+            "def itemgetter(*items):\n    if len(items) == 1:\n        item = items[0]\n        def g(obj):\n            return obj[item]\n    else:\n        def g(obj):\n            return tuple(obj[item] for item in items)\n    return g"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 71,
+      "checklist_command": "qs python math.isclose",
+      "executed_command": "/tmp/qs-gate/release/qs --json python math.isclose",
+      "expected": "`math.isclose()`",
+      "test": "Tests qualified floating-point comparison lookup.",
+      "exit_code": 0,
+      "duration_seconds": 0.159334,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "math.isclose()",
+          "url": "https://devdocs.io/python~3.15/library/math#math.isclose",
+          "snippet": "Return True if the values a and b are close to each other and False otherwise.",
+          "meta": [
+            "Python  ·  Numeric & Mathematical"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 72,
+      "checklist_command": "qs python calculate median",
+      "executed_command": "/tmp/qs-gate/release/qs --json python calculate median",
+      "expected": "`statistics.median()`",
+      "test": "Maps a simple analysis task to the statistics module.",
+      "exit_code": 0,
+      "duration_seconds": 0.606104,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "statistics.median(data)",
+          "url": "https://devdocs.io/python~3.15/library/statistics",
+          "snippet": "statistics.median(data) — Return the median (middle value) of numeric data, using the common “mean of middle two” method. If data is empty, StatisticsError is raised. data can be a sequence or iterable. The median is a robust measure of central location and is less affected by the presence of outliers. When the number of data points is odd, the middle data …",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Other Applications",
+          "url": "https://devdocs.io/python~3.15/library/heapq",
+          "snippet": "Other Applications — Medians are a measure of central tendency for a set of numbers. In distributions skewed by outliers, the median provides a more stable estimate than an average (arithmetic mean). A running median is an online algorithm that updates continuously as new data arrives. A running median can be efficiently implemented by balancing two heaps, …",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "median",
+          "url": "https://docs.python.org/3/library/statistics.html",
+          "snippet": "NormalDist objects¶ — A read-only property for the median of a normal distribution."
+        },
+        {
+          "title": "Brief tour of the standard library",
+          "url": "https://devdocs.io/python~3.15/tutorial/stdlib",
+          "snippet": "10.6. Mathematics — The math module gives access to the underlying C library functions for floating-point math: >>> import math >>> math.cos(math.pi / 4) 0.70710678118654757 >>> math.log(1024, 2) 10.0 The random module provides tools for making random selections: >>> import random >>> random.choice(['apple', 'pear', 'banana']) 'apple' >>> random.sample(rang…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Simple hashing",
+          "url": "https://devdocs.io/python~3.15/library/hashlib",
+          "snippet": "Simple hashing — To calculate hash of some data, you should first construct a hash object by calling the appropriate constructor function (blake2b() or blake2s()), then update it with the data by calling update() on the object, and, finally, get the digest out of the object by calling digest() (or hexdigest() for hex-encoded string). >>> from hashlib import…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 73,
+      "checklist_command": "qs python random choices weights",
+      "executed_command": "/tmp/qs-gate/release/qs --json python random choices weights",
+      "expected": "`random.choices(..., weights=...)`",
+      "test": "Finds weighted sampling from multiword intent.",
+      "exit_code": 0,
+      "duration_seconds": 0.798357,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "random.choices(population, weights=None, *, cum_weights=None, k=1)",
+          "url": "https://devdocs.io/python~3.15/library/random",
+          "snippet": "random.choices(population, weights=None, *, cum_weights=None, k=1) — Return a k sized list of elements chosen from the population with replacement. If the population is empty, raises IndexError. If a weights sequence is specified, selections are made according to the relative weights. Alternatively, if a cum_weights sequence is given, the selections are mad…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "statistics.fmean(data, weights=None)",
+          "url": "https://devdocs.io/python~3.15/library/statistics",
+          "snippet": "statistics.fmean(data, weights=None) — Convert data to floats and compute the arithmetic mean. This runs faster than the mean() function and it always returns a float. The data may be a sequence or iterable. If the input dataset is empty, raises a StatisticsError. >>> fmean([3.5, 4.0, 5.25]) 4.25 Optional weighting is supported. For example, a professor ass…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "choices",
+          "url": "https://docs.python.org/3/library/random.html",
+          "snippet": "random — Generate pseudo-random numbers¶ — The global random number generator and instances of Random are thread-safe. However, in the free-threaded build, concurrent calls to the global generator or to the same instance of Random may encounter contention and poor performance. Consider using separate instances of Random per thread instead."
+        },
+        {
+          "title": "Option.choices",
+          "url": "https://devdocs.io/python~3.15/library/optparse",
+          "snippet": "Option.choices — For options of type \"choice\", the list of strings the user may choose from.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "weight",
+          "url": "https://devdocs.io/python~3.15/library/tkinter",
+          "snippet": "weight — An integer setting how much of any extra space is apportioned to the column. A weight of 0 keeps the column at its requested size, and a column of weight two grows twice as fast as a column of weight one.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 74,
+      "checklist_command": "qs python secrets.token_urlsafe",
+      "executed_command": "/tmp/qs-gate/release/qs --json python secrets.token_urlsafe",
+      "expected": "`secrets.token_urlsafe()`",
+      "test": "Tests a qualified snake_case security API.",
+      "exit_code": 0,
+      "duration_seconds": 0.329097,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "secrets.token_urlsafe()",
+          "url": "https://devdocs.io/python~3.15/library/secrets#secrets.token_urlsafe",
+          "snippet": "Return a random URL-safe text string, containing nbytes random bytes. The text is Base64 encoded, so on average each byte results in approximately 1.3 characters.",
+          "meta": [
+            "Python  ·  Cryptography",
+            ">>> token_urlsafe(16)\n'Drmhze6EPcv0fN_81Bj-nA'"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 75,
+      "checklist_command": "qs python hashlib.sha256",
+      "executed_command": "/tmp/qs-gate/release/qs --json python hashlib.sha256",
+      "expected": "`hashlib.sha256()`",
+      "test": "Finds a named hash constructor exactly.",
+      "exit_code": 0,
+      "duration_seconds": 0.235991,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "hashlib.sha256()",
+          "url": "https://devdocs.io/python~3.15/library/hashlib#hashlib.sha256",
+          "meta": [
+            "Python  ·  Cryptography"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 76,
+      "checklist_command": "qs python uuid.uuid4",
+      "executed_command": "/tmp/qs-gate/release/qs --json python uuid.uuid4",
+      "expected": "`uuid.uuid4()`",
+      "test": "Tests a compact module-qualified versioned API.",
+      "exit_code": 0,
+      "duration_seconds": 0.156559,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "uuid.uuid4()",
+          "url": "https://devdocs.io/python~3.15/library/uuid#uuid.uuid4",
+          "snippet": "Generate a random UUID in a cryptographically-secure method according to RFC 9562, §5.4.",
+          "meta": [
+            "Python  ·  Internet"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 77,
+      "checklist_command": "qs python base64 urlsafe encoding",
+      "executed_command": "/tmp/qs-gate/release/qs --json python base64 urlsafe encoding",
+      "expected": "`base64.urlsafe_b64encode()`",
+      "test": "Maps descriptive wording to a snake_case function.",
+      "exit_code": 0,
+      "duration_seconds": 0.974376,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "base64.urlsafe_b64encode(s, *, padded=True)",
+          "url": "https://devdocs.io/python~3.15/library/base64",
+          "snippet": "base64.urlsafe_b64encode(s, *, padded=True) — Encode bytes-like object s using the URL- and filesystem-safe alphabet, which substitutes - instead of + and _ instead of / in the standard Base64 alphabet, and return the encoded bytes. The result can still contain = if padded is true (default). Changed in version 3.15: Added the padded parameter.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "binascii.URLSAFE_BASE64_ALPHABET",
+          "url": "https://devdocs.io/python~3.15/library/binascii",
+          "snippet": "binascii.URLSAFE_BASE64_ALPHABET — The “URL and filename safe” Base 64 alphabet according to RFC 4648. Added in version 3.15.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "base64",
+          "url": "https://docs.python.org/3/library/base64.html#-",
+          "snippet": "base64 — Base16, Base32, Base64, Base85 Data Encodings¶ — The legacy interface does not support decoding from strings, but it does provide functions for encoding and decoding to and from file objects. It only supports the Base64 standard alphabet, and it adds newlines every 76 characters as per RFC 2045. Note that if you are looking for RFC 2045 support you…"
+        },
+        {
+          "title": "secrets.token_urlsafe(nbytes=None)",
+          "url": "https://devdocs.io/python~3.15/library/secrets",
+          "snippet": "secrets.token_urlsafe(nbytes=None) — Return a random URL-safe text string, containing nbytes random bytes. The text is Base64 encoded, so on average each byte results in approximately 1.3 characters. If nbytes is not specified or None, DEFAULT_ENTROPY is used instead. >>> token_urlsafe(16) 'Drmhze6EPcv0fN_81Bj-nA'",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "email.charset: Representing character sets",
+          "url": "https://devdocs.io/python~3.15/library/email.charset",
+          "snippet": "header_encoding — If the character set must be encoded before it can be used in an email header, this attribute will be set to charset.QP (for quoted-printable), charset.BASE64 (for base64 encoding), or charset.SHORTEST for the shortest of QP or BASE64 encoding. Otherwise, it will be None.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 78,
+      "checklist_command": "qs python build URL query string",
+      "executed_command": "/tmp/qs-gate/release/qs --json python build URL query string",
+      "expected": "`urllib.parse.urlencode()`",
+      "test": "Maps a web task to a nested module API.",
+      "exit_code": 0,
+      "duration_seconds": 0.038105,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "urllib.parse.urlencode",
+          "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlencode",
+          "snippet": "Official Python documentation for this task."
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 79,
+      "checklist_command": "qs python logging.basicConfig",
+      "executed_command": "/tmp/qs-gate/release/qs --json python logging.basicConfig",
+      "expected": "`logging.basicConfig()`",
+      "test": "Tests a qualified mixed-case function name.",
+      "exit_code": 0,
+      "duration_seconds": 0.363816,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "logging.basicConfig()",
+          "url": "https://devdocs.io/python~3.15/library/logging#logging.basicConfig",
+          "snippet": "Does basic configuration for the logging system by either creating a StreamHandler with a default Formatter or using the given formatter instance, and adding it to the root logger. The functions debug(), info(), warning(), error() and critical() will call basicConfig() automatically if no handlers are defined for the …",
+          "meta": [
+            "Python  ·  Logging"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 80,
+      "checklist_command": "qs python create temporary directory",
+      "executed_command": "/tmp/qs-gate/release/qs --json python create temporary directory",
+      "expected": "`tempfile.TemporaryDirectory`",
+      "test": "Maps natural task wording to a context manager.",
+      "exit_code": 0,
+      "duration_seconds": 0.895592,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "class tempfile.TemporaryDirectory(suffix=None, prefix=None, dir=None, ignore_cleanup_errors=False, *, delete=True)",
+          "url": "https://devdocs.io/python~3.15/library/tempfile",
+          "snippet": "class tempfile.TemporaryDirectory(suffix=None, prefix=None, dir=None, ignore_cleanup_errors=False, *, delete=True) — This class securely creates a temporary directory using the same rules as mkdtemp(). The resulting object can be used as a context manager (see Examples). On completion of the context or destruction of the temporary directory object, the newl…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "os.symlink(src, dst, target_is_directory=False, *, dir_fd=None)",
+          "url": "https://devdocs.io/python~3.15/library/os",
+          "snippet": "os.symlink(src, dst, target_is_directory=False, *, dir_fd=None) — Create a symbolic link pointing to src named dst. The src parameter refers to the target of the link (the file or directory being linked to), and dst is the name of the link being created. On Windows, a symlink represents either a file or a directory, and does not morph to the target dynamica…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "create",
+          "url": "https://docs.python.org/3/library/venv.html",
+          "snippet": "API¶ — Creates a .gitignore file within the virtual environment that causes the entire directory to be ignored by the Git source control manager."
+        },
+        {
+          "title": "File and Directory Access",
+          "url": "https://devdocs.io/python~3.15/library/filesys",
+          "snippet": "File and Directory Access — The modules described in this chapter deal with disk files and directories. For example, there are modules for reading the properties of files, manipulating paths in a portable way, and creating temporary files. The full list of modules in this chapter is: pathlib — Object-oriented filesystem paths Basic use Exceptions Pure paths…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "--create <tarfile> <source1> ... <sourceN>",
+          "url": "https://devdocs.io/python~3.15/library/tarfile",
+          "snippet": "--create <tarfile> <source1> ... <sourceN> — Create tarfile from source files.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 81,
+      "checklist_command": "qs python copy directory tree",
+      "executed_command": "/tmp/qs-gate/release/qs --json python copy directory tree",
+      "expected": "`shutil.copytree()`",
+      "test": "Finds the recursive copy API from task wording.",
+      "exit_code": 0,
+      "duration_seconds": 1.07466,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "shutil.copytree(src, dst, symlinks=False, ignore=None, copy_function=copy2, ignore_dangling_symlinks=False, dirs_exist_ok=False)",
+          "url": "https://devdocs.io/python~3.15/library/shutil",
+          "snippet": "shutil.copytree(src, dst, symlinks=False, ignore=None, copy_function=copy2, ignore_dangling_symlinks=False, dirs_exist_ok=False) — Recursively copy an entire directory tree rooted at src to a directory named dst and return the destination directory. All intermediate directories needed to contain dst will also be created by default. Permissions and times of …",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Path.copy(target, *, follow_symlinks=True, preserve_metadata=False)",
+          "url": "https://devdocs.io/python~3.15/library/pathlib",
+          "snippet": "Path.copy(target, *, follow_symlinks=True, preserve_metadata=False) — Copy this file or directory tree to the given target, and return a new Path instance pointing to target. If the source is a file, the target will be replaced if it is an existing file. If the source is a symlink and follow_symlinks is true (the default), the symlink’s target is copied. Ot…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "copy",
+          "url": "https://docs.python.org/3/library/shutil.html",
+          "snippet": "copytree example¶ — This will copy everything except .pyc files and files or directories whose name starts with tmp."
+        },
+        {
+          "title": "Module compileall",
+          "url": "https://devdocs.io/python~3.15/library/py_compile",
+          "snippet": "Module compileall — Utilities to compile all Python source files in a directory tree. &copy; 2001 Python Software FoundationLicensed under the PSF License. https://docs.python.org/3.15/library/py_compile.html",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Save Copy As…",
+          "url": "https://devdocs.io/python~3.15/library/idle",
+          "snippet": "Save Copy As… — Save the current window to different file without changing the associated file. (See Save As note above about filename extensions.)",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 82,
+      "checklist_command": "qs python deep copy object",
+      "executed_command": "/tmp/qs-gate/release/qs --json python deep copy object",
+      "expected": "`copy.deepcopy()`",
+      "test": "Maps an object-copying task to the recursive copy API.",
+      "exit_code": 0,
+      "duration_seconds": 1.005401,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "copy — Shallow and deep copy operations",
+          "url": "https://devdocs.io/python~3.15/library/copy",
+          "snippet": "copy — Shallow and deep copy operations — Source code: Lib/copy.py Assignment statements in Python do not copy objects, they create bindings between a target and an object. For collections that are mutable or contain mutable items, a copy is sometimes needed so one can change one copy without changing the other. This module provides generic shallow and deep…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "TarInfo.replace(name=..., mtime=..., mode=..., linkname=..., uid=..., gid=..., uname=..., gname=..., deep=True)",
+          "url": "https://devdocs.io/python~3.15/library/tarfile",
+          "snippet": "TarInfo.replace(name=..., mtime=..., mode=..., linkname=..., uid=..., gid=..., uname=..., gname=..., deep=True) — Added in version 3.12. Return a new copy of the TarInfo object with the given attributes changed. For example, to return a TarInfo with the group name set to 'staff', use: new_tarinfo = old_tarinfo.replace(gname='staff') By default, a deep copy …",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "__deepcopy__",
+          "url": "https://docs.python.org/3/library/copy.html",
+          "snippet": "copy — Shallow and deep copy operations¶ — Called to implement the deep copy operation; it is passed one argument, the memo dictionary. If the __deepcopy__ implementation needs to make a deep copy of a component, it should call the deepcopy() function with the component as first argument and the memo dictionary as second argument. The memo dictionary should…"
+        },
+        {
+          "title": "Module copy",
+          "url": "https://devdocs.io/python~3.15/library/pickle",
+          "snippet": "Module copy — Shallow and deep object copying.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Document.importNode(importedNode, deep)",
+          "url": "https://devdocs.io/python~3.15/library/xml.dom",
+          "snippet": "Document.importNode(importedNode, deep) — Return a copy of importedNode which belongs to this document. The original node is not removed from its document. If deep is true, the descendants of the node are copied too.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 83,
+      "checklist_command": "qs python walk directory recursively",
+      "executed_command": "/tmp/qs-gate/release/qs --json python walk directory recursively",
+      "expected": "`os.walk()`",
+      "test": "Maps filesystem intent to an iteration API.",
+      "exit_code": 0,
+      "duration_seconds": 0.352518,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "os.walk",
+          "url": "https://docs.python.org/3/library/os.html#os.walk",
+          "snippet": "Authoritative documentation for this task."
+        },
+        {
+          "title": "os.walk()",
+          "url": "https://devdocs.io/python~3.15/library/os#os.walk",
+          "snippet": "Generate the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the tree rooted at directory top (including top itself), it yields a 3-tuple (dirpath, dirnames, filenames).",
+          "meta": [
+            "Python  ·  Operating System",
+            "import os\nfrom os.path import join, getsize\nfor root, dirs, files in os.walk('python/Lib/xml'):\n    print(root, \"consumes\", end=\" \")\n    print(sum(getsize(join(root, name)) for name in files), end=\" \")\n    print(\"bytes in\", len(files), \"non-directory files\")\n    if '__pycache__' in dirs:\n        dirs.remove('__pycache__')  # don't visit __pycache__ directories"
+          ]
+        },
+        {
+          "title": "pathlib.Path.rglob()",
+          "url": "https://devdocs.io/python~3.15/library/pathlib#pathlib.Path.rglob",
+          "snippet": "Glob the given relative pattern recursively. This is like calling Path.glob() with “**/” added in front of the pattern.",
+          "meta": [
+            "Python  ·  File & Directory Access"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 84,
+      "checklist_command": "qs python run command capture output",
+      "executed_command": "/tmp/qs-gate/release/qs --json python run command capture output",
+      "expected": "`subprocess.run(..., capture_output=True)`",
+      "test": "Finds a common process task and option.",
+      "exit_code": 0,
+      "duration_seconds": 1.051913,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "subprocess.run(args, *, stdin=None, input=None, stdout=None, stderr=None, capture_output=False, shell=False, cwd=None, timeout=None, check=False, encoding=None, errors=None, text=None, env=None, universal_newlines=None, **other_popen_kwargs)",
+          "url": "https://devdocs.io/python~3.15/library/subprocess",
+          "snippet": "subprocess.run(args, *, stdin=None, input=None, stdout=None, stderr=None, capture_output=False, shell=False, cwd=None, timeout=None, check=False, encoding=None, errors=None, text=None, env=None, universal_newlines=None, **other_popen_kwargs) — Run the command described by args. Wait for command to complete, then return a CompletedProcess instance. The argum…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "The run command",
+          "url": "https://devdocs.io/python~3.15/library/profiling.sampling",
+          "snippet": "The run command — The run command launches a Python script or module and profiles it from startup: python -m profiling.sampling run script.py python -m profiling.sampling run -m mypackage.module When profiling a script, the profiler starts the target in a subprocess, waits for it to initialize, then begins collecting samples. The -m flag indicates that the …",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "run",
+          "url": "https://docs.python.org/3/library/profiling.sampling.html#cmdoption-profiling.sampling-arg-run",
+          "snippet": "The run command¶ — The run command launches a Python script or module and profiles it from startup:"
+        },
+        {
+          "title": "profiling.tracing.run(command, filename=None, sort=-1)",
+          "url": "https://devdocs.io/python~3.15/library/profiling.tracing",
+          "snippet": "profiling.tracing.run(command, filename=None, sort=-1) — Profile execution of a command and print or save the results. This function executes the command string using exec() in the __main__ module’s namespace: exec(command, __main__.__dict__, __main__.__dict__) If filename is not provided, the function creates a pstats.Stats instance and prints a summary to…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Python Initialization Configuration",
+          "url": "https://devdocs.io/python~3.15/c-api/init_config",
+          "snippet": "wchar_t *run_command — Value of the -c command line option. Used by Py_RunMain(). Default: NULL.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 85,
+      "checklist_command": "qs python concurrent.futures.ThreadPoolExecutor",
+      "executed_command": "/tmp/qs-gate/release/qs --json python concurrent.futures.ThreadPoolExecutor",
+      "expected": "`ThreadPoolExecutor`",
+      "test": "Tests a long qualified CamelCase class name.",
+      "exit_code": 0,
+      "duration_seconds": 0.433151,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "concurrent.futures.ThreadPoolExecutor",
+          "url": "https://devdocs.io/python~3.15/library/concurrent.futures#concurrent.futures.ThreadPoolExecutor",
+          "snippet": "An Executor subclass that uses a pool of at most max_workers threads to execute calls asynchronously.",
+          "meta": [
+            "Python  ·  Concurrent Execution"
+          ]
+        },
+        {
+          "title": "ThreadPoolExecutor (concurrent.futures)",
+          "url": "https://devdocs.io/python~3.15/library/concurrent.futures#threadpoolexecutor",
+          "snippet": "ThreadPoolExecutor is an Executor subclass that uses a pool of threads to execute calls asynchronously.",
+          "meta": [
+            "Python  ·  Concurrent Execution",
+            "import time\ndef wait_on_b():\n    time.sleep(5)\n    print(b.result())  # b will never complete because it is waiting on a.\n    return 5\n\ndef wait_on_a():\n    time.sleep(5)\n    print(a.result())  # a will never complete because it is waiting on b.\n    return 6\n\n\nexecutor = ThreadPoolExecutor(max_workers=2)\na = executor.submit(wait_on_b)\nb = executor.submit(wait_on_a)"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 86,
+      "checklist_command": "qs python multiprocessing Queue",
+      "executed_command": "/tmp/qs-gate/release/qs --json python multiprocessing Queue",
+      "expected": "`multiprocessing.Queue`",
+      "test": "Tests spaced class lookup within a process module.",
+      "exit_code": 0,
+      "duration_seconds": 0.271164,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "multiprocessing.Queue",
+          "url": "https://devdocs.io/python~3.15/library/multiprocessing#multiprocessing.Queue",
+          "snippet": "Returns a process shared queue implemented using a pipe and a few locks/semaphores. When a process first puts an item on the queue a feeder thread is started which transfers objects from a buffer into the pipe.",
+          "meta": [
+            "Python  ·  Concurrent Execution"
+          ]
+        },
+        {
+          "title": "multiprocessing",
+          "url": "https://devdocs.io/python~3.15/library/multiprocessing",
+          "snippet": "Availability: not Android, not iOS, not WASI.",
+          "meta": [
+            "Python  ·  Concurrent Execution",
+            "from multiprocessing import Pool\n\ndef f(x):\n    return x*x\n\nif __name__ == '__main__':\n    with Pool(5) as p:\n        print(p.map(f, [1, 2, 3]))"
+          ]
+        },
+        {
+          "title": "multiprocessing.Queue.get()",
+          "url": "https://devdocs.io/python~3.15/library/multiprocessing#multiprocessing.Queue.get",
+          "meta": [
+            "Python  ·  Concurrent Execution"
+          ]
+        },
+        {
+          "title": "multiprocessing.Queue.put()",
+          "url": "https://devdocs.io/python~3.15/library/multiprocessing#multiprocessing.Queue.put",
+          "meta": [
+            "Python  ·  Concurrent Execution"
+          ]
+        },
+        {
+          "title": "multiprocessing.Queue.full()",
+          "url": "https://devdocs.io/python~3.15/library/multiprocessing#multiprocessing.Queue.full",
+          "meta": [
+            "Python  ·  Concurrent Execution"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 87,
+      "checklist_command": "qs python threading Lock",
+      "executed_command": "/tmp/qs-gate/release/qs --json python threading Lock",
+      "expected": "`threading.Lock`",
+      "test": "Finds synchronization docs from mixed identifier wording.",
+      "exit_code": 0,
+      "duration_seconds": 0.398753,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "threading.Lock",
+          "url": "https://devdocs.io/python~3.15/library/threading#threading.Lock",
+          "snippet": "The class implementing primitive lock objects. Once a thread has acquired a lock, subsequent attempts to acquire it block, until it is released; any thread may release it.",
+          "meta": [
+            "Python  ·  Concurrent Execution"
+          ]
+        },
+        {
+          "title": "threading",
+          "url": "https://devdocs.io/python~3.15/library/threading",
+          "snippet": "This module constructs higher-level threading interfaces on top of the lower level _thread module.",
+          "meta": [
+            "Python  ·  Concurrent Execution",
+            "import threading\nimport time\n\ndef crawl(link, delay=3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks = [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads = []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t = threading.Thread(target=crawl, args=(link,), kwargs={\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()"
+          ]
+        },
+        {
+          "title": "threading.Lock.locked()",
+          "url": "https://devdocs.io/python~3.15/library/threading#threading.Lock.locked",
+          "meta": [
+            "Python  ·  Concurrent Execution"
+          ]
+        },
+        {
+          "title": "threading.Lock.acquire()",
+          "url": "https://devdocs.io/python~3.15/library/threading#threading.Lock.acquire",
+          "meta": [
+            "Python  ·  Concurrent Execution"
+          ]
+        },
+        {
+          "title": "threading.Lock.release()",
+          "url": "https://devdocs.io/python~3.15/library/threading#threading.Lock.release",
+          "meta": [
+            "Python  ·  Concurrent Execution"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 88,
+      "checklist_command": "qs python run async tasks concurrently",
+      "executed_command": "/tmp/qs-gate/release/qs --json python run async tasks concurrently",
+      "expected": "`asyncio.gather()`",
+      "test": "Maps asynchronous intent to the coordination API.",
+      "exit_code": 0,
+      "duration_seconds": 0.362349,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "Running tasks concurrently (Coroutines and tasks)",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-task#running-tasks-concurrently",
+          "snippet": "Run awaitable objects in the aws sequence concurrently.",
+          "meta": [
+            "Python  ·  Asynchronous I/O",
+            "import asyncio\n\nasync def factorial(name, number):\n    f = 1\n    for i in range(2, number + 1):\n        print(f\"Task {name}: Compute factorial({number}), currently i={i}...\")\n        await asyncio.sleep(1)\n        f *= i\n    print(f\"Task {name}: factorial({number}) = {f}\")\n    return f\n\nasync def main():\n    # Schedule three calls *concurrently*:\n    L = await asyncio.gather(\n        factorial(\"A\", 2),\n        factorial(\"B\", 3),\n        factorial(\"C\", 4),\n    )\n    print(L)\n\nasyncio.run(main())\n\n# Expected output:\n#\n#     Task A: Compute factorial(2), currently i=2...\n#     Task B: Compute factorial(3), currently i=2...\n#     Task C: Compute factorial(4), currently i=2...\n#     Task A: factorial(2) = 2\n#     Task B: Compute factorial(3), currently i=3...\n#     Task C: Compute factorial(4), currently i=3...\n#     Task B: factorial(3) = 6\n#     Task C: Compute factorial(4), currently i=4...\n#     Task C: factorial(4) = 24\n#     [2, 6, 24]"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 89,
+      "checklist_command": "qs python asyncio timeout",
+      "executed_command": "/tmp/qs-gate/release/qs --json python asyncio timeout",
+      "expected": "`asyncio.timeout()`",
+      "test": "Finds a modern async context manager from spaced input.",
+      "exit_code": 0,
+      "duration_seconds": 0.249976,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "asyncio.Timeout",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-task#asyncio.Timeout",
+          "snippet": "Return an asynchronous context manager that can be used to limit the amount of time spent waiting on something.",
+          "meta": [
+            "Python  ·  Asynchronous I/O",
+            "async def main():\n    async with asyncio.timeout(10):\n        await long_running_task()"
+          ]
+        },
+        {
+          "title": "asyncio.timeout()",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-task#asyncio.timeout",
+          "snippet": "Return an asynchronous context manager that can be used to limit the amount of time spent waiting on something.",
+          "meta": [
+            "Python  ·  Asynchronous I/O",
+            "async def main():\n    async with asyncio.timeout(10):\n        await long_running_task()"
+          ]
+        },
+        {
+          "title": "asyncio.timeout_at()",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-task#asyncio.timeout_at",
+          "meta": [
+            "Python  ·  Asynchronous I/O"
+          ]
+        },
+        {
+          "title": "asyncio.TimeoutError",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-exceptions#asyncio.TimeoutError",
+          "meta": [
+            "Python  ·  Asynchronous I/O"
+          ]
+        },
+        {
+          "title": "asyncio.Timeout.when()",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-task#asyncio.Timeout.when",
+          "meta": [
+            "Python  ·  Asynchronous I/O"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "asyncio.Timeout is first and asyncio.timeout() is second; the exact expected function is in the top three."
+    },
+    {
+      "index": 90,
+      "checklist_command": "qs python queue.PriorityQueue",
+      "executed_command": "/tmp/qs-gate/release/qs --json python queue.PriorityQueue",
+      "expected": "`queue.PriorityQueue`",
+      "test": "Tests a qualified CamelCase queue class.",
+      "exit_code": 0,
+      "duration_seconds": 0.280123,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "queue.PriorityQueue",
+          "url": "https://devdocs.io/python~3.15/library/queue#queue.PriorityQueue",
+          "snippet": "Constructor for a priority queue. maxsize is an integer that sets the upperbound limit on the number of items that can be placed in the queue. Insertion will block once this size has been reached, until queue items are consumed. If maxsize is less than or equal to zero, the queue size is infinite.",
+          "meta": [
+            "Python  ·  Concurrent Execution",
+            "from dataclasses import dataclass, field\nfrom typing import Any\n\n@dataclass(order=True)\nclass PrioritizedItem:\n    priority: int\n    item: Any=field(compare=False)"
+          ]
+        },
+        {
+          "title": "Priority Queue (Queues)",
+          "url": "https://devdocs.io/python~3.15/library/asyncio-queue#priority-queue",
+          "snippet": "A variant of Queue; retrieves entries in priority order (lowest first).",
+          "meta": [
+            "Python  ·  Asynchronous I/O"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 91,
+      "checklist_command": "qs python socket.create_connection",
+      "executed_command": "/tmp/qs-gate/release/qs --json python socket.create_connection",
+      "expected": "`socket.create_connection()`",
+      "test": "Retrieves a high-level qualified networking helper.",
+      "exit_code": 0,
+      "duration_seconds": 0.352661,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "socket.create_connection()",
+          "url": "https://devdocs.io/python~3.15/library/socket#socket.create_connection",
+          "snippet": "Connect to a TCP service listening on the internet address (a 2-tuple (host, port)), and return the socket object. This is a higher-level function than socket.connect(): if host is a non-numeric hostname, it will try to resolve it for both AF_INET and AF_INET6, and then try to connect to all possible addresses in turn…",
+          "meta": [
+            "Python  ·  Networking & Interprocess Communication"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 92,
+      "checklist_command": "qs python unittest.mock.patch",
+      "executed_command": "/tmp/qs-gate/release/qs --json python unittest.mock.patch",
+      "expected": "`unittest.mock.patch()`",
+      "test": "Tests a deeply qualified testing decorator/context manager.",
+      "exit_code": 0,
+      "duration_seconds": 0.343585,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "unittest.mock.patch()",
+          "url": "https://devdocs.io/python~3.15/library/unittest.mock#unittest.mock.patch",
+          "snippet": "patch() acts as a function decorator, class decorator or a context manager. Inside the body of the function or with statement, the target is patched with a new object. When the function/with statement exits the patch is undone.",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        },
+        {
+          "title": "unittest.mock.patch.dict()",
+          "url": "https://devdocs.io/python~3.15/library/unittest.mock#unittest.mock.patch.dict",
+          "snippet": "Patch a dictionary, or dictionary like object, and restore the dictionary to its original state after the test, where the restored dictionary is a copy of the dictionary as it was before the test.",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        },
+        {
+          "title": "unittest.mock.patch.object()",
+          "url": "https://devdocs.io/python~3.15/library/unittest.mock#unittest.mock.patch.object",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        },
+        {
+          "title": "unittest.mock.patch.stopall()",
+          "url": "https://devdocs.io/python~3.15/library/unittest.mock#unittest.mock.patch.stopall",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        },
+        {
+          "title": "unittest.mock.patch.multiple()",
+          "url": "https://devdocs.io/python~3.15/library/unittest.mock#unittest.mock.patch.multiple",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 93,
+      "checklist_command": "qs python doctest",
+      "executed_command": "/tmp/qs-gate/release/qs --json python doctest",
+      "expected": "The `doctest` module",
+      "test": "Finds executable documentation support by module name.",
+      "exit_code": 0,
+      "duration_seconds": 0.252863,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "doctest",
+          "url": "https://devdocs.io/python~3.15/library/doctest",
+          "snippet": "The doctest module searches for pieces of text that look like interactive Python sessions, and then executes those sessions to verify that they work exactly as shown. There are several common ways to use doctest:",
+          "meta": [
+            "Python  ·  Development Tools",
+            "\"\"\"\nThis is the \"example\" module.\n\nThe example module supplies one function, factorial().  For example,\n\n>>> factorial(5)\n120\n\"\"\"\n\ndef factorial(n):\n    \"\"\"Return the factorial of n, an exact integer >= 0.\n\n    >>> [factorial(n) for n in range(6)]\n    [1, 1, 2, 6, 24, 120]\n    >>> factorial(30)\n    265252859812191058636308480000000\n    >>> factorial(-1)\n    Traceback (most recent call last):\n        ...\n    ValueError: n must be >= 0\n\n    Factorials of floats are OK, but the float must be an exact integer:\n    >>> factorial(30.1)\n    Traceback (most recent call last):\n        ...\n    ValueError: n must be exact integer\n    >>> factorial(30.0)\n    265252859812191058636308480000000\n\n    It must also not be ridiculously large:\n    >>> factorial(1e100)\n    Traceback (most recent call last):\n        ...\n    OverflowError: n too large\n    \"\"\"\n\n    import math\n    if not n >= 0:\n        raise ValueError(\"n must be >= 0\")\n    if math.floor(n) != n:\n        raise ValueError(\"n must be exact integer\")\n    if n+1 == n:  # catch a value like 1e300\n        raise OverflowError(\"n too large\")\n    result = 1\n    factor = 2\n    while factor <= n:\n        result *= factor\n        factor += 1\n    return result\n\n\nif __name__ == \"__main__\":\n    import doctest\n    doctest.testmod()"
+          ]
+        },
+        {
+          "title": "Soapbox (doctest)",
+          "url": "https://devdocs.io/python~3.15/library/doctest#soapbox",
+          "snippet": "As mentioned in the introduction, doctest has grown to have three primary uses:",
+          "meta": [
+            "Python  ·  Development Tools",
+            "if __name__ == '__main__':\n    import doctest\n    flags = doctest.REPORT_NDIFF|doctest.FAIL_FAST\n    if len(sys.argv) > 1:\n        name = sys.argv[1]\n        if name in globals():\n            obj = globals()[name]\n        else:\n            obj = __test__[name]\n        doctest.run_docstring_examples(obj, globals(), name=name,\n                                       optionflags=flags)\n    else:\n        fail, total = doctest.testmod(optionflags=flags)\n        print(f\"{fail} failures out of {total} tests\")"
+          ]
+        },
+        {
+          "title": "Debugging (doctest)",
+          "url": "https://devdocs.io/python~3.15/library/doctest#debugging",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        },
+        {
+          "title": "Basic API (doctest)",
+          "url": "https://devdocs.io/python~3.15/library/doctest#basic-api",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        },
+        {
+          "title": "Advanced API (doctest)",
+          "url": "https://devdocs.io/python~3.15/library/doctest#advanced-api",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 94,
+      "checklist_command": "qs python warnings filterwarnings",
+      "executed_command": "/tmp/qs-gate/release/qs --json python warnings filterwarnings",
+      "expected": "`warnings.filterwarnings()`",
+      "test": "Tests spaced lookup for a warning-filter API.",
+      "exit_code": 0,
+      "duration_seconds": 0.387085,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "warnings.filterwarnings()",
+          "url": "https://devdocs.io/python~3.15/library/warnings#warnings.filterwarnings",
+          "snippet": "Insert an entry into the list of warnings filter specifications. The entry is inserted at the front by default; if append is true, it is inserted at the end. This checks the types of the arguments, compiles the message and module regular expressions, and inserts them as a tuple in the list of warnings filters. Entries…",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "warnings",
+          "url": "https://devdocs.io/python~3.15/library/warnings",
+          "snippet": "Warning messages are typically issued in situations where it is useful to alert the user of some condition in a program, where that condition (normally) doesn’t warrant raising an exception and terminating the program. For example, one might want to issue a warning when a program uses an obsolete module.",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "sys.flags.context_aware_warnings",
+          "url": "https://devdocs.io/python~3.15/library/sys#sys.flags.context_aware_warnings",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "sys.flags.bytes_warning",
+          "url": "https://devdocs.io/python~3.15/library/sys#sys.flags.bytes_warning",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 95,
+      "checklist_command": "qs python importlib.resources.files",
+      "executed_command": "/tmp/qs-gate/release/qs --json python importlib.resources.files",
+      "expected": "`importlib.resources.files()`",
+      "test": "Tests a deep qualified resource API.",
+      "exit_code": 0,
+      "duration_seconds": 0.398848,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "importlib.resources.files()",
+          "url": "https://devdocs.io/python~3.15/library/importlib.resources#importlib.resources.files",
+          "snippet": "Returns a Traversable object representing the resource container (think directory) and its resources (think files). A Traversable may contain other containers (think subdirectories).",
+          "meta": [
+            "Python  ·  Importing"
+          ]
+        },
+        {
+          "title": "importlib.resources.as_file()",
+          "url": "https://devdocs.io/python~3.15/library/importlib.resources#importlib.resources.as_file",
+          "snippet": "Given a Traversable object representing a file or directory, typically from importlib.resources.files(), return a context manager for use in a with statement. The context manager provides a pathlib.Path object.",
+          "meta": [
+            "Python  ·  Importing"
+          ]
+        },
+        {
+          "title": "importlib.resources.abc.TraversableResources.files()",
+          "url": "https://devdocs.io/python~3.15/library/importlib.resources.abc#importlib.resources.abc.TraversableResources.files",
+          "meta": [
+            "Python  ·  Importing"
+          ]
+        },
+        {
+          "title": "importlib.resources.abc.Traversable.is_file()",
+          "url": "https://devdocs.io/python~3.15/library/importlib.resources.abc#importlib.resources.abc.Traversable.is_file",
+          "meta": [
+            "Python  ·  Importing"
+          ]
+        },
+        {
+          "title": "Functional API (importlib.resources)",
+          "url": "https://devdocs.io/python~3.15/library/importlib.resources#functional-api",
+          "meta": [
+            "Python  ·  Importing"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 96,
+      "checklist_command": "qs python inspect.signature",
+      "executed_command": "/tmp/qs-gate/release/qs --json python inspect.signature",
+      "expected": "`inspect.signature()`",
+      "test": "Finds runtime callable-signature introspection.",
+      "exit_code": 0,
+      "duration_seconds": 0.320559,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "inspect.Signature",
+          "url": "https://devdocs.io/python~3.15/library/inspect#inspect.Signature",
+          "snippet": "Return a Signature object for the given callable:",
+          "meta": [
+            "Python  ·  Runtime",
+            ">>> from inspect import signature\n>>> def foo(a, *, b:int, **kwargs):\n...     pass\n\n>>> sig = signature(foo)\n\n>>> str(sig)\n'(a, *, b: int, **kwargs)'\n\n>>> str(sig.parameters['b'])\n'b: int'\n\n>>> sig.parameters['b'].annotation\n<class 'int'>"
+          ]
+        },
+        {
+          "title": "inspect.signature()",
+          "url": "https://devdocs.io/python~3.15/library/inspect#inspect.signature",
+          "snippet": "Return a Signature object for the given callable:",
+          "meta": [
+            "Python  ·  Runtime",
+            ">>> from inspect import signature\n>>> def foo(a, *, b:int, **kwargs):\n...     pass\n\n>>> sig = signature(foo)\n\n>>> str(sig)\n'(a, *, b: int, **kwargs)'\n\n>>> str(sig.parameters['b'])\n'b: int'\n\n>>> sig.parameters['b'].annotation\n<class 'int'>"
+          ]
+        },
+        {
+          "title": "inspect.Signature.empty",
+          "url": "https://devdocs.io/python~3.15/library/inspect#inspect.Signature.empty",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "inspect.Signature.bind()",
+          "url": "https://devdocs.io/python~3.15/library/inspect#inspect.Signature.bind",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        },
+        {
+          "title": "inspect.Signature.format()",
+          "url": "https://devdocs.io/python~3.15/library/inspect#inspect.Signature.format",
+          "meta": [
+            "Python  ·  Runtime"
+          ]
+        }
+      ],
+      "score": 4,
+      "assessment": "inspect.Signature is first and inspect.signature() is second; the exact expected function is in the top three."
+    },
+    {
+      "index": 97,
+      "checklist_command": "qs python trace memory allocations",
+      "executed_command": "/tmp/qs-gate/release/qs --json python trace memory allocations",
+      "expected": "The `tracemalloc` module",
+      "test": "Maps a diagnostic task to its module.",
+      "exit_code": 0,
+      "duration_seconds": 0.814892,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "tracemalloc — Trace memory allocations",
+          "url": "https://devdocs.io/python~3.15/library/tracemalloc",
+          "snippet": "tracemalloc — Trace memory allocations — Added in version 3.4. Source code: Lib/tracemalloc.py The tracemalloc module is a debug tool to trace memory blocks allocated by Python. It provides the following information: Traceback where an object was allocated Statistics on allocated memory blocks per filename and per line number: total size, number and average…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Memory Management",
+          "url": "https://devdocs.io/python~3.15/c-api/memory",
+          "snippet": "int PyTraceMalloc_Track(unsigned int domain, uintptr_t ptr, size_t size) — Track an allocated memory block in the tracemalloc module. Return 0 on success, return -1 on error (failed to allocate memory to store the trace). Return -2 if tracemalloc is disabled. If memory block is already tracked, update the existing trace.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Trace",
+          "url": "https://docs.python.org/3/library/tracemalloc.html",
+          "snippet": "tracemalloc — Trace memory allocations¶ — To trace most memory blocks allocated by Python, the module should be started as early as possible by setting the PYTHONTRACEMALLOC environment variable to 1, or by using -X tracemalloc command line option. The tracemalloc.start() function can be called at runtime to start tracing Python memory allocations."
+        },
+        {
+          "title": "C API Extension Support for Free Threading",
+          "url": "https://devdocs.io/python~3.15/howto/free-threading-extensions",
+          "snippet": "Memory Allocation APIs — Python’s memory management C API provides functions in three different allocation domains: “raw”, “mem”, and “object”. For thread-safety, the free-threaded build requires that only Python objects are allocated using the object domain, and that all Python objects are allocated using that domain. This differs from the prior Python ver…",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        },
+        {
+          "title": "Configure Python",
+          "url": "https://devdocs.io/python~3.15/using/configure",
+          "snippet": "--with-memory-sanitizer — Enable MemorySanitizer allocation error detector, msan (default is no). Added in version 3.6.",
+          "meta": [
+            "Python 3.15.0"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 98,
+      "checklist_command": "qs python typing.Protocol",
+      "executed_command": "/tmp/qs-gate/release/qs --json python typing.Protocol",
+      "expected": "`typing.Protocol`",
+      "test": "Tests a qualified structural-typing class.",
+      "exit_code": 0,
+      "duration_seconds": 0.348694,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "typing.Protocol",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.Protocol",
+          "snippet": "class Proto(Protocol): def meth(self) -> int: ... Such classes are primarily used with static type checkers that recognize structural subtyping (static duck-typing), for example:",
+          "meta": [
+            "Python  ·  Development Tools",
+            "class Proto(Protocol):\n    def meth(self) -> int:\n        ..."
+          ]
+        },
+        {
+          "title": "typing.is_protocol()",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.is_protocol",
+          "snippet": "class P(Protocol): def a(self) -> str: ... b: int assert is_protocol(P) assert not is_protocol(int) This function only returns true for Protocol classes, not for generic aliases of them:",
+          "meta": [
+            "Python  ·  Development Tools",
+            "class P(Protocol):\n    def a(self) -> str: ...\n    b: int\n\nassert is_protocol(P)\nassert not is_protocol(int)"
+          ]
+        },
+        {
+          "title": "typing.get_protocol_members()",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.get_protocol_members",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 99,
+      "checklist_command": "qs python typing.TypedDict",
+      "executed_command": "/tmp/qs-gate/release/qs --json python typing.TypedDict",
+      "expected": "`typing.TypedDict`",
+      "test": "Distinguishes a related CamelCase typing construct.",
+      "exit_code": 0,
+      "duration_seconds": 0.42987,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "typing.TypedDict",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.TypedDict",
+          "snippet": "Special construct to add type hints to a dictionary. At runtime “TypedDict instances” are simply dicts.",
+          "meta": [
+            "Python  ·  Development Tools",
+            "class Point2D(TypedDict):\n    x: int\n    y: int\n    label: str\n\na: Point2D = {'x': 1, 'y': 2, 'label': 'good'}  # OK\nb: Point2D = {'z': 3, 'label': 'bad'}           # Fails type check\n\nassert Point2D(x=1, y=2, label='first') == dict(x=1, y=2, label='first')"
+          ]
+        },
+        {
+          "title": "typing.TypedDict.__total__",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.TypedDict.__total__",
+          "snippet": "Point2D.__total__ gives the value of the total argument. Example:",
+          "meta": [
+            "Python  ·  Development Tools",
+            ">>> from typing import TypedDict\n>>> class Point2D(TypedDict): pass\n>>> Point2D.__total__\nTrue\n>>> class Point2D(TypedDict, total=False): pass\n>>> Point2D.__total__\nFalse\n>>> class Point3D(Point2D): pass\n>>> Point3D.__total__\nTrue"
+          ]
+        },
+        {
+          "title": "typing.TypedDict.__closed__",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.TypedDict.__closed__",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        },
+        {
+          "title": "typing.TypedDict.__extra_items__",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.TypedDict.__extra_items__",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        },
+        {
+          "title": "typing.TypedDict.__mutable_keys__",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.TypedDict.__mutable_keys__",
+          "meta": [
+            "Python  ·  Development Tools"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    },
+    {
+      "index": 100,
+      "checklist_command": "qs python typing.Literal",
+      "executed_command": "/tmp/qs-gate/release/qs --json python typing.Literal",
+      "expected": "`typing.Literal`",
+      "test": "Finds a third distinct qualified typing form.",
+      "exit_code": 0,
+      "duration_seconds": 0.274702,
+      "stderr": "",
+      "provider": "Python 3.15.0",
+      "source_url": "https://devdocs.io/python~3.15",
+      "hits": [
+        {
+          "title": "typing.Literal",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.Literal",
+          "snippet": "Special typing form to define “literal types”.",
+          "meta": [
+            "Python  ·  Development Tools",
+            "def validate_simple(data: Any) -> Literal[True]:  # always returns True\n    ...\n\ntype Mode = Literal['r', 'rb', 'w', 'wb']\ndef open_helper(file: str, mode: Mode) -> str:\n    ...\n\nopen_helper('/some/path', 'r')      # Passes type check\nopen_helper('/other/path', 'typo')  # Error in type checker"
+          ]
+        },
+        {
+          "title": "typing.LiteralString",
+          "url": "https://devdocs.io/python~3.15/library/typing#typing.LiteralString",
+          "snippet": "Special type that includes only literal strings.",
+          "meta": [
+            "Python  ·  Development Tools",
+            "def run_query(sql: LiteralString) -> None:\n    ...\n\ndef caller(arbitrary_string: str, literal_string: LiteralString) -> None:\n    run_query(\"SELECT * FROM students\")  # OK\n    run_query(literal_string)  # OK\n    run_query(\"SELECT * FROM \" + literal_string)  # OK\n    run_query(arbitrary_string)  # type checker error\n    run_query(  # type checker error\n        f\"SELECT * FROM students WHERE name = {arbitrary_string}\"\n    )"
+          ]
+        }
+      ],
+      "score": 5,
+      "assessment": "The first result directly matches the expected topic or is immediately useful for the requested task."
+    }
+  ]
+}

@@ -1,0 +1,746 @@
+[
+  {
+    "language": "c",
+    "query": "qs rfc 8949",
+    "expected": "RFC 8949",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "rfc",
+    "top_titles": [
+      "Concise Binary Object Representation (CBOR)"
+    ],
+    "error": null,
+    "note": "RFC 8949 is resolved directly with its title, summary, and canonical URL."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell System.Mem.performGC",
+    "expected": "Hoogle results for System.Mem.performGC",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "performGC :: IO ()"
+    ],
+    "error": null,
+    "note": "The exact performGC API is first with its signature, description, and Hackage link."
+  },
+  {
+    "language": "python",
+    "query": "qs gh python-trio/trio",
+    "expected": "GitHub repository python-trio/trio",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "github",
+    "top_titles": [
+      "python-trio/trio",
+      "python-trio/trustme",
+      "florimondmanca/aiometer"
+    ],
+    "error": null,
+    "note": "The exact GitHub repository is first with a useful description."
+  },
+  {
+    "language": "go",
+    "query": "qs man gofmt",
+    "expected": "Local gofmt manual page",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 1,
+    "provider": "man",
+    "top_titles": [
+      "Search online manuals for gofmt"
+    ],
+    "error": null,
+    "note": "No local gofmt manual was found. The only hit is an online manual-search placeholder with no manual content."
+  },
+  {
+    "language": "rust",
+    "query": "qs crate zerocopy",
+    "expected": "crates.io page for zerocopy",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 4,
+    "provider": "crates.io",
+    "top_titles": [
+      "zerocopy",
+      "musli-zerocopy",
+      "ix-schema-zerocopy"
+    ],
+    "error": null,
+    "note": "The exact zerocopy crate is first with useful package context, but the hit links to docs.rs rather than its crates.io package page."
+  },
+  {
+    "language": "cpp",
+    "query": "qs web cppreference execution control library",
+    "expected": "DuckDuckGo results for cppreference execution control library",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "web",
+    "top_titles": [
+      "Execution control library (since C++26) - cppreference.com",
+      "Execution control library (since C++26) - cppreference.com - C++ Reference",
+      "Execution control library (since C++26) - cppreference.net"
+    ],
+    "error": null,
+    "note": "The cppreference execution-control page is first with useful context."
+  },
+  {
+    "language": "c",
+    "query": "qs so c strict aliasing effective type",
+    "expected": "Stack Overflow search for C strict aliasing effective type",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "stackoverflow",
+    "top_titles": [
+      "Does C strict aliasing make untyped static memory pools impossible?",
+      "Strict aliasing of first struct member through opaque pointer in C",
+      "What is the effective type of an object written by memset?"
+    ],
+    "error": null,
+    "note": "The first three Stack Overflow results are directly about C strict aliasing and effective type."
+  },
+  {
+    "language": "haskell",
+    "query": "qs web haskell backpack signatures",
+    "expected": "DuckDuckGo results for Haskell Backpack signatures",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "web",
+    "top_titles": [
+      "Backpack support - Stack",
+      "Module signature - HaskellWiki",
+      "Pre-GHC-Proposal: Instantiate backpack signatures when importing"
+    ],
+    "error": null,
+    "note": "The top results directly cover Haskell Backpack and module signatures."
+  },
+  {
+    "language": "python",
+    "query": "qs pip orjson",
+    "expected": "PyPI package page for orjson",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "pypi",
+    "top_titles": [
+      "orjson on PyPI"
+    ],
+    "error": null,
+    "note": "The exact PyPI project page is first."
+  },
+  {
+    "language": "go",
+    "query": "qs gh golang/tools",
+    "expected": "GitHub repository golang/tools",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "github",
+    "top_titles": [
+      "golang/tools",
+      "fortio/fortio",
+      "cirosantilli/china-dictatorship"
+    ],
+    "error": null,
+    "note": "The exact GitHub repository is first with a useful description."
+  },
+  {
+    "language": "rust",
+    "query": "qs std std::hint::black_box",
+    "expected": "Official Rust standard-library page for std::hint::black_box",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "black_box in std::hint - Rust",
+      "Search Rust standard library for std::hint::black_box"
+    ],
+    "error": null,
+    "note": "The exact official Rust item page is first with a concise description."
+  },
+  {
+    "language": "cpp",
+    "query": "qs man clang-format",
+    "expected": "Local clang-format manual page",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 1,
+    "provider": "man",
+    "top_titles": [
+      "Search online manuals for clang-format"
+    ],
+    "error": null,
+    "note": "No local clang-format manual was found. The only hit is an online manual-search placeholder with no manual content."
+  },
+  {
+    "language": "c",
+    "query": "qs wiki C standard library",
+    "expected": "Wikipedia result for C standard library",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "wikipedia",
+    "top_titles": [
+      "C standard library",
+      "C++ Standard Library",
+      "Standard library"
+    ],
+    "error": null,
+    "note": "The exact Wikipedia article is first with a useful summary."
+  },
+  {
+    "language": "haskell",
+    "query": "qs so haskell quantified constraints",
+    "expected": "Stack Overflow search for Haskell quantified constraints",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 2,
+    "provider": "stackoverflow",
+    "top_titles": [
+      "Bifunctors in Haskell vs in category theory",
+      "Type variable introduction for existential types",
+      "Deriving `Eq` for a data type based on a type family in Haskell"
+    ],
+    "error": null,
+    "note": "The results are Haskell type-system questions, but none visibly targets quantified constraints."
+  },
+  {
+    "language": "python",
+    "query": "qs web python free threading status",
+    "expected": "DuckDuckGo results for Python free threading status",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "web",
+    "top_titles": [
+      "Python support for free threading — Python 3.14.8 documentation",
+      "Compatibility Status Tracking - Python Free-Threading Guide",
+      "Python Free-Threading Guide"
+    ],
+    "error": null,
+    "note": "The official Python free-threading status guide is first, followed by the compatibility tracker."
+  },
+  {
+    "language": "go",
+    "query": "qs rfc QUIC transport",
+    "expected": "RFC title search for QUIC transport",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 4,
+    "provider": "rfc",
+    "top_titles": [
+      "Applicability of the QUIC Transport Protocol",
+      "HTTP/2 Semantics Using The QUIC Transport Protocol",
+      "Applicability and Management of the QUIC Transport Protocol"
+    ],
+    "error": null,
+    "note": "The first result is a directly relevant QUIC transport RFC, but not the core QUIC transport specification."
+  },
+  {
+    "language": "rust",
+    "query": "qs docs alloc::alloc::Layout",
+    "expected": "Official Rust alloc docs for alloc::alloc::Layout",
+    "class": "source-routing",
+    "label": "positive",
+    "score": 5,
+    "provider": "rust",
+    "top_titles": [
+      "Layout in alloc::alloc - Rust",
+      "Search Rust standard library for alloc::alloc::Layout"
+    ],
+    "error": null,
+    "note": "The exact official alloc::alloc::Layout page is first with a useful description."
+  },
+  {
+    "language": "none",
+    "query": "qs 9780143127741",
+    "expected": "Product lookup for barcode 9780143127741",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "stock",
+    "top_titles": [
+      "The Body Keeps the Score - by Bessel Van Der Kolk (Paperback)"
+    ],
+    "error": null,
+    "note": "The barcode resolves directly to a specific book product."
+  },
+  {
+    "language": "none",
+    "query": "qs 1912",
+    "expected": "DuckDuckGo web search for 1912",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "web",
+    "top_titles": [
+      "1912 - Wikipedia",
+      "1912 Archives - HISTORY",
+      "Historical Events in 1912 - On This Day"
+    ],
+    "error": null,
+    "note": "The query returns a useful 1912 summary and relevant historical results."
+  },
+  {
+    "language": "none",
+    "query": "qs item 012345678905",
+    "expected": "Product lookup for barcode 012345678905",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "stock",
+    "top_titles": [
+      "Sphère plaisir"
+    ],
+    "error": null,
+    "note": "The barcode resolves directly to a specific product."
+  },
+  {
+    "language": "none",
+    "query": "qs stock ASML",
+    "expected": "Stock lookup for ASML",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 1,
+    "provider": "stock",
+    "top_titles": [
+      "Search products for ASML"
+    ],
+    "error": null,
+    "note": "The lookup reports no products matched ASML and offers only a generic product-search link."
+  },
+  {
+    "language": "none",
+    "query": "qs cve CVE-2024-3094",
+    "expected": "NVD advisory for CVE-2024-3094",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "nvd",
+    "top_titles": [
+      "CVE-2024-3094"
+    ],
+    "error": null,
+    "note": "The exact NVD advisory is first with a useful vulnerability summary."
+  },
+  {
+    "language": "none",
+    "query": "qs nvd libwebp heap overflow",
+    "expected": "NVD advisory search for libwebp heap overflow",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "nvd",
+    "top_titles": [
+      "CVE-2018-25009",
+      "CVE-2018-25010",
+      "CVE-2018-25011"
+    ],
+    "error": null,
+    "note": "The first results are NVD advisories that explicitly describe libwebp heap buffer overflows."
+  },
+  {
+    "language": "none",
+    "query": "qs npm fast-glob",
+    "expected": "npm registry page for fast-glob",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "npm",
+    "top_titles": [
+      "fast-glob",
+      "tinyglobby",
+      "@bluelovers/fast-glob"
+    ],
+    "error": null,
+    "note": "The exact npm package is first with a useful description."
+  },
+  {
+    "language": "none",
+    "query": "qs gem faraday",
+    "expected": "RubyGems page for faraday",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "rubygems",
+    "top_titles": [
+      "faraday",
+      "faraday_middleware",
+      "faraday-retry"
+    ],
+    "error": null,
+    "note": "The exact RubyGems package is first with a useful description."
+  },
+  {
+    "language": "none",
+    "query": "qs hex bandit",
+    "expected": "Hex package page for bandit",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "hex",
+    "top_titles": [
+      "bandit",
+      "opentelemetry_bandit",
+      "lasso"
+    ],
+    "error": null,
+    "note": "The exact Hex package is first with a useful description."
+  },
+  {
+    "language": "none",
+    "query": "qs maven org.flywaydb flyway-core",
+    "expected": "Maven registry result for org.flywaydb:flyway-core",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "maven",
+    "top_titles": [
+      "org.flywaydb:flyway-core",
+      "org.flywaydb.enterprise:flyway-core",
+      "org.flywaydb.pro:flyway-core"
+    ],
+    "error": null,
+    "note": "The exact Maven coordinate is first and links to its registry page."
+  },
+  {
+    "language": "none",
+    "query": "qs nuget Polly",
+    "expected": "NuGet page for Polly",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 4,
+    "provider": "nuget",
+    "top_titles": [
+      "Polly",
+      "Polly.Core",
+      "AWSSDK.Polly"
+    ],
+    "error": null,
+    "note": "The exact Polly package is first with useful context, but the hit links to GitHub rather than NuGet."
+  },
+  {
+    "language": "none",
+    "query": "qs wiki Ada Lovelace",
+    "expected": "Wikipedia page for Ada Lovelace",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "wikipedia",
+    "top_titles": [
+      "Ada Lovelace",
+      "Ada Lovelace (microarchitecture)",
+      "Ada Lovelace Day"
+    ],
+    "error": null,
+    "note": "The exact Wikipedia article is first with a useful summary."
+  },
+  {
+    "language": "none",
+    "query": "qs mdn AbortSignal.any",
+    "expected": "MDN page for AbortSignal.any",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "mdn",
+    "top_titles": [
+      "AbortSignal: any() static method",
+      "AbortSignal",
+      "AbortSignal: abort event"
+    ],
+    "error": null,
+    "note": "The exact MDN page is first with a useful API description."
+  },
+  {
+    "language": "none",
+    "query": "qs so git rerere",
+    "expected": "Stack Overflow search for git rerere",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 4,
+    "provider": "stackoverflow",
+    "top_titles": [
+      "Are there any downsides to enabling git rerere?",
+      "What is git-rerere and how does it work?",
+      "Have git rerere automatically mark files as resolved?"
+    ],
+    "error": null,
+    "note": "The results are directly relevant; the clearest general explanation of git rerere is second."
+  },
+  {
+    "language": "none",
+    "query": "qs gh sharkdp/bat",
+    "expected": "GitHub repository sharkdp/bat",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "github",
+    "top_titles": [
+      "sharkdp/bat",
+      "victor-gp/cmd-help-sublime-syntax",
+      "ttys3/syntect-assets"
+    ],
+    "error": null,
+    "note": "The exact GitHub repository is first with a useful description."
+  },
+  {
+    "language": "none",
+    "query": "qs debian unattended upgrades",
+    "expected": "Debian Wiki result for unattended upgrades",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 2,
+    "provider": "Debian Wiki",
+    "top_titles": [
+      "unattended upgrades"
+    ],
+    "error": null,
+    "note": "The only hit is a Debian Wiki full-search link with no page content or context."
+  },
+  {
+    "language": "none",
+    "query": "qs ubuntu netplan policy routing",
+    "expected": "Ubuntu Wiki result for netplan policy routing",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 1,
+    "provider": "Ubuntu Wiki",
+    "top_titles": [
+      "Search Ubuntu Wiki for netplan policy routing"
+    ],
+    "error": null,
+    "note": "The Ubuntu Wiki lookup failed with HTTP 404 and returned only a DuckDuckGo site-search placeholder."
+  },
+  {
+    "language": "none",
+    "query": "qs fedora toolbox",
+    "expected": "Fedora Wiki result for toolbox",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 2,
+    "provider": "Fedora Wiki",
+    "top_titles": [
+      "Architectures/RISC-V/Toolbox"
+    ],
+    "error": null,
+    "note": "The only result is a RISC-V-specific toolbox guide, not a general Fedora Toolbox result."
+  },
+  {
+    "language": "none",
+    "query": "qs gentoo eselect repository",
+    "expected": "Gentoo Wiki result for eselect repository",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 4,
+    "provider": "Gentoo Wiki",
+    "top_titles": [
+      "Eselect/Repository/ta",
+      "Eselect/Repository/hu",
+      "Eselect/Repository/en"
+    ],
+    "error": null,
+    "note": "The English Eselect/Repository page is third; localized variants rank above it."
+  },
+  {
+    "language": "none",
+    "query": "qs arch mkinitcpio unified kernel image",
+    "expected": "ArchWiki result for unified kernel image",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 1,
+    "provider": "Arch Wiki",
+    "top_titles": [
+      "Search Arch Wiki for mkinitcpio unified kernel image"
+    ],
+    "error": null,
+    "note": "No ArchWiki page matched. The only hit is a generic ArchWiki search link."
+  },
+  {
+    "language": "none",
+    "query": "qs man 5 resolv.conf",
+    "expected": "Local resolv.conf manual section 5",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "man",
+    "top_titles": [
+      "resolv.conf (5)"
+    ],
+    "error": null,
+    "note": "The exact local resolv.conf section 5 manual page is first."
+  },
+  {
+    "language": "none",
+    "query": "qs cargo metadata",
+    "expected": "cargo-metadata manual page",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "man",
+    "top_titles": [
+      "cargo-metadata (1)"
+    ],
+    "error": null,
+    "note": "The exact local cargo-metadata manual page is first."
+  },
+  {
+    "language": "none",
+    "query": "qs podman kube play",
+    "expected": "podman-kube-play manual page",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "man",
+    "top_titles": [
+      "podman-kube-play (1)"
+    ],
+    "error": null,
+    "note": "The exact local podman-kube-play manual page is first."
+  },
+  {
+    "language": "none",
+    "query": "qs dnf ripgrep",
+    "expected": "DNF package information for ripgrep",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "dnf",
+    "top_titles": [],
+    "error": null,
+    "note": "The command returns detailed installed DNF package information for ripgrep."
+  },
+  {
+    "language": "none",
+    "query": "qs apt policy",
+    "expected": "apt-policy manual page",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 3,
+    "provider": "man",
+    "top_titles": [
+      "apt-policy"
+    ],
+    "error": null,
+    "note": "No local apt-policy manual was found, but the fallback links to the relevant remote apt manual."
+  },
+  {
+    "language": "none",
+    "query": "qs brew leaves",
+    "expected": "brew-leaves manual page",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 3,
+    "provider": "man",
+    "top_titles": [
+      "brew-leaves"
+    ],
+    "error": null,
+    "note": "No local brew-leaves manual was found, but the fallback links to the Homebrew manpage."
+  },
+  {
+    "language": "none",
+    "query": "qs flatpak remotes",
+    "expected": "flatpak-remotes manual page",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 5,
+    "provider": "man",
+    "top_titles": [
+      "flatpak-remotes (1)"
+    ],
+    "error": null,
+    "note": "The exact local flatpak-remotes manual page is first."
+  },
+  {
+    "language": "none",
+    "query": "qs snap connections",
+    "expected": "snap-connections manual page",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 3,
+    "provider": "man",
+    "top_titles": [
+      "snap-connections"
+    ],
+    "error": null,
+    "note": "No local snap-connections manual was found, but the fallback links to Snap command-reference documentation."
+  },
+  {
+    "language": "none",
+    "query": "qs web rust crate serde",
+    "expected": "DuckDuckGo results for rust crate serde",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 1,
+    "provider": "web",
+    "top_titles": [
+      "Search DuckDuckGo for rust crate serde"
+    ],
+    "error": null,
+    "note": "No DuckDuckGo results were returned. The only hit is a generic search link with no result context."
+  },
+  {
+    "language": "none",
+    "query": "qs !aur paru-bin",
+    "expected": "DuckDuckGo bang result for !aur paru-bin",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 1,
+    "provider": "aur",
+    "top_titles": [
+      "Open !aur search for paru-bin"
+    ],
+    "error": null,
+    "note": "The bang redirect failed. The only hit is a generic DuckDuckGo search link with no AUR result."
+  },
+  {
+    "language": "none",
+    "query": "qs cheat tar extract strip components",
+    "expected": "cheat.sh result for tar extraction",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 1,
+    "provider": "cheat.sh",
+    "top_titles": [
+      "Search cheat.sh for tar extract strip components"
+    ],
+    "error": null,
+    "note": "The exact cheat.sh topic was unavailable, and the only hit is a related-search placeholder with no extraction guidance."
+  },
+  {
+    "language": "none",
+    "query": "qs rfc structured field values HTTP",
+    "expected": "RFC title search for Structured Field Values for HTTP",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 1,
+    "provider": "rfc",
+    "top_titles": [
+      "Search IETF documents for structured field values HTTP"
+    ],
+    "error": null,
+    "note": "No matching RFC was returned. The only hit is a generic IETF document-search link."
+  },
+  {
+    "language": "none",
+    "query": "qs price of palladium per ounce",
+    "expected": "DuckDuckGo web search for palladium price",
+    "class": "non-language-routing-control",
+    "label": "negative",
+    "score": 1,
+    "provider": "web",
+    "top_titles": [
+      "Search DuckDuckGo for price of palladium per ounce"
+    ],
+    "error": null,
+    "note": "No palladium price result was returned. The only hit is a generic DuckDuckGo search link with no price context."
+  }
+]

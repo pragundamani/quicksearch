@@ -1,0 +1,1353 @@
+[
+  {
+    "query": "qs python dictionaries",
+    "expected": "Mapping Types — `dict`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "dictionary",
+      "dis",
+      "5.5. Dictionaries",
+      "calendar.Day",
+      "turtle.done()"
+    ],
+    "error": null,
+    "note": "The first hit is the dictionary glossary entry and the Dictionaries tutorial section is third. Useful, but the stated Mapping Types — dict reference is not first."
+  },
+  {
+    "query": "qs python list comprehensions",
+    "expected": "List displays and list comprehensions",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "list comprehension"
+    ],
+    "error": null,
+    "note": "The first hit, “list comprehension”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python generator expressions",
+    "expected": "Generator expressions",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "generator expression",
+      "9.10. Generator Expressions"
+    ],
+    "error": null,
+    "note": "The first hit, “generator expression”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python decorators",
+    "expected": "Function and class decorators",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "decorator",
+      "contextlib.ContextDecorator",
+      "contextlib.AsyncContextDecorator",
+      "http.cookiejar.DefaultCookiePolicy.DomainStrictNoDots"
+    ],
+    "error": null,
+    "note": "The first hit, “decorator”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python context managers",
+    "expected": "Context manager types and the `with` statement",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "context manager",
+      "Available Context Managers (warnings)",
+      "typing.ContextManager",
+      "asynchronous context manager",
+      "typing.AsyncContextManager"
+    ],
+    "error": null,
+    "note": "The first hit, “context manager”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python async iterators",
+    "expected": "Asynchronous iterator protocol",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "typing.AsyncIterator",
+      "collections.abc.AsyncIterator",
+      "pyclbr.Function.is_async"
+    ],
+    "error": null,
+    "note": "AsyncIterator aliases are first and second, with the protocol methods in the second snippet. The result is useful but indirect."
+  },
+  {
+    "query": "qs python structural pattern matching",
+    "expected": "`match` statements and patterns",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Data model",
+      "Compound statements",
+      "pattern",
+      "re.match(pattern, string, flags=0)",
+      "class ast.match_case(pattern, guard, body)"
+    ],
+    "error": null,
+    "note": "The PEP/specification and match-statement docs are first and second. Strong top-three coverage, though the canonical match section is not first."
+  },
+  {
+    "query": "qs python positional only parameters",
+    "expected": "Positional-only parameters using `/`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "More Control Flow Tools",
+      "class inspect.Signature(parameters=None, *, return_annotation=Signature.empty)",
+      "parameters",
+      "Glossary",
+      "Programming FAQ"
+    ],
+    "error": null,
+    "note": "The first hit, “More Control Flow Tools”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python keyword only arguments",
+    "expected": "Keyword-only parameters using `*`",
+    "score": 2,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "More Control Flow Tools",
+      "Parsing arguments and building values",
+      "keyword",
+      "Call Protocol",
+      "Glossary"
+    ],
+    "error": null,
+    "note": "The first result explains ordinary keyword arguments, not keyword-only parameters. No top-five hit shows the * separator or the keyword-only section."
+  },
+  {
+    "query": "qs python exception chaining",
+    "expected": "Exception context and `raise ... from`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "8.5. Exception Chaining"
+    ],
+    "error": null,
+    "note": "The first hit, “8.5. Exception Chaining”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python assignment expressions",
+    "expected": "Assignment expressions using `:=`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "6.12. Assignment expressions",
+      "ast.Expression"
+    ],
+    "error": null,
+    "note": "The first hit, “6.12. Assignment expressions”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python function type annotations",
+    "expected": "Function annotations and `typing`",
+    "score": 3,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Function Objects",
+      "class ast.FunctionType(argtypes, returns)",
+      "Type",
+      "Glossary",
+      "Compound statements"
+    ],
+    "error": null,
+    "note": "The first results are low-level C API and AST pages. The useful function-annotation glossary and PEP entries appear only fourth and fifth."
+  },
+  {
+    "query": "qs python generic type aliases",
+    "expected": "Generic aliases and type aliases",
+    "score": 3,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "types.GenericAlias"
+    ],
+    "error": null,
+    "note": "The only result is types.GenericAlias. It covers parameterized generics but omits type-alias syntax and typing aliases."
+  },
+  {
+    "query": "qs python dataclasses",
+    "expected": "The `dataclasses` module",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "dataclasses",
+      "Inheritance (dataclasses)",
+      "Class variables (dataclasses)",
+      "Module contents (dataclasses)",
+      "Frozen instances (dataclasses)"
+    ],
+    "error": null,
+    "note": "The first hit, “dataclasses”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python frozen dataclass",
+    "expected": "`@dataclass(frozen=True)`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Frozen instances (dataclasses)",
+      "dataclasses.FrozenInstanceError"
+    ],
+    "error": null,
+    "note": "The first hit, “Frozen instances (dataclasses)”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python enumerations",
+    "expected": "The `enum` module and `Enum`",
+    "score": 0,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "curses.KEY_EOS",
+      "decimal.MIN_EMIN",
+      "decimal.Context.Emin",
+      "8. Editors and IDEs",
+      "8.2. Other Editors and IDEs"
+    ],
+    "error": null,
+    "note": "All five hits are unrelated (curses, decimal, and editor pages). The enum module and Enum do not appear."
+  },
+  {
+    "query": "qs python abstract base classes",
+    "expected": "The `abc` module and `ABC`",
+    "score": 3,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "abstract base class",
+      "Collections Abstract Base Classes (collections.abc)",
+      "importlib.abc – Abstract base classes related to import (importlib)",
+      "Collections Abstract Base Classes – Detailed Descriptions (collections.abc)"
+    ],
+    "error": null,
+    "note": "The glossary and collections/importlib ABC pages are relevant, but the standard abc module and ABC class are missing."
+  },
+  {
+    "query": "qs python method resolution order",
+    "expected": "Class MRO and `type.mro()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "method resolution order",
+      "The Python 2.3 Method Resolution Order"
+    ],
+    "error": null,
+    "note": "The first hit, “method resolution order”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python descriptor protocol",
+    "expected": "Descriptors and `__get__` / `__set__`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Descriptor Guide",
+      "Event loop",
+      "protocol",
+      "Transports and Protocols",
+      "Data model"
+    ],
+    "error": null,
+    "note": "The first hit, “Descriptor Guide”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python iterator protocol",
+    "expected": "Iterator types, `__iter__`, and `__next__`",
+    "score": 3,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Iterator Protocol"
+    ],
+    "error": null,
+    "note": "The first hit is the C API Iterator Protocol. It is relevant, but it does not directly cover the language-level __iter__ and __next__ protocol requested."
+  },
+  {
+    "query": "qs python enumerate",
+    "expected": "Built-in `enumerate()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "enumerate()",
+      "threading.enumerate()"
+    ],
+    "error": null,
+    "note": "The first hit, “enumerate()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python zip",
+    "expected": "Built-in `zip()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "zip()",
+      "zipapp",
+      "Examples (zipapp)",
+      "Python API (zipapp)",
+      "Basic Example (zipapp)"
+    ],
+    "error": null,
+    "note": "The first hit, “zip()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python isinstance",
+    "expected": "Built-in `isinstance()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "isinstance()"
+    ],
+    "error": null,
+    "note": "The first hit, “isinstance()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python super",
+    "expected": "Built-in `super()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "super",
+      "pyclbr.Class.super",
+      "mmap.MAP_ALIGNED_SUPER",
+      "curses.KEY_SR"
+    ],
+    "error": null,
+    "note": "The first hit, “super”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python convert string to integer",
+    "expected": "Built-in `int()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "int",
+      "int",
+      "object.__int__()",
+      "input()",
+      "inspect"
+    ],
+    "error": null,
+    "note": "The first hit, “int”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python memoryview",
+    "expected": "Built-in `memoryview` type",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "memoryview",
+      "memoryview.obj",
+      "memoryview.ndim",
+      "memoryview.hex()",
+      "memoryview.cast()"
+    ],
+    "error": null,
+    "note": "The first hit, “memoryview”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python breakpoint",
+    "expected": "Built-in `breakpoint()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "breakpoint()",
+      "bdb.Breakpoint",
+      "mmap.MAP_32BIT",
+      "bdb.Breakpoint.cond",
+      "bdb.Breakpoint.file"
+    ],
+    "error": null,
+    "note": "The first hit, “breakpoint()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python str.removeprefix",
+    "expected": "`str.removeprefix()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "str.removeprefix()"
+    ],
+    "error": null,
+    "note": "The first hit, “str.removeprefix()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python str.splitlines",
+    "expected": "`str.splitlines()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "str.splitlines()"
+    ],
+    "error": null,
+    "note": "The first hit, “str.splitlines()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python bytes.fromhex",
+    "expected": "`bytes.fromhex()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "bytes.fromhex()"
+    ],
+    "error": null,
+    "note": "The first hit, “bytes.fromhex()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python sort list by key",
+    "expected": "`list.sort(key=...)` and the Sorting HOW TO",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "sorted key",
+      "pstats.SortKey",
+      "pstats.SortKey.NFL",
+      "pstats.SortKey.LINE",
+      "pstats.SortKey.NAME"
+    ],
+    "error": null,
+    "note": "The first hit links directly to the Sorting HOW TO key-functions section, but its synthetic title/snippet is thin and list.sort is absent."
+  },
+  {
+    "query": "qs python dict.setdefault",
+    "expected": "`dict.setdefault()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "dict.setdefault()",
+      "c.PyDict_SetItem()",
+      "c.PyDict_SetDefault()",
+      "c.PyODict_SetItem()",
+      "c.PyDict_SetDefaultRef()"
+    ],
+    "error": null,
+    "note": "The first hit, “dict.setdefault()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python merge dictionaries",
+    "expected": "Dictionary union operators `|` and `|=`",
+    "score": 2,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "dict.update",
+      "dict.update()",
+      "c.PyDict_Update()",
+      "mmap",
+      "map()"
+    ],
+    "error": null,
+    "note": "The results recommend dict.update(), a valid older merge method, but omit the expected | and |= dictionary union operators."
+  },
+  {
+    "query": "qs python set symmetric_difference",
+    "expected": "`set.symmetric_difference()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "set.symmetric_difference()",
+      "set.symmetric_difference_update()"
+    ],
+    "error": null,
+    "note": "The first hit, “set.symmetric_difference()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python frozenset",
+    "expected": "Built-in `frozenset` type",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "frozenset",
+      "tkinter.font",
+      "frozenset.copy()",
+      "frozenset.union()",
+      "frozenset.issubset()"
+    ],
+    "error": null,
+    "note": "The first hit, “frozenset”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python format specification mini language",
+    "expected": "Format specification mini-language",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Format specification mini-language",
+      "__format__(format_spec, /)",
+      "format",
+      "Text Processing Services",
+      "Data model"
+    ],
+    "error": null,
+    "note": "The first hit, “Format specification mini-language”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python f string debugging",
+    "expected": "Self-documenting f-string expressions using `=`",
+    "score": 3,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Debugging C API extensions and CPython Internals with GDB",
+      "Input and output",
+      "STRING",
+      "Functional Programming HOWTO",
+      "Introduction"
+    ],
+    "error": null,
+    "note": "The formatted-string-literals section is second, but the first hit is unrelated GDB debugging and no snippet exposes the self-documenting = syntax."
+  },
+  {
+    "query": "qs python FileNotFoundError",
+    "expected": "Built-in `FileNotFoundError` exception",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "FileNotFoundError",
+      "ModuleNotFoundError",
+      "zoneinfo.ZoneInfoNotFoundError",
+      "importlib.metadata.PackageNotFoundError",
+      "concurrent.interpreters.InterpreterNotFoundError"
+    ],
+    "error": null,
+    "note": "The first hit, “FileNotFoundError”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python ExceptionGroup",
+    "expected": "Built-in `ExceptionGroup`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "ExceptionGroup",
+      "BaseExceptionGroup",
+      "BaseExceptionGroup.message",
+      "BaseExceptionGroup.split()",
+      "BaseExceptionGroup.derive()"
+    ],
+    "error": null,
+    "note": "The first hit, “ExceptionGroup”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python property setter",
+    "expected": "`property` and its `setter()` decorator",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "property.setter()",
+      "xml.sax.handler.property_xml_string",
+      "c.PyObject_Str()",
+      "c.PyRun_String()",
+      "c.Py_CompileString()"
+    ],
+    "error": null,
+    "note": "The first hit, “property.setter()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python pathlib.Path.read_text",
+    "expected": "`Path.read_text()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "pathlib.Path.read_text()"
+    ],
+    "error": null,
+    "note": "The first hit, “pathlib.Path.read_text()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python pathlib.Path.glob",
+    "expected": "`Path.glob()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "pathlib.Path.glob()"
+    ],
+    "error": null,
+    "note": "The first hit, “pathlib.Path.glob()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python expand home directory",
+    "expected": "`os.path.expanduser()`",
+    "score": 3,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Home scheme",
+      "classmethod Path.home()",
+      "home",
+      "Expand Word",
+      "Interpreter initialization and finalization"
+    ],
+    "error": null,
+    "note": "Path.home and pathlib expansion results mention os.path.expanduser, but the expected os.path.expanduser entry is not returned directly."
+  },
+  {
+    "query": "qs python environment variables",
+    "expected": "`os.environ`",
+    "score": 2,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "1.2. Environment variables",
+      "$ (dollar) (environment variables expansion)",
+      "File Names, Command Line Arguments, and Environment Variables (os)"
+    ],
+    "error": null,
+    "note": "The hits cover Python startup environment variables and generic OS environment discussion, not the os.environ mapping."
+  },
+  {
+    "query": "qs python sys.argv",
+    "expected": "`sys.argv`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "sys.argv",
+      "sys.orig_argv",
+      "c.PySys_SetArgv()",
+      "c.PySys_SetArgvEx()"
+    ],
+    "error": null,
+    "note": "The first hit, “sys.argv”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python sys.path",
+    "expected": "`sys.path`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "sys.path",
+      "sys.path_hooks",
+      "sys.path_importer_cache",
+      "sys.meta_path",
+      "test.support.import_helper.DirsOnSysPath"
+    ],
+    "error": null,
+    "note": "The first hit, “sys.path”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python argparse subcommands",
+    "expected": "`argparse` subparsers via `add_subparsers()`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "argparse — Parser for command-line options, arguments and subcommands",
+      "Migrating optparse code to argparse",
+      "argparse",
+      "Command-line interface libraries",
+      "Argparse Tutorial"
+    ],
+    "error": null,
+    "note": "The argparse module page is first and clearly mentions subcommands. It is useful, but add_subparsers() is not surfaced directly."
+  },
+  {
+    "query": "qs python json.dumps",
+    "expected": "`json.dumps()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "json.dumps()",
+      "json.dump()"
+    ],
+    "error": null,
+    "note": "The first hit, “json.dumps()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python json custom encoder",
+    "expected": "`json.JSONEncoder` and `default()`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "json — JSON encoder and decoder",
+      "Internet Data Handling",
+      "json",
+      "Logging Cookbook",
+      "Module json"
+    ],
+    "error": null,
+    "note": "The json module is first and an Extending JSONEncoder section is third. Useful top-three context, but JSONEncoder.default() is not directly titled."
+  },
+  {
+    "query": "qs python csv.DictReader",
+    "expected": "`csv.DictReader`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "csv.DictReader",
+      "csv.DictReader.fieldnames"
+    ],
+    "error": null,
+    "note": "The first hit, “csv.DictReader”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python configparser",
+    "expected": "The `configparser` module",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "configparser",
+      "Exceptions (configparser)",
+      "Quick Start (configparser)",
+      "Fallback Values (configparser)",
+      "Unnamed Sections (configparser)"
+    ],
+    "error": null,
+    "note": "The first hit, “configparser”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python tomllib.load",
+    "expected": "`tomllib.load()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "tomllib.load()",
+      "tomllib.loads()"
+    ],
+    "error": null,
+    "note": "The first hit, “tomllib.load()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python pickle security",
+    "expected": "`pickle` security warning",
+    "score": 3,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Security Considerations",
+      "makePickle(record)",
+      "pickle",
+      "exception pickle.UnpicklingError",
+      "class multiprocessing.managers.BaseManager(address=None, authkey=None, serializer='pickle', ctx=None, *, shutdown_timeout=1.0)"
+    ],
+    "error": null,
+    "note": "A general Security Considerations page is first, but the visible results do not state the core pickle warning about untrusted data."
+  },
+  {
+    "query": "qs python sqlite3 row factory",
+    "expected": "`Connection.row_factory` and `sqlite3.Row`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "sqlite3.Cursor.row_factory",
+      "sqlite3.Connection.row_factory"
+    ],
+    "error": null,
+    "note": "Cursor.row_factory is first and the expected Connection.row_factory is second. sqlite3.Row is not directly surfaced."
+  },
+  {
+    "query": "qs python regular expression named groups",
+    "expected": "`re` named groups using `(?P<name>...)`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Regular expression HOWTO",
+      "Regular expression syntax",
+      "groups",
+      "Unicode HOWTO",
+      "Expressions"
+    ],
+    "error": null,
+    "note": "The first hit, “Regular expression HOWTO”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python re.escape",
+    "expected": "`re.escape()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "re.escape()"
+    ],
+    "error": null,
+    "note": "The first hit, “re.escape()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python parse ISO date time",
+    "expected": "`datetime.fromisoformat()`",
+    "score": 2,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "classmethod time.strptime(date_string, format)",
+      "class xmlrpc.client.DateTime",
+      "date",
+      "time — Time access and conversions",
+      "imaplib.Time2Internaldate(date_time)"
+    ],
+    "error": null,
+    "note": "time.strptime is ranked first and datetime.fromisoformat is only mentioned in a third-hit snippet. This is a misleading answer to the task wording."
+  },
+  {
+    "query": "qs python timezone aware datetime",
+    "expected": "Aware `datetime` objects and `tzinfo`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "plistlib.dump(value, fp, *, fmt=FMT_XML, sort_keys=True, skipkeys=False, aware_datetime=False)",
+      "class datetime.timezone",
+      "timezone",
+      "email.utils: Miscellaneous utilities",
+      "email.headerregistry: Custom Header Objects"
+    ],
+    "error": null,
+    "note": "An unrelated plistlib.dump result is first. datetime.timezone and aware-datetime guidance are second and third, so the expected topic remains accessible."
+  },
+  {
+    "query": "qs python zoneinfo.ZoneInfo",
+    "expected": "`zoneinfo.ZoneInfo`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "zoneinfo.ZoneInfo",
+      "zoneinfo.ZoneInfo.key",
+      "zoneinfo.ZoneInfo.no_cache()",
+      "zoneinfo.ZoneInfo.from_file()",
+      "zoneinfo.ZoneInfo.clear_cache()"
+    ],
+    "error": null,
+    "note": "The first hit, “zoneinfo.ZoneInfo”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python time.monotonic",
+    "expected": "`time.monotonic()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "time.monotonic()",
+      "time.monotonic_ns()",
+      "c.PyTime_Monotonic()",
+      "time.CLOCK_MONOTONIC",
+      "c.PyTime_MonotonicRaw()"
+    ],
+    "error": null,
+    "note": "The first hit, “time.monotonic()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python collections.defaultdict",
+    "expected": "`collections.defaultdict`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "collections.defaultdict",
+      "collections.defaultdict.__missing__()",
+      "collections.defaultdict.default_factory",
+      "collections.UserDict",
+      "collections.OrderedDict"
+    ],
+    "error": null,
+    "note": "The first hit, “collections.defaultdict”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python collections.Counter.most_common",
+    "expected": "`Counter.most_common()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "collections.Counter.most_common()"
+    ],
+    "error": null,
+    "note": "The first hit, “collections.Counter.most_common()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python collections.ChainMap",
+    "expected": "`collections.ChainMap`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "collections.ChainMap",
+      "collections.ChainMap.maps",
+      "collections.ChainMap.parents",
+      "collections.ChainMap.new_child()",
+      "ChainMap objects (collections)"
+    ],
+    "error": null,
+    "note": "The first hit, “collections.ChainMap”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python heapq.nlargest",
+    "expected": "`heapq.nlargest()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "heapq.nlargest()"
+    ],
+    "error": null,
+    "note": "The first hit, “heapq.nlargest()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python bisect.insort",
+    "expected": "`bisect.insort()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "bisect.insort()",
+      "bisect.insort_left()",
+      "bisect.insort_right()",
+      "int.bit_count()",
+      "int.bit_length()"
+    ],
+    "error": null,
+    "note": "The first hit, “bisect.insort()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python itertools.zip_longest",
+    "expected": "`itertools.zip_longest()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "itertools.zip_longest()"
+    ],
+    "error": null,
+    "note": "The first hit, “itertools.zip_longest()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python itertools.groupby",
+    "expected": "`itertools.groupby()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "itertools.groupby()"
+    ],
+    "error": null,
+    "note": "The first hit, “itertools.groupby()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python functools.lru_cache",
+    "expected": "`functools.lru_cache()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "functools.lru_cache()"
+    ],
+    "error": null,
+    "note": "The first hit, “functools.lru_cache()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python functools.partial",
+    "expected": "`functools.partial()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "functools.partial()",
+      "functools.partial.args",
+      "functools.partial.func",
+      "functools.partial.keywords",
+      "partial Objects (functools)"
+    ],
+    "error": null,
+    "note": "The first hit, “functools.partial()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python operator.itemgetter",
+    "expected": "`operator.itemgetter()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "operator.itemgetter()"
+    ],
+    "error": null,
+    "note": "The first hit, “operator.itemgetter()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python math.isclose",
+    "expected": "`math.isclose()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "math.isclose()"
+    ],
+    "error": null,
+    "note": "The first hit, “math.isclose()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python calculate median",
+    "expected": "`statistics.median()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "statistics.median(data)",
+      "Other Applications",
+      "median",
+      "Brief tour of the standard library",
+      "Simple hashing"
+    ],
+    "error": null,
+    "note": "The first hit, “statistics.median(data)”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python random choices weights",
+    "expected": "`random.choices(..., weights=...)`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "random.choices(population, weights=None, *, cum_weights=None, k=1)",
+      "statistics.fmean(data, weights=None)",
+      "choices",
+      "Option.choices",
+      "weight"
+    ],
+    "error": null,
+    "note": "The first hit, “random.choices(population, weights=None, *, cum_weights=None, k=1)”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python secrets.token_urlsafe",
+    "expected": "`secrets.token_urlsafe()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "secrets.token_urlsafe()"
+    ],
+    "error": null,
+    "note": "The first hit, “secrets.token_urlsafe()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python hashlib.sha256",
+    "expected": "`hashlib.sha256()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "hashlib.sha256()"
+    ],
+    "error": null,
+    "note": "The first hit, “hashlib.sha256()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python uuid.uuid4",
+    "expected": "`uuid.uuid4()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "uuid.uuid4()"
+    ],
+    "error": null,
+    "note": "The first hit, “uuid.uuid4()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python base64 urlsafe encoding",
+    "expected": "`base64.urlsafe_b64encode()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "base64.urlsafe_b64encode(s, *, padded=True)",
+      "binascii.URLSAFE_BASE64_ALPHABET",
+      "base64",
+      "secrets.token_urlsafe(nbytes=None)",
+      "email.charset: Representing character sets"
+    ],
+    "error": null,
+    "note": "The first hit, “base64.urlsafe_b64encode(s, *, padded=True)”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python build URL query string",
+    "expected": "`urllib.parse.urlencode()`",
+    "score": 2,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "urllib.parse.quote_plus(string, safe='', encoding=None, errors=None)",
+      "urllib.request.urlopen(url, data=None, [timeout, ]*, context=None)",
+      "url",
+      "url",
+      "Cookie.comment_url"
+    ],
+    "error": null,
+    "note": "quote_plus is related to query-string escaping, but urlencode is absent. The remaining hits are largely unrelated urllib.request entries."
+  },
+  {
+    "query": "qs python logging.basicConfig",
+    "expected": "`logging.basicConfig()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "logging.basicConfig()"
+    ],
+    "error": null,
+    "note": "The first hit, “logging.basicConfig()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python create temporary directory",
+    "expected": "`tempfile.TemporaryDirectory`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "class tempfile.TemporaryDirectory(suffix=None, prefix=None, dir=None, ignore_cleanup_errors=False, *, delete=True)",
+      "os.symlink(src, dst, target_is_directory=False, *, dir_fd=None)",
+      "create",
+      "File and Directory Access",
+      "--create <tarfile> <source1> ... <sourceN>"
+    ],
+    "error": null,
+    "note": "The first hit, “class tempfile.TemporaryDirectory(suffix=None, prefix=None, dir=None, ignore_cleanup_errors=False, *, delete=True)”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python copy directory tree",
+    "expected": "`shutil.copytree()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "shutil.copytree(src, dst, symlinks=False, ignore=None, copy_function=copy2, ignore_dangling_symlinks=False, dirs_exist_ok=False)",
+      "Path.copy(target, *, follow_symlinks=True, preserve_metadata=False)",
+      "copy",
+      "Module compileall",
+      "Save Copy As…"
+    ],
+    "error": null,
+    "note": "The first hit, “shutil.copytree(src, dst, symlinks=False, ignore=None, copy_function=copy2, ignore_dangling_symlinks=False, dirs_exist_ok=False)”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python deep copy object",
+    "expected": "`copy.deepcopy()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "copy — Shallow and deep copy operations",
+      "TarInfo.replace(name=..., mtime=..., mode=..., linkname=..., uid=..., gid=..., uname=..., gname=..., deep=True)",
+      "__deepcopy__",
+      "Module copy",
+      "Document.importNode(importedNode, deep)"
+    ],
+    "error": null,
+    "note": "The first hit, “copy — Shallow and deep copy operations”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python walk directory recursively",
+    "expected": "`os.walk()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "os.walk",
+      "os.walk()",
+      "pathlib.Path.rglob()"
+    ],
+    "error": null,
+    "note": "The first hit, “os.walk”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python run command capture output",
+    "expected": "`subprocess.run(..., capture_output=True)`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "subprocess.run(args, *, stdin=None, input=None, stdout=None, stderr=None, capture_output=False, shell=False, cwd=None, timeout=None, check=False, encoding=None, errors=None, text=None, env=None, universal_newlines=None, **other_popen_kwargs)",
+      "The run command",
+      "run",
+      "profiling.tracing.run(command, filename=None, sort=-1)",
+      "Python Initialization Configuration"
+    ],
+    "error": null,
+    "note": "The first hit, “subprocess.run(args, *, stdin=None, input=None, stdout=None, stderr=None, capture_output=False, shell=False, cwd=None, timeout=None, check=False, encoding=None, errors=None, text=None, env=None, universal_newlines=None, **other_popen_kwargs)”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python concurrent.futures.ThreadPoolExecutor",
+    "expected": "`ThreadPoolExecutor`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "concurrent.futures.ThreadPoolExecutor",
+      "ThreadPoolExecutor (concurrent.futures)"
+    ],
+    "error": null,
+    "note": "The first hit, “concurrent.futures.ThreadPoolExecutor”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python multiprocessing Queue",
+    "expected": "`multiprocessing.Queue`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "multiprocessing.Queue",
+      "multiprocessing.Queue.get()",
+      "multiprocessing.Queue.put()",
+      "multiprocessing.Queue.full()",
+      "multiprocessing.Queue.close()"
+    ],
+    "error": null,
+    "note": "The first hit, “multiprocessing.Queue”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python threading Lock",
+    "expected": "`threading.Lock`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "threading.Lock",
+      "threading.Lock.locked()",
+      "threading.Lock.acquire()",
+      "threading.Lock.release()",
+      "thread.LockType"
+    ],
+    "error": null,
+    "note": "The first hit, “threading.Lock”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python run async tasks concurrently",
+    "expected": "`asyncio.gather()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Running tasks concurrently (Coroutines and tasks)"
+    ],
+    "error": null,
+    "note": "The first hit, “Running tasks concurrently (Coroutines and tasks)”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python asyncio timeout",
+    "expected": "`asyncio.timeout()`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "asyncio.Timeout",
+      "asyncio.timeout()",
+      "asyncio.timeout_at()",
+      "asyncio.TimeoutError",
+      "asyncio.Timeout.when()"
+    ],
+    "error": null,
+    "note": "The Timeout class is first and asyncio.timeout() is second. The expected callable is easy to find but not ranked first."
+  },
+  {
+    "query": "qs python queue.PriorityQueue",
+    "expected": "`queue.PriorityQueue`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "queue.PriorityQueue",
+      "Priority Queue (Queues)"
+    ],
+    "error": null,
+    "note": "The first hit, “queue.PriorityQueue”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python socket.create_connection",
+    "expected": "`socket.create_connection()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "socket.create_connection()"
+    ],
+    "error": null,
+    "note": "The first hit, “socket.create_connection()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python unittest.mock.patch",
+    "expected": "`unittest.mock.patch()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "unittest.mock.patch()",
+      "unittest.mock.patch.dict()",
+      "unittest.mock.patch.object()",
+      "unittest.mock.patch.stopall()",
+      "unittest.mock.patch.multiple()"
+    ],
+    "error": null,
+    "note": "The first hit, “unittest.mock.patch()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python doctest",
+    "expected": "The `doctest` module",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "doctest",
+      "Soapbox (doctest)",
+      "Debugging (doctest)",
+      "Basic API (doctest)",
+      "Advanced API (doctest)"
+    ],
+    "error": null,
+    "note": "The first hit, “doctest”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python warnings filterwarnings",
+    "expected": "`warnings.filterwarnings()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "warnings.filterwarnings()",
+      "sys.flags.context_aware_warnings",
+      "sys.flags.bytes_warning"
+    ],
+    "error": null,
+    "note": "The first hit, “warnings.filterwarnings()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python importlib.resources.files",
+    "expected": "`importlib.resources.files()`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "importlib.resources.files()",
+      "importlib.resources.as_file()",
+      "importlib.resources.abc.TraversableResources.files()",
+      "importlib.resources.abc.Traversable.is_file()",
+      "Functional API (importlib.resources)"
+    ],
+    "error": null,
+    "note": "The first hit, “importlib.resources.files()”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python inspect.signature",
+    "expected": "`inspect.signature()`",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "inspect.Signature",
+      "inspect.signature()",
+      "inspect.Signature.empty",
+      "inspect.Signature.bind()",
+      "inspect.Signature.format()"
+    ],
+    "error": null,
+    "note": "inspect.Signature is first and inspect.signature() is second. Both snippets are useful, but the expected function is not first."
+  },
+  {
+    "query": "qs python trace memory allocations",
+    "expected": "The `tracemalloc` module",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "tracemalloc — Trace memory allocations",
+      "Memory Management",
+      "Trace",
+      "C API Extension Support for Free Threading",
+      "Configure Python"
+    ],
+    "error": null,
+    "note": "The first hit, “tracemalloc — Trace memory allocations”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python typing.Protocol",
+    "expected": "`typing.Protocol`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "typing.Protocol",
+      "typing.is_protocol()",
+      "typing.get_protocol_members()"
+    ],
+    "error": null,
+    "note": "The first hit, “typing.Protocol”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python typing.TypedDict",
+    "expected": "`typing.TypedDict`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "typing.TypedDict",
+      "typing.TypedDict.__total__",
+      "typing.TypedDict.__closed__",
+      "typing.TypedDict.__extra_items__",
+      "typing.TypedDict.__mutable_keys__"
+    ],
+    "error": null,
+    "note": "The first hit, “typing.TypedDict”, directly matches the expected documentation and provides useful context."
+  },
+  {
+    "query": "qs python typing.Literal",
+    "expected": "`typing.Literal`",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "typing.Literal",
+      "typing.LiteralString"
+    ],
+    "error": null,
+    "note": "The first hit, “typing.Literal”, directly matches the expected documentation and provides useful context."
+  }
+]

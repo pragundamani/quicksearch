@@ -1,0 +1,65 @@
+# Held-out evaluation, part 2 (indices 50–99)
+
+Binary: `/tmp/qs-gate/release/qs`. Each manifest command was run unchanged except for replacing the leading `qs` executable. Timeout: 20 seconds.
+
+| Index | Command | Class | Label | Score | Observed top result/error | Candid assessment |
+|---:|---|---|---|---:|---|---|
+| 50 | `qs rust checked addition not wrapping addition` | negative-contrast | negative | 2 | Search Rust standard library for checked addition not wrapping addition | The wrapping trap is avoided, but only a generic Rust std search link is returned; `checked_add` is not identified. |
+| 51 | `qs cpp midpoint without overflow not simple average` | negative-contrast | negative | 5 | c++ - Overflow When Calculating Average? - Stack Overflow | The first result directly explains `std::midpoint` as the overflow-safe solution, so the simple-average trap is rejected. |
+| 52 | `qs c find first matching span not substring` | negative-contrast | negative | 1 | Type-generic math | The target and substring trap are absent; the top result is unrelated generic math documentation. |
+| 53 | `qs haskell strict bytestring not lazy bytestring` | negative-contrast | negative | 1 | Haskell language documentation — strict bytestring not lazy bytestring | The lazy variant is not promoted, but the result is only generic Haskell language documentation and does not identify `Data.ByteString`. |
+| 54 | `qs python cryptographic random integer not random.randrange` | negative-contrast | negative | 0 | random.randrange() | The exact rejected API, `random.randrange()`, is ranked first; this is the contrast trap. |
+| 55 | `qs go escape html text not url query data` | negative-contrast | negative | 0 | url.QueryEscape() | The exact URL-escaping trap, `url.QueryEscape()`, is ranked first instead of HTML escaping. |
+| 56 | `qs rust saturating multiplication not checked multiplication` | negative-contrast | negative | 2 | Search Rust standard library for saturating multiplication not checked multiplication | The checked-multiplication trap is avoided, but only a generic Rust std search link appears; `saturating_mul` is not identified. |
+| 57 | `qs cpp terminate handler not unexpected exception handler` | negative-contrast | negative | 3 | std::terminate_handler | The top result is the relevant terminate-handler type, but `std::set_terminate` is missing and the rejected unexpected handler ranks second. |
+| 58 | `qs c convert wide string to multibyte not reverse direction` | negative-contrast | negative | 2 | Null-terminated wide strings | The result broadly distinguishes wide and multibyte strings, but neither directional conversion API is identified. |
+| 59 | `qs haskell deep evaluation not weak head normal form` | negative-contrast | negative | 1 | Haskell language documentation — deep evaluation not weak head normal form | The weak-head trap is avoided, but only generic Haskell documentation is returned; `Control.DeepSeq.force` is absent. |
+| 60 | `qs python open compressed gzip file not zip archive` | negative-contrast | negative | 0 | zipfile.ZipFile.open() | The exact ZIP trap, `zipfile.ZipFile.open()`, ranks first; `gzip.open()` is only second. |
+| 61 | `qs go stable slice sort not unstable sort` | negative-contrast | negative | 5 | sort.SliceStable() | The exact stable sorting API is first, while the unstable alternative is second. |
+| 62 | `qs rust abort process not unwind panic` | negative-contrast | negative | 2 | Search Rust standard library for abort process not unwind panic | The panic trap is avoided, but the output is only a generic Rust std search link and does not identify `std::process::abort`. |
+| 63 | `qs cpp inclusive scan not exclusive scan` | negative-contrast | negative | 0 | std::exclusive_scan | The exact rejected API, `std::exclusive_scan`, ranks first; `std::inclusive_scan` is second. |
+| 64 | `qs c read one wide character not one byte character` | negative-contrast | negative | 1 | char | The top result is the `char` keyword; neither `fgetwc` nor a useful wide-character read result appears. |
+| 65 | `qs haskell text builder not string concatenation` | negative-contrast | negative | 1 | Haskell language documentation — text builder not string concatenation | String concatenation is not promoted, but only generic Haskell documentation appears; the text builder is absent. |
+| 66 | `qs python parse email address not url address` | negative-contrast | negative | 3 | email.headerregistry.Address | The first result is a safe, relevant email-address API, but the requested `email.utils.parseaddr()` is not returned. |
+| 67 | `qs go cryptographic subtle constant time compare not bytes compare` | negative-contrast | negative | 5 | subtle.ConstantTimeCompare() | The exact constant-time comparison API is first, ahead of ordinary byte comparison. |
+| 68 | `qs rust docs please exact api lookup today std::mem::take examples stable` | surplus-token-adversarial | positive | 2 | Search Rust standard library for docs please exact api lookup today std::mem::take examples stable | Only a generic Rust std search link is returned; it preserves the API text in the query but does not identify `std::mem::take` as a result. |
+| 69 | `qs cpp modern standard library reference quick answer std::ranges::iota_view usage` | surplus-token-adversarial | positive | 5 | std::ranges::iota_view | The exact expected API is first despite the surplus tokens. |
+| 70 | `qs c standard library portable example urgently get environment variable getenv` | surplus-token-adversarial | positive | 4 | gets | `getenv` is second; the unrelated `gets` result takes first place. |
+| 71 | `qs haskell hoogle package docs simple example now Data.Set.fromList` | surplus-token-adversarial | positive | 1 | Haskell language documentation — hoogle package docs simple example now Data.Set.fromList | Only generic Haskell language documentation is returned; `Data.Set.fromList` is not identified. |
+| 72 | `qs python official docs latest version quick example contextlib.ExitStack` | surplus-token-adversarial | positive | 5 | contextlib.ExitStack | The exact expected API is first despite the surplus tokens. |
+| 73 | `qs go package documentation current release example net.IP.IsPrivate` | surplus-token-adversarial | positive | 5 | net.IP.IsPrivate() | The exact expected API is first despite the surplus tokens. |
+| 74 | `qs rust beginner tutorial standard docs show me slice rotate_left method now` | surplus-token-adversarial | positive | 2 | Search Rust standard library for beginner tutorial standard docs show me slice rotate_left method now | Only a generic Rust std search link is returned; `slice::rotate_left` is not identified as a result. |
+| 75 | `qs cpp reference safe portable c++23 example std::byteswap integer please` | surplus-token-adversarial | positive | 4 | C++23 | The exact API is second, behind a broad C++23 page. |
+| 76 | `qs c reference manual safe code sample portable convert time difftime seconds` | surplus-token-adversarial | positive | 4 | time | The exact API is second, behind the related but broader `time` entry. |
+| 77 | `qs haskell latest base library documentation beginner example Data.Char.generalCategory` | surplus-token-adversarial | positive | 1 | Haskell language documentation — latest base library documentation beginner example Data.Char.generalCategory | Only generic Haskell language documentation is returned; `Data.Char.generalCategory` is absent. |
+| 78 | `qs python docs tutorial best practice code sample pathlib.PurePath.match` | surplus-token-adversarial | positive | 5 | pathlib.PurePath.match() | The exact expected API is first despite the surplus tokens. |
+| 79 | `qs go official reference beginner quick code example cmp.Or zero values` | surplus-token-adversarial | positive | 0 | TIMEOUT after 20 seconds | The command exceeded the 20-second limit and returned no result. |
+| 80 | `qs rust standard library fast safe idiomatic example Vec::spare_capacity_mut docs` | surplus-token-adversarial | positive | 2 | Search Rust standard library for standard library fast safe idiomatic example Vec::spare_capacity_mut docs | Only a generic Rust std search link is returned; `Vec::spare_capacity_mut` is not identified as a result. |
+| 81 | `qs cpp standard official documentation tutorial std::ranges::fold_left sample code` | surplus-token-adversarial | positive | 5 | std::ranges::fold_left | The exact expected API is first despite the surplus tokens. |
+| 82 | `qs c language library specification easy tutorial sample code div integer quotient remainder` | surplus-token-adversarial | positive | 5 | div | The exact expected API is first despite the surplus tokens. |
+| 83 | `qs haskell package docs latest tutorial quick answer Data.Sequence.adjust examples` | surplus-token-adversarial | positive | 1 | Haskell language documentation — package docs latest tutorial quick answer Data.Sequence.adjust examples | Only generic Haskell language documentation is returned; `Data.Sequence.adjust` is absent. |
+| 84 | `qs python standard library official guide simple example graphlib.TopologicalSorter` | surplus-token-adversarial | positive | 5 | graphlib.TopologicalSorter | The exact expected API is first despite the surplus tokens. |
+| 85 | `qs go current stable standard package docs quick example math.Nextafter` | surplus-token-adversarial | positive | 3 | doc.Example | The exact API appears fourth; three generic `go/doc` entries outrank it. |
+| 86 | `qs rust official stable docs easy example std::path::Path::ancestors iterator` | surplus-token-adversarial | positive | 0 | Unsafe Rust | The result is an unrelated Unsafe Rust chapter; `Path::ancestors` is absent. |
+| 87 | `qs cpp latest standard reference concise example std::launder object pointer` | surplus-token-adversarial | positive | 3 | std::is_member_object_pointer | The exact API appears fourth, after unrelated type-trait and I/O results. |
+| 88 | `qs c standard portable reference example localeconv monetary formatting fields` | surplus-token-adversarial | positive | 5 | localeconv | The exact expected API is first despite the surplus tokens. |
+| 89 | `qs haskell current base hoogle quick tutorial Control.Arrow.loop examples` | surplus-token-adversarial | positive | 1 | Haskell language documentation — current base hoogle quick tutorial Control.Arrow.loop examples | Only generic Haskell language documentation is returned; `Control.Arrow.loop` is absent. |
+| 90 | `qs python official stdlib current docs tiny example weakref.finalize object cleanup` | surplus-token-adversarial | positive | 4 | file object | The exact API is third, behind two generic file-object entries. |
+| 91 | `qs go standard package reference practical sample testing.F.Cleanup fuzz docs` | surplus-token-adversarial | positive | 4 | testing.F.Fuzz() | The exact API is second, behind the adjacent `testing.F.Fuzz()` method. |
+| 92 | `qs rust docs quick beginner correct idiomatic std::array::from_fn example` | surplus-token-adversarial | positive | 2 | Search Rust standard library for docs quick beginner correct idiomatic std::array::from_fn example | Only a generic Rust std search link is returned; `std::array::from_fn` is not identified as a result. |
+| 93 | `qs cpp portable modern reference sample std::ranges::borrowed_range concept details` | surplus-token-adversarial | positive | 1 | std::ranges::sample | The expected concept is absent from the top five; results are only loosely related ranges APIs. |
+| 94 | `qs c official standard library guide sample code nearbyint rounding mode` | surplus-token-adversarial | positive | 4 | round | The exact API is second, behind the different rounding function `round`. |
+| 95 | `qs haskell hoogle official base docs concise example Data.Ord.clamp` | surplus-token-adversarial | positive | 1 | Haskell language documentation — hoogle official base docs concise example Data.Ord.clamp | Only generic Haskell language documentation is returned; `Data.Ord.clamp` is absent. |
+| 96 | `qs python latest official manual quick practical example socket.socketpair` | surplus-token-adversarial | positive | 4 | Example (socket) | The exact API is second, behind a generic socket example page. |
+| 97 | `qs go docs current version best practice example log.Logger.Writer method` | surplus-token-adversarial | positive | 5 | log.Logger.Writer() | The exact expected API is first despite the surplus tokens. |
+| 98 | `qs rust safe fast standard library tutorial std::ffi::OsStr::as_encoded_bytes` | surplus-token-adversarial | positive | 0 | Unsafe Rust | The result is an unrelated Unsafe Rust chapter; `OsStr::as_encoded_bytes` is absent. |
+| 99 | `qs cpp official c++ reference beginner sample std::unreachable_sentinel_t iterator` | surplus-token-adversarial | positive | 4 | std::iter_reference_t | The exact API is second, behind the related type alias `std::iter_reference_t`. |
+
+## Summary
+
+- Distribution: 0: 7, 1: 11, 2: 8, 3: 4, 4: 8, 5: 12
+- Average: 2.62/5
+- Score >=3: 24/50 (48%)
+- Score >=4: 20/50 (40%)
+- Command errors: 0
+- Timeouts: 1

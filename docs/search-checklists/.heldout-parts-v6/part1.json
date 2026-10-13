@@ -1,0 +1,800 @@
+[
+  {
+    "language": "python",
+    "query": "qs python pair adjacent iterator items",
+    "expected": "itertools.pairwise()",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "itertools.pairwise(iterable)",
+      "Glossary",
+      "items"
+    ],
+    "error": null,
+    "note": "Exact API is the first hit with a clear description."
+  },
+  {
+    "language": "go",
+    "query": "qs go find mime type from a filename extension",
+    "expected": "mime.TypeByExtension",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func AddExtensionType",
+      "func FindProcess",
+      "mime.TypeByExtension()"
+    ],
+    "error": null,
+    "note": "Exact API is the third hit with a clear description."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust keep only successful iterator values",
+    "expected": "Iterator::map_while or filter_map",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 1,
+    "provider": "rust",
+    "top_titles": [
+      "Storing Keys with Associated Values in Hash Maps",
+      "Improving Our I/O Project",
+      "Iterators of known length"
+    ],
+    "error": null,
+    "note": "Results discuss iterators generally but do not show map_while or filter_map."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp exchange a value and return the old one",
+    "expected": "std::exchange",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::exchange",
+      "std::atomic<T>::exchange",
+      "std::extreme_value_distribution::a"
+    ],
+    "error": null,
+    "note": "Exact API is the first hit and states that it returns the old value."
+  },
+  {
+    "language": "c",
+    "query": "qs c duplicate part of a string into bounded buffer",
+    "expected": "strncpy",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 1,
+    "provider": "C",
+    "top_titles": [
+      "Error handling",
+      "wprintf, fwprintf, swprintf, wprintf_s, fwprintf_s, swprintf_s, snwprintf_s",
+      "stderr"
+    ],
+    "error": null,
+    "note": "Results mention bounds checking and formatted output but not strncpy."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell apply function to first tuple component",
+    "expected": "Data.Bifunctor.first",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "first :: Bifunctor p => (a -> b) -> p a c -> p b c",
+      "first :: Arrow a => a b c -> a (b, d) (c, d)",
+      "First :: Maybe a -> First a"
+    ],
+    "error": null,
+    "note": "Exact function is first with tuple-specific examples."
+  },
+  {
+    "language": "python",
+    "query": "qs python find common path prefix by components",
+    "expected": "os.path.commonpath()",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "find_closest(x, y, halo=None, start=None)",
+      "Built-in Types",
+      "commonprefix"
+    ],
+    "error": null,
+    "note": "The third hit explicitly recommends os.path.commonpath() for path prefixes."
+  },
+  {
+    "language": "go",
+    "query": "qs go notify one waiting goroutine",
+    "expected": "sync.Cond.Signal",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 2,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func SetGoroutineLabels 1.9",
+      "type CloseNotifier 1.1",
+      "sync.Once"
+    ],
+    "error": null,
+    "note": "Cond.Wait appears only at rank 5; visible output does not identify Signal as the one-waiter operation."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust turn option into result with lazy error",
+    "expected": "Option::ok_or_else",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 1,
+    "provider": "rust",
+    "top_titles": [
+      "Macros by example",
+      "Error code E0729",
+      "TryLockError"
+    ],
+    "error": null,
+    "note": "Results do not identify ok_or_else; only generic error and Option-adjacent material appears."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp test whether range begins with another range",
+    "expected": "std::ranges::starts_with",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "std::basic_format_parse_context",
+      "std::ranges::starts_with",
+      "std::ranges::join_with_view::begin"
+    ],
+    "error": null,
+    "note": "Exact algorithm is the second hit with its signature."
+  },
+  {
+    "language": "c",
+    "query": "qs c report current stream file position",
+    "expected": "ftell",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "File input/output",
+      "Standard library header <stdio.h>",
+      "FILE"
+    ],
+    "error": null,
+    "note": "The first hit lists ftell as returning the current file position."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell attach an index to every traversable value",
+    "expected": "Data.Traversable.mapAccumL",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "mapAccumL :: Traversable t => (s -> a -> (s, b)) -> s -> t a -> (s, t b)",
+      "mapAccumL :: Traversable t => (s -> a -> (s, b)) -> s -> t a -> (s, t b)",
+      "mapAccumL :: (a -> Char -> (a, Char)) -> a -> Text -> (a, Text)"
+    ],
+    "error": null,
+    "note": "Exact function is first with the accumulating traversal behavior."
+  },
+  {
+    "language": "python",
+    "query": "qs python execute cleanup when interpreter exits",
+    "expected": "atexit.register()",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 1,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "cleanup()",
+      "sys.exit([arg])",
+      "Interpreter"
+    ],
+    "error": null,
+    "note": "Results do not show atexit.register; most are unrelated cleanup or exit pages."
+  },
+  {
+    "language": "go",
+    "query": "qs go read exactly n bytes or fail",
+    "expected": "io.ReadFull",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 4,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Reader) ReadBytes",
+      "func ReadFull",
+      "bytes.SplitN()"
+    ],
+    "error": null,
+    "note": "Exact function is second and says it reads exactly len(buf) bytes."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust replace matching slice prefix",
+    "expected": "slice::strip_prefix",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 1,
+    "provider": "rust",
+    "top_titles": [
+      "Struct PrefixComponent",
+      "Enum Prefix",
+      "Closure types"
+    ],
+    "error": null,
+    "note": "Results concern unrelated prefix concepts and do not show strip_prefix."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp invoke callable only when invocable",
+    "expected": "std::is_invocable and std::invoke",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 4,
+    "provider": "C++",
+    "top_titles": [
+      "std::is_invocable, std::is_invocable_r, std::is_nothrow_invocable, std::is_nothrow_invocable_r",
+      "std::result_of, std::invoke_result",
+      "std::invoke, std::invoke_r"
+    ],
+    "error": null,
+    "note": "is_invocable is first and std::invoke is third; both have useful signatures."
+  },
+  {
+    "language": "c",
+    "query": "qs c clear error and eof indicators on stream",
+    "expected": "clearerr",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "clearerr",
+      "fgetc, getc",
+      "SIG_ERR"
+    ],
+    "error": null,
+    "note": "Exact function is first with the required error/EOF behavior."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell combine maps and resolve duplicate keys",
+    "expected": "Data.Map.unionWith",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "merge :: Ord k => SimpleWhenMissing k a c -> SimpleWhenMissing k b c -> SimpleWhenMatched k a b c -> Map k a -> Map k b -> Map k c",
+      "mergeA :: (Applicative f, Ord k) => WhenMissing f k a c -> WhenMissing f k b c -> WhenMatched f k a b c -> Map k a -> Map k b -> f (Map k c)",
+      "union :: Ord k => Map k a -> Map k a -> Map k a"
+    ],
+    "error": null,
+    "note": "The third hit explains Map union and mentions unionWith const, but does not present unionWith as the general duplicate resolver."
+  },
+  {
+    "language": "python",
+    "query": "qs python wait for whichever future finishes first",
+    "expected": "concurrent.futures.wait(FIRST_COMPLETED)",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 4,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Coroutines and tasks",
+      "concurrent.futures.FIRST_COMPLETED",
+      "wait"
+    ],
+    "error": null,
+    "note": "concurrent.futures.FIRST_COMPLETED is the second hit with the correct behavior."
+  },
+  {
+    "language": "go",
+    "query": "qs go write quoted go string literal",
+    "expected": "strconv.Quote",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 1,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Writer) Write",
+      "func (*Encoder) WriteToken 1.27",
+      "fmt.GoStringer"
+    ],
+    "error": null,
+    "note": "Results discuss other quoting or Go-syntax facilities but not strconv.Quote."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust split slice once on a predicate",
+    "expected": "slice::split_once",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "Struct Split",
+      "Struct SplitNMut",
+      "Struct SplitN"
+    ],
+    "error": null,
+    "note": "Results show related split iterators but not slice::split_once."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp convert enum to underlying integer type",
+    "expected": "std::to_underlying",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::to_underlying",
+      "Enumeration declaration",
+      "Usual arithmetic conversions"
+    ],
+    "error": null,
+    "note": "Exact API is first with the conversion description."
+  },
+  {
+    "language": "c",
+    "query": "qs c push one character back onto input stream",
+    "expected": "ungetc",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "ungetc",
+      "ungetwc",
+      "int"
+    ],
+    "error": null,
+    "note": "Exact function is first with push-back semantics."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell run action only when condition is true",
+    "expected": "Control.Monad.when",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "when :: Applicative f => Bool -> f () -> f ()",
+      "when :: Applicative f => Bool -> f () -> f ()",
+      "whenIoSubSystem :: IoSubSystem -> IO () -> IO ()"
+    ],
+    "error": null,
+    "note": "Exact function is first and describes conditional execution."
+  },
+  {
+    "language": "python",
+    "query": "qs python iterate over calendar month rows",
+    "expected": "calendar.Calendar.monthdayscalendar()",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 3,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "calendar.monthcalendar(year, month)",
+      "Programming FAQ",
+      "month"
+    ],
+    "error": null,
+    "note": "The first hit gives the closely related calendar.monthcalendar function and correct row format, not the requested Calendar method."
+  },
+  {
+    "language": "go",
+    "query": "qs go return a reader limited to n bytes",
+    "expected": "io.LimitReader",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type LimitedReader",
+      "func (*Reader) ReadBytes",
+      "bytes.Reader.WriteTo()"
+    ],
+    "error": null,
+    "note": "The first hit documents LimitedReader, the underlying limited-reader type, but does not show io.LimitReader."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust get two mutable slice elements safely",
+    "expected": "slice::get_many_mut",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 2,
+    "provider": "rust",
+    "top_titles": [
+      "Primitive Type slice",
+      "Unsafe Rust",
+      "Closure types"
+    ],
+    "error": null,
+    "note": "The slice documentation is relevant, but visible hits do not show get_many_mut."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp count consecutive equal groups in a range",
+    "expected": "std::ranges::chunk_by_view",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 2,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::unique",
+      "std::unordered_multiset<Key,Hash,KeyEqual,Allocator>::insert_range",
+      "std::in_range"
+    ],
+    "error": null,
+    "note": "unique is related to consecutive equal values, but results do not show chunk_by_view or group counting."
+  },
+  {
+    "language": "c",
+    "query": "qs c transform string for locale collation",
+    "expected": "strxfrm",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 4,
+    "provider": "C",
+    "top_titles": [
+      "strcoll",
+      "wcscoll",
+      "tm"
+    ],
+    "error": null,
+    "note": "The first hit snippet names strxfrm and states its collation-transform purpose."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell unfold a container from a seed",
+    "expected": "Data.List.unfoldr",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "unfoldr :: (b -> Maybe (a, b)) -> b -> [a]",
+      "unfoldr :: (a -> (b, Maybe a)) -> a -> NonEmpty b",
+      "unfoldr :: (b -> Maybe (a, b)) -> b -> Seq a"
+    ],
+    "error": null,
+    "note": "Exact function is first and says it builds a list from a seed."
+  },
+  {
+    "language": "python",
+    "query": "qs python preserve function metadata in decorator",
+    "expected": "functools.wraps()",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 1,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Path.copy_into(target_dir, *, follow_symlinks=True, preserve_metadata=False)",
+      "dataclasses.make_dataclass(cls_name, fields, *, bases=(), namespace=None, init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False, match_args=True, kw_only=False, slots=False, weakref_slot=False, module=None, decorator=dataclass)",
+      "function"
+    ],
+    "error": null,
+    "note": "Results concern metadata and decorators generally but do not show functools.wraps."
+  },
+  {
+    "language": "go",
+    "query": "qs go mirror bytes read from a reader into a writer",
+    "expected": "io.TeeReader",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 1,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func (*Reader) ReadBytes",
+      "func (*Reader) ReadByte",
+      "io.ByteReader"
+    ],
+    "error": null,
+    "note": "Results cover reader methods but do not show TeeReader or byte mirroring."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust create an iterator that yields once",
+    "expected": "std::iter::once",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Once",
+      "Async Iterators",
+      "Function once"
+    ],
+    "error": null,
+    "note": "The first hit identifies Once as an iterator yielding once; the exact once function is third."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp construct object in optional storage in place",
+    "expected": "std::optional::emplace",
+    "class": "paraphrase",
+    "label": "positive",
+    "score": 3,
+    "provider": "C++",
+    "top_titles": [
+      "std::optional<T>::optional",
+      "std::make_optional",
+      "std::in_place"
+    ],
+    "error": null,
+    "note": "Optional constructors, make_optional, and in_place are relevant, but optional::emplace is absent."
+  },
+  {
+    "language": "c",
+    "query": "qs c locate last character not first character",
+    "expected": "strrchr, not strchr",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "strrchr",
+      "strstr",
+      "char"
+    ],
+    "error": null,
+    "note": "Exact function is first and says it finds the last occurrence."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell sequence effects and discard results not collect them",
+    "expected": "mapM_, not mapM",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "mapM_ :: (Foldable t, Monad m) => (a -> m b) -> t a -> m ()",
+      "mapM_ :: (Foldable t, Monad m) => (a -> m b) -> t a -> m ()",
+      "mapM_ :: (Foldable t, Monad m) => (a -> m b) -> t a -> m ()"
+    ],
+    "error": null,
+    "note": "Exact function is first and explicitly says results are ignored."
+  },
+  {
+    "language": "python",
+    "query": "qs python shell style splitting not regular expression splitting",
+    "expected": "shlex.split(), not re.split()",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 2,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "IDLE — Python editor and shell",
+      "subprocess.run(args, *, stdin=None, input=None, stdout=None, stderr=None, capture_output=False, shell=False, cwd=None, timeout=None, check=False, encoding=None, errors=None, text=None, env=None, universal_newlines=None, **other_popen_kwargs)",
+      "Style"
+    ],
+    "error": null,
+    "note": "A rank-5 shlex page discusses shell compatibility, but no result exposes shlex.split."
+  },
+  {
+    "language": "go",
+    "query": "qs go compare strings case insensitively not byte equality",
+    "expected": "strings.EqualFold, not bytes.Equal",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 2,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "Example (CaseInsensitive)",
+      "func Compare 1.5",
+      "bytes.Compare()"
+    ],
+    "error": null,
+    "note": "The first hit gives a case-insensitive workaround; EqualFold is absent."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust remove suffix not prefix from string slice",
+    "expected": "str::strip_suffix, not strip_prefix",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 0,
+    "provider": "rust",
+    "top_titles": [
+      "Unsafe Rust"
+    ],
+    "error": null,
+    "note": "The sole result is an unrelated Unsafe Rust page."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp copy backward not ordinary copy",
+    "expected": "std::copy_backward, not std::copy",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::ranges::copy_backward, std::ranges::copy_backward_result",
+      "std::copy_backward",
+      "std::ranges::move_backward, std::ranges::move_backward_result"
+    ],
+    "error": null,
+    "note": "The first result is ranges::copy_backward and the exact std::copy_backward is second."
+  },
+  {
+    "language": "c",
+    "query": "qs c write one character not a formatted string",
+    "expected": "fputc, not fprintf",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 1,
+    "provider": "C",
+    "top_titles": [
+      "Objects and alignment",
+      "strcpy, strcpy_s",
+      "char"
+    ],
+    "error": null,
+    "note": "Results do not show fputc and are mostly unrelated to stream character output."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell left fold with monadic effects not pure fold",
+    "expected": "Control.Monad.foldM, not foldl",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "Haskell",
+    "top_titles": [
+      "foldM :: (Foldable t, Monad m) => (b -> a -> m b) -> b -> t a -> m b",
+      "foldM_ :: (Foldable t, Monad m) => (b -> a -> m b) -> b -> t a -> m ()",
+      "foldMap :: (Foldable t, Monoid m) => (a -> m) -> t a -> m"
+    ],
+    "error": null,
+    "note": "Exact function is first and contrasts it with foldl."
+  },
+  {
+    "language": "python",
+    "query": "qs python decimal arithmetic not binary float",
+    "expected": "decimal.Decimal, not float",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "decimal — Decimal fixed-point and floating-point arithmetic",
+      "Expressions",
+      "decimal"
+    ],
+    "error": null,
+    "note": "The decimal module is first and clearly describes decimal arithmetic."
+  },
+  {
+    "language": "go",
+    "query": "qs go split after separator not before it",
+    "expected": "strings.SplitAfter, not strings.Split",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "func SplitAfter",
+      "func SplitAfter",
+      "big.Int.Not()"
+    ],
+    "error": null,
+    "note": "Exact string function is first with the requested separator behavior."
+  },
+  {
+    "language": "rust",
+    "query": "qs rust weak reference not owning rc clone",
+    "expected": "std::rc::Weak, not Rc",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 4,
+    "provider": "rust",
+    "top_titles": [
+      "Reference Cycles Can Leak Memory",
+      "Weak",
+      "Struct Weak"
+    ],
+    "error": null,
+    "note": "The second hit is Weak and states that it is a non-owning reference."
+  },
+  {
+    "language": "cpp",
+    "query": "qs cpp shared lock not exclusive mutex lock",
+    "expected": "std::shared_lock, not std::unique_lock",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "C++",
+    "top_titles": [
+      "std::shared_lock<Mutex>::shared_lock",
+      "Standard library header <shared_mutex> (C++14)",
+      "std::shared_lock::mutex"
+    ],
+    "error": null,
+    "note": "Exact lock type is first with useful constructor information."
+  },
+  {
+    "language": "c",
+    "query": "qs c rename a file not remove it",
+    "expected": "rename, not remove",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 5,
+    "provider": "C",
+    "top_titles": [
+      "rename",
+      "Standard library header <stdio.h>",
+      "FE_INEXACT"
+    ],
+    "error": null,
+    "note": "Exact function is first and says it changes a filename."
+  },
+  {
+    "language": "haskell",
+    "query": "qs haskell catch only io errors not every exception",
+    "expected": "System.IO.Error.catchIOError, not Control.Exception.catch",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 3,
+    "provider": "Haskell",
+    "top_titles": [
+      "tryIOError :: IO a -> IO (Either IOError a)",
+      "withMVar :: MVar a -> (a -> IO b) -> IO b",
+      "modifyMVar_ :: MVar a -> (a -> IO a) -> IO ()"
+    ],
+    "error": null,
+    "note": "TryIOError is a relevant IO-only alternative and explicitly excludes non-IO exceptions, but catchIOError is absent."
+  },
+  {
+    "language": "python",
+    "query": "qs python compare sequences in constant time not normal equality",
+    "expected": "hmac.compare_digest(), not ==",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 1,
+    "provider": "Python 3.15.0",
+    "top_titles": [
+      "Expressions",
+      "Time complexity of operations on built-in types",
+      "compare"
+    ],
+    "error": null,
+    "note": "Results do not show compare_digest or any constant-time comparison API."
+  },
+  {
+    "language": "go",
+    "query": "qs go lexical path cleanup not filesystem symlink resolution",
+    "expected": "filepath.Clean, not EvalSymlinks",
+    "class": "negative-contrast",
+    "label": "negative",
+    "score": 3,
+    "provider": "Go 1.27.0",
+    "top_titles": [
+      "type Cleanup 1.24",
+      "func (*B) Cleanup 1.14",
+      "Package path"
+    ],
+    "error": null,
+    "note": "func Clean appears at rank 4 with the exact lexical behavior; the top three do not answer directly."
+  }
+]
