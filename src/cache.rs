@@ -2239,6 +2239,21 @@ mod tests {
     #[test]
     fn held_recovery_guard_obeys_the_acquisition_deadline() {
         let dir = test_dir("held-recovery-guard");
+        if std::env::var_os("QUICKSEARCH_PRIVATE_LOCK_TEST").is_none() {
+            let status = std::process::Command::new(std::env::current_exe().unwrap())
+                .args([
+                    "--exact",
+                    "cache::tests::held_recovery_guard_obeys_the_acquisition_deadline",
+                ])
+                .env("QUICKSEARCH_PRIVATE_LOCK_TEST", "1")
+                .env("XDG_RUNTIME_DIR", &dir)
+                .status()
+                .unwrap();
+            assert!(status.success());
+            fs::remove_dir_all(dir).unwrap();
+            return;
+        }
+
         let cache_path = dir.join("entry.json");
         let path = lock_path(&cache_path).unwrap();
         fs::write(&path, b"4294967295 40\n").unwrap();
